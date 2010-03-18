@@ -1,0 +1,34 @@
+\contentsline {chapter}{Declaration of Authorship}{i}{dummy.1}
+\vspace {1em}
+\contentsline {chapter}{Abstract}{iii}{dummy.2}
+\vspace {1em}
+\contentsline {chapter}{Acknowledgements}{iv}{dummy.3}
+\vspace {1em}
+\contentsline {chapter}{Symbols}{vi}{dummy.5}
+\vspace {2em}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.8}
+\contentsline {chapter}{\numberline {2}Mathematical Preliminaries}{2}{chapter.9}
+\contentsline {chapter}{\numberline {3}K\"ulshammer's Second Problem}{3}{chapter.10}
+\contentsline {section}{\numberline {3.1}K\"ulshammer's First Problem}{3}{section.11}
+\contentsline {section}{\numberline {3.2}K\"ulshammer's Second Problem}{3}{section.12}
+\contentsline {section}{\numberline {3.3}A non-reductive counterexample}{3}{section.13}
+\contentsline {chapter}{\numberline {4}The 1-Cohomology}{4}{chapter.14}
+\contentsline {section}{\numberline {4.1}Abelian 1-Cohomology}{4}{section.15}
+\contentsline {subsection}{\numberline {4.1.1}Definitions}{5}{subsection.16}
+\contentsline {subsection}{\numberline {4.1.2}Maps between 1-cohomologies}{7}{subsection.19}
+\contentsline {section}{\numberline {4.2}Non-abelian 1-Cohomology}{10}{section.22}
+\contentsline {subsection}{\numberline {4.2.1}The non-abelian setting}{10}{subsection.23}
+\contentsline {subsection}{\numberline {4.2.2}Maps of non-abelian 1-cohomologies}{10}{subsection.24}
+\contentsline {chapter}{\numberline {5}1-Cohomology Calculation}{14}{chapter.28}
+\contentsline {section}{\numberline {5.1}The method}{14}{section.29}
+\contentsline {section}{\numberline {5.2}A rank 1 calculation}{20}{section.35}
+\contentsline {subsection}{\numberline {5.2.1}Example}{21}{subsection.36}
+\contentsline {subsection}{\numberline {5.2.2}Example}{32}{subsection.45}
+\contentsline {section}{\numberline {5.3}A rank 2 calculation}{39}{section.51}
+\contentsline {chapter}{\numberline {6}Complete Reducibility}{51}{chapter.53}
+\contentsline {chapter}{\numberline {7}Conclusion}{52}{chapter.54}
+\vspace {2em}
+\contentsline {chapter}{\numberline {A}Further Calculations}{53}{appendix.55}
+\contentsline {chapter}{\numberline {B}Source Code}{54}{appendix.56}
+\vspace {2em}
+\contentsline {chapter}{Bibliography}{55}{dummy.57}
