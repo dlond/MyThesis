@@ -25,10 +25,9 @@
 \contentsline {subsection}{\numberline {5.2.1}Example}{21}{subsection.36}
 \contentsline {subsection}{\numberline {5.2.2}Example}{32}{subsection.45}
 \contentsline {section}{\numberline {5.3}A rank 2 calculation}{39}{section.51}
-\contentsline {chapter}{\numberline {6}Complete Reducibility}{51}{chapter.53}
-\contentsline {chapter}{\numberline {7}Conclusion}{52}{chapter.54}
+\contentsline {chapter}{\numberline {6}Conclusion}{51}{chapter.53}
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}Further Calculations}{53}{appendix.55}
-\contentsline {chapter}{\numberline {B}Source Code}{54}{appendix.56}
+\contentsline {chapter}{\numberline {A}Further Calculations}{52}{appendix.54}
+\contentsline {chapter}{\numberline {B}Source Code}{53}{appendix.55}
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{55}{dummy.57}
+\contentsline {chapter}{Bibliography}{54}{dummy.56}

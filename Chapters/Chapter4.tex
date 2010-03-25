@@ -1,3 +1,4 @@
+%!TEX root = /Users/dan/Documents/Thesis/Thesis.tex
 % Chapter 4
 
 \chapter{The 1-Cohomology}
@@ -85,7 +86,9 @@ For any $v$ in $V$ and any $h_1, h_2$ in $H$
 	&=& v - h_1\cdot v + h_1\cdot \left( v - h_2\cdot v\right)\\
 	&=& \chi^H_v(h_1) + h_1\cdot \chi^H_v(h_2),
 \end{eqnarray*}
-so that every 1-coboundary is also a 1-cocycle. For any $u,v$ in $V$ and all $h$ in $H$
+so every 1-coboundary is also a 1-cocycle. 
+
+For any $u,v$ in $V$ and all $h$ in $H$
 \begin{eqnarray*}
 	(\chi^H_u + \chi^H_v)(h) &=& \chi^H_u(h) + \chi^H_v(h)\\
 	&=& u - h\cdot u + v - h\cdot v \\
@@ -99,26 +102,28 @@ Setting $v = -u$ in the above calculation provides the definition of an inverse 
 	H^1\left(H, V\right) = Z^1\left(H, V\right) / B^1\left(H, V\right),
 \end{eqnarray*}
 called the \emph{1-cohomology}.
-\begin{lemma} Suppose $H$ is linearly reductive. Then $H^1(H, V) = 0$.
+\begin{lemma} Suppose $H$ is linearly reductive. Then $H^1(H, V) = 0$. [Hochschild]
 \end{lemma}
 
 \subsection{Maps between 1-cohomologies}
-Let $\phi$ be a homomorphism from $\tilde{H}\rightarrow H$, $\tilde{H}$ being another group that acts on $V$ by homomorphisms. Suppose that for every $h$ in $H$ $\phi$ satisfies
+Let $\phi$ be a homomorphism from $\tilde{H}\rightarrow H$, $\tilde{H}$ being another group that acts on $V$ by homomorphisms. Suppose that for every $h$ in $H$, $\phi$ satisfies
 \begin{eqnarray*}
 	\phi(h)\cdot v = h\cdot v,
 \end{eqnarray*}
-for all $v$ in $V$.
-
-If $\sigma$ is a 1-cocycle from $H\rightarrow V$ then we claim that the map denoted $Z^1(\phi)(\sigma)$ defined by
+for all $v$ in $V$. If $\sigma$ is a 1-cocycle from $H\rightarrow V$ then we will show that the map denoted $Z^1(\phi)(\sigma)$ defined by
 \begin{eqnarray*}
 	Z^1(\phi)(\sigma) = \sigma \circ \phi,
 \end{eqnarray*}
-is a 1-cocycle from $\tilde{H}\rightarrow V$. For take $h_1, h_2$ in $H$. We have
+is a 1-cocycle from $\tilde{H}\rightarrow V$.
+
+Take $h_1, h_2$ in $H$. We have
 \begin{eqnarray*}
-	Z^1(\phi)(\sigma)(h_1h_2) &=& \sigma(\phi(h_1h_2)) \\
+	Z^1(\phi)(\sigma)(h_1h_2) &=& (\sigma \circ \phi)(h_1h_2) \\
+		&=& \sigma(\phi(h_1h_2)) \\
 		&=& \sigma(\phi(h_1)\phi(h_2)) \\
 		&=& \sigma(\phi(h_1)) + \phi(h_1)\cdot\sigma(\phi(h_2) \\
 		&=& \sigma(\phi(h_1)) + h_1\cdot\sigma(\phi(h_2)) \\
+		&=& (\sigma \circ \phi)(h_1) + (\sigma \circ \phi)(h_2) \\
 		&=& Z^1(\phi)(\sigma)(h_1) + h_1\cdot Z^1(\phi)(\sigma)(h_2).
 \end{eqnarray*}
 
@@ -134,19 +139,20 @@ defined by
 	H^1(H, V) @>>H^1(\phi)> H^1(\tilde{H}, V)
 \end{CD}
 \end{displaymath}
-where $\pi$ and $\tilde\pi$ are the respective canonical projections of $Z^1(H, V)$ onto $H^1(H, V)$ and $Z^1(\tilde{H}, V)$ onto $H^1(\tilde{H}, V)$. To show that the map $H^1(\phi)$ is well-defined it is sufficient to show that $Z^1(\phi)$ is a homomorphism:
-\begin{eqnarray*}
-	Z^1(\phi)(\sigma_1 + \sigma_2)(h) &=& (\sigma_1 + \sigma_2)(\phi(h)) \\
-		&=& \sigma_1(\phi(h)) + \sigma_2(\phi(h)) \\
-		&=& Z^1(\phi)(\sigma_1)(h) + Z^1(\phi)(\sigma_2)(h).
-\end{eqnarray*}
+where $\pi$ and $\tilde\pi$ are the respective canonical projections of $Z^1(H, V)$ onto $H^1(H, V)$ and $Z^1(\tilde{H}, V)$ onto $H^1(\tilde{H}, V)$. To show that the map $H^1(\phi)$ is well-defined it is sufficient to notice that $Z^1(\phi)$ is a homomorphism.
+%show that $Z^1(\phi)$ is a homomorphism:
+%\begin{eqnarray*}
+%	Z^1(\phi)(\sigma_1 + \sigma_2)(h) &=& (\sigma_1 + \sigma_2)(\phi(h)) \\
+%		&=& \sigma_1(\phi(h)) + \sigma_2(\phi(h)) \\
+%		&=& Z^1(\phi)(\sigma_1)(h) + Z^1(\phi)(\sigma_2)(h).
+%\end{eqnarray*}
 
-\begin{lemma}
+\begin{example}
 Let $\tilde{H}$ be a subgroup of $H$ and $i:\tilde{H}\rightarrow H$ the inclusion map. Then $i$ gives rise to a well defined map
 \begin{eqnarray*}
 H^1(i):H^1(H, V)\rightarrow H^1(\tilde{H}, V).
 \end{eqnarray*}
-\end{lemma}
+\end{example}
 
 \begin{lemma}\label{ch4::mapFromSylow}
 Let $H$ be a finite group and $\tilde{H} = H_p$ a \emph{Sylow $p$-subgroup} of $H$. The map 
@@ -186,11 +192,11 @@ Now as the value of $\sigma$ at a fixed $h$ depends only on the value of $\sigma
 	&=& \sum_{i = 1}^l\sigma(h_i) - \sum_{i = 1}^l \sigma(h_i) +\sum_{i = 1}^l \sigma(h) \\
 	&=& l\, \sigma(h).
 \end{eqnarray*}
-Since $l<p$, \emph{[okay, I should have been talking about $V$ vector space here]} $l$ is invertible and so
+Since $\gcd([H:H_p], p) = \gcd(l,p) = 1$, \emph{[okay, I should have been talking about $V$ vector space here]} $l$ is invertible and so
 \begin{eqnarray*}
 	l^{-1}\chi_{v^*}^H(h) = \sigma(h).
 \end{eqnarray*}
-That is, $\sigma$ is a 1-coboundary, so the kernel of $H(i)$ is trivial.
+Therefore $\sigma$ is a 1-coboundary and so the kernel of $H(i)$ is trivial.
 \end{proof}
 
 We could also let $\tilde{V}$ be another abelian group and $f:V\rightarrow\tilde{V}$ a homomorphism of groups satisfying
