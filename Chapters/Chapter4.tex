@@ -5,36 +5,10 @@
 \label{Chapter4}
 \lhead{Chapter 4. \emph{The 1-Cohomology}}
 
-TODO:
-\begin{itemize}
-\item Abelian 1-Cohomology
-\item Non-ablelian 1-Cohomology [Richardson]
-\item Brief results of calculations
-\end{itemize}
-
 \section{Abelian 1-Cohomology}
-TODO:
-	\begin{itemize}
-	\item The general setting: Group $H$, Vector space/Abelian group $V$, linear action/action of homomorphisms.
-	\item Definition of $Z^1$, $B^1$, $H^1$.
-	\item Definition of $Z^1(f)$, $B^1(f)$, $H^1(f)$ where $f:H\rightarrow H'$. $f$ must respect the actions of $H, H'$.
-	e.g. $i$ inclusion map.
-	\item $H^1(H, V) \rightarrow H^1(H_P, V)$ is (1-1? onto?)
-	\item What about when $H$ is finite? algebraic? both?
-	Define $H^1$ for $H$ finite, then $H$ algebraic then $H$ finite algebraic - should be consistent.
-	\item What about $H^1(x)$ where $x:V\rightarrow V'$?
-	Relevant: $B_4 \leq F_4$.
-	\item Explain: if $H=SL_2$ then $H^1$ is determined by its value on the upper triangular matrices. 
-	$B < SL_2$, $H^1(SL_2, V)\rightarrow H^1(B, V)$ is (1-1? onto?) $\leftarrow$ prove this. [Hum $G/B$].
-	\item $H^1(H, V)$ is trivial if $H$ is linearly reductive [done for $H$ finite].
-	\end{itemize}
 	
 \subsection{Definitions}
-Let $H$ be a group and $V$ an abelian group on which $H$ acts homomorphically, that is the map
-\begin{eqnarray*}
-	v \mapsto h\cdot v,
-\end{eqnarray*}
-is a homomorphism from $V\rightarrow V$ for any $h$ in $H$. We call a map $\sigma$ from $H\rightarrow V$ a  \emph{1-cocycle} if it satisfies
+Let $H$ be a group and $V$ an abelian group (vector space) on which $H$ acts homomorphically (linearly). We call a map $\sigma$ from $H\rightarrow V$ a  \emph{1-cocycle} if it satisfies
 \begin{eqnarray}\label{ch4::theOneCocycleCondition}
 	\sigma(h_1h_2) = \sigma(h_1) + h_1\cdot\sigma(h_2),
 \end{eqnarray}
@@ -106,7 +80,7 @@ called the \emph{1-cohomology}.
 \end{lemma}
 
 \subsection{Maps between 1-cohomologies}
-Let $\phi$ be a homomorphism from $\tilde{H}\rightarrow H$, $\tilde{H}$ being another group that acts on $V$ by homomorphisms. Suppose that for every $h$ in $H$, $\phi$ satisfies
+Let $\phi$ be a homomorphism from $\tilde{H}\rightarrow H$, $\tilde{H}$ being another group that acts on $V$. Suppose that for every $h$ in $H$, $\phi$ satisfies
 \begin{eqnarray*}
 	\phi(h)\cdot v = h\cdot v,
 \end{eqnarray*}
@@ -140,12 +114,6 @@ defined by
 \end{CD}
 \end{displaymath}
 where $\pi$ and $\tilde\pi$ are the respective canonical projections of $Z^1(H, V)$ onto $H^1(H, V)$ and $Z^1(\tilde{H}, V)$ onto $H^1(\tilde{H}, V)$. To show that the map $H^1(\phi)$ is well-defined it is sufficient to notice that $Z^1(\phi)$ is a homomorphism.
-%show that $Z^1(\phi)$ is a homomorphism:
-%\begin{eqnarray*}
-%	Z^1(\phi)(\sigma_1 + \sigma_2)(h) &=& (\sigma_1 + \sigma_2)(\phi(h)) \\
-%		&=& \sigma_1(\phi(h)) + \sigma_2(\phi(h)) \\
-%		&=& Z^1(\phi)(\sigma_1)(h) + Z^1(\phi)(\sigma_2)(h).
-%\end{eqnarray*}
 
 \begin{example}
 Let $\tilde{H}$ be a subgroup of $H$ and $i:\tilde{H}\rightarrow H$ the inclusion map. Then $i$ gives rise to a well defined map
@@ -155,7 +123,7 @@ H^1(i):H^1(H, V)\rightarrow H^1(\tilde{H}, V).
 \end{example}
 
 \begin{lemma}\label{ch4::mapFromSylow}
-Let $H$ be a finite group and $\tilde{H} = H_p$ a \emph{Sylow $p$-subgroup} of $H$. The map 
+Let $H$ be a finite group and $\tilde{H} = H_p$ a \emph{Sylow $p$-subgroup} of $H$. If $V$ is a vector space then the map 
 \begin{eqnarray*}
 H^1(i):H^1(H, V)\rightarrow H^1(H_p, V)
 \end{eqnarray*}
@@ -192,18 +160,14 @@ Now as the value of $\sigma$ at a fixed $h$ depends only on the value of $\sigma
 	&=& \sum_{i = 1}^l\sigma(h_i) - \sum_{i = 1}^l \sigma(h_i) +\sum_{i = 1}^l \sigma(h) \\
 	&=& l\, \sigma(h).
 \end{eqnarray*}
-Since $\gcd([H:H_p], p) = \gcd(l,p) = 1$, \emph{[okay, I should have been talking about $V$ vector space here]} $l$ is invertible and so
+Since $\gcd([H:H_p], p) = \gcd(l,p) = 1$, $l$ is invertible and so
 \begin{eqnarray*}
 	l^{-1}\chi_{v^*}^H(h) = \sigma(h).
 \end{eqnarray*}
 Therefore $\sigma$ is a 1-coboundary and so the kernel of $H(i)$ is trivial.
 \end{proof}
 
-We could also let $\tilde{V}$ be another abelian group and $f:V\rightarrow\tilde{V}$ a homomorphism of groups satisfying
-\begin{eqnarray*}
-	f ( h\cdot v) = h\cdot f(v).
-\end{eqnarray*}
-Following a similar chain of arguments as before we can define a map
+We could also consider appropriate maps $f:V\rightarrow\tilde{V}$ and following a similar chain of arguments as before we can define
 \begin{eqnarray*}
 	H^1(f):H^1(H, V)\rightarrow H^1(H, \tilde{V}),
 \end{eqnarray*}
@@ -212,62 +176,41 @@ or even
 	H^1(\phi, f):H^1(H, V)\rightarrow H^1(\tilde{H}, \tilde{V}).
 \end{eqnarray*}
 
-It is worth reminding the reader here of the directions of the underlying homomorphisms for the above construction to work:
-\begin{eqnarray*}
-	\phi:\tilde{H} \rightarrow H \\
-	f: V \rightarrow \tilde{V}.
-\end{eqnarray*}
-
 \section{Non-abelian 1-Cohomology}
-TODO:
-	\begin{itemize}
-	\item set up: Group $H$, non-abelian group $V$.
-	\item define: $Z^1$ as before, $B^1$ - not really the same as before, $H^1$ - harder.
-	\item $\phi:H\rightarrow H'$, $Z^1(H', V)\rightarrow Z^1(H, V)$?
-	$H^1(H', V)\rightarrow H^1(H, V)$?
-	- could put in some details.
-	\item $H$ finite, $H$ algebraic - as before.
-	\item $H^1(H, V) \rightarrow H^1(H_p, V)$ different to abelian case? Link to counter example to KII?
-	\item $H^1(SL_2, V) \rightarrow H^1(B, V)$ (1-1? onto?)
-	\item $H^1(H, V)$, $H$ linearly reductive - done.
-	\item $V\rightarrow V'$, $Z^1(H, V) \rightarrow Z^1(H, V')$ ? exists?
-	$H^1(H, V) \rightarrow H^1(H, V')$??
-	could put in details.
-	$V$ abelian group, $R=\mathbb{Z}$. $V$ is a $\mathbb{Z}$- module.
-	\end{itemize}
 	
 \subsection{The non-abelian setting}
 
-\subsection{Maps of non-abelian 1-cohomologies}
+We will be interested in $H$, $V$ algebraic groups, where we require that 1-cocyles be morphisms of varieties. Let us see why this is an interesting pursuit.
 
-OLD STUFF:
-Let $G$ be an algebraic group, $P$ a parabolic subgroup of $G$, and $L$ a Levi subgroup of $P$. Let $\rho: H \rightarrow L$ be a homomorphism, $H$ an abstract group.  
+Let $H,G$ be algebraic groups, $P$ a parabolic subgroup of $G$, and $L$ a Levi subgroup of $P$. Let $\rho: H \rightarrow L$ be a morphism.  
 
-We are interested in functions $\rho_\alpha : H \rightarrow P$ of the form $\rho_\alpha(h) = \alpha(h)\rho(h)$, where $\alpha:H \rightarrow R_u(P)$.
+Suppose $\rho_\alpha : H \rightarrow P$ is of the form $\rho_\alpha(h) = \alpha(h)\rho(h)$, where $\alpha:H \rightarrow R_u(P)$.
 
-What properties must $\alpha$ satisfy for $\rho_\alpha$ to be a homomorphism?
+\begin{example}
+What properties must $\alpha$ satisfy for $\rho_\alpha$ to be a homomorphism? 
+\end{example}
+Since
 \begin{eqnarray*}
 \alpha(gh)\rho(gh) = \rho_\alpha(gh) &=& \rho_\alpha(g)\rho_\alpha(h) \\
 	&=& \alpha(g)\rho(g)\alpha(h)\rho(h) \\
 	&=& \alpha(g)\rho(g)\alpha(h)\rho(g)^{-1}\rho(g)\rho(h)\\
 	&=&\alpha(g)\rho(g)\alpha(h)\rho(g)^{-1}\rho(gh),
 \end{eqnarray*}
-that is
+we have
 \begin{eqnarray*}
-\alpha(gh) = \alpha(g)\rho(g)\alpha(h)\rho(g)^{-1}. 
+\alpha(gh) = \alpha(g)\rho(g)\alpha(h)\rho(g)^{-1}.,
 \end{eqnarray*}
-Since $L$ normalises $R_u(P)$, we choose write this as 
-\begin{eqnarray}
+or simply
+\begin{eqnarray}\label{nonab1c}
 \alpha(gh)=\alpha(g)*g\cdot\alpha(h),
 \end{eqnarray}
-where the action of $H$ on $R_u(P)$ is defined by $\rho$, and $*:R_u(P)\times R_u(P)\rightarrow R_u(P)$. 
+where the action of $H$ on $R_u(P)$ is defined by $\rho$, and $*:R_u(P)\times R_u(P)\rightarrow R_u(P)$.
 
-We call (1) the 1-cocycle condition. A morphism $\alpha:H\rightarrow R_u(P)$ that satisfies the 1-cocycle condition for all $g,h\in H$ is said to be a 1-cocycle, and we denote by $Z^1(H,R_u(P))$ the set of all 1-cocycles from $H$ into $R_u(P)$. 
+We call (\ref{nonab1c}) the 1-cocycle condition in our non-abelian setting and refer to morphisms $H\rightarrow V$ between algebraic groups that satisfies the 1-cocycle condition as 1-cocycles. We denote by $Z^1(H,V)$ the set of all 1-cocycles from $H$ into $V$.
 
-Note that in the case that $R_u(P)$ is abelian, $Z^1(H,R_u(P))$ is a vector space under pointwise addition and scalar multiplication, and we write the 1-cocycle condition in additive notation: $\alpha(gh)=\alpha(g)+g\cdot\alpha(h)$.
-
+\begin{example}
 When is $\rho$ $R_u(P)$-conjugate to $\rho_\alpha$?
-
+\end{example}
 Suppose there exists a $v\in R_u(P)$ such that $\rho_\alpha(h) = v\rho(h)v^{-1}$ for all $h\in H$. Then
 \begin{eqnarray*}
 	\alpha(h)\rho(h) = \rho_\alpha(h) &=& v\rho(h)v^{-1}\\
@@ -277,13 +220,12 @@ Therefore, $\alpha$ is of the form
 \begin{eqnarray*}
 	\alpha(h) = v*h\cdot v^{-1}.
 \end{eqnarray*}
-This leads us to the next definition. 
 
-For a fixed $v\in R_u(P)$ we define a 1-coboundary to be a morphism $\chi_v: H \rightarrow R_u(P)$ of the form
+So for a fixed $v\in V$, an algebraic group, we define a 1-coboundary in our non-abelian setting to be a morphism $\chi_v: H \rightarrow V$ of the form
 \begin{eqnarray}
 \chi_v(h) = v*h\cdot v^{-1}, 
 \end{eqnarray}
-and denote the collection of all 1-coboundaries from $H$ into $R_u(P)$ by $B^1(H,R_u(P))$. Indeed,
+and denote the collection of all 1-coboundaries from $H$ into $V$ by $B^1(H,V)$. Indeed,
 \begin{eqnarray*}
 	\chi_v(gh) &=& v\rho(gh)v^{-1}\rho(gh)^{-1} \\
 	&=& v\rho(g)\rho(h)v^{-1}\rho(h)^{-1}\rho(g)^{-1} \\
@@ -292,14 +234,13 @@ and denote the collection of all 1-coboundaries from $H$ into $R_u(P)$ by $B^1(H
 	&=& \left[v*g\cdot v^{-1}\right]*g\cdot \left[v*h\cdot v^{-1}\right] \\
 	&=& \chi_v(g) * g\cdot \chi_v(h),
 \end{eqnarray*}
-so that $B^1(H,R_u(P))\subset Z^1(H,R_u(P))$.
+so that $B^1(H,V)\subset Z^1(H,V)$.
 
-As before, if $R_u(P)$ is abelian then we write (2) in additive notation, $\chi_v(h)=v-h\cdot v$, and note that $B^1(H,R_u(P))$ is a vector subspace of $Z^1(H,R_u(P))$.
-
+\begin{example}
 When is $\rho_\alpha$ $R_u(P)$-conjugate to $\rho_\beta$?
-
+\end{example}
 Let $\alpha,\beta\in Z^1(H,R_u(P))$ and suppose there exists a $v\in R_u(P)$ such that $\rho_\beta(h) = v\rho_\alpha(h)v^{-1}$. Then
-\begin{eqnarray*}
+\begin{eqnarray*}\label{nonabeq}
 	\beta(h)\rho(h) &=& v\alpha(h)\rho(h)v^{-1} \\
 	&=&v\alpha(h)\rho(h)v^{-1}\rho(h)^{-1}\rho(h),
 \end{eqnarray*}
@@ -307,26 +248,4 @@ that is
 \begin{eqnarray}
 	\beta(h) = v\alpha(h)*h\cdot v^{-1}.
 \end{eqnarray}
-We show that (3) gives rise to an equivalence relation on $Z^1(H,R_u(P))$. 
-
-Reflexivity:
-
-$\alpha(h) = v\alpha(h)*h\cdot v^{-1}$ with the choice $v=1$.
-
-Symmetry:
-
-If $\alpha(h) = v\beta(h)*h\cdot v^{-1}$, then $\beta(h) = v^{-1}\beta(h)*h\cdot v$.
-
-Transitivity:
-
-If $\alpha(h) = v\beta(h)*h\cdot v^{-1}$ and $\beta(h) = w\gamma(h)*h\cdot w^{-1}$ then $\alpha(h) = (vw)\gamma(h)*h\cdot (vw)^{-1}$.
-
-Now we define the 1-cohomology, denoted by $H^1(H,R_u(P))$, to be the set of equivalence classes of $Z^1(H,R_u(P))$, where $\alpha \sim \beta$ if and only if (3) holds.
-
-In the abelian case, (3) becomes $\beta(h) = \alpha(h)+\chi_v(h)$, so that two 1-cocycles are equivalent when they differ by a 1-coboundary, and $H^1(H,R_u(P))=Z^1(H,R_u(P))/B^1(H,R_u(P))$.
-
-BEN'S SUGGESTIONS:
-
-1) Understand the basic properties of nonabelian 1-cohomology.  (Definitions of 1-cocycles, 1-coboundaries and 1-cohomology.  Maps $H^1(F,U)\rightarrow H^1(F_p,U)$, where $F_p$ is a Sylow $p$-subgroup of $F$.  Etc.  Some of this will be in Richardson's paper.)
-
-2) Try to show that nonabelian $U$ is needed if we are to find a counterexample to Kulshammer's problem.  There are various issues here.  For instance, is the following true?  Suppose we have $\rho_0:H\rightarrow L$, and suppose $U=R_u(P)$ is abelian.  Let $\{\rho_\alpha\}$ be a family of representations of H constructed from $\rho_0$ using 1-cocycles $\alpha$.  Show that if the restrictions $\rho_\alpha|H_p$ are all $U$-conjugate then the $\rho_\alpha$ are all $U$-conjugate.  Here $H$ is a finite group with Sylow $p$-subgroup $H_p$, but one could ask the same question with $H=A_1$ and replacing $H_p$ with the group of upper unitriangular matrices.
+The relation in (\ref{nonabeq}) gives rise to an equivalence relation on $Z^1(H,V)$. Now we define the (non-abelian) 1-cohomology, denoted by $H^1(H,V)$, to be the set of equivalence classes of $Z^1(H,V)$.
