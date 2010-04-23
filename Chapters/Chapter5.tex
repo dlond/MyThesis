@@ -13,13 +13,13 @@ In this chapter we present a method of calculating the 1-cohomology $H^1\left( S
 \begin{proof}
 By [ref Humphreys] $H^1(SL_2, V)\rightarrow H^1(B, V)$ is injective, so we just need to show that $H^1(B, V)\rightarrow H^1(U, V)$ is injective. 
 
-Let $x$ be an element of the kernel of the map $H^1(i):H^1(B,V)\rightarrow H^1(U,V)$ and let $\sigma$ be a representative in $Z^1(B,V)$ for $x$. Since $Z^1(i)(\sigma)$ represents the class containing the trivial 1-cocycle we may assume that $\sigma(u) = 1$ for all $u$ in $U$. There exists a $v$ in $V$ such that $\sigma(t) = \chi(t)$ for all $t$ in $T$. Define
+Let $x$ be an element of the kernel of the map $H^1(i):H^1(B,V)\rightarrow H^1(U,V)$ and let $\sigma$ be a representative in $Z^1(B,V)$ for $x$. Since $Z^1(i)(\sigma)$ represents the class containing the trivial 1-cocycle we may assume that $\sigma(u) = 0$ for all $u$ in $U$. There exists a $v$ in $V$ such that $\sigma(t) = \chi(t)$ for all $t$ in $T$. Define
 \begin{eqnarray*}
 	\sigma'(g) = v^{-1}\sigma(g) g\cdot v.
 \end{eqnarray*}
 We have adjusted $\sigma$ by a 1-coboundary to yield a 1-cocycle $\sigma'$ of the same 1-cohomology class that is zero on $T$. 
 
-Since for any $u\in U$ $\sigma(u) = 1$ and for any $t\in T$ there is a $u'$ such that $ut = tu'$
+Since $\sigma(u) = 0$ for any $u\in U$, and for any $t\in T$ there is a $u'$ such that $ut = tu'$
 \begin{eqnarray*}
 	\sigma(ut) &=& \sigma(tu')\\
 	\Rightarrow \sigma(u)u\cdot \sigma(t) &=& \sigma(t) t \cdot \sigma(u')\\
@@ -30,7 +30,7 @@ Hence
 \sigma'(u) &=& v^{-1}\sigma(u)u\cdot v\quad[\textrm{phew I made a mistake here}]\\
 	&=& v^{-1}\sigma(u)\cdot v\\
 	&=& v^{-1} v\\
-	&=& 1.
+	&=& 0.
 \end{eqnarray*}
 	
 \end{proof}
