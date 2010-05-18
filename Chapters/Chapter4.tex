@@ -221,7 +221,7 @@ Therefore, $\alpha$ is of the form
 	\alpha(h) = v*h\cdot v^{-1}.
 \end{eqnarray*}
 
-So for a fixed $v\in V$, an algebraic group, we define a 1-coboundary in our non-abelian setting to be a morphism $\chi_v: H \rightarrow V$ of the form
+So for a fixed $v\in V$, we define a 1-coboundary in our non-abelian setting to be a morphism $\chi_v: H \rightarrow V$ of the form
 \begin{eqnarray}
 \chi_v(h) = v*h\cdot v^{-1}, 
 \end{eqnarray}
@@ -249,3 +249,40 @@ that is
 	\beta(h) = v\alpha(h)*h\cdot v^{-1}.
 \end{eqnarray}
 The relation in (\ref{nonabeq}) gives rise to an equivalence relation on $Z^1(H,V)$. Now we define the (non-abelian) 1-cohomology, denoted by $H^1(H,V)$, to be the set of equivalence classes of $Z^1(H,V)$.
+
+\begin{lemma} Let $B$ be a Borel subgroup of $SL_2$ and $V$ a vector space. Then $H^1(i):H^1(SL_2, V)\rightarrow H^1(B, V)$ is injective.
+\end{lemma}
+\begin{proof}
+Let $x$ be in the kernel of $H^1(i)$ and $\sigma$ and element of $Z^1(SL_2, V)$ that projects onto the class $x$. Since the image of $\sigma$ under $Z^1(i)$ projects to the trivial 1-cohomology class we may as well assume that $\sigma$ takes all elements $B$ to the identity element of $V$ (cf. \emph{the first time I do this kind of thing}). Now consider the \emph{homogeneous space} $SL_2/B$ [ref Humphreys] and take the morphism $\tilde{\sigma}$, defined in the usual way,
+\begin{displaymath}
+	\tilde{\sigma}:SL_2/B\rightarrow V.
+\end{displaymath}
+This morphism is well defined. For suppose $g_1,g_2$ in $SL_2$ both represent the coset $gB$, then there is a $b_i$ in $B$ such that $g_i = gb_i$ $(i = 1,2)$. We have
+\begin{displaymath}
+	\sigma(gb_i) = \sigma(g)*g\cdot\sigma(b_i) = \sigma(g)*g\cdot 1 = \sigma(g),\quad(i = 1,2),
+\end{displaymath}
+so $\tilde{\sigma}$ does not depend on the choice of representative. Since $SL_2/B$ is a projective variety [ref Humphreys], $\tilde{\sigma}$ must be constant [ref Borel]. Hence, as $\sigma$ takes the value 1 for any $b$ in $B$, $\tilde{\sigma}(gB) = 1$ for all cosets $gB$. Therefore, for all $g$ in $SL_2$
+\begin{displaymath}
+	\sigma(g) = \tilde{\sigma}(gB) = 1.
+\end{displaymath}
+We have shown that $\sigma$ is the 1-coboundary $\chi_1$ which means that the kernel of $H^1(i)$ is trivial.
+\end{proof} 
+
+\begin{lemma} Let $B$ be a Borel subgroup of $SL_2$ and $U$ be the maximal connected unipotent subgroup of $B$. Then $H^1(B, V)\rightarrow H^1(U, V)$ is injective. Moreover
+\begin{displaymath}
+	H^1(SL_2, V)\rightarrow H^1(U, V)
+\end{displaymath}
+is injective.
+\end{lemma}
+\begin{proof}
+As in the previous example, let $x$ be an element of the kernel of the map $H^1(i):H^1(B,V)\rightarrow H^1(U,V)$ and let $\sigma$ in $Z^1(B,V)$ be a representative for $x$ that takes all $u$ in $U$ to the identity of $V$. Let $T$ be the maximal torus for $B$. For any $u$ in $U$ and $t$ in $T$ there is a $u'$ in $U$ such that
+\begin{displaymath}
+	ut = tu'.
+\end{displaymath}
+Hence $U$ acts trivially on the image of $T$ under $\sigma$:
+\begin{eqnarray*}
+	\sigma(ut) &=& \sigma(tu')\\
+	\sigma(u)*u\cdot\sigma(t) &=& \sigma(t)*t\cdot\sigma(u')\\
+	u\cdot\sigma(t) &=& \sigma(t).
+\end{eqnarray*}
+\end{proof}
