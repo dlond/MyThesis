@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.1.15)  22 APR 2010 01:13
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.1.15)  19 MAY 2010 20:09
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -631,67 +631,67 @@ Chapter 4.
 ------------------------------------------------------------------------------
 [4
 
-] [5] [6] [7] [8] [9] [10]) (./Chapters/Chapter5.tex [11]
+] [5] [6] [7] [8] [9] [10] [11]) (./Chapters/Chapter5.tex [12]
 Chapter 5.
 ------------------------------------------------------------------------------
  5 1-Cohomology Calculation
 ------------------------------------------------------------------------------
-[12
+[13
 
-] [13] [14]
-Overfull \hbox (5.91562pt too wide) in alignment at lines 121--186
+] [14]
+Overfull \hbox (5.91562pt too wide) in alignment at lines 93--158
  [][][] []
  []
 
 [15] [16] [17] [18] [19] [20]
-Overfull \hbox (38.32626pt too wide) in alignment at lines 423--473
+Overfull \hbox (38.32626pt too wide) in alignment at lines 395--445
  [][][] []
  []
 
 [21] [22]
-Overfull \hbox (46.36978pt too wide) in alignment at lines 513--553
+Overfull \hbox (46.36978pt too wide) in alignment at lines 485--525
  [][][] []
  []
 
 [23] [24]
-Overfull \hbox (0.7248pt too wide) in paragraph at lines 643--644
+Overfull \hbox (0.7248pt too wide) in paragraph at lines 615--616
 []\OT1/cmr/m/n/10.95 If we are to find a non-trivial 1-cohomology $\OML/cmm/m/i
 t/10.95 H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 SL[]; V\OT1/cmr/m/n/10.95 )$
  then $\OML/cmm/m/it/10.95 ^^[$ \OT1/cmr/m/n/10.95 can-not be a 1-coboundary.
  []
 
 [25]
-Overfull \hbox (5.76404pt too wide) in alignment at lines 694--756
+Overfull \hbox (5.76404pt too wide) in alignment at lines 666--728
  [][][] []
  []
 
 [26] [27]
-Overfull \hbox (49.75233pt too wide) in alignment at lines 799--863
+Overfull \hbox (49.75233pt too wide) in alignment at lines 771--835
  [][][] []
  []
 
 [28] [29]
-Overfull \hbox (35.89026pt too wide) in alignment at lines 940--952
+Overfull \hbox (35.89026pt too wide) in alignment at lines 912--924
  [][][] []
  []
 
 [30]
-Overfull \hbox (16.7704pt too wide) in alignment at lines 993--1024
+Overfull \hbox (16.7704pt too wide) in alignment at lines 965--996
  [][][] []
  []
 
 [31] [32] [33] [34]
-Overfull \hbox (5.76404pt too wide) in alignment at lines 1189--1251
+Overfull \hbox (5.76404pt too wide) in alignment at lines 1161--1223
  [][][] []
  []
 
 [35]
-Overfull \hbox (49.75233pt too wide) in alignment at lines 1256--1311
+Overfull \hbox (49.75233pt too wide) in alignment at lines 1228--1283
  [][][] []
  []
 
 [36] [37] [38]
-Overfull \hbox (9.34364pt too wide) in paragraph at lines 1371--1379
+Overfull \hbox (9.34364pt too wide) in paragraph at lines 1343--1351
 \OML/cmm/m/it/10.95 ^^O[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]\OT1/cmr/m/
 n/10.95 )\OML/cmm/m/it/10.95 ^^O[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]\O
 T1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ^^O[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10
@@ -736,10 +736,10 @@ Appendix B.
 
 ] (./Thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 9880 strings out of 493876
- 136805 string characters out of 1150568
+ 9879 strings out of 493876
+ 136793 string characters out of 1150568
  232298 words of memory out of 3000000
- 12832 multiletter control sequences out of 10000+50000
+ 12831 multiletter control sequences out of 10000+50000
  13805 words of font info for 51 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
  43i,17n,45p,630b,387s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -767,9 +767,9 @@ fb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti12.pfb></usr/
 local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmtt10.pfb></usr/local/tex
 live/2008/texmf-dist/fonts/type1/bluesky/ams/msam7.pfb></usr/local/texlive/2008
 /texmf-dist/fonts/type1/bluesky/ams/msbm10.pfb>
-Output written on Thesis.pdf (62 pages, 294065 bytes).
+Output written on Thesis.pdf (62 pages, 295554 bytes).
 PDF statistics:
- 596 PDF objects out of 1000 (max. 8388607)
+ 592 PDF objects out of 1000 (max. 8388607)
  129 named destinations out of 1000 (max. 131072)
- 229 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 221 words of extra memory for PDF output out of 10000 (max. 10000000)
 
