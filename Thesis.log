@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.1.15)  31 MAY 2010 22:50
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.1.15)  1 JUN 2010 22:30
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -456,26 +456,129 @@ LaTeX Info: Redefining \addtolength on input line 76.
 )
 \c@vec@elem=\count138
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 16.
+(/usr/local/texlive/2008/texmf-dist/tex/generic/xypic/xy.sty
+(/usr/local/texlive/2008/texmf-dist/tex/generic/xypic/xy.tex Bootstrap'ing:
+catcodes, docmode,
+(/usr/local/texlive/2008/texmf-dist/tex/generic/xypic/xyrecat.tex)
+(/usr/local/texlive/2008/texmf-dist/tex/generic/xypic/xyidioms.tex)
+
+ Xy-pic version 3.7 <1999/02/16>
+ Copyright (c) 1991-1998 by Kristoffer H. Rose <krisrose@ens-lyon.fr>
+ Xy-pic is free software: see the User's Guide for details.
+
+Loading kernel: messages; fonts; allocations: state,
+\X@c=\dimen150
+\Y@c=\dimen151
+\U@c=\dimen152
+\D@c=\dimen153
+\L@c=\dimen154
+\R@c=\dimen155
+\Edge@c=\toks33
+\X@p=\dimen156
+\Y@p=\dimen157
+\U@p=\dimen158
+\D@p=\dimen159
+\L@p=\dimen160
+\R@p=\dimen161
+\Edge@p=\toks34
+\X@origin=\dimen162
+\Y@origin=\dimen163
+\X@xbase=\dimen164
+\Y@xbase=\dimen165
+\X@ybase=\dimen166
+\Y@ybase=\dimen167
+\X@min=\dimen168
+\Y@min=\dimen169
+\X@max=\dimen170
+\Y@max=\dimen171
+\lastobjectbox@=\box35
+\zerodotbox@=\box36
+\almostz@=\dimen172
+ direction,
+\d@X=\dimen173
+\d@Y=\dimen174
+\K@=\count139
+\KK@=\count140
+\Direction=\count141
+\K@dXdY=\dimen175
+\K@dYdX=\dimen176
+\xyread@=\read2
+\xywrite@=\write3
+\csp@=\count142
+\quotPTK@=\dimen177
+
+utility macros; pictures: \xy, positions,
+\swaptoks@@=\toks35
+\connectobjectbox@@=\box37
+ objects,
+\styletoks@=\toks36
+ decorations;
+kernel objects: directionals, circles, text; options; algorithms: directions,
+edges, connections;  Xy-pic loaded)
+Package: xy 1999/02/16 Xy-pic version 3.7
+
+(/usr/local/texlive/2008/texmf-dist/tex/generic/xypic/xycmtip.tex
+ Xy-pic option: Computer Modern tip extension v.3.3
+(/usr/local/texlive/2008/texmf-dist/tex/generic/xypic/xytips.tex
+ Xy-pic option: More Tips extension v.3.3 loaded) loaded)
+(/usr/local/texlive/2008/texmf-dist/tex/generic/xypic/xyall.tex
+ Xy-pic option: All features v.3.3
+(/usr/local/texlive/2008/texmf-dist/tex/generic/xypic/xycurve.tex
+ Xy-pic option: Curve and Spline extension v.3.7 curve,
+\crv@cnt@=\count143
+\crvpts@=\toks37
+\splinebox@=\box38
+\splineval@=\dimen178
+\splinedepth@=\dimen179
+\splinetol@=\dimen180
+\splinelength@=\dimen181
+ circles,
+\L@=\dimen182
+ loaded)
+(/usr/local/texlive/2008/texmf-dist/tex/generic/xypic/xyframe.tex
+ Xy-pic option: Frame and Bracket extension v.3.7 loaded)
+(/usr/local/texlive/2008/texmf-dist/tex/generic/xypic/xyline.tex
+ Xy-pic option: Line styles extension v.3.6
+\xylinethick@=\dimen183
+ loaded)
+(/usr/local/texlive/2008/texmf-dist/tex/generic/xypic/xyrotate.tex
+ Xy-pic option: Rotate and Scale extension v.3.3 loaded)
+(/usr/local/texlive/2008/texmf-dist/tex/generic/xypic/xycolor.tex
+ Xy-pic option: Colour extension v.3.3 loaded)
+(/usr/local/texlive/2008/texmf-dist/tex/generic/xypic/xymatrix.tex
+ Xy-pic option: Matrix feature v.3.4
+\Row=\count144
+\Col=\count145
+\queue@=\toks38
+\queue@@=\toks39
+\qcount@=\count146
+\qcount@@=\count147
+\matrixsize@=\count148
+ loaded)
+(/usr/local/texlive/2008/texmf-dist/tex/generic/xypic/xyarrow.tex
+ Xy-pic option: Arrow and Path feature v.3.5 path, \ar, loaded)
+(/usr/local/texlive/2008/texmf-dist/tex/generic/xypic/xygraph.tex
+ Xy-pic option: Graph feature v.3.7 loaded) loaded))
+Package hyperref Info: Option `colorlinks' set `true' on input line 17.
  (./Thesis.aux)
 \openout1 = `Thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
@@ -490,18 +593,18 @@ Package caption Info: End \AtBeginDocument code.
 
 (/usr/local/texlive/2008/texmf-dist/tex/context/base/supp-pdf.tex
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count139
-\scratchdimen=\dimen150
-\scratchbox=\box35
-\nofMPsegments=\count140
-\nofMParguments=\count141
-\everyMPshowfont=\toks33
-\MPscratchCnt=\count142
-\MPscratchDim=\dimen151
-\MPnumerator=\count143
-\everyMPtoPDFconversion=\toks34
+\scratchcounter=\count149
+\scratchdimen=\dimen184
+\scratchbox=\box39
+\nofMPsegments=\count150
+\nofMParguments=\count151
+\everyMPshowfont=\toks40
+\MPscratchCnt=\count152
+\MPscratchDim=\dimen185
+\MPnumerator=\count153
+\everyMPtoPDFconversion=\toks41
 )
-\c@lstlisting=\count144
+\c@lstlisting=\count154
  (/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
@@ -510,7 +613,7 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
 )
-Package hyperref Info: Link coloring ON on input line 19.
+Package hyperref Info: Link coloring ON on input line 20.
 
 (/usr/local/texlive/2008/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
@@ -518,16 +621,16 @@ Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 (/usr/local/texlive/2008/texmf-dist/tex/latex/oberdiek/refcount.sty
 Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
-\c@section@level=\count145
+\c@section@level=\count155
 )
-LaTeX Info: Redefining \ref on input line 19.
-LaTeX Info: Redefining \pageref on input line 19.
+LaTeX Info: Redefining \ref on input line 20.
+LaTeX Info: Redefining \pageref on input line 20.
 
 (./Thesis.out) (./Thesis.out)
-\@outlinefile=\write3
-\openout3 = `Thesis.out'.
+\@outlinefile=\write4
+\openout4 = `Thesis.out'.
 
-\AtBeginShipoutBox=\box36
+\AtBeginShipoutBox=\box40
 
 ------------------------------------------------------------------------------
  Title Page
@@ -540,16 +643,16 @@ LaTeX Info: Redefining \pageref on input line 19.
 ------------------------------------------------------------------------------
  Declaration of Authorship
 ------------------------------------------------------------------------------
-LaTeX Font Info:    Try loading font information for U+msa on input line 74.
+LaTeX Font Info:    Try loading font information for U+msa on input line 75.
 (/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 74.
+LaTeX Font Info:    Try loading font information for U+msb on input line 75.
 
 (/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2002/01/19 v2.2g AMS font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 74--74
+Underfull \hbox (badness 10000) in paragraph at lines 75--75
 
  []
 
@@ -577,8 +680,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--74
 
 
 ])
-\tf@toc=\write4
-\openout4 = `Thesis.toc'.
+\tf@toc=\write5
+\openout5 = `Thesis.toc'.
 
  [6]
 ------------------------------------------------------------------------------
@@ -631,7 +734,16 @@ Chapter 4.
 ------------------------------------------------------------------------------
 [4
 
-] [5] [6] [7] [8] [9] [10]) (./Chapters/Chapter5.tex [11]
+] [5] [6] <xymatrix 2x2 182> [7] [8] [9] [10] <xymatrix 2x2 137>
+Overfull \hbox (5.69064pt too wide) in paragraph at lines 418--419
+[]\OT1/cmr/m/n/10.95 As in the pre-vi-ous ex-am-ple, let $\OML/cmm/m/it/10.95 x
+$ \OT1/cmr/m/n/10.95 be an el-e-ment of the ker-nel of $\OML/cmm/m/it/10.95 H[]
+\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 i\OT1/cmr/m/n/10.95 ) : \OML/cmm/m/it/1
+0.95 H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 B; V\OT1/cmr/m/n/10.95 ) \OMS/c
+msy/m/n/10.95 !
+ []
+
+) (./Chapters/Chapter5.tex [11]
 Chapter 5.
 ------------------------------------------------------------------------------
  5 1-Cohomology Calculation
@@ -736,13 +848,13 @@ Appendix B.
 
 ] (./Thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 9877 strings out of 493876
- 136836 string characters out of 1150568
- 232298 words of memory out of 3000000
- 12833 multiletter control sequences out of 10000+50000
- 13805 words of font info for 51 fonts, out of 3000000 for 5000
+ 12082 strings out of 493876
+ 163619 string characters out of 1150568
+ 291402 words of memory out of 3000000
+ 14987 multiletter control sequences out of 10000+50000
+ 14948 words of font info for 58 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
- 43i,17n,45p,630b,387s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,14n,45p,630b,444s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{theorem.32} has been referenced b
 ut does not exist, replaced by a fixed one
 
@@ -763,10 +875,13 @@ m/cmsy8.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti10.p
 fb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmti12.pfb></usr/
 local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmtt10.pfb></usr/local/tex
 live/2008/texmf-dist/fonts/type1/bluesky/ams/msam7.pfb></usr/local/texlive/2008
-/texmf-dist/fonts/type1/bluesky/ams/msbm10.pfb>
-Output written on Thesis.pdf (61 pages, 293616 bytes).
+/texmf-dist/fonts/type1/bluesky/ams/msbm10.pfb></usr/local/texlive/2008/texmf-d
+ist/fonts/type1/public/xypic/xycmat10.pfb></usr/local/texlive/2008/texmf-dist/f
+onts/type1/public/xypic/xycmbt10.pfb></usr/local/texlive/2008/texmf-dist/fonts/
+type1/public/xypic/xydash10.pfb>
+Output written on Thesis.pdf (61 pages, 302128 bytes).
 PDF statistics:
- 592 PDF objects out of 1000 (max. 8388607)
+ 604 PDF objects out of 1000 (max. 8388607)
  125 named destinations out of 1000 (max. 131072)
  237 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -71,12 +71,12 @@ For any $u,v$ in $V$ and all $h$ in $H$
 \end{eqnarray*}
 is a 1-coboundary, and hence $B^1\left(H, V\right)$ is also closed under pointwise addition.
 
-Setting $v = -u$ in the above calculation provides the definition of an inverse of a 1-coboundary and hence shows that $B^1(H, V)$ is a subgroup of $Z^1(H, V)$ via the two-step subgroup test. In fact it is easy to show that $B^1(H, V)$ is a $\mathbb{Z}-$submodule of $Z^1(H, V)$, so we may form the quotient module
+We see that $B^1(H, V)$ is a subgroup of $Z^1(H, V)$ via the two-step subgroup test. In fact it is easy to show that $B^1(H, V)$ is a $\mathbb{Z}-$submodule of $Z^1(H, V)$, so we may form the quotient module
 \begin{eqnarray*}
 	H^1\left(H, V\right) = Z^1\left(H, V\right) / B^1\left(H, V\right),
 \end{eqnarray*}
 called the \emph{1-cohomology}.
-\begin{lemma} Suppose $H$ is linearly reductive. Then $H^1(H, V) = 0$. [Hochschild]
+\begin{lemma} Suppose $H$ is linearly reductive. Then $H^1(H, V)$ is trivial. [Hochschild]
 \end{lemma}
 
 \subsection{Maps between 1-cohomologies}
@@ -107,11 +107,15 @@ Moreover, it can be shown that $Z^1(\phi)$ maps $B^1(H, V)$ into $B^1(\tilde{H},
 \end{eqnarray*}
 defined by
 \begin{displaymath}
-\begin{CD}
-	Z^1(H, V) @>Z^1(\phi)>> Z^1(\tilde{H}, V)\\
-	@V{\pi}VV                                  @VV{\tilde{\pi}}V\\
-	H^1(H, V) @>>H^1(\phi)> H^1(\tilde{H}, V)
-\end{CD}
+	\xymatrix{
+	Z^1(H, V) \ar[d]_{\pi} \ar[r]^{Z^1(\phi)} & Z^1(H, V) \ar[d]^{\pi}\\
+	H^1(H, V) \ar[r]^{H^1(\phi)} & H^1(\tilde{H}, V)
+	}
+% \begin{CD}
+	% Z^1(H, V) @>Z^1(\phi)>> Z^1(\tilde{H}, V)\\
+	% @V{\pi}VV                                  @VV{\tilde{\pi}}V\\
+	% H^1(H, V) @>>H^1(\phi)> H^1(\tilde{H}, V)
+% \end{CD}
 \end{displaymath}
 where $\pi$ and $\tilde\pi$ are the respective canonical projections of $Z^1(H, V)$ onto $H^1(H, V)$ and $Z^1(\tilde{H}, V)$ onto $H^1(\tilde{H}, V)$. To show that the map $H^1(\phi)$ is well-defined it is sufficient to notice that $Z^1(\phi)$ is a homomorphism.
 
@@ -324,11 +328,11 @@ so every 1-coboundary is also a 1-cocycle.
 % \begin{lemma} Suppose $H$ is linearly reductive. Then $H^1(H, V) = 0$. [Hochschild]
 % \end{lemma}
 
-We say $\sigma_1, \sigma_2$ in $Z^1(H, V)$ are equivalent if there exists a $v$ in $V$ such that
+We say $\sigma_1, \sigma_2$ in $Z^1(H, V)$ are \emph{equivalent} if there exists a $v$ in $V$ such that
 \begin{eqnarray}\label{ch4::equivalentOneCocycles}
 	\sigma_1(h) = v * \sigma_2(h) * h\cdot v^{-1},
 \end{eqnarray}
-for all $h$ in $H$. We call the set of equivalence classes of $Z^1(H, V)$ under (\ref{ch4::equivalentOneCocycles}) the \emph{1-cohomology}, denoted $H^1(H, V)$.
+for all $h$ in $H$. We call the set of equivalence classes of $Z^1(H, V)$ under the equivalence relation defined by (\ref{ch4::equivalentOneCocycles}) the \emph{1-cohomology}, denoted $H^1(H, V)$.
 
 \subsection{Maps between 1-cohomologies}
 % Let $\phi$ be a homomorphism from $\tilde{H}\rightarrow H$, $\tilde{H}$ being another group that acts on $V$. Suppose that for every $h$ in $H$, $\phi$ satisfies
@@ -390,9 +394,16 @@ Now consider the \emph{homogeneous space} $SL_2/B$ [ref Humphreys] and take the 
 \begin{displaymath}
 	\tilde{\sigma}:SL_2/B \rightarrow V,
 \end{displaymath}
-defined in the usual way under the canonical projection $SL_2 \rightarrow SL_2/B$. This map is well defined and is a morphism [ref Borel]. Now since $SL_2/B$ is an irreducible projective variety [ref Humphreys], $\tilde{\sigma}$ must be constant [ref Borel]. Hence, as $\sigma$ takes the value 1 for any $b$ in $B$, $\tilde{\sigma}(gB) = 1$ for all cosets $gB$. Therefore, for all $g$ in $SL_2$
+defined in the usual way under the canonical projection $\pi:SL_2 \rightarrow SL_2/B$:
 \begin{displaymath}
-	\sigma(g) = \tilde{\sigma}(gB) = 1.
+	\xymatrix{
+	SL_2 \ar[r]^{\sigma} \ar[d]_{\pi} & V\\
+	SL_2/B \ar[ru]_{\tilde{\sigma}}
+	}
+\end{displaymath}
+This map is well defined and is a morphism [ref Borel]. Now since $SL_2/B$ is an irreducible projective variety [ref Humphreys], $\tilde{\sigma}$ must be constant [ref Borel]. Hence, as $\sigma$ takes the value 1 for any $b$ in $B$, $\tilde{\sigma}(hB) = 1$ for all cosets $hB$. Therefore, for all $h$ in $SL_2$
+\begin{displaymath}
+	\sigma(h) = \tilde{\sigma}(hB) = 1.
 \end{displaymath}
 We have shown that $\sigma$ is the 1-coboundary $\chi_1$ which means that the kernel of $H^1(i)$ is trivial.
 \end{proof} 
@@ -404,11 +415,11 @@ We have shown that $\sigma$ is the 1-coboundary $\chi_1$ which means that the ke
 is injective.
 \end{lemma}
 \begin{proof}
-As in the previous example, let $x$ be an element of the kernel of the map $H^1(i):H^1(B,V)\rightarrow H^1(U,V)$ and let $\sigma$ in $Z^1(B,V)$ be a representative for $x$ such that $\sigma|_U = 1$. Let $T$ be a maximal torus for $B$. For any $u$ in $U$ and $t$ in $T$ there is a $u'$ in $U$ such that
+As in the previous example, let $x$ be an element of the kernel of $H^1(i):H^1(B,V)\rightarrow H^1(U,V)$ and let $\sigma$ in $Z^1(B,V)$ be a representative for $x$ such that $\sigma|_U = 1$. Let $T$ be a maximal torus for $B$. For any $u$ in $U$ and $t$ in $T$ there is a $u'$ in $U$ such that
 \begin{displaymath}
 	ut = tu'.
 \end{displaymath}
-Hence $U$ acts trivially on the image of $T$ under $\sigma$:
+Hence $U$ acts trivially on $\sigma(T)$:
 \begin{eqnarray*}
 	\sigma(ut) &=& \sigma(tu')\\
 	\sigma(u)*u\cdot\sigma(t) &=& \sigma(t)*t\cdot\sigma(u')\\
