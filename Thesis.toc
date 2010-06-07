@@ -20,10 +20,10 @@
 \contentsline {subsection}{\numberline {4.2.1}The non-abelian setting}{9}{subsection.23}
 \contentsline {subsection}{\numberline {4.2.2}Definitions}{9}{subsection.24}
 \contentsline {subsection}{\numberline {4.2.3}Maps between 1-cohomologies}{10}{subsection.27}
-\contentsline {chapter}{\numberline {5}1-Cohomology Calculation}{12}{chapter.30}
-\contentsline {section}{\numberline {5.1}The method}{12}{section.31}
-\contentsline {section}{\numberline {5.2}A rank 1 calculation}{18}{section.37}
-\contentsline {subsection}{\numberline {5.2.1}Example}{19}{subsection.38}
+\contentsline {chapter}{\numberline {5}1-Cohomology Calculation}{13}{chapter.30}
+\contentsline {section}{\numberline {5.1}The method}{13}{section.31}
+\contentsline {section}{\numberline {5.2}A rank 1 calculation}{19}{section.37}
+\contentsline {subsection}{\numberline {5.2.1}Example}{20}{subsection.38}
 \contentsline {subsection}{\numberline {5.2.2}Example}{30}{subsection.47}
 \contentsline {section}{\numberline {5.3}A rank 2 calculation}{37}{section.53}
 \contentsline {chapter}{\numberline {6}Conclusion}{49}{chapter.55}

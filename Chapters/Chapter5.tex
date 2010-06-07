@@ -160,7 +160,7 @@ Therefore
 \begin{eqnarray*}
 x_\delta\left(t^2u\right) &=& (t^{p^r})^{\langle \delta, \alpha\rangle}x_\delta\left(u\right).
 \end{eqnarray*}
-Since $x$ is a polynomial function there can only be non-negative powers of $t$ on the left-hand side of the equality which forces $\langle \delta, \alpha \rangle \geq 0$. However, if $\langle \delta, \alpha \rangle = 0$ then $x_\delta$ is constant and hence zero, as $\sigma$ is zero on $\left(\begin{matrix} * & 0 \\ 0 & *\end{matrix}\right)$. Therefore the non-zero $x_\delta$ occur precisely when $\langle \delta, \alpha \rangle > 0$.
+Since $x_\delta$ is a polynomial function there can only be non-negative powers of $t$ on the left-hand side of the equality which forces $\langle \delta, \alpha \rangle \geq 0$. However, if $\langle \delta, \alpha \rangle = 0$ then $x_\delta$ is constant and hence zero, as $\sigma$ is zero on $\left(\begin{matrix} * & 0 \\ 0 & *\end{matrix}\right)$. Therefore the non-zero $x_\delta$ occur precisely when $\langle \delta, \alpha \rangle > 0$.
 \end{proof}
 
 %\begin{definition} Suppose $\alpha, \beta \in \Phi$ are linearly independent. Since $\Phi$ is finite there exist integers $p,q$ such that $i\alpha + \beta \in \Phi$ for $-p\leq i \leq q$ but $-(p+1)\alpha + \beta$ and $(q+1)\alpha + \beta$ are not in $\Phi$. The sequence of roots
@@ -259,14 +259,14 @@ First consider
 \begin{eqnarray*}
 \sigma\left(\left( \begin{matrix} 1 & b \\ 0 & 1 \end{matrix}\right)\right) &=& \prod_\delta \epsilon_\delta\left(x_\delta(b)\right).
 \end{eqnarray*}
-Suppose the roots $\delta_1$ and $\delta_2$ appear on the right hand side. By \ref{claim1} $\delta_i \in \Phi^+ - \{\alpha\}$ and $\langle \delta_i, \alpha \rangle > 0$, so \ref{uabelian} asserts that $\delta_1 + \delta_2$ is no root, hence, $\epsilon_{\delta_1}$ and $\epsilon_{\delta_2}$ commute. 
+Suppose the roots $\delta_1$ and $\delta_2$ appear on the right hand side. By \ref{claim1} $\delta_i \in \Phi^+ - \{\alpha\}$ and $\langle \delta_i, \alpha \rangle > 0$ $(i=1,2)$, so \ref{uabelian} asserts that $\delta_1 + \delta_2$ is no root, hence, $\epsilon_{\delta_1}$ and $\epsilon_{\delta_2}$ commute. 
 
 Therefore, for any $a, b\in k$ with $a\neq 0$
 \begin{eqnarray*}
-\sigma\left(\left(\begin{matrix} a & b \\ 0 & a^{-1}\end{matrix}\right)\right) 
+\sigma\left(\left(\begin{matrix} a & ab \\ 0 & a^{-1}\end{matrix}\right)\right) 
 &=& \left(\begin{matrix} a & 0 \\ 0 & a^{-1}\end{matrix} \right) \cdot
 \sigma\left(\left(\begin{matrix} 1 & b \\ 0 & 1\end{matrix}\right)\right) \\
-&=& \prod_\delta \epsilon_\delta\left((a^{p^r})^{\langle \delta, \alpha \rangle}x_\delta\left(b\right)\right).
+&=& \prod_\delta \epsilon_\delta\left(a^{\langle \delta, \alpha \rangle p^r}x_\delta\left(b\right)\right).
 \end{eqnarray*}
 \end{proof}
 
@@ -276,41 +276,42 @@ T\mapsto\sum_i \mu_i T^{p^i},
 \end{eqnarray*}
 for some $\mu_i$ in $k$. Furthermore, combining the calculation in the proof of \ref{claim1} with the result \ref{uact} we get that
 \begin{eqnarray*}
-\prod_\delta \epsilon_\delta\left(x_\delta\left(a^2b\right)\right) = \prod_\delta \epsilon_\delta\left(a^{\langle \delta, \alpha \rangle}x_\delta\left(b\right)\right),
+\prod_\delta \epsilon_\delta\left(x_\delta\left(a^2b\right)\right) = \prod_\delta \epsilon_\delta\left(a^{\langle \delta, \alpha \rangle p^r}x_\delta\left(b\right)\right),
 \end{eqnarray*}
-severely restricting the possible polynomials $x_\delta$. In fact, they are confined to be polynomials involving just one term, and the exponent has already been decided upon fixing the integer $r$ in the definition of $\rho_r$. For suppose $x_\delta$ and hence some $\mu_j$ is non-zero. Then equating the coefficients of $b$ in the equality directly above yields
+severely restricting the possible polynomials $x_\delta$. In fact, they are confined to be polynomials involving just one term, and the degree has already been decided upon fixing the integer $r$ in the definition of $\rho_r$. For suppose $x_\delta$ and hence some $\mu_j$ is non-zero. Then equating the coefficients of $b$ in the equality directly above yields
 \begin{eqnarray*}
-\mu_j(a^2)^{p^j} &=& \mu_j \left(a^{p^r}\right)^{\langle \delta, \alpha\rangle}\\
+\mu_ja^{2p^j} &=& \mu_j a^{\langle \delta, \alpha \rangle p^r}\\
 \Longrightarrow2p^j &=& \langle \delta, \alpha \rangle p^r.
 \end{eqnarray*}
 
-Since 2 divides that on the right hand side, if $\langle \delta, \alpha \rangle$ is not a multiple of 2 then $p$, the characteristic of $k$, must be 2 or else $x_\delta = 0$.
+In [Carter] it is shown that the possible pairings of any two roots are bounded by $\pm 3$. Hence by \ref{claim1} $\langle \delta, \alpha \rangle = 1, 2$ or 3. It is now clear that if $\langle \delta, \alpha \rangle = 3$ then $x_\delta = 0$.
 
-In [Carter] it is shown that the possible pairings of any two roots are bounded by $\pm 3$. Hence by \ref{claim1} $\langle \delta, \alpha \rangle = 1, 2$ or 3.
+If $\langle \delta, \alpha \rangle = 1$ the characteristic of $k$ must be 2 and $j = r-1$. Otherwise $\langle \delta, \alpha \rangle = 2$ and $j = r$, but the characteristic of $k$ is so far unrestricted.
+
 
 We had to discard $G_2$ and $C_3$ from the little result here. Next we will dispense with them by way of example to prove the following fact. [What is it?]
 
 Things to do here:
 
 \begin{itemize}
-\item Refer to Structure/Classification Theorem to get the homomorphisms $\rho_r$
-\item Choosing $\sigma$ s.t. $\sigma\left(\begin{matrix} t&0\\0&t^{-1}\end{matrix}\right) = 0$
-\item Letting $\sigma\left(\begin{matrix}1&u\\0&1\end{matrix}\right)_i = p_i(u)$
-\item $\left(\begin{matrix}t&0\\0&t^{-1}\end{matrix}\right)
-\left(\begin{matrix}1&u\\0&1\end{matrix}\right)
-\left(\begin{matrix}t^{-1}& 0\\ 0& t\end{matrix}\right) = 
-\left(\begin{matrix}1&t^2u\\0&1\end{matrix}\right)\Rightarrow 
-\left(\begin{matrix}t&0\\0&t^{-1}\end{matrix}\right)\cdot\left(p_i(u)\right) = \left(p_i(t^2u)\right)$
-\item $\left(\begin{matrix}t&0\\0&t^{-1}\end{matrix}\right)=
-\left(\begin{matrix}1&u_1\\0&1\end{matrix}\right)
-\left(\begin{matrix}1&u_2\\0&1\end{matrix}\right)\Rightarrow
-p_i(u_1+u_2) = p_i(u_1) * \left(\begin{matrix}1&u_1\\0&1\end{matrix}\right)\cdot p_i(u_2)$. 
-Usually end up with $p_i$ homomorphisms.
-\item Know $\sigma\left(\begin{matrix} 1 & u \\ 0 & 1\end{matrix}\right)$. Calc.
-$\sigma\left(\begin{matrix}a&b\\0&a^{-1}\end{matrix}\right)
-=
-\left(\begin{matrix}a&0\\0&a^{-1}\end{matrix}\right)\cdot
-\sigma\left(\begin{matrix}1&a^{-1}c\\0&1\end{matrix}\right)$
+% \item Refer to Structure/Classification Theorem to get the homomorphisms $\rho_r$
+% \item Choosing $\sigma$ s.t. $\sigma\left(\begin{matrix} t&0\\0&t^{-1}\end{matrix}\right) = 0$
+% \item Letting $\sigma\left(\begin{matrix}1&u\\0&1\end{matrix}\right)_i = p_i(u)$
+% \item $\left(\begin{matrix}t&0\\0&t^{-1}\end{matrix}\right)
+% \left(\begin{matrix}1&u\\0&1\end{matrix}\right)
+% \left(\begin{matrix}t^{-1}& 0\\ 0& t\end{matrix}\right) = 
+% \left(\begin{matrix}1&t^2u\\0&1\end{matrix}\right)\Rightarrow 
+% \left(\begin{matrix}t&0\\0&t^{-1}\end{matrix}\right)\cdot\left(p_i(u)\right) = \left(p_i(t^2u)\right)$
+% \item $\left(\begin{matrix}t&0\\0&t^{-1}\end{matrix}\right)=
+% \left(\begin{matrix}1&u_1\\0&1\end{matrix}\right)
+% \left(\begin{matrix}1&u_2\\0&1\end{matrix}\right)\Rightarrow
+% p_i(u_1+u_2) = p_i(u_1) * \left(\begin{matrix}1&u_1\\0&1\end{matrix}\right)\cdot p_i(u_2)$. 
+% Usually end up with $p_i$ homomorphisms.
+% \item Know $\sigma\left(\begin{matrix} 1 & u \\ 0 & 1\end{matrix}\right)$. Calc.
+% $\sigma\left(\begin{matrix}a&b\\0&a^{-1}\end{matrix}\right)
+% =
+% \left(\begin{matrix}a&0\\0&a^{-1}\end{matrix}\right)\cdot
+% \sigma\left(\begin{matrix}1&a^{-1}c\\0&1\end{matrix}\right)$
 \item Can get  $\sigma\left(\begin{matrix}d^{-1}&0\\c&d\end{matrix}\right)$ by a similar argument.
 \item Calc.  $\sigma\left(\begin{matrix}0&1\\-1&0\end{matrix}\right) =
 \sigma\left(
