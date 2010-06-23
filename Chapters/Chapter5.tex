@@ -247,7 +247,7 @@ We have
 \cdot
 \sigma\left(\left(\begin{matrix} 1 & u_2 \\ 0 & 1\end{matrix}\right)\right)
 &=&
-\epsilon_\alpha\left(u_1^{p^r}\right) \prod_\delta \epsilon_\delta\left(x_\delta\left(u_2\right)\right) \epsilon_\alpha\left(-u_1^{p^r}\right),
+\epsilon_\alpha(u_1^{p^r}) \prod_\delta \epsilon_\delta\left(x_\delta\left(u_2\right)\right) \epsilon_\alpha(-u_1^{p^r}),
 \end{eqnarray*}
 with $\langle \delta, \alpha \rangle > 0$. By \ref{ufixes} $\alpha + \delta \notin \Phi$ so each $\epsilon_\delta$ commutes with the $\epsilon_\alpha$.
 \end{proof}
@@ -288,8 +288,223 @@ In [Carter] it is shown that the possible pairings of any two roots are bounded 
 
 If $\langle \delta, \alpha \rangle = 1$ the characteristic of $k$ must be 2 and $j = r-1$. Otherwise $\langle \delta, \alpha \rangle = 2$ and $j = r$, but the characteristic of $k$ is so far unrestricted.
 
+\begin{example} Let $G=G_2$. Fix a maximal torus, labeling the positive simple roots $\Delta=\{\alpha, \beta\}$ with $\beta$ being the long root. Let 
+	\begin{displaymath}
+		V_\alpha = R_u(P_\alpha) = \langle U_\beta, U_{\alpha+\beta}, U_{2\alpha+\beta}, U_{3\alpha+\beta}, U_{3\alpha+2\beta}\rangle.
+	\end{displaymath}
+	We will write $v$ in $V_\alpha$ in angled brackets for compactness:
+	\begin{eqnarray*}
+		\langle 
+		v_1,
+		v_2,
+		v_3,
+		v_4,
+		v_5
+		\rangle &:=&
+		\epsilon_{\beta}(v_1)
+		\epsilon_{\alpha+\beta}(v_2)
+		\epsilon_{2\alpha+\beta}(v_3)
+		\epsilon_{3\alpha+\beta}(v_4)
+		\epsilon_{3\alpha+2\beta}(v_5) \in V_\alpha
+	\end{eqnarray*}
 
-We had to discard $G_2$ and $C_3$ from the little result here. Next we will dispense with them by way of example to prove the following fact. [What is it?]
+	The group law for $V_\alpha$ is
+	\begin{eqnarray*}
+		u * v &=&
+		\langle
+		u_1 + v_1,
+		u_2 + v_2,
+		u_3 + v_3,
+		u_4 + v_4,
+		u_5 + v_5 + 3u_3v_2 - u_4v_1,
+		\rangle.
+	\end{eqnarray*}
+		We compute the action
+	\begin{eqnarray*}
+		\left(\begin{matrix} a & 0 \\ 0 & a^{-1} \end{matrix}\right)\cdot v &=&
+		\langle 
+		a^{-3p^r}v_1,
+		a^{-p^r}v_2,
+		a^{p^r}v_3,
+		a^{3p^r}v_4,
+		v_5
+		\rangle.
+	\end{eqnarray*}
+	Let $\sigma$ be in $Z^1(SL_2, V_\alpha)$ such that
+	\begin{displaymath}
+		\sigma\left(\left(\begin{matrix}a & 0\\0 & a^{-1}\end{matrix}\right)\right) = 0.
+	\end{displaymath}
+	By \ref{claim1}
+	\begin{displaymath}
+		\sigma\left(\left(\begin{matrix} 1 & b \\ 0 & 1 \end{matrix}\right)\right) =
+		\langle 
+		0,
+		0,
+		x_3(b),
+		x_4(b),
+		0
+		\rangle.
+	\end{displaymath}
+	Applying $\sigma$ to both sides of the identity
+	\begin{displaymath}
+		\left(\begin{matrix} 1 & a^2b \\ 0 & 1 \end{matrix}\right)
+		= 
+		\left(\begin{matrix} a & 0 \\ 0 & a^{-1} \end{matrix}\right)
+		\left(\begin{matrix} 1 & b \\ 0 & 1 \end{matrix}\right)
+		\left(\begin{matrix} a^{-1} & 0 \\ 0 & a \end{matrix}\right),
+	\end{displaymath}
+	yields
+	\begin{eqnarray*}
+		x_3(a^2b) &=& a^{p^r}x_3(b)\\
+		x_4(a^2b) &=& a^{3p^r}x_4(b).
+	\end{eqnarray*}
+	Applying $\sigma$ to both sides of the identity
+	\begin{eqnarray*}
+		\left(\begin{matrix} 1 & b_1 + b_2 \\ 0 & 1\end{matrix}\right) &=&
+		\left(\begin{matrix} 1 & b_1 \\ 0 & 1\end{matrix}\right)
+		\left(\begin{matrix} 1 & b_2 \\ 0 & 1\end{matrix}\right)
+	\end{eqnarray*}
+	yields
+	\begin{eqnarray*}
+		x_3(b_1 + b_2) &=& x_3(b_1) + x_3(b_2)\\
+		x_4(b_1 + b_2) &=& x_4(b_1) + x_4(b_2) - 3b_1^{p^r}x_3(b_2).
+	\end{eqnarray*}
+	We see that $x_3$ is a homomorphism, so it is of the form
+	\begin{eqnarray*}
+		x_3(b) &=& \sum_i \mu_i b^{p^i}.
+	\end{eqnarray*}
+	Suppose $x_3\neq 0$. Then some $\mu_j\neq 0$ and
+	\begin{eqnarray*}
+		&&\mu_j (a^2b)^{p^j} = a^{p^r}\mu_j b^{p^j}\\
+		&\Longrightarrow& a^{2p^j} = a^{p^r}\\
+		&\Longrightarrow& p = 2.
+	\end{eqnarray*}
+	But then
+	\begin{eqnarray*}
+		x_4(0) = x_4(b+b) &=& x_4(b)+x_4(b)-3b^{2^r}x_3(b)\\
+		&=& b^{2^r}x_3(b),
+	\end{eqnarray*}
+	implies that $x_3$ is constant, hence zero. 
+	
+	Therefore $x_3 = 0$, so $x_4$ is a homomorphism:
+	\begin{eqnarray*}
+		x_4(b) = \sum_i \nu_i b^{p^r}.
+	\end{eqnarray*}
+	If $x_4\neq 0$ then there is a $\nu_j\neq 0$ and we get
+	\begin{eqnarray*}
+		&&\nu_j(a^2b)^{p^j} = a^{3p^r}\nu_j b^{p^j}\\
+		&\Longrightarrow& a^{2p^j} = a^{3p^r}\\
+		&\Longrightarrow& 2p^j = 3p^r,
+	\end{eqnarray*}
+	which implies that 2 divides $p$ and 3 divides $p$, a contradiction. Hence $x_4=0$ and
+	\begin{displaymath}
+		\sigma\left(\left(\begin{matrix}1 & b\\0 & 1\end{matrix}\right)\right) = 0.
+	\end{displaymath}
+\end{example}
+
+\begin{example} Let $G=C_3$. Fix a maximal torus, labeling the positive simple roots $\Delta=\{\alpha, \beta, \gamma\}$ with $\gamma$ being the long root and connected to $\beta$. Let 
+	\begin{displaymath}
+		V_\alpha = R_u(P_\alpha) = \langle U_\beta, U_\gamma, U_{\alpha+\beta}, U_{\beta+\gamma}, U_{\alpha+\beta+\gamma}, U_{2\beta+\gamma}, U_{\alpha+2\beta+\gamma}, U_{2\alpha+2\beta+\gamma}\rangle.
+	\end{displaymath}
+	Again we will write $v$ in $V_\alpha$ in angled brackets for ease of notation:
+	\begin{eqnarray*}
+		&&\langle 
+		v_1,
+		v_2,
+		v_3,
+		v_4,
+		v_5,
+		v_6,
+		v_7,
+		v_8
+		\rangle :=\\
+		&&\epsilon_{\beta}(v_1)
+		\epsilon_{\gamma}(v_2)
+		\epsilon_{\alpha+\beta}(v_3)
+		\epsilon_{\beta+\gamma}(v_4)
+		\epsilon_{\alpha+\beta+\gamma}(v_5)
+		\epsilon_{2\beta+\gamma}(v_6)
+		\epsilon_{\alpha+2\beta+\gamma}(v_7)
+		\epsilon_{2\alpha+2\beta+\gamma}(v_8) \in V_\alpha
+	\end{eqnarray*}
+		
+	The group law for $V_\alpha$ is
+	\begin{eqnarray*}
+		&&u * v =\\
+		&&\langle
+		u_1 + v_1,
+		u_2 + v_2,
+		u_3 + v_3,
+		u_4 + v_4 + u_2 + v_1,
+		u_5 + v_5 - u_3v_2,
+		u_6 + v_6 + u_2v_1^2 + 2u_4v_1,\\
+		&&\quad u_7 + v_7 + u_2u_3v_1 + u_2v_1v_3 + u_5v_1 + u_4v_3,
+		u_8 + v_8 - u_3^2v_2 - 2u_3v_2v_3 + 2u_5v_3
+		\rangle.
+	\end{eqnarray*}
+	We compute the action
+	\begin{eqnarray*}
+		\left(\begin{matrix} a & 0 \\ 0 & a^{-1} \end{matrix}\right)\cdot v
+		&=&
+		\langle 
+		a^{-p^r}v_1,
+		v_2,
+		a^{p^r}v_3,
+		a^{-p^r}v_4,
+		a^{p^r}v_5,
+		a^{-2p^r}v_6,
+		v_7,
+		a^{2p^r}v_8
+		\rangle.
+	\end{eqnarray*}
+	Let $\sigma$ be in $Z^1(SL_2, V_\alpha)$ such that
+	\begin{displaymath}
+		\sigma\left(\left(\begin{matrix}a & 0\\0 & a^{-1}\end{matrix}\right)\right) = 0.
+	\end{displaymath}
+	By \ref{claim1}
+	\begin{displaymath}
+		\sigma\left(\left(\begin{matrix} 1 & b \\ 0 & 1 \end{matrix}\right)\right) =
+		\langle 
+		0,
+		0,
+		x_3(b),
+		0,
+		x_5(b),
+		0,
+		0,
+		x_8(b)
+		\rangle.
+	\end{displaymath}
+	Applying $\sigma$ to both sides of the identity
+	\begin{displaymath}
+		\left(\begin{matrix} 1 & a^2b \\ 0 & 1 \end{matrix}\right)
+		= 
+		\left(\begin{matrix} a & 0 \\ 0 & a^{-1} \end{matrix}\right)
+		\left(\begin{matrix} 1 & b \\ 0 & 1 \end{matrix}\right)
+		\left(\begin{matrix} a^{-1} & 0 \\ 0 & a \end{matrix}\right),
+	\end{displaymath}
+	yields
+	\begin{eqnarray*}
+		x_3(a^2b) &=& a^{p^r}x_3(b)\\
+		x_5(a^2b) &=& a^{p^r}x_5(b)\\
+		x_8(a^2b) &=& a^{2p^r}x_8(b).
+	\end{eqnarray*}
+	Since the polynomials $x_3, x_5, x_8$ are homomorphisms (\ref{ufixes}) we get
+	\begin{eqnarray*}
+		\sum_i \lambda_i (a^2b)^{p^i} &=& a^{p^r} \sum_i \lambda_i b^{p^i}\\
+		\sum_i \mu_i (a^2b)^{p^i} &=& a^{p^r} \sum_i \mu_i b^{p^i}\\
+		\sum_i \nu_i (a^2b)^{p^i} &=& a^{2p^r} \sum_i \nu_i b^{p^i},
+	\end{eqnarray*}
+	from which we can deduce
+	\begin{eqnarray*}
+		x_3 \neq 0 &\Longrightarrow& x_3(b) = \lambda b^{p^{r+1}}, p = 2\\
+		x_5 \neq 0 &\Longrightarrow& x_5(b) = \mu b^{p^{r+1}}, p = 2\\
+		x_8 \neq 0 &\Longrightarrow& x_8(b) = \nu b^{p^r}.
+	\end{eqnarray*}
+	Therefore, if the image of the group of upper (uni-)triangular matrices of $SL_2$ under $\sigma$ is $\langle U_{\alpha+\beta}, U_{\alpha+\beta+\gamma}, U_{2\alpha+2\beta+\gamma} \rangle$ then the characteristic of $k$ must be 2, and so the image is a product of commuting root groups.
+\end{example}
+
+[State the result]
 
 Things to do here:
 
