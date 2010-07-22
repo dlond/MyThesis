@@ -76,7 +76,7 @@ We see that $B^1(H, V)$ is a subgroup of $Z^1(H, V)$ via the two-step subgroup t
 	H^1\left(H, V\right) = Z^1\left(H, V\right) / B^1\left(H, V\right),
 \end{eqnarray*}
 called the \emph{1-cohomology}.
-\begin{lemma} Suppose $H$ is linearly reductive. Then $H^1(H, V)$ is trivial. [Hochschild]
+\begin{lemma} Suppose $H$ is linearly reductive. Then $H^1(H, V)$ is trivial \cite{hochschild1965structure}.
 \end{lemma}
 
 \subsection{Maps between 1-cohomologies}
@@ -200,13 +200,13 @@ Therefore $\sigma$ is a 1-coboundary and so the kernel of $H(i)$ is trivial.
 	\end{eqnarray*}
 	Since $|U(\mathbb{F}_{p^r})| = p^r$, $U(\mathbb{F}_{p^r})$ is a Sylow $p$-subgroup of $SL_2(\mathbb{F}_{p^r})$.
 	
-	Fix a non-trivial $y\in H^1(SL_2(k), V)$ and choose a representative $\tau\in Z^1(SL_2(k), V)$ for $y$. For each $g\in SL_2(\mathbb{F}_{p^r})$ define the morphism $f^r_g:V\rightarrow V$ by
+	Fix a non-trivial $y\in H^1(SL_2(k), V)$ and choose a representative $\tau\in Z^1(SL_2(k), V)$ for $y$. For each $g\in SL_2(\mathbb{F}_{p^r})$ define the morphism $f^{(r)}_g:V\rightarrow V$ by
 	\begin{displaymath}
-		f^r_g(v) = \tau(g) - \chi_v(g) = \tau(g) - v + g\cdot v.
+		f^{(r)}_g(v) = \tau(g) - \chi_v(g) = \tau(g) - v + g\cdot v.
 	\end{displaymath}
 	Consider the sequence of subsets of $V$ defined by
 	\begin{displaymath}
-		C_r = \{v \in V | f^r_g(v) = 0\}.
+		C_r = \{v \in V | f^{(r)}_g(v) = 0\}.
 	\end{displaymath}
 	Each subset $C_r$ is closed and the inclusion $\mathbb{F}_{p^r} \subset \mathbb{F}_{p^{r+1}}$ induces the reverse inclusion $C_r \supset C_{r+1}$. The Noetherian property for $V$ requires that the sequence becomes constant. However, $y\neq 0$ so $\tau$ is not a 1-coboundary on $SL_2(k)$, which means the $C_r$'s are eventually empty. That is, there exists an integer $s$ such that for any $v$ in $V$
 	\begin{displaymath}
@@ -447,7 +447,7 @@ defined in the usual way under the canonical projection $\pi:SL_2 \rightarrow SL
 	SL_2/B \ar[ru]_{\tilde{\sigma}}
 	}
 \end{displaymath}
-This map is well defined and is a morphism [ref Borel]. Now since $SL_2/B$ is an irreducible projective variety [ref Humphreys], $\tilde{\sigma}$ must be constant [ref Borel]. Hence, as $\sigma$ takes the value 1 for any $b$ in $B$, $\tilde{\sigma}(hB) = 1$ for all cosets $hB$. Therefore, for all $h$ in $SL_2$
+This map is well defined and is a morphism \cite{borel1991linear}. Now since $SL_2/B$ is an irreducible projective variety \cite{humphreys1975linear}, $\tilde{\sigma}$ must be constant  \cite{borel1991linear}. Hence, as $\sigma$ takes the value 1 for any $b$ in $B$, $\tilde{\sigma}(hB) = 1$ for all cosets $hB$. Therefore, for all $h$ in $SL_2$
 \begin{displaymath}
 	\sigma(h) = \tilde{\sigma}(hB) = 1.
 \end{displaymath}
