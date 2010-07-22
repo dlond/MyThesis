@@ -171,6 +171,52 @@ Since $\gcd([H:H_p], p) = \gcd(l,p) = 1$, $l$ is invertible and so
 Therefore $\sigma$ is a 1-coboundary and so the kernel of $H(i)$ is trivial.
 \end{proof}
 
+\begin{example}
+	Let
+	\begin{displaymath}
+		k = \bar{\mathbb{F}_p} = \bigcup_r \mathbb{F}_{p^r},
+	\end{displaymath}
+	$V$ a vector space on which $SL_2(k)$ acts, and $U(k)$ the subgroup of $SL_2(k)$ consisting of upper unitriangular matrices. Then $U(\mathbb{F}_{p^r})$ is a Sylow $p$-subgroup of $SL_2(\mathbb{F}_{p^r})$ for each $r$, and the map
+	\begin{displaymath}
+		H^1(SL_2(k), V) \rightarrow H^1(U(k), V)
+	\end{displaymath}
+	is injective.
+\end{example}
+\begin{proof}
+	The group $GL_2(\mathbb{F}_{p^r})$ has order $(p^{2r} - 1)(p^{2r} - p^r)$ since there are $p^{2r} - 1$ choices of vectors for the first column (all choices excluding the zero vector), and $p^{2r} - p^r$ choices of vectors for the second column (all choices excluding multiples of the first vector). The determinant is a homomorphism of groups
+	\begin{displaymath}
+		\mathrm{det}:GL_2(\mathbb{F}_{p^r}) \rightarrow \mathbb{F}^*_{p^r},
+	\end{displaymath}
+	with kernel $SL_2(\mathbb{F}_{p^r})$. Therefore, by the First homomorphism theorem for groups
+	\begin{displaymath}
+		GL_2(\mathbb{F}_{p^r})\,/\,SL_2(\mathbb{F}_{p^r}) \sim \mathrm{det}(GL_2(\mathbb{F}_{p^r})) = \mathbb{F}^*_{p^r},
+	\end{displaymath}
+	and so
+	\begin{eqnarray*}
+		|SL_2(\mathbb{F}_{p^r})|
+		&=& |GL_2(\mathbb{F}_{p^r})|\,/\,|\mathbb{F}^*_{p^r}|\\
+		&=& (p^{2r} - 1)(p^{2r} - p^r)\,/\,(p^r - 1)\\
+		&=& p^r(p^{2r} - 1).
+	\end{eqnarray*}
+	Since $|U(\mathbb{F}_{p^r})| = p^r$, $U(\mathbb{F}_{p^r})$ is a Sylow $p$-subgroup of $SL_2(\mathbb{F}_{p^r})$.
+	
+	Fix a non-trivial $y\in H^1(SL_2(k), V)$ and choose a representative $\tau\in Z^1(SL_2(k), V)$ for $y$. For each $g\in SL_2(\mathbb{F}_{p^r})$ define the morphism $f^r_g:V\rightarrow V$ by
+	\begin{displaymath}
+		f^r_g(v) = \tau(g) - \chi_v(g) = \tau(g) - v + g\cdot v.
+	\end{displaymath}
+	Consider the sequence of subsets of $V$ defined by
+	\begin{displaymath}
+		C_r = \{v \in V | f^r_g(v) = 0\}.
+	\end{displaymath}
+	Each subset $C_r$ is closed and the inclusion $\mathbb{F}_{p^r} \subset \mathbb{F}_{p^{r+1}}$ induces the reverse inclusion $C_r \supset C_{r+1}$. The Noetherian property for $V$ requires that the sequence becomes constant. However, $y\neq 0$ so $\tau$ is not a 1-coboundary on $SL_2(k)$, which means the $C_r$'s are eventually empty. That is, there exists an integer $s$ such that for any $v$ in $V$
+	\begin{displaymath}
+		(\tau - \chi_v)|_{SL_2(\mathbb{F}_{p^s})} \neq 0.
+	\end{displaymath}
+	Equivalently, if $y|_{SL_2(\mathbb{F}_{p^r})} = 0$ for all $r$ then $y = 0$.
+	
+	Take $x$ in the kernel of the map $H^1(SL_2(k), V) \rightarrow H^1(U(k), V)$. Then for each $r$, $x|_{U(\mathbb{F}_{p^r})} = 0$ so by (\ref{ch4::mapFromSylow}) $x|_{SL_2(\mathbb{F}_{p^r})} = 0$. Therefore $x=0$ and so $H^1(SL_2(k), V) \rightarrow H^1(U(k), V)$ is injective.
+\end{proof}
+
 We could also consider appropriate maps $f:V\rightarrow\tilde{V}$ and following a similar chain of arguments as before we can define
 \begin{eqnarray*}
 	H^1(f):H^1(H, V)\rightarrow H^1(H, \tilde{V}),
@@ -390,7 +436,7 @@ Then by construction $\hat{\sigma}$ also projects to the class $x$, and for all 
 \end{eqnarray*}
 so we may as well have chosen $\hat{\sigma}$ instead as a representative for $x$. 
 
-Now consider the \emph{homogeneous space} $SL_2/B$ [ref Humphreys] and take the map 
+Now consider the \emph{homogeneous space} $SL_2/B$ \cite{humphreys1975linear} and take the map 
 \begin{displaymath}
 	\tilde{\sigma}:SL_2/B \rightarrow V,
 \end{displaymath}
