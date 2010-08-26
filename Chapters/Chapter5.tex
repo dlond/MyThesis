@@ -504,11 +504,25 @@ If $\langle \delta, \alpha \rangle = 1$ the characteristic of $k$ must be 2 and 
 	Therefore, if the image of the group of upper (uni-)triangular matrices of $SL_2$ under $\sigma$ is $\langle U_{\alpha+\beta}, U_{\alpha+\beta+\gamma}, U_{2\alpha+2\beta+\gamma} \rangle$ then the characteristic of $k$ must be 2, and so the image is a product of commuting root groups.
 \end{example}
 
-[State the result]
+We may now state and prove the main result.
 
-Things to do here:
+[would like]
+\begin{theorem}
+	Let $G$ be a reductive linear algebraic group over a closed field of positive characteristic $p$ and let $\Gamma = SL_2(k)$. Then the answer to the algebraic interpretation of K\"ulshammer's Second Problem [ref] is ``yes''.
+\end{theorem}
+\begin{proof}
+	Need to:
+	\begin{itemize}
+		\item handle arguments above with $G$ possibly containing $G_2$ and $C_3$.
+		\item drop the restriction of rank-1 parabolics
+		\item now we have abelian 1-cohomology and can apply result from previous chapter
+	\end{itemize}
+\end{proof}
 
-\begin{itemize}
+% 	
+% Things to do here:
+% 
+% \begin{itemize}
 % \item Refer to Structure/Classification Theorem to get the homomorphisms $\rho_r$
 % \item Choosing $\sigma$ s.t. $\sigma\left(\begin{matrix} t&0\\0&t^{-1}\end{matrix}\right) = 0$
 % \item Letting $\sigma\left(\begin{matrix}1&u\\0&1\end{matrix}\right)_i = p_i(u)$
@@ -527,32 +541,32 @@ Things to do here:
 % =
 % \left(\begin{matrix}a&0\\0&a^{-1}\end{matrix}\right)\cdot
 % \sigma\left(\begin{matrix}1&a^{-1}c\\0&1\end{matrix}\right)$
-\item Can get  $\sigma\left(\begin{matrix}d^{-1}&0\\c&d\end{matrix}\right)$ by a similar argument.
-\item Calc.  $\sigma\left(\begin{matrix}0&1\\-1&0\end{matrix}\right) =
-\sigma\left(
-\left(\begin{matrix}1&1\\0&1\end{matrix}\right)
-\left(\begin{matrix}1&0\\-1&1\end{matrix}\right)
-\left(\begin{matrix}1&1\\0&1\end{matrix}\right)
-\right)$
-\item Compare with fact $
-\left(\begin{matrix}t&0\\0&t^{-1}\end{matrix}\right)\cdot
-\sigma\left(\begin{matrix}0&1\\-1&0\end{matrix}\right)=
-\sigma\left(\begin{matrix}0&1\\-1&0\end{matrix}\right)$. Now we know $\sigma$ exactly on $B$ and $n_\gamma$.
-\item Already know 
-$\sigma\left(\begin{matrix}a&b\\c&d\end{matrix}\right)$ if $c=0$. Now calc.
-
-$\sigma\left(\begin{matrix}a&b\\c&d\end{matrix}\right) =
-\sigma\left(
-\left(\begin{matrix}1&ac^{-1}\\0&1\end{matrix}\right)
-\left(\begin{matrix}0&1\\-1&0\end{matrix}\right)
-\left(\begin{matrix}-c&-d\\0&-c^{-1}\end{matrix}\right)
-\right)$
-\item We now have fact $\sigma'\in Z^1(SL_2, V) \Rightarrow \sigma'\sim\sigma$ and know the form of $\sigma$. To check ``$\Leftarrow$'' direction apply $\sigma$ to the Steinberg relations.
-\item Find all $\tau\in Z^1(SL_2, V)$ conj. to $\sigma$ and also zero on $\left(\begin{matrix}t & 0 \\ 0 & t^{-1}\end{matrix}\right)$ by calculating $\tau(g) = v*\sigma(g)*g\cdot v^{-1}$.
-\item Can now state conj. classes of 1-cocycles by inspection.
-\item Extend classes to $P$-conjugacy by action of $Z(L)$. Explain why \ldots
-\item $G$-conjugacy \ldots
-\end{itemize}
+% \item Can get  $\sigma\left(\begin{matrix}d^{-1}&0\\c&d\end{matrix}\right)$ by a similar argument.
+% \item Calc.  $\sigma\left(\begin{matrix}0&1\\-1&0\end{matrix}\right) =
+% \sigma\left(
+% \left(\begin{matrix}1&1\\0&1\end{matrix}\right)
+% \left(\begin{matrix}1&0\\-1&1\end{matrix}\right)
+% \left(\begin{matrix}1&1\\0&1\end{matrix}\right)
+% \right)$
+% \item Compare with fact $
+% \left(\begin{matrix}t&0\\0&t^{-1}\end{matrix}\right)\cdot
+% \sigma\left(\begin{matrix}0&1\\-1&0\end{matrix}\right)=
+% \sigma\left(\begin{matrix}0&1\\-1&0\end{matrix}\right)$. Now we know $\sigma$ exactly on $B$ and $n_\gamma$.
+% \item Already know 
+% $\sigma\left(\begin{matrix}a&b\\c&d\end{matrix}\right)$ if $c=0$. Now calc.
+% 
+% $\sigma\left(\begin{matrix}a&b\\c&d\end{matrix}\right) =
+% \sigma\left(
+% \left(\begin{matrix}1&ac^{-1}\\0&1\end{matrix}\right)
+% \left(\begin{matrix}0&1\\-1&0\end{matrix}\right)
+% \left(\begin{matrix}-c&-d\\0&-c^{-1}\end{matrix}\right)
+% \right)$
+% \item We now have fact $\sigma'\in Z^1(SL_2, V) \Rightarrow \sigma'\sim\sigma$ and know the form of $\sigma$. To check ``$\Leftarrow$'' direction apply $\sigma$ to the Steinberg relations.
+% \item Find all $\tau\in Z^1(SL_2, V)$ conj. to $\sigma$ and also zero on $\left(\begin{matrix}t & 0 \\ 0 & t^{-1}\end{matrix}\right)$ by calculating $\tau(g) = v*\sigma(g)*g\cdot v^{-1}$.
+% \item Can now state conj. classes of 1-cocycles by inspection.
+% \item Extend classes to $P$-conjugacy by action of $Z(L)$. Explain why \ldots
+% \item $G$-conjugacy \ldots
+% \end{itemize}
 
 
 \section{A rank 1 calculation}
@@ -2148,7 +2162,100 @@ t^2(wx(bc)^{2^{r+1}} + yz(bc)^{2^{s+1}})
 \end{eqnarray*}
 
 
+\section{A Non-Reductive Counterexample}
+In \cite{slodowy1997two} a counterexample to [ref KII] is presented for a closed field $k$ of characteristic $p = 2$ and a non-reductive algebraic group $G$.
+\begin{example} Let $Q$ be the algebraic group isomorphic to the affine space $\mathbf{A}^3$ with the group multiplication law:
+\begin{eqnarray*}
+	\left(\begin{matrix} u_1 \\ u_2 \\ u_3 \end{matrix}\right) \times
+	\left(\begin{matrix} v_1 \\ v_2 \\ v_3 \end{matrix}\right) &=&
+	\left(\begin{matrix} u_1 + v_1 \\ u_2 + v_2 \\ u_3 + v_3 + u_1v_1 + u_2v_2 + u_1v_2 \end{matrix}\right).
+\end{eqnarray*}
+Let $\Gamma = \langle \sigma, \tau | \sigma^3 = \tau^2 = 1, \tau\sigma\tau = \sigma^2 \rangle$ and $\Gamma_2 = \langle \tau \rangle$ the Sylow 2-subgroup of $\Gamma$. $\Gamma$ acts on $Q$ via
+\begin{eqnarray*}
+	\tau \cdot \left(\begin{matrix} u_1 \\ u_2 \\ u_3 \end{matrix} \right) &=&
+	\left(\begin{matrix} u_2 \\ u_1 \\ u_3 + u_1^2 + u_2^2 + u_1u_2 \end{matrix} \right) \\
+	\sigma \cdot \left(\begin{matrix} u_1 \\ u_2 \\ u_3 \end{matrix} \right) &=&
+	\left(\begin{matrix} u_2 \\ u_1 + u_2 \\ u_3 \end{matrix} \right).
+\end{eqnarray*}
+Let $G = Q \rtimes \Gamma$. Then there are infinitely many pairwise $G$-conjugate classes of extensions to the representation $\rho:\Gamma_2 \rightarrow G$ defined by the natural inclusion $\Gamma_2 \rightarrow \Gamma \rightarrow G$ \cite[Appendix]{slodowy1997two}.
+\end{example}
+\begin{proof}
+	Our proof will be way of a 1-cohomology calculation. Choose a 1-cocycle $\alpha \in Z^1(\Gamma, Q)$ such that $\alpha|_{\langle \sigma \rangle} = 1$. Let
+	\begin{eqnarray*}
+		\alpha(\tau) = \left(\begin{matrix} u_1 \\ u_2 \\ u_3 \end{matrix} \right),
+	\end{eqnarray*}
+	for some $u_1, u_2, u_3 \in k$. Since $\tau$ is an involution we have
+	\begin{eqnarray*}
+		1 = \alpha(\tau^2) &=& \alpha(\tau) \times \tau\cdot\alpha(\tau)\\
+		&=& \left(\begin{matrix} u_1 \\ u_2 \\ u_3\end{matrix} \right) \times 
+		\left(\begin{matrix} u_2 \\ u_1 \\ u_3 + u_1^2 + u_2^2 + u_1u_2\end{matrix} \right) \\
+		&=& \left(\begin{matrix} u_1 + u_2 \\ u_1 + u_2 \\ 2u_3 + 2u_1^2 + u_2^2 + 3u_1u_2\end{matrix} \right)\\
+		&=& \left(\begin{matrix} u_1 + u_2 \\ u_1 + u_2 \\ u_2^2 + u_1u_2\end{matrix} \right).
+	\end{eqnarray*}
+	This shows $u_1 = u_2$, so
+	\begin{eqnarray*}
+		\alpha(\tau) = \left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right).
+	\end{eqnarray*}
+	Furthermore, as $\tau\sigma\tau = \sigma^2$ we obtain
+	\begin{eqnarray*}
+		1 = \alpha(\sigma^2) &=& \alpha(\tau\sigma\tau) \\
+		&=& \alpha(\tau) \times \tau\cdot\alpha(\sigma\tau)\\
+		&=& \alpha(\tau) \times \tau\cdot\alpha(\sigma) \times \tau\sigma\cdot\alpha(\tau) \\
+		&=& \alpha(\tau) \times \tau\sigma\cdot\alpha(\tau) \\
+		&=& \left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right) \times
+		\tau\sigma\cdot\left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right)\\
+		&=& \left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right) \times
+		\tau\cdot\left(\begin{matrix} u_1 \\ 0 \\ u_3\end{matrix} \right)\\
+		&=& \left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right) \times
+		\left(\begin{matrix} 0 \\ u_1 \\ u_3 + u_1^2\end{matrix} \right)\\
+		&=& \left(\begin{matrix} u_1 \\ 0 \\ 2u_3 + 3u_1^2\end{matrix} \right)\\
+		&=& \left(\begin{matrix} u_1 \\ 0 \\ u_1^2\end{matrix} \right).
+	\end{eqnarray*}
+	Therefore $u_1 = 0$. Hence a typical 1-cocycle that is trivial on $\langle \sigma \rangle$ satisfies
+	\begin{eqnarray*}
+		\alpha_u(\tau) = \left(\begin{matrix} 0 \\ 0 \\ u \end{matrix} \right),\qquad (u\in k).
+	\end{eqnarray*}
+	Now we calculate the class $[\alpha_u] \in H^1(\Gamma, Q)$. Suppose $\alpha_v\sim\alpha_u$. Then
+	there is a $q\in Q$ fixed under the action of $\sigma$, that is of the form
+	\begin{eqnarray*}
+		q = \left(\begin{matrix} 0 \\ 0 \\ \lambda\end{matrix}\right),
+	\end{eqnarray*}
+	such that $\alpha_v(\gamma) = q\times\alpha_u(\gamma)\times\gamma\cdot q^{-1}$. In particular, for $\gamma = \tau$
+	\begin{eqnarray*}
+		\left(\begin{matrix} 0 \\ 0 \\ v\end{matrix}\right) &=&
+		\left(\begin{matrix} 0 \\ 0 \\ \lambda\end{matrix}\right) \times
+		\left(\begin{matrix} 0 \\ 0 \\ u\end{matrix}\right) \times
+		\tau\cdot\left(\begin{matrix} 0 \\ 0 \\ \lambda\end{matrix}\right)\\
+		&=&
+		\left(\begin{matrix} 0 \\ 0 \\ \lambda\end{matrix}\right) \times
+		\left(\begin{matrix} 0 \\ 0 \\ u\end{matrix}\right) \times
+		\left(\begin{matrix} 0 \\ 0 \\ \lambda\end{matrix}\right)\\
+		&=&
+		\left(\begin{matrix} 0 \\ 0 \\ \lambda\end{matrix}\right) \times
+		\left(\begin{matrix} 0 \\ 0 \\ u + \lambda\end{matrix}\right) \\
+		&=&
+		\left(\begin{matrix} 0 \\ 0 \\ u\end{matrix}\right).
+	\end{eqnarray*}
+	Hence only if $u=v$ are two 1-cocycles of the particular form in the same class, and therefore $H^1(\Gamma, Q)$ is infinite. [to finish].
+	% Fix $\rho_0:\Gamma\rightarrow G$
+	% \begin{eqnarray*}
+	% 	\rho_0(\tau) &=& \left(1, \tau\right)\\
+	% 	\rho_0(\sigma) &=& \left(1, \sigma\right).
+	% \end{eqnarray*}
+\end{proof}
+[note how to make my example look like the Slodowy one]
 
-
+It is natural to ask whether this leads to a reductive counterexample, although we can quickly verify that the answer is ``not immediately''. For suppose there was a reductive group with unipotent radical \emph{containing} the multiplication law:
+\begin{eqnarray*}
+	&&\ldots \epsilon_\alpha(u_\alpha) \ldots \epsilon_\beta(u_\beta) \ldots \epsilon_\gamma(u_\gamma) \times
+	\ldots \epsilon_\alpha(v_\alpha) \ldots \epsilon_\beta(v_\beta) \ldots \epsilon_\gamma(v_\gamma)\\
+	&&=
+	\ldots \epsilon_\alpha(u_\alpha + v_\alpha) \ldots \epsilon_\beta(u_\beta + v_\beta) \ldots \epsilon_\gamma(u_\gamma + v_\gamma + u_\alpha v_\alpha + u_\beta v_\beta + u_\alpha v_\beta).
+\end{eqnarray*}
+Then setting $u_\delta = v_\delta = 0$ whenever $\delta \neq \alpha$ gives
+\begin{eqnarray*}
+	\epsilon_\alpha(u_\alpha) \times \epsilon_\alpha(v_\alpha) &=& \epsilon_\alpha(u_\alpha + v_\alpha) \epsilon_\gamma(u_\alpha v_\alpha),
+\end{eqnarray*}
+which is absurd. [try find more examples]
 
 
