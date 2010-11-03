@@ -1,9 +1,22 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Weil(1964)]{weil1964remarks}
+A.~Weil.
+\newblock {Remarks on the cohomology of groups}.
+\newblock \emph{Annals of Mathematics}, 80\penalty0 (1):\penalty0 149--157,
+  1964.
+
+\bibitem[Slodowy(1997)]{slodowy1997two}
+P.~Slodowy.
+\newblock {Two notes on a finiteness problem in the representation theory of
+  finite groups}.
+\newblock \emph{Algebraic groups and Lie groups: a volume of papers in honour
+  of the late RW Richardson}, page 331, 1997.
 
 \bibitem[Hochschild(1965)]{hochschild1965structure}
 G.P. Hochschild.
@@ -24,12 +37,5 @@ A.~Borel.
 R.W. Carter.
 \newblock \emph{{Simple groups of Lie type}}.
 \newblock John Wiley \& Sons Inc, 1989.
-
-\bibitem[Slodowy(1997)]{slodowy1997two}
-P.~Slodowy.
-\newblock {Two notes on a finiteness problem in the representation theory of
-  finite groups}.
-\newblock \emph{Algebraic groups and Lie groups: a volume of papers in honour
-  of the late RW Richardson}, page 331, 1997.
 
 \end{thebibliography}

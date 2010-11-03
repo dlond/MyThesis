@@ -9,28 +9,28 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.8}
 \contentsline {chapter}{\numberline {2}Mathematical Preliminaries}{2}{chapter.9}
 \contentsline {chapter}{\numberline {3}K\"ulshammer's Second Problem}{3}{chapter.10}
-\contentsline {section}{\numberline {3.1}K\"ulshammer's First Problem}{3}{section.11}
-\contentsline {section}{\numberline {3.2}K\"ulshammer's Second Problem}{3}{section.12}
-\contentsline {section}{\numberline {3.3}A non-reductive counterexample}{3}{section.13}
-\contentsline {chapter}{\numberline {4}The 1-Cohomology}{4}{chapter.14}
-\contentsline {section}{\numberline {4.1}Abelian 1-Cohomology}{4}{section.15}
-\contentsline {subsection}{\numberline {4.1.1}Definitions}{4}{subsection.16}
-\contentsline {subsection}{\numberline {4.1.2}Maps between 1-cohomologies}{6}{subsection.19}
-\contentsline {section}{\numberline {4.2}Non-abelian 1-Cohomology}{10}{section.23}
-\contentsline {subsection}{\numberline {4.2.1}The non-abelian setting}{10}{subsection.24}
-\contentsline {subsection}{\numberline {4.2.2}Definitions}{10}{subsection.25}
-\contentsline {subsection}{\numberline {4.2.3}Maps between 1-cohomologies}{11}{subsection.28}
-\contentsline {chapter}{\numberline {5}1-Cohomology Calculation}{14}{chapter.31}
-\contentsline {section}{\numberline {5.1}The method}{14}{section.32}
-\contentsline {section}{\numberline {5.2}A rank 1 calculation}{23}{section.41}
-\contentsline {subsection}{\numberline {5.2.1}Example}{24}{subsection.42}
-\contentsline {subsection}{\numberline {5.2.2}Example}{35}{subsection.51}
-\contentsline {section}{\numberline {5.3}A rank 2 calculation}{42}{section.57}
-\contentsline {section}{\numberline {5.4}A Non-Reductive Counterexample}{54}{section.59}
-\contentsline {chapter}{\numberline {6}Conclusion}{58}{chapter.61}
+\contentsline {section}{\numberline {3.1}K\"ulshammer's Second Problem}{3}{section.11}
+\contentsline {section}{\numberline {3.2}The Approach}{3}{section.12}
+\contentsline {section}{\numberline {3.3}An algebraic group version}{4}{section.14}
+\contentsline {chapter}{\numberline {4}The 1-Cohomology}{6}{chapter.15}
+\contentsline {section}{\numberline {4.1}Abelian 1-Cohomology}{6}{section.16}
+\contentsline {subsection}{\numberline {4.1.1}Definitions}{6}{subsection.17}
+\contentsline {subsection}{\numberline {4.1.2}Maps between 1-cohomologies}{8}{subsection.20}
+\contentsline {section}{\numberline {4.2}Non-abelian 1-Cohomology}{12}{section.24}
+\contentsline {subsection}{\numberline {4.2.1}The non-abelian setting}{12}{subsection.25}
+\contentsline {subsection}{\numberline {4.2.2}Definitions}{12}{subsection.26}
+\contentsline {subsection}{\numberline {4.2.3}Maps between 1-cohomologies}{13}{subsection.29}
+\contentsline {chapter}{\numberline {5}1-Cohomology Calculation}{15}{chapter.32}
+\contentsline {section}{\numberline {5.1}The method}{15}{section.33}
+\contentsline {section}{\numberline {5.2}A rank 1 calculation}{24}{section.42}
+\contentsline {subsection}{\numberline {5.2.1}Example}{25}{subsection.43}
+\contentsline {subsection}{\numberline {5.2.2}Example}{36}{subsection.52}
+\contentsline {section}{\numberline {5.3}A rank 2 calculation}{43}{section.58}
+\contentsline {section}{\numberline {5.4}A Non-Reductive Counterexample}{55}{section.60}
+\contentsline {chapter}{\numberline {6}Conclusion}{59}{chapter.62}
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}Further Calculations}{59}{appendix.62}
-\contentsline {chapter}{\numberline {B}Source Code}{60}{appendix.63}
-\contentsline {chapter}{\numberline {C}Rank 2 Root System Diagrams}{61}{appendix.64}
+\contentsline {chapter}{\numberline {A}Further Calculations}{60}{appendix.63}
+\contentsline {chapter}{\numberline {B}Source Code}{61}{appendix.64}
+\contentsline {chapter}{\numberline {C}Rank 2 Root System Diagrams}{62}{appendix.65}
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{64}{dummy.65}
+\contentsline {chapter}{Bibliography}{65}{dummy.66}

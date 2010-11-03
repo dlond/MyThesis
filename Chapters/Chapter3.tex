@@ -1,19 +1,85 @@
+%!TEX root = /Users/dan/Documents/Thesis/Thesis.tex
 % Chapter 3
 
 \chapter{K\"ulshammer's Second Problem}
 \label{Chapter3}
 \lhead{Chapter 3. \emph{K\"ulshammer's Second Problem}}
 
-\begin{itemize}
-\item K\"ulshammer's First Problem
-\item K\"ulshammer's Second Problem
-\item Counter example for non-reductive $G$
-\item Overture to Ch. 3-5
-\end{itemize}
-
-\section{K\"ulshammer's First Problem}
+% \begin{itemize}
+% \item K\"ulshammer's First Problem
+% \item K\"ulshammer's Second Problem
+% \item Counter example for non-reductive $G$
+% \item Overture to Ch. 3-5
+% \end{itemize}
 
 \section{K\"ulshammer's Second Problem}
 
-\section{A non-reductive counterexample}
-3) Look at the nonreductive counterexample in Slodowy's paper on Kulshammer's problem.  What is special about the 3-dimensional U that makes this counterexample work?  Can you find similar structure in the unipotent radical of a reductive group?
+Two questions raised by B. K\"ulshammer concerning representations of a finite group $\Gamma$ into a linear algebraic group $G$ over an algebraically closed field $K$. The first has a positive answer  and is essentially contained a paper by A. Weil \cite{weil1964remarks}:
+\begin{itemize}
+	\item[(K. I)] Let $\mathrm{char}(K)$ be prime to the order of $\Gamma$. Are there only finitely many representations $\rho:\Gamma\rightarrow G$ up to conjugation by $G$?
+	\item[(K. II)] Let $p = \mathrm{char}(K)$ and $\Gamma_p \subset  \Gamma$ be a Sylow $p$-subgroup. Fix a conjugacy class of representations from $\Gamma_p\rightarrow G$. Are there, up to conjugation by $G$, only finitely many representations $\rho:\Gamma\rightarrow G$ whose restrictions to $\Gamma_p$ belong to the given class?
+\end{itemize}
+
+(K. II) has positive answer so long as $G$ is reductive and the characteristic of $K$ is good for $G$ \cite{slodowy1997two}. The same paper shows that the answer is ``no'' in general by way of a counterexample involving a non-reductive $G$.
+
+It will be of interest to us to explore the possibility of a reductive counterexample to (K. II).
+
+\section{The Approach}
+
+We are interested in knowing whether there can be infinitely many $G$-conjugacy classes of representations $\Gamma\rightarrow G$ that when restricted to $\Gamma_p$ hit some $G$-conjugacy class of representations $\Gamma_p\rightarrow G$. 
+
+\begin{theorem} There are only finitely many $G$-conjugacy classes of $G$-completely reducible representations $\Gamma\rightarrow G$.
+\end{theorem}
+\begin{proof}[Reference something]
+\end{proof}
+
+Fix a finite set $\{Q_i\}$ of representatives of the finitely many $G$-conjugacy classes of parabolic subgroups of $G$ [Reference Humphreys].
+
+Suppose we are given a representation $\rho:\Gamma\rightarrow G$. Let $P<G$ be the minimal parabolic subgroup of $G$ containing $\rho(\Gamma)$ and let $g$ be the element of $G$ such that $P=g\cdot Q$ where $Q$ is one of the fixed parabolics $\{Q_i\}$. Let $\rho'=g\cdot\rho$.
+
+Choose a Levi subgroup $L<Q$, so that $Q = R_u(Q)\rtimes L$. Define $\rho_0:\Gamma\rightarrow L$ by composing $\rho'$ with the projection $Q\rightarrow L$:
+\begin{displaymath}
+	\xymatrix{
+	\Gamma \ar[r]^{\rho'} \ar[rd]_{\rho_0} & Q \ar[d]\\
+	& L}
+\end{displaymath}
+
+Since $Q$ is the minimal parabolic containing $\rho'(\Gamma)$, $\rho_0$ must be $L$-irreducible. For if $\rho_0(\Gamma)$ is contained in a proper parabolic subgroup of $L$ \ldots
+
+Hence $\rho_0$ is also $L$-completely reducible. By [Theorem] there are only finitely many $L$-conjugacy classes of the given $\rho_0$.
+
+So for each representation $\Gamma\rightarrow G$ we can choose a $Q$ from a finite set of parabolic subgroups of $G$, with corresponding Levi subgroup $L$, and $\rho_0':\Gamma\rightarrow G$ such that the $G$-conjugacy class containing the given representation has representative $\rho'$ \ldots
+
+[The converse]
+
+[Therefore the problem is controlled by the 1-cohomology]
+
+\section{An algebraic group version}
+
+In an attempt to gain further insight into (K. II) we adjust the original question by letting $\Gamma$ be an infinite group $H$. The advantage being that a negative answer in the algebraic group version may provide a negative answer to (K. II) by choosing an appropriate finite subgroup $\Gamma$ of $H$. In many of the examples to follow we set $H = SL_2(K)$ with Sylow $p$-subgroup $H_p = U_2(K)$ consisting of upper unitriangular matrices. 
+
+Let $P \subset G$ be a parabolic subgroup and $L \subset P$ the corresponding Levi subgroup. Fix a representation $\rho_0:H\rightarrow L$. We can assume $\rho_0(H)$ is $L$-irreducible, that is, not contained in a proper parabolic of $L$. 
+
+Now define $\rho_\alpha:H \rightarrow P$ by $\rho_\alpha(h) = \alpha(h)\rho_0(h)$ where $\alpha:H\rightarrow R_u(P)$, $R_u(P)$ the unipotent radical of $P$. 
+
+For $\rho_\alpha$ to be a homomorphism
+\begin{eqnarray*}
+	\alpha(h_1h_2)\rho_0(h_1h_2) &=& \alpha(h_1)\rho_0(h_1)\alpha(h_2)\rho_0(h_2) \\
+	 &=& \alpha(h_1)\rho_0(h_1)\alpha(h_2)\rho_0(h_1)^{-1}\rho_0(h_1)\rho_0(h_2) \\
+	 &=& \alpha(h_1)\rho_0(h_1)\alpha(h_2)\rho_0(h_1)^{-1}\rho_0(h_1h_2).
+\end{eqnarray*}
+That is $\alpha(h_1h_2) = \alpha(h_1) h_1\cdot\alpha(h_2)$, where the action $H \times R_u(P) \rightarrow R_u(P)$ is conjugation via $\rho_0$. This is a 1-cocycle condtion; $\alpha\in Z^1(H, R_u(P))$. $R_u(P)$ will not be abelian in general.
+
+Now suppose $\rho_\alpha$ is $R_u(P)$-conjugate to some $\rho_\beta$, $\alpha, \beta \in Z^1(H, R_u(P))$. That is, there exists a $v \in R_u(P)$ such that for all $h\in H$
+\begin{eqnarray*}
+	\alpha(h)\rho_0(h) &=& v\beta(h)\rho_0(h)v^{-1} \\
+	&=& v\beta(h)\rho_0(h)v^{-1}\rho_0(h)^{-1}\rho_0(h).
+\end{eqnarray*}
+That is $\alpha(h) = v\beta(h)h\cdot v^{-1}$. In particular if $\rho_\alpha$ is $R_u(P)$-conjugate to $\rho_0$, that is $\beta$ is trivial, then $\alpha$ takes the form of a 1-coboundary. Generally speaking $\alpha$ and $\beta$ project to the same 1-cohomology class. In the abelian case this reads ``$\alpha$ and $\beta$ differ by a 1-coboundary'':
+\begin{eqnarray*}
+	\alpha(h) = v\beta(h)h\cdot v^{-1} \quad\leadsto \quad\alpha(h) &=& v + \beta(h) - h\cdot v \\
+	&=& \beta(h) + v - h\cdot v \\
+	&=& \beta(h) + \chi_v(h).
+\end{eqnarray*}
+
+% 3) Look at the nonreductive counterexample in Slodowy's paper on Kulshammer's problem.  What is special about the 3-dimensional U that makes this counterexample work?  Can you find similar structure in the unipotent radical of a reductive group?
