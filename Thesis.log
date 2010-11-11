@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.1.15)  3 NOV 2010 23:33
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.1.15)  12 NOV 2010 11:40
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -727,74 +727,78 @@ Chapter 3.
 ------------------------------------------------------------------------------
 [3
 
-] <xymatrix 2x2 134> [4]) (./Chapters/Chapter4.tex [5]
+] <xymatrix 2x2 134> <xymatrix 2x2 134>
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 60.
+ [4] [5]) (./Chapters/Chapter4.tex
+[6]
 Chapter 4.
 ------------------------------------------------------------------------------
  4 The 1-Cohomology
 ------------------------------------------------------------------------------
-[6
+[7
 
-] [7] [8] <xymatrix 2x2 182> [9] [10] [11] [12] [13] <xymatrix 2x2 137>)
-(./Chapters/Chapter5.tex [14]
+] [8] [9] <xymatrix 2x2 182> [10] [11] [12] [13] [14] <xymatrix 2x2 137>)
+(./Chapters/Chapter5.tex [15]
 Chapter 5.
 ------------------------------------------------------------------------------
  5 1-Cohomology Calculation
 ------------------------------------------------------------------------------
-[15
+[16
 
-] [16]
+] [17]
 Overfull \hbox (5.91562pt too wide) in alignment at lines 93--158
  [][][] []
  []
 
-[17] [18] [19] [20] [21] [22] [23] [24] [25]
+[18] [19] [20] [21] [22] [23] [24] [25] [26]
 Overfull \hbox (38.32626pt too wide) in alignment at lines 625--675
  [][][] []
  []
 
-[26] [27]
+[27] [28]
 Overfull \hbox (46.36978pt too wide) in alignment at lines 715--755
  [][][] []
  []
 
-[28] [29]
+[29] [30]
 Overfull \hbox (0.7248pt too wide) in paragraph at lines 845--846
 []\OT1/cmr/m/n/10.95 If we are to find a non-trivial 1-cohomology $\OML/cmm/m/i
 t/10.95 H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 SL[]; V\OT1/cmr/m/n/10.95 )$
  then $\OML/cmm/m/it/10.95 ^^[$ \OT1/cmr/m/n/10.95 can-not be a 1-coboundary.
  []
 
-[30]
+[31]
 Overfull \hbox (5.76404pt too wide) in alignment at lines 896--958
  [][][] []
  []
 
-[31] [32]
+[32] [33]
 Overfull \hbox (49.75233pt too wide) in alignment at lines 1001--1065
  [][][] []
  []
 
-[33] [34]
+[34] [35]
 Overfull \hbox (35.89026pt too wide) in alignment at lines 1142--1154
  [][][] []
  []
 
-[35]
+[36]
 Overfull \hbox (16.7704pt too wide) in alignment at lines 1195--1226
  [][][] []
  []
 
-[36] [37] [38] [39]
+[37] [38] [39] [40]
 Overfull \hbox (5.76404pt too wide) in alignment at lines 1391--1453
  [][][] []
  []
 
-[40]
+[41]
 Overfull \hbox (49.75233pt too wide) in alignment at lines 1458--1513
  [][][] []
  []
 
-[41] [42] [43]
+[42] [43] [44]
 Overfull \hbox (9.34364pt too wide) in paragraph at lines 1573--1581
 \OML/cmm/m/it/10.95 ^^O[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]\OT1/cmr/m/
 n/10.95 )\OML/cmm/m/it/10.95 ^^O[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]\O
@@ -809,64 +813,64 @@ m/m/it/10.95 ^^O[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95
  )[] 
  []
 
-[44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57])
-(./Chapters/Chapter7.tex [58]
+[45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58])
+(./Chapters/Chapter7.tex [59]
 Chapter 6.
 ------------------------------------------------------------------------------
  6 Conclusion
 ------------------------------------------------------------------------------
-) (./Appendices/AppendixA.tex [59
+) (./Appendices/AppendixA.tex [60
 
 ]
 Appendix A.
 ------------------------------------------------------------------------------
  A Further Calculations
 ------------------------------------------------------------------------------
-) (./Appendices/AppendixB.tex [60
+) (./Appendices/AppendixB.tex [61
 
 ]
 Appendix B.
 ------------------------------------------------------------------------------
  B Source Code
 ------------------------------------------------------------------------------
-) (./Appendices/AppendixC.tex [61
+) (./Appendices/AppendixC.tex [62
 
 ]
 Appendix C.
 ------------------------------------------------------------------------------
  C Rank 2 Root System Diagrams
 ------------------------------------------------------------------------------
-<Figures/a1a1.png, id=569, 1003.75pt x 1003.75pt>
+<Figures/a1a1.png, id=574, 1003.75pt x 1003.75pt>
 File: Figures/a1a1.png Graphic file (type png)
  <use Figures/a1a1.png>
-<Figures/a2.png, id=571, 1003.75pt x 1003.75pt>
+<Figures/a2.png, id=576, 1003.75pt x 1003.75pt>
 File: Figures/a2.png Graphic file (type png)
- <use Figures/a2.png> [62
+ <use Figures/a2.png> [63
 
- <./Figures/a1a1.png>] <Figures/b2.png, id=577, 1003.75pt x 1003.75pt>
+ <./Figures/a1a1.png>] <Figures/b2.png, id=582, 1003.75pt x 1003.75pt>
 File: Figures/b2.png Graphic file (type png)
 
-<use Figures/b2.png> <Figures/g2.png, id=578, 1003.75pt x 1003.75pt>
+<use Figures/b2.png> <Figures/g2.png, id=583, 1003.75pt x 1003.75pt>
 File: Figures/g2.png Graphic file (type png)
 
-<use Figures/g2.png> [63 <./Figures/a2.png> <./Figures/b2.png>]) [64 <./Figures
+<use Figures/g2.png> [64 <./Figures/a2.png> <./Figures/b2.png>]) [65 <./Figures
 /g2.png>]
 ------------------------------------------------------------------------------
  Bibliography
 ------------------------------------------------------------------------------
-(./Thesis.bbl) [65
+(./Thesis.bbl) [66
 
 
 ] (./Thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 12136 strings out of 493876
- 164390 string characters out of 1150568
- 291468 words of memory out of 3000000
- 15009 multiletter control sequences out of 10000+50000
+ 12139 strings out of 493876
+ 164425 string characters out of 1150568
+ 291469 words of memory out of 3000000
+ 15010 multiletter control sequences out of 10000+50000
  14780 words of font info for 57 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
  43i,14n,45p,630b,444s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{theorem.34} has been referenced b
+pdfTeX warning (dest): name{theorem.35} has been referenced b
 ut does not exist, replaced by a fixed one
 
 </usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></usr/loc
@@ -891,9 +895,9 @@ dist/fonts/type1/bluesky/ams/msbm7.pfb></usr/local/texlive/2008/texmf-dist/font
 s/type1/public/xypic/xycmat10.pfb></usr/local/texlive/2008/texmf-dist/fonts/typ
 e1/public/xypic/xycmbt10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/pu
 blic/xypic/xydash10.pfb>
-Output written on Thesis.pdf (74 pages, 451276 bytes).
+Output written on Thesis.pdf (75 pages, 454270 bytes).
 PDF statistics:
- 706 PDF objects out of 1000 (max. 8388607)
- 149 named destinations out of 1000 (max. 131072)
+ 712 PDF objects out of 1000 (max. 8388607)
+ 151 named destinations out of 1000 (max. 131072)
  273 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -33,22 +33,49 @@ We are interested in knowing whether there can be infinitely many $G$-conjugacy 
 \begin{proof}[Reference something]
 \end{proof}
 
-Fix a finite set $\{Q_i\}$ of representatives of the finitely many $G$-conjugacy classes of parabolic subgroups of $G$ [Reference Humphreys].
+Although $G$ has infinitely many parabolic subgroups there are only finitely many $G$-conjugacy classes of parabolic subgroups, so we can choose a finite set $\{Q_i\}$ of representatives. We choose a set of Levi subgroups $\{M_i\}$, $M_i$ being a Levi subgroup of $Q_i$. By [Theorem] there are only finitely many $M_i$-conjugacy classes of $M_i$-completely reducible representations $\sigma^{(i)}_0:\Gamma\rightarrow M_i$, so we fix a set of representatives $\{\sigma^{(i)}_{0,j}\}$.
 
-Suppose we are given a representation $\rho:\Gamma\rightarrow G$. Let $P<G$ be the minimal parabolic subgroup of $G$ containing $\rho(\Gamma)$ and let $g$ be the element of $G$ such that $P=g\cdot Q$ where $Q$ is one of the fixed parabolics $\{Q_i\}$. Let $\rho'=g\cdot\rho$.
+Let $\rho$ be a representation from $\Gamma\rightarrow G$ and let $P$ be a minimal parabolic subgroup of $G$ containing $\rho(\Gamma)$. Then there is a $g$ in $G$ such that $P = g\cdot Q$, where $Q\in\{Q_i\}$. Let $\rho' = g\cdot \rho$. 
 
-Choose a Levi subgroup $L<Q$, so that $Q = R_u(Q)\rtimes L$. Define $\rho_0:\Gamma\rightarrow L$ by composing $\rho'$ with the projection $Q\rightarrow L$:
+Define $\rho_0:\Gamma\rightarrow M$ by composing $\rho'$ with the projection $Q\rightarrow M$, $M\in\{M_i\}$ the chosen Levi subgroup for $Q$:
 \begin{displaymath}
 	\xymatrix{
 	\Gamma \ar[r]^{\rho'} \ar[rd]_{\rho_0} & Q \ar[d]\\
-	& L}
+	& M}
 \end{displaymath}
 
-Since $Q$ is the minimal parabolic containing $\rho'(\Gamma)$, $\rho_0$ must be $L$-irreducible. For if $\rho_0(\Gamma)$ is contained in a proper parabolic subgroup of $L$ \ldots
+Suppose $\rho_0$ is not $M$-irreducible. [Details]. Therefore $\rho_0$ is $M$-irreducible and hence $M$-completely reducible. Let $m\in M$ such that $\sigma_0 = m\cdot \rho_0$ where $\sigma_0\in\{\sigma^{(i)}_{0,j}\}$. Let $\sigma = m\cdot \rho' = mg\cdot \rho$.
 
-Hence $\rho_0$ is also $L$-completely reducible. By [Theorem] there are only finitely many $L$-conjugacy classes of the given $\rho_0$.
+Given a representation $\rho:\Gamma\rightarrow G$ we were able to find a representation $\sigma$ that is $G$-conjugate to $\rho$ and that fits one of only finitely many diagrams of the form:
+\begin{displaymath}
+	\xymatrix{
+	\Gamma \ar[r]^{\sigma} \ar[rd]_{\sigma^{(i)}_{0,j}} & Q_i \ar[d]\\
+	& M_i}
+\end{displaymath}
 
-So for each representation $\Gamma\rightarrow G$ we can choose a $Q$ from a finite set of parabolic subgroups of $G$, with corresponding Levi subgroup $L$, and $\rho_0':\Gamma\rightarrow G$ such that the $G$-conjugacy class containing the given representation has representative $\rho'$ \ldots
+Let $V_i= R_u(Q_i)$, so that $Q_i = R_u(Q_i)\rtimes M_i$. Then for a given $\rho$ there is a 1-cohomology calculation $H^1(\Gamma,V_i)$
+
+[Say something about $\rho \rightsquigarrow (i,j) \rightsquigarrow H^1(\Gamma,V_i)$ so that I can state the following]
+
+\begin{lemma} Let $\{\rho_\mu\}$ be a collection of representations $\Gamma\rightarrow P$ for a fixed parabolic subgroup $P<G$. The following statements are equivalent:
+	\begin{itemize}
+		\item There are only finitely many $P$-conjugacy classes of $\{\rho_\mu\}$.
+		\item There are only finitely many $G$-conjugacy classes of $\{\rho_\mu\}$.
+		\item For each $i$, the number of elements of $H^1(\Gamma, V_i)$ modulo $Z(M_i^\circ)$ that come from the $\rho_\mu$'s is finite.
+	\end{itemize}
+\end{lemma}
+\begin{proof}
+\end{proof}
+
+% Suppose we are given a representation $\rho:\Gamma\rightarrow G$. Let $P<G$ be the minimal parabolic subgroup of $G$ containing $\rho(\Gamma)$ and let $g$ be the element of $G$ such that $P=g\cdot Q$ where $Q$ is one of the fixed parabolics $\{Q_i\}$. Let $\rho'=g\cdot\rho$.
+% 
+% Choose a Levi subgroup $L<Q$, so that $Q = R_u(Q)\rtimes L$. 
+% 
+% Since $Q$ is the minimal parabolic containing $\rho'(\Gamma)$, $\rho_0$ must be $L$-irreducible. For if $\rho_0(\Gamma)$ is contained in a proper parabolic subgroup of $L$ \ldots
+% 
+% Hence $\rho_0$ is also $L$-completely reducible. By [Theorem] there are only finitely many $L$-conjugacy classes of the given $\rho_0$.
+% 
+% So for each representation $\Gamma\rightarrow G$ we can choose a $Q$ from a finite set of parabolic subgroups of $G$, with corresponding Levi subgroup $L$, and $\rho_0':\Gamma\rightarrow G$ such that the $G$-conjugacy class containing the given representation has representative $\rho'$ \ldots
 
 [The converse]
 
