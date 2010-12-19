@@ -35,6 +35,13 @@ We are interested in knowing whether there can be infinitely many $G$-conjugacy 
 
 Although $G$ has infinitely many parabolic subgroups there are only finitely many $G$-conjugacy classes of parabolic subgroups, so we can choose a finite set $\{Q_i\}$ of representatives. We choose a set of Levi subgroups $\{M_i\}$, $M_i$ being a Levi subgroup of $Q_i$. By [Theorem] there are only finitely many $M_i$-conjugacy classes of $M_i$-completely reducible representations $\sigma^{(i)}_0:\Gamma\rightarrow M_i$, so we fix a set of representatives $\{\sigma^{(i)}_{0,j}\}$.
 
+We will show that given a representation $\rho:\Gamma\rightarrow G$ there exists a representation $\sigma$ that is $G$-conjugate to $\rho$ and that fits one of only finitely many diagrams of the form:
+\begin{displaymath}
+	\xymatrix{
+	\Gamma \ar[r]^{\sigma} \ar[rd]_{\sigma^{(i)}_{0,j}} & Q_i \ar[d]\\
+	& M_i}
+\end{displaymath}
+
 Let $\rho$ be a representation from $\Gamma\rightarrow G$ and let $P$ be a minimal parabolic subgroup of $G$ containing $\rho(\Gamma)$. Then there is a $g$ in $G$ such that $P = g\cdot Q$, where $Q\in\{Q_i\}$. Let $\rho' = g\cdot \rho$. 
 
 Define $\rho_0:\Gamma\rightarrow M$ by composing $\rho'$ with the projection $Q\rightarrow M$, $M\in\{M_i\}$ the chosen Levi subgroup for $Q$:
@@ -44,27 +51,53 @@ Define $\rho_0:\Gamma\rightarrow M$ by composing $\rho'$ with the projection $Q\
 	& M}
 \end{displaymath}
 
-Suppose $\rho_0$ is not $M$-irreducible. [Details]. Therefore $\rho_0$ is $M$-irreducible and hence $M$-completely reducible. Let $m\in M$ such that $\sigma_0 = m\cdot \rho_0$ where $\sigma_0\in\{\sigma^{(i)}_{0,j}\}$. Let $\sigma = m\cdot \rho' = mg\cdot \rho$.
+Since $Q$ is a minimal parabolic containing $\rho'(\Gamma)$ $\rho_0$ is $M$-irreducible [reference] and therefore $M$-completely reducible. Hence there exists an $m\in M$ such that $\sigma_0 = m\cdot \rho_0$ where $\sigma_0\in\{\sigma^{(i)}_{0,j}\}$ [Theorem]. Let $\sigma = m\cdot \rho' = mg\cdot \rho$. This verifies what we set out to show.
 
-Given a representation $\rho:\Gamma\rightarrow G$ we were able to find a representation $\sigma$ that is $G$-conjugate to $\rho$ and that fits one of only finitely many diagrams of the form:
+[Say something about $\rho \rightsquigarrow (i,j) \rightsquigarrow H^1(\Gamma,V_i)$ so that I can state the next lemma]
+
+For a given parabolic $P<G$, Levi $L<P$ and representation $\rho:\Gamma\rightarrow P$ we have defined the map $\rho_0:\Gamma\rightarrow L$ by the projection $P\rightarrow L$. Now define $\alpha_\rho:\Gamma\rightarrow R_u(P)$ by projecting on to $R_u(P)$, so that $\rho = \alpha_\rho\rho_0$. If $\rho_0$ is a homomorphism then
+\begin{eqnarray*}
+	\alpha_\rho(\gamma_1\gamma_2)\rho_0(\gamma_1\gamma_2) \,=\, \rho(\gamma_1\gamma_2) 
+		&=& \rho(\gamma_1)\rho(\gamma_2) \\
+		&=& \alpha_\rho(\gamma_1)\rho_0(\gamma_1)\alpha_\rho(\gamma_2)\rho_0(\gamma_2) \\
+		&=& \alpha_\rho(\gamma_1)\rho_0(\gamma_1)\alpha_\rho(\gamma_2)\rho_0(\gamma_1)^{-1}\rho_0(\gamma_1)\rho_0(\gamma_2)\\
+		&=&\alpha_\rho(\gamma_1)\rho_0(\gamma_1)\alpha_\rho(\gamma_2)\rho_0(\gamma_1)^{-1}\rho_0(\gamma_1\gamma_2),
+\end{eqnarray*}
+so that
+\begin{eqnarray*}
+	\alpha_\rho(\gamma_1\gamma_2) =
+	\alpha_\rho(\gamma_1)\rho_0(\gamma_1)\cdot\alpha_\rho(\gamma_2).
+\end{eqnarray*}
+
+Hence for the given $\rho$ we have a corresponding 1-cocycle $\alpha_\rho:\Gamma\rightarrow R_u(P)$ where $\Gamma$ acts on $R_u(P)$ via $\rho_0$.
+
+Suppose we conjugate $\rho$ by an element $g\in G$. Then $\rho'=g\cdot\rho$ has corresponding 1-cocycle $\alpha_{\rho'}:\Gamma\rightarrow gR_u(P)g^{-1}$.
+
+So the $G$-action on $\rho:\Gamma\rightarrow P$ almost corresponds to maps of 1-cocycles of the form:
+\begin{displaymath}
+	Z^1(\Gamma, R_u(P))\rightarrow Z^1(\Gamma, gR_u(P)g^{-1}),
+\end{displaymath}
+the catch being that conjugating $\rho$ by an arbitrary element of $g$ changes the action of $\Gamma$ on $R_u(P)$. If we choose $g\in Z(L)^\circ$ and consider the $Z(L)^\circ$-action:
 \begin{displaymath}
 	\xymatrix{
-	\Gamma \ar[r]^{\sigma} \ar[rd]_{\sigma^{(i)}_{0,j}} & Q_i \ar[d]\\
-	& M_i}
+		\Gamma \ar[r]^{\rho} \ar[rd]_{\rho_0} & P \ar[d]\\
+		& L} \qquad\mapsto\qquad
+	\xymatrix{
+		\Gamma \ar[r]^{g\cdot\rho} \ar[rd]_{\rho_0} & gPg^{-1} \ar[d]\\
+		& L}
 \end{displaymath}
+then we really do get a map of 1-cocycles. 
 
-Let $V_i= R_u(Q_i)$, so that $Q_i = R_u(Q_i)\rtimes M_i$. Then for a given $\rho$ there is a 1-cohomology calculation $H^1(\Gamma,V_i)$
 
-[Say something about $\rho \rightsquigarrow (i,j) \rightsquigarrow H^1(\Gamma,V_i)$ so that I can state the following]
-
-\begin{lemma} Let $\{\rho_\mu\}$ be a collection of representations $\Gamma\rightarrow P$ for a fixed parabolic subgroup $P<G$. The following statements are equivalent:
+\begin{lemma} Let $\{\rho_\mu\, |\, \mu \in I\}$ be a collection of representations $\Gamma\rightarrow P$ for a fixed parabolic subgroup $P<G$. The following statements are equivalent:
 	\begin{itemize}
-		\item There are only finitely many $P$-conjugacy classes of $\{\rho_\mu\}$.
-		\item There are only finitely many $G$-conjugacy classes of $\{\rho_\mu\}$.
-		\item For each $i$, the number of elements of $H^1(\Gamma, V_i)$ modulo $Z(M_i^\circ)$ that come from the $\rho_\mu$'s is finite.
+		\item[(i)] There are only finitely many $P$-conjugacy classes of $\{\rho_\mu\}$.
+		\item[(ii)] There are only finitely many $G$-conjugacy classes of $\{\rho_\mu\}$.
+		\item[(iii)] For each $i$, the number of elements of $H^1(\Gamma, V_i)$ modulo $Z(M_i^\circ)$ that come from the $\rho_\mu$'s is finite.
 	\end{itemize}
 \end{lemma}
 \begin{proof}
+	(i) $\Rightarrow$ (ii) is obvious. 
 \end{proof}
 
 % Suppose we are given a representation $\rho:\Gamma\rightarrow G$. Let $P<G$ be the minimal parabolic subgroup of $G$ containing $\rho(\Gamma)$ and let $g$ be the element of $G$ such that $P=g\cdot Q$ where $Q$ is one of the fixed parabolics $\{Q_i\}$. Let $\rho'=g\cdot\rho$.
@@ -76,8 +109,6 @@ Let $V_i= R_u(Q_i)$, so that $Q_i = R_u(Q_i)\rtimes M_i$. Then for a given $\rho
 % Hence $\rho_0$ is also $L$-completely reducible. By [Theorem] there are only finitely many $L$-conjugacy classes of the given $\rho_0$.
 % 
 % So for each representation $\Gamma\rightarrow G$ we can choose a $Q$ from a finite set of parabolic subgroups of $G$, with corresponding Levi subgroup $L$, and $\rho_0':\Gamma\rightarrow G$ such that the $G$-conjugacy class containing the given representation has representative $\rho'$ \ldots
-
-[The converse]
 
 [Therefore the problem is controlled by the 1-cohomology]
 

@@ -7,30 +7,30 @@
 \contentsline {chapter}{Symbols}{vii}{dummy.5}
 \vspace {2em}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.8}
-\contentsline {chapter}{\numberline {2}Mathematical Preliminaries}{2}{chapter.9}
-\contentsline {chapter}{\numberline {3}K\"ulshammer's Second Problem}{3}{chapter.10}
-\contentsline {section}{\numberline {3.1}K\"ulshammer's Second Problem}{3}{section.11}
-\contentsline {section}{\numberline {3.2}The Approach}{3}{section.12}
-\contentsline {section}{\numberline {3.3}An algebraic group version}{5}{section.15}
-\contentsline {chapter}{\numberline {4}The 1-Cohomology}{7}{chapter.16}
-\contentsline {section}{\numberline {4.1}Abelian 1-Cohomology}{7}{section.17}
-\contentsline {subsection}{\numberline {4.1.1}Definitions}{7}{subsection.18}
-\contentsline {subsection}{\numberline {4.1.2}Maps between 1-cohomologies}{9}{subsection.21}
-\contentsline {section}{\numberline {4.2}Non-abelian 1-Cohomology}{13}{section.25}
-\contentsline {subsection}{\numberline {4.2.1}The non-abelian setting}{13}{subsection.26}
-\contentsline {subsection}{\numberline {4.2.2}Definitions}{13}{subsection.27}
-\contentsline {subsection}{\numberline {4.2.3}Maps between 1-cohomologies}{14}{subsection.30}
-\contentsline {chapter}{\numberline {5}1-Cohomology Calculation}{16}{chapter.33}
-\contentsline {section}{\numberline {5.1}The method}{16}{section.34}
-\contentsline {section}{\numberline {5.2}A rank 1 calculation}{25}{section.43}
-\contentsline {subsection}{\numberline {5.2.1}Example}{26}{subsection.44}
-\contentsline {subsection}{\numberline {5.2.2}Example}{37}{subsection.53}
-\contentsline {section}{\numberline {5.3}A rank 2 calculation}{44}{section.59}
-\contentsline {section}{\numberline {5.4}A Non-Reductive Counterexample}{56}{section.61}
-\contentsline {chapter}{\numberline {6}Conclusion}{60}{chapter.63}
+\contentsline {chapter}{\numberline {2}Mathematical Preliminaries}{3}{chapter.9}
+\contentsline {chapter}{\numberline {3}K\"ulshammer's Second Problem}{4}{chapter.10}
+\contentsline {section}{\numberline {3.1}K\"ulshammer's Second Problem}{4}{section.11}
+\contentsline {section}{\numberline {3.2}The Approach}{4}{section.12}
+\contentsline {section}{\numberline {3.3}An algebraic group version}{7}{section.15}
+\contentsline {chapter}{\numberline {4}The 1-Cohomology}{8}{chapter.16}
+\contentsline {section}{\numberline {4.1}Abelian 1-Cohomology}{8}{section.17}
+\contentsline {subsection}{\numberline {4.1.1}Definitions}{8}{subsection.18}
+\contentsline {subsection}{\numberline {4.1.2}Maps between 1-cohomologies}{10}{subsection.21}
+\contentsline {section}{\numberline {4.2}Non-abelian 1-Cohomology}{14}{section.25}
+\contentsline {subsection}{\numberline {4.2.1}The non-abelian setting}{14}{subsection.26}
+\contentsline {subsection}{\numberline {4.2.2}Definitions}{14}{subsection.27}
+\contentsline {subsection}{\numberline {4.2.3}Maps between 1-cohomologies}{15}{subsection.30}
+\contentsline {chapter}{\numberline {5}1-Cohomology Calculation}{17}{chapter.33}
+\contentsline {section}{\numberline {5.1}The method}{17}{section.34}
+\contentsline {section}{\numberline {5.2}A rank 1 calculation}{26}{section.43}
+\contentsline {subsection}{\numberline {5.2.1}Example}{27}{subsection.44}
+\contentsline {subsection}{\numberline {5.2.2}Example}{38}{subsection.53}
+\contentsline {section}{\numberline {5.3}A rank 2 calculation}{45}{section.59}
+\contentsline {section}{\numberline {5.4}A Non-Reductive Counterexample}{57}{section.61}
+\contentsline {chapter}{\numberline {6}Conclusion}{61}{chapter.63}
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}Further Calculations}{61}{appendix.64}
-\contentsline {chapter}{\numberline {B}Source Code}{62}{appendix.65}
-\contentsline {chapter}{\numberline {C}Rank 2 Root System Diagrams}{63}{appendix.66}
+\contentsline {chapter}{\numberline {A}Further Calculations}{62}{appendix.64}
+\contentsline {chapter}{\numberline {B}Source Code}{63}{appendix.65}
+\contentsline {chapter}{\numberline {C}Rank 2 Root System Diagrams}{64}{appendix.66}
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{66}{dummy.67}
+\contentsline {chapter}{Bibliography}{67}{dummy.67}

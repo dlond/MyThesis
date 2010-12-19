@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.1.15)  12 NOV 2010 11:40
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.1.15)  19 DEC 2010 18:53
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -708,97 +708,94 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 9.
-)
-(./Chapters/Chapter2.tex [1
+ [1
 
 
 
-]
+])
+(./Chapters/Chapter2.tex [2]
 Chapter 2.
 ------------------------------------------------------------------------------
  2 Mathematical Preliminaries
 ------------------------------------------------------------------------------
-) (./Chapters/Chapter3.tex [2
+) (./Chapters/Chapter3.tex [3
 
 ]
 Chapter 3.
 ------------------------------------------------------------------------------
  3 K\"ulshammer's Second Problem
 ------------------------------------------------------------------------------
-[3
+[4
 
-] <xymatrix 2x2 134> <xymatrix 2x2 134>
-LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 60.
- [4] [5]) (./Chapters/Chapter4.tex
-[6]
+] <xymatrix 2x2 134> <xymatrix 2x2 134> [5] <xymatrix 2x2 134> <xymatrix 2x2
+134> [6]) (./Chapters/Chapter4.tex [7]
 Chapter 4.
 ------------------------------------------------------------------------------
  4 The 1-Cohomology
 ------------------------------------------------------------------------------
-[7
+[8
 
-] [8] [9] <xymatrix 2x2 182> [10] [11] [12] [13] [14] <xymatrix 2x2 137>)
-(./Chapters/Chapter5.tex [15]
+] [9] [10] <xymatrix 2x2 182> [11] [12] [13] [14] [15] <xymatrix 2x2 137>)
+(./Chapters/Chapter5.tex [16]
 Chapter 5.
 ------------------------------------------------------------------------------
  5 1-Cohomology Calculation
 ------------------------------------------------------------------------------
-[16
+[17
 
-] [17]
+] [18]
 Overfull \hbox (5.91562pt too wide) in alignment at lines 93--158
  [][][] []
  []
 
-[18] [19] [20] [21] [22] [23] [24] [25] [26]
+[19] [20] [21] [22] [23] [24] [25] [26] [27]
 Overfull \hbox (38.32626pt too wide) in alignment at lines 625--675
  [][][] []
  []
 
-[27] [28]
+[28] [29]
 Overfull \hbox (46.36978pt too wide) in alignment at lines 715--755
  [][][] []
  []
 
-[29] [30]
+[30] [31]
 Overfull \hbox (0.7248pt too wide) in paragraph at lines 845--846
 []\OT1/cmr/m/n/10.95 If we are to find a non-trivial 1-cohomology $\OML/cmm/m/i
 t/10.95 H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 SL[]; V\OT1/cmr/m/n/10.95 )$
  then $\OML/cmm/m/it/10.95 ^^[$ \OT1/cmr/m/n/10.95 can-not be a 1-coboundary.
  []
 
-[31]
+[32]
 Overfull \hbox (5.76404pt too wide) in alignment at lines 896--958
  [][][] []
  []
 
-[32] [33]
+[33] [34]
 Overfull \hbox (49.75233pt too wide) in alignment at lines 1001--1065
  [][][] []
  []
 
-[34] [35]
+[35] [36]
 Overfull \hbox (35.89026pt too wide) in alignment at lines 1142--1154
  [][][] []
  []
 
-[36]
+[37]
 Overfull \hbox (16.7704pt too wide) in alignment at lines 1195--1226
  [][][] []
  []
 
-[37] [38] [39] [40]
+[38] [39] [40] [41]
 Overfull \hbox (5.76404pt too wide) in alignment at lines 1391--1453
  [][][] []
  []
 
-[41]
+[42]
 Overfull \hbox (49.75233pt too wide) in alignment at lines 1458--1513
  [][][] []
  []
 
-[42] [43] [44]
+[43] [44] [45]
 Overfull \hbox (9.34364pt too wide) in paragraph at lines 1573--1581
 \OML/cmm/m/it/10.95 ^^O[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]\OT1/cmr/m/
 n/10.95 )\OML/cmm/m/it/10.95 ^^O[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]\O
@@ -813,65 +810,69 @@ m/m/it/10.95 ^^O[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95
  )[] 
  []
 
-[45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58])
-(./Chapters/Chapter7.tex [59]
+[46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59])
+(./Chapters/Chapter7.tex [60]
 Chapter 6.
 ------------------------------------------------------------------------------
  6 Conclusion
 ------------------------------------------------------------------------------
-) (./Appendices/AppendixA.tex [60
+) (./Appendices/AppendixA.tex [61
 
 ]
 Appendix A.
 ------------------------------------------------------------------------------
  A Further Calculations
 ------------------------------------------------------------------------------
-) (./Appendices/AppendixB.tex [61
+) (./Appendices/AppendixB.tex [62
 
 ]
 Appendix B.
 ------------------------------------------------------------------------------
  B Source Code
 ------------------------------------------------------------------------------
-) (./Appendices/AppendixC.tex [62
+) (./Appendices/AppendixC.tex [63
 
 ]
 Appendix C.
 ------------------------------------------------------------------------------
  C Rank 2 Root System Diagrams
 ------------------------------------------------------------------------------
-<Figures/a1a1.png, id=574, 1003.75pt x 1003.75pt>
+<Figures/a1a1.png, id=579, 1003.75pt x 1003.75pt>
 File: Figures/a1a1.png Graphic file (type png)
  <use Figures/a1a1.png>
-<Figures/a2.png, id=576, 1003.75pt x 1003.75pt>
+<Figures/a2.png, id=581, 1003.75pt x 1003.75pt>
 File: Figures/a2.png Graphic file (type png)
- <use Figures/a2.png> [63
+ <use Figures/a2.png> [64
 
- <./Figures/a1a1.png>] <Figures/b2.png, id=582, 1003.75pt x 1003.75pt>
+ <./Figures/a1a1.png>] <Figures/b2.png, id=588, 1003.75pt x 1003.75pt>
 File: Figures/b2.png Graphic file (type png)
 
-<use Figures/b2.png> <Figures/g2.png, id=583, 1003.75pt x 1003.75pt>
+<use Figures/b2.png> <Figures/g2.png, id=589, 1003.75pt x 1003.75pt>
 File: Figures/g2.png Graphic file (type png)
 
-<use Figures/g2.png> [64 <./Figures/a2.png> <./Figures/b2.png>]) [65 <./Figures
+<use Figures/g2.png> [65 <./Figures/a2.png> <./Figures/b2.png>]) [66 <./Figures
 /g2.png>]
 ------------------------------------------------------------------------------
  Bibliography
 ------------------------------------------------------------------------------
-(./Thesis.bbl) [66
+(./Thesis.bbl) [67
 
 
-] (./Thesis.aux) ) 
+] (./Thesis.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  12139 strings out of 493876
- 164425 string characters out of 1150568
+ 164414 string characters out of 1150568
  291469 words of memory out of 3000000
- 15010 multiletter control sequences out of 10000+50000
+ 15009 multiletter control sequences out of 10000+50000
  14780 words of font info for 57 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
  43i,14n,45p,630b,444s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{theorem.35} has been referenced b
-ut does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{theorem.35} has been referenced but does not exis
+t, replaced by a fixed one
 
 </usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></usr/loc
 al/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmbx12.pfb></usr/local/texliv
@@ -895,9 +896,9 @@ dist/fonts/type1/bluesky/ams/msbm7.pfb></usr/local/texlive/2008/texmf-dist/font
 s/type1/public/xypic/xycmat10.pfb></usr/local/texlive/2008/texmf-dist/fonts/typ
 e1/public/xypic/xycmbt10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/pu
 blic/xypic/xydash10.pfb>
-Output written on Thesis.pdf (75 pages, 454270 bytes).
+Output written on Thesis.pdf (76 pages, 459319 bytes).
 PDF statistics:
- 712 PDF objects out of 1000 (max. 8388607)
- 151 named destinations out of 1000 (max. 131072)
+ 717 PDF objects out of 1000 (max. 8388607)
+ 152 named destinations out of 1000 (max. 131072)
  273 words of extra memory for PDF output out of 10000 (max. 10000000)
 
