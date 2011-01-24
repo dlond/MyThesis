@@ -199,7 +199,7 @@ Suppose $\delta_1 + \delta_2 \in \Phi$. Let $\theta_i$ be the absolute value of 
 & \Longrightarrow& \cos(\theta_i) > 0 \\
 & \Longrightarrow& \theta_i < \pi/2,
 \end{eqnarray*}
-and similarly, using \ref{ufixes}
+and similarly, using Lemma \ref{ufixes}
 \begin{eqnarray*}
 && \langle \delta_1, \delta_2 \rangle \leq 0 \\
 & \Longrightarrow& \theta_3 \geq \pi/2.
@@ -249,7 +249,7 @@ We have
 &=&
 \epsilon_\alpha(u_1^{p^r}) \prod_\delta \epsilon_\delta\left(x_\delta\left(u_2\right)\right) \epsilon_\alpha(-u_1^{p^r}),
 \end{eqnarray*}
-with $\langle \delta, \alpha \rangle > 0$. By \ref{ufixes} $\alpha + \delta \notin \Phi$ so each $\epsilon_\delta$ commutes with the $\epsilon_\alpha$.
+with $\langle \delta, \alpha \rangle > 0$. By Lemma \ref{ufixes} $\alpha + \delta \notin \Phi$ so each $\epsilon_\delta$ commutes with the $\epsilon_\alpha$.
 \end{proof}
 
 \begin{corollary} The image of the group of upper triangular matrices of $SL_2(k)$ under $\sigma$ lies in a product of commuting root groups of $V_\alpha$.
@@ -259,7 +259,7 @@ First consider
 \begin{eqnarray*}
 \sigma\left(\left( \begin{matrix} 1 & b \\ 0 & 1 \end{matrix}\right)\right) &=& \prod_\delta \epsilon_\delta\left(x_\delta(b)\right).
 \end{eqnarray*}
-Suppose the roots $\delta_1$ and $\delta_2$ appear on the right hand side. By \ref{claim1} $\delta_i \in \Phi^+ - \{\alpha\}$ and $\langle \delta_i, \alpha \rangle > 0$ $(i=1,2)$, so \ref{uabelian} asserts that $\delta_1 + \delta_2$ is no root, hence, $\epsilon_{\delta_1}$ and $\epsilon_{\delta_2}$ commute. 
+Suppose the roots $\delta_1$ and $\delta_2$ appear on the right hand side. By Lemma \ref{claim1} $\delta_i \in \Phi^+ - \{\alpha\}$ and $\langle \delta_i, \alpha \rangle > 0$ $(i=1,2)$, so Lemma \ref{uabelian} asserts that $\delta_1 + \delta_2$ is no root, hence, $\epsilon_{\delta_1}$ and $\epsilon_{\delta_2}$ commute. 
 
 Therefore, for any $a, b\in k$ with $a\neq 0$
 \begin{eqnarray*}
@@ -274,7 +274,7 @@ Since the $x_\delta$ are homomorphisms from $k\rightarrow k$ they must take the 
 \begin{eqnarray*}
 T\mapsto\sum_i \mu_i T^{p^i},
 \end{eqnarray*}
-for some $\mu_i$ in $k$. Furthermore, combining the calculation in the proof of \ref{claim1} with the result \ref{uact} we get that
+for some $\mu_i$ in $k$. Furthermore, combining the calculation in the proof of Lemma \ref{claim1} with the result in Corollary \ref{uact} we get that
 \begin{eqnarray*}
 \prod_\delta \epsilon_\delta\left(x_\delta\left(a^2b\right)\right) = \prod_\delta \epsilon_\delta\left(a^{\langle \delta, \alpha \rangle p^r}x_\delta\left(b\right)\right),
 \end{eqnarray*}
@@ -284,7 +284,7 @@ severely restricting the possible polynomials $x_\delta$. In fact, they are conf
 \Longrightarrow2p^j &=& \langle \delta, \alpha \rangle p^r.
 \end{eqnarray*}
 
-In \cite{carter1989simple} it is shown that the possible pairings of any two roots are bounded by $\pm 3$. Hence by \ref{claim1} $\langle \delta, \alpha \rangle = 1, 2$ or 3. It is now clear that if $\langle \delta, \alpha \rangle = 3$ then $x_\delta = 0$.
+In \cite{carter1989simple} it is shown that the possible pairings of any two roots are bounded by $\pm 3$. Hence by Lemma \ref{claim1} $\langle \delta, \alpha \rangle = 1, 2$ or 3. It is now clear that if $\langle \delta, \alpha \rangle = 3$ then $x_\delta = 0$.
 
 If $\langle \delta, \alpha \rangle = 1$ the characteristic of $k$ must be 2 and $j = r-1$. Otherwise $\langle \delta, \alpha \rangle = 2$ and $j = r$, but the characteristic of $k$ is so far unrestricted.
 
@@ -334,7 +334,7 @@ If $\langle \delta, \alpha \rangle = 1$ the characteristic of $k$ must be 2 and 
 	\begin{displaymath}
 		\sigma\left(\left(\begin{matrix}a & 0\\0 & a^{-1}\end{matrix}\right)\right) = 0.
 	\end{displaymath}
-	By \ref{claim1}
+	By Lemma \ref{claim1}
 	\begin{displaymath}
 		\sigma\left(\left(\begin{matrix} 1 & b \\ 0 & 1 \end{matrix}\right)\right) =
 		\langle 
@@ -461,7 +461,7 @@ If $\langle \delta, \alpha \rangle = 1$ the characteristic of $k$ must be 2 and 
 	\begin{displaymath}
 		\sigma\left(\left(\begin{matrix}a & 0\\0 & a^{-1}\end{matrix}\right)\right) = 0.
 	\end{displaymath}
-	By \ref{claim1}
+	By Lemma \ref{claim1}
 	\begin{displaymath}
 		\sigma\left(\left(\begin{matrix} 1 & b \\ 0 & 1 \end{matrix}\right)\right) =
 		\langle 
@@ -489,7 +489,7 @@ If $\langle \delta, \alpha \rangle = 1$ the characteristic of $k$ must be 2 and 
 		x_5(a^2b) &=& a^{p^r}x_5(b)\\
 		x_8(a^2b) &=& a^{2p^r}x_8(b).
 	\end{eqnarray*}
-	Since the polynomials $x_3, x_5, x_8$ are homomorphisms (\ref{ufixes}) we get
+	Since the polynomials $x_3, x_5, x_8$ are homomorphisms (Lemma \ref{ufixes}) we get
 	\begin{eqnarray*}
 		\sum_i \lambda_i (a^2b)^{p^i} &=& a^{p^r} \sum_i \lambda_i b^{p^i}\\
 		\sum_i \mu_i (a^2b)^{p^i} &=& a^{p^r} \sum_i \mu_i b^{p^i}\\
