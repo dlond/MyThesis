@@ -19,7 +19,7 @@
 \contentsline {chapter}{\numberline {4}K\"ulshammer's Second Problem}{13}{chapter.27}
 \contentsline {section}{\numberline {4.1}K\"ulshammer's Second Problem}{13}{section.28}
 \contentsline {section}{\numberline {4.2}The Approach}{13}{section.29}
-\contentsline {section}{\numberline {4.3}An algebraic group version}{15}{section.32}
+\contentsline {section}{\numberline {4.3}An algebraic group version}{16}{section.32}
 \contentsline {chapter}{\numberline {5}1-Cohomology Calculation}{17}{chapter.33}
 \contentsline {section}{\numberline {5.1}The method}{17}{section.34}
 \contentsline {section}{\numberline {5.2}A rank 1 calculation}{26}{section.43}
