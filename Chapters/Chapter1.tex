@@ -10,25 +10,25 @@
 	\begin{itemize}
 		\item \emph{What the thesis is about:}
 	
-		This thesis is a contribution to the study of the subgroup structure of simple algebraic groups, complementing some of the work done by M. Liebeck and G. Seitz (\cite{liebeck1996reductive}, \cite{liebeck2004maximal}). Let $G$ be a simple algebraic group over an algebraically closed field of characteristic $p$. For large enough characteristic ($p=0$ or $p>7$ covers all restrictions) Liebeck and Seitz determine explicitly the embeddings of arbitrary closed connected semisimple subgroups in $G$ where $G$ is of exceptional type. Using similar methods, we examine the subgroup structure of simple algebraic groups in low characteristic (usually $p=2$ or $p=3$) where less is known.
+		This thesis is a contribution to the study of the subgroup structure of simple algebraic groups, complementing some of the work done by M. Liebeck and G. Seitz (\cite{liebeck1996reductive}, \cite{liebeck2004maximal}). Let $G$ be a simple algebraic group over an algebraically closed field of characteristic $p$. For large enough characteristic ($p=0$ or $p>7$ covers all restrictions) Liebeck and Seitz determine explicitly the embeddings of arbitrary closed connected semisimple subgroups in $G$ where $G$ is of exceptional type. We examine the subgroup structure of simple algebraic groups in low characteristic (usually $p=2$ or $p=3$) where less is known. We employ 1-cohomology calculations in a similar way to Liebeck and Seitz but they seek trivial 1-cohomology, which gives them their characteristic restrictions, while we seek non-trivial 1-cohomology. Liebeck and Seitz divide their calculations into layers of abelian 1-cohomology calculations where as we define and work with the non-abelian 1-cohomology directly.
 		
 		
-		The main motivation for the work carried out in this thesis is to investigate a question posed by B. K\"ulshammer \cite{weil1964remarks}:
+		A further motivation for the work carried out in this thesis is to investigate a question posed by B. K\"ulshammer to do with homomorphisms of finite groups into algebraic groups \cite{weil1964remarks}. We will call these homomorphisms \emph{representations} because of the obvious similarity with the usual kind of representations into $GL_n$. K\"ulshammer's second question is as follows:
 		\begin{quote}
 		Let $G$ be a linear algebraic group over an algebraically closed field of characteristic $p$. Let $\Gamma$ be a finite group and $\Gamma_p\subset\Gamma$ a Sylow $p$-subgroup. Fix a conjugacy class of representations $\Gamma_p\rightarrow G$. Are there, up to conjugation by $G$, only finitely many representations $\rho:\Gamma\rightarrow G$ whose restrictions to $\Gamma_p$ belong to the given class?
 		\end{quote}
 		
 		
-		We use Lemma \ref{kToHOne} to reduce K\"ulshammer's question to a 1-cohomology calculation in which $\Gamma$ acts on the unipotent radical $V$ of a parabolic subgroup $P \subset G$ via an irreducible map $\Gamma \rightarrow L$, $L \subset P$ a Levi subgroup of $P$. We show that we can answer a particular instance of K\"ulshammer's question by examining the restriction map of 1-cohomologies:
+		One of our main results is Lemma \ref{kToHOne}. With this we are able to relate K\"ulshammer's question to a 1-cohomology calculation in which $\Gamma$ acts on the unipotent radical $V$ of a parabolic subgroup $P \subset G$ via an irreducible map $\Gamma \rightarrow L$, $L \subset P$ a Levi subgroup of $P$. We show that we can reduce K\"ulshammer's question to another question regarding a restriction map of 1-cohomologies:
 		\begin{displaymath}
 			H^1(\Gamma, V) \rightarrow H^1(\Gamma_p, V)
 		\end{displaymath}
 		
 		
-		This is useful for finding a counterexample to K\"ulshammer's question. A counterexample is known for a non-reductive $G$ \cite{weil1964remarks} and we investigate the reductive case. 
+		This approach might help settle K\"ulshammer's question. So far only a non-reductive counterexample is known \cite{weil1964remarks}. 
 		
 		
-		We broaden our search for a counterexample by defining an \emph{algebraic group} version of K\"ulshammer's question where instead of a finite group $\Gamma$ we use a reductive group $H$, and instead of a Sylow $p$-subgroup $\Gamma_p \subset \Gamma$ we use a unipotent subgroup $U \subset H$. Finding an algebraic counterexample may yield a finite counterexample for a finite subgroup of $H$. We pay special attention to $H = SL_2$.
+		We are able to define and examine a slight variation on the question more inline with the kind of work of Liebeck and Seitz, which we may call the \emph{algebraic group} version of K\"ulshammer's question. Instead of a finite group $\Gamma$ we use a reductive group $H$, and instead of a Sylow $p$-subgroup $\Gamma_p \subset \Gamma$ we use a maximal unipotent subgroup $U \subset H$. Although a well defined and non-trivial question in its own right, finding an algebraic counterexample may also yield a finite counterexample for a finite subgroup of $H$, settling K\"ulshammer's original question. In our example calculations we pay special attention to $H = SL_2$.
 
 		\item \emph{Main results}:
 		
@@ -40,8 +40,11 @@
 	\begin{itemize}
 		\item \emph{K. II - motivation for this:}
 		
-		K\"ulshammer's question has it's roots Maschke's Theorem which asserts that any representation of a finite group over a field of characteristic not dividing the order of the group is completely reducible. 
-		K\"ulshammer's first question ...
+		K\"ulshammer's question has it's roots Maschke's Theorem which states that any representation of a finite group over a field of characteristic not dividing the order of the group is completely reducible. 
+		K\"ulshammer's first question, the assertion of which is essentially contained in paper by A. Weil published three decades earlier, reads:
+		\begin{quote}
+			Let $\Gamma$ be a finite group and let $G$ be a linear algebraic group over an algebraically closed field of characteristic prime to the order of $\Gamma$. Are there only finitely many representations $\Gamma\rightarrow G$ up to conjugation by $G$?
+		\end{quote}
 		Link
 		
 		\item \emph{Work of Liebeck \& Seitz, etc, on embedding reductive $H$ inside simple $G$:}
