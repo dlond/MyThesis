@@ -71,7 +71,7 @@
 		Serre defined complete reducibility for algebraic groups. Let $G' < G$. We say $G'$ is a $G$-completely reducible subgroup, or simply $G$-completely reducible, if whenever $G'$ is contained in a parabolic subgroup $P < G$ then $G'$ is also contained in a Levi subgroup $L < P$. Now let $H$ be an arbitrary group and $\rho:H\rightarrow G$ be a representation. If the image of $\rho$ is a $G$-completely reducible subgroup then we say $\rho$ is $G$-completely reducible. This definition agrees with the definition from representation theory when we set $G=GL_n$.
 		
 		
-		K\"ulshammer's question has it's roots Maschke's Theorem of representation theory which shows that any representation $\Gamma \rightarrow GL_n$ over a field of characteristic not dividing the order of $\Gamma$ is completely reducible, and that there are only finitely many conjugacy classes of (completely reducible) representations $\Gamma \rightarrow GL_n$ [ref Lang].
+		K\"ulshammer's question has it's roots Maschke's Theorem of representation theory which shows that any representation from a finte group $\Gamma \rightarrow GL_n$ over a field of characteristic not dividing the order of $\Gamma$ is completely reducible, and that there are only finitely many conjugacy classes of (completely reducible) representations $\Gamma \rightarrow GL_n$ [ref Lang].
 		
 		
 		Let $\Gamma$ be a finite group and let $G$ be a linear algebraic group over an algebraically closed field of characteristic $p$. K\"ulshammer's first question reads:
@@ -82,7 +82,8 @@
 		\begin{quote}
 			Let $\Gamma_p < \Gamma$ be a Sylow p-subgroup and fix a conjugacy class of representations $\Gamma_p\rightarrow G$. Are there only finitely many conjugacy classes of representations $\Gamma\rightarrow G$ whose restrictions to $\Gamma_p$ belong to the fixed class?
 		\end{quote}
-		Note that the condition that $p$ does not divide $|\Gamma|$ is dropped from the first statement. If $p$ happens to divide the order of $\Gamma$ then the answer is ``yes'', since $\Gamma_p = \Gamma$ and we had only fixed finitely many (one) conjugacy classes. Conversly if $p$ does not divide the order of $\Gamma$ then
+		Note that the condition that $p$ does not divide $|\Gamma|$ is dropped from the first statement. If $p$ does not divide the order of $\Gamma$ then the answer is ``yes'', since $\Gamma_p$ is trivial and so all representations are equal when restricted to $\Gamma_p$.
+		If $\Gamma$ is a $p$-group then the answer is ``yes'', as $\Gamma_p = \Gamma$ so restricting to $\Gamma_p$ does nothing and therefore only representations that come from the fixed class will hit the class.
 		If $G=GL_n$ the answer is also ``yes'', since by Maschke's theorem there can only be finitely many conjugacy classes of representations $\Gamma\rightarrow GL_n$ anyway, regardless of whether or not their restrictions to $\Gamma_p$ hit the fixed class.
 		
 		
