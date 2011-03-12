@@ -33,12 +33,12 @@ We are interested in knowing whether there can be infinitely many $G$-conjugacy 
 \begin{proof}[Reference something]
 \end{proof}
 
-Although $G$ has infinitely many parabolic subgroups there are only finitely many $G$-conjugacy classes of parabolic subgroups, so we can choose a finite set $\{Q_i\}$ of representatives. We choose a set of Levi subgroups $\{M_i\}$, $M_i$ being a Levi subgroup of $Q_i$. By Theorem \ref{finiteGCR} there are only finitely many $M_i$-conjugacy classes of $M_i$-completely reducible representations $\sigma^{(i)}_0:\Gamma\rightarrow M_i$, so we fix a set of representatives $\{\sigma^{(i)}_{0,j}\}$.
+Although $G$ has infinitely many parabolic subgroups there are only finitely many $G$-conjugacy classes of parabolic subgroups, so we can choose a finite set $\{Q_i\}$ of representatives. We choose a set of Levi subgroups $\{M_i\}$, $M_i$ being a Levi subgroup of $Q_i$. By Theorem \ref{finiteGCR} there are only finitely many $M_i$-conjugacy classes of $M_i$-completely reducible representations $\sigma_{0, i}:\Gamma\rightarrow M_i$, so we fix a set of representatives $\{\sigma^{j_i}_{0,i}\}$.
 
 We will show that for each representation $\rho:\Gamma\rightarrow G$ there exists a representation $\sigma$ that is $G$-conjugate to $\rho$ and that fits one of only finitely many commutative diagrams
 \begin{displaymath}
 	\xymatrix{
-	\Gamma \ar[r]^{\sigma} \ar[rd]_{\sigma^{(i)}_{0,j}} & Q_i \ar[d]\\
+	\Gamma \ar[r]^{\sigma} \ar[rd]_{\sigma^{j_i}_{0,i}} & Q_i \ar[d]\\
 	& M_i}
 \end{displaymath}
 
@@ -51,7 +51,7 @@ Define $\rho_0:\Gamma\rightarrow M$ by composing $\rho'$ with the projection $Q\
 	& M}
 \end{displaymath}
 
-Since $Q$ is a minimal parabolic containing $\rho'(\Gamma)$, $\rho_0$ is $M$-irreducible [reference] and therefore $M$-completely reducible. Hence we can choose an $m\in M$ such that $\sigma_0 = m\cdot \rho_0$ where $\sigma_0\in\{\sigma^{(i)}_{0,j}\}$. Let $\sigma = m\cdot \rho' = mg\cdot \rho$. This verifies what we set out to show.
+Since $Q$ is a minimal parabolic containing $\rho'(\Gamma)$, $\rho_0$ is $M$-irreducible [reference] and therefore $M$-completely reducible. Hence we can choose an $m\in M$ such that $\sigma_0 = m\cdot \rho_0$ where $\sigma_0\in\{\sigma^{j_i}_{0,i}\}$. Let $\sigma = m\cdot \rho' = mg\cdot \rho$. This verifies what we set out to show.
 
 [Say something about $\rho \rightsquigarrow (i,j) \rightsquigarrow H^1(\Gamma,V_i)$ so that I can state the next lemma]
 
@@ -90,18 +90,52 @@ the catch being that conjugating $\rho$ by an arbitrary element of $g$ changes t
 then we really do get a map of 1-cocycles. 
 
 
-\begin{lemma}\label{kToHOne} Let $\{\rho_\mu\, |\, \mu \in I\}$ be a collection of representations $\Gamma\rightarrow P$ for a fixed parabolic subgroup $P<G$. The following statements are equivalent:
+\begin{lemma}\label{kToHOne} Let $R=\{\rho_\lambda\, |\, \lambda \in \Lambda\}$ be a collection of representations $\Gamma\rightarrow P$ for a fixed parabolic subgroup $P<G$. The following statements are equivalent:
 	\begin{itemize}
-		\item[(i)] There are only finitely many $P$-conjugacy classes of $\{\rho_\mu\}$.
-		\item[(ii)] There are only finitely many $G$-conjugacy classes of $\{\rho_\mu\}$.
-		\item[(iii)] For each $i$, the number of elements of $H^1(\Gamma, V_i)$ modulo $Z(M_i^\circ)$ that come from the $\rho_\mu$'s is finite.
+		\item[(i)] $R$ is a finite union of $G$-conjugacy classes.
+		\item[(ii)] $R$ is a finite union of $P$-conjugacy classes.
+		\item[(iii)] For each $i$, the number of elements of $H^1(\Gamma, V_i)$ modulo $Z(M_i^\circ)$ that come from the elements of $R$ is finite.
 	\end{itemize}
 \end{lemma}
 \begin{proof}
-	(i) $\Rightarrow$ (ii) is obvious. 
+	(i) $\Rightarrow$ (ii):
+	Suppose there are only finitely many $G$-conjugacy classes of $R$ and take $\rho_\mu, \rho_\nu \in R$ such that
+	\begin{displaymath}
+		g\cdot \rho_\mu = \rho_\nu
+	\end{displaymath}
+	for some $g \in G$. By definition $\rho_\nu$ maps into $P$ but on the other hand $\rho_\nu = g\cdot \rho_\mu$ maps into $Q = gPg^{-1}$, so 
+	\begin{displaymath}
+		\rho_\nu: \Gamma\rightarrow P \cap Q
+	\end{displaymath}
+%	If $P = Q$ then $g\in N_G(P) = P$, hence $\rho_\mu, \rho_\nu$ are $P$-conjugate. 
+	
+%	Assume $P \neq Q$ and l
+	Let $T < P \cap Q$ be a maximal torus of $G$ [ref]. Since $T,gTg^{-1}$ are maximal tori of $Q$ they must be $Q$-conjugate, say
+	\begin{displaymath}
+		qTq^{-1} = gTg^{-1},
+	\end{displaymath}
+	for some $q \in Q$. Then 
+	\begin{displaymath}
+		q^{-1}g \in N_G(T),
+	\end{displaymath}
+	and so
+	\begin{displaymath}
+		q^{-1}g = (gp^{-1}g^{-1})g = gp^{-1} \in N_G(T),
+	\end{displaymath}
+	for some $p \in P$. Therefore
+	\begin{eqnarray*}
+		g &=& (gp^{-1})p\\
+		&=& n(tp),
+	\end{eqnarray*}
+	where $n\in G$ is one of the finitely many representatives of the Weyl group $W=N_G(T)/T$ such that $\pi(gp^{-1}) = nT\in W$, and $t\in T$ such that $nt = gp^{-1}$.
+	
+	Therefore, a $G$-conjugacy class of $R$ splits up into at most $|N_G(T)/T|$ $P$-conjugacy classes.
+	
+	
+	(ii) $\Rightarrow$ (iii):
 \end{proof}
 
-Let $K$ be a collection of representations $\Gamma \rightarrow G$ whose restrictions to $\Gamma_p$ belong to some fixed class. Let $\sigma\in K$, then $\sigma|_{\Gamma_p}$ and $\sigma_{0,j}^{(i)}|_{\Gamma_p}$ are conjugate. We have a 1-cocycle $\alpha$ corresponding to $\sigma$, while $\sigma_{0,j}^{(i)}$ corresponds to the trivial 1-cocycle. Hence $\alpha|_{\Gamma_p}$ is conjugate to the trivial 1-cocycle, that is, $\alpha|_{\Gamma_p}$ is a 1-coboundary. 
+Let $K$ be a collection of representations $\Gamma \rightarrow G$ whose restrictions to $\Gamma_p$ belong to some fixed class. Let $\sigma\in K$, then $\sigma|_{\Gamma_p}$ and $\sigma^{j_i}_{0,i}|_{\Gamma_p}$ are conjugate. We have a 1-cocycle $\alpha$ corresponding to $\sigma$, while $\sigma_{0,j}^{(i)}$ corresponds to the trivial 1-cocycle. Hence $\alpha|_{\Gamma_p}$ is conjugate to the trivial 1-cocycle, that is, $\alpha|_{\Gamma_p}$ is a 1-coboundary. 
 
 % Suppose we are given a representation $\rho:\Gamma\rightarrow G$. Let $P<G$ be the minimal parabolic subgroup of $G$ containing $\rho(\Gamma)$ and let $g$ be the element of $G$ such that $P=g\cdot Q$ where $Q$ is one of the fixed parabolics $\{Q_i\}$. Let $\rho'=g\cdot\rho$.
 % 
