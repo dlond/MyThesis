@@ -5,6 +5,12 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[Weil(1964)]{weil1964remarks}
+A.~Weil.
+\newblock {Remarks on the cohomology of groups}.
+\newblock \emph{Annals of Mathematics}, 80\penalty0 (1):\penalty0 149--157,
+  1964.
+
 \bibitem[Liebeck and Seitz(1996)]{liebeck1996reductive}
 M.W. Liebeck and G.M. Seitz.
 \newblock \emph{{Reductive subgroups of exceptional algebraic groups}}.
@@ -17,12 +23,6 @@ M.W. Liebeck and G.M. Seitz.
   algebraic groups}}.
 \newblock American Mathematical Society, 2004.
 \newblock ISBN 0821834827.
-
-\bibitem[Weil(1964)]{weil1964remarks}
-A.~Weil.
-\newblock {Remarks on the cohomology of groups}.
-\newblock \emph{Annals of Mathematics}, 80\penalty0 (1):\penalty0 149--157,
-  1964.
 
 \bibitem[Hochschild(1965)]{hochschild1965structure}
 G.P. Hochschild.
