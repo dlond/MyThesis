@@ -19,17 +19,17 @@
 \contentsline {chapter}{\numberline {4}K\"ulshammer's Second Problem}{16}{chapter.27}
 \contentsline {section}{\numberline {4.1}K\"ulshammer's Second Problem}{16}{section.28}
 \contentsline {section}{\numberline {4.2}The Approach}{16}{section.29}
-\contentsline {chapter}{\numberline {5}1-Cohomology Calculation}{21}{chapter.35}
-\contentsline {section}{\numberline {5.1}The method}{21}{section.36}
-\contentsline {section}{\numberline {5.2}A rank 1 calculation}{30}{section.45}
-\contentsline {subsection}{\numberline {5.2.1}Example}{31}{subsection.46}
-\contentsline {subsection}{\numberline {5.2.2}Example}{42}{subsection.55}
-\contentsline {section}{\numberline {5.3}A rank 2 calculation}{49}{section.61}
-\contentsline {section}{\numberline {5.4}A Non-Reductive Counterexample}{61}{section.63}
-\contentsline {chapter}{\numberline {6}Conclusion}{65}{chapter.65}
+\contentsline {chapter}{\numberline {5}1-Cohomology Calculation}{22}{chapter.35}
+\contentsline {section}{\numberline {5.1}The method}{22}{section.36}
+\contentsline {section}{\numberline {5.2}A rank 1 calculation}{31}{section.45}
+\contentsline {subsection}{\numberline {5.2.1}Example}{32}{subsection.46}
+\contentsline {subsection}{\numberline {5.2.2}Example}{43}{subsection.55}
+\contentsline {section}{\numberline {5.3}A rank 2 calculation}{50}{section.61}
+\contentsline {section}{\numberline {5.4}A Non-Reductive Counterexample}{62}{section.63}
+\contentsline {chapter}{\numberline {6}Conclusion}{66}{chapter.65}
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}Further Calculations}{66}{appendix.66}
-\contentsline {chapter}{\numberline {B}Source Code}{67}{appendix.67}
-\contentsline {chapter}{\numberline {C}Rank 2 Root System Diagrams}{68}{appendix.68}
+\contentsline {chapter}{\numberline {A}Further Calculations}{67}{appendix.66}
+\contentsline {chapter}{\numberline {B}Source Code}{68}{appendix.67}
+\contentsline {chapter}{\numberline {C}Rank 2 Root System Diagrams}{69}{appendix.68}
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{71}{dummy.69}
+\contentsline {chapter}{Bibliography}{72}{dummy.69}

@@ -26,9 +26,9 @@ We will explore the possibility of a reductive counterexample to (K. II).
 
 \section{The Approach}
 
-We are interested in knowing whether there can be infinitely many $G$-conjugacy classes of representations $\Gamma\rightarrow G$ that when restricted to $\Gamma_p$ hit some fixed $G$-conjugacy class of representations $\Gamma_p\rightarrow G$. The following Lemma states that the finiteness of $G$-conjugacy classes carries over to $P$-conjugacy classes for any parabolic subgroup $P<G$ containing the image of the representations.
+We are interested in knowing whether there can be infinitely many $G$-conjugacy classes of representations $\Gamma\rightarrow G$ that when restricted to $\Gamma_p$ hit some fixed $G$-conjugacy class of representations $\Gamma_p\rightarrow G$. The following Lemma states that the finiteness of $G$-conjugacy classes of representations $\Gamma\rightarrow G$ carries over to $P$-conjugacy classes for any parabolic subgroup $P<G$ containing the image of the representations.
 
-\begin{lemma}\label{GIsPConj} Let $R=\{\rho_\lambda\, |\, \lambda \in \Lambda\}$ be a collection of representations $\Gamma\rightarrow P$ for a fixed parabolic subgroup $P<G$. Then $R$ is a finite union of $G$-conjugacy classes if and only if $R$ is a finite union of $P$-conjugacy classes.
+\begin{lemma}\label{GIsPConj} Let $R=\{\rho_\lambda:\Gamma\rightarrow P\, |\, \lambda \in \Lambda\}$ be a collection of representations, $P$ a fixed parabolic subgroup $P<G$. Then $R$ is a finite union of $G$-conjugacy classes if and only if it is a finite union of $P$-conjugacy classes.
 \end{lemma}
 \begin{proof}
 	Suppose there are only finitely many $G$-conjugacy classes of $R$ and take $\rho_\mu, \rho_\nu \in R$ such that
@@ -54,30 +54,31 @@ We are interested in knowing whether there can be infinitely many $G$-conjugacy 
 	\begin{displaymath}
 		q^{-1}g = (gp^{-1}g^{-1})g = gp^{-1} \in N_G(T),
 	\end{displaymath}
-	for some $p \in P$. Therefore
+	for some $p \in P$. Hence, we can write
 	\begin{eqnarray*}
 		g &=& (gp^{-1})p\\
 		&=& n(tp),
 	\end{eqnarray*}
-	where $n\in G$ is one of the finitely many representatives of the Weyl group $W=N_G(T)/T$ such that $\pi(gp^{-1}) = nT\in W$, and $t\in T$ such that $nt = gp^{-1}$.
+	where $n\in G$ is one of the finitely many representatives of the Weyl group $W=N_G(T)/T$ such that $\pi(gp^{-1}) = nT\in W$, and $t\in T$ such that $nt = gp^{-1}$. Since $T<P$, $tp\in P$.
 	
 	Therefore, a $G$-conjugacy class of $R$ splits up into at most $|N_G(T)/T|$ $P$-conjugacy classes which proves the forward direction. The converse is trivial.
 \end{proof}
 
-\begin{proof}[]
-	\begin{theorem} \label{finiteGCR} There are only finitely many $G$-conjugacy classes of $G$-completely reducible representations $\Gamma\rightarrow G$.\qedhere
-	\end{theorem}
+
+\begin{theorem} \label{finiteGCR} There are only finitely many $G$-conjugacy classes of $G$-completely reducible representations $\Gamma\rightarrow G$.\qedhere
+\end{theorem}
+\begin{proof}[See (a reference)]
 \end{proof}
 
-Although $G$ has infinitely many parabolic subgroups there are only finitely many $G$-conjugacy classes of parabolic subgroups, so we can choose a finite set $\{Q_i\}$ of representatives. We choose a set of Levi subgroups $\{M_i\}$, $M_i$ being a Levi subgroup of $Q_i$. By Theorem \ref{finiteGCR} there are only finitely many $M_i$-conjugacy classes of $M_i$-completely reducible representations $\sigma_{0, i}:\Gamma\rightarrow M_i$, and we fix a finite set of representatives $\{\sigma^{j_i}_{0,i}\}$.
+Although $G$ has infinitely many parabolic subgroups there are only finitely many $G$-conjugacy classes of parabolic subgroups, so we can choose a finite set $\{Q_i\}$ of representatives. We choose this particular set by fixing a maximal torus $T<G$ and a Borel subgroup $B<G$ containing $T$. Then a set of representative parabolic subgroups of $G$ can be sought via the root system of $G$ with respect to $T$ [reference or explain]. We choose a set of Levi subgroups $\{M_i\}$, $M_i$ being a Levi subgroup of $Q_i$. By Theorem \ref{finiteGCR} there are only finitely many $M_i$-conjugacy classes of $M_i$-completely reducible representations $\sigma_{0, i}:\Gamma\rightarrow M_i$, and we fix a finite set of representatives $\{\sigma^{j_i}_{0,i}\}$.
 
-We will show that for each representation $\rho:\Gamma\rightarrow G$ there exists a representation $\sigma$ that is $G$-conjugate to $\rho$ and that fits one of only finitely many commutative diagrams
+We will show that for each representation $\rho:\Gamma\rightarrow G$ there exists a representation $\sigma = g\cdot\rho$, $g\in G$, that fits precisely one of only finitely many commutative diagrams determined by the indices $i,j$:
 \begin{displaymath}
 	\xymatrix{
 	\Gamma \ar[r]^{\sigma} \ar[rd]_{\sigma^{j_i}_{0,i}} & Q_i \ar[d]\\
 	& M_i}
 \end{displaymath}
-We call this the \emph{standard commutative diagram} for $\rho$.
+where $Q_i$ is the minimal parabolic subgroup of $G$ containing $\rho(\Gamma)$ from our fixed set. We call this the \emph{standard commutative diagram} for $\rho$.
 
 Let $\rho$ be a representation from $\Gamma\rightarrow G$ and let $P$ be a minimal parabolic subgroup of $G$ containing $\rho(\Gamma)$. Then there is a $g$ in $G$ such that $P = gQg^{-1}$ for some $Q\in\{Q_i\}$. Let $\rho' = g\cdot \rho$. 
 
@@ -88,7 +89,7 @@ Define $\rho_0:\Gamma\rightarrow M$ by composing $\rho'$ with the projection $Q\
 	& M}
 \end{displaymath}
 
-Since $Q$ is a minimal parabolic containing $\rho'(\Gamma)$, $\rho_0$ is $M$-irreducible [reference] and therefore $M$-completely reducible. Hence there exists an $m\in M$ such that $\sigma_0 = m\cdot \rho_0$ for some $\sigma_0\in\{\sigma^{j_i}_{0,i}\}$. Let $\sigma = m\cdot \rho' = mg\cdot \rho$. This verifies what we set out to show.
+Since $Q$ is a minimal parabolic subgroup containing $\rho'(\Gamma)$, $\rho_0$ is $M$-irreducible [reference] and therefore $M$-completely reducible. Hence there exists an $m\in M$ such that $\sigma_0 = m\cdot \rho_0$ for some $\sigma_0\in\{\sigma^{j_i}_{0,i}\}$. Let $\sigma = m\cdot \rho' = mg\cdot \rho$. This verifies what we set out to show.
 
 [Say something about $\rho \rightsquigarrow (i,j) \rightsquigarrow H^1(\Gamma,V_i)$ so that I can state the next lemma]
 
@@ -131,15 +132,53 @@ Note that conjugating $\rho$ by an arbitrary element of $g$ changes $\rho_0$ and
 \end{displaymath} 
 
 
-\begin{lemma}\label{PConjIsHOne} Let $R=\{\rho_\lambda\, |\, \lambda \in \Lambda\}$ be a collection of representations $\Gamma\rightarrow P$ for a fixed parabolic subgroup $P<G$. Then $\{gRg^{-1}\,|\,g\in G\}$ is a finite union of $G$-conjugacy classes if and only if each $H^1(\Gamma, V_i)$ arising from the standard commutative diagrams for each element of $R$ has finitely many elements.
+\begin{lemma}\label{PConjIsHOne} Let $R=\{\rho_\lambda:\Gamma\rightarrow P\, |\, \lambda \in \Lambda\}$ be a collection of representations, $P$ a fixed parabolic subgroup $P<G$. Then $R_G = \{g\rho g^{-1}\,|\,\forall g\in G\, ,\forall\rho\in R\}$ is a finite union of $G$-conjugacy classes if and only if each $H^1(\Gamma, V_i)/Z(M_i)^\circ$ arising from the standard commutative diagrams for each element of $R$ has only finitely many elements.
 \end{lemma}
 \begin{proof}
-	Suppose $\{gRg^{-1}\,|\,g \in G\}$ is a finite union of $G$-conjugacy classes. Then by Lemma \ref{GIsPConj} it is a finite union of $P$-conjugacy classes. Take
+	Suppose $R_G$ is a finite union of $G$-conjugacy classes. By Lemma \ref{GIsPConj} $R_G$ is a finite union of $P$-conjugacy classes, so there is a finite subset $S\subset R_G$ such that
+	\begin{displaymath}
+		R_G = \bigcup_{\rho \in S}\{p\rho p^{-1}\,|\,\forall p\in P\} = \bigcup_{\rho \in S}P\rho.
+	\end{displaymath}
+	Take two elements $\sigma$ and $\tau$ from one of the $P$-conjugacy classes above such that $\sigma$ and $\tau$ have the same standard commutative diagram:
+	\begin{displaymath}
+		\sigma',\tau':\xymatrix{
+			\Gamma \ar[r] \ar[rd]_{\rho_0} & Q \ar[d]\\
+		& M},
+	\end{displaymath}
+	where $\sigma' = g\cdot\sigma$ and $\tau' = h\cdot\tau$ for some $g, h\in G$. Suppose $P_1,P_2<P$ are minimal parabolic subgroups containing $\sigma(\Gamma), \tau(\Gamma)$ respectively. Then
+	\begin{eqnarray*}
+		gph^{-1}Qhp^{-1}g^{-1} &=& gpP_2p^{-1}g^{-1} \\
+		&=& gP_1g^{-1} \\
+		&=& Q,
+	\end{eqnarray*}
+	so that $gph^{-1}\in N_G(Q) = Q$, and
+	\begin{eqnarray*}
+		gph^{-1}\cdot\tau' &=& gp\cdot \tau \\
+		&=& g\cdot \sigma \\
+		&=& \sigma'.
+	\end{eqnarray*}
+	Hence $\sigma'$ and $\tau'$ are $Q$-conjugate so we can find elements $v\in V = R_u(Q)$ and $m\in M$ such that
+	\begin{displaymath}
+		\sigma' = (vm)\cdot\tau'.
+	\end{displaymath}
+	The standard commutative diagrams are the same so $\rho_0 = m\cdot\rho_0$, which implies $m\in C_M(\rho_0(\Gamma))$. Furthermore, since $\rho_0(\Gamma)$ is $M$-irreducible, $C_M(\rho_0(\Gamma))$ is a finite extension of $Z(M)^\circ$.
+	
+	Therefore $m = z_ic$ where $z_i$ is one of the finitely many coset representatives for $C_M(\rho_0(\Gamma))/Z(M)^\circ$ and $c\in Z(M)^\circ$.
+	
+	If $z_i$ is the identity element then $\sigma' = (vc)\cdot\tau'$, that is
+	\begin{eqnarray*}
+		\alpha_\sigma(\gamma)\rho_0(\gamma) &=& vc\alpha_\tau(\gamma)\rho_0(\gamma)(vc)^{-1} \\
+		\Rightarrow \alpha_\sigma(\gamma) &=& vc\alpha_\tau(\gamma)\rho_0(\gamma)(vc)^{-1}\rho_0(\gamma)^{-1} \\
+		&=& vc\alpha_\tau(\gamma)c^{-1}\rho_0(\gamma)v^{-1}\rho_0(\gamma)^{-1} \\
+		&=& (vc)\alpha_\tau(\gamma)\, \gamma\cdot(vc)^{-1} \\
+		&=& v\alpha_\tau(\gamma)\, \gamma\cdot v^{-1}
+	\end{eqnarray*}
+		
 \end{proof}
 
 
 
-Let $K$ be a collection of representations $\Gamma \rightarrow G$ whose restrictions to $\Gamma_p$ belong to some fixed class. Let $\sigma\in K$, then $\sigma|_{\Gamma_p}$ and $\sigma^{j_i}_{0,i}|_{\Gamma_p}$ are conjugate. We have a 1-cocycle $\alpha$ corresponding to $\sigma$, while $\sigma_{0,j}^{(i)}$ corresponds to the trivial 1-cocycle. Hence $\alpha|_{\Gamma_p}$ is conjugate to the trivial 1-cocycle, that is, $\alpha|_{\Gamma_p}$ is a 1-coboundary. 
+Let $R$ be a collection of representations $\Gamma \rightarrow G$ whose restrictions to $\Gamma_p$ belong to some fixed class. Let $\sigma\in R$, then $\sigma|_{\Gamma_p}$ and $\sigma^{j_i}_{0,i}|_{\Gamma_p}$ are conjugate. We have a 1-cocycle $\alpha$ corresponding to $\sigma$, while $\sigma_{0,j}^{(i)}$ corresponds to the trivial 1-cocycle. Hence $\alpha|_{\Gamma_p}$ is conjugate to the trivial 1-cocycle, that is, $\alpha|_{\Gamma_p}$ is a 1-coboundary. 
 
 % Suppose we are given a representation $\rho:\Gamma\rightarrow G$. Let $P<G$ be the minimal parabolic subgroup of $G$ containing $\rho(\Gamma)$ and let $g$ be the element of $G$ such that $P=g\cdot Q$ where $Q$ is one of the fixed parabolics $\{Q_i\}$. Let $\rho'=g\cdot\rho$.
 % 
