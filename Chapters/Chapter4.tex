@@ -26,23 +26,20 @@ We will explore the possibility of a reductive counterexample to (K. II).
 
 \section{The Approach}
 
-We are interested in knowing whether there can be infinitely many $G$-conjugacy classes of representations $\Gamma\rightarrow G$ that when restricted to $\Gamma_p$ hit some fixed $G$-conjugacy class of representations $\Gamma_p\rightarrow G$. The following Lemma states that the finiteness of $G$-conjugacy classes of representations $\Gamma\rightarrow G$ carries over to $P$-conjugacy classes for any parabolic subgroup $P<G$ containing the image of the representations.
+We are interested in knowing whether there can be infinitely many $G$-conjugacy classes of representations $\Gamma\rightarrow G$ that when restricted to $\Gamma_p$ hit some fixed $G$-conjugacy class of representations $\Gamma_p\rightarrow G$. The following Lemma states that the finiteness of $G$-conjugacy classes of a collection of representations $\Gamma\rightarrow G$ carries over to $P$-conjugacy classes for any parabolic subgroup $P<G$ containing the image of the representations.
 
 \begin{lemma}\label{GIsPConj} Let $R=\{\rho_\lambda:\Gamma\rightarrow P\, |\, \lambda \in \Lambda\}$ be a collection of representations, $P$ a fixed parabolic subgroup $P<G$. Then $R$ is a finite union of $G$-conjugacy classes if and only if it is a finite union of $P$-conjugacy classes.
 \end{lemma}
 \begin{proof}
-	Suppose there are only finitely many $G$-conjugacy classes of $R$ and take $\rho_\mu, \rho_\nu \in R$ such that
+	Suppose there are only finitely many $G$-conjugacy classes of $R$ and take two elements $\rho_\mu, \rho_\nu \in R$ of one of the conjugacy classes, that is
 	\begin{displaymath}
 		g\cdot \rho_\mu = \rho_\nu
 	\end{displaymath}
-	for some $g \in G$. By definition $\rho_\nu$ maps into $P$ but on the other hand $\rho_\nu = g\cdot \rho_\mu$ maps into $Q = gPg^{-1}$, so 
+	for some $g \in G$. By definition $\rho_\nu$ maps into $P$ but on the other hand $\rho_\nu = g\cdot \rho_\mu$ maps into $Q = gPg^{-1}$, therefore 
 	\begin{displaymath}
-		\rho_\nu: \Gamma\rightarrow P \cap Q
+		\rho_\nu: \Gamma\rightarrow P \cap Q.
 	\end{displaymath}
-%	If $P = Q$ then $g\in N_G(P) = P$, hence $\rho_\mu, \rho_\nu$ are $P$-conjugate. 
-	
-%	Assume $P \neq Q$ and l
-	Let $T < P \cap Q$ be a maximal torus of $G$ [ref]. Since $T,gTg^{-1}$ are maximal tori of $Q$ they must be $Q$-conjugate, say
+	Let $T < P \cap Q$ be a maximal torus of $G$ [ref]. Since $T$ and $gTg^{-1}$ are maximal tori of $Q$ they must be $Q$-conjugate, say
 	\begin{displaymath}
 		qTq^{-1} = gTg^{-1},
 	\end{displaymath}
@@ -55,11 +52,10 @@ We are interested in knowing whether there can be infinitely many $G$-conjugacy 
 		q^{-1}g = (gp^{-1}g^{-1})g = gp^{-1} \in N_G(T),
 	\end{displaymath}
 	for some $p \in P$. Hence, we can write
-	\begin{eqnarray*}
-		g &=& (gp^{-1})p\\
-		&=& n(tp),
-	\end{eqnarray*}
-	where $n\in G$ is one of the finitely many representatives of the Weyl group $W=N_G(T)/T$ such that $\pi(gp^{-1}) = nT\in W$, and $t\in T$ such that $nt = gp^{-1}$. Since $T<P$, $tp\in P$.
+	\begin{displaymath}
+		g = (gp^{-1})p = (nt)p = np',
+	\end{displaymath}
+	where $n \in G$ is a coset representative of the Weyl group $W=N_G(T)/T$ such that $gp^{-1} \in nT \in W$, and $t\in T$ such that $nt = gp^{-1}$. Since $T<P$, $tp = p' \in P$.
 	
 	Therefore, a $G$-conjugacy class of $R$ splits up into at most $|N_G(T)/T|$ $P$-conjugacy classes which proves the forward direction. The converse is trivial.
 \end{proof}
@@ -132,14 +128,14 @@ Note that conjugating $\rho$ by an arbitrary element of $g$ changes $\rho_0$ and
 \end{displaymath} 
 
 
-\begin{lemma}\label{PConjIsHOne} Let $R=\{\rho_\lambda:\Gamma\rightarrow P\, |\, \lambda \in \Lambda\}$ be a collection of representations, $P$ a fixed parabolic subgroup $P<G$. Then $R_G = \{g\rho g^{-1}\,|\,\forall g\in G\, ,\forall\rho\in R\}$ is a finite union of $G$-conjugacy classes if and only if each $H^1(\Gamma, V_i)/Z(M_i)^\circ$ arising from the standard commutative diagrams for each element of $R$ has only finitely many elements.
+\begin{lemma}\label{PConjIsHOne} Let $R=\{\rho_\lambda:\Gamma\rightarrow P\, |\, \lambda \in \Lambda\}$ be a collection of representations, $P$ a fixed parabolic subgroup $P<G$. Then $R^G = \{g\rho g^{-1}\,|\,\forall g\in G\, ,\forall\rho\in R\}$ is a finite union of $G$-conjugacy classes if and only if each $H^1(\Gamma, V_i)/Z(M_i)^\circ$ arising from the standard commutative diagrams for each element of $R$ has only finitely many elements.
 \end{lemma}
 \begin{proof}
-	Suppose $R_G$ is a finite union of $G$-conjugacy classes. By Lemma \ref{GIsPConj} $R_G$ is a finite union of $P$-conjugacy classes, so there is a finite subset $S\subset R_G$ such that
+	Suppose $R^G$ is a finite union of $G$-conjugacy classes. By Lemma \ref{GIsPConj} $R^G$ is a finite union of $P$-conjugacy classes, so there is a finite subset $S\subset R^G$ such that
 	\begin{displaymath}
-		R_G = \bigcup_{\rho \in S}\{p\rho p^{-1}\,|\,\forall p\in P\} = \bigcup_{\rho \in S}P\rho.
+		R^G = \bigcup_{\rho \in S}\{p\rho p^{-1}\,|\,\forall p\in P\} = S^P.
 	\end{displaymath}
-	Take two elements $\sigma$ and $\tau$ from one of the $P$-conjugacy classes above such that $\sigma$ and $\tau$ have the same standard commutative diagram:
+	Take two elements $\sigma$ and $\tau$ from one of the $P$-conjugacy classes of $S$ such that $\sigma$ and $\tau$ have the same standard commutative diagram:
 	\begin{displaymath}
 		\sigma',\tau':\xymatrix{
 			\Gamma \ar[r] \ar[rd]_{\rho_0} & Q \ar[d]\\

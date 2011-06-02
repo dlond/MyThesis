@@ -1,5 +1,161 @@
+%!TEX root = /Users/dan/Documents/Thesis/Thesis.tex
 % Chapter 2
 
 \chapter{Mathematical Preliminaries}
 \label{Chapter2}
 \lhead{Chapter 2. \emph{Mathematical Preliminaries}}
+
+\section{Linear Algebraic Groups}
+Let $k = \overline{k}$ be an algebraically closed field. An affine variety over $k$ is a subset of $k^n$ defined by the vanishing of some polynomial equations. We have such notions as a subvariety of an affine variety, a natural product of affine varieties and maps between affine varieties.
+
+A morphism $\phi:V \rightarrow W$ of affine varieties is a map such that the coordinates of $\phi(v) \in W$ are given by polynomial functions in $v \in V$.
+
+An affine algebraic group $G$ is a set $G$ which is an affine algebraic variety and a group such that
+\begin{eqnarray*}
+	\mu&:& G \times G \rightarrow G\\
+	&&(x,y) \mapsto x.y,
+\end{eqnarray*}
+and
+\begin{eqnarray*}
+	\iota&:& G \rightarrow G \\
+	&&x \mapsto x^{-1}
+\end{eqnarray*}
+are morphisms of affine varieties.
+
+\begin{example}
+	The special linear group of $n\times n$ matrices with entries in $k$
+	\begin{displaymath}
+		SL_n(k) = \{(a_{ij}) \in k^{n^2} |\, det(a_{ij}) - 1 = 0\}
+	\end{displaymath}
+	is an affine variety. Furthermore, the general linear group of $n\times n$ matrices with entries in $k$
+	\begin{displaymath}
+		GL_n(k) = \{(a_{ij}) \in k^{n^2} |\, det(a_{ij}) \neq 0\}
+	\end{displaymath}
+	is an affine variety, seen more clearly by the inclusion in the affine variety
+	\begin{displaymath}
+		GL_n(k)\subset \{(b, (a_{ij})) \in k^{n^2 + 1} |\, b.det(a_{ij}) - 1 = 0\}.
+	\end{displaymath}
+	Of course both examples can be shown to be affine algebraic groups by checking the multiplication and inverse laws.
+\end{example}
+
+A homomorphism $\phi: G\rightarrow H$ of affine algebraic groups is a morphism of affine varieties and a homomorphism of abstract groups. An isomorphism $\phi: G\rightarrow H$ of affine algebraic groups is a bijective homomorphism of affine algebraic groups such that $\phi^{-1}:H\rightarrow G$ is also a homomorphism of affine algebraic groups.
+
+\begin{example}
+	Let $char k = p$. The map $k\rightarrow k$ which sends $x\mapsto x^p$ is bijective, a morphism, but not an isomorphism since the inverse map $x\mapsto x^{1/p}$ is not a morphism of affine varieties (it is not a polynomial).
+	
+	Now let $G = GL_n(k)$. The map $F:G\rightarrow G$ which sends $(a_{ij})\mapsto (a_{ij}^q)$, $q = p^z$, $z \in \mathbb{Z}^+$ is a homomorphism of affine algebraic groups, called the Frobenius morphism. It is not an isomorphism.
+\end{example}
+
+The subvarieties of an affine variety $V$ form the closed sets of a topology, known as the Zariski topology.
+
+A closed subgroup of an affine algebraic group is itself an affine algebraic group. A closed subgroup of $GL_n(k)$ is called a linear algebraic group. In fact every affine algebraic group is a linear algebraic group.
+
+\begin{example}
+	Three important subgroups of the linear algebraic group $G = GL_n(k)$
+	\begin{eqnarray*}
+		T = T_n(k) &=& \{ (a_{ij}) \in GL_n(k) |\, a_{ij} = 0 \textrm{ if } i \neq j\}\\
+		&& \textrm{diagonal matrices in } GL_n(k)
+	\end{eqnarray*}
+	\begin{eqnarray*}
+		U = U_n(k) &=& \{ (a_{ij}) \in GL_n(k) |\, a_{ii} = 1, a_{ij} = 0 \textrm{ if } i < j\}\\
+		&& \textrm{upper unitriangular matrices in } GL_n(k)
+	\end{eqnarray*}
+	\begin{eqnarray*}
+		B = B_n(k) &=& \{ (a_{ij}) \in GL_n(k) |\, a_{ij} = 0 \textrm{ if } i < j\}\\
+		&& \textrm{upper triangular matrices in } GL_n(k)
+	\end{eqnarray*}
+	$T$ is an example of a torus of $G$, $U$ is an example of a unipotent subgroup of $G$, and $B$ is an example of a Borel subgroup of $G$.
+\end{example}
+
+Let $G$ be a linear algebraic group. The irreducible components of $G$ are disjoint. If $G^\circ$ is the irreducible component containing the identity element of $G$ then $G^\circ$ is a (closed) normal subgroup of $G$ of finite index. The irreducible components of $G$ are the cosets of $G^\circ$ in $G$. $G^\circ$ is the smallest closed subgroup of $G$ of finite index (every closed subgroup of finite index is open).
+
+$G^\circ$ is called the identity component of $G$. If $G = G^\circ$ we say $G$ is connected.
+
+Every element $g\in G$ can be uniquely written
+\begin{displaymath}
+	g = g_s.g_u = g_u.g_s,
+\end{displaymath}
+where $g_s$ is semisimple (diagonalisable) and $g_u$ is unipotent. This is known as the Jordan decomposition.
+
+$G$ has a unique maximal closed normal solvable subgroup $R(G)$, called the radical of $G$. The set of unipotent elements of $R(G)$ is a maximal closed connected unipotent normal subgroup $R_u(G)$, called the unipotent radical of $G$.
+
+If $R_u(G) = {1}$ we say $G$ is reductive. If $R(G) = {1}$ we say $G$ is semisimple. If $G$ is connected and has no proper closed connected normal subgroups then $G$ is simple.
+
+\begin{example}
+	$GL_n(k)$ is reductive. $SL_n(k)$ is semisimple (hence reductive). $SL_n(k)$ is simple as an algebraic group but not as an abstract group, since it has a non-trivial center.
+\end{example}
+
+If $G$ is nonabelian and simple then its centre $Z(G)$ is finite.
+
+If $G$ is a reductive linear algebraic group then
+\begin{displaymath}
+	G = Z(G)^\circ.(G,G),
+\end{displaymath}
+where
+\begin{displaymath}
+	(G,G) = \langle [g, h] = ghg^{-1}h^{-1}|\,g,h\in G\rangle,
+\end{displaymath}
+the commutator subgroup. $Z(G)$ is a torus of $G$ and $(G, G)$ is again reductive.
+
+Every abelian simple algebraic group has dimension 1 and is isomorphic to either
+\begin{displaymath}
+	G_m(k) = k^* = \textrm{multiplicative group of }k
+\end{displaymath}
+or
+\begin{displaymath}
+	G_a(k) = k = \textrm{additive group of }k.
+\end{displaymath}
+
+A torus is isomorphic to $k^*\times k^*\cdots k^*$. Any two maximal tori in $G$ are conjugate in $G$. 
+
+If $G$ is connected with maximal torus $T<G$ then $C_G(T) = N_G(T)^\circ$ and hence $N_G(T)/C_G(T)$ is finite. We call $W = N_G(T)/C_G(T)$ the Weyl group of $G$. Furthermore, if $G$ is also reductive then $T=C_G(T)$ and $W = N_G(T)/T$ is a finite Coxeter group, that is, of the form:
+\begin{displaymath}
+	W = \langle s_1, \ldots, s_l |\, s_i^2 = 1, (s_is_j)^m_{ij} = 1\rangle
+\end{displaymath}
+
+A Borel subgroup of $G$ is a maximal closed connected solvable subgroup of $G$, any two Borel subgroups of $G$ are conjugate in $G$. if $T < G$ is a torus of $G$ then there exists a Borel subgroup $B$ of $G$ containing $T$. Furthermore, we can write $B = T\cdot R_u(B)$.
+
+Let $G$ be a reductive connected linear algebraic group with torus $T < G$. Let $N = N_G(T)$. Then we can write $G$ as
+\begin{displaymath}
+	G = BNB = \cup_{n\in N}BnB.
+\end{displaymath}
+$BnB = Bn'B$ if and only iff $\pi(n)=\pi(n')$ where $\pi:N\rightarrow N/T = W$ so we have the correspondence $B\backslash G/B \leftrightarrow W$ where $BnB \mapsto \pi(n)$.
+
+Suppose $W = \langle s_1, \ldots, s_l\rangle$ and let $J \subset \{1, \ldots, l\}$. We define $W_J = \langle s_j |\, j\in J\rangle < W$ and $N_J = \pi^{-1}(W_J)$. The subgroup of $G$ defined by
+\begin{displaymath}
+	P_J = BN_JB
+\end{displaymath}
+contains $B$, and in fact every subgroup of $G$ containing $B$ is of this form. We call $P<G$ a parabolic subgroup of $G$ if $B<P$ for some Borel subgroup $B<G$. Equivalently, $P$ is a parabolic subgroup of $G$ if given a maximal torus $T<G$, $P$ is conjugate to some $P_J$. 
+
+A parabolic subgroup $P<G$ is connected, self-normalizing, and can be decomposed into a semi-direct product of its unipotent radical and a Levi subgroup $L<P$:
+\begin{displaymath}
+	P = L\cdot R_u(P),
+\end{displaymath}
+with $L\cap R_u(P) = 1$. Any two Levi subgroups of $P$ are conjugate by an element of $R_u(P)$ and will be reductive if $G$ is reductive.
+
+Let $T$ be a maximal torus of a connected reductive linear algebraic group $G$. We define the character group of $T$ is to be 
+\begin{displaymath}
+	X = \textrm{Hom}(T, k^*),
+\end{displaymath}
+with the addition law
+\begin{displaymath}
+	(x_1 + x_2)(t) = x_1(t)x_2(t),\qquad x_1, x_2\in X, t\in T.
+\end{displaymath}
+The cocharacter group is defined
+\begin{displaymath}
+	Y = \textrm{Hom}(k^*, T),
+\end{displaymath}
+with the addition law
+\begin{displaymath}
+	(y_1 + y_2)(\lambda) = y_1(\lambda)y_2(\lambda),\qquad y_1, y_2\in Y, \lambda \in k^*.
+\end{displaymath}
+
+If we compose $x\in X$ with $y\in Y$ we get a morphism
+\begin{displaymath}
+	k^*\rightarrow T \rightarrow k^*,
+\end{displaymath}
+that is, of the form $\lambda\mapsto \lambda^n$ for some $n\in \mathbb{Z}$. Hence there exists a pairing $\langle,\rangle:X\times Y\rightarrow \mathbb{Z}$ defined
+\begin{displaymath}
+	(x, y) \mapsto \langle x, y\rangle = n,
+\end{displaymath}
+where $x(y(\lambda)) = \lambda^n$. 
