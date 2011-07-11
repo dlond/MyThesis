@@ -22,49 +22,59 @@ Two questions were raised by B. K\"ulshammer concerning representations of a fin
 
 (K. II) has positive answer so long as $G$ is reductive and the characteristic of $k$ is good for $G$ \cite{slodowy1997two}. The same paper shows that the answer is ``no'' in general by way of a counterexample involving a non-reductive $G$.
 
-We will explore the possibility of a reductive counterexample to (K. II).
+We wish to determine whether there exists a reductive counterexample to (K. II).
 
 \section{The Approach}
 
-We are interested in knowing whether there can be infinitely many $G$-conjugacy classes of representations $\Gamma\rightarrow G$ that when restricted to $\Gamma_p$ hit some fixed $G$-conjugacy class of representations $\Gamma_p\rightarrow G$. The following Lemma states that the finiteness of $G$-conjugacy classes of a collection of representations $\Gamma\rightarrow G$ carries over to $P$-conjugacy classes for any parabolic subgroup $P<G$ containing the image of the representations.
-
-\begin{lemma}\label{GIsPConj} Let $R=\{\rho_\lambda:\Gamma\rightarrow P\, |\, \lambda \in \Lambda\}$ be a collection of representations, $P$ a fixed parabolic subgroup $P<G$. Then $R$ is a finite union of $G$-conjugacy classes if and only if it is a finite union of $P$-conjugacy classes.
-\end{lemma}
-\begin{proof}
-	Suppose there are only finitely many $G$-conjugacy classes of $R$ and take two elements $\rho_\mu, \rho_\nu \in R$ of one of the conjugacy classes, that is
-	\begin{displaymath}
-		g\cdot \rho_\mu = \rho_\nu
-	\end{displaymath}
-	for some $g \in G$. By definition $\rho_\nu$ maps into $P$ but on the other hand $\rho_\nu = g\cdot \rho_\mu$ maps into $Q = gPg^{-1}$, therefore 
-	\begin{displaymath}
-		\rho_\nu: \Gamma\rightarrow P \cap Q.
-	\end{displaymath}
-	Let $T < P \cap Q$ be a maximal torus of $G$ [ref]. Since $T$ and $gTg^{-1}$ are maximal tori of $Q$ they must be $Q$-conjugate, say
-	\begin{displaymath}
-		qTq^{-1} = gTg^{-1},
-	\end{displaymath}
-	for some $q \in Q$. Then 
-	\begin{displaymath}
-		q^{-1}g \in N_G(T),
-	\end{displaymath}
-	and so
-	\begin{displaymath}
-		q^{-1}g = (gp^{-1}g^{-1})g = gp^{-1} \in N_G(T),
-	\end{displaymath}
-	for some $p \in P$. Hence, we can write
-	\begin{displaymath}
-		g = (gp^{-1})p = (nt)p = np',
-	\end{displaymath}
-	where $n \in G$ is a coset representative of the Weyl group $W=N_G(T)/T$ such that $gp^{-1} \in nT \in W$, and $t\in T$ such that $nt = gp^{-1}$. Since $T<P$, $tp = p' \in P$.
-	
-	Therefore, a $G$-conjugacy class of $R$ splits up into at most $|N_G(T)/T|$ $P$-conjugacy classes which proves the forward direction. The converse is trivial.
-\end{proof}
-
+We are interested in knowing whether there can be infinitely many $G$-conjugacy classes of representations $\Gamma\rightarrow G$ that when restricted to $\Gamma_p$ hit some fixed $G$-conjugacy class of representations $\Gamma_p\rightarrow G$. A consequence of the following theorem is that we will need to study representations into parabolic subgroups $P < G$.
 
 \begin{theorem} \label{finiteGCR} There are only finitely many $G$-conjugacy classes of $G$-completely reducible representations $\Gamma\rightarrow G$.\qedhere
 \end{theorem}
 \begin{proof}[See (a reference)]
 \end{proof}
+
+If we have infinitely many $G$-conjugacy classes of representations $\Gamma\rightarrow G$ then we must have infinitely many $G$-conjugacy classes of non-$G$-completely reducible representations. Lemma \ref{GIsPConj} states that the finiteness of $G$-conjugacy classes of a collection of representations $\Gamma\rightarrow G$ carries over to $P$-conjugacy classes for any parabolic subgroup $P<G$ containing the image of the representations.
+
+\begin{lemma}\label{GIsPConj} Let $R=\{\rho_\lambda:\Gamma\rightarrow P\, |\, \lambda \in \Lambda\}$ be a collection of representations, $P$ a fixed parabolic subgroup of $G$. Then $R$ is contained in a finite union of $G$-conjugacy classes if and only if it is contained in a finite union of $P$-conjugacy classes.
+\end{lemma}
+\begin{proof}
+	Take two elements $\rho_\mu, \rho_\nu$ of $R$ in a particular $G$-conjugacy class. Then there exists an element $g\in G$ such that
+	\begin{displaymath}
+		g\cdot \rho_\mu = \rho_\nu.
+	\end{displaymath}
+	
+	By definition $\rho_\nu$ maps into $P$, but on the other hand $\rho_\nu = g\cdot \rho_\mu$ maps into $Q = gPg^{-1}$. Therefore 
+	\begin{displaymath}
+		\rho_\nu: \Gamma\rightarrow P \cap Q.
+	\end{displaymath}
+	Let $T$ be a maximal torus of $G$ contained in $P\cap Q$ [ref], and let $\{n_1, \ldots, n_l\}$ be coset representatives for the Weyl group $W = N_G(T)/T$.
+	
+	Since $T$ and $gTg^{-1}$ are maximal tori of $Q$ they must be $Q$-conjugate, so there exists an element $q\in Q$ such that
+	\begin{displaymath}
+		qTq^{-1} = gTg^{-1}.
+	\end{displaymath}
+	By the definition of $Q$ there exists an element $p\in P$ such that $q = gpg^{-1}$, so in fact
+	\begin{displaymath}
+		gpg^{-1}Tgp^{-1}g^{-1} = gTg^{-1}.
+	\end{displaymath}
+	We see that $gp^{-1}$ lies in $N_G(T)$. Let $n_i$ be the coset representative for the element of $W$ containing $gp^{-1}$ and let $t\in T$ be the element that satisfies
+	\begin{displaymath}
+		gp^{-1} = n_it.
+	\end{displaymath}
+	$T$ is a subgroup of $P$ so let $p^{-1}t^{-1} = p' \in P$ and we have
+	\begin{eqnarray*}
+		\rho_\mu &=& g^{-1}\cdot\rho_\nu\\
+		&=& (p^{-1}t^{-1}n_i^{-1})\cdot\rho_\nu\\
+		&=& (p'n_i^{-1})\cdot\rho_\nu. 
+	\end{eqnarray*}
+	Furthermore, as $\rho_\mu$ is an arbitrary element of $R\cap \left(G\cdot \rho_\nu\right)$ we have
+	\begin{displaymath}
+		R \cap \left(G\cdot \rho_\nu\right) \subset \bigcup_{i=1}^l P\cdot(n_i^{-1}\cdot\rho_\nu).
+	\end{displaymath}
+	
+	Therefore, a $G$-conjugacy class of $R$ is contained in a union of at most $l$ $P$-conjugacy classes. Thus it is clear that if there are only finitely many $G$-conjugacy classes of $R$ then there can only be finitely many $P$-conjugacy classes. The converse is trivial.
+\end{proof}
+
 
 Although $G$ has infinitely many parabolic subgroups there are only finitely many $G$-conjugacy classes of parabolic subgroups, so we can choose a finite set $\{Q_i\}$ of representatives. We choose this particular set by fixing a maximal torus $T<G$ and a Borel subgroup $B<G$ containing $T$. Then a set of representative parabolic subgroups of $G$ can be sought via the root system of $G$ with respect to $T$ [reference or explain]. We choose a set of Levi subgroups $\{M_i\}$, $M_i$ being a Levi subgroup of $Q_i$. By Theorem \ref{finiteGCR} there are only finitely many $M_i$-conjugacy classes of $M_i$-completely reducible representations $\sigma_{0, i}:\Gamma\rightarrow M_i$, and we fix a finite set of representatives $\{\sigma^{j_i}_{0,i}\}$.
 
