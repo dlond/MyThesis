@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.1.15)  22 JUL 2011 09:59
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.1.15)  22 JUL 2011 16:30
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -728,16 +728,9 @@ Chapter 4.
 ------------------------------------------------------------------------------
 [20
 
-] [21] <xymatrix 2x2 141> [22]
-Overfull \hbox (22.05913pt too wide) in paragraph at lines 122--123
-\OML/cmm/m/it/10.95 H[]\OT1/cmr/m/n/10.95 (^^@\OML/cmm/m/it/10.95 ; ^^Z[]; V\OT
-1/cmr/m/n/10.95 )$. We will show that this equiv-a-lence cor-re-sponds to $\OML
-/cmm/m/it/10.95 V$\OT1/cmr/m/n/10.95 -conjugacy in $\OML/cmm/m/it/10.95 Hom\OT1
-/cmr/m/n/10.95 (^^@\OML/cmm/m/it/10.95 ; P\OT1/cmr/m/n/10.95 )[]$,
- []
-
-<xymatrix 2x2 224> [23] <xymatrix 2x2 224> <xymatrix 2x2 127> [24]
-Overfull \hbox (39.00446pt too wide) in paragraph at lines 174--175
+] [21] <xymatrix 2x2 141> [22] <xymatrix 2x2 168> [23] <xymatrix 2x2 224>
+<xymatrix 2x2 127> [24]
+Overfull \hbox (39.00446pt too wide) in paragraph at lines 178--179
 []\OT1/cmr/m/n/10.95 Therefore $\OML/cmm/m/it/10.95 m \OT1/cmr/m/n/10.95 = \OML
 /cmm/m/it/10.95 z[]c$ \OT1/cmr/m/n/10.95 where $\OML/cmm/m/it/10.95 z[]$ \OT1/c
 mr/m/n/10.95 is one of the finitely many coset rep-re-sen-ta-tives for $\OML/cm
@@ -856,17 +849,17 @@ Appendix C.
 ------------------------------------------------------------------------------
  C Rank 2 Root System Diagrams
 ------------------------------------------------------------------------------
-<Figures/a1a1.png, id=639, 1003.75pt x 1003.75pt>
+<Figures/a1a1.png, id=640, 1003.75pt x 1003.75pt>
 File: Figures/a1a1.png Graphic file (type png)
  <use Figures/a1a1.png>
-<Figures/a2.png, id=641, 1003.75pt x 1003.75pt>
+<Figures/a2.png, id=642, 1003.75pt x 1003.75pt>
 File: Figures/a2.png Graphic file (type png)
  <use Figures/a2.png> [74
 
- <./Figures/a1a1.png>] <Figures/b2.png, id=647, 1003.75pt x 1003.75pt>
+ <./Figures/a1a1.png>] <Figures/b2.png, id=648, 1003.75pt x 1003.75pt>
 File: Figures/b2.png Graphic file (type png)
 
-<use Figures/b2.png> <Figures/g2.png, id=648, 1003.75pt x 1003.75pt>
+<use Figures/b2.png> <Figures/g2.png, id=649, 1003.75pt x 1003.75pt>
 File: Figures/g2.png Graphic file (type png)
 
 <use Figures/g2.png> [75 <./Figures/a2.png> <./Figures/b2.png>]) [76 <./Figures
@@ -879,14 +872,14 @@ File: Figures/g2.png Graphic file (type png)
 
 ] (./Thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 12168 strings out of 493876
- 164702 string characters out of 1150568
- 292759 words of memory out of 3000000
- 15018 multiletter control sequences out of 10000+50000
+ 12170 strings out of 493876
+ 164720 string characters out of 1150568
+ 292799 words of memory out of 3000000
+ 15019 multiletter control sequences out of 10000+50000
  15481 words of font info for 59 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
  43i,14n,45p,960b,452s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{theorem.41} has been referenced b
+pdfTeX warning (dest): name{theorem.42} has been referenced b
 ut does not exist, replaced by a fixed one
 
 </usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></usr/loc
@@ -911,9 +904,9 @@ dist/fonts/type1/bluesky/ams/msbm7.pfb></usr/local/texlive/2008/texmf-dist/font
 s/type1/public/xypic/xycmat10.pfb></usr/local/texlive/2008/texmf-dist/fonts/typ
 e1/public/xypic/xycmbt10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/pu
 blic/xypic/xydash10.pfb>
-Output written on Thesis.pdf (86 pages, 500070 bytes).
+Output written on Thesis.pdf (86 pages, 500626 bytes).
 PDF statistics:
- 780 PDF objects out of 1000 (max. 8388607)
- 170 named destinations out of 1000 (max. 131072)
+ 781 PDF objects out of 1000 (max. 8388607)
+ 171 named destinations out of 1000 (max. 131072)
  273 words of extra memory for PDF output out of 10000 (max. 10000000)
 
