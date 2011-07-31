@@ -26,12 +26,12 @@ We wish to determine whether there exists a reductive counterexample to (K. II).
 
 \section{The Approach}
 
-We are interested in knowing whether there can be infinitely many $G$-conjugacy classes of representations $\Gamma\rightarrow G$ that when restricted to $\Gamma_p$ hit some fixed $G$-conjugacy class of representations $\Gamma_p\rightarrow G$. A consequence of the following theorem [reference] is that we will need to study representations into parabolic subgroups $P < G$.
+We are interested in knowing whether there can be infinitely many $G$-conjugacy classes of representations $\Gamma\rightarrow G$ that when restricted to $\Gamma_p$ hit some fixed $G$-conjugacy class of representations $\Gamma_p\rightarrow G$. A consequence of the following Theorem [reference] is that we will need to study representations into parabolic subgroups $P < G$.
 
 \begin{theorem} \label{finiteGCR} There are only finitely many $G$-conjugacy classes of $G$-completely reducible representations $\Gamma\rightarrow G$.
 \end{theorem}
 
-So by Theorem \ref{finiteGCR}, if we have infinitely many $G$-conjugacy classes of representations $\Gamma\rightarrow G$ then we must have infinitely many $G$-conjugacy classes of non-$G$-completely reducible representations. The following Lemma states that the finiteness of $G$-conjugacy classes of a collection of representations $\Gamma\rightarrow G$ carries over to $P$-conjugacy classes for any parabolic subgroup $P<G$ containing the image of the representations.
+So by Theorem \ref{finiteGCR}, if we have infinitely many $G$-conjugacy classes of representations $\Gamma\rightarrow G$ then infinitely many of those classes must be of non-$G$-completely reducible representations. The following Lemma states that the finiteness of $G$-conjugacy classes of a collection of representations $\Gamma\rightarrow G$ carries over to $P$-conjugacy classes for any parabolic subgroup $P<G$ containing the image of the representations.
 
 \begin{lemma}\label{GIsPConj} Let $R=\{\rho_\lambda:\Gamma\rightarrow P\, |\, \lambda \in \Lambda\}$ be a collection of representations indexed by the set $\Lambda$, $P$ a fixed parabolic subgroup of $G$. Then $R$ is contained in a finite union of $G$-conjugacy classes if and only if it is contained in a finite union of $P$-conjugacy classes.
 \end{lemma}
@@ -64,7 +64,7 @@ So by Theorem \ref{finiteGCR}, if we have infinitely many $G$-conjugacy classes 
 	\begin{eqnarray*}
 		\rho_\mu &=& g^{-1}\cdot\rho_\nu\\
 		&=& (p^{-1}t^{-1}n_i^{-1})\cdot\rho_\nu\\
-		&=& (p'n_i^{-1})\cdot\rho_\nu. 
+		&=& p'\cdot(n_i^{-1}\cdot\rho_\nu). 
 	\end{eqnarray*}
 	Furthermore, as $\rho_\mu$ is an arbitrary element of $R\cap \left(G\cdot \rho_\nu\right)$ we have
 	\begin{displaymath}
@@ -72,7 +72,9 @@ So by Theorem \ref{finiteGCR}, if we have infinitely many $G$-conjugacy classes 
 	\end{displaymath}
 	where $l = |W|$.
 	
-	Therefore, a $G$-conjugacy class of $R$ is contained in a union of at most $l$ $P$-conjugacy classes. Thus it is clear that if $R$ is contained in a finite union of $G$-conjugacy classes then it is contained in a finite union of $P$-conjugacy classes. The converse is trivial.
+	Therefore, a $G$-conjugacy class of $R$ is contained in a union of at most $l$ $P$-conjugacy classes. Thus it is clear that if $R$ is contained in a finite union of $G$-conjugacy classes then it is contained in a finite union of $P$-conjugacy classes.
+	
+	The converse is trivial.
 \end{proof}
 
 Although $G$ has infinitely many parabolic subgroups there are only finitely many $G$-conjugacy classes of parabolic subgroups, so we can choose a finite set $\{Q_i\}$ of representatives. We choose this particular set by fixing a maximal torus $T<G$ and a Borel subgroup $B<G$ containing $T$. Then a set of representative parabolic subgroups of $G$ can be sought via the root system of $G$ with respect to $T$. For each $Q_i$ there is a corresponding Levi subgroup $M_i<Q_i$ containing $B$. By Theorem \ref{finiteGCR} there are only finitely many $M_i$-conjugacy classes of $M_i$-irreducible representations $\sigma_{0, i}:\Gamma\rightarrow M_i$, and we fix a finite set of representatives $\{\sigma^{j_i}_{0,i}\}$. 
@@ -97,7 +99,7 @@ for some $j$. Let $g=mh\in G$ and define $\sigma = g\cdot \rho$. This verifies w
 
 It is worth pointing out that the element $g\in G$ and the minimal parabolic $P<G$ used in the construction are not necessarily unique, hence the qualifier ``\emph{a} standard commutative diagram''. As an extreme example, if $\rho$ is the trivial representation then $\rho$ has minimal parabolic $P=B$, and any $g\in G$ could be used to conjugate $\rho(\Gamma)$ into $Q_i=B$. [Example of more than one minimal parabolic?]
 
-For a given parabolic subgroup $P<G$ with Levi subgroup $L$ and unipotent radical $V$, and a given representation $\rho:\Gamma\rightarrow P$ we have a map $\rho_0:\Gamma\rightarrow L$ defined $\rho_0 = \pi \circ \rho$. Now define $\alpha_\rho:\Gamma\rightarrow V$ by $\alpha_\rho(\gamma) = \rho(\gamma)\rho_0(\gamma)^{-1}$ for all $\gamma\in\Gamma$, so that $\rho = \alpha_\rho\rho_0$.
+For a given parabolic subgroup $P$ of $G$ with Levi subgroup $L$ and unipotent radical $V$, and a given representation $\rho:\Gamma\rightarrow P$ we have a map $\rho_0:\Gamma\rightarrow L$ defined $\rho_0 = \pi \circ \rho$. Now define $\alpha_\rho:\Gamma\rightarrow V$ by $\alpha_\rho(\gamma) = \rho(\gamma)\rho_0(\gamma)^{-1}$ for all $\gamma\in\Gamma$, so that $\rho = \alpha_\rho\rho_0$.
 
 If $\rho$ is a homomorphism then
 \begin{eqnarray*}
@@ -126,7 +128,7 @@ is bijective.
 
 For ease of notation we will often write $h(\sigma)$ as $\alpha_\sigma$.
 
-Recall the equivalence on 1-cocycles $\alpha\in Z^1(\Gamma, \rho_0, V)$, the collection of such equivalence classes being the 1-cohomology $H^1(\Gamma, \rho_0, V)$. We will show that this equivalence corresponds to $V$-conjugacy in $Hom(\Gamma, P)_{\rho_0}$, that is, the following diagram is commutative:
+Recall (\ref{equivalentOneCocycles}) the equivalence on 1-cocycles $\alpha\in Z^1(\Gamma, \rho_0, V)$, the collection of such equivalence classes being the 1-cohomology $H^1(\Gamma, \rho_0, V)$. We will show that this equivalence corresponds to $V$-conjugacy in $Hom(\Gamma, P)_{\rho_0}$, that is, the following diagram is commutative:
 \begin{displaymath}
 	\xymatrix{
 		Hom(\Gamma, P)_{\rho_0} \ar[r]^h \ar[d] & Z^1(\Gamma, \rho_0, V)\ar[d] \\
@@ -135,7 +137,7 @@ Recall the equivalence on 1-cocycles $\alpha\in Z^1(\Gamma, \rho_0, V)$, the col
 \end{displaymath}
 and the newly defined map $\overline{h}$ is also bijective.
 
-Take $\sigma,\tau\in Hom(\Gamma, P)_{\rho_0}/V$ such that $\sigma = v\cdot\tau$ for some fixed $v\in V$. Then for all $\gamma\in \Gamma$
+Take $\sigma,\tau\in Hom(\Gamma, P)_{\rho_0}$ such that $\sigma = v\cdot\tau$ for some fixed $v\in V$. Then for all $\gamma\in \Gamma$
 \begin{eqnarray*}
 	\alpha_\sigma(\gamma) &=& \sigma(\gamma)\rho_0(\gamma)^{-1}\\
 	&=& v\tau(\gamma)v^{-1}\rho_0(\gamma)^{-1}\\
@@ -143,19 +145,26 @@ Take $\sigma,\tau\in Hom(\Gamma, P)_{\rho_0}/V$ such that $\sigma = v\cdot\tau$ 
 	&=& v\tau(\gamma)\rho_0(\gamma)^{-1}(\gamma\cdot v^{-1})\\
 	&=& v\alpha_\tau(\gamma)(\gamma\cdot v^{-1}).
 \end{eqnarray*}
-Hence by (\ref{equivalentOneCocycles}) $\sigma$ and $\tau$ belong to the same 1-cohomology class. This proves $\overline{h}$ is well-defined. The argument can be run in reverse and since $h$ is bijective, $\overline{h}$ is also. This satisfies our assertions.
+Hence by (\ref{equivalentOneCocycles}) $\alpha_\sigma$ and $\alpha_\tau$ belong to the same 1-cohomology class. This proves $\overline{h}$ is well-defined. The argument can be run in reverse and since $h$ is bijective, $\overline{h}$ is also. This satisfies our assertions.
 
-Take an element $g\in G$. We can conjugate $\sigma\in Hom(\Gamma, P)_{\rho_0}$ by $g$ to get an element $g\cdot\sigma\in Hom(\Gamma, gPg^{-1})_{g\cdot\rho_0}$. Then $h(g\cdot\sigma) = \alpha_{g\cdot\sigma}$ is an element of $Z^1(\Gamma, g\cdot\rho_0, gVg^{-1})$.
+Take an element $g\in G$. We can conjugate $\sigma\in Hom(\Gamma, P)_{\rho_0}$ by $g$ to get an element $g\cdot\sigma\in Hom(\Gamma, gPg^{-1})_{g\cdot\rho_0}$ and $h(g\cdot\sigma) = \alpha_{g\cdot\sigma}\in Z^1(\Gamma, g\cdot\rho_0, gVg^{-1})$.
 
-If $g\in P$ then $gPg^{-1} = P$ so conjugating gives rise to the map $Hom(\Gamma, P)_{\rho_0}\rightarrow Hom(\Gamma, P)_{g\cdot\rho_0}$ and $Z^1(\Gamma, g\cdot\rho_0, gVg^{-1})\rightarrow Z^1(\Gamma, g\cdot\rho_0, gVg^{-1})$ under $h$.
+If $g\in P$ then $gPg^{-1} = P$ and $gVg^{-1} = V$ so conjugating gives rise to the map $Hom(\Gamma, P)_{\rho_0}\rightarrow Hom(\Gamma, P)_{g\cdot\rho_0}$ and $Z^1(\Gamma, \rho_0, V)\rightarrow Z^1(\Gamma, g\cdot\rho_0, V)$ under $h$.
 
-Furthermore, if $g\in Z(L)$ then $g\cdot\rho_0 = \rho_0$ and $gVg^{-1} = V$. Then indeed $Z(L)$ acts on $Hom(\Gamma, P)_{\rho_0}$ and also on $Z^1(\Gamma, \rho_0, V)$ via $h$, and the following diagram is commutative:
+Furthermore, if $g\in Z(L)$ then $g\cdot\rho_0 = \rho_0$. Indeed $Z(L)$ acts on $Hom(\Gamma, P)_{\rho_0}$ and also on $Z^1(\Gamma, \rho_0, V)$ via $h$, and the following diagram is commutative:
 \begin{displaymath}
 	\xymatrix{
-		Hom(\Gamma, P)_{\rho_0}/V \ar[r]^{\overline{h}} \ar[d] & H^1(\Gamma, \rho_0, V) \ar[d] \\
+		Hom(\Gamma, P)_{\rho_0} \ar[r]^{h} \ar[d] & Z^1(\Gamma, \rho_0, V) \ar[d] \\
 		Hom(\Gamma, P)_{\rho_0}/P \ar[r] & H^1(\Gamma, \rho_0, V)/Z(L).
 	}
 \end{displaymath}
+For, let $\sigma,\tau\in Hom(\Gamma, P)_{\rho_0}$ such that $\sigma = p\dot\tau$ for some fixed $p\in P$. We may assume $p = vl$
+	\begin{displaymath}
+		\xymatrix{
+			Hom(\Gamma, P)_{\rho_0}/V \ar[r]^{\overline{h}} \ar[d] & H^1(\Gamma, \rho_0, V) \ar[d] \\
+			Hom(\Gamma, P)_{\rho_0}/P \ar[r] & H^1(\Gamma, \rho_0, V)/Z(L).
+		}
+	\end{displaymath}
 
 We are now ready to state the two main results of this chapter, which will reduce K\"ulshammer's second question to another question about 1-cohomologies.
 
