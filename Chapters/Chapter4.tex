@@ -125,7 +125,7 @@ Recall (\ref{equivalentOneCocycles}) the equivalence on 1-cocycles $\alpha\in Z^
 \begin{displaymath}
 	\xymatrix{
 		Hom(\Gamma, P)_{\rho_0} \ar[r]^h \ar[d] & Z^1(\Gamma, \rho_0, V)\ar[d] \\
-		Hom(\Gamma, P)_{\rho_0}/V \ar[r]^{\overline{h}} & H^1(\Gamma, \rho_0, V),
+		Hom(\Gamma, P)_{\rho_0}/V \ar[r]^{H} & H^1(\Gamma, \rho_0, V),
 	}
 \end{displaymath}
 and the newly defined map $\overline{h}$ is also bijective.
@@ -142,22 +142,25 @@ Hence by (\ref{equivalentOneCocycles}) $\alpha_\sigma$ and $\alpha_\tau$ belong 
 
 Take an element $g\in G$. We can conjugate $\sigma\in Hom(\Gamma, P)_{\rho_0}$ by $g$ to get an element $g\cdot\sigma\in Hom(\Gamma, gPg^{-1})_{g\cdot\rho_0}$ and $h(g\cdot\sigma) = \alpha_{g\cdot\sigma}\in Z^1(\Gamma, g\cdot\rho_0, gVg^{-1})$.
 
-If $g\in P$ then $gPg^{-1} = P$ and $gVg^{-1} = V$ so conjugating gives rise to the map $Hom(\Gamma, P)_{\rho_0}\rightarrow Hom(\Gamma, P)_{g\cdot\rho_0}$ and $Z^1(\Gamma, \rho_0, V)\rightarrow Z^1(\Gamma, g\cdot\rho_0, V)$ under $h$.
+If $g\in P$ then $gPg^{-1} = P$ and $gVg^{-1} = V$ so conjugating gives rise to the map $Hom(\Gamma, P)_{\rho_0}\rightarrow Hom(\Gamma, P)_{g\cdot\rho_0}$ and $Z^1(\Gamma, \rho_0, V)\rightarrow Z^1(\Gamma, g\cdot\rho_0, V)$ under $h$. 
 
 Furthermore, if $g\in Z(L)$ then $g\cdot\rho_0 = \rho_0$. Indeed $Z(L)$ acts on $Hom(\Gamma, P)_{\rho_0}$ and also on $Z^1(\Gamma, \rho_0, V)$ via $h$, and the following diagram is commutative:
 \begin{displaymath}
 	\xymatrix{
 		Hom(\Gamma, P)_{\rho_0} \ar[r]^{h} \ar[d] & Z^1(\Gamma, \rho_0, V) \ar[d] \\
-		Hom(\Gamma, P)_{\rho_0}/P \ar[r] & H^1(\Gamma, \rho_0, V)/Z(L).
+		Hom(\Gamma, P)_{\rho_0}/Z(L) \ar[r]^{\tilde{h}} \ar[d] & Z^1(\Gamma, \rho_0, V)/Z(L) \ar[d] \\
+		Hom(\Gamma, P)_{\rho_0}/VZ(L) \ar[r]^{\tilde{H}} & H^1(\Gamma, \rho_0, V)/Z(L)
 	}
 \end{displaymath}
-For, let $\sigma,\tau\in Hom(\Gamma, P)_{\rho_0}$ such that $\sigma = p\dot\tau$ for some fixed $p\in P$. We may assume $p = vl$
-	\begin{displaymath}
-		\xymatrix{
-			Hom(\Gamma, P)_{\rho_0}/V \ar[r]^{\overline{h}} \ar[d] & H^1(\Gamma, \rho_0, V) \ar[d] \\
-			Hom(\Gamma, P)_{\rho_0}/P \ar[r] & H^1(\Gamma, \rho_0, V)/Z(L).
-		}
-	\end{displaymath}
+For, let $\sigma,\tau\in Hom(\Gamma, P)_{\rho_0}$ such that $\sigma = vl\cdot\tau$ for some $v \in V,l\in Z(L)$. Then
+\begin{eqnarray*}
+  \alpha_\sigma(\gamma) &=&  \sigma(\gamma)\rho_0(\gamma)^{-1} \\
+  &=& (vl)\tau(\gamma)(vl)^{-1}\rho_0(\gamma)^{-1} \\
+  &=& (vl)\tau(\gamma)l^{-1}\rho_0(\gamma)^{-1}\rho_0(\gamma)v^{-1}\rho_0(\gamma)^{-1} \\
+  &=& v\alpha_{l\cdot\tau}(\gamma)(\gamma\cdot v^{-1}) 
+\end{eqnarray*}
+
+Hence $\tilde{H}$ is well-defined. 
 
 We are now ready to state the two main results of this chapter, which will reduce K\"ulshammer's second question to another question about 1-cohomologies.
 
