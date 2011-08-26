@@ -70,169 +70,159 @@ So by Theorem \ref{finiteGCR}, if we have infinitely many $G$-conjugacy classes 
 	The converse is trivial.
 \end{proof}
 
-Although $G$ has infinitely many parabolic subgroups there are only finitely many $G$-conjugacy classes of parabolic subgroups, so we can choose a finite set $\{Q_i\}$ of representatives. We choose this particular set by fixing a maximal torus $T<G$ and a Borel subgroup $B<G$ containing $T$. Then a set of representative parabolic subgroups of $G$ can be sought via the root system of $G$ with respect to $T$. For each $Q_i$ there is a corresponding Levi subgroup $M_i<Q_i$ containing $B$. By Theorem \ref{finiteGCR} there are only finitely many $M_i$-conjugacy classes of $M_i$-irreducible representations $\sigma_{0, i}:\Gamma\rightarrow M_i$, and we fix a finite set of representatives $\{\sigma^{j_i}_{0,i}\}$. 
+Although $G$ has infinitely many parabolic subgroups there are only finitely many $G$-conjugacy classes of parabolic subgroups, so we can choose a finite set $\{Q_i\}$ of representatives. We choose this particular set by fixing a maximal torus $T<G$ and a Borel subgroup $B<G$ containing $T$. Then a set of representative parabolic subgroups of $G$ can be sought via the root system of $G$ with respect to $T$. For each $Q_i$ there is a corresponding Levi subgroup $M_i<Q_i$ containing $B$. By Theorem \ref{finiteGCR} there are only finitely many $M_i$-conjugacy classes of $M_i$-irreducible representations $\Gamma \rightarrow M_i$ so we can fix a finite set of representatives $\{\sigma^j_{M_i}\}$. 
 
 Let $V_i = R_u(Q_i)$ be the unipotent radical of $Q_i$, so that $Q_i = V_i \rtimes M_i$. We define the projection $\pi_i:Q_i \rightarrow M_i$ by $\pi_i(q) = m$, where $q = vm \in Q_i$, $v\in V_i$, $m\in M_i$.
 
 We will show that for each representation $\rho:\Gamma\rightarrow G$ there exists an element $g\in G$ such that the representation $\sigma = g\cdot\rho$ fits one of only finitely many commutative diagrams of the following form, determined by the indices $i,j$:
 \begin{displaymath}
 	\xymatrix{
-	\Gamma \ar[r]^{\sigma} \ar[rd]_{\sigma^{j_i}_{0,i}} & Q_i \ar[d]^{\pi_i}\\
+	\Gamma \ar[r]^{\sigma} \ar[rd]_{\sigma^j_{M_i}} & Q_i \ar[d]^{\pi_i}\\
 	& M_i}
 \end{displaymath}
 We call this construction a \emph{standard commutative diagram} for $\rho$.
 
 Let $\rho:\Gamma\rightarrow G$ be a representation and let $P$ be a minimal parabolic subgroup of $G$ containing $\rho(\Gamma)$. Then there is an element $h\in G$ such that $hPh^{-1} = Q_i$ for some $i$. Let $\rho' = h\cdot \rho$. 
 
-Define $\rho'_0:\Gamma\rightarrow M_i$ by $\rho_0 = \pi_i \circ \rho'$. Since $Q_i$ is a minimal parabolic subgroup containing $\rho'(\Gamma)$, $\rho'_0$ is $M_i$-irreducible [reference]. Hence there exists an $m\in M_i$ such that
+Since $Q_i$ is a minimal parabolic subgroup containing $(\pi_i \circ \rho)(\Gamma)$, $\rho'_0$ is $M_i$-irreducible [reference]. Hence there exists an $m\in M_i$ such that
 \begin{displaymath}
-	m\cdot \rho'_0 = \sigma^{j_i}_{0,i}, 
+	m\cdot \rho'_0 = \sigma^j_{M_i}, 
 \end{displaymath}
 for some $j$. Let $g=mh\in G$ and define $\sigma = g\cdot \rho$. This verifies what we set out to show.
 
 It is worth pointing out that the element $g\in G$ and the minimal parabolic $P<G$ used in the construction are not necessarily unique, hence the qualifier ``\emph{a} standard commutative diagram''. As an extreme example, if $\rho$ is the trivial representation then $\rho$ has minimal parabolic $P=B$, and any $g\in G$ could be used to conjugate $\rho(\Gamma)$ into $Q_i=B$. [Example of more than one minimal parabolic?]
 
-For a given parabolic subgroup $P$ of $G$ with Levi subgroup $L$ and unipotent radical $V$, and a given representation $\rho:\Gamma\rightarrow P$ we have a map $\rho_0:\Gamma\rightarrow L$ defined $\rho_0 = \pi \circ \rho$. Now define $\alpha_\rho:\Gamma\rightarrow V$ by $\alpha_\rho(\gamma) = \rho(\gamma)\rho_0(\gamma)^{-1}$ for all $\gamma\in\Gamma$, so that $\rho = \alpha_\rho\rho_0$.
+For a given parabolic subgroup $P$ of $G$ with Levi subgroup $L$ and unipotent radical $V$, and a given representation $\rho:\Gamma\rightarrow P$ we have a map $\rho_L:\Gamma\rightarrow L$ defined by $\rho_L = \pi \circ \rho$. Now define $\alpha_\rho:\Gamma\rightarrow V$ by $\alpha_\rho(\gamma) = \rho(\gamma)\rho_L(\gamma)^{-1}$ for all $\gamma\in\Gamma$, so that $\rho = \alpha_\rho\rho_L$.
 
 If $\rho$ is a homomorphism then
 \begin{eqnarray*}
-	\alpha_\rho(\gamma_1\gamma_2)\rho_0(\gamma_1\gamma_2) \,=\, \rho(\gamma_1\gamma_2) 
+	\alpha_\rho(\gamma_1\gamma_2)\rho_L(\gamma_1\gamma_2) \,=\, \rho(\gamma_1\gamma_2) 
 		&=& \rho(\gamma_1)\rho(\gamma_2) \\
-		&=& \alpha_\rho(\gamma_1)\rho_0(\gamma_1)\alpha_\rho(\gamma_2)\rho_0(\gamma_2) \\
-		&=& \alpha_\rho(\gamma_1)\rho_0(\gamma_1)\alpha_\rho(\gamma_2)\rho_0(\gamma_1)^{-1}\rho_0(\gamma_1)\rho_0(\gamma_2)\\
-		&=&\alpha_\rho(\gamma_1)\rho_0(\gamma_1)\alpha_\rho(\gamma_2)\rho_0(\gamma_1)^{-1}\rho_0(\gamma_1\gamma_2),
+		&=& \alpha_\rho(\gamma_1)\rho_L(\gamma_1)\alpha_\rho(\gamma_2)\rho_L(\gamma_2) \\
+		&=& \alpha_\rho(\gamma_1)\rho_L(\gamma_1)\alpha_\rho(\gamma_2)\rho_L(\gamma_1)^{-1}\rho_L(\gamma_1)\rho_L(\gamma_2)\\
+		&=&\alpha_\rho(\gamma_1)\rho_L(\gamma_1)\alpha_\rho(\gamma_2)\rho_L(\gamma_1)^{-1}\rho_L(\gamma_1\gamma_2),
 \end{eqnarray*}
 so that
 \begin{eqnarray*}
 	\alpha_\rho(\gamma_1\gamma_2) &=&
-	\alpha_\rho(\gamma_1)\rho_0(\gamma_1)\alpha_\rho(\gamma_2)\rho_0(\gamma_1)^{-1}\\
+	\alpha_\rho(\gamma_1)\rho_L(\gamma_1)\alpha_\rho(\gamma_2)\rho_L(\gamma_1)^{-1}\\
 	&=& \alpha_\rho(\gamma_1)\,\left(\gamma_1\cdot\alpha_\rho(\gamma_2)\right),
 \end{eqnarray*}
-where $\Gamma$ acts on $V$ by conjugation via $\rho_0$. Therefore $\alpha_\rho$ satisfies the (multiplicative) 1-cocycle condition in (\ref{theNonabOneCocycleCondition}) and so $\alpha_\rho\in Z^1(\Gamma, \rho_0, V)$. 
+where $\Gamma$ acts on $V$ by conjugation via $\rho_L$. Therefore $\alpha_\rho$ satisfies the (multiplicative) 1-cocycle condition in (\ref{theNonabOneCocycleCondition}) and so $\alpha_\rho\in Z^1(\Gamma, \rho_L, V)$. 
 
-Conversely given a 1-cocycle $\alpha\in Z^1(\Gamma, \rho_0, V)$ we can construct a representation $\rho:\Gamma\rightarrow P$ defined $\rho(\gamma) = \alpha(\gamma)\rho_0(\gamma)$ for all $\gamma\in \Gamma$, hence the following Lemma:
+Conversely given a 1-cocycle $\alpha\in Z^1(\Gamma, \rho_L, V)$ we can construct a representation $\rho:\Gamma\rightarrow P$ by $\rho(\gamma) = \alpha(\gamma)\rho_L(\gamma)$ for all $\gamma\in \Gamma$.
 
-\begin{lemma}\label{bijCor} Given a representation $\rho:\Gamma\rightarrow P$, define $Hom(\Gamma, P)_{\rho_0}$ to be the set of representations $\sigma:\Gamma\rightarrow P$ such that $\sigma_0 = \rho_0$. The map $h:Hom(\Gamma, P)_{\rho_0} \rightarrow Z^1(\Gamma, \rho_0, V)$ defined
-\begin{displaymath}
-	h(\sigma) = \gamma \mapsto \sigma(\gamma)\rho_0(\gamma)^{-1},\qquad \forall \gamma\in\Gamma
-\end{displaymath}
-is bijective.
+Given a representation $\rho:\Gamma\rightarrow P$, define $Hom(\Gamma, P)_{\rho_L}$ to be the set of representations $\sigma:\Gamma\rightarrow P$ such that $\sigma_L = \rho_L$. We formalise the above findings in the following Lemma:
+
+\begin{lemma}
+  The map $h:Hom(\Gamma, P)_{\rho_L} \rightarrow Z^1(\Gamma, \rho_L, V)$ defined by
+  \begin{displaymath}
+    (h(\sigma))(\gamma) = \sigma(\gamma)\rho_L(\gamma)^{-1},
+  \end{displaymath}
+  is bijective.
+  \label{lem:hom_z1}
 \end{lemma}
 
-For ease of notation we will often write $h(\sigma)$ as $\alpha_\sigma$.
+For ease of notation we will often write $h(\sigma)$ as $\alpha_\sigma$. 
 
-Recall (\ref{equivalentOneCocycles}) the equivalence on 1-cocycles $\alpha\in Z^1(\Gamma, \rho_0, V)$, the collection of such equivalence classes being the 1-cohomology $H^1(\Gamma, \rho_0, V)$. We will show that this equivalence corresponds to $V$-conjugacy in $Hom(\Gamma, P)_{\rho_0}$, that is, the following diagram is commutative:
-\begin{displaymath}
-	\xymatrix{
-		Hom(\Gamma, P)_{\rho_0} \ar[r]^h \ar[d] & Z^1(\Gamma, \rho_0, V)\ar[d] \\
-		Hom(\Gamma, P)_{\rho_0}/V \ar[r]^{H} & H^1(\Gamma, \rho_0, V),
-	}
-\end{displaymath}
-and the newly defined map $\overline{h}$ is also bijective.
+Let $v \in V$ and $\sigma \in Hom(\Gamma, P)_{\rho_L}$. Since $L$ normalizes $V$, $\pi \circ (v \cdot \sigma) = \sigma_L = \rho_L$ and so $v \cdot \sigma \in Hom(\Gamma, P)_{\rho_L}$. Thus $V$ acts on $Hom(\Gamma, P)_{\rho_L}$. We show that $h$ gives rise to a bijective map $\bar{h}: Hom(\Gamma,P)_{\rho_{0}}/V\rightarrow H^{1}(\Gamma, \rho_{0}, V)$.
 
-Take $\sigma,\tau\in Hom(\Gamma, P)_{\rho_0}$ such that $\sigma = v\cdot\tau$ for some fixed $v\in V$. Then for all $\gamma\in \Gamma$
-\begin{eqnarray*}
-	\alpha_\sigma(\gamma) &=& \sigma(\gamma)\rho_0(\gamma)^{-1}\\
-	&=& v\tau(\gamma)v^{-1}\rho_0(\gamma)^{-1}\\
-	&=& v\tau(\gamma)\rho_0(\gamma)^{-1}\rho_0(\gamma)v^{-1}\rho_0(\gamma)^{-1}\\
-	&=& v\tau(\gamma)\rho_0(\gamma)^{-1}(\gamma\cdot v^{-1})\\
-	&=& v\alpha_\tau(\gamma)(\gamma\cdot v^{-1}).
-\end{eqnarray*}
-Hence by (\ref{equivalentOneCocycles}) $\alpha_\sigma$ and $\alpha_\tau$ belong to the same 1-cohomology class. This proves $\overline{h}$ is well-defined. The argument can be run in reverse and since $h$ is bijective, $\overline{h}$ is also. This satisfies our assertions.
-
-Take an element $g\in G$. We can conjugate $\sigma\in Hom(\Gamma, P)_{\rho_0}$ by $g$ to get an element $g\cdot\sigma\in Hom(\Gamma, gPg^{-1})_{g\cdot\rho_0}$ and $h(g\cdot\sigma) = \alpha_{g\cdot\sigma}\in Z^1(\Gamma, g\cdot\rho_0, gVg^{-1})$.
-
-If $g\in P$ then $gPg^{-1} = P$ and $gVg^{-1} = V$ so conjugating gives rise to the map $Hom(\Gamma, P)_{\rho_0}\rightarrow Hom(\Gamma, P)_{g\cdot\rho_0}$ and $Z^1(\Gamma, \rho_0, V)\rightarrow Z^1(\Gamma, g\cdot\rho_0, V)$ under $h$. 
-
-Furthermore, if $g\in Z(L)$ then $g\cdot\rho_0 = \rho_0$. Indeed $Z(L)$ acts on $Hom(\Gamma, P)_{\rho_0}$ and also on $Z^1(\Gamma, \rho_0, V)$ via $h$, and the following diagram is commutative:
-\begin{displaymath}
-	\xymatrix{
-		Hom(\Gamma, P)_{\rho_0} \ar[r]^{h} \ar[d] & Z^1(\Gamma, \rho_0, V) \ar[d] \\
-		Hom(\Gamma, P)_{\rho_0}/Z(L) \ar[r]^{\tilde{h}} \ar[d] & Z^1(\Gamma, \rho_0, V)/Z(L) \ar[d] \\
-		Hom(\Gamma, P)_{\rho_0}/VZ(L) \ar[r]^{\tilde{H}} & H^1(\Gamma, \rho_0, V)/Z(L)
-	}
-\end{displaymath}
-For, let $\sigma,\tau\in Hom(\Gamma, P)_{\rho_0}$ such that $\sigma = vl\cdot\tau$ for some $v \in V,l\in Z(L)$. Then
-\begin{eqnarray*}
-  \alpha_\sigma(\gamma) &=&  \sigma(\gamma)\rho_0(\gamma)^{-1} \\
-  &=& (vl)\tau(\gamma)(vl)^{-1}\rho_0(\gamma)^{-1} \\
-  &=& (vl)\tau(\gamma)l^{-1}\rho_0(\gamma)^{-1}\rho_0(\gamma)v^{-1}\rho_0(\gamma)^{-1} \\
-  &=& v\alpha_{l\cdot\tau}(\gamma)(\gamma\cdot v^{-1}) 
-\end{eqnarray*}
-
-Hence $\tilde{H}$ is well-defined. 
-
-We are now ready to state the two main results of this chapter, which will reduce K\"ulshammer's second question to another question about 1-cohomologies.
-
-\begin{lemma}\label{PConjIsHOne} Let $R=\{\rho_\lambda:\Gamma\rightarrow P\, |\, \lambda \in \Lambda\}$ be a collection of representations indexed by the set $\Lambda$, $P$ a fixed parabolic subgroup of $G$. Then $R$ is contained a finite union of $G$-conjugacy classes if and only if each $H^1(\Gamma, V_i)/Z(M_i)^\circ$ arising from the standard commutative diagrams for each element of $R$ has only finitely many elements.
+\begin{lemma}
+  The following diagram is commutative:
+  \begin{displaymath}
+    \xymatrix{
+    Hom(\Gamma, P)_{\rho_{0}} \ar[r]^h \ar[d] & Z^{1}(\Gamma, \rho_L, V) \ar[d] \\
+    Hom(\Gamma, P)_{\rho_{0}}/V \ar[r]^{\bar{h}} & H^{1}(\Gamma, \rho_L, V).
+    }
+  \end{displaymath}
+  Furthermore, $\bar{h}$ is bijective.
+  \label{lem:v_h1}
 \end{lemma}
-\begin{proof}
-	Suppose $R^G$ is a finite union of $G$-conjugacy classes. By Lemma \ref{GIsPConj} $R^G$ is a finite union of $P$-conjugacy classes, so there is a finite subset $S\subset R^G$ such that
-	\begin{displaymath}
-		R^G = \bigcup_{\rho \in S}\{p\rho p^{-1}\,|\,\forall p\in P\} = S^P.
-	\end{displaymath}
-	Take two elements $\sigma$ and $\tau$ from one of the $P$-conjugacy classes of $S$ such that $\sigma$ and $\tau$ have the same standard commutative diagram:
-	\begin{displaymath}
-		\sigma',\tau':\xymatrix{
-			\Gamma \ar[r] \ar[rd]_{\rho_0} & Q \ar[d]\\
-		& M},
-	\end{displaymath}
-	where $\sigma' = g\cdot\sigma$ and $\tau' = h\cdot\tau$ for some $g, h\in G$. Suppose $P_1,P_2<P$ are minimal parabolic subgroups containing $\sigma(\Gamma), \tau(\Gamma)$ respectively. Then
-	\begin{eqnarray*}
-		gph^{-1}Qhp^{-1}g^{-1} &=& gpP_2p^{-1}g^{-1} \\
-		&=& gP_1g^{-1} \\
-		&=& Q,
-	\end{eqnarray*}
-	so that $gph^{-1}\in N_G(Q) = Q$, and
-	\begin{eqnarray*}
-		gph^{-1}\cdot\tau' &=& gp\cdot \tau \\
-		&=& g\cdot \sigma \\
-		&=& \sigma'.
-	\end{eqnarray*}
-	Hence $\sigma'$ and $\tau'$ are $Q$-conjugate so we can find elements $v\in V = R_u(Q)$ and $m\in M$ such that
-	\begin{displaymath}
-		\sigma' = (vm)\cdot\tau'.
-	\end{displaymath}
-	The standard commutative diagrams are the same so $\rho_0 = m\cdot\rho_0$, which implies $m\in C_M(\rho_0(\Gamma))$. Furthermore, since $\rho_0(\Gamma)$ is $M$-irreducible, $C_M(\rho_0(\Gamma))$ is a finite extension of $Z(M)^\circ$.
-	
-	Therefore $m = z_ic$ where $z_i$ is one of the finitely many coset representatives for $C_M(\rho_0(\Gamma))/Z(M)^\circ$ and $c\in Z(M)^\circ$.
-	
-	If $z_i$ is the identity element then $\sigma' = (vc)\cdot\tau'$, that is
-	\begin{eqnarray*}
-		\alpha_\sigma(\gamma)\rho_0(\gamma) &=& vc\alpha_\tau(\gamma)\rho_0(\gamma)(vc)^{-1} \\
-		\Rightarrow \alpha_\sigma(\gamma) &=& vc\alpha_\tau(\gamma)\rho_0(\gamma)(vc)^{-1}\rho_0(\gamma)^{-1} \\
-		&=& vc\alpha_\tau(\gamma)c^{-1}\rho_0(\gamma)v^{-1}\rho_0(\gamma)^{-1} \\
-		&=& (vc)\alpha_\tau(\gamma)\, \gamma\cdot(vc)^{-1} \\
-		&=& v\alpha_\tau(\gamma)\, \gamma\cdot v^{-1}
-	\end{eqnarray*}
-		
+\begin{proof}  
+  Take $\sigma,\tau\in Hom(\Gamma, P)_{\rho_L}$ such that $\sigma = v\cdot\tau$ for some fixed $v\in V$. Then for all $\gamma\in \Gamma$
+  \begin{eqnarray*}
+    \alpha_\sigma(\gamma) &=& \sigma(\gamma)\rho_L(\gamma)^{-1}\\
+    &=& v\tau(\gamma)v^{-1}\rho_L(\gamma)^{-1}\\
+    &=& v\tau(\gamma)\rho_L(\gamma)^{-1}\rho_L(\gamma)v^{-1}\rho_L(\gamma)^{-1}\\
+    &=& v\tau(\gamma)\rho_L(\gamma)^{-1}(\gamma\cdot v^{-1})\\
+    &=& v\alpha_\tau(\gamma)(\gamma\cdot v^{-1}).
+  \end{eqnarray*}
+  Hence $\alpha_\sigma$ and $\alpha_\tau$ belong to the same 1-cohomology class. This proves $\overline{h}$ is well-defined. 
+  
+  Conversely, let $\alpha_\sigma, \alpha_\tau \in Z^1(\Gamma, \rho_L, V)$ belong to the same 1-cohomology class, so there exists a $v \in V$ such that
+  \begin{displaymath}
+    \alpha_\sigma(\gamma) = v \alpha_\tau(\gamma)(\gamma \cdot v^{-1}).
+  \end{displaymath}
+  Then the corresponding representations $\sigma, \tau:\Gamma \rightarrow P$ are $V$-conjugate:
+  \begin{eqnarray*}
+    \sigma(\gamma) &=&  \alpha_\sigma(\gamma)\rho_L(\gamma) \\
+    &=& v \alpha_\tau(\gamma)(\gamma \cdot v^{-1}) \rho_L(\gamma) \\
+    &=& v \alpha_\tau(\gamma)\rho_L(\gamma) v^{-1} \rho_L(\gamma)^{-1} \rho_L(\gamma) \\
+    &=& v \cdot \tau(\gamma).
+  \end{eqnarray*}
+  Therefore $\bar{h}^{-1}$ is well-defined, so $\bar{h}$ is a bijection.
 \end{proof}
 
+In general, take an element $g\in G$. We can conjugate $\sigma\in Hom(\Gamma, P)_{\rho_L}$ by $g$ to get an element $g\cdot\sigma\in Hom(\Gamma, gPg^{-1})_{g\cdot\rho_L}$ and $h(g\cdot\sigma) = \alpha_{g\cdot\sigma}\in Z^1(\Gamma, g\cdot\rho_L, gVg^{-1})$.
 
+If $g\in P$ then $g=vl$ for some $v\in V$ and some $l\in L$, and since $gPg^{-1} = P$ and $gVg^{-1} = V$, conjugating gives rise to the maps $Hom(\Gamma, P)_{\rho_L}\rightarrow Hom(\Gamma, P)_{l\cdot\rho_L}$ and $Z^1(\Gamma, \rho_L, V)\rightarrow Z^1(\Gamma, l\cdot\rho_L, V)$.
 
-Let $R$ be a collection of representations $\Gamma \rightarrow G$ whose restrictions to $\Gamma_p$ belong to some fixed class. Let $\sigma\in R$, then $\sigma|_{\Gamma_p}$ and $\sigma^{j_i}_{0,i}|_{\Gamma_p}$ are conjugate. We have a 1-cocycle $\alpha$ corresponding to $\sigma$, while $\sigma_{0,j}^{(i)}$ corresponds to the trivial 1-cocycle. Hence $\alpha|_{\Gamma_p}$ is conjugate to the trivial 1-cocycle, that is, $\alpha|_{\Gamma_p}$ is a 1-coboundary. 
+If $l\in Z(L)$ then $l\cdot\rho_L = \rho_L$. Indeed $VZ(L)$ acts on $Hom(\Gamma, P)_{\rho_L}$ and also on $Z^1(\Gamma, \rho_L, V)$ via $h$. Furthermore, we see from Lemma \ref{lem:v_h1} that $V$ acts trivially on $H^1(\Gamma, \rho_L, V)$.
 
-% Suppose we are given a representation $\rho:\Gamma\rightarrow G$. Let $P<G$ be the minimal parabolic subgroup of $G$ containing $\rho(\Gamma)$ and let $g$ be the element of $G$ such that $P=g\cdot Q$ where $Q$ is one of the fixed parabolics $\{Q_i\}$. Let $\rho'=g\cdot\rho$.
-% 
-% Choose a Levi subgroup $L<Q$, so that $Q = R_u(Q)\rtimes L$. 
-% 
-% Since $Q$ is the minimal parabolic containing $\rho'(\Gamma)$, $\rho_0$ must be $L$-irreducible. For if $\rho_0(\Gamma)$ is contained in a proper parabolic subgroup of $L$ \ldots
-% 
-% Hence $\rho_0$ is also $L$-completely reducible. By [Theorem] there are only finitely many $L$-conjugacy classes of the given $\rho_0$.
-% 
-% So for each representation $\Gamma\rightarrow G$ we can choose a $Q$ from a finite set of parabolic subgroups of $G$, with corresponding Levi subgroup $L$, and $\rho_0':\Gamma\rightarrow G$ such that the $G$-conjugacy class containing the given representation has representative $\rho'$ \ldots
-
-
-
-\begin{lemma}\label{kToHOne} Let $\Gamma$ be a finite (or algebraic) group and $G$ be an algebraic group over an algebraically closed field $k$ of characteristic $p$. Let $V_i = R_u(P_i)$ for each representative parabolic subgroup $P_i<G$. The answer to (the algebraic version of) K\"ulshammer's second question is positive if and only if the map
-	\begin{displaymath}
-		H^1(\Gamma, V_i) \rightarrow H^1(\Gamma_p, V_i)
-	\end{displaymath}
-	is injective.
+\begin{lemma}
+  The $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}$ and $Z^1(\Gamma, \rho_L, V)$ descends to a $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}/V$ and $H^1(\Gamma, \rho_L, V)$.
+  \label{lem:vzl_h1zl}
 \end{lemma}
 \begin{proof}
-	The proof.
+  We show that $\bar{h} : Hom(\Gamma, P)_{\rho_L}/V \rightarrow H^1(\Gamma, \rho_L, V)$ is $Z(L)$-equivariant, which means the map $\tilde{h} : Hom(\Gamma, P)_{\rho_L}/VZ(L) \rightarrow H^1(\Gamma, \rho_L, V)/Z(L)$ is well-defined. This follows quickly from the fact that the $Z(L)$-action on $Z^1(\Gamma, \rho_L, V)$ is defined by $h$, so that $h$ is automatically $Z(L)$-equivariant. To this end, let $z \in Z(L)$ $\sigma V \in Hom(\Gamma, P)_{\rho_L}/V$. Then
+  \begin{displaymath}
+    \bar{h}(z \cdot \sigma V) = (h(z \cdot \sigma))V = (z \cdot h(\sigma)) V = z \cdot \bar{h}(\sigma V).
+  \end{displaymath}
 \end{proof}
+
+\begin{lemma}
+  Let $R = \{\rho_\lambda:\Gamma\rightarrow P\,|\,\lambda\in\Lambda\}$ be a collection of representations indexed by the set $\Lambda$. Given an irreducible representation $\sigma_L:\Gamma\rightarrow L$ define
+  \begin{displaymath}
+    R_{\sigma_L} = \{\rho \in R\,|\,\rho_L = \sigma_L\}. 
+  \end{displaymath}
+  
+  The following statements are equivalent:
+  \begin{itemize}
+    \item[(i)] $R$ is contained in a finite union of $P$-conjugacy classes.
+    \item[(ii)] For each irreducible representation $\sigma_L:\Gamma\rightarrow L$, $R_{\sigma_L}$ is contained in a finite union of $VZ(L)^\circ$-conjugacy classes.
+    \item[(iii)] For each irreducible representation $\sigma_L:\Gamma\rightarrow L$, if $R_{\sigma_L}$ is nonempty then 
+      \begin{displaymath}
+	H^{1}(\Gamma,\sigma_L,V)/Z(L)^\circ
+      \end{displaymath}
+      is finite.
+  \end{itemize}
+  \label{lem:p_h1}
+\end{lemma}
+\begin{proof}\quad
+
+  $(i) \Rightarrow (ii)$ Assume $R$ is contained in a finite union of $P$-conjugacy classes and fix an irreducible representation $\sigma_L : \Gamma \rightarrow L$. Then $R_{\sigma_L}$ is contained a finite union of $P$-conjugacy classes. Take $\rho \in R_{\sigma_L}$ and suppose that $p \cdot \rho \in R_{\sigma_L}$ for some $p \in P$. Writing $p = vl$ for some $v \in V$ and some $l \in L$, $(vl) \cdot \rho \in R_{\sigma_L}$ implies that in fact $l \in C_L(\sigma_L(\Gamma))$. Furthermore, since $\sigma_L$ is irreducible it follows that $C_L(\sigma_L(\Gamma))/Z(L)^\circ$ is finite [reference], so we can choose a finite set $\{c_1, \ldots, c_m\}$ of coset representatives for $C_L(\sigma_L(\Gamma))/Z(L)^\circ$. Therefore
+  \begin{displaymath}
+    R_{\sigma_L} \cap (P \cdot \rho) \subset \bigcup_{i = 1}^{m} VZ(L)^\circ \cdot \left( c_i \cdot \rho \right).
+  \end{displaymath}
+
+  $(ii) \Rightarrow (iii)$ 
+  
+  $(iii) \Rightarrow (i)$ 
+\end{proof}
+
+\begin{theorem}
+  Let $R=\{\rho_\lambda:\Gamma\rightarrow G\,|\,\lambda \in \Lambda\}$ be a collection of representations indexed by the set $\Lambda$ and define $M_i < Q_i < G$ and $\sigma_{0,i}^{j}$ as in [reference]. Then $R^{G}$ is a finite union of $G$-conjugacy classes if and only if for each $i,j$ the subset of $H^{1}(\Gamma, \sigma_{0,i}^{j}, V_{i})/Z(L)^\circ$ arising from $R$ is finite.
+  \label{thm:g_h1}
+\end{theorem}
+
+\begin{theorem}
+  Let $\Gamma$ be a finite (or algebraic) group and $G$ be an algebraic group over an algebraically closed field $k$ of characteristic $p$. Define $M_i < Q_i < G$ and $\sigma_{0,i}^{j}:\Gamma \rightarrow M_{i}$ as in [reference]. The answer to (the algebraic version of) K\"ulshammer's second question is positive if and only if each map
+  \begin{displaymath}
+    H^{1}(\Gamma, \sigma_{0,i}^{j}, V_{i}) \rightarrow H^{1}(\Gamma_{p}, \sigma_{0,i}^{j}, V_{i})
+  \end{displaymath}
+  is injective.
+  \label{k2_h1}
+\end{theorem}
 
 % \section{An algebraic group version}
 % 
