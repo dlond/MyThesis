@@ -21,10 +21,10 @@ We wish to determine whether there exists a reductive counterexample to (K. II).
 
 We are interested in knowing whether there can be infinitely many $G$-conjugacy classes of representations $\Gamma\rightarrow G$ that when restricted to $\Gamma_p$ hit some fixed $G$-conjugacy class of representations $\Gamma_p\rightarrow G$. A consequence of the following Theorem [reference] is that we will need to study representations into parabolic subgroups $P < G$.
 
-\begin{theorem} \label{finiteGCR} There are only finitely many $G$-conjugacy classes of $G$-completely reducible representations $\Gamma\rightarrow G$.
+\begin{theorem} \label{thm:finiteGCR} There are only finitely many $G$-conjugacy classes of $G$-completely reducible representations $\Gamma\rightarrow G$.
 \end{theorem}
 
-So by Theorem \ref{finiteGCR}, if we have infinitely many $G$-conjugacy classes of representations $\Gamma\rightarrow G$ then infinitely many of those classes must be of non-$G$-completely reducible representations. The following Lemma states that the finiteness of $G$-conjugacy classes of a collection of representations $\Gamma\rightarrow G$ carries over to $P$-conjugacy classes for any parabolic subgroup $P<G$ containing the image of the representations.
+So by Theorem \ref{thm:finiteGCR}, if we have infinitely many $G$-conjugacy classes of representations $\Gamma\rightarrow G$ then infinitely many of those classes must be of non-$G$-completely reducible representations. The following Lemma states that the finiteness of $G$-conjugacy classes of a collection of representations $\Gamma\rightarrow G$ carries over to $P$-conjugacy classes for any parabolic subgroup $P<G$ containing the image of the representations.
 
 \begin{lemma}\label{GIsPConj} Let $R=\{\rho_\lambda:\Gamma\rightarrow P\, |\, \lambda \in \Lambda\}$ be a collection of representations indexed by the set $\Lambda$, $P$ a fixed parabolic subgroup of $G$. Then $R$ is contained in a finite union of $G$-conjugacy classes if and only if it is contained in a finite union of $P$-conjugacy classes.
 \end{lemma}
@@ -70,7 +70,7 @@ So by Theorem \ref{finiteGCR}, if we have infinitely many $G$-conjugacy classes 
 	The converse is trivial.
 \end{proof}
 
-Although $G$ has infinitely many parabolic subgroups there are only finitely many $G$-conjugacy classes of parabolic subgroups, so we can choose a finite set $\{Q_i\}$ of representatives. We choose this particular set by fixing a maximal torus $T<G$ and a Borel subgroup $B<G$ containing $T$. Then a set of representative parabolic subgroups of $G$ can be sought via the root system of $G$ with respect to $T$. For each $Q_i$ there is a corresponding Levi subgroup $M_i<Q_i$ containing $B$. By Theorem \ref{finiteGCR} there are only finitely many $M_i$-conjugacy classes of $M_i$-irreducible representations $\Gamma \rightarrow M_i$ so we can fix a finite set of representatives $\{\sigma^j_{M_i}\}$. 
+Although $G$ has infinitely many parabolic subgroups there are only finitely many $G$-conjugacy classes of parabolic subgroups, so we can choose a finite set $\{Q_i\}$ of representatives. We choose this particular set by fixing a maximal torus $T<G$ and a Borel subgroup $B<G$ containing $T$. Then a set of representative parabolic subgroups of $G$ can be sought via the root system of $G$ with respect to $T$. For each $Q_i$ there is a corresponding Levi subgroup $M_i<Q_i$ containing $B$. By Theorem \ref{thm:finiteGCR} there are only finitely many $M_i$-conjugacy classes of $M_i$-irreducible representations $\Gamma \rightarrow M_i$ so we can fix a finite set of representatives $\{\sigma^j_{M_i}\}$. 
 
 Let $V_i = R_u(Q_i)$ be the unipotent radical of $Q_i$, so that $Q_i = V_i \rtimes M_i$. We define the projection $\pi_i:Q_i \rightarrow M_i$ by $\pi_i(q) = m$, where $q = vm \in Q_i$, $v\in V_i$, $m\in M_i$.
 
@@ -123,9 +123,11 @@ Given a representation $\rho:\Gamma\rightarrow P$, define $Hom(\Gamma, P)_{\rho_
   \label{lem:hom_z1}
 \end{lemma}
 
-For ease of notation we will often write $h(\sigma)$ as $\alpha_\sigma$. 
+For ease of notation we will often write $h(\sigma)$ as $\alpha_\sigma$. Also, since $h$ is bijective we do no harm to use the otherwise suggestive notation $\alpha_\sigma$ when picking elements from $Z^1(\Gamma, \rho_L, V)$.
 
-Let $v \in V$ and $\sigma \in Hom(\Gamma, P)_{\rho_L}$. Since $L$ normalizes $V$, $\pi \circ (v \cdot \sigma) = \sigma_L = \rho_L$ and so $v \cdot \sigma \in Hom(\Gamma, P)_{\rho_L}$. Thus $V$ acts on $Hom(\Gamma, P)_{\rho_L}$. We show that $h$ gives rise to a bijective map $\bar{h}: Hom(\Gamma,P)_{\rho_{0}}/V\rightarrow H^{1}(\Gamma, \rho_{0}, V)$.
+Let $v \in V$ and $\sigma \in Hom(\Gamma, P)_{\rho_L}$. Since $L$ normalizes $V$, $\pi \circ (v \cdot \sigma) = \sigma_L = \rho_L$ and so $v \cdot \sigma \in Hom(\Gamma, P)_{\rho_L}$. Thus $V$ acts on $Hom(\Gamma, P)_{\rho_L}$.
+
+Denote by $\sigma V$ an element of $Hom(\Gamma, P)_{\rho_L}/V$ containing $\sigma \in Hom(\Gamma, P)_{\rho_L}$ and $[\alpha_\sigma]$ an element of $H^1(\Gamma, \rho_L, V)$ containing $\alpha_\sigma \in Z^1(\Gamma, \rho_L, V)$. We show that $h$ gives rise to a bijection $\bar{h}: Hom(\Gamma,P)_{\rho_L}/V\rightarrow H^{1}(\Gamma, \rho_L, V)$.
 
 \begin{lemma}
   The following diagram is commutative:
@@ -139,7 +141,7 @@ Let $v \in V$ and $\sigma \in Hom(\Gamma, P)_{\rho_L}$. Since $L$ normalizes $V$
   \label{lem:v_h1}
 \end{lemma}
 \begin{proof}  
-  Take $\sigma,\tau\in Hom(\Gamma, P)_{\rho_L}$ such that $\sigma = v\cdot\tau$ for some fixed $v\in V$. Then for all $\gamma\in \Gamma$
+  Suppose $\sigma V = \tau V$ for some $\sigma,\tau\in Hom(\Gamma, P)_{\rho_L}$, that is to say $\sigma = v\cdot\tau$ for some $v\in V$. Then for all $\gamma\in \Gamma$
   \begin{eqnarray*}
     \alpha_\sigma(\gamma) &=& \sigma(\gamma)\rho_L(\gamma)^{-1}\\
     &=& v\tau(\gamma)v^{-1}\rho_L(\gamma)^{-1}\\
@@ -147,37 +149,114 @@ Let $v \in V$ and $\sigma \in Hom(\Gamma, P)_{\rho_L}$. Since $L$ normalizes $V$
     &=& v\tau(\gamma)\rho_L(\gamma)^{-1}(\gamma\cdot v^{-1})\\
     &=& v\alpha_\tau(\gamma)(\gamma\cdot v^{-1}).
   \end{eqnarray*}
-  Hence $\alpha_\sigma$ and $\alpha_\tau$ belong to the same 1-cohomology class. This proves $\overline{h}$ is well-defined. 
+  Hence $[h(\sigma)] = [h(\tau)]$ and so $\overline{h}$ is well-defined. 
   
-  Conversely, let $\alpha_\sigma, \alpha_\tau \in Z^1(\Gamma, \rho_L, V)$ belong to the same 1-cohomology class, so there exists a $v \in V$ such that
+  Conversely, suppose $[\alpha_\sigma] = [\alpha_\tau]$ for some $\alpha_\sigma, \alpha_\tau \in Z^1(\Gamma, \rho_L, V)$, so there exists a $v \in V$ such that
   \begin{displaymath}
     \alpha_\sigma(\gamma) = v \alpha_\tau(\gamma)(\gamma \cdot v^{-1}).
   \end{displaymath}
-  Then the corresponding representations $\sigma, \tau:\Gamma \rightarrow P$ are $V$-conjugate:
+  Then the corresponding representations $\sigma, \tau \in Hom(\Gamma, P)_{\rho_L}$ are $V$-conjugate:
   \begin{eqnarray*}
     \sigma(\gamma) &=&  \alpha_\sigma(\gamma)\rho_L(\gamma) \\
     &=& v \alpha_\tau(\gamma)(\gamma \cdot v^{-1}) \rho_L(\gamma) \\
     &=& v \alpha_\tau(\gamma)\rho_L(\gamma) v^{-1} \rho_L(\gamma)^{-1} \rho_L(\gamma) \\
     &=& v \cdot \tau(\gamma).
   \end{eqnarray*}
-  Therefore $\bar{h}^{-1}$ is well-defined, so $\bar{h}$ is a bijection.
+  That is to say $\sigma V = \tau V$ and so $\bar{h}$ is invertible, hence bijective.
 \end{proof}
 
-In general, take an element $g\in G$. We can conjugate $\sigma\in Hom(\Gamma, P)_{\rho_L}$ by $g$ to get an element $g\cdot\sigma\in Hom(\Gamma, gPg^{-1})_{g\cdot\rho_L}$ and $h(g\cdot\sigma) = \alpha_{g\cdot\sigma}\in Z^1(\Gamma, g\cdot\rho_L, gVg^{-1})$.
+More generally, we can conjugate $\sigma\in Hom(\Gamma, P)_{\rho_L}$ by $g \in G$ to get an element 
+\begin{displaymath}
+  g \cdot \sigma \in Hom(\Gamma, gPg^{-1})_{g\cdot\rho_L},
+\end{displaymath}
+and
+\begin{displaymath}
+  \alpha_{g \cdot \sigma} \in Z^1(\Gamma, g\cdot\rho_L, gVg^{-1}),
+\end{displaymath}
+under $h$.
 
-If $g\in P$ then $g=vl$ for some $v\in V$ and some $l\in L$, and since $gPg^{-1} = P$ and $gVg^{-1} = V$, conjugating gives rise to the maps $Hom(\Gamma, P)_{\rho_L}\rightarrow Hom(\Gamma, P)_{l\cdot\rho_L}$ and $Z^1(\Gamma, \rho_L, V)\rightarrow Z^1(\Gamma, l\cdot\rho_L, V)$.
+If $g\in P$ then $g=vl$ for some $v\in V$ and some $l\in L$, and since $gPg^{-1} = P$ and $gVg^{-1} = V$, conjugating gives rise to the maps
+\begin{displaymath}
+  Hom(\Gamma, P)_{\rho_L} \rightarrow Hom(\Gamma, P)_{l\cdot\rho_L},
+\end{displaymath}
+and
+\begin{displaymath}
+  Z^1(\Gamma, \rho_L, V)\rightarrow Z^1(\Gamma, l\cdot\rho_L, V),
+\end{displaymath}
+again, via $h$.
 
-If $l\in Z(L)$ then $l\cdot\rho_L = \rho_L$. Indeed $VZ(L)$ acts on $Hom(\Gamma, P)_{\rho_L}$ and also on $Z^1(\Gamma, \rho_L, V)$ via $h$. Furthermore, we see from Lemma \ref{lem:v_h1} that $V$ acts trivially on $H^1(\Gamma, \rho_L, V)$.
+Furthermore, if $l\in Z(L)$ then $l\cdot\rho_L = \rho_L$. Indeed $Z(L)$ acts on $Hom(\Gamma, P)_{\rho_L}$ and on $Z^1(\Gamma, \rho_L, V)$ in the following way
+\begin{eqnarray*}
+  (z \cdot \sigma) (\gamma) &=& z \sigma(\gamma) z^{-1} \\
+  (z \cdot \alpha_\sigma) (\gamma) &=&  z \sigma_\alpha(\gamma) z^{-1}.
+\end{eqnarray*}
+
+Indeed, $h$ is $Z(L)$-equivariant:
+\begin{eqnarray*}
+  h(z \cdot \sigma)(\gamma) &=&  z \sigma(\gamma) z^{-1} \rho_L(\gamma)^{-1} \\
+  &=& z \sigma(\gamma) \rho_L(\gamma)^{-1} z^{-1} \\
+  &=& z \cdot h(\sigma)(\gamma).
+\end{eqnarray*}
+
+We show that the $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}$ and $Z^1(\Gamma, \rho_L, V)$ descends to give a $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}/V$ and $H^1(\Gamma, \rho_L, V)$, respectively. The actions will be well-defined a consequence of the fact that $L$ normalizes $V$.
+
+Let $z \in Z(L)$ and $\sigma V \in Hom(\Gamma, P)_{\rho_L}$. We define the $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}$ so that the projection to $Hom(\Gamma, P)_{\rho_L}/V$ is $Z(L)$-equivariant:
+\begin{displaymath}
+  z \cdot \sigma V = (z \cdot \sigma) V.
+\end{displaymath}
+
+Suppose $\sigma V = \tau V$. Then there is a $v \in V$ such that $\sigma = v \cdot \tau \in Hom(\Gamma, P)_{\rho_L}$, and a $v' \in V$ such that $zv = v' z$. Therefore
+\begin{eqnarray*}
+  z \cdot \sigma V &=& (z \cdot \sigma)V \\
+  &=& (zv \cdot \tau) V \\
+  &=& (v' z \cdot \tau) V \\
+  &=& (z \cdot \tau) V \\
+  &=& z \cdot \tau V.
+\end{eqnarray*}
+
+Hence the action is well-defined.
+
+Similarly, the $Z(L)$-action on $H^1(\Gamma, \rho_L, V)$ is defined so that the projection to the 1-cohomology is $Z(L)$-equivariant:
+\begin{displaymath}
+  z \cdot [\alpha_\sigma] = [z \cdot \alpha_\sigma].
+\end{displaymath}
+
+Suppose $[\alpha_\sigma] = [\alpha_\tau]$. Then there is a $v \in V$ such that for all $\gamma \in \Gamma$,
+\begin{displaymath}
+  \alpha_\sigma(\gamma) = v \alpha_\tau(\gamma) (\gamma \cdot v^{-1}),
+\end{displaymath}
+and there is a $v' \in V$ such that $zv = v' z$. Therefore, for all $\gamma \in \Gamma$
+\begin{eqnarray*}
+  z \cdot [\alpha_\sigma(\gamma)] &=& [z \cdot \alpha_\sigma(\gamma)] \\
+  &=& [z \cdot (v \alpha_\tau(\gamma) (\gamma \cdot v^{-1}))] \\
+  &=& [z v \alpha_\tau(\gamma) (\rho_L(\gamma) v^{-1} \rho_L(\gamma)^{-1})z^{-1}] \\
+  &=& [v' z \alpha_\tau(\gamma) z^{-1} (\rho_L(\gamma) v'^{-1} \rho_L(\gamma)^{-1})] \\
+  &=& [v' (z \alpha_\tau(\gamma) z^{-1}) (\gamma \cdot v'^{-1})] \\
+  &=& [z \cdot \alpha_\tau(\gamma)] \\
+  &=& z \cdot [\alpha_\tau(\gamma)].
+\end{eqnarray*}
+
+Hence the action is well-defined.
+
+Since $h$ is $Z(L)$-equivariant, it follows that $\bar{h}$ is also:
+\begin{eqnarray*}
+  \bar{h}(z \cdot \sigma V) &=& [\alpha_{z \cdot \sigma}] \\
+  &=& [z \cdot \alpha_\sigma] \\
+  &=& z \cdot [\alpha_\sigma] \\
+  &=& z \cdot \bar{h}(\sigma V).
+\end{eqnarray*}
+
+Hence the following Lemma:
 
 \begin{lemma}
-  The $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}$ and $Z^1(\Gamma, \rho_L, V)$ descends to a $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}/V$ and $H^1(\Gamma, \rho_L, V)$.
+  The bijection $h: Hom(\Gamma, P)_{\rho_L} \rightarrow Z^1(\Gamma, \rho_L, V)$ gives rise to a bijection
+  \begin{displaymath}
+    \tilde{h}: Hom(\Gamma, P)_{\rho_L}/VZ(L) \rightarrow H^1(\Gamma, \rho_L, V)/Z(L).
+  \end{displaymath}
   \label{lem:vzl_h1zl}
 \end{lemma}
 \begin{proof}
-  We show that $\bar{h} : Hom(\Gamma, P)_{\rho_L}/V \rightarrow H^1(\Gamma, \rho_L, V)$ is $Z(L)$-equivariant, which means the map $\tilde{h} : Hom(\Gamma, P)_{\rho_L}/VZ(L) \rightarrow H^1(\Gamma, \rho_L, V)/Z(L)$ is well-defined. This follows quickly from the fact that the $Z(L)$-action on $Z^1(\Gamma, \rho_L, V)$ is defined by $h$, so that $h$ is automatically $Z(L)$-equivariant. To this end, let $z \in Z(L)$ $\sigma V \in Hom(\Gamma, P)_{\rho_L}/V$. Then
-  \begin{displaymath}
-    \bar{h}(z \cdot \sigma V) = (h(z \cdot \sigma))V = (z \cdot h(\sigma)) V = z \cdot \bar{h}(\sigma V).
-  \end{displaymath}
+  It remains to show that $\tilde{h}$ is bijective.
 \end{proof}
 
 \begin{lemma}
@@ -190,9 +269,9 @@ If $l\in Z(L)$ then $l\cdot\rho_L = \rho_L$. Indeed $VZ(L)$ acts on $Hom(\Gamma,
   \begin{itemize}
     \item[(i)] $R$ is contained in a finite union of $P$-conjugacy classes.
     \item[(ii)] For each irreducible representation $\sigma_L:\Gamma\rightarrow L$, $R_{\sigma_L}$ is contained in a finite union of $VZ(L)^\circ$-conjugacy classes.
-    \item[(iii)] For each irreducible representation $\sigma_L:\Gamma\rightarrow L$, if $R_{\sigma_L}$ is nonempty then 
+    \item[(iii)] For each irreducible representation $\sigma_L:\Gamma\rightarrow L$,
       \begin{displaymath}
-	H^{1}(\Gamma,\sigma_L,V)/Z(L)^\circ
+	\tilde{h}(R_{\sigma_L}/VZ(L)^\circ) \subset H^{1}(\Gamma,\sigma_L,V)/Z(L)^\circ
       \end{displaymath}
       is finite.
   \end{itemize}
@@ -205,9 +284,19 @@ If $l\in Z(L)$ then $l\cdot\rho_L = \rho_L$. Indeed $VZ(L)$ acts on $Hom(\Gamma,
     R_{\sigma_L} \cap (P \cdot \rho) \subset \bigcup_{i = 1}^{m} VZ(L)^\circ \cdot \left( c_i \cdot \rho \right).
   \end{displaymath}
 
-  $(ii) \Rightarrow (iii)$ 
-  
-  $(iii) \Rightarrow (i)$ 
+  $(ii) \Rightarrow (i)$ Assume that for each irreducible representation $\sigma_L : \Gamma \rightarrow L$, $R_{\sigma}$ is contained in a finite union of $VZ(L)^\circ$-conjugacy classes. Denote by $Hom(\Gamma, L)_{irr}$ the collection of all irreducible representations from $\Gamma \rightarrow L$. By Theorem \ref{thm:finiteGCR} we can choose a finite set $S \subset Hom(\Gamma, L)_{irr}$ such that
+  \begin{displaymath}
+    Hom(\Gamma, L)_{irr} = \bigcup_{\sigma \in S} L \cdot \sigma.
+  \end{displaymath}
+  Hence 
+  \begin{displaymath}
+    R = \bigcup_{\sigma \in S} \{R_{l \cdot \sigma} \,|\, l \in L \}.
+  \end{displaymath}
+
+  Fix a $\sigma \in S$ and take $\rho_1, \rho_2 \in \{R_{l \cdot \sigma} \,|\, l \in L\}$. Then there exists an $l \in L$ such that $\rho_1, l \cdot \rho_2 \in R_{\sigma_L}$ for some $\sigma_L \in Hom(\Gamma, L)_{irr}$. Since we assumed there are only finitely many $VZ(L)^\circ$-conjugacy classes of $R_{\sigma_L}$ we may assume $\rho_1$ and $l \cdot \rho_2$ are $VZ(L)^\circ$-conjugate. Hence $\rho_1$ and $\rho_2$ are $P$-conjugate.
+
+  $(ii) \Leftrightarrow (iii)$ This follows directly from the fact that $\tilde{h}$ is a bijection (Lemma \ref{lem:vzl_h1zl}).
+
 \end{proof}
 
 \begin{theorem}

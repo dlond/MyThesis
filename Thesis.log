@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  26 AUG 2011 17:23
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  4 OCT 2011 22:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -788,20 +788,20 @@ Chapter 4.
 ------------------------------------------------------------------------------
 [19
 
-] [20] <xymatrix 2x2 141> [21] [22] <xymatrix 2x2 168> [23] [24])
-(./Chapters/Chapter5.tex [25]
+] [20] <xymatrix 2x2 141> [21] [22] <xymatrix 2x2 168> [23] [24] [25]
+[26]) (./Chapters/Chapter5.tex [27]
 Chapter 5.
 ------------------------------------------------------------------------------
  5 1-Cohomology Calculation
 ------------------------------------------------------------------------------
-[26
+[28
 
-] [27]
+] [29]
 Overfull \hbox (5.91562pt too wide) in alignment at lines 93--158
  [][][] []
  []
 
-[28] [29] [30] [31] [32] [33] [34]
+[30] [31] [32] [33] [34] [35] [36]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 516.
 
 
@@ -810,54 +810,54 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 516.
- [35] [36]
+ [37] [38]
 Overfull \hbox (38.32626pt too wide) in alignment at lines 625--675
  [][][] []
  []
 
-[37] [38]
+[39] [40]
 Overfull \hbox (46.36978pt too wide) in alignment at lines 715--755
  [][][] []
  []
 
-[39] [40]
+[41] [42]
 Overfull \hbox (0.7248pt too wide) in paragraph at lines 845--846
 []\OT1/cmr/m/n/10.95 If we are to find a non-trivial 1-cohomology $\OML/cmm/m/i
 t/10.95 H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 SL[]; V\OT1/cmr/m/n/10.95 )$
  then $\OML/cmm/m/it/10.95 ^^[$ \OT1/cmr/m/n/10.95 can-not be a 1-coboundary.
  []
 
-[41]
+[43]
 Overfull \hbox (5.76404pt too wide) in alignment at lines 896--958
  [][][] []
  []
 
-[42] [43]
+[44] [45]
 Overfull \hbox (49.75233pt too wide) in alignment at lines 1001--1065
  [][][] []
  []
 
-[44] [45]
+[46] [47]
 Overfull \hbox (35.89026pt too wide) in alignment at lines 1142--1154
  [][][] []
  []
 
-[46]
+[48]
 Overfull \hbox (16.7704pt too wide) in alignment at lines 1195--1226
  [][][] []
  []
 
-[47] [48] [49] [50]
+[49] [50] [51] [52]
 Overfull \hbox (5.76404pt too wide) in alignment at lines 1391--1453
  [][][] []
  []
 
-[51]
+[53]
 Overfull \hbox (49.75233pt too wide) in alignment at lines 1458--1513
  [][][] []
  []
 
-[52] [53] [54]
+[54] [55] [56]
 Overfull \hbox (9.34364pt too wide) in paragraph at lines 1573--1581
 \OML/cmm/m/it/10.95 ^^O[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]\OT1/cmr/m/
 n/10.95 )\OML/cmm/m/it/10.95 ^^O[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]\O
@@ -872,65 +872,65 @@ m/m/it/10.95 ^^O[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95
  )[] 
  []
 
-[55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68])
-(./Chapters/Chapter7.tex [69]
+[57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70])
+(./Chapters/Chapter7.tex [71]
 Chapter 6.
 ------------------------------------------------------------------------------
  6 Conclusion
 ------------------------------------------------------------------------------
-) (./Appendices/AppendixA.tex [70
+) (./Appendices/AppendixA.tex [72
 
 ]
 Appendix A.
 ------------------------------------------------------------------------------
  A Further Calculations
 ------------------------------------------------------------------------------
-) (./Appendices/AppendixB.tex [71
+) (./Appendices/AppendixB.tex [73
 
 ]
 Appendix B.
 ------------------------------------------------------------------------------
  B Source Code
 ------------------------------------------------------------------------------
-) (./Appendices/AppendixC.tex [72
+) (./Appendices/AppendixC.tex [74
 
 ]
 Appendix C.
 ------------------------------------------------------------------------------
  C Rank 2 Root System Diagrams
 ------------------------------------------------------------------------------
-<Figures/a1a1.png, id=638, 1003.75pt x 1003.75pt>
+<Figures/a1a1.png, id=647, 1003.75pt x 1003.75pt>
 File: Figures/a1a1.png Graphic file (type png)
  <use Figures/a1a1.png>
 Package pdftex.def Info: Figures/a1a1.png used on input line 9.
 (pdftex.def)             Requested size: 331.23853pt x 331.23853pt.
 
-<Figures/a2.png, id=640, 1003.75pt x 1003.75pt>
+<Figures/a2.png, id=649, 1003.75pt x 1003.75pt>
 File: Figures/a2.png Graphic file (type png)
  <use Figures/a2.png>
 Package pdftex.def Info: Figures/a2.png used on input line 13.
 (pdftex.def)             Requested size: 331.23853pt x 331.23853pt.
- [73
+ [75
 
- <./Figures/a1a1.png>] <Figures/b2.png, id=646, 1003.75pt x 1003.75pt>
+ <./Figures/a1a1.png>] <Figures/b2.png, id=655, 1003.75pt x 1003.75pt>
 File: Figures/b2.png Graphic file (type png)
 
 <use Figures/b2.png>
 Package pdftex.def Info: Figures/b2.png used on input line 17.
 (pdftex.def)             Requested size: 331.23853pt x 331.23853pt.
- <Figures/g2.png, id=647, 1003.75pt x 1003.75pt>
+ <Figures/g2.png, id=656, 1003.75pt x 1003.75pt>
 File: Figures/g2.png Graphic file (type png)
 
 <use Figures/g2.png>
 Package pdftex.def Info: Figures/g2.png used on input line 21.
 (pdftex.def)             Requested size: 331.23853pt x 331.23853pt.
- [74 <./Figures/a2.png> <./Figures/b2.png>]) [75 <./Figures/g2.png>]
+ [76 <./Figures/a2.png> <./Figures/b2.png>]) [77 <./Figures/g2.png>]
 ------------------------------------------------------------------------------
  Bibliography
 ------------------------------------------------------------------------------
 (./Thesis.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 223.
- [76
+ [78
 
 
 ]
@@ -943,8 +943,8 @@ Package rerunfilecheck Info: File `Thesis.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 223.
  ) 
 Here is how much of TeX's memory you used:
- 13549 strings out of 493633
- 186131 string characters out of 3143378
+ 13551 strings out of 493633
+ 186149 string characters out of 3143378
  344490 words of memory out of 3000000
  16402 multiletter control sequences out of 15000+200000
  15754 words of font info for 61 fonts, out of 3000000 for 9000
@@ -972,10 +972,10 @@ exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/20
 /2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/tex
 live/2011/texmf-dist/fonts/type1/public/xypic/xycmat10.pfb></usr/local/texlive/
 2011/texmf-dist/fonts/type1/public/xypic/xycmbt10.pfb>
-Output written on Thesis.pdf (85 pages, 526086 bytes).
+Output written on Thesis.pdf (87 pages, 530920 bytes).
 PDF statistics:
- 776 PDF objects out of 1000 (max. 8388607)
- 652 compressed objects within 7 object streams
- 172 named destinations out of 1000 (max. 500000)
+ 785 PDF objects out of 1000 (max. 8388607)
+ 659 compressed objects within 7 object streams
+ 174 named destinations out of 1000 (max. 500000)
  261 words of extra memory for PDF output out of 10000 (max. 10000000)
 
