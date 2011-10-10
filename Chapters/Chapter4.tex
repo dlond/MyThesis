@@ -110,7 +110,14 @@ so that
 \end{eqnarray*}
 where $\Gamma$ acts on $V$ by conjugation via $\rho_L$. Therefore $\alpha_\rho$ satisfies the (multiplicative) 1-cocycle condition in (\ref{theNonabOneCocycleCondition}) and so $\alpha_\rho\in Z^1(\Gamma, \rho_L, V)$. 
 
-Conversely given a 1-cocycle $\alpha\in Z^1(\Gamma, \rho_L, V)$ we can construct a representation $\rho:\Gamma\rightarrow P$ by $\rho(\gamma) = \alpha(\gamma)\rho_L(\gamma)$ for all $\gamma\in \Gamma$.
+Conversely given a 1-cocycle $\alpha\in Z^1(\Gamma, \rho_L, V)$ we can construct a map $\rho:\Gamma\rightarrow P$ by $\rho(\gamma) = \alpha(\gamma)\rho_L(\gamma)$ for all $\gamma\in \Gamma$. The construction is a homomorphism from $\Gamma \rightarrow P$, for take $\gamma_1, \gamma_2 \in \Gamma$:
+\begin{eqnarray*}
+  \rho(\gamma_1 \gamma_2) &=& \alpha(\gamma_1 \gamma_2) \rho_L(\gamma_1 \gamma_2) \\
+  &=& \alpha(\gamma_1)(\gamma_1 \cdot \alpha(\gamma_2)) \rho_L(\gamma_1) \rho_L(\gamma_2) \\
+  &=& \alpha(\gamma_1) \rho_L(\gamma_1) \alpha(\gamma_2) \rho_L(\gamma_1)^{-1} \rho_L(\gamma_1) \rho_L(\gamma_2) \\
+  &=& \alpha(\gamma_1) \rho_L(\gamma_1) \alpha(\gamma_2) \rho_L(\gamma_2) \\
+  &=& \rho(\gamma_1) \rho(\gamma_2).
+\end{eqnarray*}
 
 Given a representation $\rho:\Gamma\rightarrow P$, define $Hom(\Gamma, P)_{\rho_L}$ to be the set of representations $\sigma:\Gamma\rightarrow P$ such that $\sigma_L = \rho_L$. We formalise the above findings in the following Lemma:
 
@@ -125,23 +132,27 @@ Given a representation $\rho:\Gamma\rightarrow P$, define $Hom(\Gamma, P)_{\rho_
 
 For ease of notation we will often write $h(\sigma)$ as $\alpha_\sigma$. Also, since $h$ is bijective we do no harm to use the otherwise suggestive notation $\alpha_\sigma$ when picking elements from $Z^1(\Gamma, \rho_L, V)$.
 
-Let $v \in V$ and $\sigma \in Hom(\Gamma, P)_{\rho_L}$. Since $L$ normalizes $V$, $\pi \circ (v \cdot \sigma) = \sigma_L = \rho_L$ and so $v \cdot \sigma \in Hom(\Gamma, P)_{\rho_L}$. Thus $V$ acts on $Hom(\Gamma, P)_{\rho_L}$.
+Let $v \in V$ and $\sigma \in Hom(\Gamma, P)_{\rho_L}$. Since $\pi$ kills $V$, $\pi \circ (v \cdot \sigma) = \sigma_L = \rho_L$ and so $v \cdot \sigma \in Hom(\Gamma, P)_{\rho_L}$. Thus $V$ acts on $Hom(\Gamma, P)_{\rho_L}$.
 
-Denote by $\sigma V$ an element of $Hom(\Gamma, P)_{\rho_L}/V$ containing $\sigma \in Hom(\Gamma, P)_{\rho_L}$ and $[\alpha_\sigma]$ an element of $H^1(\Gamma, \rho_L, V)$ containing $\alpha_\sigma \in Z^1(\Gamma, \rho_L, V)$. We show that $h$ gives rise to a bijection $\bar{h}: Hom(\Gamma,P)_{\rho_L}/V\rightarrow H^{1}(\Gamma, \rho_L, V)$.
+Denote by $\overline{\sigma}$ an element of $Hom(\Gamma, P)_{\rho_L}/V$ with a representative element $\sigma \in Hom(\Gamma, P)_{\rho_L}$ and $[\alpha_\sigma]$ an element of $H^1(\Gamma, \rho_L, V)$ with a representative element $\alpha_\sigma \in Z^1(\Gamma, \rho_L, V)$. We show that $h$ gives rise to a bijection $\overline{h}: Hom(\Gamma,P)_{\rho_L}/V\rightarrow H^{1}(\Gamma, \rho_L, V)$ defined by
+\begin{displaymath}
+  \overline{h}(\overline{\sigma}) = [h(\sigma)] = [\alpha_\sigma],
+\end{displaymath}
+for all $\overline{\sigma} \in Hom(\Gamma, P)_{\rho_L}/V$.
 
 \begin{lemma}
   The following diagram is commutative:
   \begin{displaymath}
     \xymatrix{
-    Hom(\Gamma, P)_{\rho_{0}} \ar[r]^h \ar[d] & Z^{1}(\Gamma, \rho_L, V) \ar[d] \\
-    Hom(\Gamma, P)_{\rho_{0}}/V \ar[r]^{\bar{h}} & H^{1}(\Gamma, \rho_L, V).
+    Hom(\Gamma, P)_{\rho_L} \ar[r]^h \ar[d] & Z^{1}(\Gamma, \rho_L, V) \ar[d] \\
+    Hom(\Gamma, P)_{\rho_L}/V \ar[r]^{\overline{h}} & H^{1}(\Gamma, \rho_L, V).
     }
   \end{displaymath}
-  Furthermore, $\bar{h}$ is bijective.
+  Furthermore, $\overline{h}$ is bijective.
   \label{lem:v_h1}
 \end{lemma}
 \begin{proof}  
-  Suppose $\sigma V = \tau V$ for some $\sigma,\tau\in Hom(\Gamma, P)_{\rho_L}$, that is to say $\sigma = v\cdot\tau$ for some $v\in V$. Then for all $\gamma\in \Gamma$
+  Suppose $\overline{\sigma} = \overline{\tau}$ for some $\sigma,\tau\in Hom(\Gamma, P)_{\rho_L}$, that is to say $\sigma = v\cdot\tau$ for some $v\in V$. Then for all $\gamma\in \Gamma$
   \begin{eqnarray*}
     \alpha_\sigma(\gamma) &=& \sigma(\gamma)\rho_L(\gamma)^{-1}\\
     &=& v\tau(\gamma)v^{-1}\rho_L(\gamma)^{-1}\\
@@ -151,10 +162,12 @@ Denote by $\sigma V$ an element of $Hom(\Gamma, P)_{\rho_L}/V$ containing $\sigm
   \end{eqnarray*}
   Hence $[h(\sigma)] = [h(\tau)]$ and so $\overline{h}$ is well-defined. 
   
-  Conversely, suppose $[\alpha_\sigma] = [\alpha_\tau]$ for some $\alpha_\sigma, \alpha_\tau \in Z^1(\Gamma, \rho_L, V)$, so there exists a $v \in V$ such that
+  Since $h$ is onto so is $\overline{h}$. Now take $[\alpha_\sigma] = [\alpha_\tau]$ for some $\alpha_\sigma, \alpha_\tau \in Z^1(\Gamma, \rho_L, V)$. Then there exists a $v \in V$ such that
   \begin{displaymath}
-    \alpha_\sigma(\gamma) = v \alpha_\tau(\gamma)(\gamma \cdot v^{-1}).
+    \alpha_\sigma(\gamma) = v \alpha_\tau(\gamma)(\gamma \cdot v^{-1}),
   \end{displaymath}
+  for all $\gamma \in \Gamma$.
+
   Then the corresponding representations $\sigma, \tau \in Hom(\Gamma, P)_{\rho_L}$ are $V$-conjugate:
   \begin{eqnarray*}
     \sigma(\gamma) &=&  \alpha_\sigma(\gamma)\rho_L(\gamma) \\
@@ -162,7 +175,7 @@ Denote by $\sigma V$ an element of $Hom(\Gamma, P)_{\rho_L}/V$ containing $\sigm
     &=& v \alpha_\tau(\gamma)\rho_L(\gamma) v^{-1} \rho_L(\gamma)^{-1} \rho_L(\gamma) \\
     &=& v \cdot \tau(\gamma).
   \end{eqnarray*}
-  That is to say $\sigma V = \tau V$ and so $\bar{h}$ is invertible, hence bijective.
+  That is to say $\overline{\sigma} = \overline{\tau}$ and so $\overline{h}$ is bijective.
 \end{proof}
 
 More generally, we can conjugate $\sigma\in Hom(\Gamma, P)_{\rho_L}$ by $g \in G$ to get an element 
@@ -188,33 +201,33 @@ again, via $h$.
 Furthermore, if $l\in Z(L)$ then $l\cdot\rho_L = \rho_L$. Indeed $Z(L)$ acts on $Hom(\Gamma, P)_{\rho_L}$ and on $Z^1(\Gamma, \rho_L, V)$ in the following way
 \begin{eqnarray*}
   (z \cdot \sigma) (\gamma) &=& z \sigma(\gamma) z^{-1} \\
-  (z \cdot \alpha_\sigma) (\gamma) &=&  z \sigma_\alpha(\gamma) z^{-1}.
+  (z \cdot \alpha_\sigma) (\gamma) &=&  z \sigma_\alpha(\gamma) z^{-1},
 \end{eqnarray*}
 
-Indeed, $h$ is $Z(L)$-equivariant:
+and $h$ is $Z(L)$-equivariant:
 \begin{eqnarray*}
   h(z \cdot \sigma)(\gamma) &=&  z \sigma(\gamma) z^{-1} \rho_L(\gamma)^{-1} \\
   &=& z \sigma(\gamma) \rho_L(\gamma)^{-1} z^{-1} \\
-  &=& z \cdot h(\sigma)(\gamma).
+  &=& (z \cdot h(\sigma))(\gamma).
 \end{eqnarray*}
 
-We show that the $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}$ and $Z^1(\Gamma, \rho_L, V)$ descends to give a $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}/V$ and $H^1(\Gamma, \rho_L, V)$, respectively. The actions will be well-defined a consequence of the fact that $L$ normalizes $V$.
+We show that the $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}$ and $Z^1(\Gamma, \rho_L, V)$ descends to give a $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}/V$ and $H^1(\Gamma, \rho_L, V)$, respectively. The actions will be well-defined as consequence of the fact that $L$ normalizes $V$.
 
-Let $z \in Z(L)$ and $\sigma V \in Hom(\Gamma, P)_{\rho_L}$. We define the $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}$ so that the projection to $Hom(\Gamma, P)_{\rho_L}/V$ is $Z(L)$-equivariant:
+Let $z \in Z(L)$ and $\overline{\sigma} \in Hom(\Gamma, P)_{\rho_L}/V$. We define the $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}/V$ so that the projection to $Hom(\Gamma, P)_{\rho_L}/V$ is $Z(L)$-equivariant:
 \begin{displaymath}
-  z \cdot \sigma V = (z \cdot \sigma) V.
+  z \cdot \overline{\sigma} = \overline{z \cdot \sigma}.
 \end{displaymath}
 
-Suppose $\sigma V = \tau V$. Then there is a $v \in V$ such that $\sigma = v \cdot \tau \in Hom(\Gamma, P)_{\rho_L}$, and a $v' \in V$ such that $zv = v' z$. Therefore
+Suppose $\overline{\sigma} = \overline{\tau}$. Then there is a $v \in V$ such that $\sigma = v \cdot \tau \in Hom(\Gamma, P)_{\rho_L}$, and a $v' \in V$ such that $zv = v' z$. Therefore
 \begin{eqnarray*}
-  z \cdot \sigma V &=& (z \cdot \sigma)V \\
-  &=& (zv \cdot \tau) V \\
-  &=& (v' z \cdot \tau) V \\
-  &=& (z \cdot \tau) V \\
-  &=& z \cdot \tau V.
+  z \cdot \overline{\sigma} &=& \overline{z \cdot \sigma} \\
+  &=& \overline{zv \cdot \tau} \\
+  &=& \overline{v' z \cdot \tau} \\
+  &=& \overline{z \cdot \tau} \\
+  &=& z \cdot \overline{\tau}.
 \end{eqnarray*}
 
-Hence the action is well-defined.
+Hence the $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}$ is well-defined.
 
 Similarly, the $Z(L)$-action on $H^1(\Gamma, \rho_L, V)$ is defined so that the projection to the 1-cohomology is $Z(L)$-equivariant:
 \begin{displaymath}
@@ -236,15 +249,21 @@ and there is a $v' \in V$ such that $zv = v' z$. Therefore, for all $\gamma \in 
   &=& z \cdot [\alpha_\tau(\gamma)].
 \end{eqnarray*}
 
-Hence the action is well-defined.
+Hence the $Z(L)$-action on $H^1(\Gamma, \rho_L, V)$ is well-defined.
 
-Since $h$ is $Z(L)$-equivariant, it follows that $\bar{h}$ is also:
+Since $h$ is $Z(L)$-equivariant, it follows that $\overline{h}$ is also:
 \begin{eqnarray*}
-  \bar{h}(z \cdot \sigma V) &=& [\alpha_{z \cdot \sigma}] \\
+  \overline{h}(z \cdot \overline{\sigma}) &=& \overline{h}(\overline{z \cdot \sigma}) \\
+  &=& [\alpha_{z \cdot \sigma}] \\
   &=& [z \cdot \alpha_\sigma] \\
   &=& z \cdot [\alpha_\sigma] \\
-  &=& z \cdot \bar{h}(\sigma V).
+  &=& z \cdot \overline{h}(\overline{\sigma}).
 \end{eqnarray*}
+
+In summary we have a well-defined $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}/V$ and $H^1(\Gamma, \rho_L, V)$, and a $Z(L)$-equivariant bijection 
+\begin{displaymath}
+  Hom(\Gamma, P)_{\rho_L} \rightarrow H^1(\Gamma, \rho_L, V).
+\end{displaymath}
 
 Hence the following Lemma:
 
@@ -256,7 +275,16 @@ Hence the following Lemma:
   \label{lem:vzl_h1zl}
 \end{lemma}
 \begin{proof}
-  It remains to show that $\tilde{h}$ is bijective.
+  It remains to show that $\left(Hom(\Gamma, P)_{\rho_L}/V\right)/Z(L) \simeq Hom(\Gamma, P)_{\rho_L}/VZ(L)$. The obvious map will be well-defined since $L$ normalizes $V$.
+
+  Denote by $\pi_Z$ the canonical projection from $Hom(\Gamma, P)_{\rho_L}/V \rightarrow \left( Hom(\Gamma, P)_{\rho_L} \right)/Z(L)$ and $\tilde{\sigma}$ the element of $Hom(\Gamma, P)_{\rho_L}/VZ(L)$ with representative $\sigma \in Hom(\Gamma, P)_{\rho_L}$. Then
+  \begin{eqnarray*}
+    && \pi_Z(\overline{\sigma}) = \pi_Z(\overline{\tau}) \\
+    &\Longleftrightarrow& \textrm{there exists a } z \in Z(L) \textrm{ such that } \overline{\sigma} = z \cdot \overline{\tau} \\
+    &\Longleftrightarrow& \textrm{there exists a } z \in Z(L) \textrm{ such that } \overline{\sigma} = \overline{z \cdot \tau} \\
+    &\Longleftrightarrow& \textrm{there exists a } v \in V \textrm{ and a } z \in Z(L) \textrm{ such that } \overline{\sigma} = z \cdot \overline{\tau} \\
+    &\Longleftrightarrow& \tilde{\sigma} = \tilde{\tau}
+  \end{eqnarray*}
 \end{proof}
 
 \begin{lemma}
