@@ -162,7 +162,7 @@ for all $\overline{\sigma} \in Hom(\Gamma, P)_{\rho_L}/V$.
   \end{eqnarray*}
   Hence $[h(\sigma)] = [h(\tau)]$ and so $\overline{h}$ is well-defined. 
   
-  Since $h$ is onto so is $\overline{h}$. Now take $[\alpha_\sigma] = [\alpha_\tau]$ for some $\alpha_\sigma, \alpha_\tau \in Z^1(\Gamma, \rho_L, V)$. Then there exists a $v \in V$ such that
+  Since $h$ is onto so is $\overline{h}$. Now take $[\alpha_\sigma] = [\alpha_\tau]$ for some $\alpha_\sigma, \alpha_\tau \in Z^1(\Gamma, \rho_L, V)$. Then there exists $v \in V$ such that
   \begin{displaymath}
     \alpha_\sigma(\gamma) = v \alpha_\tau(\gamma)(\gamma \cdot v^{-1}),
   \end{displaymath}
@@ -218,13 +218,11 @@ Let $z \in Z(L)$ and $\overline{\sigma} \in Hom(\Gamma, P)_{\rho_L}/V$. We defin
   z \cdot \overline{\sigma} = \overline{z \cdot \sigma}.
 \end{displaymath}
 
-Suppose $\overline{\sigma} = \overline{\tau}$. Then there is a $v \in V$ such that $\sigma = v \cdot \tau \in Hom(\Gamma, P)_{\rho_L}$, and a $v' \in V$ such that $zv = v' z$. Therefore
+Suppose $\overline{\sigma} = \overline{\tau}$. Then there is $v \in V$ such that $\sigma = v \cdot \tau \in Hom(\Gamma, P)_{\rho_L}$, and a $v' \in V$ such that $zv = v' z$. Therefore
 \begin{eqnarray*}
-  z \cdot \overline{\sigma} &=& \overline{z \cdot \sigma} \\
-  &=& \overline{zv \cdot \tau} \\
+  \overline{z \cdot \sigma} &=& \overline{zv \cdot \tau} \\
   &=& \overline{v' z \cdot \tau} \\
-  &=& \overline{z \cdot \tau} \\
-  &=& z \cdot \overline{\tau}.
+  &=& \overline{z \cdot \tau}.
 \end{eqnarray*}
 
 Hence the $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}$ is well-defined.
@@ -240,22 +238,20 @@ Suppose $[\alpha_\sigma] = [\alpha_\tau]$. Then there is a $v \in V$ such that f
 \end{displaymath}
 and there is a $v' \in V$ such that $zv = v' z$. Therefore, for all $\gamma \in \Gamma$
 \begin{eqnarray*}
-  z \cdot [\alpha_\sigma(\gamma)] &=& [z \cdot \alpha_\sigma(\gamma)] \\
-  &=& [z \cdot (v \alpha_\tau(\gamma) (\gamma \cdot v^{-1}))] \\
-  &=& [z v \alpha_\tau(\gamma) (\rho_L(\gamma) v^{-1} \rho_L(\gamma)^{-1})z^{-1}] \\
-  &=& [v' z \alpha_\tau(\gamma) z^{-1} (\rho_L(\gamma) v'^{-1} \rho_L(\gamma)^{-1})] \\
-  &=& [v' (z \alpha_\tau(\gamma) z^{-1}) (\gamma \cdot v'^{-1})] \\
-  &=& [z \cdot \alpha_\tau(\gamma)] \\
-  &=& z \cdot [\alpha_\tau(\gamma)].
+	(z \cdot \alpha_\sigma)(\gamma) &=& z v \alpha_\tau(\gamma) (\gamma \cdot v^{-1}) z^{-1} \\
+  &=& z v \alpha_\tau(\gamma) \rho_L(\gamma) v^{-1} \rho_L(\gamma)^{-1} z^{-1} \\
+  &=& v' z \alpha_\tau(\gamma) z^{-1} \rho_L(\gamma) v'^{-1} \rho_L(\gamma)^{-1} \\
+  &=& v' z \alpha_\tau(\gamma) z^{-1} (\gamma \cdot v'^{-1}) \\
+  &=& v' ((z \cdot \alpha_\tau)(\gamma)) (\gamma \cdot v'^{-1}).
 \end{eqnarray*}
 
-Hence the $Z(L)$-action on $H^1(\Gamma, \rho_L, V)$ is well-defined.
+Therefore $[z \cdot \alpha_\sigma] = [z \cdot \alpha_\tau]$ and the $Z(L)$-action on $H^1(\Gamma, \rho_L, V)$ is well-defined.
 
 Since $h$ is $Z(L)$-equivariant, it follows that $\overline{h}$ is also:
 \begin{eqnarray*}
   \overline{h}(z \cdot \overline{\sigma}) &=& \overline{h}(\overline{z \cdot \sigma}) \\
   &=& [\alpha_{z \cdot \sigma}] \\
-  &=& [z \cdot \alpha_\sigma] \\
+  &=& [z \cdot \alpha_\sigma] \qquad (h \textrm{ is } Z(L) \textrm{-equivariant}) \\
   &=& z \cdot [\alpha_\sigma] \\
   &=& z \cdot \overline{h}(\overline{\sigma}).
 \end{eqnarray*}
@@ -277,18 +273,18 @@ Hence the following Lemma:
 \begin{proof}
   It remains to show that $\left(Hom(\Gamma, P)_{\rho_L}/V\right)/Z(L) \simeq Hom(\Gamma, P)_{\rho_L}/VZ(L)$. The obvious map will be well-defined since $L$ normalizes $V$.
 
-  Denote by $\pi_Z$ the canonical projection from $Hom(\Gamma, P)_{\rho_L}/V \rightarrow \left( Hom(\Gamma, P)_{\rho_L} \right)/Z(L)$ and $\tilde{\sigma}$ the element of $Hom(\Gamma, P)_{\rho_L}/VZ(L)$ with representative $\sigma \in Hom(\Gamma, P)_{\rho_L}$. Then
+  Denote by $\pi_Z$ the canonical projection from $Hom(\Gamma, P)_{\rho_L}/V \rightarrow \left( Hom(\Gamma, P)_{\rho_L}/V \right)/Z(L)$ and $\tilde{\sigma}$ the element of $Hom(\Gamma, P)_{\rho_L}/VZ(L)$ with representative $\sigma \in Hom(\Gamma, P)_{\rho_L}$. Then
   \begin{eqnarray*}
     && \pi_Z(\overline{\sigma}) = \pi_Z(\overline{\tau}) \\
-    &\Longleftrightarrow& \textrm{there exists a } z \in Z(L) \textrm{ such that } \overline{\sigma} = z \cdot \overline{\tau} \\
-    &\Longleftrightarrow& \textrm{there exists a } z \in Z(L) \textrm{ such that } \overline{\sigma} = \overline{z \cdot \tau} \\
-    &\Longleftrightarrow& \textrm{there exists a } v \in V \textrm{ and a } z \in Z(L) \textrm{ such that } \overline{\sigma} = z \cdot \overline{\tau} \\
+    &\Longleftrightarrow& \textrm{there exists } z \in Z(L) \textrm{ such that } \overline{\sigma} = z \cdot \overline{\tau} \\
+    &\Longleftrightarrow& \textrm{there exists } z \in Z(L) \textrm{ such that } \overline{\sigma} = \overline{z \cdot \tau} \\
+    &\Longleftrightarrow& \textrm{there exists } v \in V, z \in Z(L) \textrm{ such that } \overline{\sigma} = z \cdot \overline{\tau} \\
     &\Longleftrightarrow& \tilde{\sigma} = \tilde{\tau}
   \end{eqnarray*}
 \end{proof}
 
 \begin{lemma}
-  Let $R = \{\rho_\lambda:\Gamma\rightarrow P\,|\,\lambda\in\Lambda\}$ be a collection of representations indexed by the set $\Lambda$. Given an irreducible representation $\sigma_L:\Gamma\rightarrow L$ define
+  Let $R = \{\rho_\lambda:\Gamma\rightarrow P\,|\,\lambda\in\Lambda\}$ be a collection of representations with minimal parabolic subgroup $P$. Given an irreducible representation $\sigma_L:\Gamma\rightarrow L$ define
   \begin{displaymath}
     R_{\sigma_L} = \{\rho \in R\,|\,\rho_L = \sigma_L\}. 
   \end{displaymath}
@@ -321,7 +317,7 @@ Hence the following Lemma:
     R = \bigcup_{\sigma \in S} \{R_{l \cdot \sigma} \,|\, l \in L \}.
   \end{displaymath}
 
-  Fix a $\sigma \in S$ and take $\rho_1, \rho_2 \in \{R_{l \cdot \sigma} \,|\, l \in L\}$. Then there exists an $l \in L$ such that $\rho_1, l \cdot \rho_2 \in R_{\sigma_L}$ for some $\sigma_L \in Hom(\Gamma, L)_{irr}$. Since we assumed there are only finitely many $VZ(L)^\circ$-conjugacy classes of $R_{\sigma_L}$ we may assume $\rho_1$ and $l \cdot \rho_2$ are $VZ(L)^\circ$-conjugate. Hence $\rho_1$ and $\rho_2$ are $P$-conjugate.
+  Fix a $\sigma \in S$ and take $\rho_1, \rho_2 \in \{R_{l \cdot \sigma} \,|\, l \in L\}$. Then there exists $l \in L$ such that $\rho_1, l \cdot \rho_2 \in R_{\sigma_L}$ for some $\sigma_L \in Hom(\Gamma, L)_{irr}$. Since we assumed there are only finitely many $VZ(L)^\circ$-conjugacy classes of $R_{\sigma_L}$ we may assume $\rho_1$ and $l \cdot \rho_2$ are $VZ(L)^\circ$-conjugate. Hence $\rho_1$ and $\rho_2$ are $P$-conjugate.
 
   $(ii) \Leftrightarrow (iii)$ This follows directly from the fact that $\tilde{h}$ is a bijection (Lemma \ref{lem:vzl_h1zl}).
 
