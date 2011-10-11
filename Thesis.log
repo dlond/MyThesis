@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  7 OCT 2011 16:58
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  11 OCT 2011 22:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -797,7 +797,16 @@ Overfull \hbox (11.4786pt too wide) in paragraph at lines 137--138
 \OML/cmm/m/it/10.95 ; P\OT1/cmr/m/n/10.95 )[]$
  []
 
-<xymatrix 2x2 168> [23] [24] [25] [26] [27]) (./Chapters/Chapter5.tex [28]
+<xymatrix 2x2 168> [23] [24] [25]
+Overfull \hbox (1.64932pt too wide) in paragraph at lines 276--277
+[]\OT1/cmr/m/n/10.95 Denote by $\OML/cmm/m/it/10.95 ^^Y[]$ \OT1/cmr/m/n/10.95 t
+he canon-i-cal pro-jec-tion from $\OML/cmm/m/it/10.95 Hom\OT1/cmr/m/n/10.95 (^^
+@\OML/cmm/m/it/10.95 ; P\OT1/cmr/m/n/10.95 )[]\OML/cmm/m/it/10.95 =V \OMS/cmsy/
+m/n/10.95 ! [] \OML/cmm/m/it/10.95 =Z\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 L\
+OT1/cmr/m/n/10.95 )$
+ []
+
+[26] [27]) (./Chapters/Chapter5.tex [28]
 Chapter 5.
 ------------------------------------------------------------------------------
  5 1-Cohomology Calculation
@@ -953,7 +962,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 223.
 Here is how much of TeX's memory you used:
  13552 strings out of 493633
  186156 string characters out of 3143378
- 344490 words of memory out of 3000000
+ 345490 words of memory out of 3000000
  16402 multiletter control sequences out of 15000+200000
  15754 words of font info for 61 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
@@ -980,7 +989,7 @@ exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/20
 /2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/tex
 live/2011/texmf-dist/fonts/type1/public/xypic/xycmat10.pfb></usr/local/texlive/
 2011/texmf-dist/fonts/type1/public/xypic/xycmbt10.pfb>
-Output written on Thesis.pdf (88 pages, 533589 bytes).
+Output written on Thesis.pdf (88 pages, 533596 bytes).
 PDF statistics:
  790 PDF objects out of 1000 (max. 8388607)
  663 compressed objects within 7 object streams
