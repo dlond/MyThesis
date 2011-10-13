@@ -201,7 +201,7 @@ again, via $h$.
 Furthermore, if $l\in Z(L)$ then $l\cdot\rho_L = \rho_L$. Indeed $Z(L)$ acts on $Hom(\Gamma, P)_{\rho_L}$ and on $Z^1(\Gamma, \rho_L, V)$ in the following way
 \begin{eqnarray*}
   (z \cdot \sigma) (\gamma) &=& z \sigma(\gamma) z^{-1} \\
-  (z \cdot \alpha_\sigma) (\gamma) &=&  z \sigma_\alpha(\gamma) z^{-1},
+  (z \cdot \alpha_\sigma) (\gamma) &=&  z \alpha_\sigma(\gamma) z^{-1},
 \end{eqnarray*}
 
 and $h$ is $Z(L)$-equivariant:
@@ -213,32 +213,33 @@ and $h$ is $Z(L)$-equivariant:
 
 We show that the $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}$ and $Z^1(\Gamma, \rho_L, V)$ descends to give a $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}/V$ and $H^1(\Gamma, \rho_L, V)$, respectively. The actions will be well-defined as consequence of the fact that $L$ normalizes $V$.
 
-Let $z \in Z(L)$ and $\overline{\sigma} \in Hom(\Gamma, P)_{\rho_L}/V$. We define the $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}/V$ so that the projection to $Hom(\Gamma, P)_{\rho_L}/V$ is $Z(L)$-equivariant:
+Let $z \in Z(L)$ and $\overline{\sigma} \in Hom(\Gamma, P)_{\rho_L}/V$. We define the $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}/V$ so that the projection $Hom(\Gamma, P)_{\rho_L} \rightarrow Hom(\Gamma, P)_{\rho_L}/V$ is $Z(L)$-equivariant:
 \begin{displaymath}
   z \cdot \overline{\sigma} = \overline{z \cdot \sigma}.
 \end{displaymath}
 
-Suppose $\overline{\sigma} = \overline{\tau}$. Then there is $v \in V$ such that $\sigma = v \cdot \tau \in Hom(\Gamma, P)_{\rho_L}$, and a $v' \in V$ such that $zv = v' z$. Therefore
+Suppose $\overline{\sigma} = \overline{\tau}$. Then there is $v \in V$ such that $\sigma = v \cdot \tau \in Hom(\Gamma, P)_{\rho_L}$, and $v' \in V$ such that $zv = v' z$. Therefore
 \begin{eqnarray*}
   \overline{z \cdot \sigma} &=& \overline{zv \cdot \tau} \\
   &=& \overline{v' z \cdot \tau} \\
   &=& \overline{z \cdot \tau}.
 \end{eqnarray*}
 
-Hence the $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}$ is well-defined.
+Hence the $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}/V$ is well-defined.
 
-Similarly, the $Z(L)$-action on $H^1(\Gamma, \rho_L, V)$ is defined so that the projection to the 1-cohomology is $Z(L)$-equivariant:
+Similarly, the $Z(L)$-action on $H^1(\Gamma, \rho_L, V)$ is defined so that the projection to the 1-cohomology $Z^1(\Gamma, \rho_L, V) \rightarrow H^1(\Gamma, \rho_L, V)$ is $Z(L)$-equivariant:
 \begin{displaymath}
   z \cdot [\alpha_\sigma] = [z \cdot \alpha_\sigma].
 \end{displaymath}
 
-Suppose $[\alpha_\sigma] = [\alpha_\tau]$. Then there is a $v \in V$ such that for all $\gamma \in \Gamma$,
+Suppose $[\alpha_\sigma] = [\alpha_\tau]$. Then there is $v \in V$ such that for all $\gamma \in \Gamma$,
 \begin{displaymath}
   \alpha_\sigma(\gamma) = v \alpha_\tau(\gamma) (\gamma \cdot v^{-1}),
 \end{displaymath}
-and there is a $v' \in V$ such that $zv = v' z$. Therefore, for all $\gamma \in \Gamma$
+and there is $v' \in V$ such that $zv = v' z$. Therefore, for all $\gamma \in \Gamma$
 \begin{eqnarray*}
-	(z \cdot \alpha_\sigma)(\gamma) &=& z v \alpha_\tau(\gamma) (\gamma \cdot v^{-1}) z^{-1} \\
+	(z \cdot \alpha_\sigma)(\gamma) 
+  &=& z v \alpha_\tau(\gamma) (\gamma \cdot v^{-1}) z^{-1} \\
   &=& z v \alpha_\tau(\gamma) \rho_L(\gamma) v^{-1} \rho_L(\gamma)^{-1} z^{-1} \\
   &=& v' z \alpha_\tau(\gamma) z^{-1} \rho_L(\gamma) v'^{-1} \rho_L(\gamma)^{-1} \\
   &=& v' z \alpha_\tau(\gamma) z^{-1} (\gamma \cdot v'^{-1}) \\
@@ -258,7 +259,7 @@ Since $h$ is $Z(L)$-equivariant, it follows that $\overline{h}$ is also:
 
 In summary we have a well-defined $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}/V$ and $H^1(\Gamma, \rho_L, V)$, and a $Z(L)$-equivariant bijection 
 \begin{displaymath}
-  Hom(\Gamma, P)_{\rho_L} \rightarrow H^1(\Gamma, \rho_L, V).
+  \overline{h}:Hom(\Gamma, P)_{\rho_L}/V \rightarrow H^1(\Gamma, \rho_L, V).
 \end{displaymath}
 
 Hence the following Lemma:
@@ -271,9 +272,17 @@ Hence the following Lemma:
   \label{lem:vzl_h1zl}
 \end{lemma}
 \begin{proof}
-  It remains to show that $\left(Hom(\Gamma, P)_{\rho_L}/V\right)/Z(L) \simeq Hom(\Gamma, P)_{\rho_L}/VZ(L)$. The obvious map will be well-defined since $L$ normalizes $V$.
+  It remains to show that $\left(Hom(\Gamma, P)_{\rho_L}/V\right)/Z(L) \simeq Hom(\Gamma, P)_{\rho_L}/VZ(L)$.
 
-  Denote by $\pi_Z$ the canonical projection from $Hom(\Gamma, P)_{\rho_L}/V \rightarrow \left( Hom(\Gamma, P)_{\rho_L}/V \right)/Z(L)$ and $\tilde{\sigma}$ the element of $Hom(\Gamma, P)_{\rho_L}/VZ(L)$ with representative $\sigma \in Hom(\Gamma, P)_{\rho_L}$. Then
+  Denote by $\pi_Z$ the canonical projection from $Hom(\Gamma, P)_{\rho_L}/V \rightarrow \left( Hom(\Gamma, P)_{\rho_L}/V \right)/Z(L)$ and $\tilde{\sigma}$ the element of $Hom(\Gamma, P)_{\rho_L}/VZ(L)$ with representative $\sigma \in Hom(\Gamma, P)_{\rho_L}$. We show that the map
+  \begin{displaymath}
+    \varphi: (Hom(\Gamma, P)_{\rho_L}/V)/Z(L) \rightarrow Hom(\Gamma, P)_{\rho_L}/VZ(L),
+  \end{displaymath}
+  defined
+  \begin{displaymath}
+    \varphi(\pi_Z(\overline{\sigma})) = \tilde{\sigma},
+  \end{displaymath}
+  is well defined:
   \begin{eqnarray*}
     && \pi_Z(\overline{\sigma}) = \pi_Z(\overline{\tau}) \\
     &\Longleftrightarrow& \textrm{there exists } z \in Z(L) \textrm{ such that } \overline{\sigma} = z \cdot \overline{\tau} \\
