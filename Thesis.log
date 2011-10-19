@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  11 OCT 2011 22:50
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  16 OCT 2011 13:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -798,7 +798,7 @@ Overfull \hbox (11.4786pt too wide) in paragraph at lines 137--138
  []
 
 <xymatrix 2x2 168> [23] [24] [25]
-Overfull \hbox (1.64932pt too wide) in paragraph at lines 276--277
+Overfull \hbox (1.64932pt too wide) in paragraph at lines 277--278
 []\OT1/cmr/m/n/10.95 Denote by $\OML/cmm/m/it/10.95 ^^Y[]$ \OT1/cmr/m/n/10.95 t
 he canon-i-cal pro-jec-tion from $\OML/cmm/m/it/10.95 Hom\OT1/cmr/m/n/10.95 (^^
 @\OML/cmm/m/it/10.95 ; P\OT1/cmr/m/n/10.95 )[]\OML/cmm/m/it/10.95 =V \OMS/cmsy/
@@ -989,7 +989,7 @@ exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/20
 /2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/tex
 live/2011/texmf-dist/fonts/type1/public/xypic/xycmat10.pfb></usr/local/texlive/
 2011/texmf-dist/fonts/type1/public/xypic/xycmbt10.pfb>
-Output written on Thesis.pdf (88 pages, 533596 bytes).
+Output written on Thesis.pdf (88 pages, 534073 bytes).
 PDF statistics:
  790 PDF objects out of 1000 (max. 8388607)
  663 compressed objects within 7 object streams

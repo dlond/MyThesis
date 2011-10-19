@@ -211,7 +211,7 @@ and $h$ is $Z(L)$-equivariant:
   &=& (z \cdot h(\sigma))(\gamma).
 \end{eqnarray*}
 
-We show that the $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}$ and $Z^1(\Gamma, \rho_L, V)$ descends to give a $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}/V$ and $H^1(\Gamma, \rho_L, V)$, respectively. The actions will be well-defined as consequence of the fact that $L$ normalizes $V$.
+We show that the $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}$ and $Z^1(\Gamma, \rho_L, V)$ descends to give a $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}/V$ and $H^1(\Gamma, \rho_L, V)$, respectively. The actions will be well-defined as a consequence of the fact that $L$ normalizes $V$.
 
 Let $z \in Z(L)$ and $\overline{\sigma} \in Hom(\Gamma, P)_{\rho_L}/V$. We define the $Z(L)$-action on $Hom(\Gamma, P)_{\rho_L}/V$ so that the projection $Hom(\Gamma, P)_{\rho_L} \rightarrow Hom(\Gamma, P)_{\rho_L}/V$ is $Z(L)$-equivariant:
 \begin{displaymath}
@@ -297,6 +297,7 @@ Hence the following Lemma:
   \begin{displaymath}
     R_{\sigma_L} = \{\rho \in R\,|\,\rho_L = \sigma_L\}. 
   \end{displaymath}
+  $R_{\sigma_L}$ is a $VZ(L)^\circ$-stable subset of $Hom(\Gamma, P)_{\sigma_L}$.
   
   The following statements are equivalent:
   \begin{itemize}
@@ -316,8 +317,9 @@ Hence the following Lemma:
   \begin{displaymath}
     R_{\sigma_L} \cap (P \cdot \rho) \subset \bigcup_{i = 1}^{m} VZ(L)^\circ \cdot \left( c_i \cdot \rho \right).
   \end{displaymath}
+  Since $R_{\sigma_L}$ is contained in a finite number of $P$-conjugacy classes, we are done.
 
-  $(ii) \Rightarrow (i)$ Assume that for each irreducible representation $\sigma_L : \Gamma \rightarrow L$, $R_{\sigma}$ is contained in a finite union of $VZ(L)^\circ$-conjugacy classes. Denote by $Hom(\Gamma, L)_{irr}$ the collection of all irreducible representations from $\Gamma \rightarrow L$. By Theorem \ref{thm:finiteGCR} we can choose a finite set $S \subset Hom(\Gamma, L)_{irr}$ such that
+  $(ii) \Rightarrow (i)$ Assume that for each irreducible representation $\sigma_L : \Gamma \rightarrow L$, $R_{\sigma}$ is contained in a finite union in $VZ(L)^\circ$-conjugacy classes. Denote by $Hom(\Gamma, L)_{irr}$ the collection of all irreducible representations from $\Gamma \rightarrow L$. By Theorem \ref{thm:finiteGCR} we can choose a finite set $S \subset Hom(\Gamma, L)_{irr}$ such that
   \begin{displaymath}
     Hom(\Gamma, L)_{irr} = \bigcup_{\sigma \in S} L \cdot \sigma.
   \end{displaymath}
