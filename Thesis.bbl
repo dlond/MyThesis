@@ -1,4 +1,4 @@
-\begin{thebibliography}{8}
+\begin{thebibliography}{11}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -24,10 +24,15 @@ M.W. Liebeck and G.M. Seitz.
 \newblock American Mathematical Society, 2004.
 \newblock ISBN 0821834827.
 
-\bibitem[Hochschild(1965)]{hochschild1965structure}
-G.P. Hochschild.
-\newblock \emph{{The structure of Lie groups}}.
-\newblock Holden-Day, 1965.
+\bibitem[Kemper(2000)]{kemper2000characterization}
+G.~Kemper.
+\newblock A characterization of linearly reductive groups by their invariants.
+\newblock \emph{Transformation groups}, 5\penalty0 (1):\penalty0 85--92, 2000.
+
+\bibitem[Brown(1976)]{brown1976cohomology}
+K.~Brown.
+\newblock {Cohomology of groups}.
+\newblock \emph{Algebraic K-Theory}, pages 249--259, 1976.
 
 \bibitem[Humphreys(1975)]{humphreys1975linear}
 J.E. Humphreys.
@@ -45,6 +50,17 @@ P.~Slodowy.
   finite groups}.
 \newblock \emph{Algebraic groups and Lie groups: a volume of papers in honour
   of the late RW Richardson}, page 331, 1997.
+
+\bibitem[Bate et~al.(2005)Bate, Martin, and Roehrle]{bate2005geometric}
+M.~Bate, B.~Martin, and G.~Roehrle.
+\newblock {A geometric approach to complete reducibility}.
+\newblock \emph{Inventiones Mathematicae}, 161\penalty0 (1):\penalty0 177--218,
+  2005.
+
+\bibitem[Martin(2003)]{martin2003reductive}
+B.~Martin.
+\newblock Reductive subgroups of reductive groups in nonzero characteristic.
+\newblock \emph{Journal of Algebra}, 262\penalty0 (2):\penalty0 265--286, 2003.
 
 \bibitem[Carter(1989)]{carter1989simple}
 R.W. Carter.

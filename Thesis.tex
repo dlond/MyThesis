@@ -77,18 +77,18 @@ Date:\\
 
 %% ----------------------------------------------------------------
 % The "Funny Quote Page"
-\pagestyle{empty}  % No headers or footers for the following pages
+%\pagestyle{empty}  % No headers or footers for the following pages
 
-\null\vfill
+%\null\vfill
 % Now comes the "Funny Quote", written in italics
-\textit{``A quote.''}
+%\textit{``A quote.''}
 
-\begin{flushright}
-The author of the quote.
-\end{flushright}
+%\begin{flushright}
+%The author of the quote.
+%\end{flushright}
 
-\vfill\vfill\vfill\vfill\vfill\vfill\null
-\clearpage  % Funny Quote page ended, start a new page
+%\vfill\vfill\vfill\vfill\vfill\vfill\null
+%\clearpage  % Funny Quote page ended, start a new page
 %% ----------------------------------------------------------------
 
 % The Abstract Page
@@ -114,7 +114,6 @@ The acknowledgements and the people to thank \ldots
 }
 \clearpage  % End of the Acknowledgements
 %% ----------------------------------------------------------------
-
 \pagestyle{fancy}  %The page style headers have been "empty" all this time, now use the "fancy" headers as defined before to bring them back
 
 
@@ -123,57 +122,29 @@ The acknowledgements and the people to thank \ldots
 \tableofcontents  % Write out the Table of Contents
 
 %% ----------------------------------------------------------------
-%\lhead{\emph{List of Figures}}  % Set the left side page header to "List if Figures"
-%\listoffigures  % Write out the List of Figures
-
-%% ----------------------------------------------------------------
-%\lhead{\emph{List of Tables}}  % Set the left side page header to "List of Tables"
-%\listoftables  % Write out the List of Tables
-
-%% ----------------------------------------------------------------
-%\setstretch{1.5}  % Set the line spacing to 1.5, this makes the following tables easier to read
-%\clearpage  % Start a new page
-%\lhead{\emph{Abbreviations}}  % Set the left side page header to "Abbreviations"
-%\listofsymbols{ll}  % Include a list of Abbreviations (a table of two columns)
+%\clearpage  %Start a new page
+%\lhead{\emph{Symbols}}  % Set the left side page header to "Symbols"
+%\listofnomenclature{lll}  % Include a list of Symbols (a three column table)
 %{
-%% \textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
-%\textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere \\
-
-%}
-
-%% ----------------------------------------------------------------
-%\clearpage  % Start a new page
-%\lhead{\emph{Physical Constants}}  % Set the left side page header to "Physical Constants"
-%\listofconstants{lrcl}  % Include a list of Physical Constants (a four column table)
-%{
-%% Constant Name & Symbol & = & Constant Value (with units) \\
-%Speed of Light & $c$ & $=$ & $2.997\ 924\ 58\times10^{8}\ \mbox{ms}^{-\mbox{s}}$ (exact)\\
-
-%}
-
-%% ----------------------------------------------------------------
-\clearpage  %Start a new page
-\lhead{\emph{Symbols}}  % Set the left side page header to "Symbols"
-\listofnomenclature{lll}  % Include a list of Symbols (a three column table)
-{
 % symbol & name & unit \\
-$a$ & distance & m \\
-$P$ & power & W (Js$^{-1}$) \\
-& & \\ % Gap to separate the Roman symbols from the Greek
-$\omega$ & angular frequency & rads$^{-1}$ \\
-\vdots & &
-}
+%$a$ & distance & m \\
+%$P$ & power & W (Js$^{-1}$) \\
+%& & \\ % Gap to separate the Roman symbols from the Greek
+%$\omega$ & angular frequency & rads$^{-1}$ \\
+%\vdots & &
+%}
 %% ----------------------------------------------------------------
 % End of the pre-able, contents and lists of things
 % Begin the Dedication page
 
-\setstretch{1.3}  % Return the line spacing back to 1.3
+%\setstretch{1.3}  % Return the line spacing back to 1.3
 
-\pagestyle{empty}  % Page style needs to be empty for this page
-\dedicatory{Dedication \ldots}
+%\pagestyle{empty}  % Page style needs to be empty for this page
+%\dedicatory{
+%\addtocontents{toc}{\vspace{2em}}  % Add a gap in the Contents, for aesthetics
 
-\addtocontents{toc}{\vspace{2em}}  % Add a gap in the Contents, for aesthetics
-
+%To the people of Christchurch affected by the earthquakes of 2010-2011, during which the a lot of this work was written.
+%}
 
 %% ----------------------------------------------------------------
 \mainmatter	  % Begin normal, numeric (1,2,3...) page numbering
@@ -186,17 +157,16 @@ $\omega$ & angular frequency & rads$^{-1}$ \\
 
 \input{./Chapters/Chapter2} % Prelims
 
-\input{./Chapters/Chapter3} % KII
+\input{./Chapters/Chapter3} % H^1
 
-\input{./Chapters/Chapter4} % H'
+\input{./Chapters/Chapter4} % KII
 
-\input{./Chapters/Chapter5} % B4
+\input{./Chapters/Chapter5} % Calc
 
-%\input{./Chapters/Chapter6} % G-cr
+\input{./Chapters/Chapter6} % Calc
 
 \input{./Chapters/Chapter7} % Conclusion
 
-%\input{./Chapters/Chapter7} %
 
 %% ----------------------------------------------------------------
 % Now begin the Appendices, including them as separate files
@@ -205,9 +175,9 @@ $\omega$ & angular frequency & rads$^{-1}$ \\
 
 \appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
 
-\input{./Appendices/AppendixA} % Further Calculations
+%\input{./Appendices/AppendixA} % Further Calculations
 
-\input{./Appendices/AppendixB} % Source Code
+\input{./Appendices/AppendixB} % Dynkin Diagrams
 
 \input{./Appendices/AppendixC} % Root System Diagrams
 

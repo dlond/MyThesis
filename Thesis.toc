@@ -1,36 +1,34 @@
 \contentsline {chapter}{Declaration of Authorship}{i}{dummy.1}
 \vspace {1em}
-\contentsline {chapter}{Abstract}{iii}{dummy.2}
+\contentsline {chapter}{Abstract}{ii}{dummy.2}
 \vspace {1em}
-\contentsline {chapter}{Acknowledgements}{iv}{dummy.3}
+\contentsline {chapter}{Acknowledgements}{iii}{dummy.3}
 \vspace {1em}
-\contentsline {chapter}{Symbols}{vii}{dummy.5}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.5}
+\contentsline {chapter}{\numberline {2}Mathematical Preliminaries}{4}{chapter.6}
+\contentsline {section}{\numberline {2.1}Linear Algebraic Groups}{4}{section.7}
+\contentsline {chapter}{\numberline {3}The 1-Cohomology}{9}{chapter.12}
+\contentsline {section}{\numberline {3.1}Abelian 1-Cohomology}{9}{section.13}
+\contentsline {subsection}{\numberline {3.1.1}Definitions}{9}{subsection.14}
+\contentsline {subsection}{\numberline {3.1.2}Maps between 1-cohomologies}{11}{subsection.17}
+\contentsline {section}{\numberline {3.2}Non-abelian 1-Cohomology}{15}{section.21}
+\contentsline {subsection}{\numberline {3.2.1}The non-abelian setting}{15}{subsection.22}
+\contentsline {subsection}{\numberline {3.2.2}Definitions}{16}{subsection.23}
+\contentsline {subsection}{\numberline {3.2.3}Maps between 1-cohomologies}{16}{subsection.26}
+\contentsline {chapter}{\numberline {4}K\"ulshammer's Second Problem}{19}{chapter.29}
+\contentsline {section}{\numberline {4.1}K\"ulshammer's Second Problem}{19}{section.30}
+\contentsline {section}{\numberline {4.2}The Approach}{19}{section.31}
+\contentsline {chapter}{\numberline {5}1-Cohomology Calculations: Theoretical Results}{32}{chapter.50}
+\contentsline {section}{\numberline {5.1}Rank-1 Calculations}{32}{section.51}
+\contentsline {section}{\numberline {5.2}A Non-Reductive Counterexample}{41}{section.62}
+\contentsline {chapter}{\numberline {6}Example 1-Cohomology Calculations}{45}{chapter.64}
+\contentsline {section}{\numberline {6.1}A rank 1 calculation}{45}{section.65}
+\contentsline {subsection}{\numberline {6.1.1}Example}{46}{subsection.66}
+\contentsline {subsection}{\numberline {6.1.2}Example}{57}{subsection.75}
+\contentsline {section}{\numberline {6.2}A rank 2 calculation}{64}{section.81}
+\contentsline {chapter}{\numberline {7}Conclusion}{76}{chapter.83}
 \vspace {2em}
-\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.8}
-\contentsline {chapter}{\numberline {2}Mathematical Preliminaries}{4}{chapter.9}
-\contentsline {section}{\numberline {2.1}Linear Algebraic Groups}{4}{section.10}
-\contentsline {chapter}{\numberline {3}The 1-Cohomology}{9}{chapter.15}
-\contentsline {section}{\numberline {3.1}Abelian 1-Cohomology}{9}{section.16}
-\contentsline {subsection}{\numberline {3.1.1}Definitions}{9}{subsection.17}
-\contentsline {subsection}{\numberline {3.1.2}Maps between 1-cohomologies}{11}{subsection.20}
-\contentsline {section}{\numberline {3.2}Non-abelian 1-Cohomology}{15}{section.24}
-\contentsline {subsection}{\numberline {3.2.1}The non-abelian setting}{15}{subsection.25}
-\contentsline {subsection}{\numberline {3.2.2}Definitions}{16}{subsection.26}
-\contentsline {subsection}{\numberline {3.2.3}Maps between 1-cohomologies}{16}{subsection.29}
-\contentsline {chapter}{\numberline {4}K\"ulshammer's Second Problem}{19}{chapter.32}
-\contentsline {section}{\numberline {4.1}K\"ulshammer's Second Problem}{19}{section.33}
-\contentsline {section}{\numberline {4.2}The Approach}{19}{section.34}
-\contentsline {chapter}{\numberline {5}1-Cohomology Calculation}{30}{chapter.43}
-\contentsline {section}{\numberline {5.1}The method}{30}{section.44}
-\contentsline {section}{\numberline {5.2}A rank 1 calculation}{39}{section.53}
-\contentsline {subsection}{\numberline {5.2.1}Example}{40}{subsection.54}
-\contentsline {subsection}{\numberline {5.2.2}Example}{51}{subsection.63}
-\contentsline {section}{\numberline {5.3}A rank 2 calculation}{58}{section.69}
-\contentsline {section}{\numberline {5.4}A Non-Reductive Counterexample}{70}{section.71}
-\contentsline {chapter}{\numberline {6}Conclusion}{74}{chapter.73}
+\contentsline {chapter}{\numberline {A}Finite Dynkin Diagrams}{77}{appendix.84}
+\contentsline {chapter}{\numberline {B}Rank 2 Root System Diagrams}{78}{appendix.85}
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}Further Calculations}{75}{appendix.74}
-\contentsline {chapter}{\numberline {B}Source Code}{76}{appendix.75}
-\contentsline {chapter}{\numberline {C}Rank 2 Root System Diagrams}{77}{appendix.76}
-\vspace {2em}
-\contentsline {chapter}{Bibliography}{80}{dummy.77}
+\contentsline {chapter}{Bibliography}{81}{dummy.86}

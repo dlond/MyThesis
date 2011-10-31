@@ -6,43 +6,44 @@
 \lhead{Chapter 3. \emph{The 1-Cohomology}}
 
 \section{Abelian 1-Cohomology}
-The abelian 1-cohomology is standard and a lot of the definitions and results in this section can be found in [reference]. We present the following section as a foundation for the less-known non-abelian theory to appear later in this chapter.	
+The abelian 1-cohomology is standard. We present this section as a foundation for the less-known non-abelian theory to appear later in this chapter.	
 \subsection{Definitions}
-Let $H$ be a group and $V$ an abelian group (vector space) on which $H$ acts homomorphically (linearly). We call a map $\sigma$ from $H\rightarrow V$ a  \emph{1-cocycle} if it satisfies
-\begin{eqnarray}\label{theOneCocycleCondition}
-	\sigma(h_1h_2) = \sigma(h_1) + h_1\cdot\sigma(h_2),
+Let $H$ be a group and $V$ an abelian group (vector space) on which $H$ acts homomorphically (linearly). We call a map $\alpha$ from $H\rightarrow V$ a  \emph{1-cocycle} if it satisfies
+\begin{eqnarray}
+  \alpha(h_1h_2) = \alpha(h_1) + h_1\cdot\alpha(h_2),
+  \label{eqn:a_z}
 \end{eqnarray}
 for all $h_1, h_2$ in $H$. Denote by $Z^1\left( H, V \right)$ the collection of all 1-cocycles from $H\rightarrow V$.
 
-We call (\ref{theOneCocycleCondition}) the \emph{1-cocycle condition}.
+We call Equation \ref{eqn:a_z} the \emph{1-cocycle condition}.
 
-For any $\sigma_1, \sigma_2$ in $Z^1\left(H, V\right)$
+For any $\alpha_1, \alpha_2$ in $Z^1\left(H, V\right)$
 \begin{eqnarray*}
-	\left(\sigma_1 + \sigma_2\right)(h_1h_2) &=& \sigma_1(h_1h_2) +  \sigma_2(h_1h_2) \\
-	&=& \sigma_1(h_1) + h_1\cdot\sigma_1(h_2) +  \sigma_2(h_1) + h_1\cdot\sigma_2(h_2)\\
-	&=& \left( \sigma_1(h_1) + \sigma_2(h_1) \right) + h_1\cdot\left(\sigma_1(h_2) + \sigma_2(h_2)\right) \\
-	&=& \left(\sigma_1+\sigma_2\right)(h_1) + h_1\cdot\left(\sigma_1 + \sigma_2\right)(h_2),
+	\left(\alpha_1 + \alpha_2\right)(h_1h_2) &=& \alpha_1(h_1h_2) +  \alpha_2(h_1h_2) \\
+	&=& \alpha_1(h_1) + h_1\cdot\alpha_1(h_2) +  \alpha_2(h_1) + h_1\cdot\alpha_2(h_2)\\
+	&=& \left( \alpha_1(h_1) + \alpha_2(h_1) \right) + h_1\cdot\left(\alpha_1(h_2) + \alpha_2(h_2)\right) \\
+	&=& \left(\alpha_1+\alpha_2\right)(h_1) + h_1\cdot\left(\alpha_1 + \alpha_2\right)(h_2),
 \end{eqnarray*}
 so $Z^1(H, V)$ is closed under pointwise addition.
 
-The trivial map from $H \rightarrow V$ that sends every $h \in H$ to the identity $0 \in V$ is a 1-cocycle. Furthermore for any $\sigma \in Z^1(H, V)$ we have
+The trivial map from $H \rightarrow V$ that sends every $h \in H$ to the identity $0 \in V$ is a 1-cocycle. Furthermore for any $\alpha \in Z^1(H, V)$ we have
 \begin{eqnarray*}
-	\sigma(1)\, =\, \sigma(1\cdot 1) &=& \sigma(1) + 1\cdot \sigma(1) \\
-	&=& \sigma(1) + \sigma(1) \\
-	&=& 2\,\sigma(1),
+	\alpha(1)\, =\, \alpha(1\cdot 1) &=& \alpha(1) + 1\cdot \alpha(1) \\
+	&=& \alpha(1) + \alpha(1) \\
+	&=& 2\,\alpha(1),
 \end{eqnarray*}
 which implies that
 \begin{eqnarray*}
-\sigma(1) = 0.
+\alpha(1) = 0.
 \end{eqnarray*}
 From this we deduce that
 \begin{eqnarray*}
-	\sigma(hh^{-1})\, =\, \sigma(1) &=& 0 \\
-	&=& \sigma(h) + h\cdot \sigma(h^{-1}),
+	\alpha(hh^{-1})\, =\, \alpha(1) &=& 0 \\
+	&=& \alpha(h) + h\cdot \alpha(h^{-1}),
 \end{eqnarray*}
-and so each $\sigma$ has an inverse defined by
+and so each $\alpha$ has an inverse defined by
 \begin{eqnarray*}
-	-\sigma(h) = h\cdot\sigma(h^{-1}).
+	-\alpha(h) = h\cdot\alpha(h^{-1}).
 \end{eqnarray*}
 Therefore $Z^1\left(H, V\right)$ is a $\mathbb{Z}-$module under pointwise addition.
 
@@ -76,7 +77,8 @@ We see that $B^1(H, V)$ is a subgroup of $Z^1(H, V)$ via the two-step subgroup t
 	H^1\left(H, V\right) = Z^1\left(H, V\right) / B^1\left(H, V\right),
 \end{eqnarray*}
 called the \emph{1-cohomology}.
-\begin{lemma} Suppose $H$ is linearly reductive. Then $H^1(H, V)$ is trivial \cite{hochschild1965structure}.
+\begin{lemma} Suppose $H$ is linearly reductive. Then $H^1(H, V)$ is trivial \cite[Proposition 1]{kemper2000characterization}.
+  \label{lem:lin_red_h}
 \end{lemma}
 
 \subsection{Maps between 1-cohomologies}
@@ -84,9 +86,9 @@ Let $\phi:\tilde{H}\rightarrow H$ be a homomorphism, $\tilde{H}$ being another g
 \begin{eqnarray*}
 	\phi(h)\cdot v = h\cdot v,
 \end{eqnarray*}
-for all $v \in V$. If $\sigma$ is a 1-cocycle from $H\rightarrow V$ then we will show that the map denoted $Z^1(\phi)(\sigma)$ defined by
+for all $v \in V$. If $\alpha$ is a 1-cocycle from $H\rightarrow V$ then we will show that the map denoted $Z^1(\phi)(\alpha)$ defined by
 \begin{eqnarray*}
-	Z^1(\phi)(\sigma) = \sigma \circ \phi,
+	Z^1(\phi)(\alpha) = \alpha \circ \phi,
 \end{eqnarray*}
 is a 1-cocycle from $\tilde{H}\rightarrow V$. Thus certain homomorphisms
 \begin{eqnarray*}
@@ -97,108 +99,105 @@ give rise to maps of the form
 	Z^1(\phi):Z^1(H, V)\rightarrow Z^1(\tilde{H}, V)
 \end{eqnarray*}
 
-
 Take $h_1, h_2 \in H$. We have
 \begin{eqnarray*}
-	Z^1(\phi)(\sigma)(h_1h_2) &=& (\sigma \circ \phi)(h_1h_2) \\
-		&=& \sigma(\phi(h_1h_2)) \\
-		&=& \sigma(\phi(h_1)\phi(h_2)) \\
-		&=& \sigma(\phi(h_1)) + \phi(h_1)\cdot\sigma(\phi(h_2) \\
-		&=& \sigma(\phi(h_1)) + h_1\cdot\sigma(\phi(h_2)) \\
-		&=& (\sigma \circ \phi)(h_1) + h_1 \cdot (\sigma \circ \phi)(h_2) \\
-		&=& Z^1(\phi)(\sigma)(h_1) + h_1\cdot Z^1(\phi)(\sigma)(h_2).
+	\left( Z^1(\phi)(\alpha) \right) (h_1h_2) &=& (\alpha \circ \phi)(h_1h_2) \\
+		&=& \alpha(\phi(h_1h_2)) \\
+		&=& \alpha(\phi(h_1)\phi(h_2)) \\
+		&=& \alpha(\phi(h_1)) + \phi(h_1)\cdot\alpha(\phi(h_2) \\
+		&=& \alpha(\phi(h_1)) + h_1\cdot\alpha(\phi(h_2)) \\
+		&=& (\alpha \circ \phi)(h_1) + h_1 \cdot (\alpha \circ \phi)(h_2) \\
+		&=& \left( Z^1(\phi)(\alpha) \right) (h_1) + h_1\cdot \left( Z^1(\phi)(\alpha) \right)(h_2).
 \end{eqnarray*}
 
 Moreover, it can be shown that $Z^1(\phi)$ maps $B^1(H, V)$ into $B^1(\tilde{H}, V)$. This leads us to define a map of 1-cohomologies,
 \begin{eqnarray*}
 	H^1(\phi):H^1(H, V) \rightarrow H^1(\tilde{H}, V),
 \end{eqnarray*}
-defined by
+defined by the commutative diagram
 \begin{displaymath}
 	\xymatrix{
 	Z^1(H, V) \ar[d]_{\pi} \ar[r]^{Z^1(\phi)} & Z^1(\tilde{H}, V) \ar[d]^{\tilde{\pi}}\\
 	H^1(H, V) \ar[r]^{H^1(\phi)} & H^1(\tilde{H}, V)
 	}
-% \begin{CD}
-	% Z^1(H, V) @>Z^1(\phi)>> Z^1(\tilde{H}, V)\\
-	% @V{\pi}VV                                  @VV{\tilde{\pi}}V\\
-	% H^1(H, V) @>>H^1(\phi)> H^1(\tilde{H}, V)
-% \end{CD}
 \end{displaymath}
 where $\pi$ and $\tilde\pi$ are the respective canonical projections of $Z^1(H, V)$ onto $H^1(H, V)$ and $Z^1(\tilde{H}, V)$ onto $H^1(\tilde{H}, V)$. To show that the map $H^1(\phi)$ is well-defined it is sufficient to notice that $Z^1(\phi)$ is a homomorphism.
 
 \begin{example}
-Let $\tilde{H}$ be a subgroup of $H$ and $i:\tilde{H}\rightarrow H$ the inclusion map. Then $i$ gives rise to a well defined map
+Let $\tilde{H}$ be a subgroup of $H$ and $\iota:\tilde{H}\rightarrow H$ the inclusion map. Then $\iota$ gives rise to the well-defined maps
 \begin{eqnarray*}
-H^1(i):H^1(H, V)\rightarrow H^1(\tilde{H}, V).
+  Z^1(\iota): Z^1(H, V) \rightarrow Z^1(\tilde{H}, V), \\
+H^1(\iota):H^1(H, V)\rightarrow H^1(\tilde{H}, V).
 \end{eqnarray*}
 \end{example}
 
-The next Lemma is standard [reference] but we give our own proof here.
-\begin{lemma}\label{mapFromSylow}
-Let $V$ be a vector space over a field of characteristic $p$. Let $\Gamma$ be a finite group and $\tilde{\Gamma} = \Gamma_p \subset \Gamma$ a \emph{Sylow $p$-subgroup} of $\Gamma$. The map 
+The next Lemma is standard \cite[Theorem 10.3]{brown1976cohomology} but we give our own proof here.
+\begin{lemma}
+Let $V$ be a vector space over a field of characteristic $p$. Let $\Gamma$ be a finite group and $\Gamma_p < \Gamma$ a \emph{Sylow $p$-subgroup} of $\Gamma$. The map 
 \begin{eqnarray*}
-H^1(i):H^1(\Gamma, V)\rightarrow H^1(\Gamma_p, V)
+H^1(\iota):H^1(\Gamma, V)\rightarrow H^1(\Gamma_p, V)
 \end{eqnarray*}
 is injective.
+\label{lem:a_h_restriction}
 \end{lemma}
 \begin{proof}
-Let $x$ be an element of $H^1(\Gamma, V)$ such that $H^1(i)(x) = 0$. Now choose a 1-cocycle $\sigma \in Z^1(\Gamma, V)$ such that $\pi(\sigma) = x$. Hence $Z^1(i)(\sigma)$ is a 1-coboundary as its image under $\tilde\pi$ is 0. That is to say $\sigma$ restricted to $\Gamma_p$ is equal to a 1-coboundary, say $\chi_v^{\Gamma_p}$. But since $\chi_v^{\Gamma_p}$ can be trivially extended to a 1-coboundary $\chi_v^\Gamma$ from $\Gamma\rightarrow V$, and
+Let $x$ be an element of $H^1(\Gamma, V)$ such that $\left(H^1(\iota)\right)(x) = 0$. Now choose a 1-cocycle $\alpha \in Z^1(\Gamma, V)$ such that $\pi(\alpha) = x$. Hence $\left(Z^1(\iota)\right)(\alpha)$ is a 1-coboundary as its image under $\tilde\pi$ is 0. That is to say $\alpha$ restricted to $\Gamma_p$ is equal to a 1-coboundary, say $\chi_v^{\Gamma_p}$. But since $\chi_v^{\Gamma_p}$ can be trivially extended to a 1-coboundary $\chi_v^\Gamma$ from $\Gamma\rightarrow V$, and
 \begin{eqnarray*}
-	\pi(\sigma - \chi_v^\Gamma) = x,
+	\pi(\alpha - \chi_v^\Gamma) = x,
 \end{eqnarray*}
-we could well have chosen the 1-cocycle $(\sigma - \chi_v^\Gamma)$ as a representative for $x$. Hence there is no harm in assuming that $\sigma$ is 0 when restricted to $\Gamma_p$.
+we could well have chosen the 1-cocycle $(\alpha - \chi_v^\Gamma)$ as a representative for $x$. Hence there is no harm in assuming that $\alpha$ is 0 when restricted to $\Gamma_p$.
 Now choose a set of representatives $\gamma_1, \ldots, \gamma_l \in \Gamma$ for the coset space $\Gamma/\Gamma_p$ and set
 \begin{eqnarray*}
-	v^* = \sum_{i =1}^l \sigma(\gamma_i).
+	v^* = \sum_{i =1}^l \alpha(\gamma_i).
 \end{eqnarray*}
 Consider the 1-coboundary $\chi_{v^*}^\Gamma$ given by $v^*$
 \begin{eqnarray*}
 	\chi_{v^*}^\Gamma(\gamma) &=& v^* - \gamma\cdot v^* \\
-	&=& \sum_{i = 1}^l\sigma(\gamma_i) - \gamma\cdot \sum_{i = 1}^l\sigma(\gamma_i) \\
-	&=& \sum_{i = 1}^l\sigma(\gamma_i) - \sum_{i = 1}^l \gamma\cdot \sigma(\gamma_i).
+	&=& \sum_{i = 1}^l\alpha(\gamma_i) - \gamma\cdot \sum_{i = 1}^l\alpha(\gamma_i) \\
+	&=& \sum_{i = 1}^l\alpha(\gamma_i) - \sum_{i = 1}^l \gamma\cdot \alpha(\gamma_i).
 \end{eqnarray*}
 By the 1-cocycle condition we have
 \begin{eqnarray*}
-	\sigma(\gamma \gamma_i) = \sigma(\gamma) + \gamma\cdot\sigma(\gamma_i),
+	\alpha(\gamma \gamma_i) = \alpha(\gamma) + \gamma\cdot\alpha(\gamma_i),
 \end{eqnarray*}
 from which we obtain
 \begin{eqnarray*}
-	 \sum_{i = 1}^l\sigma(\gamma_i) - \sum_{i = 1}^l \gamma\cdot \sigma(\gamma_i) 
-	&=& \sum_{i = 1}^l\sigma(\gamma_i) - \sum_{i = 1}^l \left(\sigma(\gamma\gamma_i) - \sigma(\gamma) \right)\\
-	&=& \sum_{i = 1}^l\sigma(\gamma_i) - \sum_{i = 1}^l \sigma(\gamma\gamma_i) +\sum_{i = 1}^l \sigma(\gamma).
+	 \sum_{i = 1}^l\alpha(\gamma_i) - \sum_{i = 1}^l \gamma\cdot \alpha(\gamma_i) 
+	&=& \sum_{i = 1}^l\alpha(\gamma_i) - \sum_{i = 1}^l \left(\alpha(\gamma\gamma_i) - \alpha(\gamma) \right)\\
+	&=& \sum_{i = 1}^l\alpha(\gamma_i) - \sum_{i = 1}^l \alpha(\gamma\gamma_i) +\sum_{i = 1}^l \alpha(\gamma).
 \end{eqnarray*}
-Now as the value of $\sigma$ at a fixed $\gamma$ depends only on the value of $\sigma$ at the representative $\gamma_j$ of the coset containing $\gamma$ we can collapse the middle term to yield
+Now as the value of $\alpha$ at a fixed $\gamma$ depends only on the value of $\alpha$ at the representative $\gamma_j$ of the coset containing $\gamma$ we can collapse the middle term to yield
 \begin{eqnarray*}
 	\chi_{v^*}^\Gamma(\gamma) 
-	&=& \sum_{i = 1}^l\sigma(\gamma_i) - \sum_{i = 1}^l \sigma(\gamma\gamma_i) +\sum_{i = 1}^l \sigma(\gamma)\\
-	&=& \sum_{i = 1}^l\sigma(\gamma_i) - \sum_{i = 1}^l \sigma(\gamma_i) +\sum_{i = 1}^l \sigma(\gamma) \\
-	&=& l\, \sigma(\gamma).
+	&=& \sum_{i = 1}^l\alpha(\gamma_i) - \sum_{i = 1}^l \alpha(\gamma\gamma_i) +\sum_{i = 1}^l \alpha(\gamma)\\
+	&=& \sum_{i = 1}^l\alpha(\gamma_i) - \sum_{i = 1}^l \alpha(\gamma_i) +\sum_{i = 1}^l \alpha(\gamma) \\
+	&=& l\, \alpha(\gamma).
 \end{eqnarray*}
 Since $\gcd([\Gamma:\Gamma_p], p) = \gcd(l,p) = 1$, $l$ is invertible and so
 \begin{eqnarray*}
-	l^{-1}\chi_{v^*}^\Gamma(\gamma) = \sigma(\gamma).
+	l^{-1}\chi_{v^*}^\Gamma(\gamma) = \alpha(\gamma).
 \end{eqnarray*}
-Therefore $\sigma$ is a 1-coboundary and so the kernel of $H(i)$ is trivial.
+Therefore $\alpha$ is a 1-coboundary and so the kernel of $H(\iota)$ is trivial.
 \end{proof}
 
-\begin{example}\label{sl2ab}
+\begin{example}
 	Let
 	\begin{displaymath}
 		k = \bar{\mathbb{F}_p} = \bigcup_r \mathbb{F}_{p^r},
 	\end{displaymath}
 	$V$ a vector space on which $SL_2(k)$ acts, and $U(k)$ the subgroup of $SL_2(k)$ consisting of upper unitriangular matrices. Then $U(\mathbb{F}_{p^r})$ is a Sylow $p$-subgroup of $SL_2(\mathbb{F}_{p^r})$ for each $r$, and the map
 	\begin{displaymath}
-		H^1(SL_2(k), V) \rightarrow H^1(U(k), V)
+		H^1(\iota): H^1(SL_2(k), V) \rightarrow H^1(U(k), V)
 	\end{displaymath}
 	is injective.
+\label{eg:sl2ab}
 \end{example}
 \begin{proof}
 	The group $GL_2(\mathbb{F}_{p^r})$ has order $(p^{2r} - 1)(p^{2r} - p^r)$ since there are $p^{2r} - 1$ choices of vectors for the first column (all choices excluding the zero vector), and $p^{2r} - p^r$ choices of vectors for the second column (all choices excluding multiples of the first vector). The determinant is a homomorphism of groups
 	\begin{displaymath}
 		\mathrm{det}:GL_2(\mathbb{F}_{p^r}) \rightarrow \mathbb{F}^*_{p^r},
 	\end{displaymath}
-	with kernel $SL_2(\mathbb{F}_{p^r})$. Therefore, by the First homomorphism theorem for groups
+	with kernel $SL_2(\mathbb{F}_{p^r})$. Therefore, by the First Homomorphism Theorem for groups
 	\begin{displaymath}
 		GL_2(\mathbb{F}_{p^r})\,/\,SL_2(\mathbb{F}_{p^r}) \simeq \mathrm{det}(GL_2(\mathbb{F}_{p^r})) = \mathbb{F}^*_{p^r},
 	\end{displaymath}
@@ -211,25 +210,29 @@ Therefore $\sigma$ is a 1-coboundary and so the kernel of $H(i)$ is trivial.
 	\end{eqnarray*}
 	Since $|U(\mathbb{F}_{p^r})| = p^r$, $U(\mathbb{F}_{p^r})$ is a Sylow $p$-subgroup of $SL_2(\mathbb{F}_{p^r})$.
 	
-	Fix a non-trivial $y\in H^1(SL_2(k), V)$ and choose a representative $\tau\in Z^1(SL_2(k), V)$ for $y$. For each $g\in SL_2(\mathbb{F}_{p^r})$ define the morphism $f^{(r)}_g:V\rightarrow V$ by
+	Fix a non-trivial $y\in H^1(SL_2(k), V)$ and choose a representative $\beta\in Z^1(SL_2(k), V)$ for $y$. For each $g\in SL_2(\mathbb{F}_{p^r})$ define the morphism $f_g:V\rightarrow V$ by
 	\begin{displaymath}
-		f^{(r)}_g(v) = \tau(g) - \chi_v(g) = \tau(g) - v + g\cdot v.
+		f_g(v) = \beta(g) - \chi_v(g) = \beta(g) - v + g\cdot v.
 	\end{displaymath}
-	Consider subsets of $V$ defined by
+	Consider sequence of subsets of $V$ defined by
 	\begin{displaymath}
-		C_r = \{v \in V | f^{(r)}_g(v) = 0\}.
+		C_r = \{v \in V \,|\, f_g(v) = 0\}.
 	\end{displaymath}
 	Each subset $C_r$ is closed and the inclusion $\mathbb{F}_{p^{r!}} \subset \mathbb{F}_{p^{(r+1)!}}$ induces the reverse inclusion $C_{r!} \supset C_{(r+1)!}$. The Noetherian property for $V$ requires that the sequence of subsets of $V$ defined by
 	\begin{displaymath}
 		\left\{C_{i!}\right\}_{i = 1}^\infty
 	\end{displaymath}
-	becomes constant. However, $y\neq 0$ so $\tau$ is not a 1-coboundary on $SL_2(k)$, which means the $C_r$'s are eventually empty. That is, there exists an integer $s$ such that for any $v$ in $V$
+	becomes constant. However, $y\neq 0$ so $\beta$ is not a 1-coboundary on $SL_2(k)$, which means the $C_r$'s are eventually empty. That is, there exists an integer $s$ such that for any $v$ in $V$
 	\begin{displaymath}
-		(\tau - \chi_v)|_{SL_2(\mathbb{F}_{p^s})} \neq 0.
+		(\beta - \chi_v)|_{SL_2(\mathbb{F}_{p^s})} \neq 0.
 	\end{displaymath}
 	Equivalently, if $y|_{SL_2(\mathbb{F}_{p^r})} = 0$ for all $r$ then $y = 0$.
 	
-	Take $x$ in the kernel of the map $H^1(SL_2(k), V) \rightarrow H^1(U(k), V)$. Then for each $r$, $x|_{U(\mathbb{F}_{p^r})} = 0$ so by Lemma \ref{mapFromSylow} $x|_{SL_2(\mathbb{F}_{p^r})} = 0$. Therefore $x=0$ and so $H^1(SL_2(k), V) \rightarrow H^1(U(k), V)$ is injective.
+	Take $x$ in the kernel of the map 
+	\begin{displaymath}
+	 H^1(\iota) : H^1(SL_2(k), V) \rightarrow H^1(U(k), V).
+       \end{displaymath}
+	Then for each $r$, $x|_{U(\mathbb{F}_{p^r})} = 0$ so by Lemma \ref{lem:a_h_restriction}, $x|_{SL_2(\mathbb{F}_{p^r})} = 0$. Therefore $x=0$ and so $H^1(\iota)$ is injective.
 \end{proof}
 
 We could also consider appropriate maps $f:V\rightarrow\tilde{V}$ and following a similar chain of arguments as before we can define
@@ -247,114 +250,15 @@ or even
 
 We will be interested in $H$, $V$ algebraic groups, where we require that 1-cocyles be morphisms of varieties. 
 
-% Let us see why this is an interesting pursuit.
-% 
-% Let $H,G$ be algebraic groups, $P$ a parabolic subgroup of $G$, and $L$ a Levi subgroup of $P$. Let $\rho: H \rightarrow L$ be a morphism.  
-% 
-% Suppose $\rho_\alpha : H \rightarrow P$ is of the form $\rho_\alpha(h) = \alpha(h)\rho(h)$, where $\alpha:H \rightarrow R_u(P)$.
-% 
-% \begin{example}
-% What properties must $\alpha$ satisfy for $\rho_\alpha$ to be a homomorphism? 
-% \end{example}
-% Since
-% \begin{eqnarray*}
-% \alpha(gh)\rho(gh) = \rho_\alpha(gh) &=& \rho_\alpha(g)\rho_\alpha(h) \\
-% 	&=& \alpha(g)\rho(g)\alpha(h)\rho(h) \\
-% 	&=& \alpha(g)\rho(g)\alpha(h)\rho(g)^{-1}\rho(g)\rho(h)\\
-% 	&=&\alpha(g)\rho(g)\alpha(h)\rho(g)^{-1}\rho(gh),
-% \end{eqnarray*}
-% we have
-% \begin{eqnarray*}
-% \alpha(gh) = \alpha(g)\rho(g)\alpha(h)\rho(g)^{-1}.,
-% \end{eqnarray*}
-% or simply
-% \begin{eqnarray}\label{nonab1c}
-% \alpha(gh)=\alpha(g)*g\cdot\alpha(h),
-% \end{eqnarray}
-% where the action of $H$ on $R_u(P)$ is defined by $\rho$, and $*:R_u(P)\times R_u(P)\rightarrow R_u(P)$.
-% 
-% We call (\ref{nonab1c}) the 1-cocycle condition in our non-abelian setting and refer to morphisms $H\rightarrow V$ between algebraic groups that satisfies the 1-cocycle condition as 1-cocycles. We denote by $Z^1(H,V)$ the set of all 1-cocycles from $H$ into $V$.
-% 
-% \begin{example}
-% When is $\rho$ $R_u(P)$-conjugate to $\rho_\alpha$?
-% \end{example}
-% Suppose there exists a $v\in R_u(P)$ such that $\rho_\alpha(h) = v\rho(h)v^{-1}$ for all $h\in H$. Then
-% \begin{eqnarray*}
-% 	\alpha(h)\rho(h) = \rho_\alpha(h) &=& v\rho(h)v^{-1}\\
-% 	&=& v\rho(h)v^{-1}\rho(h)^{-1}\rho(h).
-% \end{eqnarray*}
-% Therefore, $\alpha$ is of the form
-% \begin{eqnarray*}
-% 	\alpha(h) = v*h\cdot v^{-1}.
-% \end{eqnarray*}
-% 
-% So for a fixed $v\in V$, we define a 1-coboundary in our non-abelian setting to be a morphism $\chi_v: H \rightarrow V$ of the form
-% \begin{eqnarray}
-% \chi_v(h) = v*h\cdot v^{-1}, 
-% \end{eqnarray}
-% and denote the collection of all 1-coboundaries from $H$ into $V$ by $B^1(H,V)$. Indeed,
-% \begin{eqnarray*}
-% 	\chi_v(gh) &=& v\rho(gh)v^{-1}\rho(gh)^{-1} \\
-% 	&=& v\rho(g)\rho(h)v^{-1}\rho(h)^{-1}\rho(g)^{-1} \\
-% 	&=&  v\rho(g)\left[v^{-1}\rho(g)^{-1}\rho(g)v\right]\rho(h)v^{-1}\rho(h)^{-1}\rho(g)^{-1} \\
-% 	&=& \left[v\rho(g)v^{-1}\rho(g)^{-1}\right]\left[\rho(g)v\rho(h)v^{-1}\rho(h)^{-1}\rho(g)^{-1}\right] \\
-% 	&=& \left[v*g\cdot v^{-1}\right]*g\cdot \left[v*h\cdot v^{-1}\right] \\
-% 	&=& \chi_v(g) * g\cdot \chi_v(h),
-% \end{eqnarray*}
-% so that $B^1(H,V)\subset Z^1(H,V)$.
-% 
-% \begin{example}
-% When is $\rho_\alpha$ $R_u(P)$-conjugate to $\rho_\beta$?
-% \end{example}
-% Let $\alpha,\beta\in Z^1(H,R_u(P))$ and suppose there exists a $v\in R_u(P)$ such that $\rho_\beta(h) = v\rho_\alpha(h)v^{-1}$. Then
-% \begin{eqnarray*}\label{nonabeq}
-% 	\beta(h)\rho(h) &=& v\alpha(h)\rho(h)v^{-1} \\
-% 	&=&v\alpha(h)\rho(h)v^{-1}\rho(h)^{-1}\rho(h),
-% \end{eqnarray*}
-% that is
-% \begin{eqnarray}
-% 	\beta(h) = v\alpha(h)*h\cdot v^{-1}.
-% \end{eqnarray}
-% The relation in (\ref{nonabeq}) gives rise to an equivalence relation on $Z^1(H,V)$. Now we define the (non-abelian) 1-cohomology, denoted by $H^1(H,V)$, to be the set of equivalence classes of $Z^1(H,V)$.
-
 \subsection{Definitions}
-Let $H, V$ be algebraic groups, $H$ acting on $V$. We call a map $\sigma$ from $H\rightarrow V$ a  \emph{1-cocycle} if it satisfies
-\begin{eqnarray}\label{theNonabOneCocycleCondition}
-	\sigma(h_1h_2) = \sigma(h_1) (h_1\cdot\sigma(h_2)),
+Let $H, V$ be algebraic groups, $H$ acting on $V$. We call a map $\alpha$ from $H\rightarrow V$ a  \emph{1-cocycle} if it satisfies
+\begin{eqnarray}
+  \alpha(h_1h_2) = \alpha(h_1) (h_1\cdot\alpha(h_2)),
+  \label{eqn:na_z}
 \end{eqnarray}
 for all $h_1, h_2 \in H$. Denote by $Z^1\left( H, V \right)$ the collection of all 1-cocycles from $H\rightarrow V$.
 
-We call the (\ref{theNonabOneCocycleCondition}) the \emph{1-cocycle condition}.
-
-% For any $\sigma_1, \sigma_2$ in $Z^1\left(H, V\right)$
-% \begin{eqnarray*}
-% 	\left(\sigma_1 + \sigma_2\right)(h_1h_2) &=& \sigma_1(h_1h_2) +  \sigma_2(h_1h_2) \\
-% 	&=& \sigma_1(h_1) + h_1\cdot\sigma_1(h_2) +  \sigma_2(h_1) + h_1\cdot\sigma_2(h_2)\\
-% 	&=& \left( \sigma_1(h_1) + \sigma_2(h_1) \right) + h_1\cdot\left(\sigma_1(h_2) + \sigma_2(h_2)\right) \\
-% 	&=& \left(\sigma_1+\sigma_2\right)(h_1) + h_1\cdot\left(\sigma_1 + \sigma_2\right)(h_2),
-% \end{eqnarray*}
-% so $Z^1(H, V)$ is closed under pointwise addition.
-
-% The trivial map from $H \rightarrow V$ that sends every $h$ in $H$ to the identity 1 in $V$ is a 1-cocycle. Furthermore for any $\sigma$ in $Z^1(H, V)$ we have
-% \begin{eqnarray*}
-% 	\sigma(1)\, =\, \sigma(1\cdot 1) &=& \sigma(1) + 1\cdot \sigma(1) \\
-% 	&=& \sigma(1) + \sigma(1) \\
-% 	&=& 2\,\sigma(1),
-% \end{eqnarray*}
-% which implies that
-% \begin{eqnarray*}
-% \sigma(1) = 0.
-% \end{eqnarray*}
-% From this we deduce that
-% \begin{eqnarray*}
-% 	\sigma(hh^{-1})\, =\, \sigma(1) &=& 0 \\
-% 	&=& \sigma(h) + h\cdot \sigma(h^{-1}),
-% \end{eqnarray*}
-% and so each $\sigma$ has an inverse defined by
-% \begin{eqnarray*}
-% 	-\sigma(h) = h\cdot\sigma(h^{-1}).
-% \end{eqnarray*}
-% Therefore $Z^1\left(H, V\right)$ is a $\mathbb{Z}-$module under pointwise addition.
+We call Equation \ref{eqn:na_z} the \emph{1-cocycle condition}.
 
 Given a $v \in V$ we define a \emph{1-coboundary} $\chi^H_v:H\rightarrow V$ to be
 \begin{eqnarray*}
@@ -373,115 +277,64 @@ For any $v \in V$ and any $h_1, h_2 \in H$
 \end{eqnarray*}
 so every 1-coboundary is also a 1-cocycle. 
 
-% For any $u,v$ in $V$ and all $h$ in $H$
-% \begin{eqnarray*}
-% 	(\chi^H_u + \chi^H_v)(h) &=& \chi^H_u(h) + \chi^H_v(h)\\
-% 	&=& u - h\cdot u + v - h\cdot v \\
-% 	&=& (u + v) - h\cdot (u + v) \\
-% 	&=& \chi^H_{u + v} (h)
-% \end{eqnarray*}
-% is a 1-coboundary, and hence $B^1\left(H, V\right)$ is also closed under pointwise addition.
-
-% Setting $v = -u$ in the above calculation provides the definition of an inverse of a 1-coboundary and hence shows that $B^1(H, V)$ is a subgroup of $Z^1(H, V)$ via the two-step subgroup test. In fact it is easy to show that $B^1(H, V)$ is a $\mathbb{Z}-$submodule of $Z^1(H, V)$, so we may form the quotient module
-% \begin{eqnarray*}
-% 	H^1\left(H, V\right) = Z^1\left(H, V\right) / B^1\left(H, V\right),
-% \end{eqnarray*}
-% called the \emph{1-cohomology}.
-% \begin{lemma} Suppose $H$ is linearly reductive. Then $H^1(H, V) = 0$. [Hochschild]
-% \end{lemma}
-
-We say $\sigma_1, \sigma_2 \in Z^1(H, V)$ are \emph{equivalent} if there exists a $v \in V$ such that
-\begin{eqnarray}\label{equivalentOneCocycles}
-	\sigma_1(h) = v (\sigma_2(h) h \cdot v^{-1}),
+We say $\alpha_1, \alpha_2 \in Z^1(H, V)$ are \emph{equivalent} if there exists a $v \in V$ such that
+\begin{eqnarray}
+  \alpha_1(h) = v \alpha_2(h) (h \cdot v^{-1}),
+  \label{eqn:h_equiv}
 \end{eqnarray}
-for all $h \in H$. We call the set of equivalence classes of $Z^1(H, V)$ under the equivalence relation defined by (\ref{equivalentOneCocycles}) the \emph{1-cohomology}, denoted $H^1(H, V)$.
+for all $h \in H$. We call the set of equivalence classes of $Z^1(H, V)$ under the equivalence relation defined by Equation \ref{eqn:h_equiv} the \emph{1-cohomology}, denoted $H^1(H, V)$.
 
 \subsection{Maps between 1-cohomologies}
-% Let $\phi$ be a homomorphism from $\tilde{H}\rightarrow H$, $\tilde{H}$ being another group that acts on $V$. Suppose that for every $h$ in $H$, $\phi$ satisfies
-% \begin{eqnarray*}
-% 	\phi(h)\cdot v = h\cdot v,
-% \end{eqnarray*}
-% for all $v$ in $V$. If $\sigma$ is a 1-cocycle from $H\rightarrow V$ then we will show that the map denoted $Z^1(\phi)(\sigma)$ defined by
-% \begin{eqnarray*}
-% 	Z^1(\phi)(\sigma) = \sigma \circ \phi,
-% \end{eqnarray*}
-% is a 1-cocycle from $\tilde{H}\rightarrow V$.
-% 
-% Take $h_1, h_2$ in $H$. We have
-% \begin{eqnarray*}
-% 	Z^1(\phi)(\sigma)(h_1h_2) &=& (\sigma \circ \phi)(h_1h_2) \\
-% 		&=& \sigma(\phi(h_1h_2)) \\
-% 		&=& \sigma(\phi(h_1)\phi(h_2)) \\
-% 		&=& \sigma(\phi(h_1)) + \phi(h_1)\cdot\sigma(\phi(h_2) \\
-% 		&=& \sigma(\phi(h_1)) + h_1\cdot\sigma(\phi(h_2)) \\
-% 		&=& (\sigma \circ \phi)(h_1) + (\sigma \circ \phi)(h_2) \\
-% 		&=& Z^1(\phi)(\sigma)(h_1) + h_1\cdot Z^1(\phi)(\sigma)(h_2).
-% \end{eqnarray*}
-% 
-% Moreover, it can be shown that $Z^1(\phi)$ maps $B^1(H, V)$ into $B^1(\tilde{H}, V)$. This leads us to define a map of 1-cohomologies,
-% \begin{eqnarray*}
-% 	H^1(\phi):H^1(H, V) \rightarrow H^1(\tilde{H}, V),
-% \end{eqnarray*}
-% defined by
-% \begin{displaymath}
-% \begin{CD}
-% 	Z^1(H, V) @>Z^1(\phi)>> Z^1(\tilde{H}, V)\\
-% 	@V{\pi}VV                                  @VV{\tilde{\pi}}V\\
-% 	H^1(H, V) @>>H^1(\phi)> H^1(\tilde{H}, V)
-% \end{CD}
-% \end{displaymath}
-% where $\pi$ and $\tilde\pi$ are the respective canonical projections of $Z^1(H, V)$ onto $H^1(H, V)$ and $Z^1(\tilde{H}, V)$ onto $H^1(\tilde{H}, V)$. To show that the map $H^1(\phi)$ is well-defined it is sufficient to notice that $Z^1(\phi)$ is a homomorphism.
-
-\begin{lemma} Let $B$ be a Borel subgroup of $SL_2$ acting on an algebraic group $V$. Then $H^1(i):H^1(SL_2, V)\rightarrow H^1(B, V)$ is injective.
+\begin{lemma} Let $B$ be a Borel subgroup of $SL_2$ acting on an algebraic group $V$. Then $H^1(\iota):H^1(SL_2, V)\rightarrow H^1(B, V)$ is injective.
 \end{lemma}
 \begin{proof}
-Let $x$ be in the kernel of $H^1(i)$ and $\sigma$ and element of $Z^1(SL_2, V)$ that projects onto the class $x$. Since $Z^1(i)(\sigma)$ projects to the trivial 1-cohomology class we may as well assume that $\sigma|_B = 1$. For there exists some $v \in V$ such that for all $b \in B$
+Let $x$ be in the kernel of $H^1(\iota)$ and $\alpha$ and element of $Z^1(SL_2, V)$ that projects onto the class $x$. Since $Z^1(\iota)(\alpha)$ projects to the trivial 1-cohomology class we may as well assume that $\alpha|_B = 1$. For there exists some $v \in V$ such that for all $b \in B$
 \begin{displaymath}
-	Z^1(i)(\sigma)(b) = v (b \cdot v^{-1}).
+	\left(Z^1(\iota)(\alpha) \right)(b) = v (b \cdot v^{-1}).
 \end{displaymath}
-Consider the 1-cocycle $\hat{\sigma}:SL_2\rightarrow V$ defined by
+Consider the 1-cocycle $\hat{\alpha}:SL_2\rightarrow V$ defined by
 \begin{displaymath}
-	\hat{\sigma}(h) = v^{-1} \sigma(h) (h \cdot v).
+	\hat{\alpha}(h) = v^{-1} \alpha(h) (h \cdot v).
 \end{displaymath}
-Then by construction $\hat{\sigma}$ also projects to the class $x$, and for all $b \in B$
+Then by construction $\hat{\alpha}$ also projects to the class $x$, and for all $b \in B$
 \begin{eqnarray*}
-	\hat{\sigma}(b) &=& v^{-1} \sigma(b) (b \cdot v) \\
+	\hat{\alpha}(b) &=& v^{-1} \alpha(b) (b \cdot v) \\
 	&=& v^{-1} (v (b\cdot v^{-1})) (b \cdot v)\\
 	&=& v^{-1} v (b\cdot v)^{-1} (b \cdot v)\\
 	&=& 1,
 \end{eqnarray*}
-so we may as well have chosen $\hat{\sigma}$ instead as a representative for $x$. 
+so we may as well have chosen $\hat{\alpha}$ instead as a representative for $x$. 
 
 Now consider the \emph{homogeneous space} $SL_2/B$ \cite{humphreys1975linear} and take the map 
 \begin{displaymath}
-	\tilde{\sigma}:SL_2/B \rightarrow V,
+	\tilde{\alpha}:SL_2/B \rightarrow V,
 \end{displaymath}
 defined in the usual way under the canonical projection $\pi:SL_2 \rightarrow SL_2/B$:
 \begin{displaymath}
 	\xymatrix{
-	SL_2 \ar[r]^{\sigma} \ar[d]_{\pi} & V\\
-	SL_2/B \ar[ru]_{\tilde{\sigma}}
+	SL_2 \ar[r]^{\alpha} \ar[d]_{\pi} & V\\
+	SL_2/B \ar[ru]_{\tilde{\alpha}}
 	}
 \end{displaymath}
-This map is well defined and is a morphism \cite{borel1991linear}. Now since $SL_2/B$ is an irreducible projective variety \cite{humphreys1975linear}, $\tilde{\sigma}$ must be constant  \cite{borel1991linear}. Hence, as $\sigma$ takes the value 1 for any $b \in B$, $\tilde{\sigma}(hB) = 1$ for all cosets $hB$. Therefore, for all $h \in SL_2$
+This map is well defined and is a morphism \cite{borel1991linear}. Now since $SL_2/B$ is an irreducible projective variety \cite[Theorem 21.3]{humphreys1975linear}, $\tilde{\alpha}$ must be constant  \cite{borel1991linear}. Hence, as $\alpha$ takes the value 1 for any $b \in B$, $\tilde{\alpha}(hB) = 1$ for all cosets $hB$. Therefore, for all $h \in SL_2$
 \begin{displaymath}
-	\sigma(h) = \tilde{\sigma}(hB) = 1.
+	\alpha(h) = \tilde{\alpha}(hB) = 1.
 \end{displaymath}
-We have shown that $\sigma$ is the 1-coboundary $\chi_1$ which means that the kernel of $H^1(i)$ is trivial.
+We have shown that $\alpha$ is the trivial 1-coboundary $\chi_1$ which means that the kernel of $H^1(\iota)$ is trivial.
 \end{proof} 
 
-\begin{lemma} Let $B$ be a Borel subgroup of $SL_2$ and $U$ be the unipotent radical of $B$. Then $H^1(B, V)\rightarrow H^1(U, V)$ is injective. Moreover
+\begin{lemma} Let $B$ be a Borel subgroup of $SL_2$ and $U$ be the unipotent radical of $B$. Then $H^1(\iota):H^1(B, V)\rightarrow H^1(U, V)$ is injective. Moreover
 \begin{displaymath}
-	H^1(SL_2, V)\rightarrow H^1(U, V)
+	H^1(\iota): H^1(SL_2, V)\rightarrow H^1(U, V)
 \end{displaymath}
 is injective.
 \end{lemma}
 \begin{proof}
-Let $x$ be an element of the kernel of $H^1(i):H^1(B,V)\rightarrow H^1(U,V)$ and let $\sigma \in Z^1(B,V)$ be a representative for $x$. We may as well assume that $\sigma|_T = 1$. For any $b \in B$ we can find a $u \in U$ and a $t \in T$ such that $b = ut$. Hence
+Let $x$ be an element of the kernel of $H^1(\iota):H^1(B,V)\rightarrow H^1(U,V)$ and let $\alpha \in Z^1(B,V)$ be a representative for $x$. We may as well assume that $\alpha|_T = 1$. For any $b \in B$ we can find a $u \in U$ and a $t \in T$ such that $b = ut$. Hence
 \begin{eqnarray*}
-	\sigma(b) &=& \sigma(ut) \\
-	&=& \sigma(u) (u \cdot \sigma(t)) \\
-	&=& \sigma(u).
+	\alpha(b) &=& \alpha(ut) \\
+	&=& \alpha(u) (u \cdot \alpha(t)) \\
+	&=& \alpha(u).
 \end{eqnarray*}
-Since $\sigma$ represents $x$, $\sigma$ must be a 1-coboundary on $U$. Hence $\sigma \in B^1(B, V)$ and the kernel of $H^1(i):H^1(B,V)\rightarrow H^1(U,V)$ is trivial.
+Since $\alpha$ represents $x$, $\alpha$ must be a 1-coboundary on $U$. Hence $\alpha \in B^1(B, V)$ and the kernel of $H^1(\iota)$ is trivial.
 \end{proof}

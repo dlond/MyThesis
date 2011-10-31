@@ -7,15 +7,17 @@
 
 \section{K\"ulshammer's Second Problem}
 
-Two questions were raised by B. K\"ulshammer concerning representations of a finite group $\Gamma$ into a linear algebraic group $G$ over an algebraically closed field $k$. The first has a positive answer  and is essentially contained a paper by A. Weil \cite{weil1964remarks}:
+Two questions were raised by B. K\"ulshammer concerning representations of a finite group $\Gamma$ into a linear algebraic group $G$ over an algebraically closed field $k$. 
 \begin{itemize}
-	\item[(K. I)] Let $\mathrm{char}(k)$ be prime to the order of $\Gamma$. Are there only finitely many representations $\rho:\Gamma\rightarrow G$ up to conjugation by $G$?
-	\item[(K. II)] Let $p = \mathrm{char}(k)$ and $\Gamma_p \subset  \Gamma$ be a Sylow $p$-subgroup. Fix a conjugacy class of representations from $\Gamma_p\rightarrow G$. Are there, up to conjugation by $G$, only finitely many representations $\rho:\Gamma\rightarrow G$ whose restrictions to $\Gamma_p$ belong to the given class?
+  \item[1.] \begin{quote} Let $\mathrm{char}(k)$ be prime to the order of $\Gamma$. Are there only finitely many representations $\rho:\Gamma\rightarrow G$ up to conjugation by $G$?
+    \end{quote}
+  \item[2.] \begin{quote} Let $p = \mathrm{char}(k)$ and $\Gamma_p < \Gamma$ be a Sylow $p$-subgroup. Fix a conjugacy class of representations from $\Gamma_p\rightarrow G$. Are there, up to conjugation by $G$, only finitely many representations $\rho:\Gamma\rightarrow G$ whose restrictions to $\Gamma_p$ belong to the given class?
+    \end{quote}
 \end{itemize}
 
-(K. II) has positive answer so long as $G$ is reductive and the characteristic of $k$ is good for $G$ \cite{slodowy1997two}. The same paper shows that the answer is ``no'' in general by way of a counterexample involving a non-reductive $G$.
+The first has a positive answer and is essentially contained a paper by A. Weil \cite{weil1964remarks}. The second has positive answer so long as $G$ is reductive and the characteristic of $k$ is good for $G$ \cite[Theorem 3]{slodowy1997two}. The same paper shows that the answer is ``no'' in general by way of a counterexample involving a non-reductive $G$.
 
-We wish to determine whether there exists a reductive counterexample to (K. II).
+We wish to determine whether there exists a reductive counterexample to K\"ulshammer's second question.
 
 \section{The Approach}
 
@@ -39,7 +41,7 @@ So by Theorem \ref{thm:finiteGCR}, if we have infinitely many $G$-conjugacy clas
 	\begin{displaymath}
 		\rho_\nu: \Gamma\rightarrow P \cap Q.
 	\end{displaymath}
-	Let $T$ be a maximal torus of $G$ contained in $P\cap Q$ [ref], and let $\{n_1, \ldots, n_l\}$ be coset representatives for the Weyl group $W = N_G(T)/T$.
+	Let $T$ be a maximal torus of $G$ contained in $P\cap Q$ and let $\{n_1, \ldots, n_l\}$ be coset representatives for the Weyl group $W = N_G(T)/T$.
 	
 	Since $T$ and $gTg^{-1}$ are maximal tori of $Q$ they must be $Q$-conjugate, so there exists an element $q\in Q$ such that
 	\begin{displaymath}
@@ -71,29 +73,40 @@ So by Theorem \ref{thm:finiteGCR}, if we have infinitely many $G$-conjugacy clas
 	The converse is trivial.
 \end{proof}
 
-Although $G$ has infinitely many parabolic subgroups there are only finitely many $G$-conjugacy classes of parabolic subgroups, so we can choose a finite set $\{Q_i\}$ of representatives. We choose this particular set by fixing a maximal torus $T<G$ and a Borel subgroup $B<G$ containing $T$. Then a set of representative parabolic subgroups of $G$ can be sought via the root system of $G$ with respect to $T$. For each $Q_i$ there is a corresponding Levi subgroup $M_i<Q_i$ containing $B$. By Theorem \ref{thm:finiteGCR} there are only finitely many $M_i$-conjugacy classes of $M_i$-irreducible representations $\Gamma \rightarrow M_i$ so we can fix a finite set of representatives $\{\sigma^j_{M_i}\}$. 
+%Although $G$ has infinitely many parabolic subgroups there are only finitely many $G$-conjugacy classes of parabolic subgroups, so we can choose a finite set $\{Q_i\}$ of representatives. We choose this particular set by fixing a maximal torus $T<G$ and a Borel subgroup $B<G$ containing $T$. Then a set of representative parabolic subgroups of $G$ can be sought via the root system of $G$ with respect to $T$. For each $Q_i$ there is a corresponding Levi subgroup $M_i<Q_i$ containing $B$. By Theorem \ref{thm:finiteGCR} there are only finitely many $M_i$-conjugacy classes of $M_i$-irreducible representations $\Gamma \rightarrow M_i$ so we can fix a finite set of representatives $\{\sigma^j_{M_i}\}$. 
 
-Let $V_i = R_u(Q_i)$ be the unipotent radical of $Q_i$, so that $Q_i = V_i \rtimes M_i$. We define the projection $\pi_i:Q_i \rightarrow M_i$ by $\pi_i(q) = m$, where $q = vm \in Q_i$, $v\in V_i$, $m\in M_i$.
+%Let $V_i = R_u(Q_i)$ be the unipotent radical of $Q_i$, so that $Q_i = V_i \rtimes M_i$. We define the projection $\pi_i:Q_i \rightarrow M_i$ by $\pi_i(q) = m$, where $q = vm \in Q_i$, $v\in V_i$, $m\in M_i$.
 
-We will show that for each representation $\rho:\Gamma\rightarrow G$ there exists an element $g\in G$ such that the representation $\sigma = g\cdot\rho$ fits one of only finitely many commutative diagrams of the following form, determined by the indices $i,j$:
-\begin{displaymath}
-	\xymatrix{
-	\Gamma \ar[r]^{\sigma} \ar[rd]_{\sigma^j_{M_i}} & Q_i \ar[d]^{\pi_i}\\
-	& M_i}
-\end{displaymath}
-We call this construction a \emph{standard commutative diagram} for $\rho$.
+%We will show that for each representation $\rho:\Gamma\rightarrow G$ there exists an element $g\in G$ such that the representation $\sigma = g\cdot\rho$ fits one of only finitely many commutative diagrams of the following form, determined by the indices $i,j$:
+%\begin{displaymath}
+%	\xymatrix{
+%	\Gamma \ar[r]^{\sigma} \ar[rd]_{\sigma^j_{M_i}} & Q_i \ar[d]^{\pi_i}\\
+%	& M_i}
+%\end{displaymath}
+%We call this construction a \emph{standard commutative diagram} for $\rho$.
 
-Let $\rho:\Gamma\rightarrow G$ be a representation and let $P$ be a minimal parabolic subgroup of $G$ containing $\rho(\Gamma)$. Then there is an element $h\in G$ such that $hPh^{-1} = Q_i$ for some $i$. Let $\rho' = h\cdot \rho$. 
+%Let $\rho:\Gamma\rightarrow G$ be a representation and let $P$ be a minimal parabolic subgroup of $G$ containing $\rho(\Gamma)$. Then there is an element $h\in G$ such that $hPh^{-1} = Q_i$ for some $i$. Let $\rho' = h\cdot \rho$. 
 
-Since $Q_i$ is a minimal parabolic subgroup containing $(\pi_i \circ \rho)(\Gamma)$, $\rho'_0$ is $M_i$-irreducible [reference]. Hence there exists an $m\in M_i$ such that
-\begin{displaymath}
-	m\cdot \rho'_0 = \sigma^j_{M_i}, 
-\end{displaymath}
-for some $j$. Let $g=mh\in G$ and define $\sigma = g\cdot \rho$. This verifies what we set out to show.
+%Since $Q_i$ is a minimal parabolic subgroup containing $(\pi_i \circ \rho)(\Gamma)$, $\rho'_0$ is $M_i$-irreducible [reference]. Hence there exists an $m\in M_i$ such that
+%\begin{displaymath}
+%	m\cdot \rho'_0 = \sigma^j_{M_i}, 
+%\end{displaymath}
+%for some $j$. Let $g=mh\in G$ and define $\sigma = g\cdot \rho$. This verifies what we set out to show.
 
-It is worth pointing out that the element $g\in G$ and the minimal parabolic $P<G$ used in the construction are not necessarily unique, hence the qualifier ``\emph{a} standard commutative diagram''. As an extreme example, if $\rho$ is the trivial representation then $\rho$ has minimal parabolic $P=B$, and any $g\in G$ could be used to conjugate $\rho(\Gamma)$ into $Q_i=B$. [Example of more than one minimal parabolic?]
+%It is worth pointing out that the element $g\in G$ and the minimal parabolic $P<G$ used in the construction are not necessarily unique, hence the qualifier ``\emph{a} standard commutative diagram''. As an extreme example, if $\rho$ is the trivial representation then $\rho$ has minimal parabolic $P=B$, and any $g\in G$ could be used to conjugate $\rho(\Gamma)$ into $Q_i=B$. [Example of more than one minimal parabolic?]
 
-For a given parabolic subgroup $P$ of $G$ with Levi subgroup $L$ and unipotent radical $V$, and a given representation $\rho:\Gamma\rightarrow P$ we have a map $\rho_L:\Gamma\rightarrow L$ defined by $\rho_L = \pi \circ \rho$. Now define $\alpha_\rho:\Gamma\rightarrow V$ by $\alpha_\rho(\gamma) = \rho(\gamma)\rho_L(\gamma)^{-1}$ for all $\gamma\in\Gamma$, so that $\rho = \alpha_\rho\rho_L$.
+For a given parabolic subgroup $P$ of $G$ with Levi subgroup $L$ and unipotent radical $V$, and a given representation $\rho:\Gamma\rightarrow P$ we have a map $\rho_L:\Gamma\rightarrow L$ defined by
+\begin{eqnarray}
+  \rho_L = \pi \circ \rho,
+  \label{eqn:proj_l}
+\end{eqnarray}
+where $\pi$ is the projection $Q \rightarrow L$.
+
+Now define $\alpha_\rho:\Gamma\rightarrow V$ by 
+\begin{eqnarray*}
+  \alpha_\rho(\gamma) = \rho(\gamma)\rho_L(\gamma)^{-1},
+\end{eqnarray*}
+for all $\gamma\in\Gamma$. Hence $\rho = \alpha_\rho\rho_L$.
 
 If $\rho$ is a homomorphism then
 \begin{eqnarray*}
@@ -109,7 +122,7 @@ so that
 	\alpha_\rho(\gamma_1)\rho_L(\gamma_1)\alpha_\rho(\gamma_2)\rho_L(\gamma_1)^{-1}\\
 	&=& \alpha_\rho(\gamma_1)\,\left(\gamma_1\cdot\alpha_\rho(\gamma_2)\right),
 \end{eqnarray*}
-where $\Gamma$ acts on $V$ by conjugation via $\rho_L$. Therefore $\alpha_\rho$ satisfies the (multiplicative) 1-cocycle condition in (\ref{theNonabOneCocycleCondition}) and so $\alpha_\rho\in Z^1(\Gamma, \rho_L, V)$. 
+where $\Gamma$ acts on $V$ by conjugation via $\rho_L$. Therefore $\alpha_\rho$ satisfies the 1-cocycle condition (Equation \ref{eqn:na_z}) and so $\alpha_\rho\in Z^1(\Gamma, \rho_L, V)$. 
 
 Conversely given a 1-cocycle $\alpha\in Z^1(\Gamma, \rho_L, V)$ we can construct a map $\rho:\Gamma\rightarrow P$ by $\rho(\gamma) = \alpha(\gamma)\rho_L(\gamma)$ for all $\gamma\in \Gamma$. The construction is a homomorphism from $\Gamma \rightarrow P$, for take $\gamma_1, \gamma_2 \in \Gamma$:
 \begin{eqnarray*}
@@ -163,13 +176,15 @@ for all $\overline{\sigma} \in Hom(\Gamma, P)_{\rho_L}/V$.
   \end{eqnarray*}
   Hence $[h(\sigma)] = [h(\tau)]$ and so $\overline{h}$ is well-defined. 
   
-  Since $h$ is onto so is $\overline{h}$. Now take $[\alpha_\sigma] = [\alpha_\tau]$ for some $\alpha_\sigma, \alpha_\tau \in Z^1(\Gamma, \rho_L, V)$. Then there exists $v \in V$ such that
+  Since $h$ is onto so is $\overline{h}$.
+  
+  Now suppose $[\alpha_\sigma] = [\alpha_\tau]$ for some $\alpha_\sigma, \alpha_\tau \in Z^1(\Gamma, \rho_L, V)$. Then there exists $v \in V$ such that
   \begin{displaymath}
     \alpha_\sigma(\gamma) = v \alpha_\tau(\gamma)(\gamma \cdot v^{-1}),
   \end{displaymath}
   for all $\gamma \in \Gamma$.
 
-  Then the corresponding representations $\sigma, \tau \in Hom(\Gamma, P)_{\rho_L}$ are $V$-conjugate:
+  Therefore corresponding representations $\sigma, \tau \in Hom(\Gamma, P)_{\rho_L}$ are $V$-conjugate:
   \begin{eqnarray*}
     \sigma(\gamma) &=&  \alpha_\sigma(\gamma)\rho_L(\gamma) \\
     &=& v \alpha_\tau(\gamma)(\gamma \cdot v^{-1}) \rho_L(\gamma) \\
@@ -209,15 +224,22 @@ and $h$ is $Z(L)^\circ$-equivariant:
 \begin{eqnarray*}
   h(z \cdot \sigma)(\gamma) &=&  z \sigma(\gamma) z^{-1} \rho_L(\gamma)^{-1} \\
   &=& z \sigma(\gamma) \rho_L(\gamma)^{-1} z^{-1} \\
-  &=& (z \cdot h(\sigma))(\gamma).
+  &=& (z \cdot h(\sigma))(\gamma),
 \end{eqnarray*}
+that is
+\begin{eqnarray}
+  \alpha_{z \cdot \sigma} &=& z \cdot \alpha_\sigma,
+  \label{eqn:h_z_equivar}
+\end{eqnarray}
+for all $\alpha_\sigma \in Z^1(\Gamma, \rho_L, V)$ and all $z \in Z(L)^\circ$.
 
 We show that the $Z(L)^\circ$-action on $Hom(\Gamma, P)_{\rho_L}$ and $Z^1(\Gamma, \rho_L, V)$ descends to give a $Z(L)^\circ$-action on $Hom(\Gamma, P)_{\rho_L}/V$ and $H^1(\Gamma, \rho_L, V)$, respectively. The actions will be well-defined as a consequence of the fact that $L$ normalizes $V$.
 
 Let $z \in Z(L)^\circ$ and $\overline{\sigma} \in Hom(\Gamma, P)_{\rho_L}/V$. We define the $Z(L)^\circ$-action on $Hom(\Gamma, P)_{\rho_L}/V$ so that the projection $Hom(\Gamma, P)_{\rho_L} \rightarrow Hom(\Gamma, P)_{\rho_L}/V$ is $Z(L)^\circ$-equivariant:
-\begin{displaymath}
+\begin{eqnarray}
   z \cdot \overline{\sigma} = \overline{z \cdot \sigma}.
-\end{displaymath}
+  \label{eqn:z_act_rv}
+\end{eqnarray}
 
 Suppose $\overline{\sigma} = \overline{\tau}$. Then there is $v \in V$ such that $\sigma = v \cdot \tau \in Hom(\Gamma, P)_{\rho_L}$, and $v' \in V$ such that $zv = v' z$. Therefore
 \begin{eqnarray*}
@@ -226,12 +248,13 @@ Suppose $\overline{\sigma} = \overline{\tau}$. Then there is $v \in V$ such that
   &=& \overline{z \cdot \tau}.
 \end{eqnarray*}
 
-Hence the $Z(L)^\circ$-action on $Hom(\Gamma, P)_{\rho_L}/V$ is well-defined.
+Hence the $Z(L)^\circ$-action on $Hom(\Gamma, P)_{\rho_L}/V$ in Equation \ref{eqn:z_act_rv} is well-defined.
 
 Similarly, the $Z(L)^\circ$-action on $H^1(\Gamma, \rho_L, V)$ is defined so that the projection to the 1-cohomology $Z^1(\Gamma, \rho_L, V) \rightarrow H^1(\Gamma, \rho_L, V)$ is $Z(L)^\circ$-equivariant:
-\begin{displaymath}
+\begin{eqnarray}
   z \cdot [\alpha_\sigma] = [z \cdot \alpha_\sigma].
-\end{displaymath}
+  \label{eqn:z_act_h}
+\end{eqnarray}
 
 Suppose $[\alpha_\sigma] = [\alpha_\tau]$. Then there is $v \in V$ such that for all $\gamma \in \Gamma$,
 \begin{displaymath}
@@ -247,13 +270,13 @@ and there is $v' \in V$ such that $zv = v' z$. Therefore, for all $\gamma \in \G
   &=& v' ((z \cdot \alpha_\tau)(\gamma)) (\gamma \cdot v'^{-1}).
 \end{eqnarray*}
 
-Therefore $[z \cdot \alpha_\sigma] = [z \cdot \alpha_\tau]$ and the $Z(L)^\circ$-action on $H^1(\Gamma, \rho_L, V)$ is well-defined.
+Therefore $[z \cdot \alpha_\sigma] = [z \cdot \alpha_\tau]$ and the $Z(L)^\circ$-action on $H^1(\Gamma, \rho_L, V)$ in Equation \ref{eqn:z_act_h} is well-defined.
 
 Since $h$ is $Z(L)^\circ$-equivariant, it follows that $\overline{h}$ is also:
 \begin{eqnarray*}
   \overline{h}(z \cdot \overline{\sigma}) &=& \overline{h}(\overline{z \cdot \sigma}) \\
   &=& [\alpha_{z \cdot \sigma}] \\
-  &=& [z \cdot \alpha_\sigma] \qquad (h \textrm{ is } Z(L)^\circ \textrm{-equivariant}) \\
+  &=& [z \cdot \alpha_\sigma] \qquad (\textrm{Equation }\ref{eqn:h_z_equivar}) \\
   &=& z \cdot [\alpha_\sigma] \\
   &=& z \cdot \overline{h}(\overline{\sigma}).
 \end{eqnarray*}
@@ -283,26 +306,65 @@ Hence the following Lemma:
   \begin{displaymath}
     \varphi(\pi_Z(\overline{\sigma})) = \tilde{\sigma},
   \end{displaymath}
-  is well defined:
+  is well defined and a bijection. To this end consider the following statements:
   \begin{eqnarray*}
     && \pi_Z(\overline{\sigma}) = \pi_Z(\overline{\tau}) \\
     &\Longleftrightarrow& \textrm{there exists } z \in Z(L)^\circ \textrm{ such that } \overline{\sigma} = z \cdot \overline{\tau} \\
-    &\Longleftrightarrow& \textrm{there exists } z \in Z(L)^\circ \textrm{ such that } \overline{\sigma} = \overline{z \cdot \tau} \\
-    &\Longleftrightarrow& \textrm{there exists } v \in V, z \in Z(L)^\circ \textrm{ such that } \overline{\sigma} = z \cdot \overline{\tau} \\
-    &\Longleftrightarrow& \tilde{\sigma} = \tilde{\tau}
+    &\Longleftrightarrow& \textrm{there exists } z \in Z(L)^\circ \textrm{ such that } \overline{\sigma} = \overline{z \cdot \tau} \qquad (\textrm{Equation } \ref{eqn:z_act_h}) \\
+    &\Longleftrightarrow& \textrm{there exists } v \in V, z \in Z(L)^\circ \textrm{ such that } \sigma = v \cdot (z \cdot \tau) \\
+    &\Longleftrightarrow& \textrm{there exists } v \in V, z \in Z(L)^\circ \textrm{ such that } \sigma = (vz) \cdot \tau \\
+    &\Longleftrightarrow& \tilde{\sigma} = \tilde{\tau}.
   \end{eqnarray*}
+  Hence well definedness of $\varphi$ reads top to bottom, and injectivity reads bottom to top. Surjectivity follows from the fact that the canonical projections:
+  \begin{displaymath}
+    Hom(\Gamma, P)_{\rho_L} \rightarrow Hom(\Gamma, P)_{\rho_L}/V \rightarrow (Hom(\Gamma, P)_{\rho_L}/V)/Z(L)^\circ, 
+  \end{displaymath}
+  and
+  \begin{displaymath}
+    Hom(\Gamma, P)_{\rho_L} \rightarrow Hom(\Gamma, P)_{\rho_L}/VZ(L)^\circ, 
+  \end{displaymath}
+  are surjective.
 \end{proof}
 
+Let $R = \{ \rho_\lambda : \Gamma \rightarrow G \,|\, \lambda \in \Lambda \}$ be a collection of representations indexed by the set $\Lambda$. For a parabolic subgroup $P < G$ define
+\begin{displaymath}
+  R_P = \{ \rho \in R \,|\, P \textrm{ is a minimal parabolic subgroup for } \rho \}.
+\end{displaymath}
+
+Since there are only finitely many $G$-conjugacy classes of parabolic subgroups of $G$ (a standard result, e.g. \cite[Theorem 30.1(a)]{humphreys1975linear}), we can choose a finite set of representative parabolic subgroups $\{Q_i\}_{i = 0}^n$ of $G$ such that every parabolic subgroup $P < G$ is $G$-conjugate to precisely one $Q_i$. Every $\rho \in R$ has a minimal parabolic subgroup and so there exists an element of each $G$-conjugacy class of $R$ with minimal parabolic $Q_i$ for some $i$, hence
+\begin{eqnarray}
+  G \cdot R = \bigcup_i G \cdot R_{Q_i}.
+  \label{eqn:gr_gqi}
+\end{eqnarray}
+
+Furthermore, fix a particular $Q_i$ with Levi subgroup $M_i$. Since $Q_i$ is minimal for each $\rho \in R_{Q_i}$, $\rho_{M_i}$ (Equation \ref{eqn:proj_l}) is $M_i$-irreducible \cite[Lemma 6.2(ii)]{bate2005geometric}.
+
+For an $M_i$-irreducible representation $\sigma : \Gamma \rightarrow M_i$ define
+\begin{displaymath}
+  R_{\sigma} = \{ \rho \in R_{Q_i} \,|\, \rho_{M_i} = \sigma \}.
+\end{displaymath}
+
+Since there are only finitely many $M_i$-conjugacy classes of $M_i$-irreducible representations $\Gamma \rightarrow M_i$ (Theorem \ref{thm:finiteGCR}), we can choose a finite set of representative $M_i$-irreducible representations $\{\sigma_i^j : \Gamma \rightarrow M_i \}_{j=0}^{n_i}$, such that every $M_i$-irreducible representation $\Gamma \rightarrow M_i$ is $M_i$-conjugate to precisely one $\sigma_i^j$. Every $M_i$-conjugacy class of $R_{Q_i}$ has an element $\rho$ such that $\rho_{M_i} = \sigma_i^j$ for some $j$, hence
+\begin{displaymath}
+  M_i \cdot R_{Q_i} = \bigcup_j M_i \cdot R_{\sigma_i^j},
+\end{displaymath}
+and therefore
+\begin{eqnarray}
+  G \cdot R = \bigcup_i G \cdot R_{Q_i} = \bigcup_i \bigcup_j G \cdot R_{\sigma_i^j}.
+  \label{eqn:gr_grsigma}
+\end{eqnarray}
+
+We note that each subset $R_{\sigma_i^j} \subset R_{Q_i}$ is a $VZ(M_i)^\circ$-stable subset of $Hom(\Gamma, Q_i)_{\sigma_i^j}$.
+
 \begin{lemma}
-  Let $R = \{\rho_\lambda:\Gamma\rightarrow P\,|\,\lambda\in\Lambda\}$ be a collection of representations such that $P$ is a minimal parabolic subgroup for each $p_\lambda$. Given an irreducible representation $\sigma_L:\Gamma\rightarrow L$ define
+  Let $R_P = \{\rho_\lambda:\Gamma\rightarrow P\,|\,\lambda\in\Lambda\}$ be a collection of representations such that $P$ is a minimal parabolic subgroup for each $p_\lambda$. Given an irreducible representation $\sigma_L:\Gamma\rightarrow L$ define
   \begin{displaymath}
     R_{\sigma_L} = \{\rho \in R\,|\,\rho_L = \sigma_L\}. 
   \end{displaymath}
-  $R_{\sigma_L}$ is a $VZ(L)^\circ$-stable subset of $Hom(\Gamma, P)_{\sigma_L}$.
   
   The following statements are equivalent:
   \begin{itemize}
-    \item[(i)] $R$ is contained in a finite union of $P$-conjugacy classes.
+    \item[(i)] $R_P$ is contained in a finite union of $P$-conjugacy classes.
     \item[(ii)] For each irreducible representation $\sigma_L:\Gamma\rightarrow L$, $R_{\sigma_L}$ is contained in a finite union of $VZ(L)^\circ$-conjugacy classes.
     \item[(iii)] For each irreducible representation $\sigma_L:\Gamma\rightarrow L$,
       \begin{displaymath}
@@ -314,68 +376,120 @@ Hence the following Lemma:
 \end{lemma}
 \begin{proof}\quad
 
-  $(i) \Rightarrow (ii)$ Assume $R$ is contained in a finite union of $P$-conjugacy classes and fix an irreducible representation $\sigma_L : \Gamma \rightarrow L$. Then $R_{\sigma_L}$ is contained a finite union of $P$-conjugacy classes. Take $\rho \in R_{\sigma_L}$ and suppose that $p \cdot \rho \in R_{\sigma_L}$ for some $p \in P$. Writing $p = vl$ for some $v \in V$ and some $l \in L$, $(vl) \cdot \rho \in R_{\sigma_L}$ implies that in fact $l \in C_L(\sigma_L(\Gamma))$. Furthermore, since $\sigma_L$ is irreducible it follows that $C_L(\sigma_L(\Gamma))/Z(L)^\circ$ is finite [reference], so we can choose a finite set $\{c_1, \ldots, c_m\}$ of coset representatives for $C_L(\sigma_L(\Gamma))/Z(L)^\circ$. Therefore
+  $(i) \Rightarrow (ii)$ Assume $R_P$ is contained in a finite union of $P$-conjugacy classes and fix an irreducible representation $\sigma_L : \Gamma \rightarrow L$. Then $R_{\sigma_L}$ is contained a finite union of $P$-conjugacy classes. Take $\rho \in R_{\sigma_L}$ and suppose that $p \cdot \rho \in R_{\sigma_L}$ for some $p \in P$. Writing $p = vl$ for some $v \in V$ and some $l \in L$, $(vl) \cdot \rho \in R_{\sigma_L}$ implies that in fact $l \in C_L(\sigma_L(\Gamma))$. Furthermore, since $\sigma_L$ is irreducible it follows that $C_L(\sigma_L(\Gamma))/Z(L)^\circ$ is finite \cite[Lemma 6.2]{martin2003reductive}, so we can choose a finite set $\{c_1, \ldots, c_m\}$ of coset representatives for $C_L(\sigma_L(\Gamma))/Z(L)^\circ$. Therefore
   \begin{displaymath}
     R_{\sigma_L} \cap (P \cdot \rho) \subset \bigcup_{i = 1}^{m} VZ(L)^\circ \cdot \left( c_i \cdot \rho \right).
   \end{displaymath}
   Since $R_{\sigma_L}$ is contained in a finite number of $P$-conjugacy classes, we are done.
 
-  $(ii) \Rightarrow (i)$ Assume that for each irreducible representation $\sigma_L : \Gamma \rightarrow L$, $R_{\sigma}$ is contained in a finite union in $VZ(L)^\circ$-conjugacy classes. Denote by $Hom(\Gamma, L)_{irr}$ the collection of all irreducible representations from $\Gamma \rightarrow L$. By Theorem \ref{thm:finiteGCR} we can choose a finite set $S \subset Hom(\Gamma, L)_{irr}$ such that
+  $(ii) \Rightarrow (i)$ Assume that for each irreducible representation $\sigma : \Gamma \rightarrow L$, $R_{\sigma}$ is contained in a finite union of $VZ(L)^\circ$-conjugacy classes, so for each $\sigma$ there is a finite set $\Phi^\sigma \subset R_P$ such that
   \begin{displaymath}
-    Hom(\Gamma, L)_{irr} = \bigcup_{\sigma \in S} L \cdot \sigma.
+    R_\sigma \subset \bigcup_{\phi \in \Phi^\sigma} VZ(L)^\circ \cdot \phi.
   \end{displaymath}
-  Hence 
+  We do no harm to assume that $R_P = P \cdot R_P$. Denote by $Hom(\Gamma, L)_{irr}$ the collection of all irreducible representations from $\Gamma \rightarrow L$. By Theorem \ref{thm:finiteGCR} we can choose a finite set $\Sigma \subset Hom(\Gamma, L)_{irr}$ such that
   \begin{displaymath}
-    R = \bigcup_{\sigma \in S} \{R_{l \cdot \sigma} \,|\, l \in L \}.
+    Hom(\Gamma, L)_{irr} = \bigcup_{\sigma \in \Sigma} L \cdot \sigma.
+  \end{displaymath}
+  For each $\sigma \in \Sigma$ define 
+  \begin{displaymath}
+    R_{L \cdot \sigma} = \bigcup_{l \in L} R_{l \cdot \sigma}.
+  \end{displaymath}
+  Since $P$ is minimal for each $\rho \in R_P$, $\rho_L$ is $L$-irreducible. Hence
+  \begin{displaymath}
+    R_p = \bigcup_{\sigma \in \Sigma} R_{L \cdot \sigma}.
   \end{displaymath}
 
-  Fix a $\sigma \in S$ and take $\rho_1, \rho_2 \in \{R_{l \cdot \sigma} \,|\, l \in L\}$. Then there exists $l \in L$ such that $\rho_1, l \cdot \rho_2 \in R_{\sigma_L}$ for some $\sigma_L \in Hom(\Gamma, L)_{irr}$. Since we assumed there are only finitely many $VZ(L)^\circ$-conjugacy classes of $R_{\sigma_L}$ we may assume $\rho_1$ and $l \cdot \rho_2$ are $VZ(L)^\circ$-conjugate. Hence $\rho_1$ and $\rho_2$ are $P$-conjugate.
+  Suppose $\rho \in R_{L \cdot \sigma}$. Then there exists $l \in L$ such that $\rho_L = l \cdot \sigma$, so that $l^{-1} \cdot \rho_L = \sigma$. Since we assumed $R_P = P \cdot R_P$, $l^{-1} \cdot \rho \in R_P$ and therefore $l^{-1} \cdot \rho \in R_\sigma$. Conversely if $\rho \in L \cdot R_\sigma$ then $l \cdot \rho \in R_{L \cdot \sigma}$ for some $l \in L$. Hence
+  \begin{displaymath}
+    R_{L \cdot \sigma} = L \cdot R_\sigma.
+  \end{displaymath}
+
+  Therefore
+  \begin{displaymath}
+    R_P = \bigcup_{\sigma \in \Sigma} L \cdot R_\sigma \subset \bigcup_{\sigma \in \Sigma}\bigcup_{\phi \in \Phi^\sigma} LVZ(L)^\circ \cdot \phi = \bigcup_{\sigma \in \Sigma}\bigcup_{\phi \in \Phi^\sigma} P \cdot \phi.
+  \end{displaymath}
 
   $(ii) \Leftrightarrow (iii)$ This follows directly from the fact that $\tilde{h}$ is a bijection (Lemma \ref{lem:vzl_h1zl}).
 
 \end{proof}
 
-Let $R$ be a collection of representations $\Gamma \rightarrow G$ and suppose that $R = G \cdot R$. There are finitely many $G$-conjugacy classes of parabolic subgroups of $G$, so fix a finite set of representatives $Q_i < G$ with corresponding Levi subgroups $M_i < Q_i$. Similarly for each $M_i$ there are finitely many $M_i$-conjugacy classes of $M_i$-irreducible representations $\Gamma \rightarrow M_i$ so fix a finite set of representatives $\sigma_{M_i}^j : \Gamma \rightarrow M_i$. 
+Let $R = \{ \rho_\lambda: \Gamma \rightarrow G \,|\, \lambda \in \Lambda \}$ be a collection of representations indexed by the set $\Lambda$. Since we are interested in $G$-conjugacy classes of $R$ we can assume without loss of generality that $R = G \cdot R$. Then we say that $R$ gives rise to a subset of 1-cohomologies:
+\begin{eqnarray}
+  \overline{h}(R_{\sigma_i^j}/V) \subset H^1(\Gamma, \sigma_i^j, V_i).
+  \label{eqn:rv_h}
+\end{eqnarray}
 
-Now let $R_{Q_i}$ be the subset of $R$ of representations with minimal parabolic $Q_i$. Since $R = G \cdot R$,
-\begin{displaymath}
-  \bigcup_i G \cdot R_{Q_i} = R.
-\end{displaymath}
-
-For each $i$, define $R_{\sigma_{M_i}^j} = \{\rho \in R_{Q_i}\, | \, \rho_{M_i} = \sigma_{M_i}^j\}$. Then
-\begin{displaymath}
-  R_{Q_i} = \bigcup_j \left\{ R_{m \cdot \sigma_{M_i}^j} \, | \, m \in M_i \right\},
-\end{displaymath}
-hence
-\begin{displaymath}
-  R = \bigcup_i G \cdot R_{Q_i} = \bigcup_i \bigcup_j G \cdot R_{\sigma_{M_i}^j}. 
-\end{displaymath}
-
-We say that $R$ gives rise to a subset of 1-cohomologies: $\tilde{h}(R_{\sigma_{M_i}^j}) \subset H^1(\Gamma, \sigma_{M_i}^j, V_i)$.
+Moreover, $R$ gives rise to a subset of $Z(M_i)^\circ$-projected 1-cohomologies:
+\begin{eqnarray}
+  \tilde{h}(R_{\sigma_i^j}/VZ(M_i)^\circ) \subset H^1(\Gamma, \sigma_i^j, V_i)/Z(M_i)^\circ.
+  \label{eqn:rvz_hz}
+\end{eqnarray}
 
 \begin{theorem}
-  Let $R=\{\rho_\lambda:\Gamma\rightarrow G\,|\,\lambda \in \Lambda\}$ be a collection of representations indexed by the set $\Lambda$ and define $M_i < Q_i < G$ and $\sigma_{M_i}^{j}$ as above. Then $G \cdot R$ is a finite union of $G$-conjugacy classes if and only if for each $i,j$ the subset of 1-cohomologies $\tilde{h}(R_{\sigma_{M_i}^j})$ is finite.
+  Let $R=\{\rho_\lambda:\Gamma\rightarrow G\,|\,\lambda \in \Lambda\}$ be a collection of representations indexed by the set $\Lambda$. 
+  
+  Suppose $R = G \cdot R$. Then $R$ is a finite union of $G$-conjugacy classes if and only if each subset of $Z(M_i)$-projected 1-cohomologies of $R$ is finite.
   \label{thm:g_h1}
 \end{theorem}
 \begin{proof}
-  Suppose $G \cdot R$ is a finite union of $G$-conjugacy classes. Then for each $Q_i$, $R_{Q_i}$ is contained in a finite union of $G$-conjugacy classes. By Lemma \ref{lem:GPconj} $R_{Q_i}$ is contained in a finite union of $Q_i$-conjugacy classes, and by Lemma \ref{lem:p_h1} $\tilde{h}(R_{\sigma_{M_i}^j})$ is finite for each $j$.
+  Assume $R$ is a finite union of $G$-conjugacy classes. Then for each $Q_i$, $R_{Q_i}$ is contained in a finite union of $G$-conjugacy classes. By Lemma \ref{lem:GPconj} $R_{Q_i}$ is contained in a finite union of $Q_i$-conjugacy classes, and by Lemma \ref{lem:p_h1} $\tilde{h}(R_{\sigma_i^j}/VZ(M_i)^\circ)$ is finite for each $j$.
 
-  Conversely, suppose that for each $i, j$, $\tilde{h}(R_{\sigma_{M_i}^j})$ is finite. Then by Lemma \ref{lem:p_h1} and Lemma \ref{lem:GPconj}, $R_{Q_i}$ is a finite union of $Q_i$-conjugacy classes for each $i$. Since
+  Conversely, suppose that for each $i$, for each $j$, $\tilde{h}(R_{\sigma_i^j}/VZ(M_i)^\circ)$ is finite. Then by Lemma \ref{lem:p_h1}, each $R_{Q_i}$ is contained in a finite union of $Q_i$-conjugacy classes. Since
   \begin{displaymath}
-    G \cdot R = \bigcup_i G \cdot R_{Q_i},
+    G \cdot R = \bigcup_i G \cdot R_{Q_i} \qquad (\textrm{Equation }\ref{eqn:gr_gqi})
   \end{displaymath}
   we are done.
 \end{proof}
 
 \begin{theorem}
-  Let $G$ be an algebraic group over an algebraically closed field $k$ of characteristic $p$, $\Gamma$ a finite group and $\Gamma_p < \Gamma$ a Sylow $p$-subgroup. Define $M_i < Q_i < G$ and $\sigma_{M_i}^{j}:\Gamma \rightarrow M_{i}$ as above. The answer to K\"ulshammer's second question is positive if for each $i,j$ the map of 1-cohomologies
+  Let $G$ be an algebraic group over an algebraically closed field $k$ of characteristic $p$, $\Gamma$ a finite group and $\Gamma_p < \Gamma$ a Sylow $p$-subgroup. Define $M_i < Q_i < G$ and $\sigma_i^{j}:\Gamma \rightarrow_{irr} M_{i}$ as above. Let $\iota$ be the inclusion map $\iota : \Gamma_p \rightarrow \Gamma$ and for each $i,j$ let $Z^1(\iota), H^1(\iota)$ be the corresponding 1-cocycle and 1-cohomology restriction maps
   \begin{displaymath}
-    H^{1}(\Gamma, \sigma_{0,i}^{j}, V_{i}) \rightarrow H^{1}(\Gamma_{p}, \sigma_{0,i}^{j}, V_{i})
+    Z^1(\iota) : Z^1(\Gamma, \sigma_i^j, V_i) \rightarrow Z^1(\Gamma_p, \sigma_i^j, V_i),
   \end{displaymath}
-  is injective.
+  and
+  \begin{displaymath}
+    H^1(\iota) : H^1(\Gamma, \sigma_i^j, V_i) \rightarrow H^1(\Gamma_p, \sigma_i^j, V_i).
+  \end{displaymath}
+  
+  The answer to K\"ulshammer's second question for $\Gamma, G$ is positive if and only if $H^1(\iota)$ is injective for each $i,j$.
   \label{k2_h1}
 \end{theorem}
+\begin{proof}
+  Fix a representation $\rho_0: \Gamma_p \rightarrow G$ and let $X = G \cdot \rho_0$. For a map $\varphi$ from $\Gamma$ denote by $\varphi^p$ its restriction to $\Gamma_p$. Let
+  \begin{eqnarray*}
+    R &=&  \{ \rho \in \textrm{Hom}(\Gamma, G) \,|\, \rho^p \in X\}, \\
+    R_{Q_i} &=&  \{ \rho \in R \,|\, Q_i \textrm{ is a minimal parabolic subgroup for } \rho \}, \\
+    R_{\sigma_i^j} &=&  \{ \rho \in R_{Q_i} \,|\, \rho_{M_i} = \sigma_i^j \},
+  \end{eqnarray*}
+  as done previously. For each $\rho \in R_{\sigma_i^j}$ there exists $g \in G$ such that
+  \begin{eqnarray}
+    g \cdot \rho^p = (\sigma_i^j)^p.
+    \label{eqn:grp_sp}
+  \end{eqnarray}
+  
+  Consider the set $R_j^p$ defined
+  \begin{displaymath}
+    R_j^p = \{ \rho \in R_{\sigma_i^j} \,|\, \rho^p = ( \sigma_i^j )^p \}.
+  \end{displaymath}
 
+  Then by Equation \ref{eqn:grp_sp}
+  \begin{eqnarray}
+    R_{\sigma_i^j} \subset G \cdot R_j^p.
+    \label{eqn:rs_grp}
+  \end{eqnarray}
+
+  Furthermore for each $\rho \in R_j^p$, 
+  \begin{displaymath}
+    Z(\iota)(h(\rho)) \in Z^1(\Gamma_p, \sigma_i^j, V_i),
+  \end{displaymath}
+  is the trivial 1-cocycle.
+
+  Assume $H^1(\iota)$ is injective. Since the image of $R_j^p$ in $H^1(\Gamma_p, \sigma_i^j, V_i)$ is trivial, the image of $R_j^p$ in $H^1(\Gamma, \sigma_i^j, V_i)$ is trivial, and therefore the image of $R_j^p$ in $H^1(\Gamma, \sigma_i^j, V_i)/Z(M_i)^\circ$ is finite. By Lemma \ref{lem:p_h1}, $R_j^p$ is contained in a finite union of $Q_i$-conjugacy classes, hence by Equation \ref{eqn:rs_grp}, $R_{\sigma_i^j}$ is contained in a finite union of $G$-conjugacy classes.
+
+  So by Equation \ref{eqn:gr_grsigma}, $G \cdot R = R$ is contained in a finite union of $G$-conjugacy classes. Therefore the answer to K\"ulshammer's second question for $\Gamma, G$ is positive.
+
+
+\end{proof}
 % \section{An algebraic group version}
 % 
 % In an attempt to gain further insight into (K. II) we adjust the original question by letting $\Gamma$ be an infinite group $H$. The advantage being that a negative answer in the algebraic group version may provide a negative answer to (K. II) by choosing an appropriate finite subgroup $\Gamma$ of $H$. In many of the examples to follow we set $H = SL_2(K)$ with Sylow $p$-subgroup $H_p = U_2(K)$ consisting of upper unitriangular matrices. 
