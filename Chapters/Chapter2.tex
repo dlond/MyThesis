@@ -5,8 +5,7 @@
 \label{Chapter2}
 \lhead{Chapter 2. \emph{Mathematical Preliminaries}}
 
-\section{Linear Algebraic Groups}
-Let $k = \overline{k}$ be an algebraically closed field. An affine variety over $k$ is a subset of $k^n$ defined by the vanishing of some polynomial equations. We have such notions as a subvariety of an affine variety, a natural product of affine varieties and maps between affine varieties.
+Let $k$ be an algebraically closed field. An affine variety over $k$ is a subset of $k^n$ defined by the vanishing of some polynomial equations. We have such notions as a subvariety of an affine variety, a natural product of affine varieties and maps between affine varieties.
 
 A morphism $\phi:V \rightarrow W$ of affine varieties is a map such that the coordinates of $\phi(v) \in W$ are given by polynomial functions in $v \in V$.
 
@@ -41,7 +40,7 @@ are morphisms of affine varieties.
 A homomorphism $\phi: G\rightarrow H$ of affine algebraic groups is a morphism of affine varieties and a homomorphism of abstract groups. An isomorphism $\phi: G\rightarrow H$ of affine algebraic groups is a bijective homomorphism of affine algebraic groups such that $\phi^{-1}:H\rightarrow G$ is also a homomorphism of affine algebraic groups.
 
 \begin{example}
-	Let $char k = p$. The map $k\rightarrow k$ which sends $x\mapsto x^p$ is bijective, a morphism, but not an isomorphism since the inverse map $x\mapsto x^{1/p}$ is not a morphism of affine varieties (it is not a polynomial).
+	Let $p$ be the characteristic of $k$. The map $k\rightarrow k$ which sends $x\mapsto x^p$ is bijective, a morphism, but not an isomorphism since the inverse map $x\mapsto x^{1/p}$ is not a morphism of affine varieties (it is not a polynomial).
 	
 	Now let $G = GL_n(k)$. The map $F:G\rightarrow G$ which sends $(a_{ij})\mapsto (a_{ij}^q)$, $q = p^z$, $z \in \mathbb{Z}^+$ is a homomorphism of affine algebraic groups, called the Frobenius morphism. It is not an isomorphism.
 \end{example}
@@ -108,12 +107,13 @@ or
 
 A torus is isomorphic to $k^*\times k^*\cdots k^*$. Any two maximal tori in $G$ are conjugate in $G$. 
 
-If $G$ is connected with maximal torus $T<G$ then $C_G(T) = N_G(T)^\circ$ and hence $N_G(T)/C_G(T)$ is finite. We call $W = N_G(T)/C_G(T)$ the Weyl group of $G$. Furthermore, if $G$ is also reductive then $T=C_G(T)$ and $W = N_G(T)/T$ is a finite Coxeter group, that is, of the form:
+If $G$ is connected with maximal torus $T<G$ then the centralizer of $T$ in $G$, $C_G(T)$, is equal to the identity component of the normalizer of $T$ in $G$, $N_G(T)^\circ$, and hence $N_G(T)/C_G(T)$ is finite. We call $W = N_G(T)/C_G(T)$ the Weyl group of $G$. Furthermore, if $G$ is also reductive then $T=C_G(T)$ and $W = N_G(T)/T$ is a finite Coxeter group, that is, of the form:
 \begin{displaymath}
-	W = \langle s_1, \ldots, s_l |\, s_i^2 = 1, (s_is_j)^m_{ij} = 1\rangle
+  W = \langle s_1, \ldots, s_l |\, s_i^2 = 1, (s_is_j)^{m_{ij}} = 1\rangle,
 \end{displaymath}
+for some $m_{ij}$.
 
-A Borel subgroup of $G$ is a maximal closed connected solvable subgroup of $G$, any two Borel subgroups of $G$ are conjugate in $G$. if $T < G$ is a torus of $G$ then there exists a Borel subgroup $B$ of $G$ containing $T$. Furthermore, we can write $B = T\cdot R_u(B)$.
+A Borel subgroup of $G$ is a maximal closed connected solvable subgroup of $G$, any two Borel subgroups of $G$ are conjugate in $G$. If $T < G$ is a torus of $G$ then there exists a Borel subgroup $B$ of $G$ containing $T$. Furthermore, we can write $B = T\cdot R_u(B)$.
 
 Let $G$ be a reductive connected linear algebraic group with torus $T < G$. Let $N = N_G(T)$. Then we can write $G$ as
 \begin{displaymath}

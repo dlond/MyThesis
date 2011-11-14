@@ -7,9 +7,9 @@
 
 In this chapter we present a method of calculating the 1-cohomology $H^1\left( SL_2(k), V\right)$ where $V=R_u(P)$ is the unipotent radical of a parabolic subgroup $P$ of a reductive group $G$. The motivation for this is to look for infinitely many conjugacy classes of representations of $SL_2(k)$ into $G$ in the hope of finding a finite subgroup $H$ of $SL_2(k)$ as a counterexample for K\"ulshammer's Second Problem.
 
-\section{A rank 1 calculation}
+Throughout we use the notation of Humphreys \cite[Chapter XI]{humphreys1975linear}.
 
-[INCLUDE $G_2$ OR $B_2$ CALCULATIONS]
+\section{A rank 1 calculation}
 
 Let $T$ be a maximal torus of $B_2$ over an algebraically closed field $k$ of characteristic $p$. We label the positive roots for $B_2$ as $\alpha, \beta, \alpha + \beta, 2\alpha + \beta$. We have from \cite[\S 33.4]{humphreys1975linear}:
 \begin{eqnarray*}
@@ -122,12 +122,14 @@ b^{2p^r}v_1 -2(ab)^{p^r}v_2 + a^{2p^r}v_3
 \end{matrix}\right)
 \end{eqnarray*}
 
-Now let $\sigma'$ in $Z^1(SL_2, V)$ be a 1-cocycle from $SL_2\rightarrow V$. By [some reference] $\sigma'$ is conjugate to a 1-cocycle $\sigma$ that has the additional property that
+Now let $\sigma'$ in $Z^1(SL_2, V)$ be a 1-cocycle from $SL_2\rightarrow V$. By \ref{lem:nonab_lin_red} $\sigma'$ is conjugate to a 1-cocycle $\sigma$ that has the additional property that
 \begin{eqnarray*}
 \sigma\left( \begin{matrix} t & 0 \\ 0 & t^{-1}\end{matrix}\right) &=& 
 \left( \begin{matrix} 0 \\ 0 \\0\end{matrix}\right),
 \end{eqnarray*}
 for all $t$ in $k^*$. Since we are ultimately concerned with the 1-cohomology, that is, conjugacy classes of 1-cocycles, we may proceed with $\sigma$ instead.
+
+We could apply the results in Chapter \ref{Chapter5} at this point but provide the full calculation as a demonstration.
 
 Since $\sigma$ is a morphism of varieties, each component of $\sigma\left(\begin{matrix} 1& u \\ 0 & 1\end{matrix}\right)$ should be a polynomial function of $u$, so let
 \begin{eqnarray*}
@@ -302,7 +304,7 @@ we get for all $a$ in $k^*$ and all $b$ in $k$
 \left(\begin{matrix} a & b \\ 0 & a^{-1}\end{matrix}\right)
 \right).
 \end{eqnarray*}
-That is, $\sigma$ takes the value of a 1-coboundary on the subgroup of upper triangular matrices of $SL_2$. By [some reference], this means that $\sigma$ is a 1-coboundary from the whole of $SL_2 \rightarrow V$, and hence the 1-cohomology $H^1(SL_2, V)$ is trivial. Therefore it is necessary to proceed with $p=2$:
+That is, $\sigma$ takes the value of a 1-coboundary on the subgroup of upper triangular matrices of $SL_2$. In view of Lemma \ref{lem:a_h_restriction} this means that $\sigma$ is a 1-coboundary from the whole of $SL_2 \rightarrow V$, and hence the 1-cohomology $H^1(SL_2, V)$ is trivial. Therefore it is necessary to proceed with $p=2$:
 \begin{eqnarray}
 \label{b2a:b}
 \sigma\left(
@@ -511,9 +513,9 @@ In fact, we see that
 \end{eqnarray*}
 holds in either case.
 
-\emph{[Show converse - Steinberg relations]}
+This is a necessary condition for a 1-cocycle. To show it is sufficient there is a calculation to check involving the Steinberg relations for $SL_2(k)$ \cite[Proposition 2]{martin2004nonab}.
 
-Now if $\sigma$ is in the same conjugacy class as $\tau$ then by [some reference]
+Now if $\sigma$ is in the same 1-cohomology class as $\tau$ then by Equation \ref{eqn:h_equiv}
 \begin{eqnarray*}
 \tau\left(
 \left(\begin{matrix} a & b \\ c & d\end{matrix}\right)
@@ -556,7 +558,7 @@ and the 1-cocycle $\tau$ is in the class $[\sigma_\mu]$ if there is a $\mathbf{v
 + \left(\begin{matrix}a & b \\ c & d \end{matrix}\right)\cdot\mathbf{v}.
 \end{eqnarray*}
 
-As discussed in [ref previous section] we can use this result to find the 1-cocycles from $SL_2 \rightarrow P_\alpha$ by considering the action of $Z(L_\alpha)^\circ$, the connected centre of the Levi subgroup $L_\alpha$. Now, 
+In view of Lemma \ref{lem:p_h1} we consider the action of $Z(L_\alpha)^\circ$, the connected centre of the Levi subgroup $L_\alpha$. Now, 
 \begin{eqnarray*}
 Z(L_\alpha)^\circ &=& \langle \gamma^\vee(x)\,|\,x \in k \rangle
 \end{eqnarray*}
@@ -995,20 +997,7 @@ our infinitely many $V$-conjugacy classes collapse to just two $P_\beta$-conjuga
 
 \section{A rank 2 calculation}
 
-Is $Im(\rho_{r,s})$ irred in $L_{\gamma,\delta}$?
-
-No $\rightarrow$ $Im(\rho_{r,s})$ inside (a conjugate of) $P_\gamma(B_2)$ or $P_\delta(B2)$.
-Then it's inside  $P_\gamma = L_\gamma \ltimes R_u(P_\gamma)$ or  $P_\delta = L_\delta \ltimes R_u(P_\delta)$, so it's inside $L_\gamma$ or $L_\delta$.
-
-1) Know about non G-cr in $B_2$, can I put them in an $A_1A_1$?
-
-1a) Can this sit inside a rank 1 Levi?
-
-2) Use $B_2=SO_5$.
-
-3) Take $Im(\rho_{r,s})$, can we conjugate it into $P_\gamma$ or $P_\delta$?
-
-Let $\mathrm{char}(k)=2$ and set $V:=\langle U_\phi\, |\, \phi \in \Phi^+, \phi \neq \gamma + \delta,\phi \neq \gamma+2\delta\} \rangle$. We will write
+Let $G = B_4$. Let $\mathrm{char}(k)=2$ and set $V:=\langle U_\phi\, |\, \phi \in \Phi^+, \phi \neq \gamma + \delta,\phi \neq \gamma+2\delta\} \rangle$. We will write
 %\begin{eqnarray*}
 $
 \mathbf{v} = \epsilon_\alpha(v_1) \epsilon_\beta(v_2) \epsilon_{\alpha+\beta}(v_3) \epsilon_{\beta+\gamma}(v_4) \epsilon_{\alpha+\beta+\gamma}(v_5) \epsilon_{\beta+\gamma+\delta}(v_6) \epsilon_{\alpha+\beta+\gamma+\delta}(v_7) \epsilon_{\beta+\gamma+2\delta}(v_8) \epsilon_{\alpha+\beta+\gamma+2\delta}(v_9) \\
@@ -1469,29 +1458,9 @@ wx(bc)^{2^{r+1}} + yz(bc)^{2^{s+1}}
 \end{matrix}\right).
 \end{eqnarray*}
 
-Conversely, suppose we have a map $\sigma:SL_2 \rightarrow V$ of the form
-\begin{eqnarray*}
-\sigma\left(\begin{matrix} a & b \\ c & d \end{matrix} \right) &=& 
-\left(\begin{matrix}
-0 \\
-y(cd)^{2^s} \\
-z(cd)^{2^s} \\
-w(cd)^{2^r} \\
-x(cd)^{2^r} \\
-w(bc)^{2^r} + y(bc)^{2^s} \\
-x(bc)^{2^r} + z(bc)^{2^s} \\
-w(ab)^{2^r} \\
-x(ab)^{2^r}  \\
-y(ab)^{2^s} \\
-z(ab)^{2^r} \\
-wx(bc)^{2^{r+1}} + yz(bc)^{2^{s+1}}
-\end{matrix}\right),
-\end{eqnarray*}
-for some $w,x,y,z$ in $k$ and integers $r,s\geq 0$. 
+Again, it can be shown that this is a sufficient condition for a 1-cocycle by applying \cite[Proposition 2]{martin2004nonab}.
 
-\emph{[Show $\sigma$ is a 1-cocycle]}
-
-Next we shall describe $H^1(SL_2, V)$. Recall that a 1-cocycle $\tau'$ is in the same conjugacy class as $\sigma$ if there is a $\mathbf{v}$ in $V$ such that
+Next we shall describe $H^1(SL_2, V)$. Recall that a 1-cocycle $\tau'$ is in the same 1-cohomology class as $\sigma$ if there is a $\mathbf{v}$ in $V$ such that
 \begin{eqnarray*}
 \tau'(g) &=& \mathbf{v}*\sigma(g)*g.\mathbf{v}^{-1}
 \end{eqnarray*}
@@ -1599,4 +1568,5 @@ t^2(wx(bc)^{2^{r+1}} + yz(bc)^{2^{s+1}})
 \end{matrix}\right)
 \end{eqnarray*}
 
+It remains to show that there are infinitely many $P$-conjugacy classes by applying Lemma \ref{lem:p_h1}.
 

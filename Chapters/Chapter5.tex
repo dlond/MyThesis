@@ -9,13 +9,13 @@ In this Chapter we present some theoretical results of 1-cohomology calculations
 
 Following the approach to the algebraic version of K\"ulshammer's second question in the previous Chapter we let $G$ be a reductive group and fix representative parabolic subgroups. In particular we fix a Borel subgroup $B<G$ containing a maximal torus $T$, hence fix a base $\Delta$ of $\Phi$ the root system for $G$. Then we can choose representative parabolic subgroups $P_I$, $I \subset \Delta$ as in \cite[\S 30]{humphreys1975linear}.
 
-\section{Rank-1 Calculations}
+\section{Calculations for Rank-1 Parabolic Subgroups}
 
 Let $G$ be a reductive group over an algebraically closed field $k$ of characteristic $p$. Let $\Phi$ be the roots for $G$ with $\Delta \subset \Phi^+ \subset \Phi$ the simple and positive roots, respectively, associated to a fixed maximal torus $T < G$ contained by a fixed Borel subgroup $B < G$.
 
 Let $P_\alpha<G$ be the parabolic subgroup of $G$ corresponding to the simple root $\alpha\in\Delta$, with Levi subgroup $L_\alpha$ and unipotent radical $V_\alpha$:
 \begin{eqnarray*}
-V_\alpha=R_u(P_\alpha) &=& \langle U_\delta \in \Phi^+\, | \, \delta \neq \alpha \rangle,\\
+V_\alpha=R_u(P_\alpha) &=& \langle U_\delta \,|\, \delta \in \Phi^+, \delta \neq \alpha \rangle,\\
 P_\alpha &=& V_\alpha L_\alpha 
 \end{eqnarray*}
 
@@ -41,12 +41,14 @@ and satisfies
 \rho_r \left(\begin{matrix} 1 & 0 \\ u & 1 \end{matrix} \right) &=& \epsilon_{-\alpha}(u^{p^r}).
 \end{eqnarray*}
 
-We let $SL_2(k)$ act on $V_\alpha$ via $\rho_r$ and we consider 1-cocycles $\sigma \in Z^1(SL_2(k), \rho_r, V_\alpha)$. As we are interested in 1-cohomology classes, we may as well only consider those 1-cocycles that are zero on a maximal torus of $SL_2(k)$ (Lemma \ref{lem:lin_red_h}), so let $\sigma \in Z^1(SL_2(k), \rho_r, V_\alpha)$ such that
+We let $SL_2(k)$ act on $V_\alpha$ via $\rho_r$ and we consider 1-cocycles $\sigma \in Z^1(SL_2(k), \rho_r, V_\alpha)$. As we are interested in 1-cohomology classes, we may as well only consider those 1-cocycles that are zero on a maximal torus of $SL_2(k)$ (Lemma \ref{lem:nonab_lin_red}), so let $\sigma \in Z^1(SL_2(k), \rho_r, V_\alpha)$ such that
 \begin{eqnarray*}
 \sigma\left(\left(\begin{matrix} t & 0 \\ 0 & t^{-1}\end{matrix}\right)\right) = 0,
 \end{eqnarray*}
 for all $t\in k^*$.
-We can say a few things about these particular 1-cocycles which help us calculate the 1-cohomology. By \cite[Theorem 26.3(c)]{humphreys1975linear}
+We fix an ordering of the roots so that expressions such as $\prod_\delta U_\delta$ are unambiguious.
+
+We can say a few things about these particular 1-cocycles which help us calculate the 1-cohomology.  By \cite[Theorem 26.3(c)]{humphreys1975linear}
 \begin{eqnarray}
 \left(\begin{matrix} t & 0 \\ 0 & t^{-1}\end{matrix}\right) \cdot \prod_\delta \epsilon_\delta (\lambda_\delta) &=&
 \prod_\delta \epsilon_\delta\left( (t^{p^r})^{\langle \delta, \alpha\rangle}\lambda_\delta\right),
@@ -63,7 +65,7 @@ where $n_\alpha = \epsilon_\alpha(1)\epsilon_{-\alpha}(-1)\epsilon_\alpha(1)$ an
 \begin{eqnarray*}
 \sigma\left(\left(\begin{matrix} 1 & u \\ 0 & 1 \end{matrix}\right)\right) = \prod_\delta\, \epsilon_\delta\left(x_\delta\left(u\right)\right),
 \end{eqnarray*}
-where $\delta$ ranges $\Phi^+ - \{\alpha\}$ such that $\langle \delta, \alpha \rangle > 0$, and $x_\delta\in k[T]$ are polynomials in one variable.
+where $\delta$ ranges $\Phi^+ - \{\alpha\}$ such that $\langle \delta, \alpha \rangle > 0$, and $x_\delta\in k[X]$ are polynomials in one variable.
 \end{lemma}
 \begin{proof}
 We have the chain of morphisms
@@ -80,7 +82,7 @@ x_\delta = \pi_\delta\, \circ\, \sigma\, \circ\, \iota
 is a morphism from $k \rightarrow k$.
 
 Now since
-\begin{eqnarray*}
+\begin{eqnarray}
 \left(\begin{matrix}
 t & 0 \\ 0 & t^{-1}
 \end{matrix}\right)
@@ -94,7 +96,8 @@ t^{-1} & 0 \\ 0 & t
 \left(\begin{matrix}
 1 & t^2u \\ 0 & 1
 \end{matrix}\right),
-\end{eqnarray*}
+\label{eqn:tut}
+\end{eqnarray}
 
 we use the 1-cocycle condition (Equation \ref{eqn:na_z}) to obtain
 \begin{eqnarray*}
@@ -184,16 +187,16 @@ Since $x_\delta$ is a polynomial function there can only be non-negative powers 
 
 Next we prove a couple of useful facts about root systems not containing $G_2$ or $C_3$.
 
-\begin{lemma} \label{ufixes} Suppose $\Phi$ is not of type $G_2$ and let $\alpha,\beta\in\Phi$. If $\alpha + \beta \in \Phi$ then $\langle \alpha, \beta \rangle \leq 0$.
+\begin{lemma} \label{ufixes} Suppose $\Phi$ does not contain $G_2$ and let $\alpha,\beta\in\Phi$. If $\alpha + \beta \in \Phi$ then $\langle \alpha, \beta \rangle \leq 0$.
 \end{lemma}
-\begin{proof}
+\begin{proof} $\alpha, \beta$ lie in a rank-2 subsystem of $\Phi$. We have
 \begin{eqnarray*}
 \langle \alpha, \beta \rangle > 0 \Longleftrightarrow (\alpha, \beta) >0 \Longleftrightarrow \cos(\theta) > 0,
 \end{eqnarray*}
 where $\theta$ is the angle between $\alpha$ and $\beta$. Hence acute angles correspond to positive pairs. Referring to the $A_2$ and $B_2$ root system diagrams (Appendix \ref{AppendixC}) we find that no two roots meeting at an acute angle add to give another root. Therefore if $\langle \alpha, \beta \rangle > 0$ then $\alpha + \beta \notin \Phi$.
 \end{proof}
 
-We must exclude the case $\Phi = G_2$ here since $\alpha, 2\alpha + \beta$ and $3\alpha + \beta$ are all roots ($\alpha$ short) but $\langle \alpha, 2\alpha + \beta \rangle = 1$. %Since the following results depend upon \ref{ufixes} we will henceforth assume that $\Phi \neq G_2$ and deal with the case $\Phi = G_2$ by way of an example.
+We must exclude the case $\Phi = G_2$ here since $\alpha, 2\alpha + \beta$ and $3\alpha + \beta$ are all roots ($\alpha$ short) but $\langle \alpha, 2\alpha + \beta \rangle = 1$.
 
 \begin{lemma} \label{uabelian}
 Suppose $\Phi$ does not contain $G_2$ or $C_3$. Let $\delta_1, \delta_2 \in \Phi$ and $\gamma \in \Delta$ be roots such that $\langle \delta_i, \gamma \rangle > 0$ $(i = 1, 2)$. If $\delta_1 + \delta_2$ is a root, then $\delta_1$ and $\delta_2$ are of opposite sign.
@@ -219,12 +222,14 @@ So, without loss of generality, this leads to consider four cases:
 \textbf{4:}&&\theta_1 = \pi/4,\quad\theta_2 = \pi/4,\quad\theta_3 = \pi/2.
 \end{eqnarray*}
 
-For the cases in which $\theta_3 = \pi/2$ we can reason from the root system diagrams (Appendix \ref{AppendixC}) that $\delta_1$ and $\delta_2$ lie in a $B_2$ subsystem of $\Phi$, and they have the same length. Since $\delta_1+\delta_2$ is a root it must be that $\delta_1$ and $\delta_2$ are short roots and their sum is a long root. However we must rule out the third case. For if $\theta_1 = \pi/4$ then $\delta_1$ and $\gamma$ are roots of different length in a $B_2$ subsystem, but $\theta_2 = \pi/3$ implies that $\delta_2$ and $\gamma$ are roots of the same length in an $A_2$ subsystem, which is absurd.
+For the cases in which $\theta_3 = \pi/2$ we can reason from the root system diagrams (Appendix \ref{AppendixC}) that $\delta_1$ and $\delta_2$ lie in a $B_2$ subsystem of $\Phi$, and they have the same length. Since $\delta_1+\delta_2$ is a root it must be that $\delta_1$ and $\delta_2$ are short roots and their sum is a long root. However we can rule out the third case. For if $\theta_1 = \pi/4$ then $\delta_1$ and $\gamma$ are roots of different length in a $B_2$ subsystem, but $\theta_2 = \pi/3$ implies that $\delta_2$ and $\gamma$ are roots of the same length in an $A_2$ subsystem, which is absurd.
 
-The three roots must lie in a plane for cases one and four. That is they lie in some rank 2 subsystem; $A_2$ and $B_2$ respectively. Consulting the root system diagrams yields $\gamma = \delta_1 + \delta_2$ and the result holds.
+The three roots must lie in a plane for cases one and four. That is, they lie in some rank 2 subsystem; $A_2$ and $B_2$ respectively. Consulting the root system diagrams, recall that $\gamma \in \Delta$, yields $\gamma = \delta_1 + \delta_2$ and the result holds.
 
-In the second case we see that $\delta_1, \delta_2$ and $\gamma$ do not lie together in a rank 2 subsystem, and that these roots are the same length which implies that $\gamma$ is a short root. In fact, since a pair short roots lie in subsystems of type $A_2$ it must be that the rank 3 subsystem in which the four roots lie is of type $C_3$. 
+In the second case we see that $\delta_1, \delta_2$ and $\gamma$ do not lie together in a rank 2 subsystem, and that these roots are the same length which implies that $\gamma$ is a short root. In fact, since a pair of short roots lie in subsystems of type $A_2$ it must be that the rank 3 subsystem in which the four roots, $\delta_1, \delta_2, \delta_1 + \delta_2, \gamma$, lie is of type $C_3$, but this is impossible by assumption. 
 \end{proof}
+
+We excluded $\Phi$ containing $C_3$ for berevity. The particular roots of $C_3$ which result in case two of Lemma \ref{uabelian} arises with $\gamma$ being the short simple root that is not connected to the long simple root (see Example \ref{eg:c3}).
 
 We return to the 1-cohomology calculation but assume that the root system for $G$ does not contain $G_2$ or $C_3$.
 
@@ -248,7 +253,14 @@ We have
 &=&
 \epsilon_\alpha(u_1^{p^r}) \prod_\delta \epsilon_\delta\left(x_\delta\left(u_2\right)\right) \epsilon_\alpha(-u_1^{p^r}),
 \end{eqnarray*}
-with $\langle \delta, \alpha \rangle > 0$. By Lemma \ref{ufixes}, $\alpha + \delta \notin \Phi$ so each $\epsilon_\delta$ commutes with the $\epsilon_\alpha$.
+with $\langle \delta, \alpha \rangle > 0$. By Lemma \ref{ufixes}, $\alpha + \delta \notin \Phi$ so each $\epsilon_\delta$ commutes with the $\epsilon_\alpha$. Hence
+\begin{eqnarray*}
+  \left( \begin{matrix} 1 & u \\ 0 & 1 \end{matrix}\right) \cdot \sigma\left(\left(\begin{matrix} 1 & u_2 \\ 0 & 1 \end{matrix} \right)\right)
+    &=& 
+    \prod_\delta \epsilon_\delta\left(x_\delta\left( u_2 \right)\right) \\
+    &=& 
+    \sigma\left(\left(\begin{matrix} 1 & u_2 \\ 0 & 1 \end{matrix} \right) \right).
+    \end{eqnarray*}
 \end{proof}
 
 \begin{corollary} The image of the group of upper triangular matrices of $SL_2(k)$ under $\sigma$ lies in a product of commuting root groups of $V_\alpha$.
@@ -259,9 +271,9 @@ First consider
 \begin{eqnarray*}
 \sigma\left(\left( \begin{matrix} 1 & b \\ 0 & 1 \end{matrix}\right)\right) &=& \prod_\delta \epsilon_\delta\left(x_\delta(b)\right).
 \end{eqnarray*}
-Suppose the roots $\delta_1$ and $\delta_2$ appear on the right hand side. By Lemma \ref{claim1} $\delta_i \in \Phi^+ - \{\alpha\}$ and $\langle \delta_i, \alpha \rangle > 0$ $(i=1,2)$, so Lemma \ref{uabelian} asserts that $\delta_1 + \delta_2$ is no root, hence, $\epsilon_{\delta_1}$ and $\epsilon_{\delta_2}$ commute. 
+Suppose the roots $\delta_1$ and $\delta_2$ appear on the right hand side. By Lemma \ref{claim1} $\delta_i \in \Phi^+ - \{\alpha\}$ and $\langle \delta_i, \alpha \rangle > 0$ $(i=1,2)$, so Lemma \ref{uabelian} asserts that $\delta_1 + \delta_2$ is not a root, hence, $\epsilon_{\delta_1}$ and $\epsilon_{\delta_2}$ commute. 
 
-Therefore, for any $a, b\in k$ with $a\neq 0$
+For any $a, b\in k$ with $a\neq 0$
 \begin{eqnarray*}
 \sigma\left(\left(\begin{matrix} a & ab \\ 0 & a^{-1}\end{matrix}\right)\right) 
 &=& \left(\begin{matrix} a & 0 \\ 0 & a^{-1}\end{matrix} \right) \cdot
@@ -273,13 +285,14 @@ Therefore, for any $a, b\in k$ with $a\neq 0$
 
 Since the $x_\delta$ are homomorphisms from $k\rightarrow k$ they must take the form
 \begin{eqnarray*}
-T\mapsto\sum_i \mu_i T^{p^i},
+k\mapsto\sum_i \mu_i k^{p^i},
 \end{eqnarray*}
-for some $\mu_i$ in $k$. Furthermore, combining the calculation in the proof of Lemma \ref{claim1} with the result in Corollary \ref{uact} we get that
-\begin{eqnarray*}
+for some $\mu_i$ in $k$. Furthermore, combining Equation \ref{eqn:tut} with the result in Corollary \ref{uact} we get that
+\begin{eqnarray}
 \prod_\delta \epsilon_\delta\left(x_\delta\left(a^2b\right)\right) = \prod_\delta \epsilon_\delta\left(a^{\langle \delta, \alpha \rangle p^r}x_\delta\left(b\right)\right),
-\end{eqnarray*}
-severely restricting the possible polynomials $x_\delta$. In fact, they are confined to be polynomials involving just one term, and the degree has already been decided upon fixing the integer $r$ in the definition of $\rho_r$. For suppose $x_\delta$ and hence some $\mu_j$ is non-zero. Then equating the coefficients of $b$ in the equality directly above yields
+\label{eqn:blah}
+\end{eqnarray}
+severely restricting the possible polynomials $x_\delta$. In fact, they are confined to be polynomials involving just one term, and the degree has already been decided upon fixing the integer $r$ in the definition of $\rho_r$. For suppose $x_\delta$ and hence some $\mu_j$ is non-zero. Then equating the coefficients of $b$ in Equation \ref{eqn:blah} yields
 \begin{eqnarray*}
 \mu_ja^{2p^j} &=& \mu_j a^{\langle \delta, \alpha \rangle p^r}\\
 \Longrightarrow2p^j &=& \langle \delta, \alpha \rangle p^r.
@@ -289,10 +302,13 @@ In \cite[\S 3.4]{carter1989simple} it is shown that the possible pairings of any
 
 If $\langle \delta, \alpha \rangle = 1$ the characteristic of $k$ must be 2 and $j = r-1$. Otherwise $\langle \delta, \alpha \rangle = 2$ and $j = r$, but the characteristic of $k$ is so far unrestricted.
 
+In order to capture the excluded cases where the root system for $G$ contains $G_2$ or $C_3$ we provide the following examples.
+
 \begin{example} Let $G=G_2$. Fix a maximal torus, labeling the positive simple roots $\Delta=\{\alpha, \beta\}$ with $\beta$ being the long root. Let 
 	\begin{displaymath}
 		V_\alpha = R_u(P_\alpha) = \langle U_\beta, U_{\alpha+\beta}, U_{2\alpha+\beta}, U_{3\alpha+\beta}, U_{3\alpha+2\beta}\rangle.
 	\end{displaymath}
+	Note that this example captures the the root calculation that was excluded from Lemma \ref{ufixes}.
 	We will write $v$ in $V_\alpha$ in angled brackets for compactness:
 	\begin{eqnarray*}
 		\langle 
@@ -309,7 +325,7 @@ If $\langle \delta, \alpha \rangle = 1$ the characteristic of $k$ must be 2 and 
 		\epsilon_{3\alpha+2\beta}(v_5) \in V_\alpha
 	\end{eqnarray*}
 
-	The group law for $V_\alpha$ is
+	We use the commutation relations in \cite[\S 33.5]{humphreys1975linear} to compute the group law for $V_\alpha$:
 	\begin{eqnarray*}
 		u * v &=&
 		\langle
@@ -408,6 +424,7 @@ If $\langle \delta, \alpha \rangle = 1$ the characteristic of $k$ must be 2 and 
 	\begin{displaymath}
 		V_\alpha = R_u(P_\alpha) = \langle U_\beta, U_\gamma, U_{\alpha+\beta}, U_{\beta+\gamma}, U_{\alpha+\beta+\gamma}, U_{2\beta+\gamma}, U_{\alpha+2\beta+\gamma}, U_{2\alpha+2\beta+\gamma}\rangle.
 	\end{displaymath}
+	Note that this example captures the root calculation that was excluded in Lemma \ref{uabelian}.
 	Again we will write $v$ in $V_\alpha$ in angled brackets for ease of notation:
 	\begin{eqnarray*}
 		&&\langle 
@@ -430,7 +447,7 @@ If $\langle \delta, \alpha \rangle = 1$ the characteristic of $k$ must be 2 and 
 		\epsilon_{2\alpha+2\beta+\gamma}(v_8) \in V_\alpha
 	\end{eqnarray*}
 		
-	The group law for $V_\alpha$ is
+	We use the commutation relations in \cite[\S 33.3, \S 33.4]{humphreys1975linear} to calculate the group law for $V_\alpha$:
 	\begin{eqnarray*}
 		&&u * v =\\
 		&&\langle
@@ -503,19 +520,19 @@ If $\langle \delta, \alpha \rangle = 1$ the characteristic of $k$ must be 2 and 
 		x_5 \neq 0 &\Longrightarrow& x_5(b) = \mu b^{p^{r+1}}, p = 2\\
 		x_8 \neq 0 &\Longrightarrow& x_8(b) = \nu b^{p^r}.
 	\end{eqnarray*}
-	Therefore, if the image of the group of upper (uni-)triangular matrices of $SL_2$ under $\sigma$ is $\langle U_{\alpha+\beta}, U_{\alpha+\beta+\gamma}, U_{2\alpha+2\beta+\gamma} \rangle$ then the characteristic of $k$ must be 2, and so the image is a product of commuting root groups.
+	Therefore, if the image of the group of upper (uni-)triangular matrices of $SL_2$ under $\sigma$ is $\langle U_{\alpha+\beta}, U_{\alpha+\beta+\gamma}, U_{2\alpha+2\beta+\gamma} \rangle$ then the characteristic of $k$ must be 2, and so the image is contained in a product of commuting root groups.
 	\label{eg:c3}
 \end{example}
 
-We now state the main Lemma.
+The results leading up to Corollary \ref{cor:im_ab} provide a general set of tools for calculating the 1-cohomology of a rank 2 algebraic group $G$ which we employ in Chapter \ref{Chapter6}, but they allude to something much grander which remains unproven: we conjecture
+\begin{quote}
+	Let $G$ be a reductive group over a closed field of positive characteristic $p$ and let $\Gamma = SL_2(k)$. Let $I \subset \Delta$ and $\sigma \in Z^1(SL_2(k), V_I)$ such that $\sigma(T)  = 0$. Then the image of $\sigma$ lies in a product of commuting root groups.
+	\label{conj:im_ab}
+\end{quote}
 
-\begin{lemma}
-	Let $G$ be a reductive group over a closed field of positive characteristic $p$ and let $\Gamma = SL_2(k)$. Then for each $\alpha \in \Delta$ the image $\sigma \in Z^1(SL_2(k), V_\alpha)$ lies in a product of commuting root groups.
-\end{lemma}
-\begin{proof}
-  The only cases not covered by Corollary \ref{cor:im_ab} are shown by way of example (Examples \ref{eg:c3}, \ref{eg:g2}).
-\end{proof}
+There is some work involved in extending the results in this Chapter to parabolics of rank $>$ 1. Furthermore we need a way to extend the results to $G$ with root system containing $G_2$ or $C_3$, as Examples \ref{eg:g2}, \ref{eg:c3} only verify the conjecture for $G$ with root system equal to $G_2, C_3$, respectively.
 
+If the conjecture was true then we could attempt to apply Lemma \ref{lem:a_h_restriction} together with an algebraic version of Theorem \ref{thm:k2_h1} to show that the answer to the algebraic version of K\"ulshammer's second question is positive for $SL_2(k)$ and any reductive $G$, with no restrictions on the characteristic of $k$.
 
 \section{A Non-Reductive Counterexample}
 In \cite{slodowy1997two} a counterexample to K\"ulshammer's second question is presented for a closed field $k$ of characteristic $p = 2$ and a non-reductive algebraic group $G$.
@@ -525,14 +542,15 @@ In \cite{slodowy1997two} a counterexample to K\"ulshammer's second question is p
 	\left(\begin{matrix} v_1 \\ v_2 \\ v_3 \end{matrix}\right) &=&
 	\left(\begin{matrix} u_1 + v_1 \\ u_2 + v_2 \\ u_3 + v_3 + u_1v_1 + u_2v_2 + u_1v_2 \end{matrix}\right).
 \end{eqnarray*}
-Let $\Gamma = \langle \sigma, \tau | \sigma^3 = \tau^2 = 1, \tau\sigma\tau = \sigma^2 \rangle$ and $\Gamma_2 = \langle \tau \rangle$ the Sylow 2-subgroup of $\Gamma$. $\Gamma$ acts on $Q$ via
+Let $\Gamma = \langle \sigma, \tau | \sigma^3 = \tau^2 = 1, \tau\sigma\tau = \sigma^2 \rangle$ and $\Gamma_2 = \langle \tau \rangle$, a Sylow 2-subgroup of $\Gamma$. $\Gamma$ acts on $Q$ via
 \begin{eqnarray*}
 	\tau \cdot \left(\begin{matrix} u_1 \\ u_2 \\ u_3 \end{matrix} \right) &=&
 	\left(\begin{matrix} u_2 \\ u_1 \\ u_3 + u_1^2 + u_2^2 + u_1u_2 \end{matrix} \right) \\
 	\sigma \cdot \left(\begin{matrix} u_1 \\ u_2 \\ u_3 \end{matrix} \right) &=&
 	\left(\begin{matrix} u_2 \\ u_1 + u_2 \\ u_3 \end{matrix} \right).
 \end{eqnarray*}
-Let $G = Q \rtimes \Gamma$. Then there are infinitely many pairwise $G$-conjugate classes of extensions to the representation $\rho:\Gamma_2 \rightarrow G$ defined by the natural inclusion $\Gamma_2 \rightarrow \Gamma \rightarrow G$ \cite[Appendix]{slodowy1997two}.
+Let $G = Q \rtimes \Gamma$ and fix the representation $\rho:\Gamma_2 \rightarrow G$ defined by the natural inclusion $\Gamma_2 \rightarrow \Gamma \rightarrow G$. Then there are infinitely many pairwise $G$-conjugate classes of extensions of $\rho$ to representations of $\Gamma$ into $G$ \cite[Appendix]{slodowy1997two}.
+\label{eg:non_red}
 \end{example}
 \begin{proof}
 	Our proof will be way of a 1-cohomology calculation. Choose a 1-cocycle $\alpha \in Z^1(\Gamma, Q)$ such that $\alpha|_{\langle \sigma \rangle} = 1$. Let
@@ -570,6 +588,7 @@ Let $G = Q \rtimes \Gamma$. Then there are infinitely many pairwise $G$-conjugat
 	\begin{eqnarray*}
 		\alpha_u(\tau) = \left(\begin{matrix} 0 \\ 0 \\ u \end{matrix} \right),\qquad (u\in k).
 	\end{eqnarray*}
+	This is a necessary condition. To show it is sufficient one can apply \cite[Proposition 2]{martin2004nonab} which involves looking at the presentation of $\Gamma$.
 	Now we calculate the class $[\alpha_u] \in H^1(\Gamma, Q)$. Suppose $[\alpha_v] = [\alpha_u]$. Then
 	there is a $q\in Q$ fixed under the action of $\sigma$, that is of the form
 	\begin{eqnarray*}
@@ -599,7 +618,7 @@ Let $G = Q \rtimes \Gamma$. Then there are infinitely many pairwise $G$-conjugat
 	% \end{eqnarray*}
 \end{proof}
 
-It is natural to ask whether this leads to a reductive counterexample, although we can quickly verify that the answer is ``not immediately''. For suppose there was a reductive group with unipotent radical \emph{containing} the multiplication law:
+In view of Theorem \ref{thm:k2_h1} one could show that the map $H^1(\Gamma, Q) \rightarrow H^1(\Gamma_p, Q)$ is not injective. Furthermore, it is natural to ask whether Example \ref{eg:non_red} leads to a reductive counterexample to K\"ulshammer's second question, although we can quickly verify that the answer is ``not immediately''. For suppose there was a reductive group with unipotent radical \emph{containing} the multiplication law:
 \begin{eqnarray*}
 	&&\ldots \epsilon_\alpha(u_\alpha) \ldots \epsilon_\beta(u_\beta) \ldots \epsilon_\gamma(u_\gamma) \times
 	\ldots \epsilon_\alpha(v_\alpha) \ldots \epsilon_\beta(v_\beta) \ldots \epsilon_\gamma(v_\gamma)\\
