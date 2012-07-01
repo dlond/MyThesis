@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.5.28)  7 JUN 2012 11:06
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.6.23)  2 JUL 2012 09:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -808,7 +808,7 @@ Overfull \hbox (11.4786pt too wide) in paragraph at lines 127--128
  []
 
 <xymatrix 2x2 168> [25] [26] [27]
-Overfull \hbox (6.39938pt too wide) in paragraph at lines 278--279
+Overfull \hbox (6.39938pt too wide) in paragraph at lines 277--278
 []\OT1/cmr/m/n/10.95 Denote by $\OML/cmm/m/it/10.95 ^^Y[]$ \OT1/cmr/m/n/10.95 t
 he canon-i-cal pro-jec-tion from $\OML/cmm/m/it/10.95 Hom\OT1/cmr/m/n/10.95 (^^
 @\OML/cmm/m/it/10.95 ; P\OT1/cmr/m/n/10.95 )[]\OML/cmm/m/it/10.95 =V \OMS/cmsy/
@@ -817,7 +817,7 @@ OT1/cmr/m/n/10.95 )[]$
  []
 
 [28] [29]
-Overfull \hbox (46.17767pt too wide) in paragraph at lines 334--335
+Overfull \hbox (46.17767pt too wide) in paragraph at lines 333--334
 \OML/cmm/m/it/10.95 Hom\OT1/cmr/m/n/10.95 (^^@\OML/cmm/m/it/10.95 ; P[]\OT1/cmr
 /m/n/10.95 )[]\OML/cmm/m/it/10.95 =V[]Z\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 
 M[]\OT1/cmr/m/n/10.95 )[]$ given by the canon-i-cal pro-jec-tion and a map $[] 
@@ -999,7 +999,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 198.
 Here is how much of TeX's memory you used:
  13718 strings out of 493610
  189007 string characters out of 3142404
- 345844 words of memory out of 3000000
+ 346844 words of memory out of 3000000
  16556 multiletter control sequences out of 15000+200000
  15754 words of font info for 61 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
@@ -1025,7 +1025,7 @@ exmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/201
 1/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive
 /2011/texmf-dist/fonts/type1/public/xypic/xycmat10.pfb></usr/local/texlive/2011
 /texmf-dist/fonts/type1/public/xypic/xycmbt10.pfb>
-Output written on Thesis.pdf (91 pages, 586560 bytes).
+Output written on Thesis.pdf (91 pages, 586561 bytes).
 PDF statistics:
  899 PDF objects out of 1000 (max. 8388607)
  767 compressed objects within 8 object streams

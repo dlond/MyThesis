@@ -196,7 +196,6 @@ Furthermore, if $l\in Z(L)^\circ$ then $l\cdot\rho_L = \rho_L$. Indeed $Z(L)^\ci
   (z \cdot \sigma) (\gamma) &=& z \sigma(\gamma) z^{-1} \\
   (z \cdot \alpha_\sigma) (\gamma) &=&  z \alpha_\sigma(\gamma) z^{-1},
 \end{eqnarray*}
-
 and $h$ is $Z(L)^\circ$-equivariant:
 \begin{eqnarray*}
   h(z \cdot \sigma)(\gamma) &=&  z \sigma(\gamma) z^{-1} \rho_L(\gamma)^{-1} \\
@@ -396,23 +395,6 @@ We note that each subset $R_{\sigma_i^j} \subset R_{Q_i}$ is a $VZ(M_i)^\circ$-s
 
 \end{proof}
 
-%Let $R = \{ \rho_\lambda: \Gamma \rightarrow G \,|\, \lambda \in \Lambda \}$ be a collection of representations indexed by the set $\Lambda$. Since we are interested in $G$-conjugacy classes of $R$ we can assume without loss of generality that $R = G \cdot R$. Then we say that $R$ gives rise to a subset of 1-cohomologies:
-%\begin{eqnarray}
-%  \overline{h}(R_{\sigma_i^j}/V) \subset H^1(\Gamma, \sigma_i^j, V_i).
-%  \label{eqn:rv_h}
-%\end{eqnarray}
-
-%Moreover, $R$ gives rise to a subset of $Z(M_i)^\circ$-projected 1-cohomologies:
-%\begin{eqnarray}
-%  \tilde{h}(R_{\sigma_i^j}/VZ(M_i)^\circ) \subset H^1(\Gamma, \sigma_i^j, V_i)/Z(M_i)^\circ.
-%  \label{eqn:rvz_hz}
-%\end{eqnarray}
-
-%This leads us to define $\mathcal{H}: Hom(\Gamma, Q_i)_{\sigma_i^j} \rightarrow H^1(\Gamma, \sigma_i^j, V_i) / Z(M_i)^\circ$ by the composition
-%\begin{displaymath}
-%  Hom(\Gamma, Q_i)_{\sigma_i^j} \rightarrow Hom(\Gamma, Q_i)_{\sigma_i^j} / V_i Z(M_i)^\circ \rightarrow H^1(\Gamma, \sigma_i^j, V_i) / Z(M_i)^\circ.
-%\end{displaymath}
-%That is $\mathcal{H}(\rho) = \tilde{h}(\tilde{\rho})$ for all $\rho \in Hom(\Gamma, Q_i)_{\sigma_i^j}$. Sinc
 We are now ready to state precisely the connection with $G$-conjugacy classes of representations and the 1-cohomology.
 
 \begin{theorem}
@@ -469,35 +451,5 @@ We are now ready to state precisely the connection with $G$-conjugacy classes of
   Therefore, the image of $R_j^p$ in $H^1(\Gamma, \sigma_i^j, V_i)/Z(M_i)^\circ$ is finite. By Lemma \ref{lem:p_h1}, $R_j^p$ is contained in a finite union of $Q_i$-conjugacy classes, hence by Equation \ref{eqn:rs_grp}, $R_{\sigma_i^j}$ is contained in a finite union of $G$-conjugacy classes.
 
   So by Equation \ref{eqn:gr_grsigma}, $G \cdot R = R$ is contained in a finite union of $G$-conjugacy classes. Therefore the answer to K\"ulshammer's second question for $\Gamma, G$ is positive.
-
-
 \end{proof}
-% \section{An algebraic group version}
-% 
-% In an attempt to gain further insight into (K. II) we adjust the original question by letting $\Gamma$ be an infinite group $H$. The advantage being that a negative answer in the algebraic group version may provide a negative answer to (K. II) by choosing an appropriate finite subgroup $\Gamma$ of $H$. In many of the examples to follow we set $H = SL_2(K)$ with Sylow $p$-subgroup $H_p = U_2(K)$ consisting of upper unitriangular matrices. 
-% 
-% Let $P \subset G$ be a parabolic subgroup and $L \subset P$ the corresponding Levi subgroup. Fix a representation $\rho_0:H\rightarrow L$. We can assume $\rho_0(H)$ is $L$-irreducible, that is, not contained in a proper parabolic of $L$. 
-% 
-% Now define $\rho_\alpha:H \rightarrow P$ by $\rho_\alpha(h) = \alpha(h)\rho_0(h)$ where $\alpha:H\rightarrow R_u(P)$, $R_u(P)$ the unipotent radical of $P$. 
-% 
-% For $\rho_\alpha$ to be a homomorphism
-% \begin{eqnarray*}
-% 	\alpha(h_1h_2)\rho_0(h_1h_2) &=& \alpha(h_1)\rho_0(h_1)\alpha(h_2)\rho_0(h_2) \\
-% 	 &=& \alpha(h_1)\rho_0(h_1)\alpha(h_2)\rho_0(h_1)^{-1}\rho_0(h_1)\rho_0(h_2) \\
-% 	 &=& \alpha(h_1)\rho_0(h_1)\alpha(h_2)\rho_0(h_1)^{-1}\rho_0(h_1h_2).
-% \end{eqnarray*}
-% That is $\alpha(h_1h_2) = \alpha(h_1) h_1\cdot\alpha(h_2)$, where the action $H \times R_u(P) \rightarrow R_u(P)$ is conjugation via $\rho_0$. This is a 1-cocycle condtion; $\alpha\in Z^1(H, R_u(P))$. $R_u(P)$ will not be abelian in general.
-% 
-% Now suppose $\rho_\alpha$ is $R_u(P)$-conjugate to some $\rho_\beta$, $\alpha, \beta \in Z^1(H, R_u(P))$. That is, there exists a $v \in R_u(P)$ such that for all $h\in H$
-% \begin{eqnarray*}
-% 	\alpha(h)\rho_0(h) &=& v\beta(h)\rho_0(h)v^{-1} \\
-% 	&=& v\beta(h)\rho_0(h)v^{-1}\rho_0(h)^{-1}\rho_0(h).
-% \end{eqnarray*}
-% That is $\alpha(h) = v\beta(h)h\cdot v^{-1}$. In particular if $\rho_\alpha$ is $R_u(P)$-conjugate to $\rho_0$, that is $\beta$ is trivial, then $\alpha$ takes the form of a 1-coboundary. Generally speaking $\alpha$ and $\beta$ project to the same 1-cohomology class. In the abelian case this reads ``$\alpha$ and $\beta$ differ by a 1-coboundary'':
-% \begin{eqnarray*}
-% 	\alpha(h) = v\beta(h)h\cdot v^{-1} \quad\leadsto \quad\alpha(h) &=& v + \beta(h) - h\cdot v \\
-% 	&=& \beta(h) + v - h\cdot v \\
-% 	&=& \beta(h) + \chi_v(h).
-% \end{eqnarray*}
 
-% 3) Look at the nonreductive counterexample in Slodowy's paper on Kulshammer's problem.  What is special about the 3-dimensional U that makes this counterexample work?  Can you find similar structure in the unipotent radical of a reductive group?

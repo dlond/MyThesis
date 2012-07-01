@@ -46,7 +46,7 @@ We let $SL_2(k)$ act on $V_\alpha$ via $\rho_r$ and we consider 1-cocycles $\sig
 \sigma\left(\left(\begin{matrix} t & 0 \\ 0 & t^{-1}\end{matrix}\right)\right) = 0,
 \end{eqnarray*}
 for all $t\in k^*$.
-We fix an ordering of the roots so that expressions such as $\prod_\delta U_\delta$ are unambiguious.
+We fix an ordering of the roots so that expressions such as $\prod_\delta U_\delta$ are unambiguous.
 
 We can say a few things about these particular 1-cocycles which help us calculate the 1-cohomology.  By \cite[Theorem 26.3(c)]{humphreys1975linear}
 \begin{eqnarray}
@@ -98,7 +98,6 @@ t^{-1} & 0 \\ 0 & t
 \end{matrix}\right),
 \label{eqn:tut}
 \end{eqnarray}
-
 we use the 1-cocycle condition (Equation \ref{eqn:na_z}) to obtain
 \begin{eqnarray*}
 \sigma\left(
@@ -172,18 +171,6 @@ x_\delta\left(t^2u\right) &=& (t^{p^r})^{\langle \delta, \alpha\rangle}x_\delta\
 \end{eqnarray*}
 Since $x_\delta$ is a polynomial function there can only be non-negative powers of $t$ on the left-hand side of the equality which forces $\langle \delta, \alpha \rangle \geq 0$. However, if $\langle \delta, \alpha \rangle = 0$ then $x_\delta$ is constant and hence zero, as $\sigma$ is zero on $\left(\begin{matrix} * & 0 \\ 0 & *\end{matrix}\right)$. Therefore the non-zero $x_\delta$ occur precisely when $\langle \delta, \alpha \rangle > 0$.
 \end{proof}
-
-%\begin{definition} Suppose $\alpha, \beta \in \Phi$ are linearly independent. Since $\Phi$ is finite there exist integers $p,q$ such that $i\alpha + \beta \in \Phi$ for $-p\leq i \leq q$ but $-(p+1)\alpha + \beta$ and $(q+1)\alpha + \beta$ are not in $\Phi$. The sequence of roots
-%\begin{eqnarray*}
-%-p\alpha + \beta,\ldots, \beta, \ldots, q\alpha + \beta
-%\end{eqnarray*}
-%is called the $\alpha$-chain of roots through $\beta$.
-%\end{definition}
-
-%\begin{lemma} \label{chainpair}
-%$\langle \alpha, \beta \rangle = p - q.$
-%\end{lemma}
-%\begin{proof} See [reference]\end{proof}
 
 Next we prove a couple of useful facts about root systems not containing $G_2$ or $C_3$.
 
@@ -611,11 +598,6 @@ Let $G = Q \rtimes \Gamma$ and fix the representation $\rho:\Gamma_2 \rightarrow
 		\left(\begin{matrix} 0 \\ 0 \\ u\end{matrix}\right).
 	\end{eqnarray*}
 	Hence only if $u=v$ are two 1-cocycles of the particular form in the same class, and therefore $H^1(\Gamma, Q)$ is infinite.
-	% Fix $\rho_0:\Gamma\rightarrow G$
-	% \begin{eqnarray*}
-	% 	\rho_0(\tau) &=& \left(1, \tau\right)\\
-	% 	\rho_0(\sigma) &=& \left(1, \sigma\right).
-	% \end{eqnarray*}
 \end{proof}
 
 In view of Theorem \ref{thm:k2_h1} one could show that the map $H^1(\Gamma, Q) \rightarrow H^1(\Gamma_p, Q)$ is not injective. Furthermore, it is natural to ask whether Example \ref{eg:non_red} leads to a reductive counterexample to K\"ulshammer's second question, although we can quickly verify that the answer is ``not immediately''. For suppose there was a reductive group with unipotent radical \emph{containing} the multiplication law:
