@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 \beamer@endinputifotherversion {3.18pt}
 \select@language {english}
 \beamer@sectionintoc {1}{Introduction}{3}{0}{1}
 \beamer@subsectionintoc {1}{1}{First Subsection Name}{3}{0}{1}
+=======
+\beamer@endinputifotherversion {3.10pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Groups}{3}{0}{1}
+>>>>>>> c1b87c60ccfc4adaa08fc0cb4e334f51a2614389
 \beamer@subsectionintoc {1}{2}{Second Subsection}{10}{0}{1}
