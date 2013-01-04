@@ -1,0 +1,21 @@
+\documentclass[12pt, a4paper]{amsart}
+\usepackage{amscd, amsfonts, amssymb}
+\usepackage{mathrsfs}
+\usepackage[all]{xy}
+
+\usepackage[landscape]{geometry}
+
+\newcommand{\Hom}[3]{\mathrm{Hom}(#1, #2)_{#3}}
+
+\begin{document}
+
+\title{Commutative diagram}
+\maketitle
+\begin{displaymath}
+\xymatrix{
+\cdots & \ar@{_{(}-}[l] \Hom{\Gamma}{P}{\sigma} \ar[d]^{\phi} \ar[r]^z & Z^1(\Gamma, V)_\sigma \ar[d]_{\psi} \ar[r]^{Z^1(\iota)} & Z^1(\Gamma', V)_{\sigma^\iota} \ar[d]^{\psi^\iota} & \Hom{\Gamma'}{P}{\sigma^\iota} \ar[l]_{z^\iota} \ar[d]_{\phi^\iota} & \cdots \ar@{->}[l] \\
+\cdots & \ar@{_{(}-}[l] \Hom{\Gamma}{P}{\sigma}/V \ar[d]^{\widetilde{\phi}} \ar[r]^h & H^1(\Gamma, V)_\sigma \ar[d]_{\widetilde{\psi}} \ar[r]^{H^1(\iota)} & H^1(\Gamma', V)_{\sigma^\iota} \ar[d]^{\widetilde{\psi^\iota}} & \Hom{\Gamma'}{P}{\sigma^\iota}/V \ar[l]_{h^\iota} \ar[d]_{\widetilde{\phi^\iota}} & \cdots \ar@{->}[l] \\
+\cdots & \ar@{_{(}-}[l] \Hom{\Gamma}{P}{\sigma}/VC_L(\sigma) \ar[r]^{\widetilde{h}} & H^1(\Gamma, V)_\sigma/C_L(\sigma) \ar[r]^{\widetilde{H^1}(\iota)} & H^1(\Gamma', V)_{\sigma^\iota}/C_L(\sigma) & \Hom{\Gamma'}{P}{\sigma^\iota}/VC_L(\sigma) \ar[l]_{\widetilde{h^\iota}} & \cdots \ar@{->}[l] \\
+}
+\end{displaymath}
+\end{document}
