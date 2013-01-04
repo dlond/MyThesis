@@ -1,0 +1,211 @@
+\documentclass[12pt, a4paper]{amsart}
+\usepackage{amscd, amsfonts, amssymb}
+\usepackage{mathrsfs}
+
+\numberwithin{equation}{section}
+
+\newtheorem{thm}[equation]{Theorem}
+\newtheorem*{Thm}{Theorem}
+\newtheorem{lem}[equation]{Lemma}
+\newtheorem{cor}[equation]{Corollary}
+\newtheorem{prop}[equation]{Proposition}
+\newtheorem{conj}[equation]{Conjecture}
+\newtheorem*{Prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem{defn}[equation]{Definition}
+\newtheorem{noname}[equation]{}
+\newtheorem{exmp}[equation]{Example}
+\newtheorem{exmps}[equation]{Examples}
+\theoremstyle{remark}
+\newtheorem{rem}[equation]{Remark}
+\theoremstyle{remark}
+\newtheorem{rems}[equation]{Remarks}
+\newtheorem*{Rem}{Remark}
+
+\begin{document}
+
+\title{K\"ulshammer's Second Question and the 1-Cohomology}
+
+\maketitle
+
+Let $\Gamma$ be an algebraic group, $G$ a connected reductive algebraic group over an algebraically closed field $k$ with $\mathrm{char}(k) = p > 0$.
+Let $P$ be a parabolic subgroup of $G$, with Levi subgroup $L$ and unipotent radical $V$.  
+We have $P = V \rtimes L$, and we denote by $\pi^L$ the canonical projection
+\begin{eqnarray}
+	\pi^L: P \rightarrow L.
+\end{eqnarray}
+
+Since $L$ normalizes $V$ we have an action by group automorphisms of $L$ on $V$ given by
+\begin{eqnarray} \label{l:action} l \cdot v = lvl^{-1}, \end{eqnarray}
+for $l \in L, v \in V$.
+
+Let $\sigma \in \mathrm{Hom}(\Gamma, L)$. Now we have an action of $\Gamma$ on $V$ given by
+\begin{eqnarray} \label{gamma:action} \gamma \cdot v = \sigma(\gamma) \cdot v \end{eqnarray}
+for $\gamma \in \Gamma, v \in V$, using Equation \ref{l:action}. \\
+
+Let $\rho \in \mathrm{Hom}(\Gamma, P)$. We associate with $\rho$ the homomorphism $\rho^L:\Gamma \rightarrow L$ defined by
+\begin{eqnarray} \rho^L = \pi^L \circ \rho, \end{eqnarray} and $\alpha_\rho:\Gamma \rightarrow V$ defined by
+\begin{eqnarray} \label{rho:1cocycle}
+	\alpha_\rho(\gamma) = \rho(\gamma)(\rho^L(\gamma))^{-1}.
+\end{eqnarray}
+With the action defined in Equation \ref{gamma:action}, $\alpha_\rho$ is a 1-cocycle. \\
+
+
+In Equation \ref{rho:1cocycle} we have a formula associating elements of $\mathrm{Hom}(\Gamma, P)$ with 1-cocycles $\Gamma\rightarrow V$. However, to be able to compare 1-cocycles it is important that $\Gamma$ acts on $V$ in the same way. In other words, given $\rho, \varsigma \in \mathrm{Hom}(\Gamma, P)$ it only makes sense to compare $\alpha_{\rho}, \alpha_{\varsigma}$ if $\rho^L = \varsigma^L$. 
+
+
+\begin{defn}[Notation] \label{defn:homsigma} Fix $\sigma \in \mathrm{Hom}(\Gamma, L)$ and define
+\begin{eqnarray} \mathrm{Hom}(\Gamma, P)_\sigma = \{\rho \in \mathrm{Hom}(\Gamma, P) \,|\, \rho^L = \sigma \}. \end{eqnarray}
+More generally, if $R \subset \mathrm{Hom}(\Gamma, P)$ define
+\begin{eqnarray} \label{defn:rsigma} R_\sigma = \{\rho \in R \,|\, \rho^L = \sigma \}. \end{eqnarray}
+\end{defn}
+\quad \\
+
+
+For a given $\sigma \in \mathrm{Hom}(\Gamma, L)$, we denote by $Z^1(\Gamma, V)_\sigma$ the set of 1-cocycles $\Gamma \rightarrow V$ where $\Gamma$ acts on $V$ as in Equation \ref{gamma:action}. Evidently these 1-cocycles are in one-to-one correspondence with elements of $\mathrm{Hom}(\Gamma, P)_\sigma$. Formally, we have the following Lemma.
+
+\begin{lem} \label{hom:z1}
+Define the map $z:\mathrm{Hom}(\Gamma, P)_\sigma \rightarrow Z^1(\Gamma, V)_\sigma$ by
+\begin{eqnarray} \label{z}
+	z(\rho) = \alpha_\rho.
+\end{eqnarray}
+Then $z$ is a bijection.
+\end{lem}
+
+We return to the notion of comparing 1-cocycles. Following the established theory of abelian 1-cohomology, the non-abelian analogue of \emph{equivalent 1-cocycles} is defined in Chapter 3.
+
+
+\begin{lem} The relation on $Z^1(\Gamma, V)_\sigma$ given by $\alpha \sim \beta$ if there exists $v \in V$ such that
+\begin{eqnarray}\label{defn:equiv} 
+	\alpha(\gamma) = v\beta(\gamma)(\gamma \cdot v^{-1}),
+\end{eqnarray}
+for all $\gamma \in \Gamma$, is an equivalence relation.
+\end{lem}
+
+We denote the \emph{1-cohomology} by $H^1(\Gamma, V)_\sigma$, defined to be the collection of equivalence classes of $Z^1(\Gamma, V)_\sigma$ under the equivalence relation in Equation \ref{defn:equiv}. We denote by $\overline{\alpha}$ the image of $\alpha \in Z^1(\Gamma, V)_\sigma$ under the canonical projection $Z^1(\Gamma, V)_\sigma \rightarrow H^1(\Gamma, V)_\sigma$.
+
+
+Following the theme of Lemma \ref{hom:z1}, we relate elements of $H^1(\Gamma, V)_\sigma$ to certain conjugacy classes of $\mathrm{Hom}(\Gamma, P)_\sigma$.
+
+\begin{lem} \label{hom:h1}
+The bijective map $z: \mathrm{Hom}(\Gamma, P)_\sigma \rightarrow Z^1(\Gamma, V)_\sigma$ defined in Equation \ref{h} descends to give a bijective map $h:\mathrm{Hom}(\Gamma, P)_\sigma/V \rightarrow H^1(\Gamma, V)_\sigma$, defined by
+\begin{eqnarray} \label{h}
+h(V \cdot \rho) = \overline{\alpha_\rho},
+\end{eqnarray}
+where $\rho \in \mathrm{Hom}(\Gamma, P)_\sigma$.
+\end{lem}
+
+[some explaination for the following]
+
+\begin{lem} \label{hom:h1clv}
+The bijective map $h$ defined in Equation \ref{hbar} descends to give a bijective map $\widetilde{h}:\left[\mathrm{Hom}(\Gamma, P)_\sigma/V\right]/C_L(\sigma) \rightarrow H^1(\Gamma, V)_\sigma/C_L(\sigma)$, defined by
+\begin{eqnarray}
+\widetilde{h}((C_L(\sigma)V) \cdot \rho) = \widetilde{\alpha_\rho},
+\end{eqnarray}
+where $(C_L(\sigma)V)\cdot \rho \in \left[\mathrm{Hom}(\Gamma, P)_\sigma / V\right]/C_L(\sigma) = \mathrm{Hom}(\Gamma, P)_\sigma/VC_L(\sigma)$.
+\end{lem}
+
+
+\begin{defn}[Notation] We define
+\begin{eqnarray} \mathrm{Hom}(\Gamma, P)^L = \{ \rho^L \,|\, \rho \in \mathrm{Hom}(\Gamma, P)\}. \end{eqnarray}
+More generally, when $R \subset \mathrm{Hom}(\Gamma, P)$ we define
+\begin{eqnarray} R^L = \{\rho^L \,|\, \rho \in R\}. \end{eqnarray}
+\end{defn}
+
+\begin{lem} \label{lem:prlrl} Let $R \subset \mathrm{Hom}(\Gamma, P)$. Suppose $R = P \cdot \rho$ for some $\rho \in R$. Then $R^L = L \cdot \rho^L$.
+
+More generally, if $R = P \cdot R$ then $R^L = L \cdot R^L$.
+\end{lem}
+
+\begin{defn} Define the map
+\begin{eqnarray} \mathcal{H}:\mathrm{Hom}(\Gamma, P)_\sigma \rightarrow H^1(\Gamma, V)_\sigma / C_L(\sigma) \end{eqnarray}
+by the composition of $h:\mathrm{Hom}(\Gamma, P)_\sigma \rightarrow Z^1(\Gamma, V)_\sigma$, followed by the canonical projection $Z^1(\Gamma, V)_\sigma \rightarrow H^1(\Gamma, V)_\sigma$, followed by the canonical projection $H^1(\Gamma, V)_\sigma \rightarrow H^1(\Gamma, V)_\sigma/C_L(\sigma)$.
+\end{defn}
+
+\begin{thm} \label{thm1} Let $R \subset \mathrm{Hom}(\Gamma, P)$ and suppose $P\cdot R = R$. Then $R$ is a finite union of $P$-conjugacy classes if and only if
+\begin{itemize}
+	\item[(i)] $R^L$ is a finite union of $L$-conjugacy classes, and
+	\item[(ii)] for each $\sigma \in \mathrm{Hom}(\Gamma, L)$, $\mathcal{H}(R_\sigma) \subset H^1(\Gamma, V)_\sigma / C_L(\sigma)$ is finite.
+\end{itemize}
+\end{thm}
+\begin{rem} Conditions (i) and (ii) are equivalent to
+\begin{itemize}
+\item[(i$'$)] $R_\sigma = \emptyset$ for all but finitely many $L$-conjugacy classes of $\sigma \in \mathrm{Hom}(\Gamma, L)$, and
+\item[(ii$'$)] for each $\sigma \in \mathrm{Hom}(\Gamma, L)$, $R_\sigma$ is a finite union of $VC_L(\sigma)$-conjugacy classes,
+\end{itemize}
+respectively. We obtain (ii) $\Leftrightarrow$ (ii$'$) by appealing to the bijection $\widetilde{h}$, while (i) $\Leftrightarrow$ (i$'$) is self-evident.
+\end{rem}
+\begin{proof}
+First an observation. Suppose $R = P \cdot R$. Fix $\sigma \in \mathrm{Hom}(\Gamma, L)$ and let $\rho \in R_\sigma$, so that $\rho^L = \sigma$. Suppose $p \cdot \rho \in R_\sigma$ for some $p \in P$, and let $v \in V, l \in L$ such that $p = vl$. Then
+\begin{eqnarray}
+p \cdot \rho \in R_\sigma &\Leftrightarrow& (vl) \cdot \rho \in R_\sigma \\
+&\Leftrightarrow& \left[(vl) \cdot \rho \right]^L = \sigma \\
+&\Leftrightarrow& l \cdot \rho^L = \sigma \\
+&\Leftrightarrow& l \in C_L(\sigma).
+\end{eqnarray}
+This shows that
+\begin{eqnarray}
+R_\sigma \cap P \cdot \rho \subset \left(VC_L(\sigma)\right) \cdot \rho.
+\end{eqnarray}
+The reverse inclusion follows since $R = P \cdot R$ and $R_\sigma$ is stable under conjugation by $V$ and $C_L(\sigma)$. Hence
+\begin{eqnarray} \label{rsigma:vcl}
+R_\sigma \cap P \cdot \rho = \left(VC_L(\sigma)\right) \cdot \rho.
+\end{eqnarray}
+
+
+Now suppose $R$ is a finite union of $P$-conjugacy classes, so there exists a finite set $\mathscr{P} \subset \mathrm{Hom}(\Gamma, P)$ such that
+\begin{eqnarray} R = \bigcup_{\rho \in \mathscr{P}} P \cdot \rho \end{eqnarray}
+Lemma \ref{lem:prlrl} shows that (i) holds. Furthermore
+\begin{eqnarray} R_\sigma &=& R_\sigma \cap R \\
+&=& R_\sigma \cap \big( \bigcup_{\rho \in \mathscr{P}} P \cdot \rho \,\,\big) \\
+&=& \bigcup_{\rho \in \mathscr{P}} \left( R_\sigma \cap P \cdot \rho \right),
+\end{eqnarray}
+and by Equation \ref{rsigma:vcl}
+\begin{eqnarray} R_\sigma = \bigcup_{\rho \in \mathscr{P}} (VC_L(\sigma)) \cdot \rho. \end{eqnarray}
+Hence (ii$'$), and therefore (ii), holds. This proves the forward direction.
+
+
+Conversely, suppose (i) and (ii) hold. By (ii) there exists a finite set $\mathscr{Q} \subset \mathrm{Hom}(\Gamma, P)$ and by Equation \ref{rsigma:vcl} 
+\begin{eqnarray} R_\sigma &=& \bigcup_{\rho \in \mathscr{Q}} (VC_L(\sigma)) \cdot \rho \\
+&=& \bigcup_{\rho \in \mathscr{Q}} \left( R_\sigma \cap P \cdot \rho \right) \\
+&=& R_\sigma \cap \big( \bigcup_{\rho \in \mathscr{Q}} P \cdot \rho \,\,\big).
+\end{eqnarray}
+Hence $R_\sigma$ is contained in a finite union of $P$-conjugacy classes. By (i) there exists a finite set $\mathscr{S} \subset \mathrm{Hom}(\Gamma, L)$ such that
+\begin{eqnarray} \label{finiterl}
+R^L = \bigcup_{\tau \in \mathscr{S}} L \cdot \tau.
+\end{eqnarray}
+For $\sigma \in \mathrm{Hom}(\Gamma, L)$, define $L \cdot R_\sigma = \{L \cdot \rho \,|\, \rho \in R_\sigma\}$. Evidently $L \cdot R_\sigma$ is contained in a finite union of $P$-conjugacy classes.
+
+
+Now let $\rho \in R$. By Equation \ref{finiterl} there exists $l \in L$, $\tau \in \mathscr{S}$ such that $\rho^L = l \cdot \tau$. Hence $l^{-1} \cdot \rho^L = \tau$ which implies $\rho \in L \cdot R_\tau$. This shows that $R$ is contained in a finite union of $P$-conjugacy classes. The reverse inclusion is satisfied since $R = P \cdot R$. This completes the proof.
+\end{proof}
+
+\begin{defn} Let $\Gamma' < \Gamma$ and denote by $\iota$ the inclusion map $\Gamma' \hookrightarrow \Gamma$. We denote by $\rho^\iota$ the homomorphism $\Gamma' \rightarrow P$ defined by
+\begin{eqnarray} \rho^\iota = \rho \circ \iota, \end{eqnarray}
+and define
+\begin{eqnarray} \mathrm{Hom}(\Gamma, P)^\iota = \{\rho^\iota \,|\, \rho \in \mathrm{Hom}(\Gamma, P) \}. \end{eqnarray}
+More generally, if $R \subset \mathrm{Hom}(\Gamma, P)$ then define
+\begin{eqnarray} R^\iota = \{\rho^\iota \,|\, \rho \in R\}. \end{eqnarray}
+\end{defn}
+
+\begin{thm}
+Let $R \subset \mathrm{Hom}(\Gamma, P)$ such that $R = P \cdot R$. Suppose
+\begin{itemize}
+\item[(i)] $R^L$ is a finite union of $L$-conjugacy classes,
+\item[(ii)] for all $\sigma \in \mathrm{Hom}(\Gamma, L)$ such that $R_\sigma \neq \emptyset$, the map \begin{displaymath}H^1(\iota):H^1(\Gamma, V)_\sigma/C_L(\sigma) \rightarrow H^1(\Gamma', V)_{\sigma^\iota}/C_L(\sigma)\end{displaymath} has finite fibres, and
+\item[(iii)] $R^\iota$ is a finite union of $P$-conjugacy classes.
+\end{itemize}
+Then $R$ is a finite union of $P$-conjugacy classes.
+\end{thm}
+\begin{rem} Since $R = P \cdot R$, $R^L$ is already a union of $L$-conjugacy classes by Lemma \ref{lem:prlrl}, so the point of (i) is that the union is finite. \end{rem}
+\begin{proof}
+Since $R^\iota \subset \mathrm{Hom}(\Gamma', V)_\sigma$, $R^\iota = P \cdot R^\iota$ and $R^\iota$ is a finite union of $P$-conjugacy classes, by Theorem \ref{thm1}
+\begin{itemize}
+\item[(iv)] $(R^\iota)^L$ is a finite union of $L$-conjugacy classes, and
+\item[(v)] for each $\tau \in \mathrm{Hom}(\Gamma', V)_{\sigma^\iota}$, $\mathcal{H}(R_\tau)$ is finite.
+\end{itemize}
+Let $\sigma \in \mathrm{Hom}(\Gamma, V)$. If $R_\sigma = \emptyset$ then $\mathcal{H}(R_\sigma)$ is certainly finite. On the other hand, if $R_\sigma \neq \emptyset$ then
+\begin{eqnarray} \mathcal{H}(R_\sigma) \subset \widetilde{H^1}(\iota)^{-1}(R_{\sigma^\iota}) \end{eqnarray}
+\end{proof}
+
+end{document}
