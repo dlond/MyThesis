@@ -242,13 +242,48 @@ Furthermore, we have a map of 1-cohomomologies $H^1(K, V)_\sigma \rightarrow H^1
 		H^1(\zeta, \xi):H^1(K, V)_\sigma \rightarrow H^1(K, V)_{l \cdot \sigma}.
 	\end{eqnarray*}
 
-	Evidently, if $l \in C_L\left(\sigma(K)\right)$ then $\mathrm{Hom}(K, P)_\sigma$ is stable and $H^1(\zeta, \xi)$ maps $H^1(K, V)_{\sigma}$ into itself.
+	Evidently, if $l \in C_L\left(\sigma(K)\right)$ then $\mathrm{Hom}(K, P)_\sigma$ is stable under conjugation by $vl$ and $H^1(\zeta, \xi)$ maps $H^1(K, V)_{\sigma}$ into itself.
+
+	\begin{lemma} We have an action of $C_L(\sigma(K))$ on $\mathrm{Hom}(K, V)_\sigma / V$ defined by
+		\begin{eqnarray} \label{vcl.hom}
+			(c \cdot \phi(\rho)) = \phi\left(c \cdot \rho \right),
+		\end{eqnarray}
+		for $c \in C_L(\sigma(K)), \rho \in \mathrm{Hom}(K, V)_\sigma, x \in K$. We also have an action of $C_L(\sigma(K))$ on $H^1(K, V)_\sigma$ defined by
+		\begin{eqnarray} \label{cl.h1}
+			\left(c \cdot \psi(\alpha)\right)
+			&=& \psi \left(c \cdot \alpha \right) \\
+			&=& H^1(\zeta, \xi)\left(\psi(\alpha)\right), 
+		\end{eqnarray}
+		for $c \in C_L(\sigma(K)), \alpha \in Z^1(K, V)_\sigma$, where
+		\begin{eqnarray*}
+		\zeta = \mathrm{id}: K \rightarrow K,
+	\end{eqnarray*}
+	and 
+	\begin{eqnarray*}
+		\xi(v) = cvc^{-1},
+	\end{eqnarray*}
+	for $v \in V$.
+	\end{lemma}
+\begin{proof}
+	First we show Equation \ref{vcl.hom} is a well-defined map. Let $\rho, \varsigma \in \mathrm{Hom}(K, V)_\sigma$ such that $\phi(\rho) = \phi(\varsigma)$. Then there exists $v \in V$ such that
+	\begin{eqnarray*} \varsigma(x) = v\rho(x)v^{-1}, \end{eqnarray*}
+		for all $x \in K$. Now let $c \in C_L(\sigma(K))$. Since $L$ normalizes $V$ there exists $w \in V$ such that $cv = wc$. Then
+		\begin{eqnarray*}
+			\phi \left(c \varsigma(x)c^{-1}\right) 
+			&=& \phi \left(cv \rho(x) v^{-1}c^{-1}\right) \\
+			&=& \phi \left(wc \rho(x) c^{-1}w^{-1}\right) \\
+			&=& \phi \left(c \rho(x) c^{-1}\right),
+		\end{eqnarray*}
+		for all $x \in K$. Hence Equation \ref{vcl.hom} is a well-defined map. It is clear that the group action axioms are satisfied, so Equation \ref{vcl.hom} defines an action of $C_L(\sigma(K))$ on $\mathrm{Hom}(K, P)_\sigma$.
+
+
+\end{proof}
 	\begin{definition}
 		Denote by $\mathrm{Hom}(K, P)_\sigma/VC_L(\sigma)$ the collection of $C_L(\sigma(K))$-conjugacy classes of $\mathrm{Hom}(K, P)_\sigma/V$, equivalently the collection of $VC_L(\sigma(K))$-conjugacy classes of $\mathrm{Hom}(K, P)_\sigma$, and denote by $\widetilde{\phi}$ the canonical projection,
 		\begin{eqnarray*}
 			\widetilde{\phi}: \mathrm{Hom}(K, P)_\sigma/V \rightarrow \mathrm{Hom}(K, P)_\sigma/VC_L(\sigma).
 		\end{eqnarray*}
-		Similarly, denote by $H^1(K, V)_\sigma/C_L(\sigma)$ the set of orbits of $H^1(K, V)_\sigma$ under $H^(\zeta, \xi)$.
+		Similarly, denote by $H^1(K, V)_\sigma/C_L(\sigma)$ the set of orbits of $H^1(K, V)_\sigma$ under the action defined in Equation \ref{cl.h1}.
 	\end{definition}
 
 We show that the $Z(L)^\circ$-action on $Hom(\Gamma, P)_{\rho_L}$ and $Z^1(\Gamma, \rho_L, V)$ descends to give a $Z(L)^\circ$-action on $Hom(\Gamma, P)_{\rho_L}/V$ and $H^1(\Gamma, \rho_L, V)$, respectively. The actions will be well-defined as a consequence of the fact that $L$ normalizes $V$.
