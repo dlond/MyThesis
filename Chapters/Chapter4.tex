@@ -6,10 +6,10 @@
 \lhead{Chapter 4. \emph{K\"ulshammer's Second Problem}}
 
 Let $G$ be a connected reductive algebraic group over an algebraically closed field $k$ with $\mathrm{char}(k) = p$. Let $P$ be a parabolic subgroup of $G$, with Levi subgroup $L$ and unipotent radical $V$. We have $P = V \rtimes L$, and we denote by $\pi^L$ the canonical projection
-\begin{eqnarray*} \pi^L:P \rightarrow L. \end{eqnarray*}
+\begin{align*} \pi^L:P \rightarrow L. \end{align*}
 
 Since $L$ normalizes $V$ we have an action by group automorphisms of $L$ on $V$ given by
-\begin{eqnarray} \label{laction} l \cdot v = lvl^{-1}, \end{eqnarray}
+\begin{align} \label{laction} l \cdot v = lvl^{-1}, \end{align}
 for $l \in L, v \in V$.
 
 Let $K$ be a linear algebraic group, $H$ a connected reductive algebraic group, and $\Gamma$ a finite group.
@@ -19,8 +19,8 @@ As pointed out in the Introduction, K\"ulshammer's second question has positive 
 Generally speaking, we will be concerned with homomorphisms from $K \rightarrow G$. Where possible, we will work in this general setting and state things in terms of $K$. When we want to work with finite $K$ or connected reductive $K$, we will replace $K$ with $\Gamma$ or $H$, respectively.
 
 \begin{definition} Let $X,Y$ be groups. Define
-\begin{eqnarray*} \mathrm{Hom}(X, Y) = \{ \rho : X \rightarrow Y \,|\, \rho \textrm{ is a homomorphism}\}. 
-\end{eqnarray*}
+\begin{align*} \mathrm{Hom}(X, Y) = \{ \rho : X \rightarrow Y \,|\, \rho \textrm{ is a homomorphism}\}. 
+\end{align*}
 \end{definition}
 
 For example, K\"ulshammer's second question as originally stated concerns $G$-conjugacy classes of $\mathrm{Hom}(\Gamma, G)$ and $\mathrm{Hom}(\Gamma_p, G)$, where $\Gamma_p$ is a Sylow $p$-subgroup of $\Gamma$.
@@ -38,38 +38,38 @@ The following general result shows that finiteness of $G$-conjugacy classes of $
 \end{lemma}
 \begin{proof}
 	Let $\rho, \varsigma \in R$ such that $\rho$ and $\varsigma$ lie in the same $G$-conjugacy class of $R$. Then there exists $g\in G$ such that
-	\begin{eqnarray} \label{gclass}
+	\begin{align} \label{gclass}
 		g \rho(x) g^{-1} = \varsigma(x),
-	\end{eqnarray}
+	\end{align}
 for all $x \in K$.
 	
 	Let $Q = gPg^{-1}$. By Equation \ref{gclass}, $\varsigma(K) \subset Q$. Hence $\varsigma(K) \subset P \cap Q$.
 	
 	Let $T$ be a maximal torus of $G$ contained in $P\cap Q$. Since $T$ and $gTg^{-1}$ are maximal tori of $Q$ they must be $Q$-conjugate, so there exists $q\in Q$ such that
-	\begin{eqnarray} \label{GPconj:conjT}
+	\begin{align} \label{GPconj:conjT}
 		qTq^{-1} = gTg^{-1}.
-	\end{eqnarray}
+	\end{align}
 	Then there exists $p\in P$ such that $q = gpg^{-1}$, and Equation \ref{GPconj:conjT} becomes
-	\begin{eqnarray*}
-		gpg^{-1}Tgp^{-1}g^{-1} &=& gTg^{-1} \\
-		\Rightarrow pg^{-1}Tgp^{-1} &=& T.
-	\end{eqnarray*}
+	\begin{align*}
+		gpg^{-1}Tgp^{-1}g^{-1} &= gTg^{-1} \\
+		\Rightarrow pg^{-1}Tgp^{-1} &= T.
+	\end{align*}
 	Therefore $gp^{-1} \in N_G(T)$. 
 
 	Fix a finite set $N \subset N_G(T)$ of coset representatives for the Weyl group $W = N_G(T)/T$ and let $n \in N, t \in T$ such that
-	\begin{eqnarray} \label{GPconj:g1}
+	\begin{align} \label{GPconj:g1}
 		gp^{-1} = nt.
-	\end{eqnarray}
-	Let \begin{eqnarray} \label{GPconj:g2} p' = p^{-1}t^{-1} \in P. \end{eqnarray} Then by Equations \ref{gclass}, \ref{GPconj:g1} and \ref{GPconj:g2},
-	\begin{eqnarray*}
-		\rho(x) &=& g^{-1} \varsigma(x) g\\
-		&=& (p'n^{-1}) \varsigma(x) np'^{-1},
-	\end{eqnarray*}
+	\end{align}
+	Let \begin{align} \label{GPconj:g2} p' = p^{-1}t^{-1} \in P. \end{align} Then by Equations \ref{gclass}, \ref{GPconj:g1} and \ref{GPconj:g2},
+	\begin{align*}
+		\rho(x) &= g^{-1} \varsigma(x) g\\
+		&= (p'n^{-1}) \varsigma(x) np'^{-1},
+	\end{align*}
 	for all $x \in K$.
 	This shows 
-	%\begin{eqnarray*}
+	%\begin{align*}
 	%	R \cap \left(G\cdot \varsigma \right) \subset \bigcup_{n \in N} P \cdot(n^{-1} \cdot \varsigma).
-	%\end{eqnarray*}
+	%\end{align*}
 	%
 	%That is,
 	that a $G$-conjugacy class of $R$ is contained in a union of at most $|N| = |W|$ $P$-conjugacy classes.
@@ -80,71 +80,71 @@ for all $x \in K$.
 
 \section{The 1-Cohomology}
 Let $\sigma \in \mathrm{Hom}(K, L)$. Then via the action of $L$ on $V$ given in Equation \ref{laction}, we have an action of $K$ on $V$ given by
-\begin{eqnarray} \label{haction} x \cdot v = \sigma(x) \cdot v, \end{eqnarray}
+\begin{align} \label{haction} x \cdot v = \sigma(x) \cdot v, \end{align}
 for $x \in K, v \in V$.
 
 
 \begin{definition} Let $\rho \in \mathrm{Hom}(K, P)$. We associate with $\rho$ the map $\rho^L \in \mathrm{Hom}(K, L)$ defined by
-\begin{eqnarray*} \rho^L = \pi^L \circ \rho, \end{eqnarray*}
+\begin{align*} \rho^L = \pi^L \circ \rho, \end{align*}
 and the map $\alpha_\rho: K \rightarrow V$ defined by
-\begin{eqnarray} \alpha_\rho(x) = \rho(x)\rho^L(x^{-1}). \end{eqnarray}
+\begin{align} \alpha_\rho(x) = \rho(x)\rho^L(x^{-1}). \end{align}
 \end{definition}
 
 Hence given a $\rho \in \mathrm{Hom}(K, P)$ we have an action of $K$ on $V$ via $\rho^L$ using Equation \ref{haction}, and a map $\alpha_\rho:K \rightarrow V$. We show that with this action the map $\alpha_\rho$ is a 1-cocycle from $K \rightarrow V$. To this end, let $x_1, x_2 \in K$.
 
 Then,
-\begin{eqnarray*} \alpha_\rho(x_1x_2) &=& \alpha_\rho(x_1x_2) \rho^L(x_1x_2) \left(\rho^L(x_1x_2)\right)^{-1} \\
-	&=& \rho(x_1x_2) \left(\rho^L(x_1x_2)\right)^{-1} \\
-	&=& \rho(x_1) \rho(x_2) \left(\rho^L(x_1x_2)\right)^{-1} \\
-	&=& \alpha_\rho(x_1) \rho^L(x_1) \alpha_\rho(x_2) \rho^L(x_2) \left(\rho^L(x_1x_2)\right)^{-1} \\
-	&=& \alpha_\rho(x_1) \rho^L(x_1) \alpha_\rho(x_2) \rho^L(x_1^{-1}) \rho^L(x_1) \rho^L(x_2) \left(\rho^L(x_1x_2)\right)^{-1} \\
-	&=& \alpha_\rho(x_1) \left(x_1 \cdot \alpha_\rho(x_2)\right). 
-\end{eqnarray*}
+\begin{align*} \alpha_\rho(x_1x_2) &= \alpha_\rho(x_1x_2) \rho^L(x_1x_2) \left(\rho^L(x_1x_2)\right)^{-1} \\
+	&= \rho(x_1x_2) \left(\rho^L(x_1x_2)\right)^{-1} \\
+	&= \rho(x_1) \rho(x_2) \left(\rho^L(x_1x_2)\right)^{-1} \\
+	&= \alpha_\rho(x_1) \rho^L(x_1) \alpha_\rho(x_2) \rho^L(x_2) \left(\rho^L(x_1x_2)\right)^{-1} \\
+	&= \alpha_\rho(x_1) \rho^L(x_1) \alpha_\rho(x_2) \rho^L(x_1^{-1}) \rho^L(x_1) \rho^L(x_2) \left(\rho^L(x_1x_2)\right)^{-1} \\
+	&= \alpha_\rho(x_1) \left(x_1 \cdot \alpha_\rho(x_2)\right). 
+\end{align*}
 
 Therefore $\alpha_\rho$ satisfies the 1-cocycle condition in Equation \ref{eqn:na_z}.
 
 \begin{definition} Let $\sigma \in \mathrm{Hom}(K, L)$. We denote by
-\begin{eqnarray*} Z^1(K, V)_\sigma \end{eqnarray*}
+\begin{align*} Z^1(K, V)_\sigma \end{align*}
 the set of 1-cocycles from $K \rightarrow V$ where $K$ acts on $V$ via $\sigma$.
 Likewise, denote by
-\begin{eqnarray*} H^1(K, V)_\sigma \end{eqnarray*}
+\begin{align*} H^1(K, V)_\sigma \end{align*}
 the 1-cohomology obtained from $Z^1(K, V)_\sigma$ under the equivalence relation in Equation \ref{eqn:h_equiv}. Denote by $\psi$ the canonical projection
-\begin{eqnarray*} \psi : Z^1(K, V)_\sigma \rightarrow H^1(K, V)_\sigma. \end{eqnarray*}
+\begin{align*} \psi : Z^1(K, V)_\sigma \rightarrow H^1(K, V)_\sigma. \end{align*}
 \end{definition} 
 
 \begin{definition} Let $\sigma \in \mathrm{Hom}(K, L)$ and define
-\begin{eqnarray*} \mathrm{Hom}(K, P)_\sigma = \{ \rho \in \mathrm{Hom}(K, P) \,|\, \rho^L = \sigma\}. \end{eqnarray*}
+\begin{align*} \mathrm{Hom}(K, P)_\sigma = \{ \rho \in \mathrm{Hom}(K, P) \,|\, \rho^L = \sigma\}. \end{align*}
 More generally, if $R \subset \mathrm{Hom}(K, P)$ define
-\begin{eqnarray*} R_\sigma = \{ \rho \in R \,|\, \rho^L = \sigma \}. \end{eqnarray*}
+\begin{align*} R_\sigma = \{ \rho \in R \,|\, \rho^L = \sigma \}. \end{align*}
 \end{definition}
 
 By construction, each $\rho \in \mathrm{Hom}(K, P)_\sigma$ yields a 1-cocycle $\alpha_\rho \in Z^1(K, V)_\sigma$.
 Conversely given a 1-cocycle $\alpha \in Z^1(K, V)_\sigma$ we can construct a map $\rho: K \rightarrow P$ defined by
-\begin{eqnarray*}
+\begin{align*}
 \rho(x) = \alpha(x)\sigma(x),
-\end{eqnarray*}
+\end{align*}
 for all $x \in K$. This construction is a homomorphism from $K \rightarrow P$. For take $x_1, x_2 \in K$, then
-\begin{eqnarray*}
-  \rho(x_1 x_2) &=& \alpha(x_1 x_2) \sigma(x_1 x_2) \\
-  &=& \alpha(x_1)(x_1 \cdot \alpha(x_2)) \sigma(x_1) \sigma(x_2) \\
-  &=& \alpha(x_1) \sigma(x_1) \alpha(x_2) \sigma(x_1)^{-1} \sigma(x_1) \sigma(x_2) \\
-  &=& \alpha(x_1) \sigma(x_1) \alpha(x_2) \sigma(x_2) \\
-  &=& \rho(x_1) \rho(x_2).
-\end{eqnarray*}
+\begin{align*}
+  \rho(x_1 x_2) &= \alpha(x_1 x_2) \sigma(x_1 x_2) \\
+  &= \alpha(x_1)(x_1 \cdot \alpha(x_2)) \sigma(x_1) \sigma(x_2) \\
+  &= \alpha(x_1) \sigma(x_1) \alpha(x_2) \sigma(x_1)^{-1} \sigma(x_1) \sigma(x_2) \\
+  &= \alpha(x_1) \sigma(x_1) \alpha(x_2) \sigma(x_2) \\
+  &= \rho(x_1) \rho(x_2).
+\end{align*}
 
 Hence the following Lemma.
 
 \begin{lemma}
   Let $\sigma \in \mathrm{Hom}(K, L)$. The map
-\begin{eqnarray*} z: Hom(K, P)_{\sigma} \rightarrow Z^1(K, V)_\sigma, \end{eqnarray*}
+\begin{align*} z: Hom(K, P)_{\sigma} \rightarrow Z^1(K, V)_\sigma, \end{align*}
 defined by
-\begin{eqnarray*} z(\rho)(x) = \rho(x)\sigma(x^{-1}), \end{eqnarray*}
+\begin{align*} z(\rho)(x) = \rho(x)\sigma(x^{-1}), \end{align*}
 for all $\rho \in \mathrm{Hom}(K, P)_\sigma$ and all $x \in K$, is a bijection.
 \label{lem:hom_z1}
 \end{lemma}
 \begin{proof}
 We have previously shown that $z$ is onto and has inverse defined by
-\begin{eqnarray*} z^{-1}(\alpha)(x) = \alpha(x)\sigma(x), \end{eqnarray*}
+\begin{align*} z^{-1}(\alpha)(x) = \alpha(x)\sigma(x), \end{align*}
 for all $\alpha \in Z^1(K, V)_\sigma$ and all $x \in K$, so there is nothing to prove.
 \end{proof}
 
@@ -152,271 +152,271 @@ for all $\alpha \in Z^1(K, V)_\sigma$ and all $x \in K$, so there is nothing to 
 
 Since $\mathrm{Hom}(K, P)_\sigma$ is stable under conjugation by elements of $V$ we can consider $V$-conjugacy classes of $\mathrm{Hom}(K, P)_\sigma$.
 \begin{definition} Denote by $\mathrm{Hom}(K, P)_\sigma / V$ the collection of $V$-conjugacy classes of $\mathrm{Hom}(K, P)_\sigma$, and denote by $\phi$ the canonical projection,
-\begin{eqnarray*} \phi : \mathrm{Hom}(K, P)_\sigma \rightarrow \mathrm{Hom}(K, P)_\sigma / V. \end{eqnarray*}
+\begin{align*} \phi : \mathrm{Hom}(K, P)_\sigma \rightarrow \mathrm{Hom}(K, P)_\sigma / V. \end{align*}
 \end{definition}
 
 In fact, we show that $z$ descends to give a bijection from $\mathrm{Hom}(K, P)_\sigma / V \rightarrow H^1(K, V)_\sigma$.
 
 \begin{lemma}
 For $\rho \in \mathrm{Hom}(K, P)_\sigma$, define
-\begin{eqnarray*}
+\begin{align*}
 h(V \cdot \rho) = \psi(z)(\rho).
-\end{eqnarray*}
+\end{align*}
 Then $h$ is a well-defined bijection from $\mathrm{Hom}(K, P)_\sigma / V \rightarrow H^1(K, P)_\sigma$. Moreover, the following diagram commutes:
-  \begin{eqnarray*}
+  \begin{align*}
     \xymatrix{
     Hom(K, P)_{\sigma} \ar[r]^z \ar[d]_\phi & Z^{1}(K, V)_\sigma \ar[d]^\psi \\
     Hom(K, P)_{\sigma}/V \ar[r]^h & H^{1}(K, V)_\sigma.
     }
-  \end{eqnarray*}
+  \end{align*}
   \label{lem:v_h1}
 \end{lemma}
 \begin{proof}  
 Let $\rho, \varsigma \in \mathrm{Hom}(K, P)_\sigma$ such that $\phi(\rho) = \phi(\varsigma)$. Then there exists $v \in V$ such that
-\begin{eqnarray*} \varsigma(x) =  v\rho(x)v^{-1}, \end{eqnarray*}
+\begin{align*} \varsigma(x) =  v\rho(x)v^{-1}, \end{align*}
 for all $x \in K$. Furthermore, for all $x \in K$
-\begin{eqnarray*}
-z(\varsigma)(x) % &=& \alpha_\varsigma(x) \\
-&=& \varsigma(x)\sigma(x^{-1}) \\
-&=& v \rho(x) v^{-1} \sigma(x^{-1}) \\
-&=& v \rho(x) \sigma(x^{-1})\sigma(x) v^{-1} \sigma(x^{-1}) \\
-&=& v \rho(x) \sigma(x^{-1}) \left(x \cdot v^{-1}\right) \\
-%&=& v \alpha_\rho(x) \left(x \cdot v^{-1}\right) \\
-&=& v \left(z(\rho)(x)\right) \left(x \cdot v^{-1}\right).
-\end{eqnarray*}
+\begin{align*}
+z(\varsigma)(x) % &= \alpha_\varsigma(x) \\
+&= \varsigma(x)\sigma(x^{-1}) \\
+&= v \rho(x) v^{-1} \sigma(x^{-1}) \\
+&= v \rho(x) \sigma(x^{-1})\sigma(x) v^{-1} \sigma(x^{-1}) \\
+&= v \rho(x) \sigma(x^{-1}) \left(x \cdot v^{-1}\right) \\
+%&= v \alpha_\rho(x) \left(x \cdot v^{-1}\right) \\
+&= v \left(z(\rho)(x)\right) \left(x \cdot v^{-1}\right).
+\end{align*}
 This shows that $z(\rho)$ and $z(\varsigma)$ satisfy the equivalence relation in Equation \ref{eqn:h_equiv}. Therefore $\psi\left(z(\rho)\right) = \psi\left(z(\varsigma)\right)$ and so $h$ is well-defined.
 
 Since $z$ and $\psi$ are onto, $h$ is onto. We show $h$ is one-to-one.
 
 Let $\alpha, \beta \in Z^1(K, V)_\sigma$ such that $\psi(\alpha) = \psi(\beta)$. Then there exists $v \in V$ such that
-\begin{eqnarray*} \beta(x) = v \alpha(x) \left(x \cdot v^{-1}\right), \end{eqnarray*}
+\begin{align*} \beta(x) = v \alpha(x) \left(x \cdot v^{-1}\right), \end{align*}
 for all $x \in K$. Then, for all $x \in K$
-\begin{eqnarray*}
+\begin{align*}
 z^{-1}(\beta)(x) 
-&=& \beta(x)\sigma(x) \\
-&=& v \alpha(x) \left(x \cdot v^{-1}\right) \sigma(x) \\
-&=& v \alpha(x) \sigma(x) v^{-1} \sigma(x^{-1}) \sigma(x) \\
-&=& v \alpha(x) \sigma(x) v^{-1} \\
-&=& v z^{-1}(\alpha)(x) v^{-1}.
-\end{eqnarray*}
+&= \beta(x)\sigma(x) \\
+&= v \alpha(x) \left(x \cdot v^{-1}\right) \sigma(x) \\
+&= v \alpha(x) \sigma(x) v^{-1} \sigma(x^{-1}) \sigma(x) \\
+&= v \alpha(x) \sigma(x) v^{-1} \\
+&= v z^{-1}(\alpha)(x) v^{-1}.
+\end{align*}
 This shows that $\phi\left(z^{-1}(\alpha)\right) = \phi\left(z^{-1}(\beta)\right)$ and therefore $h$ is one-to-one. This completes the proof.
 \end{proof}
 
 Let $q \in P$, and let $v \in V, l \in L$ such that $q = vl$. We can conjugate $\rho \in \mathrm{Hom}(K, P)_\sigma$ by $q$ to yield an element of $\mathrm{Hom}(K, P)_{l \cdot \sigma}$. For
-\begin{eqnarray*}% \left(p \cdot \rho(x)\right)^L
+\begin{align*}% \left(p \cdot \rho(x)\right)^L
 \pi^L\left(q \rho(x) q^{-1}\right)% \\
-&=& \pi^L\left(q\right) \pi^L\left(\rho(x)\right) \pi^L\left(q^{-1}\right) \\
-&=& l \sigma(x) l^{-1},
-\end{eqnarray*}
+&= \pi^L\left(q\right) \pi^L\left(\rho(x)\right) \pi^L\left(q^{-1}\right) \\
+&= l \sigma(x) l^{-1},
+\end{align*}
 for all $x \in K$. Hence $q \cdot \rho \in \mathrm{Hom}(K, P)_{l\cdot \sigma}$.
 
 Likewise, we can conjugate $\alpha \in Z^1(K, V)_\sigma$ by $q$ to yield an element of $Z^1(K, V)_{l \cdot \sigma}$, by which we mean the collection of morphisms from $K \rightarrow V$ which satisfy the 1-cocycle condition with the action of $K$ on $V$ defined by
-\begin{eqnarray*}
+\begin{align*}
 	x.v = l \sigma(x) l^{-1} v l \sigma(x^{-1}) l^{-1},
-\end{eqnarray*}
+\end{align*}
 for all $x \in K, v\in V$. Evidently $Z^1(K, V)_{l \cdot \sigma} = z\left(\mathrm{Hom}(K, P)_{l \cdot \sigma}\right)$.
 
 Furthermore, we have a map of 1-cohomomologies $H^1(K, V)_\sigma \rightarrow H^1(K, V)_{l \cdot \sigma}$ as in Lemma TODO.
 	For, let $K' = K$, $V' = V$ and let $f:K' \rightarrow K$ be defined
-	\begin{eqnarray*}
+	\begin{align*}
 		f = \mathrm{id}:K \rightarrow K,
-	\end{eqnarray*}
+	\end{align*}
 	and $g: V \rightarrow V'$ be defined
-	\begin{eqnarray*}
+	\begin{align*}
 		g(v) = lvl^{-1},
-	\end{eqnarray*}
+	\end{align*}
 	for all $v \in V$. Now we show that $g$ satisfies Equation TODO and apply the Lemma.
-	\begin{eqnarray*}
-		x . g(v) &=& x . \left(lvl^{-1}\right) \\
-		&=& l\sigma(x)l^{-1} \left(lvl^{-1}\right) l\sigma(x^{-1})l^{-1} \\
-		&=& l\sigma(x)v\sigma(x^{-1})l^{-1} \\
-		&=& l\left(x \cdot v \right)l^{-1} \\
-		&=& g\left(x \cdot v \right).
-	\end{eqnarray*}
+	\begin{align*}
+		x . g(v) &= x . \left(lvl^{-1}\right) \\
+		&= l\sigma(x)l^{-1} \left(lvl^{-1}\right) l\sigma(x^{-1})l^{-1} \\
+		&= l\sigma(x)v\sigma(x^{-1})l^{-1} \\
+		&= l\left(x \cdot v \right)l^{-1} \\
+		&= g\left(x \cdot v \right).
+	\end{align*}
 	Therefore conjugating $Z^1(K, V)$ by an element of $P$ gives rise to a map
-	\begin{eqnarray*}
+	\begin{align*}
 		Z^1(\zeta, \xi):Z^1(K, V)_\sigma \rightarrow Z^1(K, V)_{l \cdot \sigma},
-	\end{eqnarray*}
+	\end{align*}
 	which descends to give a map of 1-cohomologies
-	\begin{eqnarray*}
+	\begin{align*}
 		H^1(\zeta, \xi):H^1(K, V)_\sigma \rightarrow H^1(K, V)_{l \cdot \sigma}.
-	\end{eqnarray*}
+	\end{align*}
 
 	Evidently, if $l \in C_L\left(\sigma(K)\right)$ then $\mathrm{Hom}(K, P)_\sigma$ is stable under conjugation by $vl$ and $H^1(\zeta, \xi)$ maps $H^1(K, V)_{\sigma}$ into itself.
 
 	\begin{lemma} We have an action of $C_L(\sigma(K))$ on $\mathrm{Hom}(K, V)_\sigma / V$ defined by
-		\begin{eqnarray} \label{vcl.hom}
+		\begin{align} \label{vcl.hom}
 			(c \cdot \phi(\rho)) = \phi\left(c \cdot \rho \right),
-		\end{eqnarray}
+		\end{align}
 		for $c \in C_L(\sigma(K)), \rho \in \mathrm{Hom}(K, V)_\sigma, x \in K$. We also have an action of $C_L(\sigma(K))$ on $H^1(K, V)_\sigma$ defined by
-		\begin{eqnarray} \label{cl.h1}
+		\begin{align} \label{cl.h1}
 			\left(c \cdot \psi(\alpha)\right)
-			&=& \psi \left(c \cdot \alpha \right) \\
-			&=& H^1(\zeta, \xi)\left(\psi(\alpha)\right), 
-		\end{eqnarray}
+			&= \psi \left(c \cdot \alpha \right) \\
+			&= H^1(\zeta, \xi)\left(\psi(\alpha)\right), 
+		\end{align}
 		for $c \in C_L(\sigma(K)), \alpha \in Z^1(K, V)_\sigma$, where
-		\begin{eqnarray*}
+		\begin{align*}
 		\zeta = \mathrm{id}: K \rightarrow K,
-	\end{eqnarray*}
+	\end{align*}
 	and 
-	\begin{eqnarray*}
+	\begin{align*}
 		\xi(v) = cvc^{-1},
-	\end{eqnarray*}
+	\end{align*}
 	for $v \in V$.
 	\end{lemma}
 \begin{proof}
 	First we show Equation \ref{vcl.hom} is a well-defined map. Let $\rho, \varsigma \in \mathrm{Hom}(K, V)_\sigma$ such that $\phi(\rho) = \phi(\varsigma)$. Then there exists $v \in V$ such that
-	\begin{eqnarray*} \varsigma(x) = v\rho(x)v^{-1}, \end{eqnarray*}
+	\begin{align*} \varsigma(x) = v\rho(x)v^{-1}, \end{align*}
 		for all $x \in K$. Now let $c \in C_L(\sigma(K))$. Since $L$ normalizes $V$ there exists $w \in V$ such that $cv = wc$. Then
-		\begin{eqnarray*}
+		\begin{align*}
 			\phi \left(c \varsigma(x)c^{-1}\right) 
-			&=& \phi \left(cv \rho(x) v^{-1}c^{-1}\right) \\
-			&=& \phi \left(wc \rho(x) c^{-1}w^{-1}\right) \\
-			&=& \phi \left(c \rho(x) c^{-1}\right),
-		\end{eqnarray*}
+			&= \phi \left(cv \rho(x) v^{-1}c^{-1}\right) \\
+			&= \phi \left(wc \rho(x) c^{-1}w^{-1}\right) \\
+			&= \phi \left(c \rho(x) c^{-1}\right),
+		\end{align*}
 		for all $x \in K$. Hence Equation \ref{vcl.hom} is a well-defined map. It is clear that the group action axioms are satisfied, so Equation \ref{vcl.hom} defines an action of $C_L(\sigma(K))$ on $\mathrm{Hom}(K, P)_\sigma$.
 
 
 \end{proof}
 	\begin{definition}
 		Denote by $\mathrm{Hom}(K, P)_\sigma/VC_L(\sigma)$ the collection of $C_L(\sigma(K))$-conjugacy classes of $\mathrm{Hom}(K, P)_\sigma/V$, equivalently the collection of $VC_L(\sigma(K))$-conjugacy classes of $\mathrm{Hom}(K, P)_\sigma$, and denote by $\widetilde{\phi}$ the canonical projection,
-		\begin{eqnarray*}
+		\begin{align*}
 			\widetilde{\phi}: \mathrm{Hom}(K, P)_\sigma/V \rightarrow \mathrm{Hom}(K, P)_\sigma/VC_L(\sigma).
-		\end{eqnarray*}
+		\end{align*}
 		Similarly, denote by $H^1(K, V)_\sigma/C_L(\sigma)$ the set of orbits of $H^1(K, V)_\sigma$ under the action defined in Equation \ref{cl.h1}.
 	\end{definition}
 
 We show that the $Z(L)^\circ$-action on $Hom(\Gamma, P)_{\rho_L}$ and $Z^1(\Gamma, \rho_L, V)$ descends to give a $Z(L)^\circ$-action on $Hom(\Gamma, P)_{\rho_L}/V$ and $H^1(\Gamma, \rho_L, V)$, respectively. The actions will be well-defined as a consequence of the fact that $L$ normalizes $V$.
 
 Let $z \in Z(L)^\circ$ and $\overline{\sigma} \in Hom(\Gamma, P)_{\rho_L}/V$. We define the $Z(L)^\circ$-action on $Hom(\Gamma, P)_{\rho_L}/V$ so that the projection $Hom(\Gamma, P)_{\rho_L} \rightarrow Hom(\Gamma, P)_{\rho_L}/V$ is $Z(L)^\circ$-equivariant:
-\begin{eqnarray}
+\begin{align}
   z \cdot \overline{\sigma} = \overline{z \cdot \sigma}.
   \label{eqn:z_act_rv}
-\end{eqnarray}
+\end{align}
 
 Suppose $\overline{\sigma} = \overline{\tau}$. Then there is $v \in V$ such that $\sigma = v \cdot \tau \in Hom(\Gamma, P)_{\rho_L}$, and $v' \in V$ such that $zv = v' z$. Therefore
-\begin{eqnarray*}
-  \overline{z \cdot \sigma} &=& \overline{zv \cdot \tau} \\
-  &=& \overline{v' z \cdot \tau} \\
-  &=& \overline{z \cdot \tau}.
-\end{eqnarray*}
+\begin{align*}
+  \overline{z \cdot \sigma} &= \overline{zv \cdot \tau} \\
+  &= \overline{v' z \cdot \tau} \\
+  &= \overline{z \cdot \tau}.
+\end{align*}
 
 Hence the $Z(L)^\circ$-action on $Hom(\Gamma, P)_{\rho_L}/V$ in Equation \ref{eqn:z_act_rv} is well-defined.
 
 Similarly, the $Z(L)^\circ$-action on $H^1(\Gamma, \rho_L, V)$ is defined so that the projection to the 1-cohomology $Z^1(\Gamma, \rho_L, V) \rightarrow H^1(\Gamma, \rho_L, V)$ is $Z(L)^\circ$-equivariant:
-\begin{eqnarray}
+\begin{align}
   z \cdot [\alpha_\sigma] = [z \cdot \alpha_\sigma].
   \label{eqn:z_act_h}
-\end{eqnarray}
+\end{align}
 
 Suppose $[\alpha_\sigma] = [\alpha_\tau]$. Then there is $v \in V$ such that for all $\gamma \in \Gamma$,
-\begin{eqnarray*}
+\begin{align*}
   \alpha_\sigma(\gamma) = v \alpha_\tau(\gamma) (\gamma \cdot v^{-1}),
-\end{eqnarray*}
+\end{align*}
 and there is $v' \in V$ such that $zv = v' z$. Therefore, for all $\gamma \in \Gamma$
-\begin{eqnarray*}
+\begin{align*}
 	(z \cdot \alpha_\sigma)(\gamma) 
-  &=& z v \alpha_\tau(\gamma) (\gamma \cdot v^{-1}) z^{-1} \\
-  &=& z v \alpha_\tau(\gamma) \rho_L(\gamma) v^{-1} \rho_L(\gamma)^{-1} z^{-1} \\
-  &=& v' z \alpha_\tau(\gamma) z^{-1} \rho_L(\gamma) v'^{-1} \rho_L(\gamma)^{-1} \\
-  &=& v' z \alpha_\tau(\gamma) z^{-1} (\gamma \cdot v'^{-1}) \\
-  &=& v' ((z \cdot \alpha_\tau)(\gamma)) (\gamma \cdot v'^{-1}).
-\end{eqnarray*}
+  &= z v \alpha_\tau(\gamma) (\gamma \cdot v^{-1}) z^{-1} \\
+  &= z v \alpha_\tau(\gamma) \rho_L(\gamma) v^{-1} \rho_L(\gamma)^{-1} z^{-1} \\
+  &= v' z \alpha_\tau(\gamma) z^{-1} \rho_L(\gamma) v'^{-1} \rho_L(\gamma)^{-1} \\
+  &= v' z \alpha_\tau(\gamma) z^{-1} (\gamma \cdot v'^{-1}) \\
+  &= v' ((z \cdot \alpha_\tau)(\gamma)) (\gamma \cdot v'^{-1}).
+\end{align*}
 
 Therefore $[z \cdot \alpha_\sigma] = [z \cdot \alpha_\tau]$ and the $Z(L)^\circ$-action on $H^1(\Gamma, \rho_L, V)$ in Equation \ref{eqn:z_act_h} is well-defined.
 
 Since $h$ is $Z(L)^\circ$-equivariant, it follows that $\overline{h}$ is also:
-\begin{eqnarray*}
-  \overline{h}(z \cdot \overline{\sigma}) &=& \overline{h}(\overline{z \cdot \sigma}) \\
-  &=& [\alpha_{z \cdot \sigma}] \\
-  &=& [z \cdot \alpha_\sigma] \qquad (\textrm{Equation }\ref{eqn:h_z_equivar}) \\
-  &=& z \cdot [\alpha_\sigma] \\
-  &=& z \cdot \overline{h}(\overline{\sigma}).
-\end{eqnarray*}
+\begin{align*}
+  \overline{h}(z \cdot \overline{\sigma}) &= \overline{h}(\overline{z \cdot \sigma}) \\
+  &= [\alpha_{z \cdot \sigma}] \\
+  &= [z \cdot \alpha_\sigma] \qquad (\textrm{Equation }\ref{eqn:h_z_equivar}) \\
+  &= z \cdot [\alpha_\sigma] \\
+  &= z \cdot \overline{h}(\overline{\sigma}).
+\end{align*}
 
 In summary we have a well-defined $Z(L)^\circ$-action on $Hom(\Gamma, P)_{\rho_L}/V$ and $H^1(\Gamma, \rho_L, V)$, and a $Z(L)^\circ$-equivariant bijection 
-\begin{eqnarray*}
+\begin{align*}
   \overline{h}:Hom(\Gamma, P)_{\rho_L}/V \rightarrow H^1(\Gamma, \rho_L, V).
-\end{eqnarray*}
+\end{align*}
 
 Hence the following Lemma:
 
 \begin{lemma}
   The bijection $h: Hom(\Gamma, P)_{\rho_L} \rightarrow Z^1(\Gamma, \rho_L, V)$ gives rise to a bijection
-  \begin{eqnarray*}
+  \begin{align*}
     \tilde{h}: Hom(\Gamma, P)_{\rho_L}/VZ(L)^\circ \rightarrow H^1(\Gamma, \rho_L, V)/Z(L)^\circ.
-  \end{eqnarray*}
+  \end{align*}
   \label{lem:vzl_h1zl}
 \end{lemma}
 \begin{proof}
   It remains to show that $\left(Hom(\Gamma, P)_{\rho_L}/V\right)/Z(L)^\circ \simeq Hom(\Gamma, P)_{\rho_L}/VZ(L)^\circ$.
 
   Denote by $\pi_Z$ the canonical projection from $Hom(\Gamma, P)_{\rho_L}/V \rightarrow \left( Hom(\Gamma, P)_{\rho_L}/V \right)/Z(L)^\circ$ and $\tilde{\sigma}$ the element of $Hom(\Gamma, P)_{\rho_L}/VZ(L)^\circ$ with representative $\sigma \in Hom(\Gamma, P)_{\rho_L}$. We show that the map
-  \begin{eqnarray*}
+  \begin{align*}
     \varphi: (Hom(\Gamma, P)_{\rho_L}/V)/Z(L)^\circ \rightarrow Hom(\Gamma, P)_{\rho_L}/VZ(L)^\circ,
-  \end{eqnarray*}
+  \end{align*}
   defined by
-  \begin{eqnarray*}
+  \begin{align*}
     \varphi(\pi_Z(\overline{\sigma})) = \tilde{\sigma},
-  \end{eqnarray*}
+  \end{align*}
   is well defined and a bijection. To this end consider the following statements:
-  \begin{eqnarray*}
-    && \pi_Z(\overline{\sigma}) = \pi_Z(\overline{\tau}) \\
-    &\Longleftrightarrow& \textrm{there exists } z \in Z(L)^\circ \textrm{ such that } \overline{\sigma} = z \cdot \overline{\tau} \\
-    &\Longleftrightarrow& \textrm{there exists } z \in Z(L)^\circ \textrm{ such that } \overline{\sigma} = \overline{z \cdot \tau} \qquad (\textrm{Equation } \ref{eqn:z_act_h}) \\
-    &\Longleftrightarrow& \textrm{there exists } v \in V, z \in Z(L)^\circ \textrm{ such that } \sigma = v \cdot (z \cdot \tau) \\
-    &\Longleftrightarrow& \textrm{there exists } v \in V, z \in Z(L)^\circ \textrm{ such that } \sigma = (vz) \cdot \tau \\
-    &\Longleftrightarrow& \tilde{\sigma} = \tilde{\tau}.
-  \end{eqnarray*}
+  \begin{align*}
+    & \pi_Z(\overline{\sigma}) = \pi_Z(\overline{\tau}) \\
+    \Leftrightarrow& \textrm{there exists } z \in Z(L)^\circ \textrm{ such that } \overline{\sigma} = z \cdot \overline{\tau} \\
+    \Leftrightarrow& \textrm{there exists } z \in Z(L)^\circ \textrm{ such that } \overline{\sigma} = \overline{z \cdot \tau} \qquad (\textrm{Equation } \ref{eqn:z_act_h}) \\
+    \Leftrightarrow& \textrm{there exists } v \in V, z \in Z(L)^\circ \textrm{ such that } \sigma = v \cdot (z \cdot \tau) \\
+    \Leftrightarrow& \textrm{there exists } v \in V, z \in Z(L)^\circ \textrm{ such that } \sigma = (vz) \cdot \tau \\
+    \Leftrightarrow& \tilde{\sigma} = \tilde{\tau}.
+  \end{align*}
   Hence the forward direction implies that $\varphi$ is well-defined and the reverse direction implies that $\varphi$ is injective. Surjectivity follows from the fact that the canonical projections:
-  \begin{eqnarray*}
+  \begin{align*}
     Hom(\Gamma, P)_{\rho_L} \rightarrow Hom(\Gamma, P)_{\rho_L}/V \rightarrow (Hom(\Gamma, P)_{\rho_L}/V)/Z(L)^\circ, 
-  \end{eqnarray*}
+  \end{align*}
   and
-  \begin{eqnarray*}
+  \begin{align*}
     Hom(\Gamma, P)_{\rho_L} \rightarrow Hom(\Gamma, P)_{\rho_L}/VZ(L)^\circ, 
-  \end{eqnarray*}
+  \end{align*}
   are surjective.
 \end{proof}
 
 Let $R = \{ \rho_\lambda : \Gamma \rightarrow G \,|\, \lambda \in \Lambda \}$ be a collection of representations indexed by the set $\Lambda$. For $\rho \in R$, we say that a parabolic subgroup $P$ of $G$ is $\rho$-minimal if $P$ is minimal among the parabolic subgroups of $G$ that contain $\rho(\Gamma)$. For a parabolic subgroup $P < G$ define
-\begin{eqnarray*}
+\begin{align*}
   R_P = \{ \rho \in R \,|\, P \textrm{ is } \rho\textrm{-minimal} \}.
-\end{eqnarray*}
+\end{align*}
 
 Since there are only finitely many $G$-conjugacy classes of parabolic subgroups of $G$ (a standard result, e.g. \cite[Theorem 30.1(a)]{humphreys1975linear}), we can choose a finite set of representative parabolic subgroups $\{Q_i\}_{i = 0}^n$ of $G$ such that every parabolic subgroup $P < G$ is $G$-conjugate to precisely one $Q_i$. Every $\rho \in R$ has a minimal parabolic subgroup and so there exists an element of each $G$-conjugacy class in $R$ with minimal parabolic $Q_i$ for some $i$, hence
-\begin{eqnarray}
+\begin{align}
   G \cdot R = \bigcup_i G \cdot R_{Q_i}.
   \label{eqn:gr_gqi}
-\end{eqnarray}
+\end{align}
 
 Furthermore, fix a particular $Q_i$ with Levi subgroup $M_i$. Since $Q_i$ is minimal for each $\rho \in R_{Q_i}$, $\rho_{M_i}$ (Equation \ref{eqn:proj_l}) is $M_i$-irreducible \cite[Lemma 6.2(ii)]{bate2005geometric}.
 
 For an $M_i$-irreducible representation $\sigma : \Gamma \rightarrow M_i$ define
-\begin{eqnarray*}
+\begin{align*}
   R_{\sigma} = \{ \rho \in R_{Q_i} \,|\, \rho_{M_i} = \sigma \}.
-\end{eqnarray*}
+\end{align*}
 
 Since there are only finitely many $M_i$-conjugacy classes of $M_i$-irreducible representations $\Gamma \rightarrow M_i$ (Theorem \ref{thm:finiteGCR}), we can choose a finite set of representative $M_i$-irreducible representations $\{\sigma_i^j : \Gamma \rightarrow M_i \}_{j=0}^{n_i}$, such that every $M_i$-irreducible representation $\Gamma \rightarrow M_i$ is $M_i$-conjugate to precisely one $\sigma_i^j$. Every $M_i$-conjugacy class in $R_{Q_i}$ has an element $\rho$ such that $\rho_{M_i} = \sigma_i^j$ for some $j$, hence
-\begin{eqnarray*}
+\begin{align*}
   M_i \cdot R_{Q_i} = \bigcup_j M_i \cdot R_{\sigma_i^j},
-\end{eqnarray*}
+\end{align*}
 and therefore
-\begin{eqnarray}
+\begin{align}
   G \cdot R = \bigcup_i G \cdot R_{Q_i} = \bigcup_i \bigcup_j G \cdot R_{\sigma_i^j}.
   \label{eqn:gr_grsigma}
-\end{eqnarray}
+\end{align}
 
 Fix an $M_i$-irreducible representation $\sigma: \Gamma \rightarrow M_i$. We have a map from $Hom(\Gamma, P_i)_\sigma \rightarrow Hom(\Gamma, P_i)_\sigma / V_i Z(M_i)^\circ$ given by the canonical projection and a map $\tilde{h}: Hom(\Gamma, P_i)_\sigma / V_i Z(M_i)^\circ \rightarrow H^1(\Gamma, \sigma, V_i)/Z(M_i)^\circ$. We define the map
-\begin{eqnarray*}
+\begin{align*}
   \mathcal{H}: Hom(\Gamma, P_i)_\sigma \rightarrow H^1(\Gamma, \sigma, V_i) / Z(M_i)^\circ
-\end{eqnarray*}
+\end{align*}
 to be the composition of the above canonical projection with $\tilde{h}$. That is, $\mathcal{H}(\rho) = \tilde{h}(\tilde{\rho})$ for all $\rho \in Hom(\Gamma, P_i)_\sigma$, where $\tilde{\rho}$ is the projection of $\rho$ to $Hom(\Gamma, P_i)_\sigma / V_i Z(M_i)^\circ$.
 
 We note that each subset $R_{\sigma_i^j} \subset R_{Q_i}$ is a $VZ(M_i)^\circ$-stable subset of $Hom(\Gamma, Q_i)_{\sigma_i^j}$, so it makes sense to calculate
-\begin{eqnarray*}
+\begin{align*}
   \mathcal{H}(R_{\sigma_i^j}) \subset H^1(\Gamma, \sigma_i^j, V_i) / Z(M_i)^\circ.
-\end{eqnarray*}
+\end{align*}
 
 \begin{lemma}
   Let $R_P = \{\rho_\lambda:\Gamma\rightarrow P\,|\,\lambda\in\Lambda\}$ be a collection of representations such that $P$ $\rho_\lambda$-minimal for each $\rho_\lambda$.
@@ -426,9 +426,9 @@ We note that each subset $R_{\sigma_i^j} \subset R_{Q_i}$ is a $VZ(M_i)^\circ$-s
     \item[(i)] $R_P$ is contained in a finite union of $P$-conjugacy classes.
     \item[(ii)] For each irreducible representation $\sigma:\Gamma\rightarrow L$, $R_{\sigma}$ is contained in a finite union of $VZ(L)^\circ$-conjugacy classes.
     \item[(iii)] For each irreducible representation $\sigma:\Gamma\rightarrow L$,
-      \begin{eqnarray*}
+      \begin{align*}
 	\mathcal{H}(R_{\sigma}) \subset H^{1}(\Gamma,\sigma,V)/Z(L)^\circ
-      \end{eqnarray*}
+      \end{align*}
       is finite.
   \end{itemize}
   \label{lem:p_h1}
@@ -436,37 +436,37 @@ We note that each subset $R_{\sigma_i^j} \subset R_{Q_i}$ is a $VZ(M_i)^\circ$-s
 \begin{proof}\quad
 
   $(i) \Rightarrow (ii)$ Assume $R_P$ is contained in a finite union of $P$-conjugacy classes and fix an irreducible representation $\sigma : \Gamma \rightarrow L$. Then $R_{\sigma}$ is contained a finite union of $P$-conjugacy classes. Take $\rho \in R_{\sigma}$ and suppose that $p \cdot \rho \in R_{\sigma}$ for some $p \in P$. Writing $p = vl$ for some $v \in V$ and some $l \in L$, $(vl) \cdot \rho \in R_{\sigma}$ implies that in fact $l \in C_L(\sigma(\Gamma))$. Furthermore, since $\sigma$ is irreducible it follows that $C_L(\sigma(\Gamma))/Z(L)^\circ$ is finite \cite[Lemma 6.2]{martin2003reductive}, so we can choose a finite set $\{c_1, \ldots, c_m\}$ of coset representatives for $Z(L)^\circ\backslash C_L(\sigma(\Gamma))$. Therefore
-  \begin{eqnarray*}
+  \begin{align*}
     R_{\sigma} \cap (P \cdot \rho) \subset \bigcup_{i = 1}^{m} VZ(L)^\circ \cdot \left( c_i \cdot \rho \right).
-  \end{eqnarray*}
+  \end{align*}
   Since $R_{\sigma}$ is contained in a finite number of $P$-conjugacy classes, we are done.
 
   $(ii) \Rightarrow (i)$ Assume that for each irreducible representation $\sigma : \Gamma \rightarrow L$, $R_{\sigma}$ is contained in a finite union of $VZ(L)^\circ$-conjugacy classes, so for each $\sigma$ there is a finite set $\Phi^\sigma \subset R_P$ such that
-  \begin{eqnarray*}
+  \begin{align*}
     R_\sigma \subset \bigcup_{\phi \in \Phi^\sigma} VZ(L)^\circ \cdot \phi.
-  \end{eqnarray*}
+  \end{align*}
   We do no harm to assume that $R_P = P \cdot R_P$. Denote by $Hom(\Gamma, L)_{irr}$ the collection of all irreducible representations from $\Gamma \rightarrow L$. By Theorem \ref{thm:finiteGCR} we can choose a finite set $\Sigma \subset Hom(\Gamma, L)_{irr}$ such that
-  \begin{eqnarray*}
+  \begin{align*}
     Hom(\Gamma, L)_{irr} = \bigcup_{\sigma \in \Sigma} L \cdot \sigma.
-  \end{eqnarray*}
+  \end{align*}
   For each $\sigma \in \Sigma$ define 
-  \begin{eqnarray*}
+  \begin{align*}
     R_{L \cdot \sigma} = \bigcup_{l \in L} R_{l \cdot \sigma}.
-  \end{eqnarray*}
+  \end{align*}
   Since $P$ is minimal for each $\rho \in R_P$, $\rho_L$ is $L$-irreducible. Hence
-  \begin{eqnarray*}
+  \begin{align*}
     R_P = \bigcup_{\sigma \in \Sigma} R_{L \cdot \sigma}.
-  \end{eqnarray*}
+  \end{align*}
 
   Suppose $\rho \in R_{L \cdot \sigma}$. Then there exists $l \in L$ such that $\rho_L = l \cdot \sigma$, so that $l^{-1} \cdot \rho_L = \sigma$. Since we assumed $R_P = P \cdot R_P$, $l^{-1} \cdot \rho \in R_P$ and therefore $l^{-1} \cdot \rho \in R_\sigma$. Conversely if $\rho \in L \cdot R_\sigma$ then $l \cdot \rho \in R_{L \cdot \sigma}$ for some $l \in L$. Hence
-  \begin{eqnarray*}
+  \begin{align*}
     R_{L \cdot \sigma} = L \cdot R_\sigma.
-  \end{eqnarray*}
+  \end{align*}
 
   Therefore
-  \begin{eqnarray*}
+  \begin{align*}
     R_P = \bigcup_{\sigma \in \Sigma} L \cdot R_\sigma \subset \bigcup_{\sigma \in \Sigma}\bigcup_{\phi \in \Phi^\sigma} LVZ(L)^\circ \cdot \phi = \bigcup_{\sigma \in \Sigma}\bigcup_{\phi \in \Phi^\sigma} P \cdot \phi.
-  \end{eqnarray*}
+  \end{align*}
 
   $(ii) \Leftrightarrow (iii)$ This follows directly from the fact that $\tilde{h}$ is a bijection (Lemma \ref{lem:vzl_h1zl}).
 
@@ -484,44 +484,44 @@ We are now ready to state precisely the connection with $G$-conjugacy classes of
   Assume $R$ is a finite union of $G$-conjugacy classes. Then for each $Q_i$, $R_{Q_i}$ is contained in a finite union of $G$-conjugacy classes. By Lemma \ref{lem:GPconj} $R_{Q_i}$ is contained in a finite union of $Q_i$-conjugacy classes, and by Lemma \ref{lem:p_h1} $\tilde{h}(R_{\sigma_i^j}/VZ(M_i)^\circ)$ is finite for each $j$.
 
   Conversely, suppose that for each $i$, for each $j$, $\tilde{h}(R_{\sigma_i^j}/VZ(M_i)^\circ)$ is finite. Then by Lemma \ref{lem:p_h1}, each $R_{Q_i}$ is contained in a finite union of $Q_i$-conjugacy classes. Since
-  \begin{eqnarray*}
+  \begin{align*}
     G \cdot R = \bigcup_i G \cdot R_{Q_i} \qquad (\textrm{Equation }\ref{eqn:gr_gqi})
-  \end{eqnarray*}
+  \end{align*}
   we are done.
 \end{proof}
 
 \begin{theorem}
   Let $G$ be an algebraic group over an algebraically closed field $k$ of characteristic $p$, $\Gamma$ a finite group and $\Gamma_p < \Gamma$ a Sylow $p$-subgroup. Define $M_i < Q_i < G$ and $\sigma_i^{j}:\Gamma \rightarrow_{irr} M_{i}$ as above. Let $\iota$ be the inclusion map $\iota : \Gamma_p \rightarrow \Gamma$ and for each $i,j$ let $Z^1(\iota), H^1(\iota)$ be the corresponding 1-cocycle and 1-cohomology restriction maps
-  \begin{eqnarray*}
+  \begin{align*}
     Z^1(\iota) : Z^1(\Gamma, \sigma_i^j, V_i) \rightarrow Z^1(\Gamma_p, \sigma_i^j, V_i),
-  \end{eqnarray*}
+  \end{align*}
   and
-  \begin{eqnarray*}
+  \begin{align*}
     H^1(\iota) : H^1(\Gamma, \sigma_i^j, V_i) \rightarrow H^1(\Gamma_p, \sigma_i^j, V_i).
-  \end{eqnarray*}
+  \end{align*}
   
   The answer to K\"ulshammer's second question for $\Gamma, G$ is positive only if $H^1(\iota)$ is injective for each $i,j$.
   \label{thm:k2_h1}
 \end{theorem}
 \begin{proof}
   Fix a representation $\rho_0: \Gamma_p \rightarrow G$ and let $X = G \cdot \rho_0$. For a map $\varphi$ from $\Gamma$ denote by $\varphi^p$ its restriction to $\Gamma_p$. Let
-  \begin{eqnarray*}
-    R &=&  \{ \rho \in \textrm{Hom}(\Gamma, G) \,|\, \rho^p \in X\}, \\
-    R_{Q_i} &=&  \{ \rho \in R \,|\, Q_i \textrm{ is } \rho \textrm{-minimal} \}, \\
-    R_{\sigma_i^j} &=&  \{ \rho \in R_{Q_i} \,|\, \rho_{M_i} = \sigma_i^j \},
-  \end{eqnarray*}
+  \begin{align*}
+    R &=  \{ \rho \in \textrm{Hom}(\Gamma, G) \,|\, \rho^p \in X\}, \\
+    R_{Q_i} &=  \{ \rho \in R \,|\, Q_i \textrm{ is } \rho \textrm{-minimal} \}, \\
+    R_{\sigma_i^j} &=  \{ \rho \in R_{Q_i} \,|\, \rho_{M_i} = \sigma_i^j \},
+  \end{align*}
   as done previously.
   
   Fix $g \in G$ and consider the set $R_j^p$ defined
-  \begin{eqnarray*}
+  \begin{align*}
     R_j^p = \{ \rho \in R_{\sigma_i^j} \,|\, \rho^p = g \cdot \rho_0 \}.
-  \end{eqnarray*}
+  \end{align*}
 
   Then
-  \begin{eqnarray}
+  \begin{align}
     R_{\sigma_i^j} \subset G \cdot R_j^p.
     \label{eqn:rs_grp}
-  \end{eqnarray}
+  \end{align}
 
   Assume $H^1(\iota)$ is injective. Since $Z^1(\iota)(h(\rho))$ is equal to a fixed 1-cocycle for all $\rho \in R_j^p$ the image of $R_j^p$ in $H^1(\Gamma_p, \sigma_i^j, V_i)$ is finite, hence the image of $R_j^p$ in $H^1(\Gamma, \sigma_i^j, V_i)$ is finite. 
   
@@ -533,93 +533,93 @@ We are now ready to state precisely the connection with $G$-conjugacy classes of
 \section{A Non-Reductive Counterexample}
 In \cite{slodowy1997two} a counterexample to K\"ulshammer's second question is presented for a closed field $k$ of characteristic $p = 2$ and a non-reductive algebraic group $G$.
 \begin{example} Let $Q$ be the algebraic group isomorphic to the affine space $\mathbf{A}^3$ with the group multiplication law:
-\begin{eqnarray*}
+\begin{align*}
 	\left(\begin{matrix} u_1 \\ u_2 \\ u_3 \end{matrix}\right) \times
-	\left(\begin{matrix} v_1 \\ v_2 \\ v_3 \end{matrix}\right) &=&
+	\left(\begin{matrix} v_1 \\ v_2 \\ v_3 \end{matrix}\right) &=
 	\left(\begin{matrix} u_1 + v_1 \\ u_2 + v_2 \\ u_3 + v_3 + u_1v_1 + u_2v_2 + u_1v_2 \end{matrix}\right).
-\end{eqnarray*}
+\end{align*}
 Let $\Gamma = \langle \sigma, \tau | \sigma^3 = \tau^2 = 1, \tau\sigma\tau = \sigma^2 \rangle$ and $\Gamma_2 = \langle \tau \rangle$, a Sylow 2-subgroup of $\Gamma$. $\Gamma$ acts on $Q$ via
-\begin{eqnarray*}
-	\tau \cdot \left(\begin{matrix} u_1 \\ u_2 \\ u_3 \end{matrix} \right) &=&
+\begin{align*}
+	\tau \cdot \left(\begin{matrix} u_1 \\ u_2 \\ u_3 \end{matrix} \right) &=
 	\left(\begin{matrix} u_2 \\ u_1 \\ u_3 + u_1^2 + u_2^2 + u_1u_2 \end{matrix} \right) \\
-	\sigma \cdot \left(\begin{matrix} u_1 \\ u_2 \\ u_3 \end{matrix} \right) &=&
+	\sigma \cdot \left(\begin{matrix} u_1 \\ u_2 \\ u_3 \end{matrix} \right) &=
 	\left(\begin{matrix} u_2 \\ u_1 + u_2 \\ u_3 \end{matrix} \right).
-\end{eqnarray*}
+\end{align*}
 Let $G = Q \rtimes \Gamma$ and fix the representation $\rho:\Gamma_2 \rightarrow G$ defined by the natural inclusion $\Gamma_2 \rightarrow \Gamma \rightarrow G$. Then there are infinitely many pairwise $G$-conjugate classes of extensions of $\rho$ to representations of $\Gamma$ into $G$ \cite[Appendix]{slodowy1997two}.
 \label{eg:non_red}
 \end{example}
 \begin{proof}
 	Our proof will be way of a 1-cohomology calculation. Choose a 1-cocycle $\alpha \in Z^1(\Gamma, Q)$ such that $\alpha|_{\langle \sigma \rangle} = 1$. Let
-	\begin{eqnarray*}
+	\begin{align*}
 		\alpha(\tau) = \left(\begin{matrix} u_1 \\ u_2 \\ u_3 \end{matrix} \right),
-	\end{eqnarray*}
+	\end{align*}
 	for some $u_1, u_2, u_3 \in k$. Since $\tau$ is an involution we have
-	\begin{eqnarray*}
-		1 = \alpha(\tau^2) &=& \alpha(\tau) \times \tau\cdot\alpha(\tau)\\
-		&=& \left(\begin{matrix} u_1 \\ u_2 \\ u_3\end{matrix} \right) \times 
+	\begin{align*}
+		1 = \alpha(\tau^2) &= \alpha(\tau) \times \tau\cdot\alpha(\tau)\\
+		&= \left(\begin{matrix} u_1 \\ u_2 \\ u_3\end{matrix} \right) \times 
 		\left(\begin{matrix} u_2 \\ u_1 \\ u_3 + u_1^2 + u_2^2 + u_1u_2\end{matrix} \right) \\
-		&=& \left(\begin{matrix} u_1 + u_2 \\ u_1 + u_2 \\ 2u_3 + 2u_1^2 + u_2^2 + 3u_1u_2\end{matrix} \right)\\
-		&=& \left(\begin{matrix} u_1 + u_2 \\ u_1 + u_2 \\ u_2^2 + u_1u_2\end{matrix} \right).
-	\end{eqnarray*}
+		&= \left(\begin{matrix} u_1 + u_2 \\ u_1 + u_2 \\ 2u_3 + 2u_1^2 + u_2^2 + 3u_1u_2\end{matrix} \right)\\
+		&= \left(\begin{matrix} u_1 + u_2 \\ u_1 + u_2 \\ u_2^2 + u_1u_2\end{matrix} \right).
+	\end{align*}
 	This shows $u_1 = u_2$, so
-	\begin{eqnarray*}
+	\begin{align*}
 		\alpha(\tau) = \left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right).
-	\end{eqnarray*}
+	\end{align*}
 	Furthermore, as $\tau\sigma\tau = \sigma^2$ we obtain
-	\begin{eqnarray*}
-		1 = \alpha(\sigma^2) &=& \alpha(\tau\sigma\tau) \\
-		&=& \alpha(\tau) \times \tau\cdot\alpha(\sigma\tau)\\
-		&=& \alpha(\tau) \times \tau\cdot\alpha(\sigma) \times \tau\sigma\cdot\alpha(\tau) \\
-		&=& \alpha(\tau) \times \tau\sigma\cdot\alpha(\tau) \\
-		&=& \left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right) \times
+	\begin{align*}
+		1 = \alpha(\sigma^2) &= \alpha(\tau\sigma\tau) \\
+		&= \alpha(\tau) \times \tau\cdot\alpha(\sigma\tau)\\
+		&= \alpha(\tau) \times \tau\cdot\alpha(\sigma) \times \tau\sigma\cdot\alpha(\tau) \\
+		&= \alpha(\tau) \times \tau\sigma\cdot\alpha(\tau) \\
+		&= \left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right) \times
 		\tau\sigma\cdot\left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right)\\
-		&=& \left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right) \times
+		&= \left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right) \times
 		\tau\cdot\left(\begin{matrix} u_1 \\ 0 \\ u_3\end{matrix} \right)\\
-		&=& \left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right) \times
+		&= \left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right) \times
 		\left(\begin{matrix} 0 \\ u_1 \\ u_3 + u_1^2\end{matrix} \right)\\
-		&=& \left(\begin{matrix} u_1 \\ 0 \\ 2u_3 + 3u_1^2\end{matrix} \right)\\
-		&=& \left(\begin{matrix} u_1 \\ 0 \\ u_1^2\end{matrix} \right).
-	\end{eqnarray*}
+		&= \left(\begin{matrix} u_1 \\ 0 \\ 2u_3 + 3u_1^2\end{matrix} \right)\\
+		&= \left(\begin{matrix} u_1 \\ 0 \\ u_1^2\end{matrix} \right).
+	\end{align*}
 	Therefore $u_1 = 0$. Hence a typical 1-cocycle that is trivial on $\langle \sigma \rangle$ satisfies
-	\begin{eqnarray*}
+	\begin{align*}
 		\alpha_u(\tau) = \left(\begin{matrix} 0 \\ 0 \\ u \end{matrix} \right),\qquad (u\in k).
-	\end{eqnarray*}
+	\end{align*}
 	This is a necessary condition. To show it is sufficient one can apply \cite[Proposition 2]{martin2004nonab} which involves looking at the presentation of $\Gamma$.
 	Now we calculate the class $[\alpha_u] \in H^1(\Gamma, Q)$. Suppose $[\alpha_v] = [\alpha_u]$. Then
 	there is a $q\in Q$ fixed under the action of $\sigma$, that is of the form
-	\begin{eqnarray*}
+	\begin{align*}
 		q = \left(\begin{matrix} 0 \\ 0 \\ \lambda\end{matrix}\right),
-	\end{eqnarray*}
+	\end{align*}
 	such that $\alpha_v(\gamma) = q\times\alpha_u(\gamma)\times\gamma\cdot q^{-1}$. In particular, for $\gamma = \tau$
-	\begin{eqnarray*}
-		\left(\begin{matrix} 0 \\ 0 \\ v\end{matrix}\right) &=&
+	\begin{align*}
+		\left(\begin{matrix} 0 \\ 0 \\ v\end{matrix}\right) &=
 		\left(\begin{matrix} 0 \\ 0 \\ \lambda\end{matrix}\right) \times
 		\left(\begin{matrix} 0 \\ 0 \\ u\end{matrix}\right) \times
 		\tau\cdot\left(\begin{matrix} 0 \\ 0 \\ \lambda\end{matrix}\right)\\
-		&=&
+		&=
 		\left(\begin{matrix} 0 \\ 0 \\ \lambda\end{matrix}\right) \times
 		\left(\begin{matrix} 0 \\ 0 \\ u\end{matrix}\right) \times
 		\left(\begin{matrix} 0 \\ 0 \\ \lambda\end{matrix}\right)\\
-		&=&
+		&=
 		\left(\begin{matrix} 0 \\ 0 \\ \lambda\end{matrix}\right) \times
 		\left(\begin{matrix} 0 \\ 0 \\ u + \lambda\end{matrix}\right) \\
-		&=&
+		&=
 		\left(\begin{matrix} 0 \\ 0 \\ u\end{matrix}\right).
-	\end{eqnarray*}
+	\end{align*}
 	Hence only if $u=v$ are two 1-cocycles of the particular form in the same class, and therefore $H^1(\Gamma, Q)$ is infinite.
 \end{proof}
 
 In view of Theorem \ref{thm:k2_h1} one could show that the map $H^1(\Gamma, Q) \rightarrow H^1(\Gamma_p, Q)$ is not injective. Furthermore, it is natural to ask whether Example \ref{eg:non_red} leads to a reductive counterexample to K\"ulshammer's second question, although we can quickly verify that the answer is ``not immediately''. For suppose there was a reductive group with unipotent radical \emph{containing} the multiplication law:
-\begin{eqnarray*}
-	&&\ldots \epsilon_\alpha(u_\alpha) \ldots \epsilon_\beta(u_\beta) \ldots \epsilon_\gamma(u_\gamma) \times
+\begin{align*}
+	&\ldots \epsilon_\alpha(u_\alpha) \ldots \epsilon_\beta(u_\beta) \ldots \epsilon_\gamma(u_\gamma) \times
 	\ldots \epsilon_\alpha(v_\alpha) \ldots \epsilon_\beta(v_\beta) \ldots \epsilon_\gamma(v_\gamma)\\
-	&&=
+	&=
 	\ldots \epsilon_\alpha(u_\alpha + v_\alpha) \ldots \epsilon_\beta(u_\beta + v_\beta) \ldots \epsilon_\gamma(u_\gamma + v_\gamma + u_\alpha v_\alpha + u_\beta v_\beta + u_\alpha v_\beta).
-\end{eqnarray*}
+\end{align*}
 Then setting $u_\delta = v_\delta = 0$ whenever $\delta \neq \alpha$ gives
-\begin{eqnarray*}
-	\epsilon_\alpha(u_\alpha) \times \epsilon_\alpha(v_\alpha) &=& \epsilon_\alpha(u_\alpha + v_\alpha) \epsilon_\gamma(u_\alpha v_\alpha),
-\end{eqnarray*}
+\begin{align*}
+	\epsilon_\alpha(u_\alpha) \times \epsilon_\alpha(v_\alpha) &= \epsilon_\alpha(u_\alpha + v_\alpha) \epsilon_\gamma(u_\alpha v_\alpha),
+\end{align*}
 which is absurd.
 
 
