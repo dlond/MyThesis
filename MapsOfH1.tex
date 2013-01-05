@@ -1,19 +1,79 @@
 \documentclass[12pt, a4paper]{amsart}
 \usepackage{amscd, amsfonts, amssymb}
+
+\newtheorem{prop}{Proposition}
+\newtheorem{defn}{Definition}
+
+\usepackage{parskip}
+
 \usepackage{mathrsfs}
 \usepackage[all]{xy}
 
-\usepackage[landscape]{geometry}
+%\usepackage[landscape]{geometry}
 
 \begin{document}
 
 \title{Maps of 1-Cohomologies}
 \maketitle
-\begin{displaymath}
-\xymatrix{
-Z^1(K, V)_\sigma \ar[d]_{\psi} \ar[r]^{Z^1(f, g)}             & Z^1(K', V')_{\sigma} \\
-H^1(K, V)_\sigma \ar[d]_{\widetilde{\psi}} \ar[r]^{H^1(f, g)} & H^1(K', V')_{\sigma} \ar[d]^{\widetilde{\psi^\iota}} & \Hom{\Gamma'}{P}{\sigma^\iota}/V \ar[l]_{h^\iota} \ar[d]_{\widetilde{\phi^\iota}} & \cdots \ar@{->}[l] \\
-\cdots & \ar@{_{(}-}[l] \Hom{\Gamma}{P}{\sigma}/VC_L(\sigma) \ar[r]^{\widetilde{h}} & H^1(\Gamma, V)_\sigma/C_L(\sigma) \ar[r]^{\widetilde{H^1}(\iota)} & H^1(\Gamma', V)_{\sigma^\iota}/C_L(\sigma) & \Hom{\Gamma'}{P}{\sigma^\iota}/VC_L(\sigma) \ar[l]_{\widetilde{h^\iota}} & \cdots \ar@{->}[l] \\
-}
-\end{displaymath}
+\begin{prop}
+	Let $f:K'\rightarrow K$, $K'$ an algebraic group also acting on $V$ by group automorphisms. Then $\alpha \circ f$ is a 1-cocycle from $K' \rightarrow V$.
+\end{prop}
+\begin{proof}
+\end{proof}
+
+The map $\zeta:Z^1(K, V) \rightarrow Z^1(K', V)$ defined by
+\begin{eqnarray*}
+	\zeta(\alpha) &=& \alpha \circ f
+\end{eqnarray*}
+is a map of 1-cocycles.
+
+\begin{prop}
+	Let $g:V \rightarrow V'$ be an equivariant homomorphism. Then $g \circ \alpha$ is a 1-cocycle from $K \rightarrow V'$.
+\end{prop}
+\begin{proof}
+\end{proof}
+
+The map $\xi:Z^1(K, V) \rightarrow Z^1(K, V')$ defined by
+\begin{eqnarray*}
+	\xi(\alpha) = g \circ \alpha
+\end{eqnarray*}
+is a map of 1-cocycles. More generally, we have the following Definition.
+
+\begin{defn}
+	Define the map
+	\begin{eqnarray*}
+		Z^1(\zeta, \xi):Z^1(K, V) \rightarrow Z^1(K', V')
+	\end{eqnarray*}
+	by
+	\begin{eqnarray*}
+		Z^1(\zeta, \xi)(\alpha) = g \circ \alpha \circ f.
+	\end{eqnarray*}
+\end{defn}
+
+Then, for example,
+\begin{eqnarray*}
+	Z^1(\zeta, \mathrm{id}) = \zeta, && \textrm{where }\mathrm{id}:V\rightarrow V \textrm{ is the identity map, and} \\
+	Z^1(\mathrm{id}, \xi) = \xi,     && \textrm{where }\mathrm{id}:H\rightarrow H \textrm{ is the identity map}.
+\end{eqnarray*}
+
+
+\begin{prop}
+	The map $Z^1(\zeta, \xi)$ descends to give a well-defined map
+	\begin{eqnarray*}
+		H^1(\zeta, \xi):H^1(K, V) \rightarrow H^1(K', V')
+	\end{eqnarray*}
+	of 1-cohomologies, defined by
+	\begin{eqnarray*}
+		H^1(\zeta, \xi)\left(\psi(\alpha)\right) = \left(\psi' \circ Z^1(\zeta, \xi)\right)(\alpha),
+	\end{eqnarray*}
+	where $\psi:Z^1(K, V)\rightarrow H^1(K, V)$ and $\psi':Z^1(K', V')\rightarrow H^1(K, V)$ are the canonical projections. Moreover, the following diagram commutes.
+	\begin{eqnarray*}
+	\xymatrix{
+	Z^1(K, V) \ar[d]_{\psi} \ar[r]^{Z^1(\zeta, \xi)} & Z^1(K', V') \ar[d]^{\psi'} \\
+	H^1(K, V)               \ar[r]^{H^1(\zeta, \xi)} & H^1(K', V') \\
+	}
+	\end{eqnarray*}
+\end{prop}
+\begin{proof}
+\end{proof}
 \end{document}
