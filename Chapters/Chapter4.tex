@@ -202,33 +202,54 @@ z^{-1}(\beta)(x)
 This shows that $\phi\left(z^{-1}(\alpha)\right) = \phi\left(z^{-1}(\beta)\right)$ and therefore $h$ is one-to-one. This completes the proof.
 \end{proof}
 
-Let $p \in P$, and let $v \in V, l \in L$ such that $p = vl$. We can conjugate $\rho \in \mathrm{Hom}(K, P)_\sigma$ by $p$ to yield an element of $\mathrm{Hom}(K, P)_{l \cdot \sigma}$. For
+Let $q \in P$, and let $v \in V, l \in L$ such that $q = vl$. We can conjugate $\rho \in \mathrm{Hom}(K, P)_\sigma$ by $q$ to yield an element of $\mathrm{Hom}(K, P)_{l \cdot \sigma}$. For
 \begin{eqnarray*}% \left(p \cdot \rho(x)\right)^L
-\pi^L\left(p \rho(x) p^{-1}\right)% \\
-&=& \pi^L\left(p\right) \pi^L\left(\rho(x)\right) \pi^L\left(p^{-1}\right) \\
+\pi^L\left(q \rho(x) q^{-1}\right)% \\
+&=& \pi^L\left(q\right) \pi^L\left(\rho(x)\right) \pi^L\left(q^{-1}\right) \\
 &=& l \sigma(x) l^{-1},
 \end{eqnarray*}
-for all $x \in K$. Likewise, conjugating $\alpha \in Z^1(K, V)_\sigma$ by $p$ yields an element of $Z^1(K, V)_{l \cdot \sigma}$. In fact, we have a map $V \rightarrow V$ defined by
-\begin{eqnarray*} v \mapsto lvl^{-1}, \end{eqnarray*}
-for all $v \in V$ which yields a map of 1-cohomomologies $H^1(K, V)_\sigma \rightarrow H^1(K, V)_{l \cdot \sigma}$ as in Definition TODO.
-$\mathcal{H}(f, g):H^1(K, V) \rightarrow H^1(K', V')$.
-Furthermore, if $l \in C_L\left(\sigma(K)\right)$ then $H^1(K, V)_\sigma$ and $H^1(K, V)_{l \cdot \sigma}$ are equivalent as 1-cohomologies
+for all $x \in K$. Hence $q \cdot \rho \in \mathrm{Hom}(K, P)_{l\cdot \sigma}$.
+
+Likewise, we can conjugate $\alpha \in Z^1(K, V)_\sigma$ by $q$ to yield an element of $Z^1(K, V)_{l \cdot \sigma}$, by which we mean the collection of morphisms from $K \rightarrow V$ which satisfy the 1-cocycle condition with the action of $K$ on $V$ defined by
 \begin{eqnarray*}
-  (z \cdot \sigma) (\gamma) &=& z \sigma(\gamma) z^{-1} \\
-  (z \cdot \alpha_\sigma) (\gamma) &=&  z \alpha_\sigma(\gamma) z^{-1},
+	x.v = l \sigma(x) l^{-1} v l \sigma(x^{-1}) l^{-1},
 \end{eqnarray*}
-and $h$ is $Z(L)^\circ$-equivariant:
-\begin{eqnarray*}
-  h(z \cdot \sigma)(\gamma) &=&  z \sigma(\gamma) z^{-1} \rho_L(\gamma)^{-1} \\
-  &=& z \sigma(\gamma) \rho_L(\gamma)^{-1} z^{-1} \\
-  &=& (z \cdot h(\sigma))(\gamma),
-\end{eqnarray*}
-that is
-\begin{eqnarray}
-  \alpha_{z \cdot \sigma} &=& z \cdot \alpha_\sigma,
-  \label{eqn:h_z_equivar}
-\end{eqnarray}
-for all $\alpha_\sigma \in Z^1(\Gamma, \rho_L, V)$ and all $z \in Z(L)^\circ$.
+for all $x \in K, v\in V$. Evidently $Z^1(K, V)_{l \cdot \sigma} = z\left(\mathrm{Hom}(K, P)_{l \cdot \sigma}\right)$.
+
+Furthermore, we have a map of 1-cohomomologies $H^1(K, V)_\sigma \rightarrow H^1(K, V)_{l \cdot \sigma}$ as in Lemma TODO.
+	For, let $K' = K$, $V' = V$ and let $f:K' \rightarrow K$ be defined
+	\begin{eqnarray*}
+		f = \mathrm{id}:K \rightarrow K,
+	\end{eqnarray*}
+	and $g: V \rightarrow V'$ be defined
+	\begin{eqnarray*}
+		g(v) = lvl^{-1},
+	\end{eqnarray*}
+	for all $v \in V$. Now we show that $g$ satisfies Equation TODO and apply the Lemma.
+	\begin{eqnarray*}
+		x . g(v) &=& x . \left(lvl^{-1}\right) \\
+		&=& l\sigma(x)l^{-1} \left(lvl^{-1}\right) l\sigma(x^{-1})l^{-1} \\
+		&=& l\sigma(x)v\sigma(x^{-1})l^{-1} \\
+		&=& l\left(x \cdot v \right)l^{-1} \\
+		&=& g\left(x \cdot v \right).
+	\end{eqnarray*}
+	Therefore conjugating $Z^1(K, V)$ by an element of $P$ gives rise to a map
+	\begin{eqnarray*}
+		Z^1(\zeta, \xi):Z^1(K, V)_\sigma \rightarrow Z^1(K, V)_{l \cdot \sigma},
+	\end{eqnarray*}
+	which descends to give a map of 1-cohomologies
+	\begin{eqnarray*}
+		H^1(\zeta, \xi):H^1(K, V)_\sigma \rightarrow H^1(K, V)_{l \cdot \sigma}.
+	\end{eqnarray*}
+
+	Evidently, if $l \in C_L\left(\sigma(K)\right)$ then $\mathrm{Hom}(K, P)_\sigma$ is stable and $H^1(\zeta, \xi)$ maps $H^1(K, V)_{\sigma}$ into itself.
+	\begin{definition}
+		Denote by $\mathrm{Hom}(K, P)_\sigma/VC_L(\sigma)$ the collection of $C_L(\sigma(K))$-conjugacy classes of $\mathrm{Hom}(K, P)_\sigma/V$, equivalently the collection of $VC_L(\sigma(K))$-conjugacy classes of $\mathrm{Hom}(K, P)_\sigma$, and denote by $\widetilde{\phi}$ the canonical projection,
+		\begin{eqnarray*}
+			\widetilde{\phi}: \mathrm{Hom}(K, P)_\sigma/V \rightarrow \mathrm{Hom}(K, P)_\sigma/VC_L(\sigma).
+		\end{eqnarray*}
+		Similarly, denote by $H^1(K, V)_\sigma/C_L(\sigma)$ the set of orbits of $H^1(K, V)_\sigma$ under $H^(\zeta, \xi)$.
+	\end{definition}
 
 We show that the $Z(L)^\circ$-action on $Hom(\Gamma, P)_{\rho_L}$ and $Z^1(\Gamma, \rho_L, V)$ descends to give a $Z(L)^\circ$-action on $Hom(\Gamma, P)_{\rho_L}/V$ and $H^1(\Gamma, \rho_L, V)$, respectively. The actions will be well-defined as a consequence of the fact that $L$ normalizes $V$.
 
