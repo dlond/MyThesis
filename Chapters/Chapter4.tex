@@ -13,10 +13,7 @@ Since $L$ normalizes $V$ we have an action by group automorphisms of $L$ on $V$ 
 for $l \in L, v \in V$.
 
 Let $K$ be a linear algebraic group, $H$ a connected reductive algebraic group, and $\Gamma$ a finite group.
-As pointed out in the Introduction, K\"ulshammer's second question has positive answer for $\Gamma, G$ so long as $p$ is good for $G$. We wish to determine whether there exists a reductive counterexample to K\"ulshammer's second question.
-
-
-Generally speaking, we will be concerned with homomorphisms from $K \rightarrow G$. Where possible, we will work in this general setting and state things in terms of $K$. When we want to work with finite $K$ or connected reductive $K$, we will replace $K$ with $\Gamma$ or $H$, respectively.
+Generally speaking, we will be concerned with homomorphisms from $K \rightarrow G$. Where possible, we will work in this general setting and state things in terms of $K$. When we must specifically work with finite $K$ or connected reductive $K$, we will replace $K$ with $\Gamma$ or $H$, respectively.
 
 \begin{definition} Let $X,Y$ be groups. Define
 \begin{align*} \mathrm{Hom}(X, Y) = \{ \rho : X \rightarrow Y \,|\, \rho \textrm{ is a homomorphism}\}. 
@@ -24,13 +21,6 @@ Generally speaking, we will be concerned with homomorphisms from $K \rightarrow 
 \end{definition}
 
 For example, K\"ulshammer's second question as originally stated concerns $G$-conjugacy classes of $\mathrm{Hom}(\Gamma, G)$ and $\mathrm{Hom}(\Gamma_p, G)$, where $\Gamma_p$ is a Sylow $p$-subgroup of $\Gamma$.
-
-
-A consequence of the following Theorem \cite[Theorem 1.2]{martin2003reductive} is that if there is a reductive counterexample to K\"ulshammer's second question then the infinitely many $G$-conjugacy classes of $\mathrm{Hom}(\Gamma, G)$ must be of non-$G$-completely reducible homomorphisms.
-
-\begin{theorem} \label{thm:finiteGCR} There are only finitely many $G$-conjugacy classes of $G$-completely reducible homomorphisms from $\Gamma\rightarrow G$.
-\end{theorem}
-
 
 The following general result shows that finiteness of $G$-conjugacy classes of $\mathrm{Hom}(K, P)$ carries over to $P$-conjugacy classes. 
 \begin{lemma} Let $R \subset \mathrm{Hom}(K, P)$. Then $R$ is contained in a finite union of $G$-conjugacy classes if and only if it is contained in a finite union of $P$-conjugacy classes.
@@ -83,15 +73,17 @@ Let $\sigma \in \mathrm{Hom}(K, L)$. Then via the action of $L$ on $V$ given in 
 \begin{align} \label{haction} x \cdot v = \sigma(x) \cdot v, \end{align}
 for $x \in K, v \in V$.
 
-
 \begin{definition} Let $\rho \in \mathrm{Hom}(K, P)$. We associate with $\rho$ the map $\rho^L \in \mathrm{Hom}(K, L)$ defined by
-\begin{align*} \rho^L = \pi^L \circ \rho, \end{align*}
-and the map $\alpha_\rho: K \rightarrow V$ defined by
-\begin{align} \alpha_\rho(x) = \rho(x)\rho^L(x^{-1}). \end{align}
+%\begin{align*}
+$\rho^L = \pi^L \circ \rho.$
+%\end{align*}
 \end{definition}
 
-Hence given a $\rho \in \mathrm{Hom}(K, P)$ we have an action of $K$ on $V$ via $\rho^L$ using Equation \ref{haction}, and a map $\alpha_\rho:K \rightarrow V$. We show that with this action the map $\alpha_\rho$ is a 1-cocycle from $K \rightarrow V$. To this end, let $x_1, x_2 \in K$.
-
+Let $\rho \in \mathrm{Hom}(K, P)$ and define the map $\alpha_\rho: K \rightarrow V$ by
+\begin{align}\label{rho:alpha}
+\alpha_\rho(x) = \rho(x)\rho^L(x^{-1}).
+\end{align}
+We have an action of $K$ on $V$ via $\rho^L$ using Equation \ref{haction}, and we will show that with this action the map $\alpha_\rho$ is a 1-cocycle from $K \rightarrow V$. To this end, let $x_1, x_2 \in K$.
 Then,
 \begin{align*} \alpha_\rho(x_1x_2) &= \alpha_\rho(x_1x_2) \rho^L(x_1x_2) \left(\rho^L(x_1x_2)\right)^{-1} \\
 	&= \rho(x_1x_2) \left(\rho^L(x_1x_2)\right)^{-1} \\
@@ -103,7 +95,7 @@ Then,
 
 Therefore $\alpha_\rho$ satisfies the 1-cocycle condition in Equation \ref{eqn:na_z}.
 
-\begin{definition} Let $\sigma \in \mathrm{Hom}(K, L)$. We denote by
+\begin{definition}\label{h1sigma} Let $\sigma \in \mathrm{Hom}(K, L)$. We denote by
 \begin{align*} Z^1(K, V)_\sigma \end{align*}
 the set of 1-cocycles from $K \rightarrow V$ where $K$ acts on $V$ via $\sigma$.
 Likewise, denote by
@@ -118,11 +110,11 @@ More generally, if $R \subset \mathrm{Hom}(K, P)$ define
 \begin{align*} R_\sigma = \{ \rho \in R \,|\, \rho^L = \sigma \}. \end{align*}
 \end{definition}
 
-By construction, each $\rho \in \mathrm{Hom}(K, P)_\sigma$ yields a 1-cocycle $\alpha_\rho \in Z^1(K, V)_\sigma$.
+By construction, each $\rho \in \mathrm{Hom}(K, P)_\sigma$ yields a 1-cocycle $\alpha_\rho \in Z^1(K, V)_\sigma$ using Equation \ref{rhoalpha}.
 Conversely given a 1-cocycle $\alpha \in Z^1(K, V)_\sigma$ we can construct a map $\rho: K \rightarrow P$ defined by
-\begin{align*}
+\begin{align}\label{alpha:rho}
 \rho(x) = \alpha(x)\sigma(x),
-\end{align*}
+\end{align}
 for all $x \in K$. This construction is a homomorphism from $K \rightarrow P$. For take $x_1, x_2 \in K$, then
 \begin{align*}
   \rho(x_1 x_2) &= \alpha(x_1 x_2) \sigma(x_1 x_2) \\
@@ -132,7 +124,7 @@ for all $x \in K$. This construction is a homomorphism from $K \rightarrow P$. F
   &= \rho(x_1) \rho(x_2).
 \end{align*}
 
-Hence the following Lemma.
+We point out that the constructions in Equations \ref{rho:alpha} and \ref{alpha:rho} are inverses of each other, and formalize the preceding in the following Lemma.
 
 \begin{lemma}
   Let $\sigma \in \mathrm{Hom}(K, L)$. The map
@@ -157,7 +149,7 @@ Since $\mathrm{Hom}(K, P)_\sigma$ is stable under conjugation by elements of $V$
 
 In fact, we show that $z$ descends to give a bijection from $\mathrm{Hom}(K, P)_\sigma / V \rightarrow H^1(K, V)_\sigma$.
 
-\begin{lemma}
+\begin{lemma} \label{maph}
 For $\rho \in \mathrm{Hom}(K, P)_\sigma$, define
 \begin{align*}
 h(\phi( \rho)) = \psi(z)(\rho).
@@ -190,15 +182,16 @@ Since $z$ and $\psi$ are onto, $h$ is onto. We show $h$ is one-to-one.
 
 Let $\alpha, \beta \in Z^1(K, V)_\sigma$ such that $\psi(\alpha) = \psi(\beta)$. Then there exists $v \in V$ such that
 \begin{align*} \beta(x) = v \alpha(x) \left(x \cdot v^{-1}\right), \end{align*}
-for all $x \in K$. Then, for all $x \in K$
+for all $x \in K$. Then
 \begin{align*}
 z^{-1}(\beta)(x) 
 &= \beta(x)\sigma(x) \\
 &= v \alpha(x) \left(x \cdot v^{-1}\right) \sigma(x) \\
 &= v \alpha(x) \sigma(x) v^{-1} \sigma(x^{-1}) \sigma(x) \\
 &= v \alpha(x) \sigma(x) v^{-1} \\
-&= v z^{-1}(\alpha)(x) v^{-1}.
+&= v z^{-1}(\alpha)(x) v^{-1},
 \end{align*}
+for all $x \in K$.
 This shows that $\phi\left(z^{-1}(\alpha)\right) = \phi\left(z^{-1}(\beta)\right)$ and therefore $h$ is one-to-one. This completes the proof.
 \end{proof}
 
@@ -208,23 +201,17 @@ Let $q \in P$, and let $v \in V, l \in L$ such that $q = vl$. We can conjugate $
 &= \pi^L\left(q\right) \pi^L\left(\rho(x)\right) \pi^L\left(q^{-1}\right) \\
 &= l \sigma(x) l^{-1},
 \end{align*}
-for all $x \in K$. Hence $q \cdot \rho \in \mathrm{Hom}(K, P)_{l\cdot \sigma}$.
+for all $x \in K$, so $q \cdot \rho \in \mathrm{Hom}(K, P)_{l\cdot \sigma}$.
 
-Using Definition TODO, we can define $Z^1(K, V)_{l \cdot \sigma}$ to be the collection of 1-cocycles from $K \rightarrow V$ where $K$ acts on $V$ via $l \cdot \sigma$. The formula for the action is then given by
+Using Definition \ref{h1sigma}, we can define $Z^1(K, V)_{l \cdot \sigma}$ to be the collection of 1-cocycles from $K \rightarrow V$ where $K$ acts on $V$ via $l \cdot \sigma$. The formula for the action is then given by
 \begin{align*}
 	x.v = l \sigma(x) l^{-1} v l \sigma(x^{-1}) l^{-1},
 \end{align*}
-for all $x \in K, v \in V$. Evidently $Z^1(K, V)_{l \cdot \sigma} = z\left(\mathrm{Hom}(K, P)_{l \cdot \sigma}\right)$. The reason for the new notation for the action will become apparent presently, as we show that we have a map of 1-cohomomologies $H^1(K, V)_\sigma \rightarrow H^1(K, V)_{l \cdot \sigma}$.
+for all $x \in K, v \in V$. Evidently $Z^1(K, V)_{l \cdot \sigma} = z\left(\mathrm{Hom}(K, P)_{l \cdot \sigma}\right)$. The reason for the new notation for the action above will become apparent presently, as we show that we have a map of 1-cohomomologies $H^1(K, V)_\sigma \rightarrow H^1(K, V)_{l \cdot \sigma}$.
 
-	We show that we can apply Lemma TODO. To this end, let $K' = K$, $V' = V$ and let $\zeta:K' \rightarrow K$ be defined by
-	\begin{align*}
-		\zeta = \mathrm{id}:K \rightarrow K,
-	\end{align*}
-	and $\xi = \xi_l: V \rightarrow V'$ be defined by
-	\begin{align*}
-		\xi_l(v) = lvl^{-1},
-	\end{align*}
-	for all $v \in V$. Now we show that $\xi_l$ satisfies Equation TODO. Let $x \in K, v \in V$. Then
+	We show that we can apply Lemma TODO. To this end, let $K' = K$, $V' = V$ and let $\zeta = \mathrm{id}:K \rightarrow K$.
+
+Let $\xi = \xi_l: V \rightarrow V'$ be defined by	$\xi_l(v) = lvl^{-1}$ for all $v \in V$. Now we show that $\xi_l$ satisfies Equation TODO. Let $x \in K, v \in V$. Then
 	\begin{align*}
 		x . \xi_l(v) &= x . \left(lvl^{-1}\right) \\
 		&= l\sigma(x)l^{-1} \left(lvl^{-1}\right) l\sigma(x^{-1})l^{-1} \\
@@ -232,7 +219,7 @@ for all $x \in K, v \in V$. Evidently $Z^1(K, V)_{l \cdot \sigma} = z\left(\math
 		&= l\left(x \cdot v \right)l^{-1} \\
 		&= \xi_l \left(x \cdot v \right).
 	\end{align*}
-	Therefore the map $Z^1(\zeta, \xi_l):Z^1(K, V)_\sigma \rightarrow Z^1(K, V)_{l \cdot \sigma}$ defined by 
+	Therefore by Lemma TODO, the map $Z^1(\zeta, \xi_l):Z^1(K, V)_\sigma \rightarrow Z^1(K, V)_{l \cdot \sigma}$ defined by 
 	\begin{align*}
 		Z^1(\zeta, \xi_l)(\alpha) = \xi_l \circ \alpha,
 	\end{align*}
@@ -284,9 +271,9 @@ for all $x \in K, v \in V$. Evidently $Z^1(K, V)_{l \cdot \sigma} = z\left(\math
 			&= \psi\left( c_1 \cdot (c_2 \cdot \alpha)\right) \\
 			&= \psi\left( c_1c_2 \cdot \alpha\right) \\
 			&= \psi\left( Z^1(\zeta, \xi_{c_1c_2})(\alpha)\right) \\
-			&= H^1(\zeta, \xi_{c_1c_2})\left(\psi(\alpha)\right),
+			&= H^1(\zeta, \xi_{c_1c_2})\left(\psi(\alpha)\right).
 		\end{align*}
-		shows that Equation \ref{cl.h1} defines an action of $C_L(\sigma(K))$ on $H^1(K, V)_\sigma$.
+		This shows that Equation \ref{cl.h1} defines an action of $C_L(\sigma(K))$ on $H^1(K, V)_\sigma$.
 \end{proof}
 	\begin{definition}
 		Denote by $\mathrm{Hom}(K, P)_\sigma/VC_L(\sigma)$ the collection of $C_L(\sigma(K))$-conjugacy classes of $\mathrm{Hom}(K, P)_\sigma/V$, equivalently the collection of $VC_L(\sigma(K))$-conjugacy classes of $\mathrm{Hom}(K, P)_\sigma$, and denote by $\widetilde{\phi}$ the canonical projection,
@@ -299,14 +286,7 @@ for all $x \in K, v \in V$. Evidently $Z^1(K, V)_{l \cdot \sigma} = z\left(\math
 		\end{align*}
 	\end{definition}
 
-	We have the following Lemma, which shows that the map
-	\begin{align*}
-		h:\mathrm{Hom}(V, P)_\sigma/V \rightarrow H^1(K, V)_\sigma,
-	\end{align*}
-	of Lemma TODO descends to give a bijection from
-	\begin{align*}
-		\mathrm{Hom}(K, P)_\sigma /VC_L(\sigma) \rightarrow H^1(K, V)_{\sigma}/C_L(\sigma).
-	\end{align*}
+	We have the following Lemma, which shows that the map $h$ descends to give a bijection from $\mathrm{Hom}(K, P)_\sigma /VC_L(\sigma) \rightarrow H^1(K, V)_{\sigma}/C_L(\sigma)$.
 
 \begin{lemma}
 	For $\rho \in Hom(K, P)_\sigma$, define
@@ -328,8 +308,13 @@ for all $x \in K, v \in V$. Evidently $Z^1(K, V)_{l \cdot \sigma} = z\left(\math
 \begin{proof}
 \end{proof}
 
-\section{K\"ulshammer's Second Question}
-We continue with the notation of the previous Section.
+In the theme Lemma TODO, we show that $H^1(\zeta, \xi)$ descends to give a well-defined map from $H^1(K, V)_\sigma/C_L(\sigma) \rightarrow H^1(K', V')_{\sigma \circ \zeta}/C_L(\sigma \circ \zeta)$.
+
+\begin{lemma}
+\end{lemma}
+\begin{proof}
+\end{proof}
+
 \begin{definition} We define
 	\begin{align*}
 		\mathrm{Hom}(K, P)^L = \{\rho^L\,|\,\rho \in \mathrm{Hom}(K, P)\}.
@@ -340,13 +325,13 @@ We continue with the notation of the previous Section.
 	\end{align*}
 \end{definition}
 
-\begin{lemma} Let $R \subset \mathrm{Hom}(K, P)$. Suppose $R = P \cdot \rho$ for some $\rho \in R$. Then $R^L = L\cdot \rho^L$.
+\begin{lemma} \label{pr:lrl} Let $R \subset \mathrm{Hom}(K, P)$. Suppose $R = P \cdot \rho$ for some $\rho \in R$. Then $R^L = L\cdot \rho^L$.
 	More generally, if $R = P \cdot R$ then $R^L = L \cdot R^L$.
 \end{lemma}
 \begin{proof}
 \end{proof}
 
-\begin{lemma} Let $R \subset \mathrm{Hom}(K, P)$ and suppose that $R = P \cdot R$. Then for all $\sigma \in \mathrm{Hom}(K, L)$
+\begin{lemma} \label{rsigma:vcl} Let $R \subset \mathrm{Hom}(K, P)$ and suppose that $R = P \cdot R$. Then for all $\sigma \in \mathrm{Hom}(K, L)$,
 	\begin{align*}
 		R_\sigma \cap P \cdot \rho = \left(VC_L(\sigma)\right) \cdot \rho,
 	\end{align*}
@@ -389,12 +374,12 @@ and $\Psi:Z^1(K, V)_\sigma \rightarrow H^1(K, V)_\sigma/C_L(\sigma)$ by
 \begin{proof}
 Suppose $R$ is a finite union of $P$-conjugacy classes, so there exists a finite set $\mathcal{P} \subset \mathrm{Hom}(\Gamma, P)$ such that
 \begin{align*} R = \bigcup_{\rho \in \mathcal{P}} P \cdot \rho \end{align*}
-Lemma \ref{lem:prlrl} shows that (i) holds. Furthermore
+Lemma \ref{pr:lrl} shows that (i) holds. We have
 \begin{align*} R_\sigma &= R_\sigma \cap R \\
 &= R_\sigma \cap \big( \bigcup_{\rho \in \mathcal{P}} P \cdot \rho \,\,\big) \\
-&= \bigcup_{\rho \in \mathcal{P}} \left( R_\sigma \cap P \cdot \rho \right),
+&= \bigcup_{\rho \in \mathcal{P}} \left( R_\sigma \cap P \cdot \rho \right).
 \end{align*}
-and by Lemma \ref{rsigma:vcl}
+Then by Lemma \ref{rsigma:vcl}
 \begin{align*} R_\sigma = \bigcup_{\rho \in \mathcal{P}} (VC_L(\sigma)) \cdot \rho. \end{align*}
 Hence (ii$'$), and therefore (ii), holds. This proves the forward direction.
 
@@ -403,27 +388,27 @@ Conversely, suppose (i) and (ii) hold and let $\sigma \in \mathrm{Hom}(K, L)$. B
 \begin{align*}
 	R_\sigma &= \bigcup_{\rho \in \mathcal{Q}} (VC_L(\sigma)) \cdot \rho.
 \end{align*}
-Then by Lemma TODO,
+Applying Lemma \ref{rsigma:vcl}, we get
 \begin{align*}
 	R_\sigma &= \bigcup_{\rho \in \mathcal{Q}} \left( R_\sigma \cap P \cdot \rho \right) \\
 	&= R_\sigma \cap \big( \bigcup_{\rho \in \mathcal{Q}} P \cdot \rho \,\,\big).
 \end{align*}
 Hence $R_\sigma$ is contained in a finite union of $P$-conjugacy classes.
+Define
+\begin{align*}
+L \cdot R_\sigma = \{L \cdot \rho \,|\, \rho \in R_\sigma\},
+\end{align*}
+so $L \cdot R_\sigma$ is contained in a finite union of $P$-conjugacy classes.
 
-By (i) there exists a finite set $\mathcal{S} \subset \mathrm{Hom}(\Gamma, L)$ such that
-\begin{align} \label{finiterl}
+Now let $\rho \in R$. By (i) there exists a finite set $\mathcal{S} \subset \mathrm{Hom}(\Gamma, L)$ such that
+\begin{align*}
 R^L = \bigcup_{\tau \in \mathcal{S}} L \cdot \tau.
-\end{align}
+\end{align*}
 
-Define $L \cdot R_\sigma = \{L \cdot \rho \,|\, \rho \in R_\sigma\}$. Evidently $L \cdot R_\sigma$ is contained in a finite union of $P$-conjugacy classes.
-
-
-Now let $\rho \in R$. By Equation \ref{finiterl} there exists $l \in L$, $\tau \in \mathcal{S}$ such that $\rho^L = l \cdot \tau$. Hence $l^{-1} \cdot \rho^L = \tau$, so $\rho \in L \cdot R_\tau$. This shows that $R$ is contained in a finite union of $P$-conjugacy classes. The reverse inclusion is satisfied since $R = P \cdot R$.
-
-This completes the proof.
+Then there exists $l \in L$, $\tau \in \mathcal{S}$ such that $\rho^L = l \cdot \tau$. Hence $l^{-1} \cdot \rho^L = \tau$, so $\rho \in L \cdot R_\tau$. This shows that $R$ is contained in a finite union of $P$-conjugacy classes. The reverse inclusion is satisfied since $R = P \cdot R$, and this completes the proof.
 \end{proof}
 
-\begin{definition} Let $K' < K$ and let $\zeta$ be the inclusion map $K' \hookrightarrow K$. We denote by $\rho^\zeta$ the homomorphism $K' \rightarrow P$ defined by
+\begin{definition} Let $K' < K$ and let $\zeta$ be the inclusion map $K' \hookrightarrow K$. We denote by $\rho^\zeta$ the homomorphism from $K' \rightarrow P$ defined by
 	\begin{align*}
 		\rho^\zeta = \rho \circ \zeta,
 	\end{align*}
@@ -455,7 +440,14 @@ This completes the proof.
 \begin{proof}
 \end{proof}
 
-\section{A Non-Reductive Counterexample}
+\section{K\"ulshammer's Second Question}
+\subsection{Application of the 1-Cohomology}
+As pointed out in the Introduction, K\"ulshammer's second question has positive answer for $\Gamma, G$ so long as $p$ is good for $G$. We wish to determine whether there exists a reductive counterexample to K\"ulshammer's second question.
+A consequence of the following Theorem \cite[Theorem 1.2]{martin2003reductive} is that if there is a reductive counterexample to K\"ulshammer's second question then the infinitely many $G$-conjugacy classes of $\mathrm{Hom}(\Gamma, G)$ must be of non-$G$-completely reducible homomorphisms.
+
+\begin{theorem} \label{thm:finiteGCR} There are only finitely many $G$-conjugacy classes of $G$-completely reducible homomorphisms from $\Gamma\rightarrow G$.
+\end{theorem}
+\subsection{A Non-Reductive Counterexample}
 In \cite{slodowy1997two} a counterexample to K\"ulshammer's second question is presented for a closed field $k$ of characteristic $p = 2$ and a non-reductive algebraic group $G$.
 \begin{example} Let $Q$ be the algebraic group isomorphic to the affine space $\mathbf{A}^3$ with the group multiplication law:
 \begin{align*}
