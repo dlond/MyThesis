@@ -3,6 +3,7 @@
 
 \newtheorem{prop}{Proposition}
 \newtheorem{defn}{Definition}
+\newtheorem{remark}{Remark}
 
 \usepackage{parskip}
 
@@ -15,65 +16,108 @@
 
 \title{Maps of 1-Cohomologies}
 \maketitle
-\begin{prop}
-	Let $f:K'\rightarrow K$, $K'$ an algebraic group also acting on $V$ by group automorphisms. Then $\alpha \circ f$ is a 1-cocycle from $K' \rightarrow V$.
+
+Let $K, V$ be algebraic groups such that $K$ acts on $V$ by group automorphisms, so we can define $Z^1(K, V), H^1(K, V)$. Denote the action of $K$ on $V$ by $x \cdot v$ for $x \in K, v \in V$.
+
+\begin{prop} \label{zeta}
+	Let $K'$ be an algebraic group that acts on $V$ by group automorphisms, so we can define $Z^1(K', V), H^1(K', V)$. Denote the action of $K'$ on $V$ by $x \ast v$ for $x \in K', v \in V$.
+
+	Let $\zeta:K'\rightarrow K$ be a homomorphism and suppose that $x \ast v = \zeta(x) \cdot v$ for all $x \in K', v \in V$. Then for all $\alpha \in Z^1(K, V), \alpha \circ \zeta \in Z^1(K', V)$.
 \end{prop}
 \begin{proof}
+	Let $\alpha \in Z^1(K, V)$ and let $x, y \in K'$. Then
+	\begin{align*}
+		(\alpha \circ \zeta)(xy) &= \alpha(\zeta(x)\zeta(y) \\
+			&= \alpha(\zeta(x))\left(\zeta(x) \cdot \alpha(\zeta(y))\right) \\
+			&= \alpha(\zeta(x))\left(x \ast \alpha(\zeta(y))\right) \\
+			&= (\alpha \circ \zeta)(x)\left(x \ast (\alpha \circ \zeta)(y)\right).
+	\end{align*}
+	Therefore, since $\alpha \circ \zeta$ is a morphism and satisfies the 1-cocycle condition, $\alpha \circ \zeta \in Z^1(K', V)$.
 \end{proof}
 
-The map $\zeta:Z^1(K, V) \rightarrow Z^1(K', V)$ defined by
-\begin{eqnarray*}
-	\zeta(\alpha) &=& \alpha \circ f
-\end{eqnarray*}
-is a map of 1-cocycles.
+\begin{prop} \label{xi}
+	Let $V'$ be an algebraic group on which $K$ acts by group automorphisms. Denote the action of $K$ on $V'$ by $x \wedge v$ for all $x \in K, v \in V'$.
 
-\begin{prop}
-	Let $g:V \rightarrow V'$ be an equivariant homomorphism. Then $g \circ \alpha$ is a 1-cocycle from $K \rightarrow V'$.
+	Let $\xi: V \rightarrow V'$ be a $K$-equivariant homomorphism, that is, $x \wedge \xi(v) = \xi(x \cdot v)$ for all $x \in K, v \in V$. Then for all $\alpha \in Z^1(K, V), \xi \circ \alpha \in Z^1(K, V')$.
 \end{prop}
 \begin{proof}
+	Let $\alpha \in Z^1(K, V)$ and let $x, y \in K$. Then
+	\begin{align*}
+		(\xi \circ \alpha)(xy) &= \xi\left(\alpha(x)(x \cdot \alpha(y))\right) \\
+			&= \xi(\alpha(x))\xi(x \cdot \alpha(y)) \\
+			&= \xi(\alpha(x))\left(x \wedge \xi(\alpha(y))\right) \\
+			&= (\xi \circ \alpha)(x)\left(x \wedge (\xi \circ \alpha)(y)\right).
+	\end{align*}
+	Therefore, since $\xi \circ \alpha$ is a morphism and satisfies the 1-cocycle condition, $\xi \circ \alpha \in Z^1(K, V')$.
 \end{proof}
 
-The map $\xi:Z^1(K, V) \rightarrow Z^1(K, V')$ defined by
-\begin{eqnarray*}
-	\xi(\alpha) = g \circ \alpha
-\end{eqnarray*}
-is a map of 1-cocycles. More generally, we have the following Definition.
+\begin{prop} Let $K', V'$ be algebraic groups, such that
+	\begin{itemize}
+		\item[(a)] $K'$ acts on $V$ by group automorphisms, denoted by $x \ast v$ for all $x \in K', v \in V$,
+		\item[(b)] $K'$ acts on $V'$ by group automorphisms, denoted by $x \wedge v$ for all $x \in K', v \in V'$.
+	\end{itemize}
+	Let $\zeta:K' \rightarrow K$ and $\xi: V \rightarrow V'$ be homomorphisms such that
+	\begin{itemize}
+		\item[(c)] $x \ast v = \zeta(x) \cdot v$ for all $x \in K', v \in V$,
+		\item[(d)] $\xi(x \ast v) = x \wedge \xi(v)$ for all $x \in K', v \in V$.
+	\end{itemize}
+	Then the function defined by
+	\begin{align*}
+		Z^1(\zeta, \xi)(\alpha) = \xi \circ \alpha \circ \zeta,
+	\end{align*}
+	maps $Z^1(K, V) \rightarrow Z^1(K', V')$.
 
-\begin{defn}
-	Define the map
-	\begin{eqnarray*}
-		Z^1(\zeta, \xi):Z^1(K, V) \rightarrow Z^1(K', V')
-	\end{eqnarray*}
-	by
-	\begin{eqnarray*}
-		Z^1(\zeta, \xi)(\alpha) = g \circ \alpha \circ f.
-	\end{eqnarray*}
-\end{defn}
+	Furthermore, $Z^1(\zeta, \xi)$ descends to give a well-defined map $H^1(\zeta, \xi):H^1(K, V) \rightarrow H^1(K', V')$, defined by
+	\begin{align*}
+		H^1(\zeta, \xi)(\psi(\alpha)) = \left(\psi' \circ Z^1(\zeta, \xi)\right)(\alpha),
+	\end{align*}
+	for all $\alpha \in Z^1(K, V)$, where $\psi:Z^1(K, V)\rightarrow H^1(K, V)$ and $\psi':Z^1(K', V') \rightarrow H^1(K', V')$ are the canonical projections.
 
-Then, for example,
-\begin{eqnarray*}
-	Z^1(\zeta, \mathrm{id}) = \zeta, && \textrm{where }\mathrm{id}:V\rightarrow V \textrm{ is the identity map, and} \\
-	Z^1(\mathrm{id}, \xi) = \xi,     && \textrm{where }\mathrm{id}:H\rightarrow H \textrm{ is the identity map}.
-\end{eqnarray*}
-
-
-\begin{prop}
-	The map $Z^1(\zeta, \xi)$ descends to give a well-defined map
-	\begin{eqnarray*}
-		H^1(\zeta, \xi):H^1(K, V) \rightarrow H^1(K', V')
-	\end{eqnarray*}
-	of 1-cohomologies, defined by
-	\begin{eqnarray*}
-		H^1(\zeta, \xi)\left(\psi(\alpha)\right) = \left(\psi' \circ Z^1(\zeta, \xi)\right)(\alpha),
-	\end{eqnarray*}
-	where $\psi:Z^1(K, V)\rightarrow H^1(K, V)$ and $\psi':Z^1(K', V')\rightarrow H^1(K, V)$ are the canonical projections. Moreover, the following diagram commutes.
-	\begin{eqnarray*}
-	\xymatrix{
-	Z^1(K, V) \ar[d]_{\psi} \ar[r]^{Z^1(\zeta, \xi)} & Z^1(K', V') \ar[d]^{\psi'} \\
-	H^1(K, V)               \ar[r]^{H^1(\zeta, \xi)} & H^1(K', V') \\
-	}
-	\end{eqnarray*}
+	Moreover, the following diagram commutes:
+	\begin{align*}
+		\xymatrix{
+			Z^1(K, V) \ar[r]^{Z^1(\zeta, \xi)} \ar[d]^{\psi} & Z^1(K', V') \ar[d]^{\psi'} \\
+			H^1(K, V) \ar[r]^{H^1(\zeta, \xi)}               & H^1(K', V').
+		}
+	\end{align*}
 \end{prop}
 \begin{proof}
-\end{proof}
+	Let $\alpha \in Z^1(K, V)$ and let $x,y \in K'$. Then
+	\begin{align*}
+		(\xi \circ \alpha \circ \zeta)(xy) &= \xi \left((\alpha \circ \zeta)(x)\right) \xi \left(x \ast (\alpha \circ \zeta)(y)\right) \quad\textrm{(by Prop. \ref{zeta})} \\
+			&= \xi \left((\alpha \circ \zeta)(x)\right) \left(x \wedge \xi(\alpha \circ \zeta)(y)\right) \quad\textrm{(by (d))} \\
+			&= (\xi \circ \alpha \circ \zeta)(x) \left(x \wedge (\xi \circ \alpha \circ \zeta)(y)\right).
+	\end{align*}
+	Therefore $(\xi \circ \alpha \circ \zeta) \in Z^1(K', V')$.
+
+	It remains to show $H^1(\zeta, \xi)$ is well-defined. Let $\beta \in Z^1(K, V)$ such that $\psi(\alpha) = \psi(\beta)$. Then there exists $v \in V$ such that
+	\begin{align*}
+		\beta(x) = v\alpha(x)(x \cdot v^{-1}),
+	\end{align*}
+	for all $x \in K$.
+
+	Then, for all $x \in K'$
+	\begin{align*}
+		\left(Z^1(\zeta, \xi)(\beta)\right)(x) &= \xi\left(\beta(\zeta(x))\right) \\
+			&= \xi \left( v \alpha(\zeta(x))\left(\zeta(x) \ast v^{-1}\right) \right) \\
+			&= \xi(v) \xi(\alpha(\zeta(x))) \xi\left( \zeta(x) \ast v^{-1}\right) \\
+			&= \xi(v) \xi(\alpha(\zeta(x)))\left(x \wedge \xi(v^{-1})\right) \\
+			&= \xi(v) \left(Z^1(\zeta, \xi)(\alpha)\right)(x) \left(x \wedge \xi(v^{-1})\right).
+	\end{align*}
+	This shows that $\psi'\left(Z^1(\zeta, \xi)(\alpha)\right) = \psi'\left(Z^1(\zeta, \xi)(\alpha)\right)$, hence $H^1(\zeta, \xi)$ is well-defined. This completes the proof.
+\end{proof} 
+
+\begin{remark}
+	The slightly unfortunate choice of notation ``$Z^1(K, V)$'' doesn't explicitly mention the action. The consequence is that given suitable homomorphisms
+	\begin{align*}
+		\zeta&:K \rightarrow K, \\
+		\xi&: V \rightarrow V,
+	\end{align*}
+	the statement
+	\begin{align*}
+		H^1(\zeta, \xi):H^1(K, V) \rightarrow H^1(K, V)
+	\end{align*}
+	is misleading on its own: Is the 1-cohomology on the left of the arrow the same as the one on the right? Later we adopt a modified notation for the 1-cocycles and the 1-cohomology which carries the action defining the 1-cocycles.
+\end{remark}
+
 \end{document}

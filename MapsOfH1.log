@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.8.17)  5 JAN 2013 13:22
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.12.4)  7 JAN 2013 16:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -127,6 +127,7 @@ Package: amssymb 2009/06/22 v3.00
 )
 \c@prop=\count99
 \c@defn=\count100
+\c@remark=\count101
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/parskip/parskip.sty
 Package: parskip 2001/04/09 non-zero parskip adjustments
@@ -180,14 +181,14 @@ Loading kernel: messages; fonts; allocations: state,
  direction,
 \d@X=\dimen140
 \d@Y=\dimen141
-\K@=\count101
-\KK@=\count102
-\Direction=\count103
+\K@=\count102
+\KK@=\count103
+\Direction=\count104
 \K@dXdY=\dimen142
 \K@dYdX=\dimen143
 \xyread@=\read1
 \xywrite@=\write3
-\csp@=\count104
+\csp@=\count105
 \quotPTK@=\dimen144
 
 utility macros; pictures: \xy, positions,
@@ -208,7 +209,7 @@ Package: xy 2012/05/24 Xy-pic version 3.8.8
  Xy-pic option: All features v.3.8
 (/usr/local/texlive/2012/texmf-dist/tex/generic/xypic/xycurve.tex
  Xy-pic option: Curve and Spline extension v.3.12 curve,
-\crv@cnt@=\count105
+\crv@cnt@=\count106
 \crvpts@=\toks30
 \splinebox@=\box32
 \splineval@=\dimen145
@@ -234,13 +235,13 @@ Package: xy 2012/05/24 Xy-pic version 3.8.8
  Xy-pic option: Colour extension v.3.11 loaded)
 (/usr/local/texlive/2012/texmf-dist/tex/generic/xypic/xymatrix.tex
  Xy-pic option: Matrix feature v.3.14
-\Row=\count106
-\Col=\count107
+\Row=\count107
+\Col=\count108
 \queue@=\toks31
 \queue@@=\toks32
-\qcount@=\count108
-\qcount@@=\count109
-\matrixsize@=\count110
+\qcount@=\count109
+\qcount@@=\count110
+\matrixsize@=\count111
  loaded)
 (/usr/local/texlive/2012/texmf-dist/tex/generic/xypic/xyarrow.tex
  Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded)
@@ -260,64 +261,65 @@ Xy-pic pdf driver: `rotate' extension support
 loaded)) (./MapsOfH1.aux)
 \openout1 = `MapsOfH1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Try loading font information for U+msa on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Try loading font information for U+msa on input line 15.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 14.
+LaTeX Font Info:    Try loading font information for U+msb on input line 15.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 14.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 15.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Package xypdf Info: Line width: 0.47998pt on input line 14.
- <xymatrix 2x2
-182> [1{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2] (./MapsOfH1.aux) ) 
+Package xypdf Info: Line width: 0.47998pt on input line 15.
+ [1{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] <xym
+atrix 2x2 182>
+<xymatrix 2x2 182> [2] [3] (./MapsOfH1.aux) ) 
 Here is how much of TeX's memory you used:
- 4355 strings out of 493488
- 51849 string characters out of 3141326
- 152521 words of memory out of 3000000
- 7448 multiletter control sequences out of 15000+200000
+ 4363 strings out of 493488
+ 51908 string characters out of 3141326
+ 155559 words of memory out of 3000000
+ 7456 multiletter control sequences out of 15000+200000
  13351 words of font info for 58 fonts, out of 3000000 for 9000
  1118 hyphenation exceptions out of 8191
- 34i,18n,26p,3215b,470s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2012/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmbx12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmex10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmi8.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr6.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr8.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-9.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.p
-fb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
-></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.
-pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb><
-/usr/local/texlive/2012/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb>
-Output written on MapsOfH1.pdf (2 pages, 127071 bytes).
+ 34i,20n,26p,3215b,531s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2012/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2012/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2012/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2012/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2012/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2012/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2012/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmti12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/a
+msfonts/symbols/msam10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/publ
+ic/xypic/xyatip10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/xy
+pic/xybtip10.pfb>
+Output written on MapsOfH1.pdf (3 pages, 135145 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 74 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
