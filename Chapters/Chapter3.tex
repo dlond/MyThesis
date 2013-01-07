@@ -143,76 +143,193 @@ R. Richardson \cite[Lemma 6.2.6]{richardson1982orbits} provides a result analogo
   \label{lem:nonab_lin_red}
 \end{lemma}
 
-\section{Maps between 1-cohomologies}
+\section{Maps Between 1-Cohomologies}
 
-The following results leading up to Lemma \ref{} could be stated in terms of the abelian 1-cohomology. Indeed we provide Lemma \ref{}, where $V$ is necessarily a vector space. However, for reasons of efficiency we state the following few definition-like results using multiplicative notation only.
+The next few results (Lemma \ref{zeta}--Lemma \ref{h1maps}) could be stated in terms of the abelian 1-cohomology. Indeed we provide Lemma \ref{lem:a_h_restriction}, where $V$ is necessarily a vector space. However, for reasons of efficiency we state these few \emph{definition-like} results leading up to Lemma \ref{h1maps} using multiplicative notation only.
 
-As in the previous Section, $K, V$ are algebraic groups such that $K$ acts on $V$ by group automorphisms. We denote the action of $K$ on $V$ by $x \cdot v$, $x \in K, v \in V$.
+As in the previous Section, $K, V$ are algebraic groups such that $K$ acts on $V$ by group automorphisms. We denote the action of $K$ on $V$ by $x \cdot v$, for $x \in K, v \in V$.
 
+\begin{lemma} \label{zeta}
+	Let $K'$ be an algebraic group that acts on $V$ by group automorphisms, so we can define $Z^1(K', V), H^1(K', V)$. Denote the action of $K'$ on $V$ by $x \ast v$, for $x \in K', v \in V$.
 
+	Let $\zeta:K'\rightarrow K$ be a homomorphism and suppose that $x \ast v = \zeta(x) \cdot v$ for all $x \in K', v \in V$. Then for all $\alpha \in Z^1(K, V), \alpha \circ \zeta \in Z^1(K', V)$.
+\end{lemma}
+\begin{proof}
+	Let $\alpha \in Z^1(K, V)$ and let $x, y \in K'$. Then
+	\begin{align*}
+		(\alpha \circ \zeta)(xy) &= \alpha(\zeta(x)\zeta(y) \\
+			&= \alpha(\zeta(x))\left(\zeta(x) \cdot \alpha(\zeta(y))\right) \\
+			&= \alpha(\zeta(x))\left(x \ast \alpha(\zeta(y))\right) \\
+			&= (\alpha \circ \zeta)(x)\left(x \ast (\alpha \circ \zeta)(y)\right).
+	\end{align*}
+	Therefore, since $\alpha \circ \zeta$ is a morphism and satisfies the 1-cocycle condition, $\alpha \circ \zeta \in Z^1(K', V)$.
+\end{proof}
+
+\begin{lemma} \label{xi}
+	Let $V'$ be an algebraic group on which $K$ acts by group automorphisms. Denote the action of $K$ on $V'$ by $x \wedge v$ for $x \in K, v \in V'$.
+
+	Let $\xi: V \rightarrow V'$ be a $K$-equivariant homomorphism, that is, $x \wedge \xi(v) = \xi(x \cdot v)$ for all $x \in K, v \in V$. Then for all $\alpha \in Z^1(K, V), \xi \circ \alpha \in Z^1(K, V')$.
+\end{lemma}
+\begin{proof}
+	Let $\alpha \in Z^1(K, V)$ and let $x, y \in K$. Then
+	\begin{align*}
+		(\xi \circ \alpha)(xy) &= \xi\left(\alpha(x)(x \cdot \alpha(y))\right) \\
+			&= \xi(\alpha(x))\xi(x \cdot \alpha(y)) \\
+			&= \xi(\alpha(x))\left(x \wedge \xi(\alpha(y))\right) \\
+			&= (\xi \circ \alpha)(x)\left(x \wedge (\xi \circ \alpha)(y)\right).
+	\end{align*}
+	Therefore, since $\xi \circ \alpha$ is a morphism and satisfies the 1-cocycle condition, $\xi \circ \alpha \in Z^1(K, V')$.
+\end{proof}
+
+\begin{lemma} \label{h1maps} Let $K', V'$ be algebraic groups, such that
+	\begin{itemize}
+		\item[(a)] $K'$ acts on $V$ by group automorphisms, denoted by $x \ast v$, for $x \in K', v \in V$,
+		\item[(b)] $K'$ acts on $V'$ by group automorphisms, denoted by $x \wedge v$, for $x \in K', v \in V'$.
+	\end{itemize}
+	Let $\zeta:K' \rightarrow K$ and $\xi: V \rightarrow V'$ be homomorphisms such that
+	\begin{itemize}
+		\item[(c)] $x \ast v = \zeta(x) \cdot v$ for all $x \in K', v \in V$,
+		\item[(d)] $\xi(x \ast v) = x \wedge \xi(v)$ for all $x \in K', v \in V$.
+	\end{itemize}
+	Then the function defined by
+	\begin{align*}
+		Z^1(\zeta, \xi)(\alpha) = \xi \circ \alpha \circ \zeta,
+	\end{align*}
+	maps $Z^1(K, V) \rightarrow Z^1(K', V')$.
+
+	Furthermore, $Z^1(\zeta, \xi)$ descends to give a well-defined map
+	\begin{align*}
+		H^1(\zeta, \xi):H^1(K, V) \rightarrow H^1(K', V'),
+	\end{align*}
+	defined by
+	\begin{align*}
+		H^1(\zeta, \xi)(\psi(\alpha)) = \left(\psi' \circ Z^1(\zeta, \xi)\right)(\alpha),
+	\end{align*}
+	for all $\alpha \in Z^1(K, V)$, where $\psi:Z^1(K, V)\rightarrow H^1(K, V)$ and $\psi':Z^1(K', V') \rightarrow H^1(K', V')$ are the canonical projections.
+
+	Moreover, the following diagram commutes:
+	\begin{align*}
+		\xymatrix{
+			Z^1(K, V) \ar[r]^{Z^1(\zeta, \xi)} \ar[d]^{\psi} & Z^1(K', V') \ar[d]^{\psi'} \\
+			H^1(K, V) \ar[r]^{H^1(\zeta, \xi)}               & H^1(K', V').
+		}
+	\end{align*}
+\end{lemma}
+\begin{proof}
+	Let $\alpha \in Z^1(K, V)$ and let $x,y \in K'$. Then
+	\begin{align*}
+		(\xi \circ \alpha \circ \zeta)(xy) &= \xi \left((\alpha \circ \zeta)(x)\right) \xi \left(x \ast (\alpha \circ \zeta)(y)\right) \quad\textrm{(Lemma \ref{zeta})} \\
+			&= \xi \left((\alpha \circ \zeta)(x)\right) \left(x \wedge \xi(\alpha \circ \zeta)(y)\right) \quad\textrm{(by (d))} \\
+			&= (\xi \circ \alpha \circ \zeta)(x) \left(x \wedge (\xi \circ \alpha \circ \zeta)(y)\right).
+	\end{align*}
+	Therefore $(\xi \circ \alpha \circ \zeta) \in Z^1(K', V')$.
+
+	It remains to show $H^1(\zeta, \xi)$ is well-defined. Let $\alpha,\beta \in Z^1(K, V)$ such that $\psi(\alpha) = \psi(\beta)$. Then there exists $v \in V$ such that
+	\begin{align*}
+		\beta(x) = v\alpha(x)(x \cdot v^{-1}),
+	\end{align*}
+	for all $x \in K$.
+
+	Then, for all $x \in K'$
+	\begin{align*}
+		\left(Z^1(\zeta, \xi)(\beta)\right)(x) &= \xi\left(\beta(\zeta(x))\right) \\
+			&= \xi \left( v \alpha(\zeta(x))\left(\zeta(x) \ast v^{-1}\right) \right) \\
+			&= \xi(v) \xi(\alpha(\zeta(x))) \xi\left( \zeta(x) \ast v^{-1}\right) \\
+			&= \xi(v) \xi(\alpha(\zeta(x)))\left(x \wedge \xi(v^{-1})\right) \\
+			&= \xi(v) \left(Z^1(\zeta, \xi)(\alpha)\right)(x) \left(x \wedge \xi(v^{-1})\right).
+	\end{align*}
+	This shows that $\psi'\left(Z^1(\zeta, \xi)(\alpha)\right) = \psi'\left(Z^1(\zeta, \xi)(\beta)\right)$, hence $H^1(\zeta, \xi)$ is well-defined. This completes the proof.
+\end{proof} 
+
+\begin{remark}
+	The slightly unfortunate choice of notation ``$Z^1(K, V)$'' doesn't explicitly mention the action. The consequence is that given suitable homomorphisms
+	\begin{align*}
+		\zeta&:K \rightarrow K, \\
+		\xi&: V \rightarrow V,
+	\end{align*}
+	the statement
+	\begin{align*}
+		H^1(\zeta, \xi):H^1(K, V) \rightarrow H^1(K, V)
+	\end{align*}
+	is misleading on its own: Is the 1-cohomology on the left of the arrow the same as the one on the right? If nothing is said about the action defining the 1-cocycles on the right, we take that to mean they are the same. More satisfyingly, and by pure coincidence, later on in Chapter \ref{Chapter4} we adopt a modified notation for the 1-cocycles and the 1-cohomology which carries with it the action defining the 1-cocycles.
+\end{remark}
 
 \begin{example}
-Let $\tilde{K}$ be a subgroup of $K$ and $\iota:\tilde{K}\rightarrow K$ the inclusion map. Then $\iota$ gives rise to the well-defined maps
+	Let $K' < K$ and let $\zeta$ be the inclusion of $K'$ in $K$. Let $\xi$ be the identity map on $V$. Then by Lemma \ref{h1maps}, the map $Z^1(\zeta, \xi)$ defined by
 \begin{align*}
-  Z^1(\iota): Z^1(K, V) \rightarrow Z^1(\tilde{K}, V), \\
-H^1(\iota):H^1(K, V)\rightarrow H^1(\tilde{K}, V).
+	Z^1(\zeta, \xi)(\alpha) = \xi \circ \alpha \circ \zeta = \alpha \circ \zeta,
 \end{align*}
+maps $Z^1(K, V)$ into $Z^1(K', V)$. Furthermore, the map
+\begin{align*}
+	H^1(\zeta, \xi)(\psi(\alpha)) = \psi' \circ Z^1(\zeta, \xi),
+\end{align*}
+is a well-defined map of 1-cohomologies $H^1(K, V) \rightarrow H^1(K', V)$.
 \end{example}
 
-The next Lemma is standard \cite[Theorem 10.3]{brown1976cohomology} but we give our own proof here.
+The next Lemma is standard \cite[Theorem 10.3]{brown1976cohomology} but we give our own proof here. The Lemma deals with the abelian 1-cohomology of a finite group, so we alter our notation appropriately.
 \begin{lemma}
-Let $V$ be a vector space over a field of characteristic $p$. Let $\Gamma$ be a finite group and $\Gamma_p < \Gamma$ a \emph{Sylow $p$-subgroup} of $\Gamma$. The map 
+Let $V$ be a vector space over a field of characteristic $p$. Let $\Gamma$ be a finite group and $\Gamma_p < \Gamma$ a \emph{Sylow $p$-subgroup} of $\Gamma$. Let $\zeta$ be the inclusion of $\Gamma_p$ in $\Gamma$, and $\xi$ the identity map on $V$. The map 
 \begin{align*}
-H^1(\iota):H^1(\Gamma, V)\rightarrow H^1(\Gamma_p, V)
+H^1(\zeta, \xi):H^1(\Gamma, V)\rightarrow H^1(\Gamma_p, V)
 \end{align*}
 is injective.
 \label{lem:a_h_restriction}
 \end{lemma}
 \begin{proof}
-Let $x$ be an element of $H^1(\Gamma, V)$ such that $\left(H^1(\iota)\right)(x) = 0$. Now choose a 1-cocycle $\alpha \in Z^1(\Gamma, V)$ such that $[\alpha] = x$, where $[\alpha]$ denotes the projection to the 1-cohomology. Kence $\left(Z^1(\iota)\right)(\alpha)$ is a 1-coboundary as $\left[\left(Z^1(\iota)\right)(\alpha)\right] = 0$. That is to say $\alpha$ restricted to $\Gamma_p$ is equal to a 1-coboundary, say $\chi_v^{\Gamma_p}$. But since $\chi_v^{\Gamma_p}$ can be trivially extended to a 1-coboundary $\chi_v^\Gamma$ from $\Gamma\rightarrow V$, and \begin{align*}
-	\left[\alpha - \chi_v^\Gamma\right] = x,
-\end{align*}
-we could well have chosen the 1-cocycle $(\alpha - \chi_v^\Gamma)$ as a representative for $x$. Kence there is no harm in assuming that $\alpha$ is 0 when restricted to $\Gamma_p$.
-Now choose a set of representatives $\gamma_1, \ldots, \gamma_l \in \Gamma$ for the coset space $\Gamma/\Gamma_p$ and set
+	We will show that $\mathrm{Ker}\left(H^1(\zeta, \xi)\right)$ is trivial. First we show that we can choose $\psi(\beta) \in \mathrm{Ker}\left(H^1(\zeta, \xi)\right)$ such that $Z^1(\zeta, \xi)(\beta) = 0$.
+	
+	Let $\alpha \in Z^1(\Gamma, V)$ such that $H^1(\zeta, \xi)(\psi(\alpha)) = \psi'(0)$. Hence $Z^1(\zeta, \xi)(\alpha)$ is a 1-coboundary, so there exists $v \in V$ such that
 \begin{align*}
-	v^* = \sum_{i =1}^l \alpha(\gamma_i).
+	Z^1(\zeta, \xi)(\alpha) = \chi^{\Gamma_p}_v.
 \end{align*}
-Consider the 1-coboundary $\chi_{v^*}^\Gamma$:
+But
 \begin{align*}
-	\chi_{v^*}^\Gamma(\gamma) &=  v^* - \gamma\cdot v^* \\
-	&=  \sum_{i = 1}^l\alpha(\gamma_i) - \gamma\cdot \sum_{i = 1}^l\alpha(\gamma_i) \\
-	&=  \sum_{i = 1}^l\alpha(\gamma_i) - \sum_{i = 1}^l \gamma\cdot \alpha(\gamma_i).
+	\chi^{\Gamma_p}_v = Z^1(\zeta, \xi)(\chi^\Gamma_v),
 \end{align*}
-By the 1-cocycle condition we have for all $\gamma \in \Gamma$
+so let $\beta = \alpha - \chi^\Gamma_v \in Z^1(\Gamma, V)$. Then
 \begin{align*}
-	\alpha(\gamma \gamma_i) = \alpha(\gamma) + \gamma\cdot\alpha(\gamma_i),
-\end{align*}
-for each $1 \leq i \leq l$. Therefore
+	\psi(\beta) &= \psi(\alpha - \chi^\Gamma_v) \\
+		&= \psi(\alpha) \in \mathrm{Ker}\left(H^1(\zeta, \xi)\right),
+	\end{align*}
+	and
+	\begin{align*}
+		Z^1(\zeta, \xi)(\beta) &= Z^1(\zeta, \xi)(\alpha - \chi^\Gamma_v) \\
+			&= Z^1(\zeta, \xi)(\alpha) - Z^1(\zeta, \xi)(\chi^\Gamma_v) \\
+			&= \chi^{\Gamma_p}_v - \chi^{\Gamma_p}_v = 0.
+		\end{align*}
+
+		Choose a set of representatives $\{\gamma_1, \ldots, \gamma_l\} \subset \Gamma$ for the right coset space of $\Gamma_p$ in $\Gamma$ and let
 \begin{align*}
-	 \sum_{i = 1}^l\alpha(\gamma_i) - \sum_{i = 1}^l \gamma\cdot \alpha(\gamma_i) 
-	&=  \sum_{i = 1}^l\alpha(\gamma_i) - \sum_{i = 1}^l \left(\alpha(\gamma\gamma_i) - \alpha(\gamma) \right)\\
-	&=  \sum_{i = 1}^l\alpha(\gamma_i) - \sum_{i = 1}^l \alpha(\gamma\gamma_i) +\sum_{i = 1}^l \alpha(\gamma).
+	w = \sum_{i =1}^l \beta(\gamma_i).
 \end{align*}
-The value of $\alpha$ at a fixed $\gamma$ depends only on the value of $\alpha$ at the representative $\gamma_j$ of the coset containing $\gamma$, and for two cosets $\gamma_i \Gamma_p, \gamma_j \Gamma_p$ and a fixed $\gamma \in \Gamma$
-\begin{align}
-  \gamma \gamma_i \Gamma_p = \gamma \gamma_j \Gamma_p \Leftrightarrow \gamma_i \Gamma_p = \gamma_j \Gamma_p,
-\end{align}
-so that $\{\gamma \gamma_i \,|\, 1 \leq i \leq l\}$ meets each coset in $\Gamma/\Gamma_p$ exactly once. Kence we can collapse the middle term to yield
+Let $\gamma \in \Gamma$. Then
+\begin{align*}
+	\chi_{w}^\Gamma(\gamma) &=  w - \gamma\cdot w \\
+	&=  \sum_{i = 1}^l\beta(\gamma_i) - \gamma\cdot \sum_{i = 1}^l\beta(\gamma_i) \\
+	&=  \sum_{i = 1}^l\beta(\gamma_i) - \sum_{i = 1}^l \gamma\cdot \beta(\gamma_i) \\
+	&=  \sum_{i = 1}^l\beta(\gamma_i) - \sum_{i = 1}^l \left(\beta(\gamma\gamma_i) - \beta(\gamma) \right) \quad(\textrm{Equation }\ref{eqn:a_z})\\
+	&=  \sum_{i = 1}^l\beta(\gamma_i) - \sum_{i = 1}^l \beta(\gamma\gamma_i) +\sum_{i = 1}^l \beta(\gamma).
+\end{align*}
+Let $\gamma_j$ be the coset representative of $\gamma$, so that $\gamma \in \Gamma_p\gamma_j$. Then $\beta(\gamma\gamma_i) = \beta(\Gamma_p\gamma_j\gamma_i) = \beta(\gamma_j\gamma_i)$.
+
+
+
+------
 \begin{align*}
 	\chi_{v^*}^\Gamma(\gamma) 
-	&=  \sum_{i = 1}^l\alpha(\gamma_i) - \sum_{i = 1}^l \alpha(\gamma\gamma_i) +\sum_{i = 1}^l \alpha(\gamma)\\
-	&=  \sum_{i = 1}^l\alpha(\gamma_i) - \sum_{i = 1}^l \alpha(\gamma_i) +\sum_{i = 1}^l \alpha(\gamma) \\
-	&=  l\, \alpha(\gamma).
+	&=  \sum_{i = 1}^l\beta(\gamma_i) - \sum_{i = 1}^l \beta(\gamma\gamma_i) +\sum_{i = 1}^l \beta(\gamma)\\
+	&=  \sum_{i = 1}^l\beta(\gamma_i) - \sum_{i = 1}^l \beta(\gamma_i) +\sum_{i = 1}^l \beta(\gamma) \\
+	&=  l\, \beta(\gamma).
 \end{align*}
 Since $\gcd([\Gamma:\Gamma_p], p) = \gcd(l,p) = 1$, $l$ has an inverse $l^{-1} = m$ and so
 \begin{align*}
-	m\chi_{v^*}^\Gamma(\gamma) = \alpha(\gamma).
+	m\chi_{v^*}^\Gamma(\gamma) = \beta(\gamma).
 \end{align*}
-Therefore $\alpha$ is the 1-coboundary
+Therefore $\beta$ is the 1-coboundary
 \begin{align}
   m\chi_{v^*}^\Gamma = \chi_{mv^*}^\Gamma
 \end{align}
-and so the kernel of $K(\iota)$ is trivial.
+and so $\mathrm{Ker}\left(H^1(\zeta, \xi)\right)$ is trivial.
 \end{proof}
 
 \begin{example}
