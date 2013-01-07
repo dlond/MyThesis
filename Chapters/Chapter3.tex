@@ -79,7 +79,11 @@ Evidently $B^1(K, V)$ is a subgroup of $Z^1(K, V)$. In fact $B^1(K, V)$ is a $\m
 We denote by $\psi$ the canonical projection from $Z^1(K, V)\rightarrow H^1(K, V)$.
 \end{definition}
 
-TODO: $V$ is a vector space, $K$ acts linearly $\Rightarrow$ $B^1(K, V) \subset Z^1(K, V)$ are vector spaces: formula for scalar multiplication, formula for $\lambda\chi^K_V, \lambda \in k$.
+\begin{lemma} \label{vspace} If $V$ is a vector space and $K$ acts linearly on $V$ then $Z^1(K, V)$ is a vector space and $B^1(K, V)\subset Z^1(K, V)$ is a vector subspace.
+\end{lemma}
+\begin{proof}
+\end{proof}
+Formula for scalar multiplication, formula for $\lambda\chi^K_V, \lambda \in k$.
 
 We conclude this Section with a useful Lemma \cite[Proposition 1]{kemper2000characterization}.
 \begin{lemma} Suppose $K$ is linearly reductive. Then $H^1(K, V)$ is trivial.
@@ -127,13 +131,17 @@ In the abelian case we use the fact that we can take the quotient $Z^1(K, V)/B^1
 \end{align*}
 Again, this makes no sense in the non-abelian setting. Instead we have the following Definition.
 
-\begin{definition} Define the relation $\sim$ on $Z^1(K, V)$ by
+\begin{lemma} Define the relation $\sim$ on $Z^1(K, V)$ by
 	\begin{align}
 		\alpha \sim \beta \Leftrightarrow \exists v \in V, \alpha = v\beta(x)(x \cdot v^{-1}), \forall x \in K.
 		\label{eqn:h_equiv}
 	\end{align}
-Then $\sim$ is an equivalence relation (TODO: show in appendix?).
+Then $\sim$ is an equivalence relation.
+\end{lemma}
+\begin{proof}
+\end{proof}
 
+\begin{definition}
 Denote by $H^1(K, V)$ the \emph{1-cohomology}, defined to be the set of equivalence classes of $Z^1(K, V)$ under the relation in Equation \ref{eqn:h_equiv}, and denote by $\psi$ the canonical projection from $Z^1(K, V) \rightarrow H^1(K, V)$.
 \end{definition}
 
@@ -145,17 +153,17 @@ R. Richardson \cite[Lemma 6.2.6]{richardson1982orbits} provides a result analogo
 
 \section{Maps Between 1-Cohomologies}
 
-The next few results (Lemma \ref{zeta}--Lemma \ref{h1maps}) could be stated in terms of the abelian 1-cohomology. Indeed we provide Lemma \ref{lem:a_h_restriction}, where $V$ is necessarily a vector space. However, for reasons of efficiency we state these few \emph{definition-like} results leading up to Lemma \ref{h1maps} using multiplicative notation only.
+The next few results (Lemma \ref{zeta}--Lemma \ref{h1maps}) could be stated in terms of the abelian 1-cohomology. Indeed we provide Corollary \ref{zlinear} and Lemma \ref{lem:a_h_restriction}, where $V$ is necessarily a vector space. However, for reasons of efficiency we state these few \emph{definition-like} results leading up to Lemma \ref{h1maps} using multiplicative notation only.
 
 As in the previous Section, $K, V$ are algebraic groups such that $K$ acts on $V$ by group automorphisms. We denote the action of $K$ on $V$ by $x \cdot v$, for $x \in K, v \in V$.
 
 \begin{lemma} \label{zeta}
-	Let $K'$ be an algebraic group that acts on $V$ by group automorphisms, so we can define $Z^1(K', V), H^1(K', V)$. Denote the action of $K'$ on $V$ by $x \ast v$, for $x \in K', v \in V$.
+	Let $K'$ be an algebraic group that acts on $V$ by group automorphisms. Denote the action of $K'$ on $V$ by $x \ast v$, for $x \in K', v \in V$.
 
-	Let $\zeta:K'\rightarrow K$ be a homomorphism and suppose that $x \ast v = \zeta(x) \cdot v$ for all $x \in K', v \in V$. Then for all $\alpha \in Z^1(K, V), \alpha \circ \zeta \in Z^1(K', V)$.
+	Let $\zeta:K'\rightarrow K$ be a homomorphism and suppose that $x \ast v = \zeta(x) \cdot v$ for all $x \in K', v \in V$. Then $\alpha \circ \zeta \in Z^1(K', V)$ for all $\alpha \in Z^1(K, V)$.
 \end{lemma}
 \begin{proof}
-	Let $\alpha \in Z^1(K, V)$ and let $x, y \in K'$. Then
+	Let $\alpha \in Z^1(K, V)$. Evidently $\alpha \circ \zeta$ is a morphism from $K' \rightarrow V$. Let $x, y \in K'$, then
 	\begin{align*}
 		(\alpha \circ \zeta)(xy) &= \alpha(\zeta(x)\zeta(y) \\
 			&= \alpha(\zeta(x))\left(\zeta(x) \cdot \alpha(\zeta(y))\right) \\
@@ -168,10 +176,10 @@ As in the previous Section, $K, V$ are algebraic groups such that $K$ acts on $V
 \begin{lemma} \label{xi}
 	Let $V'$ be an algebraic group on which $K$ acts by group automorphisms. Denote the action of $K$ on $V'$ by $x \wedge v$ for $x \in K, v \in V'$.
 
-	Let $\xi: V \rightarrow V'$ be a $K$-equivariant homomorphism, that is, $x \wedge \xi(v) = \xi(x \cdot v)$ for all $x \in K, v \in V$. Then for all $\alpha \in Z^1(K, V), \xi \circ \alpha \in Z^1(K, V')$.
+	Let $\xi: V \rightarrow V'$ be a $K$-equivariant homomorphism, that is, $x \wedge \xi(v) = \xi(x \cdot v)$ for all $x \in K, v \in V$. Then $\xi \circ \alpha \in Z^1(K, V')$ for all $\alpha \in Z^1(K, V)$. 
 \end{lemma}
 \begin{proof}
-	Let $\alpha \in Z^1(K, V)$ and let $x, y \in K$. Then
+	Let $\alpha \in Z^1(K, V)$. Evidently $\xi \circ \alpha$ is a morphism from $K \rightarrow V'$. Let $x, y \in K$, then
 	\begin{align*}
 		(\xi \circ \alpha)(xy) &= \xi\left(\alpha(x)(x \cdot \alpha(y))\right) \\
 			&= \xi(\alpha(x))\xi(x \cdot \alpha(y)) \\
@@ -210,13 +218,13 @@ As in the previous Section, $K, V$ are algebraic groups such that $K$ acts on $V
 	Moreover, the following diagram commutes:
 	\begin{align*}
 		\xymatrix{
-			Z^1(K, V) \ar[r]^{Z^1(\zeta, \xi)} \ar[d]^{\psi} & Z^1(K', V') \ar[d]^{\psi'} \\
+			Z^1(K, V) \ar[r]^{Z^1(\zeta, \xi)} \ar[d]_{\psi} & Z^1(K', V') \ar[d]^{\psi'} \\
 			H^1(K, V) \ar[r]^{H^1(\zeta, \xi)}               & H^1(K', V').
 		}
 	\end{align*}
 \end{lemma}
 \begin{proof}
-	Let $\alpha \in Z^1(K, V)$ and let $x,y \in K'$. Then
+	Let $\alpha \in Z^1(K, V)$. Evidently $\xi \circ \alpha \circ \zeta$ is a morphism. Let $x,y \in K'$, then
 	\begin{align*}
 		(\xi \circ \alpha \circ \zeta)(xy) &= \xi \left((\alpha \circ \zeta)(x)\right) \xi \left(x \ast (\alpha \circ \zeta)(y)\right) \quad\textrm{(Lemma \ref{zeta})} \\
 			&= \xi \left((\alpha \circ \zeta)(x)\right) \left(x \wedge \xi(\alpha \circ \zeta)(y)\right) \quad\textrm{(by (d))} \\
@@ -238,7 +246,7 @@ As in the previous Section, $K, V$ are algebraic groups such that $K$ acts on $V
 			&= \xi(v) \xi(\alpha(\zeta(x)))\left(x \wedge \xi(v^{-1})\right) \\
 			&= \xi(v) \left(Z^1(\zeta, \xi)(\alpha)\right)(x) \left(x \wedge \xi(v^{-1})\right).
 	\end{align*}
-	This shows that $\psi'\left(Z^1(\zeta, \xi)(\alpha)\right) = \psi'\left(Z^1(\zeta, \xi)(\beta)\right)$, hence $H^1(\zeta, \xi)$ is well-defined. This completes the proof.
+	This shows that $\psi'\left(Z^1(\zeta, \xi)(\alpha)\right) = \psi'\left(Z^1(\zeta, \xi)(\beta)\right)$, hence $H^1(\zeta, \xi)$ is well-defined.
 \end{proof} 
 
 \begin{remark}
@@ -251,10 +259,18 @@ As in the previous Section, $K, V$ are algebraic groups such that $K$ acts on $V
 	\begin{align*}
 		H^1(\zeta, \xi):H^1(K, V) \rightarrow H^1(K, V)
 	\end{align*}
-	is misleading on its own: Is the 1-cohomology on the left of the arrow the same as the one on the right? If nothing is said about the action defining the 1-cocycles on the right, we take that to mean they are the same. More satisfyingly, and by pure coincidence, later on in Chapter \ref{Chapter4} we adopt a modified notation for the 1-cocycles and the 1-cohomology which carries with it the action defining the 1-cocycles.
-\end{remark}
+	is misleading on its own: Is the 1-cohomology on the left of the arrow the same as the one on the right? If nothing is said about the action defining the 1-cocycles on the right, we take that to mean they are the same.
 
-\begin{example}
+	Similarly, when $\zeta$ is the inclusion map of some $K' < K$ in $K$ and $\xi$ is the identity map on $V$, it is implicit that the action of $K'$ on $V$ is defined by the action of $K$ on $V$ (cf. Example \ref{h1subgp}, Lemma \ref{brown}) unless specified otherwise.
+
+	More satisfyingly, and by pure coincidence, later on in Chapter \ref{Chapter4} we adopt a modified notation for the 1-cocycles and the 1-cohomology which carries with it the action defining the 1-cocycles.
+\end{remark}
+\begin{corollary} \label{zlinear} If $V$ is a vector space and $K$ acts linearly on $V$ then $Z^1(\zeta, \xi)$ is linear.
+\end{corollary}
+\begin{proof}
+\end{proof}
+
+\begin{example} \label{h1subgp}
 	Let $K' < K$ and let $\zeta$ be the inclusion of $K'$ in $K$. Let $\xi$ be the identity map on $V$. Then by Lemma \ref{h1maps}, the map $Z^1(\zeta, \xi)$ defined by
 \begin{align*}
 	Z^1(\zeta, \xi)(\alpha) = \xi \circ \alpha \circ \zeta = \alpha \circ \zeta,
@@ -267,8 +283,8 @@ is a well-defined map of 1-cohomologies $H^1(K, V) \rightarrow H^1(K', V)$.
 \end{example}
 
 The next Lemma is standard \cite[Theorem 10.3]{brown1976cohomology} but we give our own proof here. The Lemma deals with the abelian 1-cohomology of a finite group, so we alter our notation appropriately.
-\begin{lemma}
-Let $V$ be a vector space over a field of characteristic $p$. Let $\Gamma$ be a finite group and $\Gamma_p < \Gamma$ a \emph{Sylow $p$-subgroup} of $\Gamma$. Let $\zeta$ be the inclusion of $\Gamma_p$ in $\Gamma$, and $\xi$ the identity map on $V$. The map 
+\begin{lemma} \label{brown}
+Let $V$ be a vector space over a field of characteristic $p$. Let $\Gamma$ be a finite group that acts linearly on $V$, and let $\Gamma_p < \Gamma$ a \emph{Sylow $p$-subgroup} of $\Gamma$. Let $\zeta$ be the inclusion of $\Gamma_p$ in $\Gamma$, and $\xi$ the identity map on $V$. The map 
 \begin{align*}
 H^1(\zeta, \xi):H^1(\Gamma, V)\rightarrow H^1(\Gamma_p, V)
 \end{align*}
@@ -282,9 +298,9 @@ is injective.
 \begin{align*}
 	Z^1(\zeta, \xi)(\alpha) = \chi^{\Gamma_p}_v.
 \end{align*}
-But
+We also have
 \begin{align*}
-	\chi^{\Gamma_p}_v = Z^1(\zeta, \xi)(\chi^\Gamma_v),
+	Z^1(\zeta, \xi)(\chi^\Gamma_v) = \chi^{\Gamma_p}_v ,
 \end{align*}
 so let $\beta = \alpha - \chi^\Gamma_v \in Z^1(\Gamma, V)$. Then
 \begin{align*}
@@ -294,7 +310,7 @@ so let $\beta = \alpha - \chi^\Gamma_v \in Z^1(\Gamma, V)$. Then
 	and
 	\begin{align*}
 		Z^1(\zeta, \xi)(\beta) &= Z^1(\zeta, \xi)(\alpha - \chi^\Gamma_v) \\
-			&= Z^1(\zeta, \xi)(\alpha) - Z^1(\zeta, \xi)(\chi^\Gamma_v) \\
+			&= Z^1(\zeta, \xi)(\alpha) - Z^1(\zeta, \xi)(\chi^\Gamma_v) \quad(\textrm{Lemma }\ref{zlinear})\\
 			&= \chi^{\Gamma_p}_v - \chi^{\Gamma_p}_v = 0.
 		\end{align*}
 
@@ -312,24 +328,15 @@ Let $\gamma \in \Gamma$. Then
 \end{align*}
 Let $\gamma_j$ be the coset representative of $\gamma$, so that $\gamma \in \Gamma_p\gamma_j$. Then $\beta(\gamma\gamma_i) = \beta(\Gamma_p\gamma_j\gamma_i) = \beta(\gamma_j\gamma_i)$.
 
-
-
-------
+Therefore $\sum_{i = 1}^l \beta(\gamma\gamma_i) = \sum_{i = 1}^l \beta(\gamma_i)$. Hence
 \begin{align*}
-	\chi_{v^*}^\Gamma(\gamma) 
-	&=  \sum_{i = 1}^l\beta(\gamma_i) - \sum_{i = 1}^l \beta(\gamma\gamma_i) +\sum_{i = 1}^l \beta(\gamma)\\
+	\chi_{w}^\Gamma(\gamma) &=  w - \gamma\cdot w \\
+	&=  \sum_{i = 1}^l\beta(\gamma_i) - \sum_{i = 1}^l \beta(\gamma\gamma_i) +\sum_{i = 1}^l \beta(\gamma) \\
 	&=  \sum_{i = 1}^l\beta(\gamma_i) - \sum_{i = 1}^l \beta(\gamma_i) +\sum_{i = 1}^l \beta(\gamma) \\
-	&=  l\, \beta(\gamma).
+	&=  \sum_{i = 1}^l \beta(\gamma) = l\beta(\gamma).
 \end{align*}
-Since $\gcd([\Gamma:\Gamma_p], p) = \gcd(l,p) = 1$, $l$ has an inverse $l^{-1} = m$ and so
-\begin{align*}
-	m\chi_{v^*}^\Gamma(\gamma) = \beta(\gamma).
-\end{align*}
-Therefore $\beta$ is the 1-coboundary
-\begin{align}
-  m\chi_{v^*}^\Gamma = \chi_{mv^*}^\Gamma
-\end{align}
-and so $\mathrm{Ker}\left(H^1(\zeta, \xi)\right)$ is trivial.
+
+Since $\mathrm{gcd}(l, p) = 1$, $l \neq 0 \in k$. Therefore, by Lemma \ref{vspace} $\beta \in B^1(\Gamma, V)$ so $\mathrm{Ker}\left(H^1(\zeta, \xi)\right)$ is trivial.
 \end{proof}
 
 \begin{example}
