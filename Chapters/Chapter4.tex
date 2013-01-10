@@ -28,32 +28,32 @@ The following general result shows that finiteness of $G$-conjugacy classes of $
 \end{lemma}
 \begin{proof}
 	Let $\rho, \varsigma \in R$ such that $\rho$ and $\varsigma$ lie in the same $G$-conjugacy class of $R$. Then there exists $g\in G$ such that
-	\begin{align} \label{gclass}
+	\begin{align*}
 		g \rho(x) g^{-1} = \varsigma(x),
-	\end{align}
+	\end{align*}
 for all $x \in K$.
 	
 	Let $Q = gPg^{-1}$. By Equation \ref{gclass}, $\varsigma(K) \subset Q$. Hence $\varsigma(K) \subset P \cap Q$.
 	
 	Let $T$ be a maximal torus of $G$ contained in $P\cap Q$. Since $T$ and $gTg^{-1}$ are maximal tori of $Q$ they must be $Q$-conjugate, so there exists $q\in Q$ such that
-	\begin{align} \label{GPconj:conjT}
-		qTq^{-1} = gTg^{-1}.
-	\end{align}
-	Then there exists $p\in P$ such that $q = gpg^{-1}$, and Equation \ref{GPconj:conjT} becomes
 	\begin{align*}
-		gpg^{-1}Tgp^{-1}g^{-1} &= gTg^{-1} \\
-		\Rightarrow pg^{-1}Tgp^{-1} &= T.
+		qTq^{-1} = gTg^{-1}.
 	\end{align*}
-	Therefore $gp^{-1} \in N_G(T)$. 
+	Then there exists $r\in P$ such that $q = grg^{-1}$, so
+	\begin{align*}
+		grg^{-1}Tgr^{-1}g^{-1} &= gTg^{-1} \\
+		\Rightarrow rg^{-1}Tgr^{-1} &= T.
+	\end{align*}
+	Therefore $gr^{-1} \in N_G(T)$. 
 
 	Fix a finite set $N \subset N_G(T)$ of coset representatives for the Weyl group $W = N_G(T)/T$ and let $n \in N, t \in T$ such that
-	\begin{align} \label{GPconj:g1}
-		gp^{-1} = nt.
-	\end{align}
-	Let \begin{align} \label{GPconj:g2} p' = p^{-1}t^{-1} \in P. \end{align} Then by Equations \ref{gclass}, \ref{GPconj:g1} and \ref{GPconj:g2},
+	\begin{align*}
+		gr^{-1} = nt.
+	\end{align*}
+	Let $q' = r^{-1}t^{-1}$ so $q' \in P$. Then
 	\begin{align*}
 		\rho(x) &= g^{-1} \varsigma(x) g\\
-		&= (p'n^{-1}) \varsigma(x) np'^{-1},
+		&= (q'n^{-1}) \varsigma(x) nq'^{-1},
 	\end{align*}
 	for all $x \in K$.
 	This shows 
@@ -83,14 +83,14 @@ Let $\rho \in \mathrm{Hom}(K, P)$ and define the map $\alpha_\rho: K \rightarrow
 \begin{align}\label{rho:alpha}
 \alpha_\rho(x) = \rho(x)\rho^L(x^{-1}).
 \end{align}
-We have an action of $K$ on $V$ via $\rho^L$ using Equation \ref{haction}, and we will show that with this action the map $\alpha_\rho$ is a 1-cocycle from $K \rightarrow V$. To this end, let $x_1, x_2 \in K$.
+We have an action of $K$ on $V$ via $\rho^L$ using Equation \ref{haction}, and we will show that with this action the map $\alpha_\rho$ is a 1-cocycle from $K \rightarrow V$. To this end, let $x, y \in K$.
 Then,
-\begin{align*} \alpha_\rho(x_1x_2) &= \alpha_\rho(x_1x_2) \rho^L(x_1x_2) \left(\rho^L(x_1x_2)\right)^{-1} \\
-	&= \rho(x_1x_2) \left(\rho^L(x_1x_2)\right)^{-1} \\
-	&= \rho(x_1) \rho(x_2) \left(\rho^L(x_1x_2)\right)^{-1} \\
-	&= \alpha_\rho(x_1) \rho^L(x_1) \alpha_\rho(x_2) \rho^L(x_2) \left(\rho^L(x_1x_2)\right)^{-1} \\
-	&= \alpha_\rho(x_1) \rho^L(x_1) \alpha_\rho(x_2) \rho^L(x_1^{-1}) \rho^L(x_1) \rho^L(x_2) \left(\rho^L(x_1x_2)\right)^{-1} \\
-	&= \alpha_\rho(x_1) \left(x_1 \cdot \alpha_\rho(x_2)\right). 
+\begin{align*} \alpha_\rho(xy) &= \alpha_\rho(xy) \rho^L(xy) \left(\rho^L(xy)\right)^{-1} \\
+	&= \rho(xy) \left(\rho^L(xy)\right)^{-1} \\
+	&= \rho(x) \rho(y) \left(\rho^L(xy)\right)^{-1} \\
+	&= \alpha_\rho(x) \rho^L(x) \alpha_\rho(y) \rho^L(y) \left(\rho^L(xy)\right)^{-1} \\
+	&= \alpha_\rho(x) \rho^L(x) \alpha_\rho(y) \rho^L(x^{-1}) \rho^L(x) \rho^L(y) \left(\rho^L(xy)\right)^{-1} \\
+	&= \alpha_\rho(x) \left(x \cdot \alpha_\rho(y)\right). 
 \end{align*}
 
 Therefore $\alpha_\rho$ satisfies the 1-cocycle condition in Equation \ref{eqn:na_z}.
@@ -110,18 +110,18 @@ More generally, if $R \subset \mathrm{Hom}(K, P)$ define
 \begin{align*} R_\sigma = \{ \rho \in R \,|\, \rho^L = \sigma \}. \end{align*}
 \end{definition}
 
-By construction, each $\rho \in \mathrm{Hom}(K, P)_\sigma$ yields a 1-cocycle $\alpha_\rho \in Z^1(K, V)_\sigma$ using Equation \ref{rhoalpha}.
+By construction, each $\rho \in \mathrm{Hom}(K, P)_\sigma$ yields a 1-cocycle $\alpha_\rho \in Z^1(K, V)_\sigma$ using Equation \ref{rho:alpha}.
 Conversely given a 1-cocycle $\alpha \in Z^1(K, V)_\sigma$ we can construct a map $\rho: K \rightarrow P$ defined by
 \begin{align}\label{alpha:rho}
 \rho(x) = \alpha(x)\sigma(x),
 \end{align}
-for all $x \in K$. This construction is a homomorphism from $K \rightarrow P$. For take $x_1, x_2 \in K$, then
+for all $x \in K$. This construction is a homomorphism from $K \rightarrow P$. For take $x, y \in K$, then
 \begin{align*}
-  \rho(x_1 x_2) &= \alpha(x_1 x_2) \sigma(x_1 x_2) \\
-  &= \alpha(x_1)(x_1 \cdot \alpha(x_2)) \sigma(x_1) \sigma(x_2) \\
-  &= \alpha(x_1) \sigma(x_1) \alpha(x_2) \sigma(x_1)^{-1} \sigma(x_1) \sigma(x_2) \\
-  &= \alpha(x_1) \sigma(x_1) \alpha(x_2) \sigma(x_2) \\
-  &= \rho(x_1) \rho(x_2).
+  \rho(x y) &= \alpha(x y) \sigma(x y) \\
+  &= \alpha(x)(x \cdot \alpha(y)) \sigma(x) \sigma(y) \\
+  &= \alpha(x) \sigma(x) \alpha(y) \sigma(x)^{-1} \sigma(x) \sigma(y) \\
+  &= \alpha(x) \sigma(x) \alpha(y) \sigma(y) \\
+  &= \rho(x) \rho(y).
 \end{align*}
 
 We point out that the constructions in Equations \ref{rho:alpha} and \ref{alpha:rho} are inverses of each other, and formalize the preceding in the following Lemma.
@@ -209,9 +209,9 @@ Using Definition \ref{h1sigma}, we can define $Z^1(K, V)_{l \cdot \sigma}$ to be
 \end{align*}
 for all $x \in K, v \in V$. Evidently $Z^1(K, V)_{l \cdot \sigma} = z\left(\mathrm{Hom}(K, P)_{l \cdot \sigma}\right)$. The reason for the new notation for the action above will become apparent presently, as we show that we have a map of 1-cohomomologies $H^1(K, V)_\sigma \rightarrow H^1(K, V)_{l \cdot \sigma}$.
 
-	We show that we can apply Lemma TODO. To this end, let $K' = K$, $V' = V$ and let $\zeta = \mathrm{id}:K \rightarrow K$.
+	We show that we can apply Lemma \ref{h1maps}. To this end, let $K' = K$, $V' = V$ and let $\zeta = \mathrm{id}:K \rightarrow K$.
 
-Let $\xi = \xi_l: V \rightarrow V'$ be defined by	$\xi_l(v) = lvl^{-1}$ for all $v \in V$. Now we show that $\xi_l$ satisfies Equation TODO. Let $x \in K, v \in V$. Then
+Let $\xi = \xi_l: V \rightarrow V'$ be defined by	$\xi_l(v) = lvl^{-1}$ for all $v \in V$. Now we show that $\xi_l$ satisfies condition (d) of the Lemma. Let $x \in K, v \in V$. Then
 	\begin{align*}
 		x . \xi_l(v) &= x . \left(lvl^{-1}\right) \\
 		&= l\sigma(x)l^{-1} \left(lvl^{-1}\right) l\sigma(x^{-1})l^{-1} \\
@@ -219,7 +219,7 @@ Let $\xi = \xi_l: V \rightarrow V'$ be defined by	$\xi_l(v) = lvl^{-1}$ for all 
 		&= l\left(x \cdot v \right)l^{-1} \\
 		&= \xi_l \left(x \cdot v \right).
 	\end{align*}
-	Therefore by Lemma TODO, the map $Z^1(\zeta, \xi_l):Z^1(K, V)_\sigma \rightarrow Z^1(K, V)_{l \cdot \sigma}$ defined by 
+	Therefore, by Lemma \ref{h1maps} the map $Z^1(\zeta, \xi_l):Z^1(K, V)_\sigma \rightarrow Z^1(K, V)_{l \cdot \sigma}$ defined by 
 	\begin{align*}
 		Z^1(\zeta, \xi_l)(\alpha) = \xi_l \circ \alpha,
 	\end{align*}
@@ -308,7 +308,7 @@ Let $\xi = \xi_l: V \rightarrow V'$ be defined by	$\xi_l(v) = lvl^{-1}$ for all 
 \begin{proof}
 \end{proof}
 
-In the theme Lemma TODO, we show that $H^1(\zeta, \xi)$ descends to give a well-defined map from $H^1(K, V)_\sigma/C_L(\sigma) \rightarrow H^1(K', V')_{\sigma \circ \zeta}/C_L(\sigma \circ \zeta)$.
+In the theme Lemma \ref{h1maps}, we show that $H^1(\zeta, \xi)$ descends to give a well-defined map from $H^1(K, V)_\sigma/C_L(\sigma) \rightarrow H^1(K', V')_{\sigma \circ \zeta}/C_L(\sigma \circ \zeta)$.
 
 \begin{lemma}
 \end{lemma}
@@ -435,7 +435,7 @@ Then there exists $l \in L$, $\tau \in \mathcal{S}$ such that $\rho^L = l \cdot 
 	Then $R$ is a finite union of $P$-conjugacy classes.
 \end{theorem}
 \begin{remark}
-	Since $R = P \cdot R$, $R^L$ is already a union of $L$-conjugacy classes by Lemma TODO, so the point of (i) is that the union is finite.
+	Since $R = P \cdot R$, $R^L$ is already a union of $L$-conjugacy classes by Lemma \ref{pr:lrl}, so the point of (i) is that the union is finite.
 \end{remark}
 \begin{proof}
 \end{proof}
