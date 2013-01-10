@@ -325,7 +325,6 @@ Let $V$ be a vector space over $k$, $\mathrm{char}(k) = p$. Let $\Gamma$ be a fi
 H^1(\zeta, \xi):H^1(\Gamma, V)\rightarrow H^1(\Gamma_p, V)
 \end{align*}
 is injective.
-\label{lem:a_h_restriction}
 \end{lemma}
 \begin{proof}
 	By Lemma \ref{kerh1} there exists $\beta \in Z^1(\Gamma, V)$ such that $\psi(\beta) \in \mathrm{Ker}\left(H^1(\zeta, \xi)\right)$ and $\beta(\gamma) = e$ for all $\gamma \in \Gamma_p$.
@@ -356,31 +355,51 @@ Since $\mathrm{gcd}(l, p) = \mathrm{gcd}\left([\Gamma_p:\Gamma], p\right) = 1$, 
 \end{proof}
 
 \begin{example}
-	Let
+	Let $k = \overline{\mathbb{F}_p} = \bigcup_{r\in \mathbb{N}} \mathbb{F}_{p^r}$.
+Let $V$ a be vector space over $k$ on which $SL_2(k)$ acts by group automorphisms, and let $U_2(k)$ be the subgroup of $SL_2(k)$ consisting of upper unitriangular matrices. Let $\zeta$ be the inclusion of $U_2(k)$ in $SL_2(k)$ and $\xi$ be the identity map on $V$.
+
+Then the map
 	\begin{align}
-		k = \overline{\mathbb{F}_p} = \bigcup_r \mathbb{F}_{p^r}.
-	\end{align}
-	Note that in general
-	\begin{align}
-	  \mathbb{F}_{p^r} \not\subset \mathbb{F}_{p^{r+1}},
-	\end{align}
-	but we do have
-	\begin{align}
-	  \mathbb{F}_{p^r} \subset \mathbb{F}_{p^{(r + 1)!}}.
-	\end{align}
-	Let $V$ a be vector space on which $SL_2(k)$ acts, and $U(k)$ the subgroup of $SL_2(k)$ consisting of upper unitriangular matrices. Then $U(\mathbb{F}_{p^r})$ is a Sylow $p$-subgroup of $SL_2(\mathbb{F}_{p^r})$ for each $r$, and the map
-	\begin{align}
-		H^1(\iota): H^1(SL_2(k), V) \rightarrow H^1(U(k), V)
+		H^1(\zeta, \xi): H^1(SL_2(k), V) \rightarrow H^1(U_2(k), V)
 	\end{align}
 	is injective.
 \label{eg:sl2ab}
 \end{example}
 \begin{proof}
-	The group $GL_2(\mathbb{F}_{p^r})$ has order $(p^{2r} - 1)(p^{2r} - p^r)$ since there are $p^{2r} - 1$ choices of vectors for the first column (all choices excluding the zero vector), and $p^{2r} - p^r$ choices of vectors for the second column (all choices excluding multiples of the first vector). The determinant is a homomorphism of groups
+	Let $r \in \mathbb{N}$ and denote the inclusion maps
+\begin{align*}
+	\zeta_r&:U_2(\mathbb{F}_{p^r}) \hookrightarrow SL_2(\mathbb{F}_{p^r}), \\
+	\iota_r&:SL_2(\mathbb{F}_{p^r}) \hookrightarrow SL_2(k), \\
+	\iota'_r&:U_2(\mathbb{F}_{p^r}) \hookrightarrow U_2(k).
+\end{align*}
+Repeated application of Lemma \ref{h1maps} yields the following commutative diagram,
+%\begin{align*}
+%	\xymatrix{
+%		Z^1(SL_2(k), V) \ar[r]^{Z^1(\zeta, \xi)} \ar[d]_{Z^1(\iota_r, \xi)} & Z^1(U_2(k), V) \ar[d]^{Z^1(\iota'_r, \xi)} \\
+%		Z^1(SL^2(\mathbb{F}_{p^r}), V) \ar[r]_{Z^1(\zeta_r, \xi)} & Z^1(U_2(\mathbb{F}_{p^r}), V),
+%	}
+%\end{align*}
+\begin{align*}
+	\xymatrix{
+		H^1(SL_2(k), V) \ar[r]^{H^1(\zeta, \xi)} \ar[d]_{H^1(\iota_r, \xi)} & H^1(U_2(k), V) \ar[d]^{H^1(\iota'_r, \xi)} \\
+		H^1(SL^2(\mathbb{F}_{p^r}), V)\, \ar[r]_{H^1(\zeta_r, \xi)} &\, H^1(U_2(\mathbb{F}_{p^r}), V).
+	}
+\end{align*}
+
+First we will show
+\begin{itemize}
+\item [(i)] $H^1(\zeta_r, \xi)$ is injective for each $r \in \mathbb{N}$, and
+\item [(ii)] if $\beta \in Z^1(SL_2(k), V)$ such that for all $r \in \mathbb{N}$
+\begin{align*} Z^1(\iota_{(r!)}, \xi)(\beta) \in B^1(SL_2(\mathbb{F}_{p^{r!}}), V),
+\end{align*}
+then $\beta \in B^1(SL_2(k), V)$.
+\end{itemize}
+
+The group $GL_2(\mathbb{F}_{p^r})$ has order $(p^{2r} - 1)(p^{2r} - p^r)$ since there are $p^{2r} - 1$ choices of vectors for the first column (all choices excluding the zero vector), and $p^{2r} - p^r$ choices of vectors for the second column (all choices excluding multiples of the first vector). The determinant is a homomorphism of groups
 	\begin{align}
 		\mathrm{det}:GL_2(\mathbb{F}_{p^r}) \rightarrow \mathbb{F}^*_{p^r},
 	\end{align}
-	with kernel $SL_2(\mathbb{F}_{p^r})$. Therefore, by the First Komomorphism Theorem for groups
+	with kernel $SL_2(\mathbb{F}_{p^r})$. Therefore, by the First Homomorphism Theorem for groups
 	\begin{align}
 		GL_2(\mathbb{F}_{p^r})\,/\,SL_2(\mathbb{F}_{p^r}) \simeq \mathrm{det}(GL_2(\mathbb{F}_{p^r})) = \mathbb{F}^*_{p^r},
 	\end{align}
@@ -392,30 +411,46 @@ Since $\mathrm{gcd}(l, p) = \mathrm{gcd}\left([\Gamma_p:\Gamma], p\right) = 1$, 
 		&=  p^r(p^{2r} - 1).
 	\end{align*}
 	Since $|U(\mathbb{F}_{p^r})| = p^r$, $U(\mathbb{F}_{p^r})$ is a Sylow $p$-subgroup of $SL_2(\mathbb{F}_{p^r})$.
+So by Lemma \ref{brown}, $H^1(\zeta_r, \xi)$ is injective. This proves (i).
 	
-	Fix a non-trivial $y\in H^1(SL_2(k), V)$ and choose a representative $\beta\in Z^1(SL_2(k), V)$ for $y$. For each $g\in SL_2(\mathbb{F}_{p^r})$ define the morphism $f_g:V\rightarrow V$ by
-	\begin{align}
-		f_g(v) = \beta(g) - \chi_v(g) = \beta(g) - v + g\cdot v.
-	\end{align}
-	Consider sequence of subsets of $V$ defined by
-	\begin{align}
-		C_r = \{v \in V \,|\, f_g(v) = 0\}.
-	\end{align}
-	Each subset $C_r$ is closed and the inclusion $\mathbb{F}_{p^{r!}} \subset \mathbb{F}_{p^{(r+1)!}}$ induces the reverse inclusion $C_{r!} \supset C_{(r+1)!}$. The Noetherian property for $V$ requires that the sequence of subsets of $V$ defined by
-	\begin{align}
-		\left\{C_{i!}\right\}_{i = 1}^\infty
-	\end{align}
-	becomes constant. Kowever, $y\neq 0$ so $\beta$ is not a 1-coboundary on $SL_2(k)$, which means the $C_r$'s are eventually empty. That is, there exists an integer $s$ such that for any $v$ in $V$
-	\begin{align}
-		(\beta - \chi_v)|_{SL_2(\mathbb{F}_{p^s})} \neq 0.
-	\end{align}
-	Equivalently, if $y|_{SL_2(\mathbb{F}_{p^r})} = 0$ for all $r$ then $y = 0$.
-	
-	Take $x$ in the kernel of the map 
-	\begin{align}
-	 H^1(\iota) : H^1(SL_2(k), V) \rightarrow H^1(U(k), V).
-       \end{align}
-	Then for each $r$, $x|_{U(\mathbb{F}_{p^r})} = 0$ so by Lemma \ref{lem:a_h_restriction}, $x|_{SL_2(\mathbb{F}_{p^r})} = 0$. Therefore $x=0$ and so $H^1(\iota)$ is injective.
+Let $\beta\in Z^1(SL_2(k), V)$ such that $\beta \notin B^1(SL_2(k), V)$, that is,
+\begin{align}\label{betanob1}
+	\beta \neq \chi^{SL_2(k)}_v,
+\end{align}
+for any $v \in V$. For each $x\in SL_2(\mathbb{F}_{p^r})$ define the morphism $f_x:V\rightarrow V$ by
+	\begin{align*}
+		f_x(v) = v^{-1} \beta(x) \left(x \cdot v\right).
+	\end{align*}
+Since $\mathbb{F}_{p^{r!}} \subset \mathbb{F}_{p^{(r+1)!}}$ we have $SL_2(\mathbb{F}_{p^{r!}}) \subset SL_2(\mathbb{F}_{p^{(r+1)!}})$.
+Consider sequence $\left\{C_{r}\right\}_{r \in \mathbb{N}} \subset V$ defined by
+	\begin{align*}
+		\left\{C_{r}\right\} = \{v \in V \,|\,\forall x\in SL_2(\mathbb{F}_{p^{r}}),\, f_x(v) = e\},
+	\end{align*}
+where $e$ is the identity in $V$.
+	Each $C_{r}$ is closed, and the inclusion $SL_2(\mathbb{F}_{p^{r!}}) \subset SL_2(\mathbb{F}_{p^{(r+1)!}})$ induces the reverse inclusion for the subsequence $C_{r!} \supset C_{(r+1)!}$.
+Then the Noetherian property for $V$ requires that the subsequence $\left\{C_{r!}\right\}_{r \in \mathbb{N}}$ becomes constant, and since
+\begin{align*}
+	&\{v \in V \,|\, \forall x \in SL_2(k), f_x(v) = e\} \\
+	= &\left\{v \in V \,|\, \forall x \in SL_2(k), \beta(x) = \chi^{SL_2(k)}_v(x)\right\} \\
+	= \,&\emptyset \quad(\textrm{Equation }\ref{betanob1}), 
+\end{align*}
+the subsequence $\left\{C_{r!}\right\}_{r \in \mathbb{N}}$ is eventually empty.
+That is, there exists $s\in\mathbb{N}$ such that
+	\begin{align*}
+		Z^1(\iota_s, \xi)(\beta) \neq \chi_v^{SL_2(\mathbb{F}_{p^{s}})},
+	\end{align*}
+	for any $v \in V$, which proves (ii).
+
+Finally, let $\psi(\alpha) \in \mathrm{Ker}\left(H^1(\zeta, \xi)\right)$.
+Then
+\begin{align*}
+	&\psi(\alpha) \in \mathrm{Ker}\left(H^1(\iota'_r, \xi) \circ H^1(\zeta, \xi)\right), \forall r \in \mathbb{N} \\
+	\Rightarrow &\,\psi(\alpha) \in \mathrm{Ker}\left(H^1(\zeta_r, \xi) \circ H^1(\iota_r, \xi)\right), \forall r \in \mathbb{N}  \\
+	\Rightarrow &\,H^1(\iota_r, \xi)(\psi(\alpha))\textrm{ is trivial }, \forall r \in \mathbb{N} \quad(\textrm{By (i)}) \\
+	\Rightarrow &\,Z^1(\iota_r, \xi)(\alpha) \in B^1(SL_2(\mathbb{F}_{p^r}), V), \forall r \in \mathbb{N}  \\
+	\Rightarrow &\,\alpha \in B^1(SL_2(k), V)\quad(\textrm{By (ii)}).
+\end{align*}
+This shows $H^1(\zeta, \xi)$ is injective.
 \end{proof}
 
 \begin{lemma} Let $B$ be a Borel subgroup of $SL_2$ acting on an algebraic group $V$ and let $\iota : B \rightarrow SL_2$ be the inclusion map. Then $H^1(\iota):H^1(SL_2, V)\rightarrow H^1(B, V)$ is injective.
