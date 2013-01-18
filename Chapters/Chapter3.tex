@@ -10,7 +10,7 @@ The abelian 1-cohomology is standard (cf. \cite{brown1976cohomology}). We presen
 
 Let $K$ be an algebraic group and $V$ an abelian group on which $K$ acts by group automorphisms. We denote the action by $x \cdot v$, for $x \in K, v \in V$.
 
-\begin{definition} We call a morphism $\alpha$ from $K\rightarrow V$ a \emph{1-cocycle} if it satisfies
+\begin{definition} We call a morphism $\alpha: K\rightarrow V$ a \emph{1-cocycle} if it satisfies
 	\begin{align}
 		\alpha(xy) = \alpha(x) + x\cdot\alpha(y),
 		\label{eqn:a_z}
@@ -29,7 +29,7 @@ For any $\alpha, \beta$ in $Z^1\left(K, V\right)$,
 \end{align*}
 for all $x,y \in K$. Moreover, $\alpha + \beta$ is a morphism, so $Z^1(K, V)$ is closed under pointwise addition.
 
-The trivial map from $K \rightarrow V$ that sends every $h \in K$ to the identity $0 \in V$ is a 1-cocycle. Furthermore for any $\alpha \in Z^1(K, V)$ we have
+The trivial map from $K \rightarrow V$ that sends every $h \in K$ to the identity $0 \in V$ is a 1-cocycle. Let $1\in K$ be the identity, then for any $\alpha \in Z^1(K, V)$ we have
 \begin{align*}
 	\alpha(1)\, =\, \alpha(1\cdot 1) &=  \alpha(1) + 1\cdot \alpha(1) \\
 	&=  \alpha(1) + \alpha(1) \\
@@ -51,7 +51,7 @@ Associativity of pointwise addition in $Z^1(K, V)$ holds because associativity h
 \begin{align*}
 	\chi^K_v (x) = v - x\cdot v,
 \end{align*}
-for all $x \in K$, is called a \emph{1-coboundary}. We denote by $B^1\left(K, V\right)$ the collection of all 1-coboundaries. 
+for all $x \in K$, is called a \emph{1-coboundary}. We denote by $B^1\left(K, V\right)$ the collection of all 1-coboundaries from $K \rightarrow V$. 
 \end{definition}
 
 For any $v \in V$
@@ -81,8 +81,27 @@ We denote by $\psi$ the canonical projection from $Z^1(K, V)\rightarrow H^1(K, V
 \begin{lemma} \label{vspace} If $V$ is a vector space and $K$ acts linearly on $V$ then $Z^1(K, V)$ is a vector space and $B^1(K, V)\subset Z^1(K, V)$ is a vector subspace.
 \end{lemma}
 \begin{proof}
+	Suppose $V$ is a vector space over $F$. We define scalar multiplication on $Z^1(K, V)$ and $B^1(K, V)$.
+
+For $\lambda \in F, \alpha \in Z^1(K, V)$ define the map $\lambda\alpha$ by $(\lambda\alpha)(x) = \lambda\alpha(x)$ for all $x \in K$. Then $\lambda\alpha$ is a 1-cocycle, for
+\begin{align*}
+	\lambda \alpha(xy) &= \lambda\left( \alpha(x) + x \cdot \alpha(y)\right) \\
+	&= \lambda\alpha(x) + \lambda(x\cdot \alpha(y)) \\
+	&= \lambda\alpha(x) + x \cdot (\lambda\alpha(y)).
+\end{align*}
+So $\lambda\alpha \in Z^1(K V)$.
+
+Similarly, let $\chi^K_v \in B^1(K, V)$. Then for all $x \in K$
+\begin{align*}
+	\lambda\chi^K_v(x) &= \lambda\left(v - x \cdot v\right) \\
+		&= \lambda v - \lambda(x \cdot v) \\
+		&= \lambda v - x \cdot (\lambda v) \\
+		&= \chi^K_{\lambda v}(x),
+\end{align*}
+so $\lambda\chi^K_v = \chi^K_{\lambda v} \in B^1(K, V)$ for all $v \in V$.
+
+The vector space axioms follow.
 \end{proof}
-Formula for scalar multiplication, formula for $\lambda\chi^K_V, \lambda \in k$.
 
 We conclude this Section with a useful Lemma \cite[Proposition 1]{kemper2000characterization}.
 \begin{lemma} Suppose $K$ is linearly reductive. Then $H^1(K, V)$ is trivial.
@@ -91,10 +110,10 @@ We conclude this Section with a useful Lemma \cite[Proposition 1]{kemper2000char
 
 \section{Non-abelian 1-Cohomology}
 	
-We no longer require that $V$ is abelian; henceforth $V$ is an algebraic group on which $K$ acts by group automorphisms. Much of the preceding Section is a direct analogue, for the most part formulas are just rewritten in multiplicative notation.
-One main difference will see is that 1-coboundaries are less useful in the non-abelian setting.
+We no longer require that $V$ is abelian, henceforth $V$ is an algebraic group on which $K$ acts by group automorphisms. Much of the preceding Section is a direct analogue; for the most part, formulas are just rewritten in multiplicative notation.
+One main difference will see is that 1-coboundaries are less useful in the non-abelian setting, especially when defining the 1-cohomology.
 
-\begin{definition} We call a morphism $\alpha$ from $K\rightarrow V$ a \emph{1-cocycle} if it satisfies
+\begin{definition} We call a morphism $\alpha:K\rightarrow V$ a \emph{1-cocycle} if it satisfies
 \begin{align}
   \alpha(xy) = \alpha(x) (x\cdot\alpha(y)),
   \label{eqn:na_z}
@@ -111,7 +130,7 @@ We call Equation \ref{eqn:na_z} the \emph{1-cocycle condition}.
 \begin{align*}
 	\chi^K_v (x) = v (x\cdot v^{-1}),
 \end{align*}
-for all $x \in K$ is called a \emph{1-coboundary}. We denote by $B^1\left(K, V\right)$ the collection of all 1-coboundaries.
+for all $x \in K$ is called a \emph{1-coboundary}. We denote by $B^1\left(K, V\right)$ the collection of all 1-coboundaries from $K \rightarrow V$.
 \end{definition}
 
 For any $v \in V$ and any $x, y \in K$,
@@ -128,7 +147,7 @@ In the abelian case we use the fact that we can take the quotient $Z^1(K, V)/B^1
 \begin{align*}
 	\psi(\alpha) = \psi(\beta) \Leftrightarrow \exists v \in V, \alpha = \beta + \chi^K_v.
 \end{align*}
-Again, this makes little sense in the non-abelian setting. Instead we have the following.
+In the non-abelian case, we have the following.
 
 \begin{lemma} Define the relation $\sim$ on $Z^1(K, V)$ by
 	\begin{align}
@@ -138,6 +157,21 @@ Again, this makes little sense in the non-abelian setting. Instead we have the f
 Then $\sim$ is an equivalence relation.
 \end{lemma}
 \begin{proof}
+The relation is symmetric, since $\alpha(x) = e\alpha(x)(e \cdot x^{-1})$ for all $\alpha\in Z^1(K, V)$ and all $x \in K$, where $e$ is the identity if $V$. It is reflexive since
+\begin{align*}
+	\alpha(x) = v \beta(x)(x \cdot v^{-1}) \Rightarrow \beta(x) = v^{-1}\alpha(x)(x\cdot v).
+\end{align*}
+We show the relation is transitive. Suppose
+\begin{align*}
+	\alpha(x) &= v\beta(x)(x\cdot v^{-1}) \\
+	\beta(x) &= w\gamma(x)(x\cdot w^{-1}),
+\end{align*}
+Then
+\begin{align*}
+	\alpha(x) &= v\left(w \gamma(x)(x\cdot w^{-1})\right)\left(x\cdot v^{-1}\right) \\
+		&= vw \gamma(x)\left(x\cdot w^{-1}v^{-1}\right) \\
+		&= (vw) \gamma(x)\left(x\cdot (vw)^{-1}\right).
+\end{align*}
 \end{proof}
 
 \begin{definition}
@@ -152,7 +186,7 @@ R. Richardson \cite[Lemma 6.2.6]{richardson1982orbits} provides a result analogo
 
 \section{Maps Between 1-Cohomologies}
 
-The next few definition-like results (Lemma \ref{zeta}--Lemma \ref{h1maps}) could be stated in terms of the abelian 1-cohomology, but for reasons of efficiency we use multiplicative notation only. We discuss a consequence of the main Lemma in the abelian setting in Corollary \ref{zlinear}, and Lemma \ref{lem:a_h_restriction} requires that $V$ is a vector space.
+The next few definition-like results (Lemma \ref{zeta}--Lemma \ref{h1maps}) could be stated in terms of the abelian 1-cohomology, but for reasons of efficiency we use multiplicative notation only. We discuss a consequence of the main Lemma in the abelian setting in Corollary \ref{zlinear}, and Lemma \ref{brown} requires that $V$ is a vector space. In such cases we revert to additive notation to emphasise the fact that $V$ is abelian.
 
 As in the previous Section, $K, V$ are algebraic groups such that $K$ acts on $V$ by group automorphisms. We denote the action of $K$ on $V$ by $x \cdot v$, for $x \in K, v \in V$.
 
@@ -212,7 +246,7 @@ As in the previous Section, $K, V$ are algebraic groups such that $K$ acts on $V
 	\begin{align*}
 		H^1(\zeta, \xi)(\psi(\alpha)) = \left(\psi' \circ Z^1(\zeta, \xi)\right)(\alpha),
 	\end{align*}
-	for all $\alpha \in Z^1(K, V)$, where $\psi:Z^1(K, V)\rightarrow H^1(K, V)$ and $\psi':Z^1(K', V') \rightarrow H^1(K', V')$ are the canonical projections.
+	for all $\alpha \in Z^1(K, V)$, where $\psi'$ is the canonical projection from $Z^1(K', V') \rightarrow H^1(K', V')$.
 	Moreover, the following diagram commutes:
 	\begin{align*}
 		\xymatrix{
@@ -283,6 +317,7 @@ is a well-defined map of 1-cohomologies from $H^1(K, V) \rightarrow H^1(K', V)$.
 \begin{align*}
 	\left(Z^1(\alpha + \beta)\right)(x) &= \xi\left((\alpha + \beta)(\zeta(x))\right) \\
 		&= \xi\left(\alpha(\zeta(x)) + \beta(\zeta(x))\right) \\
+		&= \xi\left(\alpha(\zeta(x))\right) + \xi\left(\beta(\zeta(x))\right) \\
 		&= Z^1(\zeta, \xi)(\alpha) + Z^1(\zeta, \xi)(\beta).
 \end{align*}
 \end{proof}
@@ -339,7 +374,7 @@ Hence $\beta$ is constant on the left $\Gamma_p$-cosets, and therefore
 	\sum_{i = 1}^l \beta(\gamma\gamma_i) = \sum_{i = 1}^l \beta(\gamma_i),
 \end{align}
 where the summands are possibly taken in a different order. 
-Let $w = \sum_{i=1}^l \beta(\gamma_i)$. Then
+Let $w = \sum_{i=1}^l \beta(\gamma_i)$ and consider the 1-coboundary $\chi^\Gamma_w \in B^1(\Gamma, V)$.
 \begin{align*}
 	\chi_{w}^\Gamma(\gamma) &=  w - \gamma\cdot w \\
 	&=  \sum_{i = 1}^l\beta(\gamma_i) - \gamma\cdot \sum_{i = 1}^l\beta(\gamma_i) \\
