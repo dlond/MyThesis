@@ -172,6 +172,7 @@ Then
 		&= vw \gamma(x)\left(x\cdot w^{-1}v^{-1}\right) \\
 		&= (vw) \gamma(x)\left(x\cdot (vw)^{-1}\right).
 \end{align*}
+Therefore, Equation \ref{eqn:h_equiv} defines an equivalence relation on $Z^1(K, V)$.
 \end{proof}
 
 \begin{definition}
@@ -198,7 +199,7 @@ As in the previous Section, $K, V$ are algebraic groups such that $K$ acts on $V
 \begin{proof}
 	Let $\alpha \in Z^1(K, V)$. Evidently $\alpha \circ \zeta$ is a morphism from $K' \rightarrow V$. Let $x, y \in K'$, then
 	\begin{align*}
-		(\alpha \circ \zeta)(xy) &= \alpha(\zeta(x)\zeta(y) \\
+		(\alpha \circ \zeta)(xy) &= \alpha\left(\zeta(x)\zeta(y)\right) \\
 			&= \alpha(\zeta(x))\left(\zeta(x) \cdot \alpha(\zeta(y))\right) \\
 			&= \alpha(\zeta(x))\left(x \ast \alpha(\zeta(y))\right) \\
 			&= (\alpha \circ \zeta)(x)\left(x \ast (\alpha \circ \zeta)(y)\right).
@@ -259,7 +260,7 @@ As in the previous Section, $K, V$ are algebraic groups such that $K$ acts on $V
 	Let $\alpha \in Z^1(K, V)$. Evidently $\xi \circ \alpha \circ \zeta$ is a morphism. Let $x,y \in K'$, then
 	\begin{align*}
 		(\xi \circ \alpha \circ \zeta)(xy) &= \xi \left((\alpha \circ \zeta)(x)\right) \xi \left(x \ast (\alpha \circ \zeta)(y)\right) \quad\textrm{(Lemma \ref{zeta})} \\
-			&= \xi \left((\alpha \circ \zeta)(x)\right) \left(x \wedge \xi(\alpha \circ \zeta)(y)\right) \quad\textrm{(by (d))} \\
+			&= \xi \left((\alpha \circ \zeta)(x)\right) \left(x \wedge \xi\left((\alpha \circ \zeta)(y)\right)\right) \quad\textrm{(by (d))} \\
 			&= (\xi \circ \alpha \circ \zeta)(x) \left(x \wedge (\xi \circ \alpha \circ \zeta)(y)\right).
 	\end{align*}
 	Therefore $(\xi \circ \alpha \circ \zeta) \in Z^1(K', V')$.
@@ -273,10 +274,11 @@ As in the previous Section, $K, V$ are algebraic groups such that $K$ acts on $V
 	Then, for all $x \in K'$
 	\begin{align*}
 		\left(Z^1(\zeta, \xi)(\beta)\right)(x) &= \xi\left(\beta(\zeta(x))\right) \\
-			&= \xi \left( v \alpha(\zeta(x))\left(\zeta(x) \ast v^{-1}\right) \right) \\
-			&= \xi(v) \xi(\alpha(\zeta(x))) \xi\left( \zeta(x) \ast v^{-1}\right) \\
+			&= \xi \left( v \alpha(\zeta(x))\left(\zeta(x) \cdot v^{-1}\right) \right) \\
+			&= \xi(v) \xi(\alpha(\zeta(x))) \xi\left( \zeta(x) \cdot v^{-1}\right) \\
+			&= \xi(v) \xi(\alpha(\zeta(x))) \xi\left( x \ast v^{-1}\right) \\
 			&= \xi(v) \xi(\alpha(\zeta(x)))\left(x \wedge \xi(v^{-1})\right) \\
-			&= \xi(v) \left(Z^1(\zeta, \xi)(\alpha)\right)(x) \left(x \wedge \xi(v^{-1})\right).
+			&= \xi(v) \left(\left(Z^1(\zeta, \xi)(\alpha)\right)(x)\right) \left(x \wedge \xi(v^{-1})\right).
 	\end{align*}
 	This shows that $\psi'\left(Z^1(\zeta, \xi)(\alpha)\right) = \psi'\left(Z^1(\zeta, \xi)(\beta)\right)$, hence $H^1(\zeta, \xi)$ is well-defined.
 \end{proof} 
@@ -293,7 +295,7 @@ As in the previous Section, $K, V$ are algebraic groups such that $K$ acts on $V
 	\end{align*}
 	is misleading on its own: Is the 1-cohomology on the left of the arrow the same as the one on the right? If nothing is said about the action defining the 1-cocycles on the right, we take that to mean they are the same.
 
-	Similarly, when $\zeta$ is the inclusion map of some $K' < K$ in $K$ and $\xi$ is the identity map on $V$, it is implicit that the action of $K'$ on $V$ is defined by the action of $K$ on $V$ (cf. Example \ref{h1subgp}, Lemma \ref{brown}) unless specified otherwise.
+	Similarly, when $\zeta$ is the inclusion of some $K' < K$ in $K$ and $\xi$ is the identity map on $V$, it is implicit that the action of $K'$ on $V$ is defined by the action of $K$ on $V$ (cf. Example \ref{h1subgp}, Lemma \ref{brown}) unless specified otherwise.
 
 	More satisfyingly, and by pure coincidence, later on in Chapter \ref{Chapter4} we adopt a modified notation for the 1-cocycles and the 1-cohomology which carries with it the action defining the 1-cocycles.
 \end{remark}
@@ -322,7 +324,7 @@ is a well-defined map of 1-cohomologies from $H^1(K, V) \rightarrow H^1(K', V)$.
 \end{align*}
 \end{proof}
 
-The following Lemma is useful when showing that $H^1(\zeta, \xi)$ is injective (cf. Lemma \ref{brown}, Lemma \ref{lem:sl2_b_inj}).
+The following Lemma is useful when showing that $H^1(\zeta, \xi)$ is injective (cf. Lemma \ref{brown}, Example \ref{sl2_b_inj}).
 
 \begin{lemma}\label{kerh1} Let $K, K', V, V', \zeta, \xi$ satisfy the requirements of Lemma \ref{h1maps} and suppose $\xi$ is surjective. 
 Then there exists $\beta \in Z^1(K, V)$ such that $\psi(\beta) \in \mathrm{Ker}\left(H^1(\zeta, \xi)\right)$ and
@@ -355,7 +357,7 @@ for all $x \in K$. Then $\psi(\beta) = \psi(\alpha)$, and for all $x \in K'$
 The next Lemma is standard \cite[Theorem 10.3]{brown1976cohomology} but we give our own proof here. The Lemma deals with the abelian 1-cohomology of a finite group, so we alter our notation appropriately.
 
 \begin{lemma} \label{brown}
-Let $V$ be a vector space over $k$, $\mathrm{char}(k) = p$. Let $\Gamma$ be a finite group that acts linearly on $V$, and let $\Gamma_p$ be a \emph{Sylow $p$-subgroup} of $\Gamma$. Let $\zeta$ be the inclusion of $\Gamma_p$ in $\Gamma$, and $\xi$ the identity map on $V$. The map 
+Let $V$ be a vector space over $k$, $\mathrm{char}(k) = p$. Let $\Gamma$ be a finite group that acts linearly on $V$, and let $\Gamma_p$ be a \emph{Sylow $p$-subgroup} of $\Gamma$. Let $\zeta$ be the inclusion of $\Gamma_p$ in $\Gamma$, and $\xi$ the identity map on $V$. Then the map 
 \begin{align*}
 H^1(\zeta, \xi):H^1(\Gamma, V)\rightarrow H^1(\Gamma_p, V)
 \end{align*}
@@ -382,11 +384,16 @@ Let $w = \sum_{i=1}^l \beta(\gamma_i)$ and consider the 1-coboundary $\chi^\Gamm
 	&=  \sum_{i = 1}^l\beta(\gamma_i) - \sum_{i = 1}^l\left(\beta(\gamma\gamma_i) - \beta(\gamma)\right) \quad(\textrm{Equation }\ref{eqn:a_z})\\
 	&=  \sum_{i = 1}^l\beta(\gamma_i) - \sum_{i = 1}^l \beta(\gamma\gamma_i) +\sum_{i = 1}^l \beta(\gamma) \\
 	&=  \sum_{i = 1}^l\beta(\gamma_i) - \sum_{i = 1}^l \beta(\gamma_i) +\sum_{i = 1}^l \beta(\gamma) \quad(\textrm{Equation }\ref{betaconst})\\
-	&=  \sum_{i = 1}^l \beta(\gamma) = l\beta(\gamma),
+	&=  \sum_{i = 1}^l \beta(\gamma) \\
+	&= l\beta(\gamma),
 \end{align*}
 for all $\gamma \in \Gamma$.
 
-Since $\mathrm{gcd}(l, p) = \mathrm{gcd}\left([\Gamma_p:\Gamma], p\right) = 1$, $l \neq 0$. Therefore, by Lemma \ref{vspace} $\beta \in B^1(\Gamma, V)$ which proves $\mathrm{Ker}\left(H^1(\zeta, \xi)\right)$ is trivial.
+Since $\mathrm{gcd}(l, p) = \mathrm{gcd}\left([\Gamma_p:\Gamma], p\right) = 1$, $l \neq 0$. Therefore, by Lemma \ref{vspace}
+\begin{align*}
+	\beta = \chi^\Gamma_{l^{-1}w} \in B^1(\Gamma, V),
+\end{align*}
+which proves $\mathrm{Ker}\left(H^1(\zeta, \xi)\right)$ is trivial.
 \end{proof}
 
 \begin{example}
@@ -417,7 +424,7 @@ Repeated application of Lemma \ref{h1maps} yields the following commutative diag
 \begin{align*}
 	\xymatrix{
 		H^1(SL_2(k), V) \ar[r]^{H^1(\zeta, \xi)} \ar[d]_{H^1(\iota_r, \xi)} & H^1(U_2(k), V) \ar[d]^{H^1(\iota'_r, \xi)} \\
-		H^1(SL^2(\mathbb{F}_{p^r}), V)\, \ar[r]_{H^1(\zeta_r, \xi)} &\, H^1(U_2(\mathbb{F}_{p^r}), V).
+		H^1(SL_2(\mathbb{F}_{p^r}), V)\, \ar[r]_{H^1(\zeta_r, \xi)} &\, H^1(U_2(\mathbb{F}_{p^r}), V).
 	}
 \end{align*}
 
@@ -425,7 +432,7 @@ First we will show
 \begin{itemize}
 \item [(i)] $H^1(\zeta_r, \xi)$ is injective for each $r \in \mathbb{N}$, and
 \item [(ii)] if $\beta \in Z^1(SL_2(k), V)$ such that for all $r \in \mathbb{N}$
-\begin{align*} Z^1(\iota_{(r!)}, \xi)(\beta) \in B^1(SL_2(\mathbb{F}_{p^{r!}}), V),
+\begin{align*} Z^1(\iota_{r!}, \xi)(\beta) \in B^1(SL_2(\mathbb{F}_{p^{r!}}), V),
 \end{align*}
 then $\beta \in B^1(SL_2(k), V)$.
 \end{itemize}
@@ -454,18 +461,18 @@ Let $\beta\in Z^1(SL_2(k), V)$ such that $\beta \notin B^1(SL_2(k), V)$, that is
 \end{align}
 for any $v \in V$. For each $x\in SL_2(\mathbb{F}_{p^r})$ define the morphism $f_x:V\rightarrow V$ by
 	\begin{align*}
-		f_x(v) = v^{-1} \beta(x) \left(x \cdot v\right).
+		f_x(v) = \beta(x) - \chi^{SL_2(k)}_v(x).
 	\end{align*}
 Since $\mathbb{F}_{p^{r!}} \subset \mathbb{F}_{p^{(r+1)!}}$ we have $SL_2(\mathbb{F}_{p^{r!}}) \subset SL_2(\mathbb{F}_{p^{(r+1)!}})$.
 Consider sequence $\left\{C_{r}\right\}_{r \in \mathbb{N}} \subset V$ defined by
 	\begin{align*}
-		\left\{C_{r}\right\} = \{v \in V \,|\,\forall x\in SL_2(\mathbb{F}_{p^{r}}),\, f_x(v) = e\},
+		\left\{C_{r}\right\} = \{v \in V \,|\,\forall x\in SL_2(\mathbb{F}_{p^{r}}),\, f_x(v) = 0\},
 	\end{align*}
 where $e$ is the identity in $V$.
 	Each $C_{r}$ is closed, and the inclusion $SL_2(\mathbb{F}_{p^{r!}}) \subset SL_2(\mathbb{F}_{p^{(r+1)!}})$ induces the reverse inclusion for the subsequence $C_{r!} \supset C_{(r+1)!}$.
 Then the Noetherian property for $V$ requires that the subsequence $\left\{C_{r!}\right\}_{r \in \mathbb{N}}$ becomes constant, and since
 \begin{align*}
-	&\{v \in V \,|\, \forall x \in SL_2(k), f_x(v) = e\} \\
+	&\{v \in V \,|\, \forall x \in SL_2(k), f_x(v) = 0\} \\
 	= &\left\{v \in V \,|\, \forall x \in SL_2(k), \beta(x) = \chi^{SL_2(k)}_v(x)\right\} \\
 	= \,&\emptyset \quad(\textrm{Equation }\ref{betanob1}), 
 \end{align*}
@@ -488,45 +495,22 @@ Then
 This shows $H^1(\zeta, \xi)$ is injective.
 \end{proof}
 
-\begin{lemma} Let $B$ be a Borel subgroup of $SL_2$ acting on an algebraic group $V$ and let $\iota : B \rightarrow SL_2$ be the inclusion map. Then $H^1(\iota):H^1(SL_2, V)\rightarrow H^1(B, V)$ is injective.
-  \label{lem:sl2_b_inj}
-\end{lemma}
+\begin{example} Now suppose that $V$ is an algebraic group, not necessarily a vector space. Let $B$ be a Borel subgroup of $SL_2(k)$, let $\zeta: B \rightarrow SL_2(k)$ be the inclusion map and $\xi: V \rightarrow V$ the identity map. Then $H^1(\zeta, \xi): H^1(SL_2(k), V)\rightarrow H^1(B, V)$ is injective.
+  \label{sl2_b_inj}
+\end{example}
 \begin{proof}
-Let $x$ be in the kernel of $H^1(\iota)$ and $\alpha$ and element of $Z^1(SL_2, V)$ that projects onto the class $x$. Since $Z^1(\iota)(\alpha)$ projects to the trivial 1-cohomology class we may as well assume that $\alpha|_B = 1$. For there exists some $v \in V$ such that for all $b \in B$
-\begin{align}
-	\left(Z^1(\iota)(\alpha) \right)(b) = v (b \cdot v^{-1}).
-\end{align}
-Consider the 1-cocycle $\hat{\alpha}:SL_2\rightarrow V$ defined by
-\begin{align}
-	\hat{\alpha}(h) = v^{-1} \alpha(h) (h \cdot v).
-\end{align}
-Then by construction $\hat{\alpha}$ also projects to the class $x$, and for all $b \in B$
+By Lemma \ref{kerh1} there exists $\beta \in Z^1(SL_2(k), V)$ such that $\psi(\beta) \in \mathrm{Ker}\left(H^1(\zeta, \xi)\right)$ and $\beta(x) = e$ for all $x \in B$, where $e$ is the identity of $V$.
+
+Let $\widehat{\beta}$ be the unique morphism such that the following diagram commutes,
 \begin{align*}
-	\hat{\alpha}(b) &=  v^{-1} \alpha(b) (b \cdot v) \\
-	&=  v^{-1} (v (b\cdot v^{-1})) (b \cdot v)\\
-	&=  v^{-1} v (b\cdot v)^{-1} (b \cdot v)\\
-	&=  1,
-\end{align*}
-so we may as well have chosen $\hat{\alpha}$ instead as a representative for $x$. 
-
-Now consider the \emph{homogeneous space} $SL_2/B$ and take the map 
-\begin{align}
-	\tilde{\alpha}:SL_2/B \rightarrow V,
-\end{align}
-to be the unique morphism such that the following diagram commutes:
-\begin{align}
 	\xymatrix{
-	SL_2 \ar[r]^{\alpha} \ar[d]_{\pi} & V\\
-	SL_2/B \ar[ru]_{\tilde{\alpha}}
+	SL_2(k) \ar[r]^{\beta} \ar[d]_{\pi} & V\\
+	SL_2/B \ar[ru]_{\widehat{\beta}}
 	},
-\end{align}
-$\pi$ the canonical projection $\pi:SL_2 \rightarrow SL_2/B$. That is, $\tilde{\alpha}(hB) = \alpha(h)$ for all $h \in SL_2$.
+\end{align*}
+where $\pi$ is the canonical projection $\pi:SL_2 \rightarrow SL_2/B$. Hence $\widehat{\beta}(xB) = \beta(x)$ for all $x \in SL_2(k)$.
 
-Now since $SL_2/B$ is an irreducible projective variety \cite[Theorem 21.3]{humphreys1975linear}, $\tilde{\alpha}$ must be constant  \cite{borel1991linear}. Kence, as $\alpha$ takes the value 1 for any $b \in B$, $\tilde{\alpha}(hB) = 1$ for all cosets $hB$. Therefore, for all $h \in SL_2$
-\begin{align}
-	\alpha(h) = \tilde{\alpha}(hB) = 1.
-\end{align}
-We have shown that $\alpha$ is the trivial 1-coboundary $\chi_1$ which means that the kernel of $H^1(\iota)$ is trivial.
+Since $SL_2(k)/B$ is an irreducible projective variety \cite[Theorem 21.3]{humphreys1975linear}, $\widehat{\beta}$ must be constant. Therefore, since $\beta(x) = e$ for all $x \in B$, $\beta(x) = \widehat{\beta}(xB) = e$ for all $x \in SL_2(k)$. Hence $\beta = \chi^{SL_2(k)}_e \in B^1(SL_2(k), V)$ and so $\mathrm{Ker}\left(H^1(\zeta, \xi)\right)$ is trivial.
 \end{proof} 
 
 TODO: Borel $B < SL_2$, $U = R_u(B)$, $SL_2$ acts on unipotent $V$ $\Rightarrow$ $H^1(B, V) \rightarrow H^1(U, V)$ is injective. Not sure if it's true, but would imply $H^1(SL_2, V) \rightarrow H^1(U, V)$ is injective. Then apply main theorem of CH4.
