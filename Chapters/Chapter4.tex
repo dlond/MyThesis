@@ -320,7 +320,7 @@ Let $\xi = \xi_l: V \rightarrow V'$ be defined by	$\xi_l(v) = lvl^{-1}$ for all 
 \begin{lemma}
 	For $\rho \in Hom(K, P)_\sigma$, define
 	\begin{align*}
-		\widetilde{h}((\widetilde{\phi}\circ\phi)(\rho)) = \widetilde{\psi}(h(\phi(\rho))).
+		\widetilde{h}(\Phi(\rho)) = \widetilde{\psi}(h(\phi(\rho))).
 	\end{align*}
 	Then $\widetilde{h}$ is a well-defined bijection from
 	\begin{align*}
@@ -345,18 +345,28 @@ Hence $\widetilde{\psi}(h(\phi(\rho))) = \widetilde{\psi}(h(\phi(\varsigma)))$ a
 Let $\alpha, \beta \in Z^1(K, V)_\sigma$ such that $\Psi(\alpha) = \Psi(\beta)$. Then there exists $c \in C_L(\sigma)$ such that $\psi(\beta) = c \cdot \psi(\alpha)$, and since $h$ is a bijection, $h^{-1}(\psi(\beta)) = h^{-1}(c \cdot \psi(\alpha)) = c \cdot h^{-1}(\psi(\alpha))$. This shows $\widetilde{h}$ is injective. Since $h$ and $\widetilde{\psi}$ are surjective, $\widetilde{h}$ is surjective. Therefore $\widetilde{h}$ is a bijection.
 \end{proof}
 
-In the theme Lemma \ref{h1maps}, we show that $H^1(\zeta, \xi)$ descends to give a well-defined map from $H^1(K, V)_\sigma/C_L(\sigma) \rightarrow H^1(K', V')_{\sigma \circ \zeta}/C_L(\sigma \circ \zeta)$.
-
-\begin{lemma} Let $K, K', V, V', \zeta, \xi$ satisfy the requirements of Lemma \ref{h1maps}. Then the map $H^1(\zeta, \xi):H^1(K, V)_\sigma \rightarrow H^1(K', V')_{\sigma\circ\zeta}$ descends to give a well-defined map
+\begin{lemma} Let $K' < K'$, let $\zeta$ the inclusion of $K'$ in $K$, and let $\xi$ be the identity map on $V$. Then the map $H^1(\zeta, \xi):H^1(K, V)_\sigma \rightarrow H^1(K', V)_{\sigma\circ\zeta}$ descends to give a well-defined map
 	\begin{align*}
-		\widetilde{H^1}(\zeta, \xi): H^1(K, V)_\sigma/C_L(\sigma) \rightarrow H^1(K', V')_{\sigma\circ\zeta}/C_L(\sigma\circ \zeta),
+		\widetilde{H^1}(\zeta, \xi): H^1(K, V)_\sigma/C_L(\sigma) \rightarrow H^1(K', V)_{\sigma\circ\zeta}/C_L(\sigma\circ \zeta),
 	\end{align*}
 defined by
 	\begin{align*}
-		\widetilde{H^1}(\zeta, \xi)(\widetilde{\psi}(\psi(\alpha))) = \widetilde{\psi'}\left(H^1(\zeta, \xi)(\psi(\alpha))\right).
+		\widetilde{H^1}(\zeta, \xi)(\Psi(\alpha)) = \widetilde{\psi'}\left(H^1(\zeta, \xi)(\psi(\alpha))\right).
 	\end{align*}
+Moreover, the following diagram commutes:
+  \begin{align*}
+    \xymatrix@C=60pt{
+		H^1(K, V)_\sigma \ar[r]^{H^1(\zeta, \xi)} \ar[d]_{\widetilde{\psi}} & H^1(K', V)_{\sigma\circ\zeta} \ar[d]^{\widetilde{\psi'}} \\
+		H^1(K, V)_\sigma/C_L(\sigma) \ar[r]^{\widetilde{H^1}(\zeta, \xi)} & {H^1(K', V)_{\sigma\circ\zeta}/C_L(\sigma\circ\zeta)}.
+    }
+  \end{align*}
 \end{lemma}
 \begin{proof}
+	Let $\alpha, \beta \in Z^1(K, V)_\sigma$ such that $\Psi(\alpha) = \Psi(\beta)$. Then there exists $c \in C_L(\sigma)$ such that $\psi(\beta) = c \cdot \psi(\alpha)$. Since $H^1(K, V)_\sigma \subset H^1(K', V)_\sigma$ and $C_L(\sigma) < C_L(\sigma\circ\zeta)$, we have
+	\begin{align*}
+		H^1(\zeta, \xi)\left(\psi(\beta)\right) = c \cdot H^1(\zeta, \xi)\left(\psi(\beta)\right),
+	\end{align*}
+	and so $\Psi'(\alpha) = \Psi'(\beta)$. Therefore $\widetilde{H^1}(\zeta, \xi)$ is well-defined.
 \end{proof}
 
 \begin{definition} We define
@@ -373,6 +383,14 @@ defined by
 	More generally, if $R = P \cdot R$ then $R^L = L \cdot R^L$.
 \end{lemma}
 \begin{proof}
+	Let $\rho \in R$. Let $q \in P, v \in V, l \in L$ such that $q = vl$. Since $q\cdot\rho \in R$, and
+	\begin{align*}
+		(q \cdot \rho)^L(x) &= (q\rho(x)q^{-1})^L \\
+			&= (vl\rho(x)l^{-1}v^{-1})^L \\
+			&= \pi^L(v)\pi^L(l)\pi^L(\rho(x))\pi^L\left(l^{-1}\right)\pi^L\left(v^{-1}\right) \\
+			&= l \rho^L(x) l^{-1},
+	\end{align*}
+	then $(q \cdot \rho)^L = l \cdot \rho^L \in R^L$. This shows $R^L \subset L \cdot R^L$. Conversely, let $l \in L$. Then $l \cdot \rho \in R$, so $(l \cdot \rho)^L = l\cdot \rho^L \in R^L$. Therefore $L\cdot R^L \subset R^L$ and so $R^L = L \cdot R^L$.
 \end{proof}
 
 \begin{lemma} \label{rsigma:vcl} Let $R \subset \mathrm{Hom}(K, P)$ and suppose that $R = P \cdot R$. Then for all $\sigma \in \mathrm{Hom}(K, L)$,
@@ -442,34 +460,30 @@ R^L = \bigcup_{\tau \in \mathcal{S}} L \cdot \tau.
 Then there exists $l \in L$, $\tau \in \mathcal{S}$ such that $\rho^L = l \cdot \tau$. Hence $l^{-1} \cdot \rho^L = \tau$, so $\rho \in L \cdot R_\tau$. This shows that $R$ is contained in a finite union of $P$-conjugacy classes. The reverse inclusion is satisfied since $R = P \cdot R$, and this completes the proof.
 \end{proof}
 
-\begin{definition} Let $K' < K$ and let $\zeta$ be the inclusion map $K' \hookrightarrow K$. We denote by $\rho^\zeta$ the homomorphism from $K' \rightarrow P$ defined by
+\begin{definition} Let $K' < K$ and let $\zeta$ be the inclusion of $K'$ in $K$. Define
 	\begin{align*}
-		\rho^\zeta = \rho \circ \zeta,
-	\end{align*}
-	and define
-	\begin{align*}
-		\mathrm{Hom}(K, P)^\zeta = \{ \rho^\zeta \,|\, \rho \in \mathrm{Hom}(K, P)\} \subset \mathrm{Hom}(K', P).
+		\mathrm{Hom}(K, P)^\zeta = \{ \rho\circ\zeta \,|\, \rho \in \mathrm{Hom}(K, P)\} \subset \mathrm{Hom}(K', P).
 	\end{align*}
 	More generally, if $R \subset \mathrm{Hom}(K, P)$ then define
 	\begin{align*}
-		R^\zeta = \{\rho^\zeta \,|\, \rho \in R\}.
+		R^\zeta = \{\rho\circ\zeta \,|\, \rho \in R\}.
 	\end{align*}
 \end{definition}
 
-\begin{theorem} Let $R \subset \mathrm{Hom}(K, P)$ such that $R = P \cdot R$. Suppose
+\begin{theorem} Let $K'<K$, let $\zeta$ be the inclusion of $K'$ in $K$, and let $\xi$ be the identity map on $V$. Let $R \subset \mathrm{Hom}(K, P)$ such that $R = P \cdot R$. Suppose
 	\begin{itemize}
 		\item[(i)] $R^L$ is a finite union of $L$-conjugacy classes,
 		\item[(ii)] for all $\sigma \in \mathrm{Hom}(K, L)$ such that $R_\sigma \neq \emptyset$, the map
 			\begin{align*}
-				\widetilde{H^1}(\zeta, \xi):H^1(K, V)_\sigma/C_L(\sigma) \rightarrow H^1(K', V)_{\sigma^\zeta}/C_L(\sigma),
+				\widetilde{H^1}(\zeta, \xi):H^1(K, V)_\sigma/C_L(\sigma) \rightarrow H^1(K', V)_{\sigma\circ\zeta}/C_L(\sigma\circ\zeta),
 			\end{align*}
-			where $\xi = \mathrm{id}:V \rightarrow V$, has finite fibres, and
+			has finite fibres, and
 		\item[(iii)] $R^\zeta$ is a finite union of $P$-conjugacy classes.
 	\end{itemize}
 	Then $R$ is a finite union of $P$-conjugacy classes.
 \end{theorem}
 \begin{remark}
-	Since $R = P \cdot R$, $R^L$ is already a union of $L$-conjugacy classes by Lemma \ref{pr:lrl}, so the point of (i) is that the union is finite.
+	Since $R = P \cdot R$, then by Lemma \ref{pr:lrl} $R^L$ is already a union of $L$-conjugacy classes. The point of (i) is that the union is finite.
 \end{remark}
 \begin{proof}
 \end{proof}

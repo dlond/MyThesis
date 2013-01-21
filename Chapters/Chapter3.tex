@@ -81,7 +81,7 @@ We denote by $\psi$ the canonical projection from $Z^1(K, V)\rightarrow H^1(K, V
 \begin{lemma} \label{vspace} If $V$ is a vector space and $K$ acts linearly on $V$ then $Z^1(K, V)$ is a vector space and $B^1(K, V)\subset Z^1(K, V)$ is a vector subspace.
 \end{lemma}
 \begin{proof}
-	Suppose $V$ is a vector space over $F$. We define scalar multiplication on $Z^1(K, V)$ and $B^1(K, V)$.
+	Suppose $V$ is a vector space over $F$. We define scalar multiplication on $Z^1(K, V)$ and $B^1(K, V)$ as follows.
 
 For $\lambda \in F, \alpha \in Z^1(K, V)$ define the map $\lambda\alpha$ by $(\lambda\alpha)(x) = \lambda\alpha(x)$ for all $x \in K$. Then $\lambda\alpha$ is a 1-cocycle, for
 \begin{align*}
@@ -89,7 +89,6 @@ For $\lambda \in F, \alpha \in Z^1(K, V)$ define the map $\lambda\alpha$ by $(\l
 	&= \lambda\alpha(x) + \lambda(x\cdot \alpha(y)) \\
 	&= \lambda\alpha(x) + x \cdot (\lambda\alpha(y)).
 \end{align*}
-So $\lambda\alpha \in Z^1(K V)$.
 
 Similarly, let $\chi^K_v \in B^1(K, V)$. Then for all $x \in K$
 \begin{align*}
@@ -305,23 +304,27 @@ As in the previous Section, $K, V$ are algebraic groups such that $K$ acts on $V
 \begin{align*}
 	Z^1(\zeta, \xi)(\alpha) = \xi \circ \alpha \circ \zeta = \alpha \circ \zeta,
 \end{align*}
-maps $Z^1(K, V)$ into $Z^1(K', V)$. Furthermore, the map
+maps $Z^1(K, V)$ into $Z^1(K', V)$, and the map
 \begin{align*}
 	H^1(\zeta, \xi)(\psi(\alpha)) = \psi' \circ Z^1(\zeta, \xi),
 \end{align*}
-is a well-defined map of 1-cohomologies from $H^1(K, V) \rightarrow H^1(K', V)$.
+is a well-defined map of 1-cohomologies from $H^1(K, V) \rightarrow H^1(K', V)$. Furthermore, we have the inclusions
+\begin{align*}
+	Z^1(K, V) &\subset Z^1(K', V),\\ H^1(K, V) &\subset H^1(K', V)
+\end{align*}
 \end{example}
 
-\begin{corollary} \label{zlinear} Let $K,K',V,V',\zeta,\xi$ satisfy the requirements of Lemma \ref{h1maps} and suppose $V,V'$ are abelian. Then $Z^1(\zeta, \xi)$ is is a homomorphism.
+\begin{corollary} \label{zlinear} Let $K,K',V,V',\zeta,\xi$ satisfy the requirements of Lemma \ref{h1maps} and suppose $V,V'$ are abelian (vector spaces). Then $Z^1(\zeta, \xi)$ is is a homomorphism (linear map).
 \end{corollary}
 \begin{proof}
-	Let $\alpha, \beta \in Z^1(\zeta, \xi)$. Then
+	We prove the case where $V, V'$ are abelian. Let $\alpha, \beta \in Z^1(\zeta, \xi)$. Then
 \begin{align*}
 	\left(Z^1(\alpha + \beta)\right)(x) &= \xi\left((\alpha + \beta)(\zeta(x))\right) \\
 		&= \xi\left(\alpha(\zeta(x)) + \beta(\zeta(x))\right) \\
 		&= \xi\left(\alpha(\zeta(x))\right) + \xi\left(\beta(\zeta(x))\right) \\
 		&= Z^1(\zeta, \xi)(\alpha) + Z^1(\zeta, \xi)(\beta).
 \end{align*}
+The case where $V, V'$ are vector spaces is left as an exercise.
 \end{proof}
 
 The following Lemma is useful when showing that $H^1(\zeta, \xi)$ is injective (cf. Lemma \ref{brown}, Example \ref{sl2_b_inj}).
@@ -422,7 +425,7 @@ Repeated application of Lemma \ref{h1maps} yields the following commutative diag
 %	}
 %\end{align*}
 \begin{align*}
-	\xymatrix{
+	\xymatrix@C=40pt{
 		H^1(SL_2(k), V) \ar[r]^{H^1(\zeta, \xi)} \ar[d]_{H^1(\iota_r, \xi)} & H^1(U_2(k), V) \ar[d]^{H^1(\iota'_r, \xi)} \\
 		H^1(SL_2(\mathbb{F}_{p^r}), V)\, \ar[r]_{H^1(\zeta_r, \xi)} &\, H^1(U_2(\mathbb{F}_{p^r}), V).
 	}
