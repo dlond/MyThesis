@@ -5,6 +5,18 @@
 \label{Chapter4}
 \lhead{Chapter 4. \emph{K\"ulshammer's Second Question}}
 
+\begin{definition} Let $X,Y$ be groups. Define
+\begin{align*} \mathrm{Hom}(X, Y) = \{ \rho : X \rightarrow Y \,|\, \rho \textrm{ is a homomorphism}\}. 
+\end{align*}
+\end{definition}
+
+For example, K\"ulshammer's second question as originally stated concerns $G$-conjugacy classes of $\mathrm{Hom}(\Gamma, G)$ and $\mathrm{Hom}(\Gamma_p, G)$, where $\Gamma_p$ is a Sylow $p$-subgroup of $\Gamma$.
+
+As pointed out in the Introduction, K\"ulshammer's second question has positive answer for $\Gamma, G$ so long as $p$ is good for $G$. We wish to determine whether there exists a reductive counterexample to K\"ulshammer's second question.
+A consequence of the following Theorem \cite[Theorem 1.2]{martin2003reductive} is that if there is a reductive counterexample to K\"ulshammer's second question then the infinitely many $G$-conjugacy classes of $\mathrm{Hom}(\Gamma, G)$ must be of non-$G$-completely reducible homomorphisms.
+
+\begin{theorem} \label{thm:finiteGCR} There are only finitely many $G$-conjugacy classes of $G$-completely reducible homomorphisms from $\Gamma\rightarrow G$.
+\end{theorem}
 Let $G$ be a connected reductive algebraic group over an algebraically closed field $k$ with $\mathrm{char}(k) = p$. Let $P$ be a parabolic subgroup of $G$, with Levi subgroup $L$ and unipotent radical $V$. We have $P = V \rtimes L$, and we denote by $\pi^L$ the canonical projection
 \begin{align*} \pi^L:P \rightarrow L. \end{align*}
 
@@ -14,13 +26,6 @@ for $l \in L, v \in V$.
 
 Let $K$ be a linear algebraic group, $H$ a connected reductive algebraic group, and $\Gamma$ a finite group.
 Generally speaking, we will be concerned with homomorphisms from $K \rightarrow G$. Where possible, we will work in this general setting and state things in terms of $K$. When we must specifically work with finite $K$ or connected reductive $K$, we will replace $K$ with $\Gamma$ or $H$, respectively.
-
-\begin{definition} Let $X,Y$ be groups. Define
-\begin{align*} \mathrm{Hom}(X, Y) = \{ \rho : X \rightarrow Y \,|\, \rho \textrm{ is a homomorphism}\}. 
-\end{align*}
-\end{definition}
-
-For example, K\"ulshammer's second question as originally stated concerns $G$-conjugacy classes of $\mathrm{Hom}(\Gamma, G)$ and $\mathrm{Hom}(\Gamma_p, G)$, where $\Gamma_p$ is a Sylow $p$-subgroup of $\Gamma$.
 
 The following general result shows that finiteness of $G$-conjugacy classes of $\mathrm{Hom}(K, P)$ carries over to $P$-conjugacy classes. 
 \begin{lemma} Let $R \subset \mathrm{Hom}(K, P)$. Then $R$ is contained in a finite union of $G$-conjugacy classes if and only if it is contained in a finite union of $P$-conjugacy classes.
@@ -67,7 +72,7 @@ for all $x \in K$.
 \end{proof}
 
 
-\section{The 1-Cohomology}
+\section{The Application of the 1-Cohomology}
 Let $\sigma \in \mathrm{Hom}(K, L)$. Then via the action of $L$ on $V$ given in Equation \ref{laction}, we have an action of $K$ on $V$ given by
 \begin{align} \label{haction} x \cdot v = \sigma(x) \cdot v, \end{align}
 for $x \in K, v \in V$.
@@ -127,7 +132,7 @@ We point out that the constructions in Equations \ref{rho:alpha} and \ref{alpha:
 
 \begin{lemma}
   Let $\sigma \in \mathrm{Hom}(K, L)$. The map
-\begin{align*} z: Hom(K, P)_{\sigma} \rightarrow Z^1(K, V)_\sigma, \end{align*}
+\begin{align*} z: \mathrm{Hom}(K, P)_{\sigma} \rightarrow Z^1(K, V)_\sigma, \end{align*}
 defined by
 \begin{align*} z(\rho)(x) = \rho(x)\sigma(x^{-1}), \end{align*}
 for all $\rho \in \mathrm{Hom}(K, P)_\sigma$ and all $x \in K$, is a bijection.
@@ -156,8 +161,8 @@ h(\phi( \rho)) = \psi(z)(\rho).
 Then $h$ is a well-defined bijection from $\mathrm{Hom}(K, P)_\sigma / V \rightarrow H^1(K, P)_\sigma$. Moreover, the following diagram commutes:
   \begin{align*}
     \xymatrix{
-    Hom(K, P)_{\sigma} \ar[r]^z \ar[d]_\phi & Z^{1}(K, V)_\sigma \ar[d]^\psi \\
-    Hom(K, P)_{\sigma}/V \ar[r]^h & H^{1}(K, V)_\sigma.
+    \mathrm{Hom}(K, P)_{\sigma} \ar[r]^z \ar[d]_\phi & Z^{1}(K, V)_\sigma \ar[d]^\psi \\
+    \mathrm{Hom}(K, P)_{\sigma}/V \ar[r]^h & H^{1}(K, V)_\sigma.
     }
   \end{align*}
   \label{lem:v_h1}
@@ -318,7 +323,7 @@ Let $\xi = \xi_l: V \rightarrow V'$ be defined by	$\xi_l(v) = lvl^{-1}$ for all 
 	We have the following Lemma, which shows that the map $h$ descends to give a bijection from $\mathrm{Hom}(K, P)_\sigma /VC_L(\sigma) \rightarrow H^1(K, V)_{\sigma}/C_L(\sigma)$.
 
 \begin{lemma}
-	For $\rho \in Hom(K, P)_\sigma$, define
+	For $\rho \in \mathrm{Hom}(K, P)_\sigma$, define
 	\begin{align*}
 		\widetilde{h}(\Phi(\rho)) = \widetilde{\psi}(h(\phi(\rho))).
 	\end{align*}
@@ -329,8 +334,8 @@ Let $\xi = \xi_l: V \rightarrow V'$ be defined by	$\xi_l(v) = lvl^{-1}$ for all 
 	Moreover, the following diagram commutes:
   \begin{align*}
     \xymatrix{
-		Hom(K, P)_{\sigma}/V \ar[r]^h \ar[d]_{\widetilde{\phi}} & H^{1}(K, V)_\sigma \ar[d]^{\widetilde{\psi}} \\
-		Hom(K, P)_{\sigma}/VC_L(\sigma) \ar[r]^{\widetilde{h}} & H^{1}(K, V)_\sigma/C_L(\sigma).
+		\mathrm{Hom}(K, P)_{\sigma}/V \ar[r]^h \ar[d]_{\widetilde{\phi}} & H^{1}(K, V)_\sigma \ar[d]^{\widetilde{\psi}} \\
+		\mathrm{Hom}(K, P)_{\sigma}/VC_L(\sigma) \ar[r]^{\widetilde{h}} & H^{1}(K, V)_\sigma/C_L(\sigma).
     }
   \end{align*}
 \end{lemma}
@@ -410,7 +415,7 @@ Moreover, the following diagram commutes:
 	This shows that $R_\sigma \cap P \cdot \rho \subset \left(VC_L(\sigma)\right) \cdot \rho$. The reverse inclusion follows since $R = P \cdot R$ and $R_\sigma$ is stable under conjugation by $V$ and $C_L(\sigma)$.
 \end{proof}
 
-\begin{theorem} Let $R \subset \mathrm{Hom}(K, P)$ and suppose $P \cdot R = R$. Then $R$ is a finite union of $P$-conjugacy classes if and only if
+\begin{theorem}\label{r:finite_p} Let $R \subset \mathrm{Hom}(K, P)$ and suppose $P \cdot R = R$. Then $R$ is a finite union of $P$-conjugacy classes if and only if
 	\begin{itemize}
 		\item[(i)] $R^L$ is a finite union of $L$-conjugacy classes, and
 		\item[(ii)] for each $\sigma \in \mathrm{Hom}(K, L)$, $(\widetilde{h} \circ \Phi)(R_\sigma)$ is finite in $H^1(K, V)_\sigma/C_L(\sigma)$.
@@ -470,7 +475,7 @@ Then there exists $l \in L$, $\tau \in \mathcal{S}$ such that $\rho^L = l \cdot 
 	\end{align*}
 \end{definition}
 
-\begin{theorem} Let $K'<K$, let $\zeta$ be the inclusion of $K'$ in $K$, and let $\xi$ be the identity map on $V$. Let $R \subset \mathrm{Hom}(K, P)$ such that $R = P \cdot R$. Suppose
+\begin{theorem}\label{main_thm} Let $K'<K$, let $\zeta$ be the inclusion of $K'$ in $K$, and let $\xi$ be the identity map on $V$. Let $R \subset \mathrm{Hom}(K, P)$ such that $R = P \cdot R$. Suppose
 	\begin{itemize}
 		\item[(i)] $R^L$ is a finite union of $L$-conjugacy classes,
 		\item[(ii)] for all $\sigma \in \mathrm{Hom}(K, L)$ such that $R_\sigma \neq \emptyset$, the map
@@ -486,16 +491,58 @@ Then there exists $l \in L$, $\tau \in \mathcal{S}$ such that $\rho^L = l \cdot 
 	Since $R = P \cdot R$, then by Lemma \ref{pr:lrl} $R^L$ is already a union of $L$-conjugacy classes. The point of (i) is that the union is finite.
 \end{remark}
 \begin{proof}
+	Denote the maps
+	\begin{align*}
+		\mathcal{Z}(\zeta):&\mathrm{Hom}(K, P)_\sigma \rightarrow \mathrm{Hom}(K', P)_{\sigma\circ\zeta}, \\
+		\mathcal{H}(\zeta):&\mathrm{Hom}(K, P)_\sigma/V \rightarrow \mathrm{Hom}(K', P)_{\sigma\circ\zeta}/V, \\
+		\widetilde{\mathcal{H}}(\zeta):&\mathrm{Hom}(K, P)_\sigma/VC_L(\sigma) \rightarrow \mathrm{Hom}(K', P)_{\sigma\circ\zeta}/VC_L(\sigma\circ\zeta,
+	\end{align*}
+	defined by
+	\begin{align*}
+		\mathcal{Z}(\zeta)(\rho) &= \rho\circ\zeta, \\
+		\mathcal{H}(\zeta)(\phi(\rho)) &= \phi'(\rho\circ\zeta), \\
+		\widetilde{\mathcal{H}}(\zeta)(\Phi(\rho)) &= \Phi'(\rho\circ\zeta).
+	\end{align*}
+It is clear that the maps $\mathcal{H}(\zeta), \widetilde{\mathcal{H}}(\zeta)$ are well-defined.
+The situation is summarised by the following commutative diagram.
+\par\nobreak
+	{\small
+	\setlength{\abovedisplayskip}{6pt}
+	\setlength{\belowdisplayskip}{\abovedisplayskip}
+	\setlength{\abovedisplayshortskip}{3pt}
+	\setlength{\belowdisplayshortskip}{3pt}
+	\begin{align*}
+		\xymatrix@R=40pt{
+			\mathrm{Hom}(K, P)_\sigma \ar[r]|-{z} \ar[d]^{\phi} \ar[dddr]|-{\mathcal{Z}(\zeta)} & Z^1(K, V)_\sigma \ar[d]_{\psi} \ar[dddr]|-{Z^1(\zeta, \xi)} & \\
+			\mathrm{Hom}(K, P)_\sigma/V \ar[r]|-{h} \ar[d]^{\widetilde{\phi}} \ar[dddr]|-{\mathcal{H}(\zeta)} & H^1(K, P)_\sigma \ar[d]_{\widetilde{\psi}} \ar[dddr]|-{H^1(\zeta, \xi)} & \\
+			\mathrm{Hom}(K, P)_\sigma/VC_L(\sigma) \ar[r]|-{\widetilde{h}} \ar[dddr]|-{\widetilde{\mathcal{H}}(\zeta)} & H^1(K, P)_\sigma/C_L(\sigma) \ar[dddr]|-{\widetilde{H^1}(\zeta, \xi)} & \\
+			& \mathrm{Hom}(K', P)_{\sigma\circ\zeta} \ar[r]|-{z'} \ar[d]^{\phi'} & Z^1(K', V)_\sigma \ar[d]_{\psi'} \\
+			& \mathrm{Hom}(K', P)_{\sigma\circ\zeta}/V \ar[r]|-{h'} \ar[d]^{\widetilde{\phi'}} & H^1(K', V)_{\sigma\circ\zeta} \ar[d]_{\widetilde{\psi'}} \\
+			& \mathrm{Hom}(K', P)_{\sigma\circ\zeta}/VC_L(\sigma\circ\zeta) \ar[r]|-{\widetilde{h'}} & H^1(K', V)_{\sigma\circ\zeta}/C_L(\sigma\circ\zeta) \\
+		}
+	\end{align*}
+	}%
+\par
+Since $P \cdot R = R$, it follows that $P\cdot R^\zeta = R^\zeta$. By definition $R^\zeta \subset \mathrm{Hom}(K', V)$ and by (iii) $R^\zeta$ is a finite union of $P$-conjugacy classes. Therefore by Theorem \ref{r:finite_p}
+\begin{itemize}
+	\item[(iv)] $\left(R^\zeta\right)^L$ is a finite union of $L$-conjugacy classes, and
+	\item[(v)] for each $\sigma \in \mathrm{Hom}(K', L)$, $(\widetilde{h'} \circ \Phi')\left(\left(R^\zeta\right)_\sigma\right)$ is finite in $H^1(K', V)_{\sigma\circ\zeta}/C_L(\sigma\circ\zeta)$.
+\end{itemize}
+
+Let $\sigma \in \mathrm{Hom}(K, L)$ and suppose $R_\sigma \neq \emptyset$. Since $\sigma\circ\zeta \in \mathrm{Hom}(K', L)$, $(\widetilde{h'} \circ \Phi')\left((R^\zeta)_{\sigma\circ\zeta}\right)$ is finite by (v). Furthermore, since $R_\sigma \neq \emptyset$,
+\begin{align*}
+\widetilde{H^1}(\zeta, \xi)^{-1}\left((\widetilde{h'} \circ \Phi')\left((R^\zeta)_{\sigma\circ\zeta}\right)\right)
+\end{align*}
+is finite by (ii). But 
+\begin{align*}
+(\widetilde{h} \circ \Phi)\left(R_\sigma)\right) \subset \widetilde{H^1}(\zeta, \xi)^{-1}\left((\widetilde{h'} \circ \Phi')\left((R^\zeta)_{\sigma\circ\zeta}\right)\right),
+\end{align*}
+so $(\widetilde{h} \circ \Phi)\left(R_\sigma)\right)$ is finite.
+
+Clearly $(\widetilde{h} \circ \Phi)\left(R_\sigma)\right)$ is finite if $R_\sigma = \emptyset$. Then, together with (i), Theorem \ref{r:finite_p} states that $R$ is a finite union of $P$-conjugacy classes.
 \end{proof}
 
-\section{K\"ulshammer's Second Question}
-\subsection{Application of the 1-Cohomology}
-As pointed out in the Introduction, K\"ulshammer's second question has positive answer for $\Gamma, G$ so long as $p$ is good for $G$. We wish to determine whether there exists a reductive counterexample to K\"ulshammer's second question.
-A consequence of the following Theorem \cite[Theorem 1.2]{martin2003reductive} is that if there is a reductive counterexample to K\"ulshammer's second question then the infinitely many $G$-conjugacy classes of $\mathrm{Hom}(\Gamma, G)$ must be of non-$G$-completely reducible homomorphisms.
-
-\begin{theorem} \label{thm:finiteGCR} There are only finitely many $G$-conjugacy classes of $G$-completely reducible homomorphisms from $\Gamma\rightarrow G$.
-\end{theorem}
-\subsection{A Non-Reductive Counterexample}
+\section{A Non-Reductive Counterexample}
 In \cite{slodowy1997two} a counterexample to K\"ulshammer's second question is presented for a closed field $k$ of characteristic $p = 2$ and a non-reductive algebraic group $G$.
 \begin{example} Let $Q$ be the algebraic group isomorphic to the affine space $\mathbf{A}^3$ with the group multiplication law:
 \begin{align*}
