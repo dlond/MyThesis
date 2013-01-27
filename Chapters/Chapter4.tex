@@ -5,6 +5,12 @@
 \label{Chapter4}
 \lhead{Chapter 4. \emph{K\"ulshammer's Second Question}}
 
+Let $K$ be a linear algebraic group, $H$ a connected reductive algebraic group, and $\Gamma$ a finite group.
+As pointed out in the Introduction, K\"ulshammer's second question has positive answer for $\Gamma, G$ so long as $p$ is good for $G$. We wish to determine whether there exists a reductive counterexample to K\"ulshammer's second question.
+
+TODO: How?
+
+Generally speaking, we will be concerned with homomorphisms from $K$ to $G$. Where possible, we will work in this general setting and state things in terms of $K$. When we must specifically work with finite $K$ or connected reductive $K$, we will replace $K$ with $\Gamma$ or $H$, respectively.
 \begin{definition} Let $X,Y$ be groups. Define
 \begin{align*} \mathrm{Hom}(X, Y) = \{ \rho : X \rightarrow Y \,|\, \rho \textrm{ is a homomorphism}\}. 
 \end{align*}
@@ -12,10 +18,9 @@
 
 For example, K\"ulshammer's second question as originally stated concerns $G$-conjugacy classes of $\mathrm{Hom}(\Gamma, G)$ and $\mathrm{Hom}(\Gamma_p, G)$, where $\Gamma_p$ is a Sylow $p$-subgroup of $\Gamma$.
 
-As pointed out in the Introduction, K\"ulshammer's second question has positive answer for $\Gamma, G$ so long as $p$ is good for $G$. We wish to determine whether there exists a reductive counterexample to K\"ulshammer's second question.
 A consequence of the following Theorem \cite[Theorem 1.2]{martin2003reductive} is that if there is a reductive counterexample to K\"ulshammer's second question then the infinitely many $G$-conjugacy classes of $\mathrm{Hom}(\Gamma, G)$ must be of non-$G$-completely reducible homomorphisms.
 
-\begin{theorem} \label{thm:finiteGCR} There are only finitely many $G$-conjugacy classes of $G$-completely reducible homomorphisms from $\Gamma\rightarrow G$.
+\begin{theorem} \label{thm:finiteGCR} There are only finitely many $G$-conjugacy classes of $G$-completely reducible homomorphisms from $\Gamma$ to $G$.
 \end{theorem}
 Let $G$ be a connected reductive algebraic group over an algebraically closed field $k$ with $\mathrm{char}(k) = p$. Let $P$ be a parabolic subgroup of $G$, with Levi subgroup $L$ and unipotent radical $V$. We have $P = V \rtimes L$, and we denote by $\pi^L$ the canonical projection
 \begin{align*} \pi^L:P \rightarrow L. \end{align*}
@@ -24,8 +29,6 @@ Since $L$ normalizes $V$ we have an action by group automorphisms of $L$ on $V$ 
 \begin{align} \label{laction} l \cdot v = lvl^{-1}, \end{align}
 for $l \in L, v \in V$.
 
-Let $K$ be a linear algebraic group, $H$ a connected reductive algebraic group, and $\Gamma$ a finite group.
-Generally speaking, we will be concerned with homomorphisms from $K \rightarrow G$. Where possible, we will work in this general setting and state things in terms of $K$. When we must specifically work with finite $K$ or connected reductive $K$, we will replace $K$ with $\Gamma$ or $H$, respectively.
 
 The following general result shows that finiteness of $G$-conjugacy classes of $\mathrm{Hom}(K, P)$ carries over to $P$-conjugacy classes. 
 \begin{lemma} Let $R \subset \mathrm{Hom}(K, P)$. Then $R$ is contained in a finite union of $G$-conjugacy classes if and only if it is contained in a finite union of $P$-conjugacy classes.
@@ -87,7 +90,7 @@ Let $\rho \in \mathrm{Hom}(K, P)$ and define the map $\alpha_\rho: K \rightarrow
 \begin{align}\label{rho:alpha}
 \alpha_\rho(x) = \rho(x)\rho^L(x^{-1}).
 \end{align}
-We have an action of $K$ on $V$ via $\rho^L$ using Equation \ref{haction}, and we will show that with this action the map $\alpha_\rho$ is a 1-cocycle from $K \rightarrow V$. To this end, let $x, y \in K$.
+We have an action of $K$ on $V$ via $\rho^L$ using Equation \ref{haction}, and we will show that with this action the map $\alpha_\rho$ is a 1-cocycle from $K$ to $V$. To this end, let $x, y \in K$.
 Then,
 \begin{align*} \alpha_\rho(xy) &= \alpha_\rho(xy) \rho^L(xy) \left(\rho^L(xy)\right)^{-1} \\
 	&= \rho(xy) \left(\rho^L(xy)\right)^{-1} \\
@@ -101,7 +104,7 @@ Therefore $\alpha_\rho$ satisfies the 1-cocycle condition in Equation \ref{eqn:n
 
 \begin{definition}\label{h1sigma} Let $\sigma \in \mathrm{Hom}(K, L)$. We denote by
 \begin{align*} Z^1(K, V)_\sigma \end{align*}
-the set of 1-cocycles from $K \rightarrow V$ where $K$ acts on $V$ via $\sigma$.
+the set of 1-cocycles from $K$ to $V$ where $K$ acts on $V$ via $\sigma$.
 Likewise, denote by
 \begin{align*} H^1(K, V)_\sigma \end{align*}
 the 1-cohomology obtained from $Z^1(K, V)_\sigma$ under the equivalence relation in Equation \ref{eqn:h_equiv}. Denote by $\psi$ the canonical projection
@@ -119,7 +122,7 @@ Conversely given a 1-cocycle $\alpha \in Z^1(K, V)_\sigma$ we can construct a ma
 \begin{align}\label{alpha:rho}
 \rho(x) = \alpha(x)\sigma(x),
 \end{align}
-for all $x \in K$. This construction is a homomorphism from $K \rightarrow P$. For take $x, y \in K$, then
+for all $x \in K$. This construction is a homomorphism from $K$ to $P$. For take $x, y \in K$, then
 \begin{align*}
   \rho(x y) &= \alpha(x y) \sigma(x y) \\
   &= \alpha(x)(x \cdot \alpha(y)) \sigma(x) \sigma(y) \\
@@ -151,14 +154,14 @@ Since $\mathrm{Hom}(K, P)_\sigma$ is stable under conjugation by elements of $V$
 \begin{align*} \phi : \mathrm{Hom}(K, P)_\sigma \rightarrow \mathrm{Hom}(K, P)_\sigma / V. \end{align*}
 \end{definition}
 
-In fact, we show that $z$ descends to give a bijection from $\mathrm{Hom}(K, P)_\sigma / V \rightarrow H^1(K, V)_\sigma$.
+In fact, we show that $z$ descends to give a bijection from $\mathrm{Hom}(K, P)_\sigma / V$ to $H^1(K, V)_\sigma$.
 
 \begin{lemma} \label{maph}
 For $\rho \in \mathrm{Hom}(K, P)_\sigma$, define
 \begin{align*}
 h(\phi( \rho)) = \psi(z)(\rho).
 \end{align*}
-Then $h$ is a well-defined bijection from $\mathrm{Hom}(K, P)_\sigma / V \rightarrow H^1(K, P)_\sigma$. Moreover, the following diagram commutes:
+Then $h$ is a well-defined bijection from $\mathrm{Hom}(K, P)_\sigma / V$ to $H^1(K, P)_\sigma$. Moreover, the following diagram commutes:
   \begin{align*}
     \xymatrix{
     \mathrm{Hom}(K, P)_{\sigma} \ar[r]^z \ar[d]_\phi & Z^{1}(K, V)_\sigma \ar[d]^\psi \\
@@ -207,11 +210,11 @@ Let $q \in P$, and let $v \in V, l \in L$ such that $q = vl$. We can conjugate $
 \end{align*}
 for all $x \in K$, so $q \cdot \rho \in \mathrm{Hom}(K, P)_{l\cdot \sigma}$.
 
-Using Definition \ref{h1sigma}, we can define $Z^1(K, V)_{l \cdot \sigma}$ to be the collection of 1-cocycles from $K \rightarrow V$ where $K$ acts on $V$ via $l \cdot \sigma$. The formula for the action is then given by
+Using Definition \ref{h1sigma}, we can define $Z^1(K, V)_{l \cdot \sigma}$ to be the collection of 1-cocycles from $K$ to $V$ where $K$ acts on $V$ via $l \cdot \sigma$. The formula for the action is then given by
 \begin{align*}
 	x.v = l \sigma(x) l^{-1} v l \sigma(x^{-1}) l^{-1},
 \end{align*}
-for all $x \in K, v \in V$. Evidently $Z^1(K, V)_{l \cdot \sigma} = z\left(\mathrm{Hom}(K, P)_{l \cdot \sigma}\right)$. The reason for the new notation for the action above will become apparent presently, as we show that we have a map of 1-cohomomologies $H^1(K, V)_\sigma \rightarrow H^1(K, V)_{l \cdot \sigma}$.
+for all $x \in K, v \in V$. Evidently $Z^1(K, V)_{l \cdot \sigma} = z\left(\mathrm{Hom}(K, P)_{l \cdot \sigma}\right)$. The reason for the new notation for the action above will become apparent presently, as we show that we have a map of 1-cohomomologies $H^1(K, V)_\sigma$ to $H^1(K, V)_{l \cdot \sigma}$.
 
 	We show that we can apply Lemma \ref{h1maps}. To this end, let $K' = K$, $V' = V$ and let $\zeta = \mathrm{id}:K \rightarrow K$.
 
@@ -237,7 +240,7 @@ Let $\xi = \xi_l: V \rightarrow V'$ be defined by	$\xi_l(v) = lvl^{-1}$ for all 
 		H^1(\zeta, \xi_l)\left(\psi(\alpha)\right) = \psi'\left(Z^1(\zeta, \xi_l)(\alpha)\right),
 	\end{align*}
 	for all $\alpha \in Z^1(K, V)_\sigma$,
-	where $\psi'$ is the canonical projection from $Z^1(K, V)_{l \cdot \sigma} \rightarrow H^1(K, V)_{l \cdot \sigma}$.
+	where $\psi'$ is the canonical projection from $Z^1(K, V)_{l \cdot \sigma}$ to $H^1(K, V)_{l \cdot \sigma}$.
 
 	Evidently, if $l \in C_L\left(\sigma(K)\right)$ then $\mathrm{Hom}(K, P)_\sigma$ is stable under conjugation by $vl$ and $H^1(\zeta, \xi_l)$ maps $H^1(K, V)_{\sigma}$ into itself.
 
@@ -320,7 +323,7 @@ Let $\xi = \xi_l: V \rightarrow V'$ be defined by	$\xi_l(v) = lvl^{-1}$ for all 
 	\end{align*}
 	\end{definition}
 
-	We have the following Lemma, which shows that the map $h$ descends to give a bijection from $\mathrm{Hom}(K, P)_\sigma /VC_L(\sigma) \rightarrow H^1(K, V)_{\sigma}/C_L(\sigma)$.
+	We have the following Lemma, which shows that the map $h$ descends to give a bijection from $\mathrm{Hom}(K, P)_\sigma /VC_L(\sigma)$ to $H^1(K, V)_{\sigma}/C_L(\sigma)$.
 
 \begin{lemma}
 	For $\rho \in \mathrm{Hom}(K, P)_\sigma$, define
@@ -465,46 +468,21 @@ R^L = \bigcup_{\tau \in \mathcal{S}} L \cdot \tau.
 Then there exists $l \in L$, $\tau \in \mathcal{S}$ such that $\rho^L = l \cdot \tau$. Hence $l^{-1} \cdot \rho^L = \tau$, so $\rho \in L \cdot R_\tau$. This shows that $R$ is contained in a finite union of $P$-conjugacy classes. The reverse inclusion is satisfied since $R = P \cdot R$, and this completes the proof.
 \end{proof}
 
-\begin{definition} Let $K' < K$ and let $\zeta$ be the inclusion of $K'$ in $K$. Define
-	\begin{align*}
-		\mathrm{Hom}(K, P)^\zeta = \{ \rho\circ\zeta \,|\, \rho \in \mathrm{Hom}(K, P)\} \subset \mathrm{Hom}(K', P).
-	\end{align*}
-	More generally, if $R \subset \mathrm{Hom}(K, P)$ then define
-	\begin{align*}
-		R^\zeta = \{\rho\circ\zeta \,|\, \rho \in R\}.
-	\end{align*}
-\end{definition}
-
-\begin{theorem}\label{main_thm} Let $K'<K$, let $\zeta$ be the inclusion of $K'$ in $K$, and let $\xi$ be the identity map on $V$. Let $R \subset \mathrm{Hom}(K, P)$ such that $R = P \cdot R$. Suppose
-	\begin{itemize}
-		\item[(i)] $R^L$ is a finite union of $L$-conjugacy classes,
-		\item[(ii)] for all $\sigma \in \mathrm{Hom}(K, L)$ such that $R_\sigma \neq \emptyset$, the map
-			\begin{align*}
-				\widetilde{H^1}(\zeta, \xi):H^1(K, V)_\sigma/C_L(\sigma) \rightarrow H^1(K', V)_{\sigma\circ\zeta}/C_L(\sigma\circ\zeta),
-			\end{align*}
-			has finite fibres, and
-		\item[(iii)] $R^\zeta$ is a finite union of $P$-conjugacy classes.
-	\end{itemize}
-	Then $R$ is a finite union of $P$-conjugacy classes.
-\end{theorem}
-\begin{remark}
-	Since $R = P \cdot R$, then by Lemma \ref{pr:lrl} $R^L$ is already a union of $L$-conjugacy classes. The point of (i) is that the union is finite.
-\end{remark}
-\begin{proof}
-	Denote the maps
+\begin{definition} \label{main_cd} Let $K' < K$ and let $\zeta$ be the inclusion of $K'$ in $K$. Define the maps
 	\begin{align*}
 		\mathcal{Z}(\zeta):&\mathrm{Hom}(K, P)_\sigma \rightarrow \mathrm{Hom}(K', P)_{\sigma\circ\zeta}, \\
 		\mathcal{H}(\zeta):&\mathrm{Hom}(K, P)_\sigma/V \rightarrow \mathrm{Hom}(K', P)_{\sigma\circ\zeta}/V, \\
 		\widetilde{\mathcal{H}}(\zeta):&\mathrm{Hom}(K, P)_\sigma/VC_L(\sigma) \rightarrow \mathrm{Hom}(K', P)_{\sigma\circ\zeta}/VC_L(\sigma\circ\zeta,
 	\end{align*}
-	defined by
+	by
 	\begin{align*}
 		\mathcal{Z}(\zeta)(\rho) &= \rho\circ\zeta, \\
 		\mathcal{H}(\zeta)(\phi(\rho)) &= \phi'(\rho\circ\zeta), \\
 		\widetilde{\mathcal{H}}(\zeta)(\Phi(\rho)) &= \Phi'(\rho\circ\zeta).
 	\end{align*}
 It is clear that the maps $\mathcal{H}(\zeta), \widetilde{\mathcal{H}}(\zeta)$ are well-defined.
-The situation is summarised by the following commutative diagram.
+
+The situation thus far is summarised by the following commutative diagram.
 \par\nobreak
 	{\small
 	\setlength{\abovedisplayskip}{6pt}
@@ -522,106 +500,133 @@ The situation is summarised by the following commutative diagram.
 		}
 	\end{align*}
 	}%
-\par
-Since $P \cdot R = R$, it follows that $P\cdot R^\zeta = R^\zeta$. By definition $R^\zeta \subset \mathrm{Hom}(K', V)$ and by (iii) $R^\zeta$ is a finite union of $P$-conjugacy classes. Therefore by Theorem \ref{r:finite_p}
+\end{definition}
+
+We are now ready to state the main Theorem.
+
+\begin{theorem}\label{main_thm} Let $K'<K$, let $\zeta$ be the inclusion of $K'$ in $K$, and let $\xi$ be the identity map on $V$. Let $R \subset \mathrm{Hom}(K, P)$ such that $R = P \cdot R$, and let $S = \mathcal{Z}(\zeta)(R)$. Suppose
+	\begin{itemize}
+		\item[(i)] $R^L$ is a finite union of $L$-conjugacy classes,
+		\item[(ii)] for all $\sigma \in \mathrm{Hom}(K, L)$ such that $R_\sigma \neq \emptyset$, the map
+			\begin{align*}
+				\widetilde{H^1}(\zeta, \xi):H^1(K, V)_\sigma/C_L(\sigma) \rightarrow H^1(K', V)_{\sigma\circ\zeta}/C_L(\sigma\circ\zeta),
+			\end{align*}
+			has finite fibres, and
+		\item[(iii)] $S$ is a finite union of $P$-conjugacy classes.
+	\end{itemize}
+	Then $R$ is a finite union of $P$-conjugacy classes.
+\end{theorem}
+\begin{remark}
+	Since $R = P \cdot R$, then by Lemma \ref{pr:lrl} $R^L$ is already a union of $L$-conjugacy classes. The point of (i) is that the union is finite.
+\end{remark}
+\begin{proof}
+Since $P \cdot R = R$, it follows that $P\cdot S = S$. By definition $S \subset \mathrm{Hom}(K', V)$ and by (iii) $S$ is a finite union of $P$-conjugacy classes. Therefore by Theorem \ref{r:finite_p}
 \begin{itemize}
-	\item[(iv)] $\left(R^\zeta\right)^L$ is a finite union of $L$-conjugacy classes, and
-	\item[(v)] for each $\sigma \in \mathrm{Hom}(K', L)$, $(\widetilde{h'} \circ \Phi')\left(\left(R^\zeta\right)_\sigma\right)$ is finite in $H^1(K', V)_{\sigma\circ\zeta}/C_L(\sigma\circ\zeta)$.
+	\item[(iv)] $S^L$ is a finite union of $L$-conjugacy classes, and
+	\item[(v)] for each $\sigma \in \mathrm{Hom}(K', L)$, $(\widetilde{h'} \circ \Phi')\left(S_\sigma\right)$ is finite in $H^1(K', V)_{\sigma\circ\zeta}/C_L(\sigma\circ\zeta)$.
 \end{itemize}
 
-Let $\sigma \in \mathrm{Hom}(K, L)$ and suppose $R_\sigma \neq \emptyset$. Since $\sigma\circ\zeta \in \mathrm{Hom}(K', L)$, $(\widetilde{h'} \circ \Phi')\left((R^\zeta)_{\sigma\circ\zeta}\right)$ is finite by (v). Furthermore, since $R_\sigma \neq \emptyset$,
-\begin{align*}
-\widetilde{H^1}(\zeta, \xi)^{-1}\left((\widetilde{h'} \circ \Phi')\left((R^\zeta)_{\sigma\circ\zeta}\right)\right)
-\end{align*}
-is finite by (ii). But 
-\begin{align*}
-(\widetilde{h} \circ \Phi)\left(R_\sigma)\right) \subset \widetilde{H^1}(\zeta, \xi)^{-1}\left((\widetilde{h'} \circ \Phi')\left((R^\zeta)_{\sigma\circ\zeta}\right)\right),
-\end{align*}
-so $(\widetilde{h} \circ \Phi)\left(R_\sigma)\right)$ is finite.
+Let $\sigma \in \mathrm{Hom}(K, L)$. Clearly $(\widetilde{h} \circ \Phi)\left(R_\sigma\right)$ is finite if $R_\sigma = \emptyset$, so suppose $R_\sigma \neq \emptyset$. 
 
-Clearly $(\widetilde{h} \circ \Phi)\left(R_\sigma)\right)$ is finite if $R_\sigma = \emptyset$. Then, together with (i), Theorem \ref{r:finite_p} states that $R$ is a finite union of $P$-conjugacy classes.
+We have $\mathcal{Z}(\zeta)(R_\sigma) \subset S_{\sigma\circ\zeta}$, and by the commutative diagram in Definition \ref{main_cd},
+\begin{align*}
+	\widetilde{h'} \circ \Phi' \circ \mathcal{Z}(\zeta) = \widetilde{H^1}(\zeta) \circ \widetilde{h} \circ \Phi.
+\end{align*}
+Therefore
+\begin{align*}
+	\left(\widetilde{H^1}(\zeta) \circ \widetilde{h} \circ \Phi\right)(R_\sigma) &= \left(\widetilde{h'} \circ \Phi' \circ \mathcal{Z}(\zeta)\right)(R_\sigma) \\
+		&= (\widetilde{h'} \circ \Phi')\left(\mathcal{Z}(\zeta)(R_\sigma)\right) \\
+		&\subset (\widetilde{h'} \circ \Phi')(S_{\sigma\circ\zeta}).
+\end{align*}
+Then $\left(\widetilde{H^1}(\zeta) \circ \widetilde{h} \circ \Phi\right)(R_\sigma)$ is finite by (v), and
+\begin{align*}
+	\widetilde{H^1}(\zeta)^{-1} \left(\widetilde{H^1}(\zeta) \circ \widetilde{h} \circ \Phi\right)(R_\sigma) \supset (\widetilde{h} \circ \Phi)(R_\sigma),
+\end{align*}
+is finite by (ii).
+
+Therefore $(\widetilde{h} \circ \Phi)(R_\sigma)$ is finite in any case. Together with (i) we may apply Theorem \ref{r:finite_p}, so $R$ is a finite union of $P$-conjugacy classes.
 \end{proof}
 
 \section{A Non-Reductive Counterexample}
-In \cite{slodowy1997two} a counterexample to K\"ulshammer's second question is presented for a closed field $k$ of characteristic $p = 2$ and a non-reductive algebraic group $G$.
+In \cite{slodowy1997two} a counterexample to K\"ulshammer's second question is presented for a closed field $k$ of characteristic $p = 2$ and a non-reductive algebraic group.
 \begin{example} Let $Q$ be the algebraic group isomorphic to the affine space $\mathbf{A}^3$ with the group multiplication law:
 \begin{align*}
 	\left(\begin{matrix} u_1 \\ u_2 \\ u_3 \end{matrix}\right) \times
 	\left(\begin{matrix} v_1 \\ v_2 \\ v_3 \end{matrix}\right) &=
 	\left(\begin{matrix} u_1 + v_1 \\ u_2 + v_2 \\ u_3 + v_3 + u_1v_1 + u_2v_2 + u_1v_2 \end{matrix}\right).
 \end{align*}
-Let $\Gamma = \langle \sigma, \tau | \sigma^3 = \tau^2 = 1, \tau\sigma\tau = \sigma^2 \rangle$ and $\Gamma_2 = \langle \tau \rangle$, a Sylow 2-subgroup of $\Gamma$. $\Gamma$ acts on $Q$ via
+Let $F = \langle \sigma, \tau | \sigma^3 = \tau^2 = 1, \tau\sigma\tau = \sigma^2 \rangle = S_3$ and $F_2 = \langle \tau \rangle$, a Sylow 2-subgroup of $F$. We have an action of $F$ on $Q$ given by
 \begin{align*}
 	\tau \cdot \left(\begin{matrix} u_1 \\ u_2 \\ u_3 \end{matrix} \right) &=
 	\left(\begin{matrix} u_2 \\ u_1 \\ u_3 + u_1^2 + u_2^2 + u_1u_2 \end{matrix} \right) \\
 	\sigma \cdot \left(\begin{matrix} u_1 \\ u_2 \\ u_3 \end{matrix} \right) &=
 	\left(\begin{matrix} u_2 \\ u_1 + u_2 \\ u_3 \end{matrix} \right).
 \end{align*}
-Let $G = Q \rtimes \Gamma$ and fix the representation $\rho:\Gamma_2 \rightarrow G$ defined by the natural inclusion $\Gamma_2 \rightarrow \Gamma \rightarrow G$. Then there are infinitely many pairwise $G$-conjugate classes of extensions of $\rho$ to representations of $\Gamma$ into $G$ \cite[Appendix]{slodowy1997two}.
+Let $G = Q \rtimes F$ and fix the representation $\rho:F_2 \rightarrow G$ defined by the natural inclusion $F_2 \rightarrow F \rightarrow G$. Then there are infinitely many pairwise $G$-conjugate classes of extensions of $\rho$ to representations of $F$ in $G$ \cite[Appendix]{slodowy1997two}.
 \label{eg:non_red}
 \end{example}
-\begin{proof}
-	Our proof will be way of a 1-cohomology calculation. Choose a 1-cocycle $\alpha \in Z^1(\Gamma, Q)$ such that $\alpha|_{\langle \sigma \rangle} = 1$. Let
-	\begin{align*}
-		\alpha(\tau) = \left(\begin{matrix} u_1 \\ u_2 \\ u_3 \end{matrix} \right),
-	\end{align*}
-	for some $u_1, u_2, u_3 \in k$. Since $\tau$ is an involution we have
-	\begin{align*}
-		1 = \alpha(\tau^2) &= \alpha(\tau) \times \tau\cdot\alpha(\tau)\\
-		&= \left(\begin{matrix} u_1 \\ u_2 \\ u_3\end{matrix} \right) \times 
-		\left(\begin{matrix} u_2 \\ u_1 \\ u_3 + u_1^2 + u_2^2 + u_1u_2\end{matrix} \right) \\
-		&= \left(\begin{matrix} u_1 + u_2 \\ u_1 + u_2 \\ 2u_3 + 2u_1^2 + u_2^2 + 3u_1u_2\end{matrix} \right)\\
-		&= \left(\begin{matrix} u_1 + u_2 \\ u_1 + u_2 \\ u_2^2 + u_1u_2\end{matrix} \right).
-	\end{align*}
-	This shows $u_1 = u_2$, so
-	\begin{align*}
-		\alpha(\tau) = \left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right).
-	\end{align*}
-	Furthermore, as $\tau\sigma\tau = \sigma^2$ we obtain
-	\begin{align*}
-		1 = \alpha(\sigma^2) &= \alpha(\tau\sigma\tau) \\
-		&= \alpha(\tau) \times \tau\cdot\alpha(\sigma\tau)\\
-		&= \alpha(\tau) \times \tau\cdot\alpha(\sigma) \times \tau\sigma\cdot\alpha(\tau) \\
-		&= \alpha(\tau) \times \tau\sigma\cdot\alpha(\tau) \\
-		&= \left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right) \times
-		\tau\sigma\cdot\left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right)\\
-		&= \left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right) \times
-		\tau\cdot\left(\begin{matrix} u_1 \\ 0 \\ u_3\end{matrix} \right)\\
-		&= \left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right) \times
-		\left(\begin{matrix} 0 \\ u_1 \\ u_3 + u_1^2\end{matrix} \right)\\
-		&= \left(\begin{matrix} u_1 \\ 0 \\ 2u_3 + 3u_1^2\end{matrix} \right)\\
-		&= \left(\begin{matrix} u_1 \\ 0 \\ u_1^2\end{matrix} \right).
-	\end{align*}
-	Therefore $u_1 = 0$. Hence a typical 1-cocycle that is trivial on $\langle \sigma \rangle$ satisfies
-	\begin{align*}
-		\alpha_u(\tau) = \left(\begin{matrix} 0 \\ 0 \\ u \end{matrix} \right),\qquad (u\in k).
-	\end{align*}
-	This is a necessary condition. To show it is sufficient one can apply \cite[Proposition 2]{martin2004nonab} which involves looking at the presentation of $\Gamma$.
-	Now we calculate the class $[\alpha_u] \in H^1(\Gamma, Q)$. Suppose $[\alpha_v] = [\alpha_u]$. Then
-	there is a $q\in Q$ fixed under the action of $\sigma$, that is of the form
-	\begin{align*}
-		q = \left(\begin{matrix} 0 \\ 0 \\ \lambda\end{matrix}\right),
-	\end{align*}
-	such that $\alpha_v(\gamma) = q\times\alpha_u(\gamma)\times\gamma\cdot q^{-1}$. In particular, for $\gamma = \tau$
-	\begin{align*}
-		\left(\begin{matrix} 0 \\ 0 \\ v\end{matrix}\right) &=
-		\left(\begin{matrix} 0 \\ 0 \\ \lambda\end{matrix}\right) \times
-		\left(\begin{matrix} 0 \\ 0 \\ u\end{matrix}\right) \times
-		\tau\cdot\left(\begin{matrix} 0 \\ 0 \\ \lambda\end{matrix}\right)\\
-		&=
-		\left(\begin{matrix} 0 \\ 0 \\ \lambda\end{matrix}\right) \times
-		\left(\begin{matrix} 0 \\ 0 \\ u\end{matrix}\right) \times
-		\left(\begin{matrix} 0 \\ 0 \\ \lambda\end{matrix}\right)\\
-		&=
-		\left(\begin{matrix} 0 \\ 0 \\ \lambda\end{matrix}\right) \times
-		\left(\begin{matrix} 0 \\ 0 \\ u + \lambda\end{matrix}\right) \\
-		&=
-		\left(\begin{matrix} 0 \\ 0 \\ u\end{matrix}\right).
-	\end{align*}
-	Hence only if $u=v$ are two 1-cocycles of the particular form in the same class, and therefore $H^1(\Gamma, Q)$ is infinite.
-\end{proof}
+Motivated by Theorem \ref{main_thm}, we examine the counterexample via the 1-cohomology. Note however that the results in this Chapter are stated for reductive $G$, so they cannot be applied directly.
 
-In view of Theorem \ref{thm:k2_h1} one could show that the map $H^1(\Gamma, Q) \rightarrow H^1(\Gamma_p, Q)$ is not injective. Furthermore, it is natural to ask whether Example \ref{eg:non_red} leads to a reductive counterexample to K\"ulshammer's second question, although we can quickly verify that the answer is ``not immediately''. For suppose there was a reductive group with unipotent radical \emph{containing} the multiplication law:
+Choose a 1-cocycle $\alpha \in Z^1(F, Q)$ such that $\alpha|_{\langle \sigma \rangle} = 1$. Let
+\begin{align*}
+	\alpha(\tau) = \left(\begin{matrix} u_1 \\ u_2 \\ u_3 \end{matrix} \right),
+\end{align*}
+for some $u_1, u_2, u_3 \in k$. Since $\tau$ is an involution we have
+\begin{align*}
+	1 = \alpha(\tau^2) &= \alpha(\tau) \times \tau\cdot\alpha(\tau)\\
+	&= \left(\begin{matrix} u_1 \\ u_2 \\ u_3\end{matrix} \right) \times 
+	\left(\begin{matrix} u_2 \\ u_1 \\ u_3 + u_1^2 + u_2^2 + u_1u_2\end{matrix} \right) \\
+	&= \left(\begin{matrix} u_1 + u_2 \\ u_1 + u_2 \\ 2u_3 + 2u_1^2 + u_2^2 + 3u_1u_2\end{matrix} \right)\\
+	&= \left(\begin{matrix} u_1 + u_2 \\ u_1 + u_2 \\ u_2^2 + u_1u_2\end{matrix} \right).
+\end{align*}
+This shows $u_1 = u_2$, so
+\begin{align*}
+	\alpha(\tau) = \left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right).
+\end{align*}
+Furthermore, as $\tau\sigma\tau = \sigma^2$ we obtain
+\begin{align*}
+	1 = \alpha(\sigma^2) &= \alpha(\tau\sigma\tau) \\
+	&= \alpha(\tau) \times \tau\cdot\alpha(\sigma\tau)\\
+	&= \alpha(\tau) \times \tau\cdot\alpha(\sigma) \times \tau\sigma\cdot\alpha(\tau) \\
+	&= \alpha(\tau) \times \tau\sigma\cdot\alpha(\tau) \\
+	&= \left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right) \times
+	\tau\sigma\cdot\left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right)\\
+	&= \left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right) \times
+	\tau\cdot\left(\begin{matrix} u_1 \\ 0 \\ u_3\end{matrix} \right)\\
+	&= \left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right) \times
+	\left(\begin{matrix} 0 \\ u_1 \\ u_3 + u_1^2\end{matrix} \right)\\
+	&= \left(\begin{matrix} u_1 \\ 0 \\ 2u_3 + 3u_1^2\end{matrix} \right)\\
+	&= \left(\begin{matrix} u_1 \\ 0 \\ u_1^2\end{matrix} \right).
+\end{align*}
+Therefore $u_1 = 0$. Hence a typical 1-cocycle that is trivial on $\langle \sigma \rangle$ satisfies
+\begin{align*}
+	\alpha_u(\tau) = \left(\begin{matrix} 0 \\ 0 \\ u \end{matrix} \right),\qquad (u\in k).
+\end{align*}
+This is a necessary condition. To show it is sufficient one can apply \cite[Proposition 2]{martin2004nonab} which involves looking at the presentation of $F$.
+Now we calculate the class $[\alpha_u] \in H^1(F, Q)$. Suppose $[\alpha_v] = [\alpha_u]$. Then
+there is a $q\in Q$ fixed under the action of $\sigma$, that is of the form
+\begin{align*}
+	q = \left(\begin{matrix} 0 \\ 0 \\ \lambda\end{matrix}\right),
+\end{align*}
+such that $\alpha_v(\gamma) = q\times\alpha_u(\gamma)\times\gamma\cdot q^{-1}$. In particular, for $\gamma = \tau$
+\begin{align*}
+	\left(\begin{matrix} 0 \\ 0 \\ v\end{matrix}\right) &=
+	\left(\begin{matrix} 0 \\ 0 \\ \lambda\end{matrix}\right) \times
+	\left(\begin{matrix} 0 \\ 0 \\ u\end{matrix}\right) \times
+	\tau\cdot\left(\begin{matrix} 0 \\ 0 \\ \lambda\end{matrix}\right)\\
+	&=
+	\left(\begin{matrix} 0 \\ 0 \\ \lambda\end{matrix}\right) \times
+	\left(\begin{matrix} 0 \\ 0 \\ u\end{matrix}\right) \times
+	\left(\begin{matrix} 0 \\ 0 \\ \lambda\end{matrix}\right)\\
+	&=
+	\left(\begin{matrix} 0 \\ 0 \\ \lambda\end{matrix}\right) \times
+	\left(\begin{matrix} 0 \\ 0 \\ u + \lambda\end{matrix}\right) \\
+	&=
+	\left(\begin{matrix} 0 \\ 0 \\ u\end{matrix}\right).
+\end{align*}
+Hence only if $u=v$ are two 1-cocycles of the particular form in the same class, and therefore $H^1(F, Q)$ is infinite.
+
+In view of Theorem \ref{thm:k2_h1} one could show that the map from $H^1(F, Q)$ to $H^1(F_p, Q)$ is not injective. Furthermore, it is natural to ask whether Example \ref{eg:non_red} leads to a reductive counterexample to K\"ulshammer's second question, although we can quickly verify that the answer is ``not immediately''. For suppose there was a reductive group with unipotent radical \emph{containing} the multiplication law:
 \begin{align*}
 	&\ldots \epsilon_\alpha(u_\alpha) \ldots \epsilon_\beta(u_\beta) \ldots \epsilon_\gamma(u_\gamma) \times
 	\ldots \epsilon_\alpha(v_\alpha) \ldots \epsilon_\beta(v_\beta) \ldots \epsilon_\gamma(v_\gamma)\\
