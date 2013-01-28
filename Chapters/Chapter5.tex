@@ -29,7 +29,7 @@ There exists a homomorphism $\rho_0$ from $ SL_2(k)$ into $L_\alpha$ such that
 \end{align*}
 where $\epsilon_\alpha : k \rightarrow U_\alpha$ is an isomorphism of algebraic groups \cite[Theorem 26.3(c)]{humphreys1975linear}.
 
-We fix an integer $r > 0$ and define $\rho_r:SL_2(k) \rightarrow L_\alpha$ composed of $\rho_0$ and the Frobenius map,
+We fix an integer $r > 0$ and define $\rho_r:SL_2(k) \rightarrow L_\alpha$ to be the composition of $\rho_0$ and the Frobenius map, defined by
 \begin{align*}
 F_r&:SL_2(k)\rightarrow SL_2(k) \\
 & (A_{ij}) \mapsto (A_{ij})^{p^r}.
@@ -46,7 +46,7 @@ We have an action of $SL_2(k)$ on $V_\alpha$ defined by
 \end{align*}
 for $y \in SL_2(k), v \in V_\alpha$.
 
-We are interested in finding the general form of a 1-cocycle $\varsigma \in Z^1(SL_2(k), V_\alpha)_{\rho_r}$. Then we can apply the canonical projection $\psi:Z^1(SL_2(k), V_\alpha)_{\rho_r} \rightarrow H^1(SL_2(k), V_\alpha)_{\rho_r}$ to calculate the 1-cohomology (cf. Chapter \ref{Chapter6}).
+We are interested in finding the general form of a 1-cocycle $\varsigma \in Z^1(SL_2(k), V_\alpha)_{\rho_r}$. Then we can apply the canonical projection $\psi:Z^1(SL_2(k), V_\alpha)_{\rho_r} \rightarrow H^1(SL_2(k), V_\alpha)_{\rho_r}$ to calculate the 1-cohomology.
 
 Let $\zeta$ be the inclusion of $D_2(k) = \left(\begin{matrix}* & 0\\0 & *\end{matrix}\right)$ in $SL_2(k)$. By Lemma \ref{lem:nonab_lin_red} $H^1(D_2(k), V_\alpha)_{\rho\circ \zeta}$ is trivial, hence the kernel of the restriction map $H^1(\zeta):H^1(SL_2(k), V_\alpha)_\rho \rightarrow H^1(D_2(k), V_\alpha)_{\rho\circ\zeta}$ (Lemma \ref{h1maps}) is $H^1(SL_2(k), V_\alpha)_\rho$. Therefore, by Lemma \ref{kerh1} there exists $\sigma\in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\psi(\varsigma) = \psi(\sigma)$ and $\sigma\left(\begin{matrix}* & 0 \\ 0 & *\end{matrix}\right) = 1 \in V_\alpha$, so we may proceed with $\sigma$.
 
@@ -160,7 +160,32 @@ x_\delta\left(t^2u\right) &= t^{\langle \delta, \alpha \rangle p^r} x_\delta\lef
 Since $x_\delta$ is a polynomial function there can only be non-negative powers of $t$ on the left-hand side of the equality which forces $\langle \delta, \alpha \rangle \geq 0$. However, if $\langle \delta, \alpha \rangle = 0$ then $x_\delta$ is constant and hence zero, as $\sigma\left(\begin{matrix} * & 0 \\ 0 & *\end{matrix}\right) = 1$. Therefore the non-zero $x_\delta$ occur only when $\langle \delta, \alpha \rangle > 0$.
 \end{proof}
 
-Next we prove a couple of useful facts about root systems not containing $G_2$ or $C_3$.
+\begin{proposition}\label{imb:imu}
+The images of $\left(\begin{matrix}1 & *\\0 & 1\end{matrix}\right)$ and $\left(\begin{matrix}* & *\\0 & *\end{matrix}\right)$ under $\sigma$ are equal.
+\end{proposition}
+\begin{proof}
+	Let $a\in k^*, b\in k$. Since
+\begin{align*}
+	\left(\begin{matrix}a & b\\0 & a^{-1}\end{matrix}\right) = 
+	\left(\begin{matrix}a & 0\\0 & a^{-1}\end{matrix}\right)
+	\left(\begin{matrix}1 & a^{-1}b\\0 & 1\end{matrix}\right),
+\end{align*}
+we get
+\begin{align*}
+	\sigma\left(\begin{matrix}a & b\\0 & a^{-1}\end{matrix}\right) &=
+	\left(\sigma\left(\begin{matrix}a & 0\\0 & a^{-1}\end{matrix}\right)\right)
+	\left(
+	\left(\begin{matrix}a & 0\\0 & a^{-1}\end{matrix}\right) \cdot
+	\sigma\left(\begin{matrix}1 & a^{-1}b\\0 & 1\end{matrix}\right)
+	\right)\\
+	&= \left(\begin{matrix}a & 0\\0 & a^{-1}\end{matrix}\right) \cdot
+	\sigma\left(\begin{matrix}1 & a^{-1}b\\0 & 1\end{matrix}\right) \\
+	&\subset \sigma\left(\begin{matrix}1 & *\\0 & 1\end{matrix}\right)\quad(\textrm{by Equation \ref{eqn:t_act}}).
+\end{align*}
+The reverse inclusion is obvious.
+\end{proof}
+
+Next we prove some useful facts about root systems not containing $G_2$ or $C_3$.
 
 \begin{proposition} \label{ufixes} Suppose $\Phi$ does not contain $G_2$ and let $\alpha,\beta\in\Phi$. If $\alpha + \beta \in \Phi$ then $\langle \alpha, \beta \rangle \leq 0$.
 \end{proposition}
@@ -182,15 +207,15 @@ If $\Phi = G_2$, $\Delta = \{\alpha, \beta\}$ ($\alpha$ short) then $\alpha, 2\a
 Suppose $\Phi$ does not contain $G_2$ or $C_3$. Let $\delta_1, \delta_2 \in \Phi$ and $\gamma \in \Delta$ be distinct roots such that $\langle \delta_i, \gamma \rangle > 0$ $(i = 1, 2)$. If $\delta_1 + \delta_2$ is a root, then $\delta_1$ and $\delta_2$ are of opposite sign.
 \end{proposition}
 \begin{remark}\label{c3rem}
-Unlike in Remark \ref{g2rem} it is not obvious whether an irreducible root sytem contains $C_3$ or not.
+Unlike Remark \ref{g2rem}, it is not obvious whether or not an irreducible root sytem contains $C_3$.
 \end{remark}
 \begin{proof}
 Suppose $\delta_1 + \delta_2 \in \Phi$. Let $\theta_i$ be the absolute value of the angle between $\delta_i$ and $\gamma$ $(i = 1,2)$, and let $\theta_3$ be the absolute value of the angle between $\delta_1$ and $\delta_2$. Then
 \begin{align*}
-&\langle \delta_i, \gamma\rangle > 0 \qquad (i=1,2) \\
+&\langle \delta_i, \gamma\rangle > 0 \\
 \Rightarrow &(\delta_i, \gamma) > 0 \\
 \Rightarrow &\cos(\theta_i) > 0 \\
-\Rightarrow &\theta_i < \pi/2.
+\Rightarrow &\theta_i < \pi/2,\quad (i = 1,2).
 \end{align*}
 By Proposition \ref{ufixes} $\langle \delta_1, \delta_2 \rangle \leq 0$, so $\theta_3 \geq \pi/2$.
 
@@ -206,7 +231,7 @@ For cases (i) and (ii) the three roots must lie in a plane, hence a rank 2 subsy
 
 Like case (ii), for case (iii) $\delta_1, \delta_2$ must lie in a $B_2$ subsystem. However, $\theta_1 = \pi/4$ implies that $\delta_1, \gamma$ are roots of different length in a $B_2$ subsystem, while $\theta_2 = \pi/3$ implies that $\delta_2, \gamma$ are roots of the same length in an $A_2$ subsystem, a contradiction. Therefore we rule out case (iii).
 
-For case (iv) $\delta_1, \delta_2$ again lie in a $B_2$ subsystem, and $\delta_i, \gamma$ lie in an $A_2$ subsystem $(i = 1, 2)$. Then the roots $\delta_i, \gamma$ $(i=1, 2)$ are the same length, so $\gamma$ is a short root. Therefore, if $\delta_1, \delta_2, \gamma$  lie in a rank 3 subsystem $X$, $X$ contains two short root $A_2$ subsystems and a $B_2$ subsystem. TODO \ldots Therefore $X=C_3$ so we can rule out case (iv).
+For case (iv) $\delta_1, \delta_2$ again lie in a $B_2$ subsystem, and $\delta_i, \gamma$ lie in an $A_2$ subsystem $(i = 1, 2)$. Then the roots $\delta_1, \delta_2, \gamma$ are the same length, so $\gamma$ is a short root. Therefore, if $\delta_1, \delta_2, \gamma$  lie in a rank 3 subsystem $X$, $X$ contains two short root $A_2$ subsystems and a $B_2$ subsystem. This rules out $B_3$, so $X=C_3$. Since we excluded $C_3$, we can rule out case (iv).
 \end{proof}
 
 \begin{remark}\label{c3counter}
@@ -219,8 +244,6 @@ Let $\Phi = C_3$, $\Delta = \{\alpha, \beta, \gamma\}$ where $\gamma$ is the lon
 \end{align*}
 This shows that Proposition \ref{uabelian} breaks down when $\Phi$ contains $C_3$ as a root subsystem. 
 \end{remark}
-
-We return to the 1-cohomology calculation but assume that $\Phi$ does not contain $G_2$ or $C_3$.
 
 \begin{lemma}[First Main Lemma]\label{lem:first} Suppose $\Phi$ does not contain $G_2$ or $C_3$. Then
 \begin{itemize}
@@ -241,34 +264,25 @@ where $\mathcal{D}=\{\delta \in \Phi -\{\alpha\} \,|\,\langle \delta, \alpha \ra
 
 Let $\delta \in \mathcal{D}$. Since $\langle \delta, \alpha \rangle > 0$, $\alpha + \delta$ is not a root (Proposition \ref{ufixes}), so $U_\alpha$ commutes with $U_\delta$. This proves (i).
 
-Let $\delta_1, \delta_2 \in \mathcal{D}$. Since $\langle \delta_i, \alpha \rangle > 0$ $(i=1,2)$, $\delta_1 + \delta_2$ is not a root (Proposition \ref{uabelian}), so $U_{\delta_1}$ and $U_{\delta_2}$ commute. Therefore $\sigma\left(\begin{matrix}1 & * \\ 0 & 1\end{matrix}\right)$ lies in a product of commuting root groups. Furthermore, for any $a, b\in k$ with $a\neq 0$
-\begin{align*}
-\sigma\left(\begin{matrix} a & ab \\ 0 & a^{-1}\end{matrix}\right)
-&= \left(\sigma\left(\begin{matrix} a & 0 \\ 0 & a^{-1}\end{matrix} \right)\right)\left(\begin{matrix} a & 0 \\ 0 & a^{-1}\end{matrix} \right) \cdot
-\sigma\left(\begin{matrix} 1 & b \\ 0 & 1\end{matrix}\right) \\
-&= \left(\begin{matrix} a & 0 \\ 0 & a^{-1}\end{matrix} \right) \cdot
-\sigma\left(\begin{matrix} 1 & b \\ 0 & 1\end{matrix}\right) \\
-&= \prod_{\delta\in\mathcal{D}} \epsilon_\delta\left(a^{\langle \delta, \alpha \rangle p^r}x_\delta\left(b\right)\right)\quad(\textrm{Equation }\ref{eqn:t_act}).
-\end{align*}
-Therefore $\sigma\left(\begin{matrix}* & * \\ 0 & *\end{matrix}\right)$ lies in a product of commuting root groups. This proves (ii).
+Let $\delta_1, \delta_2 \in \mathcal{D}$. Since $\langle \delta_i, \alpha \rangle > 0$ $(i=1,2)$, $\delta_1 + \delta_2$ is not a root (Proposition \ref{uabelian}), so $U_{\delta_1}$ and $U_{\delta_2}$ commute. Therefore $\sigma\left(\begin{matrix}1 & * \\ 0 & 1\end{matrix}\right)$ lies in a product of commuting root groups, so $\sigma\left(\begin{matrix}* & *\\0 & *\end{matrix}\right)$ lies in a product of commuting root groups (Proposition \ref{imb:imu}).
 \end{proof}
 
 \begin{lemma}[Second Main Lemma]\label{lem:second}
-Suppose $\Phi$ does not contain $G_2$ or $C_3$. If $p = 2$ then
+Suppose $\Phi$ does not contain $G_2$ or $C_3$. Then
 \begin{align*}
-	\sigma\left(\begin{matrix}* & *\\0 & *\end{matrix}\right) \subset \langle U_\delta \,|\, \delta \in \Phi^+ - \{\alpha\}, \langle \delta, \alpha \rangle = 1\textrm{ or }2\rangle,
+\sigma\left(\begin{matrix}* & *\\0 & *\end{matrix}\right) \subset
+	\left\{ \begin{array}{ll}
+		\langle U_\delta \,|\, \delta \in \Phi^+ - \{\alpha\}, \langle \delta, \alpha \rangle = 1\textrm{ or }2\rangle, & \textrm{if } p = 2 \\ \\
+		\langle U_\delta \,|\, \delta \in \Phi^+ - \{\alpha\}, \langle \delta, \alpha \rangle = 2 \rangle, & \textrm{otherwise}.
+	\end{array}\right.
 \end{align*}
-otherwise
+Furthermore, there exists $\mu_\delta \in k$ such that
 \begin{align*}
-	\sigma\left(\begin{matrix}* & *\\0 & *\end{matrix}\right) \subset \langle U_\delta \,|\, \delta \in \Phi^+ - \{\alpha\}, \langle \delta, \alpha \rangle = 2 \rangle.
-\end{align*}
-Furthermore, there exists $\mu \in k^*$ such that, if $p = 2$ then
-\begin{align*}
-	x_\delta(\lambda) = \mu\lambda^{2^{r - 2 + \langle \delta, \alpha \rangle}},\quad\forall\lambda\in k,
-\end{align*}
-otherwise
-\begin{align*}
-	x_\delta(\lambda) = \mu\lambda^{p^r},\quad\forall\lambda\in k.
+	x_\delta(\lambda) = 
+	\left\{ \begin{array}{ll}
+		\mu_\delta\lambda^{2^{r - 2 + \langle \delta, \alpha \rangle}}, & \textrm{if } p = 2\\ \\
+		\mu_\delta\lambda^{p^r}, & \textrm{otherwise}.
+	\end{array}\right.
 \end{align*}
 \end{lemma}
 \begin{proof}
@@ -291,7 +305,7 @@ Therefore
 	\prod_{\delta\in\mathcal{D}} \epsilon_\delta(x_\delta(u_1 + u_2)) &= 
 	\prod_{\delta\in\mathcal{D}} \epsilon_\delta(x_\delta(u_1))
 	\prod_{\delta\in\mathcal{D}} \epsilon_\delta(x_\delta(u_2))\quad(\textrm{Proposition \ref{claim1}}) \\
-	&= \prod_{\delta\in\mathcal{D}} \epsilon_\delta(x_\delta(u_1))\epsilon_\delta(x_\delta(u_2))\quad(\textrm{by (ii)}) \\
+	&= \prod_{\delta\in\mathcal{D}} \epsilon_\delta(x_\delta(u_1))\epsilon_\delta(x_\delta(u_2))\quad(\textrm{Lemma \ref{lem:first}}) \\
 	&= \prod_{\delta\in\mathcal{D}} \epsilon_\delta(x_\delta(u_1) + x_\delta(u_2)).
 \end{align*}
 Hence each $x_\delta$ is an additive polynomial, so it is of the form 
@@ -316,9 +330,53 @@ In \cite[\S 3.4]{carter1989simple} it is shown that the possible pairings of any
 &p=2, \quad \langle \delta, \alpha \rangle = 1, \quad j = r - 1, \\
 &p\geq 2, \quad \langle \delta, \alpha \rangle = 2, \quad j = r.
 \end{align*}
+This shows that it is only possible for $x_\delta$ to have one nonzero term, either the $(r-1)^{th}$ or the $r^{th}$ depending on whether $\langle \delta, \alpha \rangle = 1$ or $2$, respectively. Furthermore, the $(r-1)^{th}$ term is zero if $p \neq 2$. In summary
+\begin{align}\label{x_loose}
+	x_\delta(\lambda) = \left\{\begin{array}{ll}
+		\mu_\delta \lambda^{2^{r-1}}, & \textrm{if }p=2\textrm{ and }\langle \delta, \alpha \rangle = 1, \\ \\
+		\mu_\delta \lambda^{p^{r}}, & \textrm{if }p\geq 2\textrm{ and }\langle \delta, \alpha \rangle = 2, \\ \\
+		0, & \textrm{otherwise.}
+	\end{array}\right.
+\end{align}
+for all $\lambda\in k$, for some fixed $u_\delta\in k$. Therefore we can tighten the result in Proposition \ref{claim1} to
+\begin{align*}
+	\sigma\left(\begin{matrix}* & *\\0 & *\end{matrix}\right) &\subset
+		\left\{\begin{array}{ll}
+			\langle U_\delta \,|\, \delta \in \Phi^+, \langle \delta, \alpha\rangle = 1\textrm{ or }2\rangle,&\textrm{if }p = 2, \\ \\
+			\langle U_\delta \,|\, \delta \in \Phi^+, \langle \delta, \alpha\rangle = 2\rangle,&\textrm{otherwise},
+		\end{array}\right.
+\end{align*}
+as claimed. We rewrite Equation \ref{x_loose} for completeness.
+\begin{align*}
+	x_\delta(\lambda) = \left\{\begin{array}{ll}
+		\mu_\delta \lambda^{2^{r-2+\langle \delta, \alpha\rangle}}, &\textrm{if }p = 2, \\ \\
+		\mu_\delta \lambda^{p^r}, &\textrm{otherwise}.
+	\end{array}\right.
+\end{align*}
 This completes the proof.
 \end{proof}
 
-In the next Chapter we investigate the counterexamples to Propositions \ref{ufixes} and \ref{uabelian} as pointed out in the respective Remarks \ref{g2counter} and \ref{c3counter}. In particular we show that for $G = G_2$, $H^1(SL_2(k), V_\alpha)_{\rho_r}$ is trivial and $\sigma\in Z^1(SL_2(k), V_\beta)_{\rho_r}$ satisfies the two main Lemmas. We also show that for $G=C_3$, $\sigma\in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ 
+In the next Chapter we investigate the counterexamples to Propositions \ref{ufixes} and \ref{uabelian} as pointed out in the respective Remarks \ref{g2counter} and \ref{c3counter}.
 
-In view of these examples, we modify the two main Lemmas of this Chapter appropriately.
+In particular we show that for $G = G_2$, $H^1(SL_2(k), V_\alpha)_{\rho_r}$ is trivial.
+We also show that for $G=C_3$, if $\sigma\in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\sigma\left(\begin{matrix}* & 0\\0 & *\end{matrix}\right) = 1$, then $\sigma$ satisfies the two main Lemmas.
+
+In view of the main Lemmas and the two example calculations, we have some evidence for the following Conjecture.
+\begin{conjecture} Let $G$ be a reductive group, $P_\alpha$ a minimal parabolic subgroup of $G$ with unipotent radical $V_\alpha$. Let $x \in H^1(SL_2(k), V_\alpha)_{\rho_r}$. Then there exists $\sigma \in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\psi(\sigma) = x$ and
+\begin{align*}
+	\sigma\left(\begin{matrix}* & * \\0 & *\end{matrix}\right) \subset
+		\left\{\begin{array}{ll}
+			\langle U_\delta \,|\, \delta \in \Phi^+ - \{\alpha\}, \langle \delta, \alpha \rangle = 1\textrm{ or }2\rangle, & \textrm{if }p = 2,\\ \\
+			\langle U_\delta \,|\, \delta \in \Phi^+ - \{\alpha\}, \langle \delta, \alpha \rangle = 2\rangle, & \textrm{otherwise}.
+		\end{array}\right.
+\end{align*}
+Moreover, the root groups on the right commute with each other. Furthermore, there exists $\mu_\delta \in k$ such that for all $u \in k$
+\begin{align*}
+	\sigma\left(\begin{matrix}1 & u\\0 & 1\end{matrix}\right) = 
+		\left\{\begin{array}{ll}
+			\prod_\delta \epsilon_\delta\left(\mu_\delta^{2{r-2+\langle \delta, \alpha\rangle}} \right), & \textrm{if }p = 2,\\ \\
+			\prod_\delta \epsilon_\delta\left(\mu_\delta^{p^r} \right), & \textrm{otherwise}.
+		\end{array}\right.
+\end{align*}
+\end{conjecture}
+
