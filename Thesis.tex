@@ -4,6 +4,7 @@
 
 % Set up the document
 \documentclass[a4paper, 11pt, oneside]{Thesis}  % Use the "Thesis" style, based on the ECS Thesis style by Steve Gunn
+\usepackage{etex}
 \graphicspath{{Figures/}}  % Location of the graphics files (set up for graphics to be in PDF format)
 
 %\usepackage{pdfsync}
@@ -14,6 +15,16 @@
 \usepackage{vector}  % Allows "\bvec{}" and "\buvec{}" for "blackboard" style bold vectors in maths
 \usepackage{amscd, amsmath}
 \usepackage[all,cmtip]{xy}
+\usepackage{tikz}
+\usetikzlibrary{arrows, positioning, decorations.pathmorphing, decorations.markings}
+\tikzset{inner sep=0pt, 
+  root/.style={circle,draw,minimum size=7pt,thick}, 
+  short root/.style={circle,fill,minimum size=7pt}, 
+  dble/.style={double distance=2pt,thick}, 
+  dblearrow/.style={postaction={decorate}, 
+  	decoration={markings,mark=at position .7
+  	with {\arrow{angle 60}}},double distance=3pt,thick}
+} 
 \hypersetup{urlcolor=blue, colorlinks=true}  % Colours hyperlinks in blue, but this can be distracting if there are many links.
 
 %% ----------------------------------------------------------------
