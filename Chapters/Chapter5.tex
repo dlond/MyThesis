@@ -46,9 +46,8 @@ We have an action of $SL_2(k)$ on $V_\alpha$ defined by
 \end{align*}
 for $y \in SL_2(k), v \in V_\alpha$.
 
-We are interested in finding the general form of a 1-cocycle $\varsigma \in Z^1(SL_2(k), V_\alpha)_{\rho_r}$. Then we can apply the canonical projection $\psi:Z^1(SL_2(k), V_\alpha)_{\rho_r} \rightarrow H^1(SL_2(k), V_\alpha)_{\rho_r}$ to calculate the 1-cohomology.
-
-Let $\zeta$ be the inclusion of $D_2(k) = \left(\begin{matrix}* & 0\\0 & *\end{matrix}\right)$ in $SL_2(k)$. By Lemma \ref{lem:nonab_lin_red} $H^1(D_2(k), V_\alpha)_{\rho\circ \zeta}$ is trivial, hence the kernel of the restriction map $H^1(\zeta):H^1(SL_2(k), V_\alpha)_\rho \rightarrow H^1(D_2(k), V_\alpha)_{\rho\circ\zeta}$ (Lemma \ref{h1maps}) is $H^1(SL_2(k), V_\alpha)_\rho$. Therefore, by Lemma \ref{kerh1} there exists $\sigma\in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\psi(\varsigma) = \psi(\sigma)$ and $\sigma\left(\begin{matrix}* & 0 \\ 0 & *\end{matrix}\right) = 1 \in V_\alpha$, so we may proceed with $\sigma$.
+We set out to find the general form of a 1-cocycle $\tau \in Z^1(SL_2(k), V_\alpha)_{\rho_r}$. Then we can apply the canonical projection $\psi:Z^1(SL_2(k), V_\alpha)_{\rho_r} \rightarrow H^1(SL_2(k), V_\alpha)_{\rho_r}$ to calculate the 1-cohomology.
+By Lemma \ref{trivial_on_t}, there exists $\sigma \in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\psi(\tau) = \psi(\sigma)$ and $\sigma\left(\begin{matrix}* & 0\\0 & *\end{matrix}\right) = 1$, so we do no harm to find the general form of $\sigma$ instead.
 
 By \cite[Theorem 26.3(c)]{humphreys1975linear}
 \begin{align}
@@ -62,11 +61,14 @@ By \cite[Theorem 26.3(c)]{humphreys1975linear}
 for all $t \in k^*, \lambda_\delta \in k$, where $n_\alpha = \epsilon_\alpha(1)\epsilon_{-\alpha}(-1)\epsilon_\alpha(1)$.
 
 \begin{proposition} \label{claim1}
-Let $\mathcal{D} = \{\delta \in \Phi^+-\{\alpha\}\,|\, \langle \delta, \alpha \rangle > 0\}$. Then
 \begin{align*}
 \sigma\left(\begin{matrix} 1 & u \\ 0 & 1 \end{matrix}\right) = \prod_{\delta\in\mathcal{D}} \epsilon_\delta\left(x_\delta\left(u\right)\right),
 \end{align*}
-and the $x_\delta\in k[X]$ are polynomials in one variable.
+where $\mathcal{D} = \{\delta \in \Phi^+-\{\alpha\}\,|\, \langle \delta, \alpha \rangle > 0\}$, and the $x_\delta\in k[X]$ are polynomials in one variable which satisfy
+\begin{align}\label{eqn:x}
+x_\delta\left(t^2u\right) &= t^{\langle \delta, \alpha \rangle p^r} x_\delta\left(u\right),
+\end{align}
+for all $t \in k^*, u\in k$.
 \end{proposition}
 \begin{proof}
 Let $\delta \in \Phi^+-\{\alpha\}$. We have the chain of morphisms
@@ -153,10 +155,8 @@ t & 0 \\ 0 & t^{-1}
 1 & u \\ 0 & 1
 \end{matrix}\right).
 \end{align*}
-So by Equation \ref{eqn:t_act},
-\begin{align}\label{eqn:x}
-x_\delta\left(t^2u\right) &= t^{\langle \delta, \alpha \rangle p^r} x_\delta\left(u\right).
-\end{align}
+So by Equation \ref{eqn:t_act}, $x_\delta\left(t^2u\right) = t^{\langle \delta, \alpha \rangle p^r} x_\delta\left(u\right)$, as claimed.
+
 Since $x_\delta$ is a polynomial function there can only be non-negative powers of $t$ on the left-hand side of the equality which forces $\langle \delta, \alpha \rangle \geq 0$. However, if $\langle \delta, \alpha \rangle = 0$ then $x_\delta$ is constant and hence zero, as $\sigma\left(\begin{matrix} * & 0 \\ 0 & *\end{matrix}\right) = 1$. Therefore the non-zero $x_\delta$ occur only when $\langle \delta, \alpha \rangle > 0$.
 \end{proof}
 
@@ -268,7 +268,12 @@ Let $\delta_1, \delta_2 \in \mathcal{D}$. Since $\langle \delta_i, \alpha \rangl
 \end{proof}
 
 \begin{lemma}[Second Main Lemma]\label{lem:second}
-Suppose $\Phi$ does not contain $G_2$ or $C_3$. Then
+Suppose that
+\begin{itemize}
+	\item[(i)] $\left(\begin{matrix}1 & *\\0 & 1\end{matrix}\right)\cdot \sigma\left(\begin{matrix}1 & u\\0 & 1\end{matrix}\right) = \sigma\left(\begin{matrix}1 & u\\0 & 1\end{matrix}\right)$, for all $u \in k$, and
+	\item[(ii)] $\sigma\left(\begin{matrix}1 & *\\0 & 1\end{matrix}\right)$ lies in a product of commuting root groups of $V_\alpha$.
+\end{itemize}
+Then 
 \begin{align*}
 \sigma\left(\begin{matrix}* & *\\0 & *\end{matrix}\right) \subset
 	\left\{ \begin{array}{ll}
@@ -298,14 +303,14 @@ to yield
 	\left(\sigma\left(\begin{matrix} 1 & u_1 \\ 0 & 1 \end{matrix}\right)\right)
 	\left(\left(\begin{matrix} 1 & u_1 \\ 0 & 1 \end{matrix}\right)\cdot\sigma\left(\begin{matrix} 1 & u_2 \\ 0 & 1 \end{matrix}\right)\right) \\ &=
 	\sigma\left(\begin{matrix} 1 & u_1 \\ 0 & 1 \end{matrix}\right)
-	\sigma\left(\begin{matrix} 1 & u_2 \\ 0 & 1 \end{matrix}\right).
+	\sigma\left(\begin{matrix} 1 & u_2 \\ 0 & 1 \end{matrix}\right)\quad(\textrm{by (i)}).
 \end{align*}
 Therefore
 \begin{align*}
 	\prod_{\delta\in\mathcal{D}} \epsilon_\delta(x_\delta(u_1 + u_2)) &= 
 	\prod_{\delta\in\mathcal{D}} \epsilon_\delta(x_\delta(u_1))
 	\prod_{\delta\in\mathcal{D}} \epsilon_\delta(x_\delta(u_2))\quad(\textrm{Proposition \ref{claim1}}) \\
-	&= \prod_{\delta\in\mathcal{D}} \epsilon_\delta(x_\delta(u_1))\epsilon_\delta(x_\delta(u_2))\quad(\textrm{Lemma \ref{lem:first}}) \\
+	&= \prod_{\delta\in\mathcal{D}} \epsilon_\delta(x_\delta(u_1))\epsilon_\delta(x_\delta(u_2))\quad(\textrm{by (ii)}) \\
 	&= \prod_{\delta\in\mathcal{D}} \epsilon_\delta(x_\delta(u_1) + x_\delta(u_2)).
 \end{align*}
 Hence each $x_\delta$ is an additive polynomial, so it is of the form 
@@ -338,7 +343,7 @@ This shows that it is only possible for $x_\delta$ to have one nonzero term, eit
 		0, & \textrm{otherwise.}
 	\end{array}\right.
 \end{align}
-for all $\lambda\in k$, for some fixed $u_\delta\in k$. Therefore we can tighten the result in Proposition \ref{claim1} to
+for all $\lambda\in k$, for some fixed $u_\delta\in k$. Therefore 
 \begin{align*}
 	\sigma\left(\begin{matrix}* & *\\0 & *\end{matrix}\right) &\subset
 		\left\{\begin{array}{ll}
@@ -356,8 +361,8 @@ as claimed. We rewrite Equation \ref{x_loose} for completeness.
 This completes the proof.
 \end{proof}
 
-In the next Chapter we investigate the counterexamples to Propositions \ref{ufixes} and \ref{uabelian} in the respective Remarks \ref{g2counter} and \ref{c3counter} by deriving the form of $\sigma\in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ for the appropriate simple roots $\alpha\in\Delta$. We show that $\sigma$ still satisfies the two main Lemmas. This gives some evidence for the following Conjecture.
-\begin{conjecture} Let $G$ be a reductive group, $P_\alpha$ a minimal parabolic subgroup of $G$ with unipotent radical $V_\alpha$. Let $x \in H^1(SL_2(k), V_\alpha)_{\rho_r}$. Then there exists $\sigma \in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\psi(\sigma) = x$ and
+In the next Chapter we investigate the counterexamples to Propositions \ref{ufixes} and \ref{uabelian} in the respective Remarks \ref{g2counter} and \ref{c3counter} by deriving the form of $\sigma\in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ for the appropriate simple roots $\alpha\in\Delta$. This is carried out in Sections \ref{g2:alpha} and \ref{c3:alpha}, respectively. We show that $\sigma$ still satisfies Lemma \ref{lem:second}. This gives some evidence for the following Conjecture.
+\begin{conjecture}\label{bigclaim} Let $G$ be a reductive group, $P_\alpha$ a minimal parabolic subgroup of $G$ with unipotent radical $V_\alpha$. Let $x \in H^1(SL_2(k), V_\alpha)_{\rho_r}$. Then there exists $\sigma \in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\psi(\sigma) = x$ and
 \begin{align*}
 	\sigma\left(\begin{matrix}* & * \\0 & *\end{matrix}\right) \subset
 		\left\{\begin{array}{ll}
@@ -375,5 +380,10 @@ Moreover, the root groups on the right commute with each other. Furthermore, the
 \end{align*}
 \end{conjecture}
 
-TODO Consequences for KII, aKII - refer back to Examples at the end of Ch3.
-TODO Possibility of extending Conjecture to $P_I, I\subset\Delta$.
+If the above ask Conjecture is true, it would be worthwhile to see whether it is true for parabolic subgroups $P_I$, $I\subset \Delta$ of higher rank. This would be useful for further 1-cohomology calculations following the method we employ in the next Chapter.
+
+Furthermore, in view of Example \ref{ab_example}, it may be possible to show that the restriction map
+\begin{align*}
+	H^1(SL_2(k), V_\alpha)_{\rho_r} \rightarrow H^1(U_2(k), V_\alpha)_{\rho_r},
+\end{align*}
+is injective, given that $H^1(SL_2(k), V_\alpha)_{\rho_r}\rightarrow H^1(B, V_\alpha)_{\rho_r}$ is already injective by Lemma \ref{sl2_b_inj}, and $\sigma\left(B\right)$ lies in an abelian subgroup of $V_\alpha$. Then the answer algebraic version of K\"ulshammer's second question for $SL_2(k)$ and connected reductive $G$ would be ``yes''.

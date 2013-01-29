@@ -1,11 +1,13 @@
 %!TEX root = /Users/dan/Documents/Thesis/Thesis.tex
 % Appendix B
 
-\chapter{Dynkin Diagrams}
+\chapter{Root System Diagrams}
 \label{AppendixB}
-\lhead{Appendix B. \emph{Dynkin Diagrams}}
+\lhead{Appendix B. \emph{Root System Diagrams}}
 
-Dynkin Diagrams (short roots are identified by filled circles).
+\section{Dynkin Diagrams}
+
+Short roots are identified by filled circles.
 
 \begin{tikzpicture}[scale=.4]
 \draw (-1,0) node[anchor=east]  {$A_n:$};
@@ -106,11 +108,19 @@ Dynkin Diagrams (short roots are identified by filled circles).
 \draw[thick] (-30: 3 mm) -- +(1.5 cm, 0);
 \end{tikzpicture}
 
-Matrix of Cartan integers for rank 2 root systems.
-%\begin{align*}
-%\left(\begin{matrix}\langle \alpha, \alpha\rangle & \langle \alpha, \beta \rangle \\ \langle \beta, \alpha \rangle & \langle \beta, \beta \rangle\end{matrix}\right).
-%\end{align*}
+\section{Cartan Matrix}
+
+The matrix of Cartan integers for root systems of rank 2, defined by
+\begin{align*}
+\left(\begin{matrix}\langle \alpha, \alpha\rangle & \langle \alpha, \beta \rangle \\ \langle \beta, \alpha \rangle & \langle \beta, \beta \rangle\end{matrix}\right).
+\end{align*}
+
 \begin{align*}
 	A_1\times A_1:&\left(\begin{array}{rr}2 & 0\\0 & 2\end{array}\right) &B_2:&\left(\begin{array}{rr}2 & -2\\-1 & 2\end{array}\right) (\alpha \textrm{ long}) \\
 	A_2:&\left(\begin{array}{rr}2 & -1\\-1 & 2\end{array}\right) &G_2:&\left(\begin{array}{rr}2 & -1\\-3 & 2\end{array}\right) (\alpha \textrm{ short}).
 \end{align*}
+
+\section{Root System Diagrams}
+
+The root system diagram for root systems of rank 2.
+TODO

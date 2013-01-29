@@ -6,19 +6,17 @@
 \lhead{Chapter 4. \emph{K\"ulshammer's Second Question}}
 
 Let $K$ be a linear algebraic group, $H$ a connected reductive algebraic group, and $\Gamma$ a finite group.
-As pointed out in the Introduction, K\"ulshammer's second question has positive answer for $\Gamma, G$ so long as $p$ is good for $G$. We wish to determine whether there exists a reductive counterexample to K\"ulshammer's second question.
+As pointed out in the Introduction, K\"ulshammer's second question has positive answer for $\Gamma, G$ so long as $p$ is good for $G$. We wish to determine whether there exists a counterexample to K\"ulshammer's second question for some connected reductive $G$.
 
 TODO: How?
 
 Generally speaking, we will be concerned with homomorphisms from $K$ to $G$. Where possible, we will work in this general setting and state things in terms of $K$. When we must specifically work with finite $K$ or connected reductive $K$, we will replace $K$ with $\Gamma$ or $H$, respectively.
-\begin{definition} Let $X,Y$ be groups. Define
-\begin{align*} \mathrm{Hom}(X, Y) = \{ \rho : X \rightarrow Y \,|\, \rho \textrm{ is a homomorphism}\}. 
-\end{align*}
+\begin{definition} Let $X,Y$ be (algebraic) groups. Then we denote by $\mathrm{Hom}(X, Y)$ the set of (algebraic) group homomorphisms from $X$ to $Y$.
 \end{definition}
 
-For example, K\"ulshammer's second question as originally stated concerns $G$-conjugacy classes of $\mathrm{Hom}(\Gamma, G)$ and $\mathrm{Hom}(\Gamma_p, G)$, where $\Gamma_p$ is a Sylow $p$-subgroup of $\Gamma$.
+For example, K\"ulshammer's second question as originally stated concerns $G$-conjugacy classes in $\mathrm{Hom}(\Gamma, G)$ and $\mathrm{Hom}(\Gamma_p, G)$, where $\Gamma_p$ is a Sylow $p$-subgroup of $\Gamma$.
 
-A consequence of the following Theorem \cite[Theorem 1.2]{martin2003reductive} is that if there is a reductive counterexample to K\"ulshammer's second question then the infinitely many $G$-conjugacy classes of $\mathrm{Hom}(\Gamma, G)$ must be of non-$G$-completely reducible homomorphisms.
+A consequence of the following Theorem \cite[Theorem 1.2]{martin2003reductive} is that if there is a counterexample to K\"ulshammer's second question for some connected reductive $G$, then since $\mathrm{Hom}(\Gamma, G)$ must contain infinitely many $G$-conjugacy classes, it must contain infinitely many $G$-conjugacy classes of non-$G$-completely reducible homomorphisms.
 
 \begin{theorem} \label{thm:finiteGCR} There are only finitely many $G$-conjugacy classes of $G$-completely reducible homomorphisms from $\Gamma$ to $G$.
 \end{theorem}
@@ -35,13 +33,13 @@ The following general result shows that finiteness of $G$-conjugacy classes of $
   \label{lem:GPconj}
 \end{lemma}
 \begin{proof}
-	Let $\rho, \varsigma \in R$ such that $\rho$ and $\varsigma$ lie in the same $G$-conjugacy class of $R$. Then there exists $g\in G$ such that
+	Let $\rho, \tau \in R$ such that $\rho$ and $\tau$ lie in the same $G$-conjugacy class of $R$. Then there exists $g\in G$ such that
 	\begin{align*}
-		g \rho(x) g^{-1} = \varsigma(x),
+		g \rho(x) g^{-1} = \tau(x),
 	\end{align*}
 for all $x \in K$.
 	
-	Let $Q = gPg^{-1}$, hence $\varsigma(K) \subset P \cap Q$.
+	Let $Q = gPg^{-1}$, hence $\tau(K) \subset P \cap Q$.
 	Let $T$ be a maximal torus of $G$ contained in $P\cap Q$. Since $T$ and $gTg^{-1}$ are maximal tori of $Q$ they must be $Q$-conjugate, so there exists $q\in Q$ such that
 	\begin{align*}
 		qTq^{-1} = gTg^{-1}.
@@ -59,13 +57,13 @@ for all $x \in K$.
 	\end{align*}
 	Let $q' = r^{-1}t^{-1}$ so $q' \in P$. Then
 	\begin{align*}
-		\rho(x) &= g^{-1} \varsigma(x) g\\
-		&= (q'n^{-1}) \varsigma(x) nq'^{-1},
+		\rho(x) &= g^{-1} \tau(x) g\\
+		&= (q'n^{-1}) \tau(x) nq'^{-1},
 	\end{align*}
 	for all $x \in K$.
 	This shows 
 	%\begin{align*}
-	%	R \cap \left(G\cdot \varsigma \right) \subset \bigcup_{n \in N} P \cdot(n^{-1} \cdot \varsigma).
+	%	R \cap \left(G\cdot \tau \right) \subset \bigcup_{n \in N} P \cdot(n^{-1} \cdot \tau).
 	%\end{align*}
 	%
 	%That is,
@@ -171,19 +169,19 @@ Then $h$ is a well-defined bijection from $\mathrm{Hom}(K, P)_\sigma / V$ to $H^
   \label{lem:v_h1}
 \end{lemma}
 \begin{proof}  
-Let $\rho, \varsigma \in \mathrm{Hom}(K, P)_\sigma$ such that $\phi(\rho) = \phi(\varsigma)$. Then there exists $v \in V$ such that
-\begin{align*} \varsigma(x) =  v\rho(x)v^{-1}, \end{align*}
+Let $\rho, \tau \in \mathrm{Hom}(K, P)_\sigma$ such that $\phi(\rho) = \phi(\tau)$. Then there exists $v \in V$ such that
+\begin{align*} \tau(x) =  v\rho(x)v^{-1}, \end{align*}
 for all $x \in K$. Furthermore, for all $x \in K$
 \begin{align*}
-z(\varsigma)(x) % &= \alpha_\varsigma(x) \\
-&= \varsigma(x)\sigma(x^{-1}) \\
+z(\tau)(x) % &= \alpha_\tau(x) \\
+&= \tau(x)\sigma(x^{-1}) \\
 &= v \rho(x) v^{-1} \sigma(x^{-1}) \\
 &= v \rho(x) \sigma(x^{-1})\sigma(x) v^{-1} \sigma(x^{-1}) \\
 &= v \rho(x) \sigma(x^{-1}) \left(x \cdot v^{-1}\right) \\
 %&= v \alpha_\rho(x) \left(x \cdot v^{-1}\right) \\
 &= v \left(z(\rho)(x)\right) \left(x \cdot v^{-1}\right).
 \end{align*}
-This shows that $z(\rho)$ and $z(\varsigma)$ satisfy the equivalence relation in Equation \ref{eqn:h_equiv}. Therefore $\psi\left(z(\rho)\right) = \psi\left(z(\varsigma)\right)$ and so $h$ is well-defined.
+This shows that $z(\rho)$ and $z(\tau)$ satisfy the equivalence relation in Equation \ref{eqn:h_equiv}. Therefore $\psi\left(z(\rho)\right) = \psi\left(z(\tau)\right)$ and so $h$ is well-defined.
 
 Since $z$ and $\psi$ are onto, $h$ is onto. We show $h$ is one-to-one.
 
@@ -263,28 +261,28 @@ Let $\xi = \xi_l: V \rightarrow V'$ be defined by	$\xi_l(v) = lvl^{-1}$ for all 
 	\end{align}
 	\end{lemma}
 \begin{proof}
-	First we show Equation \ref{vcl.hom} defines a well-defined map. Let $\rho, \varsigma \in \mathrm{Hom}(K, V)_\sigma$ such that $\phi(\rho) = \phi(\varsigma)$. Then there exists $v \in V$ such that
-	\begin{align*} \varsigma(x) = v\rho(x)v^{-1}, \end{align*}
+	First we show Equation \ref{vcl.hom} defines a well-defined map. Let $\rho, \tau \in \mathrm{Hom}(K, V)_\sigma$ such that $\phi(\rho) = \phi(\tau)$. Then there exists $v \in V$ such that
+	\begin{align*} \tau(x) = v\rho(x)v^{-1}, \end{align*}
 		for all $x \in K$. Now let $c \in C_L(\sigma(K))$. Since $L$ normalizes $V$ there exists $w \in V$ such that $cv = wc$. Then
 		\begin{align*}
-			c \varsigma(x)c^{-1}
+			c \tau(x)c^{-1}
 			&= cv \rho(x) v^{-1}c^{-1} \\
 			&= wc \rho(x) c^{-1}w^{-1} \\
 			&= c \rho(x) c^{-1},
 		\end{align*}
-		for all $x \in K$. Therefore $\phi(\xi_c \circ \varsigma) = \phi(\xi_c \circ \rho)$ and hence the map defined by Equation \ref{vcl.hom} is well-defined. It is clear that the group action axioms are satisfied, so Equation \ref{vcl.hom} defines an action of $C_L(\sigma(K))$ on $\mathrm{Hom}(K, P)_\sigma$.
+		for all $x \in K$. Therefore $\phi(\xi_c \circ \tau) = \phi(\xi_c \circ \rho)$ and hence the map defined by Equation \ref{vcl.hom} is well-defined. It is clear that the group action axioms are satisfied, so Equation \ref{vcl.hom} defines an action of $C_L(\sigma(K))$ on $\mathrm{Hom}(K, P)_\sigma$.
 
 		Equation \ref{cl.h1} is well-defined thanks to Lemma \ref{h1maps}. If $e$ is the identity element of $C_L(\sigma(K))$ then the map $H^1(\zeta, \xi_e) = \mathrm{id}:H^1(K, V)_\sigma \rightarrow H^1(K, V)_\sigma$. Finally, let $c_1, c_2 \in C_L(\sigma(K))$. Then
-		\begin{align*}
+		\begin{align}
 			H^1(\zeta, \xi_{c_1})\left(H^1(\zeta, \xi_{c_2})(\psi(\alpha))\right)
-			&= H^1(\zeta, \xi_{c_1})\left(\psi(Z^1(\zeta, \xi_{c_2})(\alpha))\right) \\
-			&= H^1(\zeta, \xi_{c_1})\left(\psi(c_2 \cdot \alpha)\right) \\
-			&= \psi\left( Z^1(\zeta, \xi_{c_1})(c_2 \cdot \alpha)\right) \\
-			&= \psi\left( c_1 \cdot (c_2 \cdot \alpha)\right) \\
-			&= \psi\left( c_1c_2 \cdot \alpha\right) \\
-			&= \psi\left( Z^1(\zeta, \xi_{c_1c_2})(\alpha)\right) \\
-			&= H^1(\zeta, \xi_{c_1c_2})\left(\psi(\alpha)\right).
-		\end{align*}
+			&= H^1(\zeta, \xi_{c_1})\left(\psi(Z^1(\zeta, \xi_{c_2})(\alpha))\right)\nonumber \\
+			&= H^1(\zeta, \xi_{c_1})\left(\psi(c_2 \cdot \alpha)\right)\nonumber \\
+			&= \psi\left( Z^1(\zeta, \xi_{c_1})(c_2 \cdot \alpha)\right)\nonumber \\
+			&= \psi\left( c_1 \cdot (c_2 \cdot \alpha)\right)\nonumber \\
+			&= \psi\left( c_1c_2 \cdot \alpha\right)\nonumber \\
+			&= \psi\left( Z^1(\zeta, \xi_{c_1c_2})(\alpha)\right)\nonumber \\
+			&= H^1(\zeta, \xi_{c_1c_2})\left(\psi(\alpha)\right).\label{eqn:functorial}
+		\end{align}
 		This shows that Equation \ref{cl.h1} defines an action of $C_L(\sigma(K))$ on $H^1(K, V)_\sigma$.
 
 		To prove Equation \ref{eqn:caction} first notice that $\left(\xi_c \circ \rho\right)^L = \rho^L$, hence
@@ -343,12 +341,12 @@ Let $\xi = \xi_l: V \rightarrow V'$ be defined by	$\xi_l(v) = lvl^{-1}$ for all 
   \end{align*}
 \end{lemma}
 \begin{proof}
-Let $\rho, \varsigma \in \mathrm{Hom}(K, V)_\sigma$ such that $\Phi(\rho) = \Phi(\varsigma)$. Then there exists $c \in C_L(\sigma)$ such that $\phi(\varsigma) = c\cdot\phi(\rho)$, and we have
+Let $\rho, \tau \in \mathrm{Hom}(K, V)_\sigma$ such that $\Phi(\rho) = \Phi(\tau)$. Then there exists $c \in C_L(\sigma)$ such that $\phi(\tau) = c\cdot\phi(\rho)$, and we have
 \begin{align*}
-	h(\phi(\varsigma)) &= h(c \cdot\phi(\rho)) \\
+	h(\phi(\tau)) &= h(c \cdot\phi(\rho)) \\
 	&= c \cdot h(\phi(\rho))\quad(\textrm{Lemma }\ref{lem:vcl}). 
 \end{align*}
-Hence $\widetilde{\psi}(h(\phi(\rho))) = \widetilde{\psi}(h(\phi(\varsigma)))$ and so $\widetilde{h}$ is well-defined.
+Hence $\widetilde{\psi}(h(\phi(\rho))) = \widetilde{\psi}(h(\phi(\tau)))$ and so $\widetilde{h}$ is well-defined.
 
 Let $\alpha, \beta \in Z^1(K, V)_\sigma$ such that $\Psi(\alpha) = \Psi(\beta)$. Then there exists $c \in C_L(\sigma)$ such that $\psi(\beta) = c \cdot \psi(\alpha)$, and since $h$ is a bijection, $h^{-1}(\psi(\beta)) = h^{-1}(c \cdot \psi(\alpha)) = c \cdot h^{-1}(\psi(\alpha))$. This shows $\widetilde{h}$ is injective. Since $h$ and $\widetilde{\psi}$ are surjective, $\widetilde{h}$ is surjective. Therefore $\widetilde{h}$ is a bijection.
 \end{proof}

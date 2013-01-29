@@ -5,576 +5,614 @@
 \label{Chapter6}
 \lhead{Chapter 6. \emph{Example 1-Cohomology Calculations}}
 In this Chapter we investigate the counterexamples to Propositions \ref{ufixes} and \ref{uabelian} as pointed out in the respective Remarks \ref{g2counter} and \ref{c3counter} of the previous Chapter.
-In particular we show that for $G = G_2$, $H^1(SL_2(k), V_\alpha)_{\rho_r}$ is trivial, and TODO something about $H^1(SL_2(k), V_\beta)_{\rho_r}$.
-We also show that for $G=C_3$ for $\sigma\in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\sigma\left(\begin{matrix}* & 0\\0 & *\end{matrix}\right) = 1$, $\sigma$ satisfies the two main Lemmas.
 
-Then we demonstrate the use of the main result from the previous Chapter to calculate the 1-cohomology of $B_2$. The method is outlined below.
+We also calculate the 1-cohomology of $B_2$, aided by the results in the previous Chapter. The general method is outlined below.
 
 For each $\alpha \in \Delta$ (the simple roots)
-\begin{itemize}
-	\item[1.] Fix $x\in H^1(SL_2(k), V_\alpha)_{\rho_r}$. Then there exists $\sigma\in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\psi(\sigma) = x$ and $\sigma\left(\begin{matrix}* & *\\0 & *\end{matrix}\right) = 1 \in V_\alpha$.
+	\begin{itemize}
+	\item[1.] Fix $x\in H^1(SL_2(k), V_\alpha)_{\rho_r}$. Then there exists $\sigma\in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\psi(\sigma) = x$ and $\sigma\left(\begin{matrix}* & 0\\0 & *\end{matrix}\right) = 1 \in V_\alpha$ (Lemma \ref{trivial_on_t}).
 	\item[2.] Use Lemma \ref{lem:second} to determine $\sigma\left(\begin{matrix}* & *\\0 & *\end{matrix}\right)$. 
-	\item[3.] By symmetry, Lemma \ref{lem:second} also determines $\sigma\left(\begin{matrix}* & 0\\ * & *\end{matrix}\right)$ (substitute $\alpha$ with $-\alpha$).
-	\item[4.] Now determine $\sigma\left(\begin{matrix}a & b\\c & d\end{matrix}\right)$ for $c \neq 0$ by
-		\begin{align*}
-			\sigma\left(\begin{matrix}a & b\\c & d\end{matrix}\right) &= \sigma\left(
-				\left(\begin{matrix}1 & ac^{-1}\\0 & 1\end{matrix}\right)
-				\left(\begin{matrix}0 & 1\\1 & 0\end{matrix}\right)
-				\left(\begin{matrix}c & d\\0 & c^{-1}\end{matrix}\right)
-			\right)
-		\end{align*}
-\end{itemize}
+	\item[3.] If $\sigma\left(\begin{matrix}* & *\\0 & *\end{matrix}\right)$ is trivial then $H^1(SL_2(k), V_\alpha)_{\rho_r}$ is trivial by Lemma \ref{sl2_b_inj}.
+	\item[4.] Otherwise, determine $\sigma\left(\begin{matrix}a & b\\c & d\end{matrix}\right)$ for $c \neq 0$ by
+	\begin{align*}
+	\sigma\left(\begin{matrix}a & b\\c & d\end{matrix}\right) &= \sigma\left(
+			\left(\begin{matrix}1 & ac^{-1}\\0 & 1\end{matrix}\right)
+			\left(\begin{matrix}0 & 1\\1 & 0\end{matrix}\right)
+			\left(\begin{matrix}c & d\\0 & c^{-1}\end{matrix}\right)
+			\right).
+	\end{align*}
+	\item[5.] Apply $\psi(\sigma)$ to calculate the 1-cohomology.
+	\end{itemize}
 
-Finally, using the 1-cohomology we find a family of maps from $SL_2(k)$ to $B_4$ which gives infinitely many conjugacy classes. TODO and \ldots
+	In our last example calculation we use the 1-cohomology to find a family of maps from $SL_2(k)$ to $B_4$ which gives infinitely many conjugacy classes. TODO result \ldots
 
-Throughout we use the notation of Humphreys \cite[Chapter XI]{humphreys1975linear}.
+	Throughout we use the notation of Humphreys \cite[Chapter XI]{humphreys1975linear}.
 
-\section{$G = G_2$}
-\label{g2}
+	\section{$G = G_2$}
+	\label{g2}
 
-Let $G=G_2$. Fix a maximal torus, labeling the positive simple roots $\Delta=\{\alpha, \beta\}$ with $\beta$ being the long root. 
+	Let $G=G_2$. Fix a maximal torus, labeling the positive simple roots $\Delta=\{\alpha, \beta\}$ with $\beta$ being the long root. 
 
-\subsection{$V = R_u(P_\alpha)$}
-\label{g2:alpha}
-Let $V_\alpha = R_u(P_\alpha) = \langle U_\beta, U_{\alpha+\beta}, U_{2\alpha+\beta}, U_{3\alpha+\beta}, U_{3\alpha+2\beta}\rangle$.
-We write $v \in V_\alpha$ as a column vector as follows,
-\begin{align*}
-\left(\begin{matrix}
-	v_1\\
-	v_2\\
-	v_3\\
-	v_4\\
-	v_5
-\end{matrix}\right) &=
+	\subsection{$V = R_u(P_\alpha)$}
+	\label{g2:alpha}
+	Let $V_\alpha = R_u(P_\alpha) = \langle U_\beta, U_{\alpha+\beta}, U_{2\alpha+\beta}, U_{3\alpha+\beta}, U_{3\alpha+2\beta}\rangle$.
+	We write $v \in V_\alpha$ as a column vector,
+	\begin{align*}
+	\left(\begin{matrix}
+			v_1\\
+			v_2\\
+			v_3\\
+			v_4\\
+			v_5
+			\end{matrix}\right) &=
 \epsilon_{\beta}(v_1)
 \epsilon_{\alpha+\beta}(v_2)
 \epsilon_{2\alpha+\beta}(v_3)
 \epsilon_{3\alpha+\beta}(v_4)
-\epsilon_{3\alpha+2\beta}(v_5).
-\end{align*}
-so that we can clearly present the group law for $V_\alpha$, derived from the commutation relations in \cite[\S 33.5]{humphreys1975linear}.
+	\epsilon_{3\alpha+2\beta}(v_5),
+	\end{align*}
+	so that we can clearly present the group law for $V_\alpha$, derived from the commutation relations in \cite[\S 33.5]{humphreys1975linear}.
 	\begin{align*}
 	\left(\begin{matrix}
-	u_1\\
-	u_2\\
-	u_3\\
-	u_4\\
-	u_5
-	\end{matrix}\right)\times
+			u_1\\
+			u_2\\
+			u_3\\
+			u_4\\
+			u_5
+			\end{matrix}\right)\times
 	\left(\begin{matrix}
-	v_1\\
-	v_2\\
-	v_3\\
-	v_4\\
-	v_5
-	\end{matrix}\right)
- &= \left(\begin{matrix}
-	u_1 + v_1\\
-	u_2 + v_2\\
-	u_3 + v_3\\
-	u_4 + v_4\\
-	u_5 + v_5 + 3u_3v_2 - u_4v_1\\
-	\end{matrix}\right).
+			v_1\\
+			v_2\\
+			v_3\\
+			v_4\\
+			v_5
+			\end{matrix}\right)
+	&= \left(\begin{matrix}
+			u_1 + v_1\\
+			u_2 + v_2\\
+			u_3 + v_3\\
+			u_4 + v_4\\
+			u_5 + v_5 + 3u_3v_2 - u_4v_1\\
+			\end{matrix}\right).
 	\end{align*}
 	Let $\sigma$ be in $Z^1(SL_2, V_\alpha)_{\rho_r}$ such that $\sigma\left(\begin{matrix}t & 0\\0 & t^{-1}\end{matrix}\right) = 1$.
 	By Proposition \ref{claim1}
 	\begin{align*}
 	\sigma\left(\begin{matrix} 1 & u \\ 0 & 1 \end{matrix}\right) =
-	\left(\begin{matrix}
-	0\\
-	0\\
-	x_3(u)\\
-	x_4(u)\\
-	0
-	\end{matrix}\right),
+\epsilon_{2\alpha+\beta}(x_3(u))
+\epsilon_{3\alpha+\beta}(x_4(u))
 	\end{align*}
-and Equation \ref{eqn:x} of Proposition \ref{claim1} gives
-\begin{align}
+	where the $x_3, x_4$ satisfy
+	\begin{align}
 	x_3(t^2u) &= t^{p^r}x_3(u)\label{eqn:g2x3}\\
-	x_4(t^2b) &= t^{3p^r}x_4(u)\label{eqn:g2x4}.
-\end{align}
-Furthermore, since
-\begin{align*}
+							 x_4(t^2b) &= t^{3p^r}x_4(u)\label{eqn:g2x4},
+	\end{align}
+	for all $t\in k^*, u\in k$.
+
+	Furthermore, since
+	\begin{align*}
 \sigma\left(\begin{matrix} 1 & u_1 + u_2 \\ 0 & 1\end{matrix}\right)
 &= \left(\sigma\left(\begin{matrix} 1 & u_1 \\ 0 & 1\end{matrix}\right)\right)
-\left(\begin{matrix} 1 & u_1 \\ 0 & 1\end{matrix}\right) \cdot
-\sigma
-\left(\begin{matrix} 1 & u_2 \\ 0 & 1\end{matrix}\right),
-\end{align*}
-we get
-\begin{align*}
+	\left(\begin{matrix} 1 & u_1 \\ 0 & 1\end{matrix}\right) \cdot
+	\sigma
+	\left(\begin{matrix} 1 & u_2 \\ 0 & 1\end{matrix}\right),
+	\end{align*}
+	we get
+	\begin{align*}
 &\epsilon_{2\alpha+\beta}\left(x_3(u_1+u_2)\right)\epsilon_{3\alpha+\beta}\left(x_4(u_1+u_2)\right)
 \\ &\quad	= \epsilon_{2\alpha+\beta}\left(x_3(u_1)\right)\epsilon_{3\alpha+\beta}\left(x_4(u_1)\right)
-			\epsilon_\alpha(u_1^{p^r})
-			\epsilon_{2\alpha+\beta}\left(x_3(u_2)\right)\epsilon_{3\alpha+\beta}\left(x_4(u_2)\right)
-			\epsilon_\alpha(-u_1^{p^r})
+\epsilon_\alpha(u_1^{p^r})
+\epsilon_{2\alpha+\beta}\left(x_3(u_2)\right)\epsilon_{3\alpha+\beta}\left(x_4(u_2)\right)
+\epsilon_\alpha(-u_1^{p^r})
 \\ &\quad	= \epsilon_{2\alpha+\beta}\left(x_3(u_1)\right)\epsilon_{3\alpha+\beta}\left(x_4(u_1)\right)
-			\epsilon_\alpha(u_1^{p^r})
-			\epsilon_{2\alpha+\beta}\left(x_3(u_2)\right)
-			\epsilon_\alpha(-u_1^{p^r})
-			\epsilon_{3\alpha+\beta}\left(x_4(u_2)\right)
+\epsilon_\alpha(u_1^{p^r})
+\epsilon_{2\alpha+\beta}\left(x_3(u_2)\right)
+\epsilon_\alpha(-u_1^{p^r})
+\epsilon_{3\alpha+\beta}\left(x_4(u_2)\right)
 \\ &\quad	= \epsilon_{2\alpha+\beta}\left(x_3(u_1)\right)\epsilon_{3\alpha+\beta}\left(x_4(u_1)\right)
-			\epsilon_{2\alpha+\beta}\left(x_3(u_2)\right)
-			\epsilon_{3\alpha+\beta}\left(x_4(u_2) -3u_1^{p^r}x_3(u_2)\right)
-\\ &\quad	= 
-			\epsilon_{2\alpha+\beta}\left(x_3(u_1) + x_3(u_2)\right)
-			\epsilon_{3\alpha+\beta}\left(x_4(u_1) + x_4(u_2) - 3u_1^{p^r}x_3(u_2)\right)
-\end{align*}
-We see that $x_3$ is an additive polynomial, so it is of the form
-\begin{align*}
-x_3(\lambda)&= \sum_i \mu_i \lambda^{p^i}\quad(\textrm{\cite[\S 20.3, Lemma A]{humphreys1975linear}}),
-\end{align*}
-for some $\mu_i\in k$, and $x_4$ is of the form
-\begin{align}\label{eqn:g2x42}
+\epsilon_{2\alpha+\beta}\left(x_3(u_2)\right)
+\epsilon_{3\alpha+\beta}\left(x_4(u_2) -3u_1^{p^r}x_3(u_2)\right)
+	\\ &\quad	= 
+\epsilon_{2\alpha+\beta}\left(x_3(u_1) + x_3(u_2)\right)
+\epsilon_{3\alpha+\beta}\left(x_4(u_1) + x_4(u_2) - 3u_1^{p^r}x_3(u_2)\right)
+	\end{align*}
+	We see that $x_3$ is an additive polynomial, so it is of the form
+	\begin{align*}
+	x_3(\lambda)&= \sum_{i=0}^m \mu_i \lambda^{p^i}\quad(\textrm{\cite[\S 20.3, Lemma A]{humphreys1975linear}}),
+	\end{align*}
+	for some $\mu_i\in k, m\in \mathbb{N}$, and $x_4$ satisfies
+	\begin{align}\label{eqn:g2x42}
 	x_4(\lambda_1 + \lambda_2) = x_4(\lambda_1) + x_4(\lambda_2) -3\lambda_2^{p^r}x_3(\lambda_2).
-\end{align}
-Suppose $x_3\neq 0$, so there exists $j\geq 0$ such that $\mu_j\neq 0$. Then by Equation \ref{eqn:g2x3}
-\begin{align*}
-&\mu_j (t^2u)^{p^j} = t^{p^r}\mu_j u^{p^j}\\
-&\Rightarrow t^{2p^j} = t^{p^r}\\
-&\Rightarrow p = 2, j = r-1.
-\end{align*}
-But then $x_3 = 0$, for
-\begin{align*}
-x_4(0) &= x_4(\lambda + \lambda) \\
-	&= x_4(\lambda)+x_4(\lambda)-3\lambda^{2^r}x_3(\lambda)\quad(\textrm{Equation \ref{eqn:g2x42}}) \\
-	&= \lambda^{2^r}x_3(\lambda),
-\end{align*}
-which implies that $x_3$ is constant, hence zero, as $\sigma\left(\begin{matrix}* & 0\\0 & *\end{matrix}\right) = 1$.
+	\end{align}
+	Suppose $x_3\neq 0$, so there exists $j\geq 0$ such that $\mu_j\neq 0$. Then by Equation \ref{eqn:g2x3}
+	\begin{align*}
+	&\mu_j (t^2u)^{p^j} = t^{p^r}\mu_j u^{p^j}\\
+		&\Rightarrow t^{2p^j} = t^{p^r}\\
+		&\Rightarrow p = 2, j = r-1.
+		\end{align*}
+		But then $x_3 = 0$, for
+		\begin{align*}
+		x_4(0) &= x_4(\lambda + \lambda) \\
+							&= x_4(\lambda)+x_4(\lambda)-3\lambda^{2^r}x_3(\lambda)\quad(\textrm{Equation \ref{eqn:g2x42}}) \\
+							&= 3\lambda^{2^r}x_3(\lambda),
+		\end{align*}
+		which implies that $x_3$ is constant, hence zero, as $\sigma\left(\begin{matrix}* & 0\\0 & *\end{matrix}\right) = 1$.
 
-Therefore $x_3 = 0$ in any case, and so by Equation \ref{eqn:g2x42} $x_4$ is an additive polynomial.
-\begin{align*}
-x_4(\lambda) = \sum_i \nu_i \lambda^{p^r},
-\end{align*}
-for some $\nu_i \in k$.
-If $x_4\neq 0$ then some $\nu_j\neq 0$, and we get
-\begin{align*}
-&\nu_j(t^2u)^{p^j} = t^{3p^r}\nu_j u^{p^j}\quad(\textrm{Equation \ref{eqn:g2x4}})\\
-&\Rightarrow t^{2p^j} = t^{3p^r}\\
-&\Rightarrow 2p^j = 3p^r,
-\end{align*}
-which implies that 2 divides $p$ and 3 divides $p$, a contradiction. Hence $x_4=0$ and
-\begin{align*}
-\sigma\left(\begin{matrix}* & *\\0 & *\end{matrix}\right) &= \sigma\left(\begin{matrix}1 & *\\0 & 1\end{matrix}\right) \quad(\textrm{Proposition \ref{imb:imu}}) \\
-	&= 1.
-\end{align*}
-Therefore $H^1(SL_2(k), V_\alpha)_{\rho_r}$ is trivial by Lemma \ref{sl2_b_inj}. Note also that Lemma \ref{lem:second} is trivially satisfied.
+		Therefore $x_3 = 0$ in any case, and so by Equation \ref{eqn:g2x42}, $x_4$ is an additive polynomial. Then it is of the form
+		\begin{align*}
+		x_4(\lambda) = \sum_{i=0}^n \nu_i \lambda^{p^r},
+		\end{align*}
+		for some $\nu_i \in k, n\in\mathbb{N}$.
+		If $x_4\neq 0$ then some $\nu_j\neq 0$, and we get
+		\begin{align*}
+		&\nu_j(t^2u)^{p^j} = t^{3p^r}\nu_j u^{p^j}\quad(\textrm{Equation \ref{eqn:g2x4}})\\
+			&\Rightarrow t^{2p^j} = t^{3p^r}\\
+			&\Rightarrow 2p^j = 3p^r,
+		\end{align*}
+		which implies that 2 divides $p$ and 3 divides $p$, a contradiction. Hence $x_4=0$ and
+		\begin{align*}
+		\sigma\left(\begin{matrix}* & *\\0 & *\end{matrix}\right) &= \sigma\left(\begin{matrix}1 & *\\0 & 1\end{matrix}\right) \quad(\textrm{Proposition \ref{imb:imu}}) \\
+			&= 1.
+			\end{align*}
+			Therefore $H^1(SL_2(k), V_\alpha)_{\rho_r}$ is trivial by Lemma \ref{sl2_b_inj}. Note also that Lemma \ref{lem:second} is trivially satisfied.
 
-\subsection{$V = R_u(P_\beta)$}
-\label{g2:beta}
-Calculation goes here if I have time.
+			%\subsection{$V = R_u(P_\beta)$}
+			%\label{g2:beta}
+			%TODO Calculation goes here if I have time.
 
-\section{$G = C_3$}
-\label{c3}
-Let $G=C_3$. Fix a maximal torus, labeling the positive simple roots $\Delta=\{\alpha, \beta, \gamma\}$ with $\gamma$ being the long root and connected to $\beta$. 
+			\section{$G = C_3$}
+			\label{c3}
+			Let $G=C_3$. Fix a maximal torus, labeling the positive simple roots $\Delta=\{\alpha, \beta, \gamma\}$ with $\gamma$ being the long root and connected to $\beta$. 
 
-\subsection{$V = R_u(P_\alpha)$}
-\label{c3:alpha}
+			\subsection{$V = R_u(P_\alpha)$}
+			\label{c3:alpha}
 
-Let 
-\begin{align}
-V_\alpha = R_u(P_\alpha) = \langle U_\beta, U_\gamma, U_{\alpha+\beta}, U_{\beta+\gamma}, U_{\alpha+\beta+\gamma}, U_{2\beta+\gamma}, U_{\alpha+2\beta+\gamma}, U_{2\alpha+2\beta+\gamma}\rangle.
-\end{align}
-Note that this example captures the root calculation that was excluded in Lemma \ref{uabelian}.
-Again we will write $v$ in $V_\alpha$ in angled brackets for ease of notation:
-\begin{align*}
-&\langle 
-v_1,
-v_2,
-v_3,
-v_4,
-v_5,
-v_6,
-v_7,
-v_8
-\rangle :=\\
-&\epsilon_{\beta}(v_1)
+			Let $V_\alpha = R_u(P_\alpha) = \langle U_\beta, U_\gamma, U_{\alpha+\beta}, U_{\beta+\gamma}, U_{\alpha+\beta+\gamma}, U_{2\beta+\gamma}, U_{\alpha+2\beta+\gamma}, U_{2\alpha+2\beta+\gamma}\rangle$.
+			We will write $v$ in $V_\alpha$ as a column vector,
+			\begin{align*}
+			\left(\begin{matrix}
+					v_1\\
+					v_2\\
+					v_3\\
+					v_4\\
+					v_5\\
+					v_6\\
+					v_7\\
+					v_8
+					\end{matrix}\right)
+=\epsilon_{\beta}(v_1)
 \epsilon_{\gamma}(v_2)
 \epsilon_{\alpha+\beta}(v_3)
 \epsilon_{\beta+\gamma}(v_4)
 \epsilon_{\alpha+\beta+\gamma}(v_5)
 \epsilon_{2\beta+\gamma}(v_6)
 \epsilon_{\alpha+2\beta+\gamma}(v_7)
-\epsilon_{2\alpha+2\beta+\gamma}(v_8) \in V_\alpha
-\end{align*}
-
-We use the commutation relations in \cite[\S 33.3, \S 33.4]{humphreys1975linear} to calculate the group law for $V_\alpha$:
-\begin{align*}
-&u * v =\\
-&\langle
-u_1 + v_1,
-u_2 + v_2,
-u_3 + v_3,
-u_4 + v_4 + u_2 + v_1,
-u_5 + v_5 - u_3v_2,
-u_6 + v_6 + u_2v_1^2 + 2u_4v_1,\\
-&\quad u_7 + v_7 + u_2u_3v_1 + u_2v_1v_3 + u_5v_1 + u_4v_3,
-u_8 + v_8 - u_3^2v_2 - 2u_3v_2v_3 + 2u_5v_3
-\rangle.
-\end{align*}
-We compute the action
-\begin{align*}
-\left(\begin{matrix} a & 0 \\ 0 & a^{-1} \end{matrix}\right)\cdot v
-&=
-\langle 
-a^{-p^r}v_1,
-v_2,
-a^{p^r}v_3,
-a^{-p^r}v_4,
-a^{p^r}v_5,
-a^{-2p^r}v_6,
-v_7,
-a^{2p^r}v_8
-\rangle.
-\end{align*}
-Let $\sigma$ be in $Z^1(SL_2, V_\alpha)$ such that
-\begin{align}
-\sigma\left(\left(\begin{matrix}a & 0\\0 & a^{-1}\end{matrix}\right)\right) = 0.
-\end{align}
-By Lemma \ref{claim1}
-\begin{align}
-\sigma\left(\left(\begin{matrix} 1 & b \\ 0 & 1 \end{matrix}\right)\right) =
-\langle 
-0,
-0,
-x_3(b),
-0,
-x_5(b),
-0,
-0,
-x_8(b)
-\rangle.
-\end{align}
-Applying $\sigma$ to both sides of the identity
-\begin{align}
-\left(\begin{matrix} 1 & a^2b \\ 0 & 1 \end{matrix}\right)
-	= 
-\left(\begin{matrix} a & 0 \\ 0 & a^{-1} \end{matrix}\right)
-\left(\begin{matrix} 1 & b \\ 0 & 1 \end{matrix}\right)
-	\left(\begin{matrix} a^{-1} & 0 \\ 0 & a \end{matrix}\right),
-	\end{align}
-	yields
+	\epsilon_{2\alpha+2\beta+\gamma}(v_8),
+	\end{align*}
+	so that we can write the group law for $V_\alpha$ (\cite[\S 33.3, \S 33.4]{humphreys1975linear}) as
 	\begin{align*}
-	x_3(a^2b) &= a^{p^r}x_3(b)\\
-							 x_5(a^2b) &= a^{p^r}x_5(b)\\
-							 x_8(a^2b) &= a^{2p^r}x_8(b).
-							 \end{align*}
-							 Since the polynomials $x_3, x_5, x_8$ are homomorphisms (Lemma \ref{ufixes}) we get
-							 \begin{align*}
-							 \sum_i \lambda_i (a^2b)^{p^i} &= a^{p^r} \sum_i \lambda_i b^{p^i}\\
-								 \sum_i \mu_i (a^2b)^{p^i} &= a^{p^r} \sum_i \mu_i b^{p^i}\\
-								 \sum_i \nu_i (a^2b)^{p^i} &= a^{2p^r} \sum_i \nu_i b^{p^i},
-							 \end{align*}
-							 from which we can deduce
-							 \begin{align*}
-							 x_3 \neq 0 &\Longrightarrow x_3(b) = \lambda b^{p^{r+1}}, p = 2\\
-																										x_5 \neq 0 &\Longrightarrow x_5(b) = \mu b^{p^{r+1}}, p = 2\\
-																										x_8 \neq 0 &\Longrightarrow x_8(b) = \nu b^{p^r}.
-																										\end{align*}
-																										Therefore, if the image of the group of upper (uni-)triangular matrices of $SL_2$ under $\sigma$ is $\langle U_{\alpha+\beta}, U_{\alpha+\beta+\gamma}, U_{2\alpha+2\beta+\gamma} \rangle$ then the characteristic of $k$ must be 2, and so the image is contained in a product of commuting root groups.
+	\left(\begin{matrix}
+			u_1\\
+			u_2\\
+			u_3\\
+			u_4\\
+			u_5\\
+			u_6\\
+			u_7\\
+			u_8
+			\end{matrix}\right)
+	\times
+	\left(\begin{matrix}
+			v_1\\
+			v_2\\
+			v_3\\
+			v_4\\
+			v_5\\
+			v_6\\
+			v_7\\
+			v_8
+			\end{matrix}\right)
+	&=
+	\left(\begin{matrix}
+			u_1 + v_1\\
+			u_2 + v_2\\
+			u_3 + v_3\\
+			u_4 + v_4 + u_2 + v_1\\
+			u_5 + v_5 - u_3v_2\\
+			u_6 + v_6 + u_2v_1^2 + 2u_4v_1\\
+			u_7 + v_7 + u_2u_3v_1 + u_2v_1v_3 + u_5v_1 + u_4v_3\\
+			u_8 + v_8 - u_3^2v_2 - 2u_3v_2v_3 + 2u_5v_3
+			\end{matrix}\right).
+	\end{align*}
+	Let $\sigma$ be in $Z^1(SL_2, V_\alpha)$ such that $\sigma\left(\begin{matrix}* & 0\\0 & *\end{matrix}\right)$. By Proposition \ref{claim1}
+	\begin{align*}
+	\sigma\left(\begin{matrix}1 & u\\0 & 1\end{matrix}\right) = 
+\epsilon_{\alpha+\beta}\left(x_3(u)\right)
+\epsilon_{\alpha+\beta+\gamma}\left(x_5(u)\right)
+\epsilon_{2\alpha+2\beta+\gamma}\left(x_8(u)\right)
+	\end{align*}
+	where $x_3, x_5, x_8$ satisfy
+	\begin{align}
+	x_3(t^2u) &= t^{p^r}x_3(u)\label{c3x3} \\
+	x_5(t^2u) &= t^{p^r}x_5(u)\label{c3x5} \\
+	x_8(t^2u) &= t^{2p^r}x_8(u),\label{c3x8}
+	\end{align}
+	Since $\alpha + \delta \notin \Phi$ for $\delta \in \{\alpha + \beta, \alpha + \beta + \gamma, 2\alpha + 2\beta + \gamma\}$, $\sigma\left(\begin{matrix}1 & u\\0 & 1\end{matrix}\right)$ is unchanged under the action of $\left(\begin{matrix}1 & *\\0 & 1\end{matrix}\right)$ for any $u\in k$. Then
+\begin{align*}
+	\sigma\left(\begin{matrix} 1 & u_1 + u_2 \\0 & 1\end{matrix}\right) &= 
+	\left(\sigma\left(\begin{matrix} 1 & u_1\\0 & 1\end{matrix}\right)\right)
+	\left(\left(\begin{matrix} 1 & u_1\\0 & 1\end{matrix}\right)\cdot
+	\sigma\left(\begin{matrix} 1 & u_2\\0 & 1\end{matrix}\right)\right) \\ &=
+	\sigma\left(\begin{matrix} 1 & u_1\\0 & 1\end{matrix}\right)
+	\sigma\left(\begin{matrix} 1 & u_2 \\0 & 1\end{matrix}\right).
+\end{align*}
+Therefore
+\begin{align*}
+&\epsilon_{\alpha+\beta}\left(x_3(u_1 + u_2)\right)
+\epsilon_{\alpha+\beta+\gamma}\left(x_5(u_1 + u_2)\right)
+\epsilon_{2\alpha+2\beta+\gamma}\left(x_8(u_1 + u_2)\right) \\
+&=
+\epsilon_{\alpha+\beta}\left(x_3(u_1)\right)
+\epsilon_{\alpha+\beta+\gamma}\left(x_5(u_1)\right)
+\epsilon_{2\alpha+2\beta+\gamma}\left(x_8(u_1)\right)
+\epsilon_{\alpha+\beta}\left(x_3(u_2)\right) \\
+&\qquad\epsilon_{\alpha+\beta+\gamma}\left(x_5(u_2)\right) 
+\epsilon_{2\alpha+2\beta+\gamma}\left(x_8(u_2)\right) \\
+&=
+\epsilon_{\alpha+\beta}\left(x_3(u_1)\right)
+\epsilon_{\alpha+\beta+\gamma}\left(x_5(u_1)\right)
+\epsilon_{\alpha+\beta}\left(x_3(u_2)\right)
+\epsilon_{2\alpha+2\beta+\gamma}\left(x_8(u_1)\right) \\
+&\qquad\epsilon_{\alpha+\beta+\gamma}\left(x_5(u_2)\right) 
+\epsilon_{2\alpha+2\beta+\gamma}\left(x_8(u_2)\right) \\
+&=
+\epsilon_{\alpha+\beta}\left(x_3(u_1)\right)
+\epsilon_{\alpha+\beta}\left(x_3(u_2)\right)
+\epsilon_{\alpha+\beta+\gamma}\left(x_5(u_1)\right)
+\epsilon_{2\alpha+2\beta+\gamma}\left(x_8(u_1) + 2x_3(u_2)x_5(u_1)\right) \\
+&\qquad\epsilon_{\alpha+\beta+\gamma}\left(x_5(u_2)\right) 
+\epsilon_{2\alpha+2\beta+\gamma}\left(x_8(u_2)\right) \\
+&=
+\epsilon_{\alpha+\beta}\left(x_3(u_1) + x_3(u_2)\right)
+\epsilon_{\alpha+\beta+\gamma}\left(x_5(u_1) + x_5(u_2)\right) \\
+&\qquad\epsilon_{2\alpha+2\beta+\gamma}\left(x_8(u_1) + x_8(u_2) + 2x_3(u_2)x_5(u_1)\right)
+\end{align*}
 
+We see that $x_3, x_5$ are additive polynomials, so by \cite[\S 20.3, Lemma A]{humphreys1975linear} they are of the form
+\begin{align*}
+	x_3(\lambda) &= \sum_{i=0}^m \mu_i\lambda^{p^r} \\
+	x_5(\lambda) &= \sum_{i=0}^n \nu_i\lambda^{p^r},
+\end{align*}
+for some $\mu_i, \nu_i \in k, m,n \in \mathbb{N}$, while $x_8$ is of the form
+\begin{align}\label{c3x8}
+	x_8(\lambda_1 + \lambda_2) = x_8(\lambda_1) + x_8(\lambda_2) + 2x_3(\lambda_2)x_5(\lambda_1).
+\end{align}
 
-																										\subsection{$V = R_u(P_\beta)$}
-																										\label{c3:beta}
-																										Calculation goes here
+Suppose $x_3 \neq 0$. Then there exists $j \geq 0$ such that $\mu_j \neq 0$, so by Equation \ref{c3x3}
+\begin{align*}
+	&\mu_j(t^2u)^{p^j} = t^{p^r}\mu_ju^{p^j} \\
+	&\Rightarrow t^{2p^j} = t^{p^r} \\
+	&\Rightarrow 2p^j = p^r.
+\end{align*}
 
-																										\subsection{$V = R_u(P_\gamma)$}
-																										\label{c3:gamma}
-																										Calculation goes here
+Therefore $p = 2$, $j=r-1$ and $x_3(\lambda) = \mu \lambda^{2^{r-1}}$ for all $\lambda\in k$, for some fixed $\mu\in k$. A similar argument shows that if $x_5 \neq 0$ then $p=2$ and $x_5(\lambda) = \nu \lambda^{2^{r-1}}$ for all $\lambda \in k$, for some fixed $\nu\in k$.
 
-																										\section{$G = B_2$}
-																										\label{b2}
+Consider Equation \ref{c3x8}. If $x_3$ or $x_4$ is nonzero then $p=2$, so $2x_3(\lambda_2)x_5(\lambda_1) = 0$. Conversely $2x_3(\lambda_2)x_5(\lambda_1) = 0$ if either of $x_3$ or $x_5$ is zero. Hence in either case $x_8$ is an additive polynomial, so by \cite[\S 20.3, Lemma A]{humphreys1975linear} $x_8$ is of the form
+\begin{align*}
+	x_8(\lambda_1 + \lambda_2) = x_8(\lambda_1) + x_8(\lambda_2).
+\end{align*}
+Moreover, in either case $\sigma\left(\begin{matrix}1 & *\\0 & 1\end{matrix}\right)$ lies in an abelian subgroup of $V_\alpha$. Hence Lemma \ref{lem:second} applies. The two cases are
+\begin{align*}
+p=2: \qquad&x_3(\lambda) = \mu \lambda^{2^{r-1}} \\
+	&x_5(\lambda) = \nu \lambda^{2^{r-1}} \\
+	&x_8(\lambda) = \omega \lambda^{2^r}, \\
+p>2: \qquad&x_3=x_5=0 \\
+	&x_8(\lambda) = \omega \lambda^{p^r}.
+\end{align*}
 
-																										Let $T$ be a maximal torus of $B_2$ over an algebraically closed field $k$ of characteristic $p$. We label the positive roots for $B_2$ as $\alpha, \beta, \alpha + \beta, 2\alpha + \beta$. We have from \cite[\S 33.4]{humphreys1975linear}:
-																										\begin{align*}
-																										\epsilon_\beta (y) \epsilon_\alpha (x) &= \epsilon_\alpha (x) \epsilon_\beta (y) \epsilon_{\alpha + \beta} (xy) \epsilon_{2\alpha+\beta} (x^2y) \\
-																																															\epsilon_{\alpha + \beta} (y) \epsilon_\alpha (x) &= \epsilon_\alpha (x) \epsilon_{\alpha + \beta} (y) \epsilon_{2\alpha + \beta} (2xy),
-																										\end{align*}
-																										and 
-																										\begin{align*}
-																										n_\alpha \epsilon_\beta(x) n_\alpha^{-1} &= \epsilon_{2\alpha+\beta}(x)\\
-																											n_\alpha \epsilon_{\alpha+\beta}(x) n_\alpha^{-1} &= \epsilon_{\alpha+\beta}(-x)\\
-																											n_\alpha \epsilon_{2\alpha+\beta}(x) n_\alpha^{-1} &= \epsilon_{\beta}(x)\\
-																											n_\beta \epsilon_\alpha(x) n_\beta^{-1} &= \epsilon_{\alpha+\beta}(x)\\
-																											n_\beta \epsilon_{\alpha+\beta}(x) n_\beta^{-1} &= \epsilon_{\alpha}(-x)\\
-																											n_\beta \epsilon_{2\alpha+\beta}(x) n_\beta^{-1} &= \epsilon_{2\alpha+\beta}(x)
-																											\end{align*}
-																											A proper parabolic subgroup of $B_2$ is conjugate to one of
-																											\begin{align*}
-																											P_\alpha &= \langle B, U_{-\alpha} \rangle\\
-																																	P_\beta &= \langle B, U_{-\beta} \rangle,
-																											\end{align*}
-																											where $B$ is the Borel subgroup of $B_2$ containing $T$
-																											\begin{align*}
-																											B=\langle T, U_\alpha, U_\beta, U_{\alpha + \beta}, U_{2\alpha+\beta}\rangle.
-																											\end{align*}
-																											The two parabolic subgroups have the Levi decompositions
-																											\begin{align*}
-																											P_\alpha &= L_\alpha \ltimes R_u(P_\alpha) \\
-																																	&= \langle T, U_\alpha, U_{-\alpha} \rangle \ltimes \langle U_\beta, U_{\alpha + \beta}, U_{2\alpha + \beta} \rangle \\
-																																	P_\beta &= L_\beta \ltimes R_u(P_\beta) \\
-																																	&= \langle T, U_\beta, U_{-\beta} \rangle \ltimes \langle U_\alpha, U_{\alpha+\beta}, U_{2\alpha + \beta} \rangle
-																																	\end{align*}
+The point of this Example calculation was to show that we could eventually apply Lemma \ref{lem:second} even though Proposition \ref{uabelian} does not apply, and hence Lemma \ref{lem:first} does not immediately apply. This provids some evidence for Conjucture \ref{bigclaim}.
 
-																																	\subsection{$V = R_u(P_\alpha)$}
-																																	\label{b2:alpha}
+%\subsection{$V = R_u(P_\beta)$}
+%\label{c3:beta}
+%Calculation goes here
 
-																																	Let $V$ be the unipotent radical of the parabolic subgroup of $B_2$ defined by the (short) root $\alpha$:
-																																	\begin{align*}
-																																	V=R_u(P_\alpha)=\langle U_\beta, U_{\alpha + \beta}, U_{2\alpha + \beta} \rangle,
-																																	\end{align*}
-																																	and let $\rho_r$ be the homomorphism from $SL_2 \rightarrow L_\alpha$ defined by
-																																	\begin{align*}
-																																	\rho_r\left(\begin{matrix} 1 & u \\ 0 & 1\end{matrix}\right) &= \epsilon_\alpha(u^{p^r}) \\
-																																		\rho_r\left(\begin{matrix} t & 0 \\ 0 & t^{-1}\end{matrix}\right) &= \alpha ^\vee(t^{p^r}) \\
-																																		\rho_r\left(\begin{matrix} 0 & 1 \\ -1 & 0\end{matrix}\right) &= n_ \alpha,
-																																	\end{align*}
-																																	where $r$ is some non-negative integer.
+%\subsection{$V = R_u(P_\gamma)$}
+%\label{c3:gamma}
+%Calculation goes here
 
-																																	Note that $V$ is abelian. Now $SL_2$ acts on $V$ via $\rho_r$: write $\mathbf{v} = \epsilon_ \beta (v_1)\epsilon_{\alpha+\beta}(v_2) \epsilon_{2\alpha+\beta}(v_3)$ in $V$ as a column vector
-																																	\begin{align*}
-																																	\mathbf{v} &= \left(\begin{matrix} v_1 \\ v_2 \\ v_3 \end{matrix}\right),
-																																	\end{align*}
-																																	and
-																																	\begin{align*}
-																																	\left(\begin{matrix} 1 & u \\ 0 & 1\end{matrix}\right) \cdot \mathbf{v} 
-																																	&= 
-																																	\rho_r\left(\begin{matrix} 1 & u \\ 0 & 1\end{matrix}\right) \mathbf{v}\left( \rho_r\left(\begin{matrix} 1 & u \\ 0 & 1\end{matrix}\right)\right)^{-1} \\
-																																		&=
-																																		\epsilon_ \alpha (u^{p^r}) \epsilon_ \beta (v_1)\epsilon_{\alpha+\beta}(v_2) \epsilon_{2\alpha+\beta}(v_3) \epsilon_ \alpha (-u^{p^r}) \\
-																																			&=
-																																			\epsilon_ \alpha (u^{p^r}) \epsilon_ \beta (v_1) \epsilon_{\alpha+\beta}(v_2) \epsilon_ \alpha (-u^{p^r}) \epsilon_{2\alpha+\beta}(v_3) \\
-																																				&=
-																																				\epsilon_ \alpha (u^{p^r}) \epsilon_ \beta (v_1)  \epsilon_ \alpha (-u^{p^r}) \epsilon_{\alpha+\beta}(v_2) \epsilon_{2\alpha+\beta}(-2u^{p^r}v_2)\epsilon_{2\alpha+\beta}(v_3)\\
-																																					&=
-																																					\epsilon_ \alpha (u^{p^r}) \epsilon_ \alpha (-u^{p^r})  \epsilon_ \beta (v_1) \epsilon_{\alpha+\beta}(-u^{p^r}v_1) \epsilon_{2\alpha+\beta}(u^{2p^r}v_1) \epsilon_{\alpha+\beta}(v_2) \epsilon_{2\alpha+\beta}(v_3-2u^{p^r}v_2)\\
-																																						&=
-																																						\epsilon_ \beta (v_1)  \epsilon_{\alpha+\beta}(v_2-u^{p^r}v_1) \epsilon_{2\alpha+\beta}(v_3-2u^{p^r}v_2 + u^{2p^r}v_1)\\
-																																							&= \left(\begin{matrix} v_1 \\ v_2-u^{p^r}v_1 \\ v_3-2u^{p^r}v_2 + u^{2p^r}v_1 \end{matrix}\right) \\
-																																							\left(\begin{matrix} t & 0 \\ 0 & t^{-1}\end{matrix}\right) \cdot \mathbf{v} 
-																																							&=
-																																							\rho_r\left(\begin{matrix} t & 0 \\ 0 & t^{-1}\end{matrix}\right) \mathbf{v} \left( \rho_r\left(\begin{matrix} t & 0 \\ 0 & t^{-1}\end{matrix}\right)\right)^{-1} \\
-	&= 
+\section{$G = B_2$}
+\label{b2}
+
+Let $T$ be a maximal torus of $B_2$ over an algebraically closed field $k$ of characteristic $p$. We label the positive roots for $B_2$ as $\alpha, \beta, \alpha + \beta, 2\alpha + \beta$. We have from \cite[\S 33.4]{humphreys1975linear}:
+\begin{align*}
+\epsilon_\beta (y) \epsilon_\alpha (x) &= \epsilon_\alpha (x) \epsilon_\beta (y) \epsilon_{\alpha + \beta} (xy) \epsilon_{2\alpha+\beta} (x^2y) \\
+\epsilon_{\alpha + \beta} (y) \epsilon_\alpha (x) &= \epsilon_\alpha (x) \epsilon_{\alpha + \beta} (y) \epsilon_{2\alpha + \beta} (2xy),
+\end{align*}
+and 
+\begin{align*}
+n_\alpha \epsilon_\beta(x) n_\alpha^{-1} &= \epsilon_{2\alpha+\beta}(x)\\
+n_\alpha \epsilon_{\alpha+\beta}(x) n_\alpha^{-1} &= \epsilon_{\alpha+\beta}(-x)\\
+n_\alpha \epsilon_{2\alpha+\beta}(x) n_\alpha^{-1} &= \epsilon_{\beta}(x)\\
+n_\beta \epsilon_\alpha(x) n_\beta^{-1} &= \epsilon_{\alpha+\beta}(x)\\
+n_\beta \epsilon_{\alpha+\beta}(x) n_\beta^{-1} &= \epsilon_{\alpha}(-x)\\
+n_\beta \epsilon_{2\alpha+\beta}(x) n_\beta^{-1} &= \epsilon_{2\alpha+\beta}(x)
+\end{align*}
+A proper parabolic subgroup of $B_2$ is conjugate to one of
+\begin{align*}
+P_\alpha &= \langle B, U_{-\alpha} \rangle\\
+P_\beta &= \langle B, U_{-\beta} \rangle,
+\end{align*}
+where $B$ is the Borel subgroup of $B_2$ containing $T$
+\begin{align*}
+B=\langle T, U_\alpha, U_\beta, U_{\alpha + \beta}, U_{2\alpha+\beta}\rangle.
+\end{align*}
+The two parabolic subgroups have the Levi decompositions
+\begin{align*}
+P_\alpha &= L_\alpha \ltimes R_u(P_\alpha) \\
+&= \langle T, U_\alpha, U_{-\alpha} \rangle \ltimes \langle U_\beta, U_{\alpha + \beta}, U_{2\alpha + \beta} \rangle \\
+P_\beta &= L_\beta \ltimes R_u(P_\beta) \\
+&= \langle T, U_\beta, U_{-\beta} \rangle \ltimes \langle U_\alpha, U_{\alpha+\beta}, U_{2\alpha + \beta} \rangle
+\end{align*}
+
+\subsection{$V = R_u(P_\alpha)$}
+\label{b2:alpha}
+
+Let $V$ be the unipotent radical of the parabolic subgroup of $B_2$ defined by the (short) root $\alpha$:
+\begin{align*}
+V=R_u(P_\alpha)=\langle U_\beta, U_{\alpha + \beta}, U_{2\alpha + \beta} \rangle,
+\end{align*}
+and let $\rho_r$ be the homomorphism from $SL_2 \rightarrow L_\alpha$ defined by
+\begin{align*}
+\rho_r\left(\begin{matrix} 1 & u \\ 0 & 1\end{matrix}\right) &= \epsilon_\alpha(u^{p^r}) \\
+\rho_r\left(\begin{matrix} t & 0 \\ 0 & t^{-1}\end{matrix}\right) &= \alpha ^\vee(t^{p^r}) \\
+\rho_r\left(\begin{matrix} 0 & 1 \\ -1 & 0\end{matrix}\right) &= n_ \alpha,
+\end{align*}
+where $r$ is some non-negative integer.
+
+Note that $V$ is abelian. Now $SL_2$ acts on $V$ via $\rho_r$: write $\mathbf{v} = \epsilon_ \beta (v_1)\epsilon_{\alpha+\beta}(v_2) \epsilon_{2\alpha+\beta}(v_3)$ in $V$ as a column vector
+\begin{align*}
+\mathbf{v} &= \left(\begin{matrix} v_1 \\ v_2 \\ v_3 \end{matrix}\right),
+\end{align*}
+and
+\begin{align*}
+\left(\begin{matrix} 1 & u \\ 0 & 1\end{matrix}\right) \cdot \mathbf{v} 
+&= 
+\rho_r\left(\begin{matrix} 1 & u \\ 0 & 1\end{matrix}\right) \mathbf{v}\left( \rho_r\left(\begin{matrix} 1 & u \\ 0 & 1\end{matrix}\right)\right)^{-1} \\
+&=
+\epsilon_ \alpha (u^{p^r}) \epsilon_ \beta (v_1)\epsilon_{\alpha+\beta}(v_2) \epsilon_{2\alpha+\beta}(v_3) \epsilon_ \alpha (-u^{p^r}) \\
+&=
+\epsilon_ \alpha (u^{p^r}) \epsilon_ \beta (v_1) \epsilon_{\alpha+\beta}(v_2) \epsilon_ \alpha (-u^{p^r}) \epsilon_{2\alpha+\beta}(v_3) \\
+&=
+\epsilon_ \alpha (u^{p^r}) \epsilon_ \beta (v_1)  \epsilon_ \alpha (-u^{p^r}) \epsilon_{\alpha+\beta}(v_2) \epsilon_{2\alpha+\beta}(-2u^{p^r}v_2)\epsilon_{2\alpha+\beta}(v_3)\\
+&=
+\epsilon_ \alpha (u^{p^r}) \epsilon_ \alpha (-u^{p^r})  \epsilon_ \beta (v_1) \epsilon_{\alpha+\beta}(-u^{p^r}v_1) \epsilon_{2\alpha+\beta}(u^{2p^r}v_1) \epsilon_{\alpha+\beta}(v_2) \epsilon_{2\alpha+\beta}(v_3-2u^{p^r}v_2)\\
+&=
+\epsilon_ \beta (v_1)  \epsilon_{\alpha+\beta}(v_2-u^{p^r}v_1) \epsilon_{2\alpha+\beta}(v_3-2u^{p^r}v_2 + u^{2p^r}v_1)\\
+&= \left(\begin{matrix} v_1 \\ v_2-u^{p^r}v_1 \\ v_3-2u^{p^r}v_2 + u^{2p^r}v_1 \end{matrix}\right) \\
+\left(\begin{matrix} t & 0 \\ 0 & t^{-1}\end{matrix}\right) \cdot \mathbf{v} 
+&=
+\rho_r\left(\begin{matrix} t & 0 \\ 0 & t^{-1}\end{matrix}\right) \mathbf{v} \left( \rho_r\left(\begin{matrix} t & 0 \\ 0 & t^{-1}\end{matrix}\right)\right)^{-1} \\
+&= 
 \alpha^\vee(t^{p^r}) 
-	\epsilon_ \beta (v_1)
+\epsilon_ \beta (v_1)
 \epsilon_{\alpha+\beta}(v_2)
 \epsilon_{2\alpha+\beta}(v_3) 
-	(\alpha^\vee(t^{p^r}))^{-1} \\
-	&= 
+(\alpha^\vee(t^{p^r}))^{-1} \\
+&= 
 \epsilon_\beta \left(\beta(\alpha^\vee(t^{p^r}))v_1\right)
 \epsilon_{\alpha+\beta} \left((\alpha+\beta)(\alpha ^\vee(t^{p^r}))v_2 \right)
-	\epsilon_{2\alpha+\beta} \left((2\alpha+\beta)(\alpha ^\vee(t^{p^r}))v_3 \right)\\
-	&= 
+\epsilon_{2\alpha+\beta} \left((2\alpha+\beta)(\alpha ^\vee(t^{p^r}))v_3 \right)\\
+&= 
 \epsilon_ \beta \left((t^{p^r})^{\langle \beta, \alpha \rangle}v_1 \right)
 \epsilon_{\alpha+\beta} \left((t^{p^r})^{\langle \alpha+\beta, \alpha \rangle}v_2 \right)
-	\epsilon_{2\alpha+\beta} \left((t^{p^r})^{\langle 2\alpha+\beta, \alpha \rangle}v_3 \right)\\
-		&= 
-		\left(\begin{matrix} t^{-2p^r}v_1 \\ v_2\\ t^{2p^r} v_3 \end{matrix}\right) \\
-			\left(\begin{matrix} 0 & 1 \\ -1 & 0 \end{matrix}\right) \cdot \mathbf{v} 
-			&=
-			\rho_r\left(\begin{matrix} 0 & 1 \\ -1 & 0\end{matrix}\right) \mathbf{v}\left( \rho_r\left(\begin{matrix} 0 & 1 \\ -1 & 0\end{matrix}\right)\right)^{-1} \\
-				&= 
-				n_ \alpha  \epsilon_ \beta (v_1)\epsilon_{\alpha+\beta}(v_2) \epsilon_{2\alpha+\beta}(v_3) n_ \alpha^{-1}\\
-					&= 
-					n_ \alpha  \epsilon_\beta (v_1) n_ \alpha^{-1}n_ \alpha \epsilon_{\alpha+\beta}(v_2) n_ \alpha^{-1} n_ \alpha \epsilon_{2\alpha+\beta}(v_3) n_ \alpha^{-1}\\
-						&= 
-						\epsilon_{2\alpha+\beta} (v_1) \epsilon_{\alpha+\beta}(-v_2)  \epsilon_{\beta}(v_3) \\
-							&= 
-							\epsilon_{\beta}(v_3) \epsilon_{\alpha+\beta}(-v_2) \epsilon_{2\alpha+\beta} (v_1)\\
-								&= \left(\begin{matrix} v_3 \\ -v_2 \\ v_1 \end{matrix}\right).
-								\end{align*}
+\epsilon_{2\alpha+\beta} \left((t^{p^r})^{\langle 2\alpha+\beta, \alpha \rangle}v_3 \right)\\
+&= 
+\left(\begin{matrix} t^{-2p^r}v_1 \\ v_2\\ t^{2p^r} v_3 \end{matrix}\right) \\
+\left(\begin{matrix} 0 & 1 \\ -1 & 0 \end{matrix}\right) \cdot \mathbf{v} 
+&=
+\rho_r\left(\begin{matrix} 0 & 1 \\ -1 & 0\end{matrix}\right) \mathbf{v}\left( \rho_r\left(\begin{matrix} 0 & 1 \\ -1 & 0\end{matrix}\right)\right)^{-1} \\
+&= 
+n_ \alpha  \epsilon_ \beta (v_1)\epsilon_{\alpha+\beta}(v_2) \epsilon_{2\alpha+\beta}(v_3) n_ \alpha^{-1}\\
+&= 
+n_ \alpha  \epsilon_\beta (v_1) n_ \alpha^{-1}n_ \alpha \epsilon_{\alpha+\beta}(v_2) n_ \alpha^{-1} n_ \alpha \epsilon_{2\alpha+\beta}(v_3) n_ \alpha^{-1}\\
+&= 
+\epsilon_{2\alpha+\beta} (v_1) \epsilon_{\alpha+\beta}(-v_2)  \epsilon_{\beta}(v_3) \\
+&= 
+\epsilon_{\beta}(v_3) \epsilon_{\alpha+\beta}(-v_2) \epsilon_{2\alpha+\beta} (v_1)\\
+&= \left(\begin{matrix} v_3 \\ -v_2 \\ v_1 \end{matrix}\right).
+\end{align*}
 
-								We can combine the above calculations to get an explicit formula for the action of $SL_2$ on $V$:
-								\begin{align*}
-								\left(\begin{matrix} a & b \\ c & d\end{matrix}\right) \cdot \mathbf{v} &=
-								\left(\begin{matrix}
-										d^{2p^r}v_1 -2(cd)^{p^r}v_2 + c^{2p^r}v_3 \\
-										(ad + bc)^{p^r}v_2 - (bd)^{p^r}v_1 - (ac)^{p^r}v_3 \\
-										b^{2p^r}v_1 -2(ab)^{p^r}v_2 + a^{2p^r}v_3
-										\end{matrix}\right)
-								\end{align*}
+We can combine the above calculations to get an explicit formula for the action of $SL_2$ on $V$:
+\begin{align*}
+\left(\begin{matrix} a & b \\ c & d\end{matrix}\right) \cdot \mathbf{v} &=
+\left(\begin{matrix}
+d^{2p^r}v_1 -2(cd)^{p^r}v_2 + c^{2p^r}v_3 \\
+(ad + bc)^{p^r}v_2 - (bd)^{p^r}v_1 - (ac)^{p^r}v_3 \\
+b^{2p^r}v_1 -2(ab)^{p^r}v_2 + a^{2p^r}v_3
+\end{matrix}\right)
+\end{align*}
 
-								Now let $\sigma'$ in $Z^1(SL_2, V)$ be a 1-cocycle from $SL_2\rightarrow V$. By \ref{lem:nonab_lin_red} $\sigma'$ is conjugate to a 1-cocycle $\sigma$ that has the additional property that
-								\begin{align*}
-								\sigma\left( \begin{matrix} t & 0 \\ 0 & t^{-1}\end{matrix}\right) &= 
-								\left( \begin{matrix} 0 \\ 0 \\0\end{matrix}\right),
-								\end{align*}
-								for all $t$ in $k^*$. Since we are ultimately concerned with the 1-cohomology, that is, conjugacy classes of 1-cocycles, we may proceed with $\sigma$ instead.
+Now let $\sigma'$ in $Z^1(SL_2, V)$ be a 1-cocycle from $SL_2\rightarrow V$. By \ref{lem:nonab_lin_red} $\sigma'$ is conjugate to a 1-cocycle $\sigma$ that has the additional property that
+\begin{align*}
+\sigma\left( \begin{matrix} t & 0 \\ 0 & t^{-1}\end{matrix}\right) &= 
+\left( \begin{matrix} 0 \\ 0 \\0\end{matrix}\right),
+\end{align*}
+for all $t$ in $k^*$. Since we are ultimately concerned with the 1-cohomology, that is, conjugacy classes of 1-cocycles, we may proceed with $\sigma$ instead.
 
-								We could apply the results in Chapter \ref{Chapter5} at this point but provide the full calculation as a demonstration.
+We could apply the results in Chapter \ref{Chapter5} at this point but provide the full calculation as a demonstration.
 
-								Since $\sigma$ is a morphism of varieties, each component of $\sigma\left(\begin{matrix} 1& u \\ 0 & 1\end{matrix}\right)$ should be a polynomial function of $u$, so let
-								\begin{align*}
-								\sigma\left(\begin{matrix} 1& u \\ 0 & 1\end{matrix}\right) &=
-								\left(\begin{matrix} p_1(u) \\ p_2(u) \\ p_3(u) \end{matrix}\right).
-								\end{align*}
+Since $\sigma$ is a morphism of varieties, each component of $\sigma\left(\begin{matrix} 1& u \\ 0 & 1\end{matrix}\right)$ should be a polynomial function of $u$, so let
+\begin{align*}
+\sigma\left(\begin{matrix} 1& u \\ 0 & 1\end{matrix}\right) &=
+\left(\begin{matrix} p_1(u) \\ p_2(u) \\ p_3(u) \end{matrix}\right).
+\end{align*}
 
-								Now we make use of the very simple relations
-								\begin{align}
-								\label{eq:no1a}
-								\left(\begin{matrix} 1 & t^2u \\ 0 & 1\end{matrix}\right) &=
+Now we make use of the very simple relations
+\begin{align}
+\label{eq:no1a}
+\left(\begin{matrix} 1 & t^2u \\ 0 & 1\end{matrix}\right) &=
 \left(\begin{matrix} t & 0 \\ 0 & t^{-1}  \end{matrix}\right) 
 \left(\begin{matrix} 1 & u \\ 0 & 1 \end{matrix}\right) 
-	\left(\begin{matrix}  t^{-1} & 0 \\ 0 & t \end{matrix}\right) \\
-		\label{eq:no2a}
-		\left(\begin{matrix} 1 & u_1 + u_2 \\ 0 & 1 \end{matrix}\right) &=
+\left(\begin{matrix}  t^{-1} & 0 \\ 0 & t \end{matrix}\right) \\
+\label{eq:no2a}
+\left(\begin{matrix} 1 & u_1 + u_2 \\ 0 & 1 \end{matrix}\right) &=
 \left(\begin{matrix} 1 & u_1 \\ 0 & 1 \end{matrix}\right) 
-	\left(\begin{matrix} 1 & u_2 \\ 0 & 1 \end{matrix}\right),
-	\end{align}
-	to get further information on the polynomials $p_i$ $(i=1,2,3)$.
+\left(\begin{matrix} 1 & u_2 \\ 0 & 1 \end{matrix}\right),
+\end{align}
+to get further information on the polynomials $p_i$ $(i=1,2,3)$.
 
-	If we apply $\sigma$ to both sides of (\ref{eq:no1a}), using the 1-cocycle condition on the right hand side, then we get
-	\begin{align*}
-	\sigma\left(
-			\left(\begin{matrix} 1 & t^2u \\ 0 & 1\end{matrix}\right)
-			\right) &=
-	\sigma\left(
-			\left(\begin{matrix} t & 0 \\ 0 & t^{-1}  \end{matrix}\right) 
-			\left(\begin{matrix} 1 & u \\ 0 & 1 \end{matrix}\right) 
-			\left(\begin{matrix}  t^{-1} & 0 \\ 0 & t \end{matrix}\right)
-			\right) 
-	\\
-		&=
-	\sigma\left(
-			\left(\begin{matrix} t & 0 \\ 0 & t^{-1}  \end{matrix}\right) 
-			\right) +
-	\left(\begin{matrix} t & 0 \\ 0 & t^{-1}  \end{matrix}\right) \cdot
-	\sigma\left(
-			\left(\begin{matrix} 1 & u \\ 0 & 1 \end{matrix}\right) 
-			\left(\begin{matrix}  t^{-1} & 0 \\ 0 & t \end{matrix}\right)
-			\right) 
-	\\
-		&= 
-	\sigma\left(
-			\left(\begin{matrix} t & 0 \\ 0 & t^{-1}  \end{matrix}\right) 
-			\right) +
-	\left(\begin{matrix} t & 0 \\ 0 & t^{-1}  \end{matrix}\right) \cdot
-	\left(
-			\sigma\left(
-				\left(\begin{matrix} 1 & u \\ 0 & 1 \end{matrix}\right) 
-				\right) +
-			\left(\begin{matrix} 1 & u \\ 0 & 1 \end{matrix}\right) \cdot
-			\sigma\left(
-				\left(\begin{matrix}  t^{-1} & 0 \\ 0 & t \end{matrix}\right)
-				\right)
-			\right)
-	\\
-		&= 
-		\left(\begin{matrix} t & 0 \\ 0 & t^{-1}  \end{matrix}\right) \cdot
-	\sigma\left(
-			\left(\begin{matrix} 1 & u \\ 0 & 1 \end{matrix}\right) 
-			\right).
-	\end{align*}
-	That is,
-	\begin{align}
-	\label{t:b2a_1}
-	p_1(t^2u) &= t^{-2p^r} p_1(u) \\
-							 \label{t:b2a_2}
-							 p_2(t^2u) &= p_2(u) \\
-														\label{t:b2a_3}
-														p_3(t^2u) &=  t^{2p^r}p_3(u).
-														\end{align}
+If we apply $\sigma$ to both sides of (\ref{eq:no1a}), using the 1-cocycle condition on the right hand side, then we get
+\begin{align*}
+\sigma\left(
+\left(\begin{matrix} 1 & t^2u \\ 0 & 1\end{matrix}\right)
+\right) &=
+\sigma\left(
+\left(\begin{matrix} t & 0 \\ 0 & t^{-1}  \end{matrix}\right) 
+\left(\begin{matrix} 1 & u \\ 0 & 1 \end{matrix}\right) 
+\left(\begin{matrix}  t^{-1} & 0 \\ 0 & t \end{matrix}\right)
+\right) 
+\\
+&=
+\sigma\left(
+\left(\begin{matrix} t & 0 \\ 0 & t^{-1}  \end{matrix}\right) 
+\right) +
+\left(\begin{matrix} t & 0 \\ 0 & t^{-1}  \end{matrix}\right) \cdot
+\sigma\left(
+\left(\begin{matrix} 1 & u \\ 0 & 1 \end{matrix}\right) 
+\left(\begin{matrix}  t^{-1} & 0 \\ 0 & t \end{matrix}\right)
+\right) 
+\\
+&= 
+\sigma\left(
+\left(\begin{matrix} t & 0 \\ 0 & t^{-1}  \end{matrix}\right) 
+\right) +
+\left(\begin{matrix} t & 0 \\ 0 & t^{-1}  \end{matrix}\right) \cdot
+\left(
+\sigma\left(
+\left(\begin{matrix} 1 & u \\ 0 & 1 \end{matrix}\right) 
+\right) +
+\left(\begin{matrix} 1 & u \\ 0 & 1 \end{matrix}\right) \cdot
+\sigma\left(
+\left(\begin{matrix}  t^{-1} & 0 \\ 0 & t \end{matrix}\right)
+\right)
+\right)
+\\
+&= 
+\left(\begin{matrix} t & 0 \\ 0 & t^{-1}  \end{matrix}\right) \cdot
+\sigma\left(
+\left(\begin{matrix} 1 & u \\ 0 & 1 \end{matrix}\right) 
+\right).
+\end{align*}
+That is,
+\begin{align}
+\label{t:b2a_1}
+p_1(t^2u) &= t^{-2p^r} p_1(u) \\
+\label{t:b2a_2}
+p_2(t^2u) &= p_2(u) \\
+\label{t:b2a_3}
+p_3(t^2u) &=  t^{2p^r}p_3(u).
+\end{align}
 
-														From (\ref{t:b2a_2}) it is clear that $p_2$ is constant, so there is a $\lambda$ in $k$ such that $p_2(x)=\lambda$ for all $x$ in $k$. Now notice that on the left hand side of (\ref{t:b2a_1}) there are only non-negative powers of $t$, and on the right hand side there are only non-positive powers of $t$. This equality is only satisfied if $p_1(x)=0$ for all $x$ in $k$, so $p_1$ is the zero polynomial.
+From (\ref{t:b2a_2}) it is clear that $p_2$ is constant, so there is a $\lambda$ in $k$ such that $p_2(x)=\lambda$ for all $x$ in $k$. Now notice that on the left hand side of (\ref{t:b2a_1}) there are only non-negative powers of $t$, and on the right hand side there are only non-positive powers of $t$. This equality is only satisfied if $p_1(x)=0$ for all $x$ in $k$, so $p_1$ is the zero polynomial.
 
-														We apply $\sigma$ to (\ref{eq:no2a}) and using the 1-cocycle condition to obtain
-														\begin{align*}
-	\sigma\left(
-			\left(\begin{matrix} 1 & u_1 + u_2 \\ 0 & 1 \end{matrix}\right)
-			\right)
-	&=
-	\sigma\left(
-			\left(\begin{matrix} 1 & u_1 \\ 0 & 1 \end{matrix}\right) 
-			\left(\begin{matrix} 1 & u_2 \\ 0 & 1 \end{matrix}\right)
-			\right) \\
-		&=
-	\sigma\left(
-			\left(\begin{matrix} 1 & u_1 \\ 0 & 1 \end{matrix}\right)
-			\right) +
-	\left(\begin{matrix} 1 & u_1 \\ 0 & 1 \end{matrix}\right) \cdot
-	\sigma\left(
-			\left(\begin{matrix} 1 & u_2 \\ 0 & 1 \end{matrix}\right)
-			\right).
-	\end{align*}
+We apply $\sigma$ to (\ref{eq:no2a}) and using the 1-cocycle condition to obtain
+\begin{align*}
+\sigma\left(
+\left(\begin{matrix} 1 & u_1 + u_2 \\ 0 & 1 \end{matrix}\right)
+\right)
+&=
+\sigma\left(
+\left(\begin{matrix} 1 & u_1 \\ 0 & 1 \end{matrix}\right) 
+\left(\begin{matrix} 1 & u_2 \\ 0 & 1 \end{matrix}\right)
+\right) \\
+&=
+\sigma\left(
+\left(\begin{matrix} 1 & u_1 \\ 0 & 1 \end{matrix}\right)
+\right) +
+\left(\begin{matrix} 1 & u_1 \\ 0 & 1 \end{matrix}\right) \cdot
+\sigma\left(
+\left(\begin{matrix} 1 & u_2 \\ 0 & 1 \end{matrix}\right)
+\right).
+\end{align*}
 
-	That is,
-	\begin{align}
-	\label{u:b2a_1}
-	p_2(u_1 + u_2) &= p_2(u_1) + p_2(u_2) \\
-										\label{u:b2a_2}
-										p_3(u_1 + u_2) &= p_3(u_1) + p_3(u_2) - 2u_1^{p^r}p_2(u_2).
-										\end{align}
+That is,
+\begin{align}
+\label{u:b2a_1}
+p_2(u_1 + u_2) &= p_2(u_1) + p_2(u_2) \\
+\label{u:b2a_2}
+p_3(u_1 + u_2) &= p_3(u_1) + p_3(u_2) - 2u_1^{p^r}p_2(u_2).
+\end{align}
 
 
-										Since $p_2$ is constant, (\ref{u:b2a_1}) implies that $p_2$ is the zero polynomial, which means (\ref{u:b2a_2}) becomes
-										\begin{align*}
-										p_3(u_1 + u_2) &= p_3(u_1) + p_3(u_2). 
-										\end{align*}
-										Hence $p_3$ is a homomorphism, that is, of the form
-										\begin{align}
-										\label{p:b2a_1}
-										p_3(x) &= \sum_{i=0}^N \mu_i x^{p^i},
-										\end{align}
-										for some $u_i$ in $k$.
+Since $p_2$ is constant, (\ref{u:b2a_1}) implies that $p_2$ is the zero polynomial, which means (\ref{u:b2a_2}) becomes
+\begin{align*}
+p_3(u_1 + u_2) &= p_3(u_1) + p_3(u_2). 
+\end{align*}
+Hence $p_3$ is a homomorphism, that is, of the form
+\begin{align}
+\label{p:b2a_1}
+p_3(x) &= \sum_{i=0}^N \mu_i x^{p^i},
+\end{align}
+for some $u_i$ in $k$.
 
-										Now combining (\ref{t:b2a_3}) and (\ref{p:b2a_1}) yields
-										\begin{align}
-										\label{b2a1}
-										\sum_{i=0}^N \mu_i (t^2u)^{p^i} &= t^{2p^r}\sum_{i=0}^N \mu_i u^{p^i}.
-										\end{align}
+Now combining (\ref{t:b2a_3}) and (\ref{p:b2a_1}) yields
+\begin{align}
+\label{b2a1}
+\sum_{i=0}^N \mu_i (t^2u)^{p^i} &= t^{2p^r}\sum_{i=0}^N \mu_i u^{p^i}.
+\end{align}
 
-										If $p_3$ is not the zero polynomial then there is a non-zero $\mu_l$ for some index $l$. By equating the coefficients of $u$ in (\ref{b2a1}) we get
-										\begin{align*}
-										\mu_lt^{2p^l} &= \mu_lt^{2p^r} \\
-											\Longrightarrow\quad p^l &= p^r.
-											\end{align*}
-											Therefore $l=r$. This means that the only non-zero $\mu_i$ is already specified by the choice of $r$ in defining $\rho_r$. 
+If $p_3$ is not the zero polynomial then there is a non-zero $\mu_l$ for some index $l$. By equating the coefficients of $u$ in (\ref{b2a1}) we get
+\begin{align*}
+\mu_lt^{2p^l} &= \mu_lt^{2p^r} \\
+\Longrightarrow\quad p^l &= p^r.
+\end{align*}
+Therefore $l=r$. This means that the only non-zero $\mu_i$ is already specified by the choice of $r$ in defining $\rho_r$. 
 
-											Letting $\mu_l = \mu$ in $k$, we have
-											\begin{align*}
-	\sigma\left(
-			\left(\begin{matrix} a & b \\ 0 & a^{-1}\end{matrix}\right)
-			\right) &=
-	\sigma\left(
-			\left(\begin{matrix} a & 0 \\ 0 & a^{-1}\end{matrix}\right)
-			\left(\begin{matrix} 1 & a^{-1}b \\ 0 & 1\end{matrix}\right)
-			\right) \\
-		&=
-	\sigma\left(
-			\left(\begin{matrix} a & 0 \\ 0 & a^{-1}\end{matrix}\right)
-			\right) +
-	\left(\begin{matrix} a & 0 \\ 0 & a^{-1}\end{matrix}\right) \cdot
-	\sigma\left(
-			\left(\begin{matrix} 1 & a^{-1}b \\ 0 & 1\end{matrix}\right)
-			\right) \\
-		&=
-		\left(\begin{matrix} a & 0 \\ 0 & a^{-1}\end{matrix}\right) \cdot
-		\left(\begin{matrix} 0 \\ 0 \\ \mu(a^{-1}b)^{p^{r}}\end{matrix}\right) \\
-			&=
-			\left(\begin{matrix} 0 \\ 0 \\ \mu(ab)^{p^{r}}\end{matrix}\right).
-			\end{align*}
+Letting $\mu_l = \mu$ in $k$, we have
+\begin{align*}
+\sigma\left(
+\left(\begin{matrix} a & b \\ 0 & a^{-1}\end{matrix}\right)
+\right) &=
+\sigma\left(
+\left(\begin{matrix} a & 0 \\ 0 & a^{-1}\end{matrix}\right)
+\left(\begin{matrix} 1 & a^{-1}b \\ 0 & 1\end{matrix}\right)
+\right) \\
+&=
+\sigma\left(
+\left(\begin{matrix} a & 0 \\ 0 & a^{-1}\end{matrix}\right)
+\right) +
+\left(\begin{matrix} a & 0 \\ 0 & a^{-1}\end{matrix}\right) \cdot
+\sigma\left(
+\left(\begin{matrix} 1 & a^{-1}b \\ 0 & 1\end{matrix}\right)
+\right) \\
+&=
+\left(\begin{matrix} a & 0 \\ 0 & a^{-1}\end{matrix}\right) \cdot
+\left(\begin{matrix} 0 \\ 0 \\ \mu(a^{-1}b)^{p^{r}}\end{matrix}\right) \\
+&=
+\left(\begin{matrix} 0 \\ 0 \\ \mu(ab)^{p^{r}}\end{matrix}\right).
+\end{align*}
 
-			If we are to find a non-trivial 1-cohomology $H^1(SL_2, V)$ then $\sigma$ cannot be a 1-coboundary. But if the characteristic of $k$, $p$, is not equal to $2$ then by setting $\mathbf{v}$ in $V$ as
-			\begin{align*}
-			\mathbf{v} &= \left(\begin{matrix} 0 \\ \mu2^{-1} \\ 0 \end{matrix}\right),
-			\end{align*}
-			we get for all $a$ in $k^*$ and all $b$ in $k$
-			\begin{align*}
-	\chi_v\left(
-			\left(\begin{matrix}a & b \\ 0 & a^{-1}\end{matrix}\right)
-			\right) &=
-	\mathbf{v}-\left(\begin{matrix}a & b \\ 0 & a^{-1}\end{matrix}\right)\cdot \mathbf{v} \\
-		&=
-		\left(\begin{matrix} 0 \\ \mu2^{-1} \\ 0 \end{matrix}\right) - 
+If we are to find a non-trivial 1-cohomology $H^1(SL_2, V)$ then $\sigma$ cannot be a 1-coboundary. But if the characteristic of $k$, $p$, is not equal to $2$ then by setting $\mathbf{v}$ in $V$ as
+\begin{align*}
+\mathbf{v} &= \left(\begin{matrix} 0 \\ \mu2^{-1} \\ 0 \end{matrix}\right),
+\end{align*}
+we get for all $a$ in $k^*$ and all $b$ in $k$
+\begin{align*}
+\chi_v\left(
+\left(\begin{matrix}a & b \\ 0 & a^{-1}\end{matrix}\right)
+\right) &=
+\mathbf{v}-\left(\begin{matrix}a & b \\ 0 & a^{-1}\end{matrix}\right)\cdot \mathbf{v} \\
+&=
+\left(\begin{matrix} 0 \\ \mu2^{-1} \\ 0 \end{matrix}\right) - 
 \left(\begin{matrix} 0 \\ \mu2^{-1}\ \\ -\mu(ab)^{p^r} \end{matrix}\right)
-	\\
-		&=
-		\left(\begin{matrix} 0 \\ 0 \\ \mu(ab)^{p^r} \end{matrix}\right) \\
-			&=
-	\sigma\left(
-			\left(\begin{matrix} a & b \\ 0 & a^{-1}\end{matrix}\right)
-			\right).
-	\end{align*}
+\\
+&=
+\left(\begin{matrix} 0 \\ 0 \\ \mu(ab)^{p^r} \end{matrix}\right) \\
+&=
+\sigma\left(
+\left(\begin{matrix} a & b \\ 0 & a^{-1}\end{matrix}\right)
+\right).
+\end{align*}
 	That is, $\sigma$ takes the value of a 1-coboundary on the subgroup of upper triangular matrices of $SL_2$. In view of Lemma \ref{lem:a_h_restriction} this means that $\sigma$ is a 1-coboundary from the whole of $SL_2 \rightarrow V$, and hence the 1-cohomology $H^1(SL_2, V)$ is trivial. Therefore it is necessary to proceed with $p=2$:
 	\begin{align}
 	\label{b2a:b}
