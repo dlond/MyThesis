@@ -519,7 +519,7 @@ This shows $H^1(\zeta)$ is injective.
 \end{proof}
 
 \begin{remark}
-TODO: Borel $B < SL_2$, $U = R_u(B)$, $SL_2$ acts on unipotent $V$ $\Rightarrow$ $H^1(B, V) \rightarrow H^1(U, V)$ is injective. Not sure if it's true, but would imply $H^1(SL_2, V) \rightarrow H^1(U, V)$ is injective. Then apply main theorem of CH4.
+It may be true that the above Example holds for unipotent $V$. In the Lemma below we show that the restriction map $H^1(SL_2(k), V) \rightarrow  H^1(B, V)$ is injective, where $B$ is a Borel subgroup of $SL_2(k)$. Then in Lemma \ref{lem:first}, and Examples \ref{g2:alpha} and \ref{c3:alpha}, we show that for certain $G$, if $x\in H^1(SL_2(k), V)$ then there exists $\beta\in Z^1(SL_2(k), V)$ such that $\beta\left(B\right)$ lies in an abelian subgroup of $V$. The hope is that it is enough that the \emph{image} in $V$ is abelian to be able to show $H^1(B, V)\rightarrow H^1(U_2(k), V)$ is injective.
 \end{remark}
 
 \begin{lemma} Let $V$ be an algebraic group, and suppose $SL_2(k)$ acts on $V$ by group automorphisms. Let $B$ be a Borel subgroup of $SL_2(k)$ and let $\zeta: B \rightarrow SL_2(k)$ be the inclusion map. Then $H^1(\zeta): H^1(SL_2(k), V)\rightarrow H^1(B, V)$ is injective.
@@ -540,8 +540,8 @@ where $\pi$ is the canonical projection $\pi:SL_2 \rightarrow SL_2/B$ (\cite[TOD
 Since $SL_2(k)/B$ is an irreducible projective variety \cite[Theorem 21.3]{humphreys1975linear}, $\widehat{\beta}$ must be constant. Therefore, since $\beta(x) = 1$ for all $x \in B$, $\beta(x) = \widehat{\beta}(xB) = 1$ for all $x \in SL_2(k)$. Hence $\beta = \chi^{SL_2(k)}_1 \in B^1(SL_2(k), V)$ and so $\mathrm{Ker}\left(H^1(\zeta)\right)$ is trivial.
 \end{proof} 
 
-\begin{lemma}\label{trivial_on_t} Suppose $V$ is unipotent and let $x \in H^1(SL_2(k), V)$. Then there exists $\beta \in Z^1(SL_2(k), V)$ such that $x = \psi(\beta)$ and $\beta\left(\begin{matrix}* & 0\\0 & *\end{matrix}\right) = 1$.
+\begin{lemma}\label{trivial_on_t} Suppose $V$ is unipotent and let $x \in H^1(SL_2(k), V)$. Then there exists $\beta \in Z^1(SL_2(k), V)$ such that $x = \psi(\beta)$ and $\beta\left(D_2(k)\right) = 1$.
 \end{lemma}
 \begin{proof}
-	Denote $D_2(k) = \left(\begin{matrix}* & 0\\0 & *\end{matrix}\right)$, and let $\zeta:D_2(k) \rightarrow SL_2(k)$ be the inclusion map. Since $D_2(k)$ is linearly reductive, $H^1(D_2(k), V)$ is trivial (Lemma \ref{lem:nonab_lin_red}), so $\mathrm{Ker}\left(H^1(\zeta)\right) = H^1(SL_2(k), V)$. Now apply Lemma \ref{kerh1}.
+	Let $\zeta:D_2(k) \rightarrow SL_2(k)$ be the inclusion map. Since $D_2(k)$ is linearly reductive, $H^1(D_2(k), V)$ is trivial (Lemma \ref{lem:nonab_lin_red}), so $\mathrm{Ker}\left(H^1(\zeta)\right) = H^1(SL_2(k), V)$. Now apply Lemma \ref{kerh1}.
 \end{proof}
