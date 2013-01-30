@@ -40,16 +40,11 @@ That is $\rho_r = \rho_0 \circ F_r$ and satisfies
 \rho_r \left(\begin{matrix} 1 & 0 \\ u & 1 \end{matrix} \right) &= \epsilon_{-\alpha}(u^{p^r}).
 \end{align*}
 
-We have an action of $SL_2(k)$ on $V_\alpha$ defined by
+Now we have an action of $SL_2(k)$ on $V_\alpha$ defined by
 \begin{align*}
 	y \cdot v = \rho_r(y)v\rho_r(y^{-1}),
 \end{align*}
-for $y \in SL_2(k), v \in V_\alpha$.
-
-We set out to find the general form of a 1-cocycle $\tau \in Z^1(SL_2(k), V_\alpha)_{\rho_r}$. Then we can apply the canonical projection $\psi:Z^1(SL_2(k), V_\alpha)_{\rho_r} \rightarrow H^1(SL_2(k), V_\alpha)_{\rho_r}$ to calculate the 1-cohomology.
-By Lemma \ref{trivial_on_t}, there exists $\sigma \in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\psi(\tau) = \psi(\sigma)$ and $\sigma\left(\begin{matrix}* & 0\\0 & *\end{matrix}\right) = 1$, so we do no harm to find the general form of $\sigma$ instead.
-
-By \cite[Theorem 26.3(c)]{humphreys1975linear}
+for $y \in SL_2(k), v \in V_\alpha$. By \cite[Theorem 26.3(c)]{humphreys1975linear}
 \begin{align}
 	\label{eqn:t_act}
 	\left(\begin{matrix} t & 0 \\ 0 & t^{-1}\end{matrix}\right) \cdot \prod_{\delta\in\Phi^+-\{\alpha\}} \epsilon_\delta (\lambda_\delta) &=
@@ -59,6 +54,9 @@ By \cite[Theorem 26.3(c)]{humphreys1975linear}
 	\prod_{\delta\in\Phi^+-\{\alpha\}} n_\alpha \epsilon_\delta \left( \lambda_\delta\right)\, n_\alpha^{-1},
 \end{align}
 for all $t \in k^*, \lambda_\delta \in k$, where $n_\alpha = \epsilon_\alpha(1)\epsilon_{-\alpha}(-1)\epsilon_\alpha(1)$.
+
+We set out to find the general form of a 1-cocycle $\tau \in Z^1(SL_2(k), V_\alpha)_{\rho_r}$. Then we can apply the canonical projection $\psi:Z^1(SL_2(k), V_\alpha)_{\rho_r} \rightarrow H^1(SL_2(k), V_\alpha)_{\rho_r}$ to calculate the 1-cohomology.
+By Lemma \ref{trivial_on_t}, there exists $\sigma \in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\psi(\tau) = \psi(\sigma)$ and $\sigma\left(y\right) = 1$ for all $y\in T_2(k)$. Hence we may restrict ourselves to 1-cocycles of this form. As a starting point, we have the following Proposition.
 
 \begin{proposition} \label{claim1}
 \begin{align*}
@@ -73,12 +71,12 @@ for all $t \in k^*, u\in k$.
 \begin{proof}
 Let $\delta \in \Phi^+-\{\alpha\}$. We have the chain of morphisms
 \begin{align*}
-k\simeq \left(\begin{matrix}1 & * \\ 0 & 1\end{matrix}\right)
+k\simeq U_2(k) 
 \stackrel{\iota}\longrightarrow SL_2(k) 
 \stackrel{\sigma}\longrightarrow V_\alpha 
 \stackrel{\pi_\delta}\longrightarrow k,
 \end{align*}
-where $\iota$ is the inclusion map and $\pi_\delta$ the projection onto the root subgroup $U_\delta$. Hence  $x_\delta = \pi_\delta\, \circ\, \sigma\, \circ\, \iota$ is a morphism from $k \rightarrow k$.
+where $\iota$ is the inclusion map and $\pi_\delta$ is the projection onto the root subgroup $U_\delta$. Hence  $x_\delta = \pi_\delta\, \circ\, \sigma\, \circ\, \iota$ is a morphism from $k \rightarrow k$.
 
 We apply $\sigma$ to the identity
 \begin{align*}
@@ -157,11 +155,11 @@ t & 0 \\ 0 & t^{-1}
 \end{align*}
 So by Equation \ref{eqn:t_act}, $x_\delta\left(t^2u\right) = t^{\langle \delta, \alpha \rangle p^r} x_\delta\left(u\right)$, as claimed.
 
-Since $x_\delta$ is a polynomial function there can only be non-negative powers of $t$ on the left-hand side of the equality which forces $\langle \delta, \alpha \rangle \geq 0$. However, if $\langle \delta, \alpha \rangle = 0$ then $x_\delta$ is constant and hence zero, as $\sigma\left(\begin{matrix} * & 0 \\ 0 & *\end{matrix}\right) = 1$. Therefore the non-zero $x_\delta$ occur only when $\langle \delta, \alpha \rangle > 0$.
+Since $x_\delta$ is a polynomial function there can only be non-negative powers of $t$ on the left-hand side of the equality which forces $\langle \delta, \alpha \rangle \geq 0$. However, if $\langle \delta, \alpha \rangle = 0$ then $x_\delta$ is constant and hence zero, as $\sigma\left(y\right) = 1$ for $y\in T_2(k)$ implies that $x_\delta(0)=0$. Therefore the non-zero $x_\delta$ occur only when $\langle \delta, \alpha \rangle > 0$.
 \end{proof}
 
 \begin{proposition}\label{imb:imu}
-The images of $\left(\begin{matrix}1 & *\\0 & 1\end{matrix}\right)$ and $\left(\begin{matrix}* & *\\0 & *\end{matrix}\right)$ under $\sigma$ are equal.
+The images of $U_2(k)$ and $B_2(k)$ under $\sigma$ are equal.
 \end{proposition}
 \begin{proof}
 	Let $a\in k^*, b\in k$. Since
@@ -180,7 +178,7 @@ we get
 	\right)\\
 	&= \left(\begin{matrix}a & 0\\0 & a^{-1}\end{matrix}\right) \cdot
 	\sigma\left(\begin{matrix}1 & a^{-1}b\\0 & 1\end{matrix}\right) \\
-	&\subset \sigma\left(\begin{matrix}1 & *\\0 & 1\end{matrix}\right)\quad(\textrm{by Equation \ref{eqn:t_act}}).
+	&\subset \sigma\left(U_2(k)\right)\quad(\textrm{by Equation \ref{eqn:t_act}}).
 \end{align*}
 The reverse inclusion is obvious.
 \end{proof}
@@ -247,8 +245,8 @@ This shows that Proposition \ref{uabelian} breaks down when $\Phi$ contains $C_3
 
 \begin{lemma}[First Main Lemma]\label{lem:first} Suppose $\Phi$ does not contain $G_2$ or $C_3$. Then
 \begin{itemize}
-\item[(i)] $\left(\begin{matrix} 1 & * \\ 0 & 1\end{matrix}\right) \cdot \sigma\left(\begin{matrix} 1 & u \\ 0 & 1\end{matrix}\right) = \sigma\left(\begin{matrix} 1 & u \\ 0 & 1\end{matrix}\right)$, for all $u\in k$, and
-\item[(ii)] $\sigma\left(\begin{matrix} * & * \\ 0 & *\end{matrix}\right)$ lies in a product of commuting root groups of $V_\alpha$.
+\item[(i)] $y_1 \cdot \sigma(y_2) = \sigma(y_2)$, for all $y_1, y_2\in U_2(k)$, and
+\item[(ii)] $\sigma\left(B_2(k)\right)$ lies in a product of commuting root groups of $V_\alpha$.
 \end{itemize}
 \end{lemma}
 \begin{proof}
@@ -264,52 +262,51 @@ where $\mathcal{D}=\{\delta \in \Phi -\{\alpha\} \,|\,\langle \delta, \alpha \ra
 
 Let $\delta \in \mathcal{D}$. Since $\langle \delta, \alpha \rangle > 0$, $\alpha + \delta$ is not a root (Proposition \ref{ufixes}), so $U_\alpha$ commutes with $U_\delta$. This proves (i).
 
-Let $\delta_1, \delta_2 \in \mathcal{D}$. Since $\langle \delta_i, \alpha \rangle > 0$ $(i=1,2)$, $\delta_1 + \delta_2$ is not a root (Proposition \ref{uabelian}), so $U_{\delta_1}$ and $U_{\delta_2}$ commute. Therefore $\sigma\left(\begin{matrix}1 & * \\ 0 & 1\end{matrix}\right)$ lies in a product of commuting root groups, so $\sigma\left(\begin{matrix}* & *\\0 & *\end{matrix}\right)$ lies in a product of commuting root groups (Proposition \ref{imb:imu}).
+Let $\delta_1, \delta_2 \in \mathcal{D}$. Since $\langle \delta_i, \alpha \rangle > 0$ $(i=1,2)$, $\delta_1 + \delta_2$ is not a root (Proposition \ref{uabelian}), so $U_{\delta_1}$ and $U_{\delta_2}$ commute. Therefore $\sigma\left(U_2(k)\right)$ lies in a product of commuting root groups, so $\sigma\left(B_2(k)\right)$ lies in a product of commuting root groups (Proposition \ref{imb:imu}).
 \end{proof}
 
 \begin{lemma}[Second Main Lemma]\label{lem:second}
-Suppose that
+Let $\sigma\in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\sigma(y) = 1$ for all $y\in T_2(k)$ and suppose
 \begin{itemize}
-	\item[(i)] $\left(\begin{matrix}1 & *\\0 & 1\end{matrix}\right)\cdot \sigma\left(\begin{matrix}1 & u\\0 & 1\end{matrix}\right) = \sigma\left(\begin{matrix}1 & u\\0 & 1\end{matrix}\right)$, for all $u \in k$, and
-	\item[(ii)] $\sigma\left(\begin{matrix}1 & *\\0 & 1\end{matrix}\right)$ lies in a product of commuting root groups of $V_\alpha$.
+	\item[(i)] $y_1 \cdot \sigma\left(y_2\right) = \sigma\left(y_2\right)$, for all $y_1,y_2 \in U_2(k)$, and
+	\item[(ii)] $\sigma\left(U_2(k)\right)$ lies in a product of commuting root groups of $V_\alpha$.
 \end{itemize}
-Then 
+Then for all $a\in k^*, b\in k$, there exist $\mu_\delta\in k$ such that
 \begin{align*}
-\sigma\left(\begin{matrix}* & *\\0 & *\end{matrix}\right) \subset
-	\left\{ \begin{array}{ll}
-		\langle U_\delta \,|\, \delta \in \Phi^+ - \{\alpha\}, \langle \delta, \alpha \rangle = 1\textrm{ or }2\rangle, & \textrm{if } p = 2 \\ \\
-		\langle U_\delta \,|\, \delta \in \Phi^+ - \{\alpha\}, \langle \delta, \alpha \rangle = 2 \rangle, & \textrm{otherwise}.
-	\end{array}\right.
+\sigma\left(\begin{matrix}a & b\\0 & a^{-1}\end{matrix}\right) = \prod_{\delta\in\mathcal{D}} \epsilon_\delta\left(a^{(\langle\delta,\alpha\rangle p^r - n(\delta))}b^{n(\delta)}\mu_\delta\right)
 \end{align*}
-Furthermore, there exists $\mu_\delta \in k$ such that
+where $n(\delta) = p^{r-2+\langle\delta,\alpha\rangle}$, and $\mathcal{D}$ is defined by
 \begin{align*}
-	x_\delta(\lambda) = 
-	\left\{ \begin{array}{ll}
-		\mu_\delta\lambda^{2^{r - 2 + \langle \delta, \alpha \rangle}}, & \textrm{if } p = 2\\ \\
-		\mu_\delta\lambda^{p^r}, & \textrm{otherwise}.
+	\mathcal{D} = \left\{ \begin{array}{ll}
+		\{\delta \in \Phi^+ - \{\alpha\}\,|\, \langle \delta, \alpha \rangle = 1\textrm{ or }2\}, & \textrm{if } p = 2 \\ \\
+		\{\delta \in \Phi^+ - \{\alpha\}\,|\, \langle \delta, \alpha \rangle = 2\}, & \textrm{otherwise},
 	\end{array}\right.
 \end{align*}
 \end{lemma}
 \begin{proof}
-We apply $\sigma$ to both sides of the identity
+We apply $\sigma$ to both sides of the equation
 \begin{align*}
 	\left(\begin{matrix} 1 & u_1 + u_2 \\ 0 & 1 \end{matrix}\right) = 
 	\left(\begin{matrix} 1 & u_1 \\ 0 & 1 \end{matrix}\right)
 	\left(\begin{matrix} 1 & u_2 \\ 0 & 1 \end{matrix}\right),
 \end{align*}
-to yield
-\begin{align*}
+to get 
+\begin{align}
 \sigma\left(\begin{matrix} 1 & u_1 + u_2 \\ 0 & 1 \end{matrix}\right) &=
 	\left(\sigma\left(\begin{matrix} 1 & u_1 \\ 0 & 1 \end{matrix}\right)\right)
-	\left(\left(\begin{matrix} 1 & u_1 \\ 0 & 1 \end{matrix}\right)\cdot\sigma\left(\begin{matrix} 1 & u_2 \\ 0 & 1 \end{matrix}\right)\right) \\ &=
+	\left(\left(\begin{matrix} 1 & u_1 \\ 0 & 1 \end{matrix}\right)\cdot\sigma\left(\begin{matrix} 1 & u_2 \\ 0 & 1 \end{matrix}\right)\right)\nonumber \\ &=
 	\sigma\left(\begin{matrix} 1 & u_1 \\ 0 & 1 \end{matrix}\right)
-	\sigma\left(\begin{matrix} 1 & u_2 \\ 0 & 1 \end{matrix}\right)\quad(\textrm{by (i)}).
+	\sigma\left(\begin{matrix} 1 & u_2 \\ 0 & 1 \end{matrix}\right)\quad(\textrm{by (i)}) \label{xdelta_homs}.
+\end{align}
+By Proposition \ref{claim1} there exist polynomials $x_\delta$ such that
+\begin{align*}
+	\sigma\left(\begin{matrix}1 & u\\0 & 1\end{matrix}\right) = \prod_{\delta\in\mathcal{D}} \epsilon_\delta\left(x_\delta(u)\right).
 \end{align*}
-Therefore
+Applying Equation \ref{xdelta_homs} yields
 \begin{align*}
 	\prod_{\delta\in\mathcal{D}} \epsilon_\delta(x_\delta(u_1 + u_2)) &= 
 	\prod_{\delta\in\mathcal{D}} \epsilon_\delta(x_\delta(u_1))
-	\prod_{\delta\in\mathcal{D}} \epsilon_\delta(x_\delta(u_2))\quad(\textrm{Proposition \ref{claim1}}) \\
+	\prod_{\delta\in\mathcal{D}} \epsilon_\delta(x_\delta(u_2)) \\
 	&= \prod_{\delta\in\mathcal{D}} \epsilon_\delta(x_\delta(u_1))\epsilon_\delta(x_\delta(u_2))\quad(\textrm{by (ii)}) \\
 	&= \prod_{\delta\in\mathcal{D}} \epsilon_\delta(x_\delta(u_1) + x_\delta(u_2)).
 \end{align*}
@@ -317,7 +314,7 @@ Hence each $x_\delta$ is an additive polynomial, so it is of the form
 \begin{align*}
 	x_\delta(\lambda) = \sum_{i=0}^n \mu_i\lambda^{p^i}\quad(\textrm{\cite[\S 20.3, Lemma A]{humphreys1975linear}}).
 \end{align*}
-Then by Equation \ref{eqn:x}
+Then by Equation \ref{eqn:x} of Proposition \ref{claim1}
 \begin{align*}
 	\sum_{i=0}^n \mu_i(t^2u)^{p^i} = t^{\langle \delta, \alpha \rangle p^r}\sum_{i = 0}^n\mu_i u^{p^i},
 \end{align*}
@@ -335,27 +332,33 @@ In \cite[\S 3.4]{carter1989simple} it is shown that the possible pairings of any
 &p=2, \quad \langle \delta, \alpha \rangle = 1, \quad j = r - 1, \\
 &p\geq 2, \quad \langle \delta, \alpha \rangle = 2, \quad j = r.
 \end{align*}
-This shows that it is only possible for $x_\delta$ to have one nonzero term, either the $(r-1)^{th}$ or the $r^{th}$ depending on whether $\langle \delta, \alpha \rangle = 1$ or $2$, respectively. Furthermore, the $(r-1)^{th}$ term is zero if $p \neq 2$. In summary
-\begin{align}\label{x_loose}
-	x_\delta(\lambda) = \left\{\begin{array}{ll}
-		\mu_\delta \lambda^{2^{r-1}}, & \textrm{if }p=2\textrm{ and }\langle \delta, \alpha \rangle = 1, \\ \\
-		\mu_\delta \lambda^{p^{r}}, & \textrm{if }p\geq 2\textrm{ and }\langle \delta, \alpha \rangle = 2.
-	\end{array}\right.
-\end{align}
-for all $\lambda\in k$, for some fixed $u_\delta\in k$. Therefore 
+This shows that it is only possible for $x_\delta$ to have one nonzero term, either the $(r-1)^{th}$ or the $r^{th}$ depending on whether $\langle \delta, \alpha \rangle = 1$ or $2$, respectively. Furthermore, the $(r-1)^{th}$ term is zero if $p \neq 2$.
+
+Let $\mu_\delta = \mu_j$ and let $n(\delta) = p^{r-2+\langle\delta,\alpha\rangle}$, so that
 \begin{align*}
-	\sigma\left(\begin{matrix}* & *\\0 & *\end{matrix}\right) &\subset
-		\left\{\begin{array}{ll}
-			\langle U_\delta \,|\, \delta \in \Phi^+, \langle \delta, \alpha\rangle = 1\textrm{ or }2\rangle,&\textrm{if }p = 2, \\ \\
-			\langle U_\delta \,|\, \delta \in \Phi^+, \langle \delta, \alpha\rangle = 2\rangle,&\textrm{otherwise},
+	\sigma\left(\begin{matrix}1 & u\\0 & 1\end{matrix}\right) = \prod_{\delta\in\mathcal{D}'} \epsilon_\delta\left(u^{n(\delta)}\mu_\delta\right),
+\end{align*}
+where
+\begin{align*}
+		\mathcal{D}' = \left\{\begin{array}{ll}
+			\{\delta \in \Phi^+ \,|\, \langle \delta, \alpha\rangle = 1\textrm{ or }2\},&\textrm{if }p = 2, \\ \\
+			\{\delta \in \Phi^+ \,|\, \langle \delta, \alpha\rangle = 2\},&\textrm{otherwise},
 		\end{array}\right.
 \end{align*}
-as claimed. We rewrite Equation \ref{x_loose} for completeness.
+
+Furthermore
 \begin{align*}
-	x_\delta(\lambda) = \left\{\begin{array}{ll}
-		\mu_\delta \lambda^{2^{r-2+\langle \delta, \alpha\rangle}}, &\textrm{if }p = 2, \\ \\
-		\mu_\delta \lambda^{p^r}, &\textrm{otherwise}.
-	\end{array}\right.
+\sigma\left(\begin{matrix}a & b\\0 & a^{-1}\end{matrix}\right) &=
+\sigma\left(\begin{matrix}a & 0\\0 & a^{-1}\end{matrix}\right)\left(
+\left(\begin{matrix}a & 0\\0 & a^{-1}\end{matrix}\right)\cdot
+\sigma\left(\begin{matrix}1 & a^{-1}b\\0 & 1\end{matrix}\right)\right) \\ &=
+\left(\begin{matrix}a & 0\\0 & a^{-1}\end{matrix}\right)\cdot
+\sigma\left(\begin{matrix}1 & a^{-1}b\\0 & 1\end{matrix}\right) \\
+&=
+\left(\begin{matrix}a & 0\\0 & a^{-1}\end{matrix}\right)\cdot
+\prod_{\delta\in\mathcal{D}'} \epsilon_\delta\left((a^{-1}b)^{n(\delta)}\mu_\delta\right)\\
+&=\prod_{\delta\in\mathcal{D}'} \epsilon_\delta\left(a^{\langle\delta,\alpha\rangle p^r} (a^{-1}b)^{n(\delta)}\mu_\delta\right)\quad(\textrm{Equation \ref{eqn:t_act}})\\
+&= \prod_{\delta\in\mathcal{D}'} \epsilon_\delta\left(a^{(\langle\delta,\alpha\rangle p^r - n(\delta))} b^{n(\delta)} \mu_\delta\right).
 \end{align*}
 This completes the proof.
 \end{proof}
@@ -363,25 +366,29 @@ This completes the proof.
 \section{Discussion} \label{ch5_discussion}
 
 In the next Chapter we investigate the counterexamples to Propositions \ref{ufixes} and \ref{uabelian} in the respective Remarks \ref{g2counter} and \ref{c3counter} by deriving the form of $\sigma\in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ for the appropriate simple roots $\alpha\in\Delta$. This is carried out in Sections \ref{g2:alpha} and \ref{c3:alpha}, respectively. We show that $\sigma$ still satisfies Lemma \ref{lem:second}. This gives some evidence for the following Conjecture.
-\begin{conjecture}\label{bigclaim} Let $G$ be a reductive group, $P_\alpha$ a minimal parabolic subgroup of $G$ with unipotent radical $V_\alpha$. Let $x \in H^1(SL_2(k), V_\alpha)_{\rho_r}$. Then there exists $\sigma \in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\psi(\sigma) = x$ and
+\begin{conjecture}\label{bigclaim} Let $G$ be a reductive group, $P_\alpha$ a minimal parabolic subgroup of $G$ with unipotent radical $V_\alpha$. Let $x \in H^1(SL_2(k), V_\alpha)_{\rho_r}$. Then there exists $\sigma \in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\psi(\sigma) = x$. Furthermore, for all $a\in k^*, b\in k$
 \begin{align*}
-	\sigma\left(\begin{matrix}* & * \\0 & *\end{matrix}\right) \subset
+	\sigma\left(\begin{matrix}a & b \\0 & a^{-1}\end{matrix}\right) = \prod_{\delta\in\mathcal{D}} \epsilon_\delta\left(a^{\langle\delta,\alpha\rangle p^r}x_\delta(a^{-1}b)\right),
+\end{align*}
+where $\mathcal{D}$ is defined by
+\begin{align*}
+\mathcal{D} = 
 		\left\{\begin{array}{ll}
-			\langle U_\delta \,|\, \delta \in \Phi^+ - \{\alpha\}, \langle \delta, \alpha \rangle = 1\textrm{ or }2\rangle, & \textrm{if }p = 2,\\ \\
-			\langle U_\delta \,|\, \delta \in \Phi^+ - \{\alpha\}, \langle \delta, \alpha \rangle = 2\rangle, & \textrm{otherwise}.
+			\{\delta \in \Phi^+ \,|\, \langle \delta, \alpha \rangle = 1\textrm{ or }2\}, & \textrm{if }p = 2,\\ \\
+			\{\delta \in \Phi^+ \,|\, \langle \delta, \alpha \rangle = 2\}, & \textrm{otherwise},
 		\end{array}\right.
 \end{align*}
-Moreover, the root groups on the right commute with each other. Furthermore, there exists $\mu_\delta \in k$ such that for all $u \in k$
+and $x_\delta$ is defined by
 \begin{align*}
-	\sigma\left(\begin{matrix}1 & u\\0 & 1\end{matrix}\right) = 
+x_\delta(\lambda) = 
 		\left\{\begin{array}{ll}
-			\prod_\delta \epsilon_\delta\left(\mu_\delta^{2{r-2+\langle \delta, \alpha\rangle}} \right), & \textrm{if }p = 2,\\ \\
-			\prod_\delta \epsilon_\delta\left(\mu_\delta^{p^r} \right), & \textrm{otherwise}.
+			\mu_\delta \lambda^{2{r-2+\langle \delta, \alpha\rangle}}, & \textrm{if }p = 2,\\ \\
+			\mu_\delta \lambda^{p^r}, & \textrm{otherwise}.
 		\end{array}\right.
 \end{align*}
 \end{conjecture}
 
-If the above ask Conjecture is true, it would be worthwhile to see whether it can be extended to parabolic subgroups $P_I$, $I\subset \Delta$ of higher rank. This would be useful for further 1-cohomology calculations following the method we employ in the next Chapter.
+If the above ask Conjecture is true, it would be worthwhile to see whether it can be extended to all parabolic subgroups $P_I$, $I\subset \Delta$ of $G$. This would be useful for further 1-cohomology calculations following the method we employ in the next Chapter.
 
 Furthermore, in view of Example \ref{ab_example}, it may be possible to show that the restriction map
 \begin{align*}
