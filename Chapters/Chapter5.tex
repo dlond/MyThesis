@@ -271,7 +271,7 @@ Let $\sigma\in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\sigma(y) = 1$ for al
 	\item[(i)] $y_1 \cdot \sigma\left(y_2\right) = \sigma\left(y_2\right)$, for all $y_1,y_2 \in U_2(k)$, and
 	\item[(ii)] $\sigma\left(U_2(k)\right)$ lies in a product of commuting root groups of $V_\alpha$.
 \end{itemize}
-Then for all $a\in k^*, b\in k$, there exist $\mu_\delta\in k$ such that
+Then there exist $\mu_\delta\in k$ such that for all $a\in k^*$ and all $b\in k$
 \begin{align*}
 \sigma\left(\begin{matrix}a & b\\0 & a^{-1}\end{matrix}\right) = \prod_{\delta\in\mathcal{D}} \epsilon_\delta\left(a^{(\langle\delta,\alpha\rangle p^r - n(\delta))}b^{n(\delta)}\mu_\delta\right)
 \end{align*}
@@ -279,7 +279,7 @@ where $n(\delta) = p^{r-2+\langle\delta,\alpha\rangle}$, and $\mathcal{D}$ is de
 \begin{align*}
 	\mathcal{D} = \left\{ \begin{array}{ll}
 		\{\delta \in \Phi^+ - \{\alpha\}\,|\, \langle \delta, \alpha \rangle = 1\textrm{ or }2\}, & \textrm{if } p = 2 \\ \\
-		\{\delta \in \Phi^+ - \{\alpha\}\,|\, \langle \delta, \alpha \rangle = 2\}, & \textrm{otherwise},
+		\{\delta \in \Phi^+ - \{\alpha\}\,|\, \langle \delta, \alpha \rangle = 2\}, & \textrm{otherwise}.
 	\end{array}\right.
 \end{align*}
 \end{lemma}
@@ -362,28 +362,30 @@ Furthermore
 \end{align*}
 This completes the proof.
 \end{proof}
+\begin{remark}\label{sigmaneg}
+We have $\sigma\left(\begin{matrix}-a & -b\\0 & -a^{-1}\end{matrix}\right) = \sigma\left(\begin{matrix}a & b\\0 & a^{-1}\end{matrix}\right)$. For suppose $p>2$, then
+\begin{align*}
+	\sigma\left(\begin{matrix}-a & -b\\0 & -a^{-1}\end{matrix}\right) &= \prod_{\delta\in\mathcal{D}} \epsilon_\delta\left((-a)^{2p^r - p^r}(-b)^{p^r}\mu_\delta \right) \\
+	&= \prod_{\delta\in\mathcal{D}} \epsilon_\delta\left((-a)^{p^r}(-b)^{p^r}\mu_\delta \right) \\
+	&= \prod_{\delta\in\mathcal{D}} \epsilon_\delta\left((ab)^{p^r}\mu_\delta \right) \\
+	&=\sigma\left(\begin{matrix}a & b\\0 & a^{-1}\end{matrix}\right).
+\end{align*}
+Furthermore, by replacing $\alpha$ with $-\alpha$, the above Lemma determines $\sigma\left(\begin{matrix}a & 0\\c & a^{1}\end{matrix}\right)$.
+\end{remark}
 
 \section{Discussion} \label{ch5_discussion}
 
 In the next Chapter we investigate the counterexamples to Propositions \ref{ufixes} and \ref{uabelian} in the respective Remarks \ref{g2counter} and \ref{c3counter} by deriving the form of $\sigma\in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ for the appropriate simple roots $\alpha\in\Delta$. This is carried out in Sections \ref{g2:alpha} and \ref{c3:alpha}, respectively. We show that $\sigma$ still satisfies Lemma \ref{lem:second}. This gives some evidence for the following Conjecture.
-\begin{conjecture}\label{bigclaim} Let $G$ be a reductive group, $P_\alpha$ a minimal parabolic subgroup of $G$ with unipotent radical $V_\alpha$. Let $x \in H^1(SL_2(k), V_\alpha)_{\rho_r}$. Then there exists $\sigma \in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\psi(\sigma) = x$. Furthermore, for all $a\in k^*, b\in k$
+\begin{conjecture}\label{bigclaim} Let $G$ be a reductive group, $P_\alpha$ a minimal parabolic subgroup of $G$ with unipotent radical $V_\alpha$. Let $x \in H^1(SL_2(k), V_\alpha)_{\rho_r}$. Then there exists $\sigma \in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\psi(\sigma) = x$. Furthermore, there exist $\mu_\delta\in k$ such that for all $a\in k^*$, $b\in k$
 \begin{align*}
-	\sigma\left(\begin{matrix}a & b \\0 & a^{-1}\end{matrix}\right) = \prod_{\delta\in\mathcal{D}} \epsilon_\delta\left(a^{\langle\delta,\alpha\rangle p^r}x_\delta(a^{-1}b)\right),
+	\sigma\left(\begin{matrix}a & b \\0 & a^{-1}\end{matrix}\right) = \prod_{\delta\in\mathcal{D}} \epsilon_\delta\left(a^{(\langle\delta,\alpha\rangle p^r -n(\delta))}b^{n(\delta)}\mu_\delta\right),
 \end{align*}
-where $\mathcal{D}$ is defined by
+where $n(\delta)=p^{r-2+\langle\delta,\alpha\rangle}$, and $\mathcal{D}$ is defined by
 \begin{align*}
 \mathcal{D} = 
 		\left\{\begin{array}{ll}
 			\{\delta \in \Phi^+ \,|\, \langle \delta, \alpha \rangle = 1\textrm{ or }2\}, & \textrm{if }p = 2,\\ \\
-			\{\delta \in \Phi^+ \,|\, \langle \delta, \alpha \rangle = 2\}, & \textrm{otherwise},
-		\end{array}\right.
-\end{align*}
-and $x_\delta$ is defined by
-\begin{align*}
-x_\delta(\lambda) = 
-		\left\{\begin{array}{ll}
-			\mu_\delta \lambda^{2{r-2+\langle \delta, \alpha\rangle}}, & \textrm{if }p = 2,\\ \\
-			\mu_\delta \lambda^{p^r}, & \textrm{otherwise}.
+			\{\delta \in \Phi^+ \,|\, \langle \delta, \alpha \rangle = 2\}, & \textrm{otherwise}.
 		\end{array}\right.
 \end{align*}
 \end{conjecture}
