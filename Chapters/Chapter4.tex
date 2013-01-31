@@ -16,10 +16,14 @@ Generally speaking, we will be concerned with homomorphisms from $K$ to $G$. Whe
 
 For example, K\"ulshammer's second question as originally stated concerns $G$-conjugacy classes in $\mathrm{Hom}(\Gamma, G)$ and $\mathrm{Hom}(\Gamma_p, G)$, where $\Gamma_p$ is a Sylow $p$-subgroup of $\Gamma$.
 
-A consequence of the following Theorem \cite[Theorem 1.2]{martin2003reductive} is that if there is a counterexample to K\"ulshammer's second question for some connected reductive $G$, then since $\mathrm{Hom}(\Gamma, G)$ must contain infinitely many $G$-conjugacy classes, it must contain infinitely many $G$-conjugacy classes of non-$G$-completely reducible homomorphisms.
+A consequence of the following Theorem  is that if there is a counterexample to K\"ulshammer's second question for some connected reductive $G$, then since $\mathrm{Hom}(\Gamma, G)$ must contain infinitely many $G$-conjugacy classes, it must contain infinitely many $G$-conjugacy classes of non-$G$-completely reducible homomorphisms.
 
 \begin{theorem} \label{thm:finiteGCR} There are only finitely many $G$-conjugacy classes of $G$-completely reducible homomorphisms from $\Gamma$ to $G$.
 \end{theorem}
+\begin{proof}
+\cite[Theorem 1.2]{martin2003reductive}
+\end{proof}
+
 Let $G$ be a connected reductive algebraic group over an algebraically closed field $k$ with $\mathrm{char}(k) = p$. Let $P$ be a parabolic subgroup of $G$, with Levi subgroup $L$ and unipotent radical $V$. We have $P = V \rtimes L$, and we denote by $\pi^L$ the canonical projection
 \begin{align*} \pi^L:P \rightarrow L. \end{align*}
 
@@ -28,7 +32,7 @@ Since $L$ normalizes $V$ we have an action by group automorphisms of $L$ on $V$ 
 for $l \in L, v \in V$.
 
 
-The following general result shows that finiteness of $G$-conjugacy classes of $\mathrm{Hom}(K, P)$ carries over to $P$-conjugacy classes. 
+The following general result allows us to replace $G$-conjugacy with $P$-conjugacy.
 \begin{lemma} Let $R \subset \mathrm{Hom}(K, P)$. Then $R$ is contained in a finite union of $G$-conjugacy classes if and only if it is contained in a finite union of $P$-conjugacy classes.
   \label{lem:GPconj}
 \end{lemma}
@@ -60,7 +64,7 @@ for all $x \in K$.
 		\rho(x) &= g^{-1} \tau(x) g\\
 		&= (q'n^{-1}) \tau(x) nq'^{-1},
 	\end{align*}
-	for all $x \in K$.
+	for all $x \in K$. Hence $\rho\in P\cdot(n^{-1}\cdot \tau)$.
 	This shows 
 	%\begin{align*}
 	%	R \cap \left(G\cdot \tau \right) \subset \bigcup_{n \in N} P \cdot(n^{-1} \cdot \tau).
@@ -157,7 +161,7 @@ In fact, we show that $z$ descends to give a bijection from $\mathrm{Hom}(K, P)_
 \begin{lemma} \label{maph}
 For $\rho \in \mathrm{Hom}(K, P)_\sigma$, define
 \begin{align*}
-h(\phi( \rho)) = \psi(z)(\rho).
+h(\phi( \rho)) = \psi(z(\rho)).
 \end{align*}
 Then $h$ is a well-defined bijection from $\mathrm{Hom}(K, P)_\sigma / V$ to $H^1(K, P)_\sigma$. Moreover, the following diagram commutes:
   \begin{align*}
@@ -185,19 +189,20 @@ This shows that $z(\rho)$ and $z(\tau)$ satisfy the equivalence relation in Equa
 
 Since $z$ and $\psi$ are onto, $h$ is onto. We show $h$ is one-to-one.
 
-Let $\alpha, \beta \in Z^1(K, V)_\sigma$ such that $\psi(\alpha) = \psi(\beta)$. Then there exists $v \in V$ such that
+Let $\rho, \tau\in \mathrm{Hom}(K, P)_\sigma$ such that $h(\phi(\rho)) = h(\phi(\tau))$. Then $\psi(z(\rho)) = \psi(z(\tau))$.
+Let $\alpha = z(\rho), \beta = z(\tau) \in Z^1(K, V)_\sigma$. Then there exists $v \in V$ such that
 \begin{align*} \beta(x) = v \alpha(x) \left(x \cdot v^{-1}\right), \end{align*}
 for all $x \in K$. Then
 \begin{align*}
-z^{-1}(\beta)(x) 
+\tau(x) 
 &= \beta(x)\sigma(x) \\
 &= v \alpha(x) \left(x \cdot v^{-1}\right) \sigma(x) \\
 &= v \alpha(x) \sigma(x) v^{-1} \sigma(x^{-1}) \sigma(x) \\
 &= v \alpha(x) \sigma(x) v^{-1} \\
-&= v z^{-1}(\alpha)(x) v^{-1},
+&= v \rho(x) v^{-1} \\
+&= (v \cdot \rho)(x),
 \end{align*}
-for all $x \in K$.
-This shows that $\phi\left(z^{-1}(\alpha)\right) = \phi\left(z^{-1}(\beta)\right)$ and therefore $h$ is one-to-one. This completes the proof.
+for all $x \in K$. Hence $\tau = v\cdot \rho$ and therefore $\phi\left(\rho\right) = \phi\left(\tau\right)$. This shows $h$ is one-to-one.
 \end{proof}
 
 Let $q \in P$, and let $v \in V, l \in L$ such that $q = vl$. We can conjugate $\rho \in \mathrm{Hom}(K, P)_\sigma$ by $q$ to yield an element of $\mathrm{Hom}(K, P)_{l \cdot \sigma}$. For
@@ -208,13 +213,12 @@ Let $q \in P$, and let $v \in V, l \in L$ such that $q = vl$. We can conjugate $
 \end{align*}
 for all $x \in K$, so $q \cdot \rho \in \mathrm{Hom}(K, P)_{l\cdot \sigma}$.
 
-Using Definition \ref{h1sigma}, we can define $Z^1(K, V)_{l \cdot \sigma}$ to be the collection of 1-cocycles from $K$ to $V$ where $K$ acts on $V$ via $l \cdot \sigma$. The formula for the action is then given by
+Recall from Definition \ref{h1sigma} that $Z^1(K, V)_{l \cdot \sigma}$ is the collection of 1-cocycles from $K$ to $V$ where $K$ acts on $V$ via $l \cdot \sigma$. The formula for the action is then given by
 \begin{align*}
 	x.v = l \sigma(x) l^{-1} v l \sigma(x^{-1}) l^{-1},
 \end{align*}
-for all $x \in K, v \in V$. Evidently $Z^1(K, V)_{l \cdot \sigma} = z\left(\mathrm{Hom}(K, P)_{l \cdot \sigma}\right)$. The reason for the new notation for the action above will become apparent presently, as we show that we have a map of 1-cohomomologies $H^1(K, V)_\sigma$ to $H^1(K, V)_{l \cdot \sigma}$.
-
-	We show that we can apply Lemma \ref{h1maps}. To this end, let $K' = K$, $V' = V$ and let $\zeta = \mathrm{id}:K \rightarrow K$.
+for all $x \in K, v \in V$. Evidently $Z^1(K, V)_{l \cdot \sigma} = z\left(\mathrm{Hom}(K, P)_{l \cdot \sigma}\right)$. 
+We show that we can apply Lemma \ref{h1maps} to get a map of 1-cohomomologies $H^1(K, V)_\sigma$ to $H^1(K, V)_{l \cdot \sigma}$. To this end, let $K' = K$, $V' = V$ and let $\zeta = \mathrm{id}:K \rightarrow K$.
 
 Let $\xi = \xi_l: V \rightarrow V'$ be defined by	$\xi_l(v) = lvl^{-1}$ for all $v \in V$. Now we show that $\xi_l$ satisfies condition (d) of the Lemma. Let $x \in K, v \in V$. Then
 	\begin{align*}
@@ -240,13 +244,13 @@ Let $\xi = \xi_l: V \rightarrow V'$ be defined by	$\xi_l(v) = lvl^{-1}$ for all 
 	for all $\alpha \in Z^1(K, V)_\sigma$,
 	where $\psi'$ is the canonical projection from $Z^1(K, V)_{l \cdot \sigma}$ to $H^1(K, V)_{l \cdot \sigma}$.
 
-	Evidently, if $l \in C_L\left(\sigma(K)\right)$ then $\mathrm{Hom}(K, P)_\sigma$ is stable under conjugation by $vl$ and $H^1(\zeta, \xi_l)$ maps $H^1(K, V)_{\sigma}$ into itself.
+	Evidently, if $l \in C_L\left(\sigma(K)\right)$ and $v\in V$ then $\mathrm{Hom}(K, P)_\sigma$ is stable under conjugation by $vl$ and $H^1(\zeta, \xi_l)$ maps $H^1(K, V)_{\sigma}$ into itself.
 
 	\begin{lemma}\label{lem:vcl} We have an action of $C_L(\sigma(K))$ on $\mathrm{Hom}(K, V)_\sigma / V$ defined by
 		\begin{align} \label{vcl.hom}
 			c \cdot \phi(\rho) = \phi\left(\xi_c \circ \rho \right),
 		\end{align}
-		for $c \in C_L(\sigma(K)), \rho \in \mathrm{Hom}(K, V)_\sigma, x \in K$.
+		for $c \in C_L(\sigma(K)), \rho \in \mathrm{Hom}(K, V)_\sigma$.
 		
 		Similarly, we have an action of $C_L(\sigma(K))$ on $H^1(K, V)_\sigma$ defined by
 		\begin{align} \label{cl.h1}
@@ -260,6 +264,9 @@ Let $\xi = \xi_l: V \rightarrow V'$ be defined by	$\xi_l(v) = lvl^{-1}$ for all 
 		h(c\cdot\phi(\rho)) = c \cdot h(\phi(\rho)).
 	\end{align}
 	\end{lemma}
+\begin{remark}
+ Note that $\xi_l \circ \rho = l \cdot \rho$, where the action on the right is the usual conjugation action of $G$ on $\mathrm{Hom}(K, G)$.
+\end{remark}
 \begin{proof}
 	First we show Equation \ref{vcl.hom} defines a well-defined map. Let $\rho, \tau \in \mathrm{Hom}(K, V)_\sigma$ such that $\phi(\rho) = \phi(\tau)$. Then there exists $v \in V$ such that
 	\begin{align*} \tau(x) = v\rho(x)v^{-1}, \end{align*}
@@ -267,10 +274,9 @@ Let $\xi = \xi_l: V \rightarrow V'$ be defined by	$\xi_l(v) = lvl^{-1}$ for all 
 		\begin{align*}
 			c \tau(x)c^{-1}
 			&= cv \rho(x) v^{-1}c^{-1} \\
-			&= wc \rho(x) c^{-1}w^{-1} \\
-			&= c \rho(x) c^{-1},
+			&= wc \rho(x) c^{-1}w^{-1},
 		\end{align*}
-		for all $x \in K$. Therefore $\phi(\xi_c \circ \tau) = \phi(\xi_c \circ \rho)$ and hence the map defined by Equation \ref{vcl.hom} is well-defined. It is clear that the group action axioms are satisfied, so Equation \ref{vcl.hom} defines an action of $C_L(\sigma(K))$ on $\mathrm{Hom}(K, P)_\sigma$.
+		for all $x \in K$. Therefore $c\cdot\tau = w\cdot(c\cdot\rho)$, that is $\xi_c \circ\tau = w\cdot(\xi_c\circ\rho)$. Hence $\phi(\xi_c \circ \tau) = \phi(\xi_c \circ \rho)$ which shows the map defined by Equation \ref{vcl.hom} is well-defined. Since $\xi_{c_1c_2} = \xi_{c_1} \circ \xi_{c_2}$, it is clear that the group action axioms are satisfied, so Equation \ref{vcl.hom} defines an action of $C_L(\sigma(K))$ on $\mathrm{Hom}(K, P)_\sigma/V$.
 
 		Equation \ref{cl.h1} is well-defined thanks to Lemma \ref{h1maps}. If $e$ is the identity element of $C_L(\sigma(K))$ then the map $H^1(\zeta, \xi_e) = \mathrm{id}:H^1(K, V)_\sigma \rightarrow H^1(K, V)_\sigma$. Finally, let $c_1, c_2 \in C_L(\sigma(K))$. Then
 		\begin{align}
@@ -289,13 +295,14 @@ Let $\xi = \xi_l: V \rightarrow V'$ be defined by	$\xi_l(v) = lvl^{-1}$ for all 
 		\begin{align*}
 			(z(\xi_c \circ \rho))(x) &= c\rho(x)c^{-1}\rho^L(x^{-1}) \\
 				&= c\rho(x)\rho^L(x^{-1})c^{-1} \\
-				&= \left(\xi_c ( z(\rho))\right)(x),
+				&= \left(\xi_c ( z(\rho)(x))\right) \\
+				&= (\xi_c \circ z(\rho))(x),
 		\end{align*}
-		for all $x \in K$. Therefore $z\left(\xi_c \circ \rho\right) = \xi_c\left(z(\rho)\right)$, and so
+		for all $x \in K$. Therefore $z\left(\xi_c \circ \rho\right) = \xi_c\circ z(\rho)$, and so
 		\begin{align*}
 			h(c \cdot \phi(\rho)) &= h(\phi(\xi_c \circ \rho)) \\
 			&= \psi(z(\xi_c\circ\rho)) \\
-			&= \psi(\xi_c(z(\rho))) \\
+			&= \psi(\xi_c\circ z(\rho)) \\
 			&= \psi\left(Z^1(\zeta, \xi_c)(z(\rho))\right) \\
 			&= H^1(\zeta, \xi_c)(\psi(z(\rho))) \\
 			&= c \cdot \psi(z(\rho)) \\
@@ -348,26 +355,28 @@ Let $\rho, \tau \in \mathrm{Hom}(K, V)_\sigma$ such that $\Phi(\rho) = \Phi(\tau
 \end{align*}
 Hence $\widetilde{\psi}(h(\phi(\rho))) = \widetilde{\psi}(h(\phi(\tau)))$ and so $\widetilde{h}$ is well-defined.
 
-Let $\alpha, \beta \in Z^1(K, V)_\sigma$ such that $\Psi(\alpha) = \Psi(\beta)$. Then there exists $c \in C_L(\sigma)$ such that $\psi(\beta) = c \cdot \psi(\alpha)$, and since $h$ is a bijection, $h^{-1}(\psi(\beta)) = h^{-1}(c \cdot \psi(\alpha)) = c \cdot h^{-1}(\psi(\alpha))$. This shows $\widetilde{h}$ is injective. Since $h$ and $\widetilde{\psi}$ are surjective, $\widetilde{h}$ is surjective. Therefore $\widetilde{h}$ is a bijection.
+Now let $\rho, \tau\in \mathrm{Hom}(K, P)_\sigma$ such that $\widetilde{h}\left(\Phi(\rho)\right) = \widetilde{h}\left(\Phi(\tau)\right)$. Then $\widetilde{\psi}(h(\phi(\rho))) = \widetilde{\psi}(h(\phi(\tau)))$, so there exists $c\in C_L(\sigma)$ such that $h(\phi(\tau)) = c\cdot h(\phi(\rho)) = h(c\cdot\phi(\rho))$. Since $h$ is bijective, this means $\phi(\tau) = c\cdot\phi(\rho)$. Therefore $\Phi(\rho) = \Phi(\tau)$ and so $\widetilde{h}$ is injective. Since $h$ and $\widetilde{\psi}$ are surjective, $\widetilde{h}$ is surjective. Therefore $\widetilde{h}$ is bijective.
 \end{proof}
 
-\begin{lemma} Let $K' < K'$, let $\zeta$ the inclusion of $K'$ in $K$, and let $\xi$ be the identity map on $V$. Then the map $H^1(\zeta, \xi):H^1(K, V)_\sigma \rightarrow H^1(K', V)_{\sigma\circ\zeta}$ descends to give a well-defined map
+\begin{lemma} Let $K' < K'$, let $\zeta$ the inclusion of $K'$ in $K$, and let $\xi$ be the identity map on $V$. Then the map $H^1(\zeta):H^1(K, V)_\sigma \rightarrow H^1(K', V)_{\sigma\circ\zeta}$ descends to give a well-defined map
 	\begin{align*}
-		\widetilde{H^1}(\zeta, \xi): H^1(K, V)_\sigma/C_L(\sigma) \rightarrow H^1(K', V)_{\sigma\circ\zeta}/C_L(\sigma\circ \zeta),
+		\widetilde{H^1}(\zeta): H^1(K, V)_\sigma/C_L(\sigma) \rightarrow H^1(K', V)_{\sigma\circ\zeta}/C_L(\sigma\circ \zeta),
 	\end{align*}
 defined by
 	\begin{align*}
-		\widetilde{H^1}(\zeta, \xi)(\Psi(\alpha)) = \widetilde{\psi'}\left(H^1(\zeta, \xi)(\psi(\alpha))\right).
+		\widetilde{H^1}(\zeta)(\Psi(\alpha)) = \widetilde{\psi'}\left(H^1(\zeta)(\psi(\alpha))\right),
 	\end{align*}
+for all $\alpha\in Z^1(K, V)_\sigma$.
 Moreover, the following diagram commutes:
   \begin{align*}
     \xymatrix@C=60pt{
-		H^1(K, V)_\sigma \ar[r]^{H^1(\zeta, \xi)} \ar[d]_{\widetilde{\psi}} & H^1(K', V)_{\sigma\circ\zeta} \ar[d]^{\widetilde{\psi'}} \\
-		H^1(K, V)_\sigma/C_L(\sigma) \ar[r]^{\widetilde{H^1}(\zeta, \xi)} & {H^1(K', V)_{\sigma\circ\zeta}/C_L(\sigma\circ\zeta)}.
+		H^1(K, V)_\sigma \ar[r]^{H^1(\zeta)} \ar[d]_{\widetilde{\psi}} & H^1(K', V)_{\sigma\circ\zeta} \ar[d]^{\widetilde{\psi'}} \\
+		H^1(K, V)_\sigma/C_L(\sigma) \ar[r]^{\widetilde{H^1}(\zeta)} & {H^1(K', V)_{\sigma\circ\zeta}/C_L(\sigma\circ\zeta)}.
     }
   \end{align*}
 \end{lemma}
 \begin{proof}
+Since $C_L(\sigma) < C_L(\sigma\circ\zeta)$, $C_L(\sigma)$ acts on $H^1(K', V)_{\sigma\circ\zeta}$. 
 	Let $\alpha, \beta \in Z^1(K, V)_\sigma$ such that $\Psi(\alpha) = \Psi(\beta)$. Then there exists $c \in C_L(\sigma)$ such that $\psi(\beta) = c \cdot \psi(\alpha)$. Since $H^1(K, V)_\sigma \subset H^1(K', V)_\sigma$ and $C_L(\sigma) < C_L(\sigma\circ\zeta)$, we have
 	\begin{align*}
 		H^1(\zeta, \xi)\left(\psi(\beta)\right) = c \cdot H^1(\zeta, \xi)\left(\psi(\beta)\right),
@@ -389,7 +398,7 @@ Moreover, the following diagram commutes:
 	More generally, if $R = P \cdot R$ then $R^L = L \cdot R^L$.
 \end{lemma}
 \begin{proof}
-	Let $\rho \in R$. Let $q \in P, v \in V, l \in L$ such that $q = vl$. Since $q\cdot\rho \in R$, and
+	Let $\rho \in R$. Let $q \in P$, so there exist $v \in V, l \in L$ such that $q = vl$. Since $q\cdot\rho \in R$, and
 	\begin{align*}
 		(q \cdot \rho)^L(x) &= (q\rho(x)q^{-1})^L \\
 			&= (vl\rho(x)l^{-1}v^{-1})^L \\
@@ -399,11 +408,10 @@ Moreover, the following diagram commutes:
 	then $(q \cdot \rho)^L = l \cdot \rho^L \in R^L$. This shows $R^L \subset L \cdot R^L$. Conversely, let $l \in L$. Then $l \cdot \rho \in R$, so $(l \cdot \rho)^L = l\cdot \rho^L \in R^L$. Therefore $L\cdot R^L \subset R^L$ and so $R^L = L \cdot R^L$.
 \end{proof}
 
-\begin{lemma} \label{rsigma:vcl} Let $R \subset \mathrm{Hom}(K, P)$ and suppose that $R = P \cdot R$. Then for all $\sigma \in \mathrm{Hom}(K, L)$,
+\begin{lemma} \label{rsigma:vcl} Let $R \subset \mathrm{Hom}(K, P)$ and suppose that $R = P \cdot R$. Then for all $\sigma \in \mathrm{Hom}(K, L)$, all $\rho\in R_\sigma$
 	\begin{align*}
-		R_\sigma \cap P \cdot \rho = \left(VC_L(\sigma)\right) \cdot \rho,
+		R_\sigma \cap P \cdot \rho = \left(VC_L(\sigma)\right) \cdot \rho.
 	\end{align*}
-	for all $\rho \in R_\sigma$.
 \end{lemma}
 \begin{proof}
 	Let $\sigma \in \mathrm{Hom}(K, L)$ and choose $\rho \in R_\sigma$. Suppose there exists $q \in P$ such that $q \cdot \rho \in R_\sigma$, and let $v \in V, l \in L$ such that $q = vl$. Then
@@ -422,7 +430,7 @@ Moreover, the following diagram commutes:
 		\item[(ii)] for each $\sigma \in \mathrm{Hom}(K, L)$, $(\widetilde{h} \circ \Phi)(R_\sigma)$ is finite in $H^1(K, V)_\sigma/C_L(\sigma)$.
 	\end{itemize}
 \end{theorem}
-\begin{remark} Conditions (i) and (ii) are equivalent to 
+\begin{remark} By Lemma \ref{} $R^L$ is a finite union of $L$-conjugacy classes. Furthermore, conditions (i) and (ii) are equivalent to 
 	\begin{itemize}
 		\item[(i$'$)] $R_\sigma = \emptyset$ for all but finitely many $L$-conjugacy classes of $\sigma \in \mathrm{Hom}(K, L)$, and
 		\item[(ii$'$)] for each $\sigma \in \mathrm{Hom}(\Gamma, L)$, $R_\sigma$ is a finite union of $VC_L(\sigma)$-conjugacy classes,
@@ -463,14 +471,14 @@ Now let $\rho \in R$. By (i) there exists a finite set $\mathcal{S} \subset \mat
 R^L = \bigcup_{\tau \in \mathcal{S}} L \cdot \tau.
 \end{align*}
 
-Then there exists $l \in L$, $\tau \in \mathcal{S}$ such that $\rho^L = l \cdot \tau$. Hence $l^{-1} \cdot \rho^L = \tau$, so $\rho \in L \cdot R_\tau$. This shows that $R$ is contained in a finite union of $P$-conjugacy classes. The reverse inclusion is satisfied since $R = P \cdot R$, and this completes the proof.
+Then there exists $l \in L$, $\tau \in \mathcal{S}$ such that $\rho^L = l \cdot \tau$. Hence $l^{-1} \cdot \rho^L = \tau$, so $\rho \in L \cdot R_\tau$. Since $R_\tau$ is contained in a finite union of $P$-conjugacy classes, this shows that $R$ is contained in a finite union of $P$-conjugacy classes. Therefore, since $R=P\cdot R$, $R$ is a finite union of $P$-conjugacy classes.
 \end{proof}
 
 \begin{definition} \label{main_cd} Let $K' < K$ and let $\zeta$ be the inclusion of $K'$ in $K$. Define the maps
 	\begin{align*}
 		\mathcal{Z}(\zeta):&\mathrm{Hom}(K, P)_\sigma \rightarrow \mathrm{Hom}(K', P)_{\sigma\circ\zeta}, \\
 		\mathcal{H}(\zeta):&\mathrm{Hom}(K, P)_\sigma/V \rightarrow \mathrm{Hom}(K', P)_{\sigma\circ\zeta}/V, \\
-		\widetilde{\mathcal{H}}(\zeta):&\mathrm{Hom}(K, P)_\sigma/VC_L(\sigma) \rightarrow \mathrm{Hom}(K', P)_{\sigma\circ\zeta}/VC_L(\sigma\circ\zeta,
+		\widetilde{\mathcal{H}}(\zeta):&\mathrm{Hom}(K, P)_\sigma/VC_L(\sigma) \rightarrow \mathrm{Hom}(K', P)_{\sigma\circ\zeta}/VC_L(\sigma\circ\zeta),
 	\end{align*}
 	by
 	\begin{align*}
@@ -500,7 +508,7 @@ The situation thus far is summarised by the following commutative diagram.
 	}%
 \end{definition}
 
-We are now ready to state the main Theorem.
+We are now ready to state the main Theorem of this Chapter.
 
 \begin{theorem}\label{main_thm} Let $K'<K$, let $\zeta$ be the inclusion of $K'$ in $K$, and let $\xi$ be the identity map on $V$. Let $R \subset \mathrm{Hom}(K, P)$ such that $R = P \cdot R$, and let $S = \mathcal{Z}(\zeta)(R)$. Suppose
 	\begin{itemize}
@@ -536,9 +544,9 @@ Therefore
 		&= (\widetilde{h'} \circ \Phi')\left(\mathcal{Z}(\zeta)(R_\sigma)\right) \\
 		&\subset (\widetilde{h'} \circ \Phi')(S_{\sigma\circ\zeta}).
 \end{align*}
-Then $\left(\widetilde{H^1}(\zeta) \circ \widetilde{h} \circ \Phi\right)(R_\sigma)$ is finite by (v), and
+Then $\left(\widetilde{h'} \circ \Phi'\right)(S_{\sigma\circ\zeta})$ is finite by (v), and
 \begin{align*}
-	\widetilde{H^1}(\zeta)^{-1} \left(\widetilde{H^1}(\zeta) \circ \widetilde{h} \circ \Phi\right)(R_\sigma) \supset (\widetilde{h} \circ \Phi)(R_\sigma),
+	(\widetilde{h} \circ \Phi)(R_\sigma) \subset \widetilde{H^1}(\zeta)^{-1} \left(\left(\widetilde{H^1}(\zeta) \circ \widetilde{h} \circ \Phi\right)(R_\sigma)\right),
 \end{align*}
 is finite by (ii).
 
@@ -546,8 +554,8 @@ Therefore $(\widetilde{h} \circ \Phi)(R_\sigma)$ is finite in any case. Together
 \end{proof}
 
 \section{A Non-Reductive Counterexample}
-In \cite{slodowy1997two} a counterexample to K\"ulshammer's second question is presented for a closed field $k$ of characteristic $p = 2$ and a non-reductive algebraic group.
-\begin{example} Let $Q$ be the algebraic group isomorphic to the affine space $\mathbf{A}^3$ with the group multiplication law:
+In \cite[Appendix]{slodowy1997two}, Cram shows a counterexample to K\"ulshammer's second question using a non-reductive algebraic group over an algebraically closed field of characteristic $p=2$.
+\begin{example}\emph{(Cram \cite[Appendix]{slodowy1997two})} Let $Q$ be the algebraic group isomorphic to the affine space $\mathbf{A}^3$ with the group multiplication law:
 \begin{align*}
 	\left(\begin{matrix} u_1 \\ u_2 \\ u_3 \end{matrix}\right) \times
 	\left(\begin{matrix} v_1 \\ v_2 \\ v_3 \end{matrix}\right) &=
@@ -560,7 +568,7 @@ Let $F = \langle \sigma, \tau | \sigma^3 = \tau^2 = 1, \tau\sigma\tau = \sigma^2
 	\sigma \cdot \left(\begin{matrix} u_1 \\ u_2 \\ u_3 \end{matrix} \right) &=
 	\left(\begin{matrix} u_2 \\ u_1 + u_2 \\ u_3 \end{matrix} \right).
 \end{align*}
-Let $G = Q \rtimes F$ and fix the representation $\rho:F_2 \rightarrow G$ defined by the natural inclusion $F_2 \rightarrow F \rightarrow G$. Then there are infinitely many pairwise $G$-conjugate classes of extensions of $\rho$ to representations of $F$ in $G$ \cite[Appendix]{slodowy1997two}.
+Let $G = Q \rtimes F$ and fix the representation $\rho:F_2 \rightarrow G$ defined by the natural inclusion $F_2 \rightarrow F \rightarrow G$. Then there are infinitely many distinct $G$-conjugate classes of extensions of $\rho$ to representations of $F$ in $G$.
 \label{eg:non_red}
 \end{example}
 Motivated by Theorem \ref{main_thm}, we examine the counterexample via the 1-cohomology. Note however that the results in this Chapter are stated for reductive $G$, so they cannot be applied directly.
