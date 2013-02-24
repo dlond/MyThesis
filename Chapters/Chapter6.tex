@@ -21,10 +21,9 @@ For each $\alpha \in \Delta$ (the simple roots)
 			\left(\begin{matrix}-c & -d\\0 & -c^{-1}\end{matrix}\right)
 			\right).
 	\end{align*}
-	\item[5.] Show $\sigma$ satisfies the 1-cocycle condition using the Steinberg relations. (This may involve setting some $\mu_\delta=0$).
+	\item[5.] Show $\sigma$ satisfies the 1-cocycle condition.
 	\item[6.] Calculate $H^1(SL_2(k), V_\alpha)_{\sigma_r}$.
-	\item[7.] Calculate $H^1(SL_2(k), V_\alpha)_{\sigma_r}/C_L(\sigma_r)$.
-	\item[8.] Use Theorem \ref{main_thm} to get information about conjugacy classes in $\mathrm{Hom}(SL_2(k), P_\alpha)$.
+	\item[7.] Calculate $H^1(SL_2(k), V_\alpha)_{\sigma_r}/C_L(\sigma_r)$ and use Theorem \ref{main_thm} to get information about conjugacy classes in $\mathrm{Hom}(SL_2(k), P_\alpha)$.
 	\end{itemize}
 We elaborate on step 4. If $c\neq 0$ then
 \begin{align}\label{fullsigma}
@@ -36,38 +35,74 @@ We elaborate on step 4. If $c\neq 0$ then
 		\left(\begin{matrix}-c & -d\\0 & -c^{-1}\end{matrix}\right)
 	\right) \nonumber \\
 	&=
-	\sigma\left(\begin{matrix}1 & ac^{-1}\\0 & 1\end{matrix}\right)\left(
+	\sigma\left(\begin{matrix}1 & ac^{-1}\\0 & 1\end{matrix}\right)\left[
 		\left(\begin{matrix}1 & ac^{-1}\\0 & 1\end{matrix}\right)\cdot
 	\sigma\left(
 		\left(\begin{matrix}0 & 1\\-1 & 0\end{matrix}\right)
 		\left(\begin{matrix}-c & -d\\0 & -c^{-1}\end{matrix}\right)
 	\right)
-	\right)\nonumber \\
+	\right]\nonumber \\
 	&=
-	\sigma\left(\begin{matrix}1 & ac^{-1}\\0 & 1\end{matrix}\right)\left(
+	\sigma\left(\begin{matrix}1 & ac^{-1}\\0 & 1\end{matrix}\right)\left[
 		\left(\begin{matrix}1 & ac^{-1}\\0 & 1\end{matrix}\right)\cdot
-	\left(\sigma\left(\begin{matrix}0 & 1\\-1 & 0\end{matrix}\right)\left(
+	\left(\sigma
+		\left(\begin{matrix}0 & 1\\-1 & 0\end{matrix}\right)
+		\left[
 		\left(\begin{matrix}0 & 1\\-1 & 0\end{matrix}\right)\cdot
 		\sigma\left(\begin{matrix}-c & -d\\0 & -c^{-1}\end{matrix}\right)
+		\right]
 	\right)
-	\right)
-	\right)\nonumber \\
+	\right]\nonumber \\
 	&=
-	\sigma\left(\begin{matrix}1 & ac^{-1}\\0 & 1\end{matrix}\right)\left(
+	\sigma\left(\begin{matrix}1 & ac^{-1}\\0 & 1\end{matrix}\right)\left[
 		\left(\begin{matrix}1 & ac^{-1}\\0 & 1\end{matrix}\right)\cdot
-	\left(\sigma\left(\begin{matrix}0 & 1\\-1 & 0\end{matrix}\right)\left(
+	\left(\sigma
+		\left(\begin{matrix}0 & 1\\-1 & 0\end{matrix}\right)
+		\left[
 		\left(\begin{matrix}0 & 1\\-1 & 0\end{matrix}\right)\cdot
 		\sigma\left(\begin{matrix}c & d\\0 & c^{-1}\end{matrix}\right)
+		\right]
 	\right)
-	\right)
-	\right),
+	\right],
 \end{align}
-where we make use of Remark \ref{sigmaneg} at the last step. Therefore, to compute the value of the 1-cocycle on $SL_2(k)$, we need to know
+where we apply Corollary \ref{sigmaneg} at the last step.
+Therefore, to compute the value of the 1-cocycle on $SL_2(k)$, we need to know
 \begin{align*}
 	\sigma&\left(\begin{matrix}a & b\\0 & a^{-1}\end{matrix}\right),\qquad&\sigma&\left(\begin{matrix}0 & 1\\-1 & 0\end{matrix}\right),\\
-	&\left(\begin{matrix}1 & b\\0 & 1\end{matrix}\right)\cdot v,\qquad&&\left(\begin{matrix}0 & 1\\-1 & 0\end{matrix}\right)\cdot v,
+	&\left(\begin{matrix}1 & b\\0 & 1\end{matrix}\right)\cdot \mathbf{v},\qquad&&\left(\begin{matrix}0 & 1\\-1 & 0\end{matrix}\right)\cdot \mathbf{v},
 \end{align*}
-for arbitrary $v\in V_\alpha$, as well as the group law for $V_\alpha$. Determining the actions and the group law often involves lengthy computations using the commutator relations, while determining the values of $\sigma$ are straightforward. Lemma \ref{lem:second} gives the first, and the second is computed as follows. Since
+for arbitrary $\mathbf{v}\in V_\alpha$, as well as the group law for $V_\alpha$.
+
+Determining the actions and the group law often involves lengthy computations using the commutator relations. For clarity, we often use column vector notation.
+\begin{align*}
+\left(\begin{matrix}
+	v_{1}\\ v_{2}\\ \vdots\\ v_{n}
+\end{matrix}\right) = \epsilon_{\delta_1}(v_1)\epsilon_{\delta_2}(v_2)\cdots\epsilon_{\delta_n}(v_n) \in V_\alpha
+\end{align*}
+
+Determining the values of $\sigma$ are straightforward. Lemma \ref{lem:second} gives $\sigma\left(\begin{matrix}a & b \\ 0 & a^{-1}\end{matrix}\right)$ up to some constants $\mu_\delta\in k$, while $\sigma\left(\begin{matrix}0 & 1\\-1 & 0\end{matrix}\right)$ is computed as follows.
+\begin{proposition} \label{prop:A}
+Let $\sigma$ satisfy the hypotheses of Lemma \ref{lem:second}. Then there exist constants $\lambda_\delta\in k$ such that
+\begin{align}
+	\sigma\left(\begin{matrix}0 & 1 \\ -1 & 0\end{matrix}\right) &=
+	\sigma
+		\left(\begin{matrix} 1 & -1\\ 0 & 1\end{matrix}\right)
+	\left[
+		\left(\begin{matrix} 1 & -1\\ 0 & 1\end{matrix}\right)\cdot
+		\left(
+		\sigma
+		\left(\begin{matrix} 1 & 0\\ 1 & 1\end{matrix}\right)
+		\left[
+		\left(\begin{matrix} 1 & 0\\ 1 & 1\end{matrix}\right)\cdot
+		\sigma\left(\begin{matrix} 1 & -1\\ 0 & 1\end{matrix}\right)\right]
+		\right)
+	\right] \label{prop:A:eqn1}\\
+	&= \prod_{\delta\in\mathcal{D}} \epsilon_\delta(\lambda_\delta),\label{prop:A:eqn2}
+\end{align}
+where $\mathcal{D} = \{\delta\in \Phi^+-\{\alpha\}\,|\,\langle\delta,\alpha\rangle = 0\}$.
+\end{proposition}
+\begin{proof}
+Since
 \begin{align*}
 		\left(\begin{matrix}t & 0\\0 & t^{-1}\end{matrix}\right)
 		\left(\begin{matrix}0 & 1\\-1 & 0\end{matrix}\right) =
@@ -89,14 +124,60 @@ we have
 		\sigma\left(\begin{matrix}0 & 1\\-1 & 0\end{matrix}\right)
 	 &= 
 	\sigma
-		\left(\begin{matrix}0 & 1\\-1 & 0\end{matrix}\right),
+		\left(\begin{matrix}0 & 1\\-1 & 0\end{matrix}\right).
 \end{align*}
-and so $\sigma\left(\begin{matrix}0 & 1\\-1 & 0\end{matrix}\right) = \prod_{\delta\in\mathcal{D}} \epsilon_\delta(\lambda_\delta)$ for some $\lambda_\delta\in k$, where
+Therefore $\sigma\left(\begin{matrix}0 & 1\\ -1 & 0\end{matrix}\right)$ is fixed under the action of $T_2(k)$ and so is of the form
+\begin{align*}
+\sigma\left(\begin{matrix}0 & 1\\-1 & 0\end{matrix}\right) = \prod_{\delta\in\mathcal{D}} \epsilon_\delta(\lambda_\delta),
+\end{align*}
+for some $\lambda_\delta\in k$, where
 \begin{align*}
 	\mathcal{D} = \{\delta\in \Phi^+-\{\alpha\}\,|\,\langle\delta,\alpha\rangle = 0\}.
 \end{align*}
-
-
+Furthermore, since
+\begin{align*}
+\left(\begin{matrix} 0 & 1\\ -1 & 0\end{matrix}\right)
+&=
+\left(\begin{matrix} 1 & -1\\ 0 & 1\end{matrix}\right)
+\left(\begin{matrix} 1 & 0\\ 1 & 1\end{matrix}\right)
+\left(\begin{matrix} 1 & -1\\ 0 & 1\end{matrix}\right),
+\end{align*}
+we have
+\begin{align*}
+	\sigma
+		\left(\begin{matrix} 0 & 1\\ -1 & 0\end{matrix}\right)
+	&=
+	\sigma\left(
+		\left(\begin{matrix} 1 & -1\\ 0 & 1\end{matrix}\right)
+		\left(\begin{matrix} 1 & 0\\ 1 & 1\end{matrix}\right)
+		\left(\begin{matrix} 1 & -1\\ 0 & 1\end{matrix}\right)
+	\right) \\
+	&=
+	\sigma
+		\left(\begin{matrix} 1 & -1\\ 0 & 1\end{matrix}\right)
+	\left[
+		\left(\begin{matrix} 1 & -1\\ 0 & 1\end{matrix}\right)\cdot
+		\sigma
+		\left(
+		\left(\begin{matrix} 1 & 0\\ 1 & 1\end{matrix}\right)
+		\left(\begin{matrix} 1 & -1\\ 0 & 1\end{matrix}\right)
+		\right)
+	\right] \\
+	&=
+	\sigma
+		\left(\begin{matrix} 1 & -1\\ 0 & 1\end{matrix}\right)
+	\left[
+		\left(\begin{matrix} 1 & -1\\ 0 & 1\end{matrix}\right)\cdot
+		\left(
+		\sigma
+		\left(\begin{matrix} 1 & 0\\ 1 & 1\end{matrix}\right)
+		\left[
+		\left(\begin{matrix} 1 & 0\\ 1 & 1\end{matrix}\right)\cdot
+		\sigma\left(\begin{matrix} 1 & -1\\ 0 & 1\end{matrix}\right)\right]
+		\right)
+	\right].
+\end{align*}
+\end{proof}
 
 	In our last example calculation we use the 1-cohomology to find a family of maps from $SL_2(k)$ to $B_4$ which gives infinitely many conjugacy classes. TODO result \ldots
 
@@ -140,18 +221,11 @@ P_\beta &= R_u(P_\beta) \rtimes L_\beta \\
 \label{b2:alpha}
 
 Let $V_\alpha=R_u(P_\alpha)=\langle U_\beta, U_{\alpha + \beta}, U_{2\alpha + \beta} \rangle$, and let $x\in H^1(SL_2(k), V_\alpha)_{\rho_r}$. Note that $V_\alpha$ is abelian.
-
-By Proposition \ref{trivial_on_t} there exists $\sigma\in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\sigma(y) = 1$ for all $y\in T_2(k)$ and $\psi(\sigma) = x$. By Lemma \ref{lem:first}, we can apply Lemma \ref{lem:second}, which gives
-\begin{align*}
-	\sigma\left(\begin{matrix}a & b\\0 & a^{-1}\end{matrix}\right) &= \epsilon_{2\alpha+\beta}\left(\mu_3(ab)^{p^r}\right),
-\end{align*}
-for all $a\in k^*, b\in k$, for some fixed $\mu_3\in k$.
-
 We will write $\mathbf{v}\in V_\alpha$ as a column vector for convenience,
 \begin{align*}
-	\left(\begin{matrix}v_1\\v_2\\v_3\end{matrix}\right) = \epsilon_\beta(v_1)\epsilon_{\alpha+\beta}(v_2)\epsilon_{2\alpha+\beta}(v_3).
+	\left(\begin{matrix}v_1\\v_2\\v_3\end{matrix}\right) = \epsilon_\beta(v_1)\epsilon_{\alpha+\beta}(v_2)\epsilon_{2\alpha+\beta}(v_3),
 \end{align*}
-As pointed out earlier in the Chapter, we will need the following.
+and we compute the following.
 \begin{align*}
 \left(\begin{matrix} 1 & u \\ 0 & 1\end{matrix}\right) \cdot \mathbf{v} 
 &= 
@@ -166,7 +240,20 @@ As pointed out earlier in the Chapter, we will need the following.
 \epsilon_ \alpha (u^{p^r}) \epsilon_ \alpha (-u^{p^r})  \epsilon_ \beta (v_1) \epsilon_{\alpha+\beta}(-u^{p^r}v_1) \epsilon_{2\alpha+\beta}(u^{2p^r}v_1) \epsilon_{\alpha+\beta}(v_2) \epsilon_{2\alpha+\beta}(v_3-2u^{p^r}v_2)\\
 &=
 \epsilon_ \beta (v_1)  \epsilon_{\alpha+\beta}(v_2-u^{p^r}v_1) \epsilon_{2\alpha+\beta}(v_3-2u^{p^r}v_2 + u^{2p^r}v_1)\\
-&= \left(\begin{matrix} v_1 \\ v_2-u^{p^r}v_1 \\ v_3-2u^{p^r}v_2 + u^{2p^r}v_1 \end{matrix}\right) \\
+&= \left(\begin{matrix} v_1 \\ v_2-u^{p^r}v_1 \\ v_3-2u^{p^r}v_2 + u^{2p^r}v_1 \end{matrix}\right),
+\end{align*}
+\begin{align*}
+\left(\begin{matrix} t & 0 \\ 0 & t^{-1}\end{matrix}\right) \cdot \mathbf{v}
+&=
+\rho_r\left(\begin{matrix}t & 0 \\ 0 & t^{-1}\end{matrix}\right) \mathbf{v} \left(\rho_r\left(\begin{matrix}t & 0 \\ 0 & t^{-1}\end{matrix}\right)\right)^{-1} \\
+&=
+\alpha^\vee(t^{p^r})\epsilon_\beta(v_1)\epsilon_{\alpha+\beta}(v_2)\epsilon_{2\alpha+\beta}(v_3)\left(\alpha^\vee(t^{p^r})\right)^{-1} \\
+&=
+\epsilon_\beta\left(\beta(\alpha^\vee(t^{p^r}))v_1\right)\epsilon_{\alpha+\beta}\left((\alpha+\beta)(\alpha^\vee(t^{p^r}))v_2\right)\epsilon_{2\alpha+\beta}\left((2\alpha+\beta)(\alpha^\vee(t^{p^r}))v_3\right) \\
+&=
+\epsilon_\beta\left(t^{\langle\beta,\alpha\rangle p^r}v_1\right)\epsilon_{\alpha+\beta}\left(t^{\langle\alpha+\beta,\alpha\rangle p^r}v_2\right)\epsilon_{2\alpha+\beta}\left(t^{\langle2\alpha+\beta,\alpha\rangle p^r}v_3\right) \\
+&=
+\left(\begin{matrix} t^{-2p^r}v_1 \\ v_2 \\ t^{2p^r}v_3 \end{matrix}\right) \\
 \left(\begin{matrix} 0 & 1 \\ -1 & 0 \end{matrix}\right) \cdot \mathbf{v} 
 &=
 \rho_r\left(\begin{matrix} 0 & 1 \\ -1 & 0\end{matrix}\right) \mathbf{v}\left( \rho_r\left(\begin{matrix} 0 & 1 \\ -1 & 0\end{matrix}\right)\right)^{-1} \\
@@ -180,47 +267,125 @@ n_ \alpha  \epsilon_\beta (v_1) n_ \alpha^{-1}n_ \alpha \epsilon_{\alpha+\beta}(
 \epsilon_{\beta}(v_3) \epsilon_{\alpha+\beta}(-v_2) \epsilon_{2\alpha+\beta} (v_1)\\
 &= \left(\begin{matrix} v_3 \\ -v_2 \\ v_1 \end{matrix}\right).
 \end{align*}
+This is enough to determine the action of $SL_2(k)$ on $V_\alpha$. We leave the details to the reader.
+\begin{align*}
+\left(\begin{matrix}a & b \\ c & d\end{matrix}\right) \cdot \mathbf{v} 
+&= \left(\begin{matrix}
+	d^{2p^r}v_1 - 2(cd)^{p^r}v_2 + c^{2p^r}v_3 \\
+	(ad + bc)^{p^r}v_2 - (bd)^{p^r}v_1 - (ac)^{p^r}v_3 \\
+	b^{2p^r}v_1 - 2(ab)^{p^r}v_2 + a^{2p^r}v_3
+\end{matrix}\right)
+\end{align*}
 
-Suppose $p\neq 2$, and let $\mathbf{w} = \left(\begin{matrix}0\\2^{-1}\mu_3\\0\end{matrix}\right)\in V_\alpha$. Then consider $\chi^{SL_2(k)}_\mathbf{w} \in B^1(SL_2(k), V_\alpha)_{\rho_r}$.
+Let $x\in H^1(SL_2(k), V_\alpha)_{\rho_r}$. By Proposition \ref{trivial_on_t} there exists $\sigma\in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\sigma(y) = 1$ for all $y\in T_2(k)$ and $\psi(\sigma) = x$. By Lemma \ref{lem:first}, we can apply Lemma \ref{lem:second}, which gives
+\begin{align*}
+	\sigma\left(\begin{matrix}a & b\\0 & a^{-1}\end{matrix}\right) &= \epsilon_{2\alpha+\beta}\left(\mu_3(ab)^{p^r}\right),
+\end{align*}
+for all $a\in k^*, b\in k$, for some fixed $\mu_3\in k$.
+
+Suppose $p\neq 2$, and let $\mathbf{w} = \left(\begin{matrix}0\\2^{-1}\mu_3\\0\end{matrix}\right)\in V_\alpha$. Now consider $\chi^{SL_2(k)}_\mathbf{w} \in B^1(SL_2(k), V_\alpha)_{\rho_r}$.
 
 \begin{align*}
 	\chi^{SL_2(k)}_\mathbf{w}\left(\begin{matrix}a & b\\0 & a^{-1}\end{matrix}\right) &= \mathbf{w} - \left(\begin{matrix}a & b\\0 & a^{-1}\end{matrix}\right) \cdot \mathbf{w} \\
-	&=
-	\left(\begin{matrix}0\\2^{-1}\mu_3\\0\end{matrix}\right)
-	-\left(
-	\left(\begin{matrix}a & 0\\0 & a^{-1}\end{matrix}\right)
-	\left(\begin{matrix}1 & a^{-1}b\\0 & 1\end{matrix}\right)\cdot
-	\left(\begin{matrix}0\\2^{-1}\mu_3\\0\end{matrix}\right)
-	\right)\\
-	&=
-	\left(\begin{matrix}0\\2^{-1}\mu_3\\0\end{matrix}\right)
-	-
-	\left(\begin{matrix}a & 0\\0 & a^{-1}\end{matrix}\right)\cdot
-	\left(\begin{matrix}0\\2^{-1}\mu_3\\-2(a^{-1}b)^{p^r}2^{-1}\mu_3\end{matrix}\right) \\
+	%&=
+	%\left(\begin{matrix}0\\2^{-1}\mu_3\\0\end{matrix}\right)
+	%-\left(
+	%\left(\begin{matrix}a & 0\\0 & a^{-1}\end{matrix}\right)
+	%\left(\begin{matrix}1 & a^{-1}b\\0 & 1\end{matrix}\right)\cdot
+	%\left(\begin{matrix}0\\2^{-1}\mu_3\\0\end{matrix}\right)
+	%\right)\\
 	&=
 	\left(\begin{matrix}0\\2^{-1}\mu_3\\0\end{matrix}\right)
 	-
-	\left(\begin{matrix}a & 0\\0 & a^{-1}\end{matrix}\right)\cdot
-	\left(\begin{matrix}0\\2^{-1}\mu_3\\-(a^{-1}b)^{p^r}\mu_3\end{matrix}\right) \\
+	\left(\begin{matrix}a & b\\0 & a^{-1}\end{matrix}\right)\cdot
+	\left(\begin{matrix}0\\2^{-1}\mu_3\\0\end{matrix}\right) \\
+	%&=
+	%\left(\begin{matrix}0\\2^{-1}\mu_3\\0\end{matrix}\right)
+	%-
+	%\left(\begin{matrix}a & 0\\0 & a^{-1}\end{matrix}\right)\cdot
+	%\left(\begin{matrix}0\\2^{-1}\mu_3\\-(a^{-1}b)^{p^r}\mu_3\end{matrix}\right) \\
 	&=
 	\left(\begin{matrix}0\\2^{-1}\mu_3\\0\end{matrix}\right)
 	-
-	\left(\begin{matrix}0\\2^{-1}\mu_3\\a^{2p^r}(-(a^{-1}b)^{p^r})\mu_3\end{matrix}\right) \\
+	\left(\begin{matrix}0\\2^{-1}\mu_3\\-2(ab)^{p^r} (2^{-1}\mu_3)\end{matrix}\right) \\
+	&=\left(\begin{matrix}0\\2^{-1}\mu_3\\0\end{matrix}\right)
+	-\left(\begin{matrix}0\\2^{-1}\mu_3\\-(ab)^{p^r}\mu_3\end{matrix}\right) \\
 	&=\left(\begin{matrix}0\\0\\(ab)^{p^r}\mu_3\end{matrix}\right) \\
 	&= \sigma\left(\begin{matrix}a & b\\0 & a^{-1}\end{matrix}\right).
 \end{align*}
-This shows that if $p\neq 2$ then $H^1(B_2(k), V_\alpha)_{\rho_r}$ is trivial, and hence $H^1(SL_2(k), V_\alpha)_{\rho_r}$ is trivial (Lemma \ref{sl2_b_inj}).
+This shows that if $p\neq 2$ then $H^1(B_2(k), V_\alpha)_{\rho_r}$ is trivial, and hence $H^1(SL_2(k), V_\alpha)_{\rho_r}$ is trivial by Lemma \ref{sl2_b_inj}.
 
-Suppose $p=2$.
-	If $c=0$ then we already have
+We proceed with $p=2$.
+By Lemma \ref{lem:second} and Remark \ref{rem:second} there exist constants $\mu_1,\mu_3\in k$ such that
 	\begin{align*}
 	\sigma
 			\left(\begin{matrix}a & b \\ 0 & a^{-1}\end{matrix}\right)
 	&=
-	\left(\begin{matrix}0 \\ 0 \\ \mu(ab)^{2^r}\end{matrix}\right).
+	\left(\begin{matrix}0 \\ 0 \\ \mu_3(ab)^{2^r}\end{matrix}\right),
 	\end{align*}
-	Otherwise $c\neq 0$ and we get
-	\begin{align*}
+and 
+\begin{align*}
+	\sigma\left(\begin{matrix}d^{-1} & 0 \\ c & d\end{matrix}\right)
+	&=
+	\left(\begin{matrix}\mu_1(cd)^{2^r}\\0\\0\end{matrix}\right).
+	\end{align*}
+	
+Furthermore, by Equation \ref{prop:A:eqn2} there exists $\lambda_2\in k$ such that
+\begin{align*}
+	\sigma\left(\begin{matrix}0 & 1\\1 & 0\end{matrix}\right) = \left(\begin{matrix}0 \\ \lambda_2 \\ 0 \end{matrix}\right),
+\end{align*}
+and by Equation \ref{prop:A:eqn1}
+\begin{align*}
+\sigma\left(\begin{matrix}0 & 1 \\ 1 & 0\end{matrix}\right)
+&=
+	\sigma
+		\left(\begin{matrix} 1 & 1\\ 0 & 1\end{matrix}\right) +
+		\left(\begin{matrix} 1 & 1\\ 0 & 1\end{matrix}\right)\cdot
+		\left(
+		\sigma
+		\left(\begin{matrix} 1 & 0\\ 1 & 1\end{matrix}\right) +
+		\left(\begin{matrix} 1 & 0\\ 1 & 1\end{matrix}\right)\cdot
+		\sigma\left(\begin{matrix} 1 & 1\\ 0 & 1\end{matrix}\right)
+		\right)
+	\\
+&=
+		\left(\begin{matrix} 0 \\ 0 \\ \mu_3 \end{matrix}\right) +
+		\left(\begin{matrix} 1 & 1\\ 0 & 1\end{matrix}\right)\cdot
+		\left(
+		\left(\begin{matrix} \mu_1 \\ 0 \\ 0\end{matrix}\right) +
+		\left(\begin{matrix} 1 & 0\\ 1 & 1\end{matrix}\right)\cdot
+		\left(\begin{matrix} 0 \\ 0 \\ \mu_3\end{matrix}\right)
+		\right)
+	\\
+&=
+		\left(\begin{matrix} 0 \\ 0 \\ \mu_3 \end{matrix}\right) +
+		\left(\begin{matrix} 1 & 1\\ 0 & 1\end{matrix}\right)\cdot
+		\left(
+		\left(\begin{matrix} \mu_1 \\ 0 \\ 0\end{matrix}\right) +
+		\left(\begin{matrix} \mu_3 \\ \mu_3 \\ \mu_3\end{matrix}\right)
+		\right)
+	\\
+&=
+		\left(\begin{matrix} 0 \\ 0 \\ \mu_3 \end{matrix}\right) +
+		\left(\begin{matrix} 1 & 1\\ 0 & 1\end{matrix}\right)\cdot
+		\left(\begin{matrix} \mu_1 + \mu_3 \\ \mu_3 \\ \mu_3\end{matrix}\right)
+	\\
+&=
+		\left(\begin{matrix} 0 \\ 0 \\ \mu_3 \end{matrix}\right) +
+		\left(\begin{matrix} \mu_1 + \mu_3 \\ \mu_3 + \mu_1 + \mu_3 \\ \mu_1 + \mu_3 + \mu_3\end{matrix}\right)
+	\\
+&=
+		\left(\begin{matrix} \mu_1 + \mu_3 \\ \mu_1 \\ \mu_1 + \mu_3\end{matrix}\right).
+\end{align*}
+Therefore $\lambda_2 = \mu_1 = \mu_3$. Writing $\mu = \mu_1 (= \mu_3)$, we have
+\begin{align*}
+\sigma\left(\begin{matrix}a & b\\0 & a^{-1}\end{matrix}\right) = \left(\begin{matrix}0 \\ 0 \\ (ab)^{2^r}\mu\end{matrix}\right),\quad
+\sigma\left(\begin{matrix}d^{-1} & 0\\c & d\end{matrix}\right) = \left(\begin{matrix}(cd)^{2^r}\mu \\ 0 \\ 0\end{matrix}\right),\quad
+\sigma\left(\begin{matrix}0 & 1\\1 & 0\end{matrix}\right) = \left(\begin{matrix}0 \\ \mu \\ 0\end{matrix}\right).
+\end{align*}
+
+	Suppose $c\neq 0$. Then
+	\begin{align}
 	\sigma
 			\left(\begin{matrix}a & b \\ c & d\end{matrix}\right)
 			 &=
@@ -228,7 +393,7 @@ Suppose $p=2$.
 			\left(\begin{matrix} 1 & ac^{-1} \\ 0 & 1 \end{matrix}\right)
 			\left(\begin{matrix} 0 & 1 \\ 1 & 0 \end{matrix}\right)
 			\left(\begin{matrix} c & d \\ 0 & c^{-1} \end{matrix}\right)
-			\right) \\
+			\right) \nonumber \\
 		&=
 	\sigma
 			\left(\begin{matrix} 1 & ac^{-1} \\ 0 & 1 \end{matrix}\right)
@@ -241,83 +406,69 @@ Suppose $p=2$.
 			\left(\begin{matrix} 0 & 1 \\ 1 & 0 \end{matrix}\right)\cdot
 			\sigma
 				\left(\begin{matrix} c & d \\ 0 & c^{-1} \end{matrix}\right)
-			\right)\\
-	&=
-\left(\begin{matrix} 0 \\ 0 \\ (ac^{-1})^{2^r}\mu_3 \end{matrix}\right)
-	+ 
+			\right)\nonumber \\
+		&=
+			\left(\begin{matrix} 0 \\ 0 \\ (ac^{-1})^{2^r}\mu\end{matrix}\right)
+			 + 
 	\left(\begin{matrix} 1 & ac^{-1} \\ 0 & 1 \end{matrix}\right)\cdot
 	\left(
-			\left(\begin{matrix} 0 \\ \lambda \\ 0 \end{matrix}\right)
-			+
+				\left(\begin{matrix} 0 \\ \mu \\ 0 \end{matrix}\right)
+				 +
 			\left(\begin{matrix} 0 & 1 \\ 1 & 0 \end{matrix}\right)\cdot
-			\left(\begin{matrix} 0 \\ 0 \\ (cd)^{2^r}\mu_3 \end{matrix}\right)
-			\right)
-	\\
-	&=
-\left(\begin{matrix} 0 \\ 0 \\ (ac^{-1})^{2^r}\mu_3 \end{matrix}\right)
-	+ 
+				\left(\begin{matrix} 0 \\ 0 \\ (cd)^{2^r}\mu \end{matrix}\right)
+			\right)\nonumber \\
+		&=
+			\left(\begin{matrix} 0 \\ 0 \\ (ac^{-1})^{2^r}\mu\end{matrix}\right)
+			 + 
 	\left(\begin{matrix} 1 & ac^{-1} \\ 0 & 1 \end{matrix}\right)\cdot
 	\left(
-			\left(\begin{matrix} 0 \\ \lambda \\ 0 \end{matrix}\right)
-			+
-			\left(\begin{matrix} (cd)^{2^r}\mu_3 \\ 0 \\ 0 \end{matrix}\right)
-			\right)\\
-	&=
-\left(\begin{matrix} 0 \\ 0 \\ (ac^{-1})^{2^r}\mu_3 \end{matrix}\right)
-	+ 
+				\left(\begin{matrix} 0 \\ \mu \\ 0 \end{matrix}\right)
+				 +
+				\left(\begin{matrix} (cd)^{2^r}\mu \\ 0 \\ 0 \end{matrix}\right)
+			\right)\nonumber \\
+		&=
+			\left(\begin{matrix} 0 \\ 0 \\ (ac^{-1})^{2^r}\mu\end{matrix}\right)
+			 + 
 	\left(\begin{matrix} 1 & ac^{-1} \\ 0 & 1 \end{matrix}\right)\cdot
-	\left(\begin{matrix} (cd)^{2^r}\mu_3 \\ \lambda \\ 0 \end{matrix}\right)\\
-	&=
-\left(\begin{matrix} 0 \\ 0 \\ (ac^{-1})^{2^r}\mu_3 \end{matrix}\right)
-	+ 
-	\left(\begin{matrix} (cd)^{2^r}\mu_3 \\ \lambda + (ac^{-1})^{2^r} (cd)^{2^r}\mu_3 \\  (ac^{-1})^{2^{r+1}} (cd)^{2^r}\mu_3 \end{matrix}\right)\\
-	&=
-\left(\begin{matrix} (cd)^{2^r}\mu_3 \\ \lambda + (ad)^{2^r}\mu_3 \\ (ac^{-1})^{2^r}(1 + ad)^{2^r}\mu_3 \end{matrix}\right) \\
-	&=\left(\begin{matrix} (cd)^{2^r}\mu_3 \\ \lambda + (ad)^{2^r}\mu_3 \\ (ab)^{2^r}\mu_3 \end{matrix}\right).
-	\end{align*}
-By Remark \ref{sigmaneg}, $\sigma\left(\begin{matrix}a & 0\\c & a^{-1}\end{matrix}\right) = \left(\begin{matrix}(cd)^{2^r}\mu_1\\0\\0\end{matrix}\right)$. Comparing with the above formula
+				\left(\begin{matrix} (cd)^{2^r}\mu \\ \mu \\ 0 \end{matrix}\right)
+ \nonumber \\
+		&=
+			\left(\begin{matrix} 0 \\ 0 \\ (ac^{-1})^{2^r}\mu\end{matrix}\right)
+			 + 
+			\left(\begin{matrix} (cd)^{2^r}\mu \\ \mu + (ac^{-1})^{2^r}(cd)^{2^r}\mu\\ (ac^{-1})^{2^{r+1}}(cd)^{2^r}\mu \end{matrix}\right)
+ \nonumber \\
+		&=
+			\left(\begin{matrix} (cd)^{2^r}\mu \\ \mu + (ac^{-1})^{2^r}(cd)^{2^r}\mu\\(ac^{-1})^{2^r}\mu + (ac^{-1})^{2^{r+1}}(cd)^{2^r}\mu \end{matrix}\right)
+ \nonumber \\
+		&=
+			\left(\begin{matrix} (cd)^{2^r}\mu \\ (1 + ad)^{2^r}\mu \\ (1+ad)^{2^r}(ac^{-1})^{2^r}\mu \end{matrix}\right)
+ \nonumber \\
+		&=
+			\left(\begin{matrix} (cd)^{2^r}\mu \\ (bc)^{2^r}\mu \\ (ab)^{2^r}\mu \end{matrix}\right)\label{eqn:b2a}.
+	\end{align}
+Note that substituting $c=0$ gives
 \begin{align*}
-\left(\begin{matrix} (cd)^{2^r}\mu_3 \\ \lambda + \mu_3 \\ 0 \end{matrix}\right)
-=
-\left(\begin{matrix} (cd)^{2^r}\mu_1 \\ 0 \\ 0 \end{matrix}\right),
+\sigma\left(\begin{matrix}a & b \\ 0 & a^{-1}\end{matrix}\right) = \left(\begin{matrix} 0 \\ 0 \\ (ab)^{2^r}\mu\end{matrix}\right),
 \end{align*}
-we see that $\mu_1=\mu_3=\lambda$ and so 
+substituting $b=0$ gives
 \begin{align*}
-\sigma\left(\begin{matrix}a & b \\ c & d\end{matrix}\right) = \left(\begin{matrix} (cd)^{2^r}\mu_3 \\ (bc)^{2^r}\mu_3 \\ (ad)^{2^r}\mu_3\end{matrix}\right).
+\sigma\left(\begin{matrix}d^{-1} & 0 \\ c & d\end{matrix}\right) = \left(\begin{matrix} (cd)^{2^r}\mu \\ 0 \\ 0\end{matrix}\right),
 \end{align*}
-TODO Steinberg
+and substituting $a = d = 0, b = c = 1$ gives
+\begin{align*}
+\sigma\left(\begin{matrix}0 & 1 \\ 1 & 0\end{matrix}\right) = \left(\begin{matrix} 0 \\ \mu \\ 0\end{matrix}\right),
+\end{align*}
+so we take Equation \ref{eqn:b2a} to be the general form of a 1-cocycle $\sigma:SL_2(k)\rightarrow V_\alpha$ such that $\sigma(y) = 1$ for all $y\in T_2(k)$.
+
+We now show that $\sigma$ as defined in Equation \ref{eqn:b2a} satisfies the 1-cocycle condition. TODO Steinberg or otherwise.
 
 We calculate the 1-cohomology by finding $\widetilde{\sigma}\in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\psi(\widetilde{\sigma}) = \psi(\sigma)$. We may assume $\widetilde{\sigma}(y) = 1$ for all $y \in T_2(k)$. Then define $\widetilde{\sigma}(y) = \sigma(y) + \chi^{SL_2(k)}_\mathbf{v}(y)$ for all $y\in SL_2(k)$, for some $\mathbf{v}\in V_\alpha$ fixed by the action of $T_2(k)$.
 
-To this end, let $\mathbf{v} = \left(\begin{matrix}0\\v\\0\end{matrix}\right)$. We have 
-\begin{align*}
-	\left(\begin{matrix}a & b\\0 & a^{-1}\end{matrix}\right) \cdot \left(\begin{matrix}0\\v\\0\end{matrix}\right) &=
-	\left(\left(\begin{matrix}a & 0\\0 & a^{-1}\end{matrix}\right)\left(\begin{matrix}1 & a^{-1}b\\0 & 1\end{matrix}\right)\right) \cdot \left(\begin{matrix}0\\v\\0\end{matrix}\right) \\
-	&=\left(\begin{matrix}a & 0\\0 & a^{-1}\end{matrix}\right) \cdot \left(\begin{matrix}0\\v\\0\end{matrix}\right) \\
-	&=\left(\begin{matrix}0\\v\\0\end{matrix}\right) \\
-\end{align*}
-and for $c\neq 0$
-\begin{align*}
-	\left(\begin{matrix}a & b\\c & d\end{matrix}\right) \cdot \left(\begin{matrix}0\\v\\0\end{matrix}\right)
-	&= 
-	\left(
-	\left(\begin{matrix}1 & ac^{-1}\\0 & 1\end{matrix}\right)
-	\left(\begin{matrix}0 & 1\\1 & 0\end{matrix}\right)
-	\left(\begin{matrix}c & d\\0 & c^{-1}\end{matrix}\right)\right)
-		\cdot \left(\begin{matrix}0\\v\\0\end{matrix}\right) \\
-	&= 
-	\left(
-	\left(\begin{matrix}1 & ac^{-1}\\0 & 1\end{matrix}\right)
-	\left(\begin{matrix}0 & 1\\1 & 0\end{matrix}\right)\right)
-		\cdot \left(\begin{matrix}0\\v\\0\end{matrix}\right) \\
-	&= 
-	\left(\begin{matrix}1 & ac^{-1}\\0 & 1\end{matrix}\right)
-		\cdot \left(\begin{matrix}0\\v\\0\end{matrix}\right) \\
-	&= 
-		\left(\begin{matrix}0\\v\\0\end{matrix}\right).
-\end{align*}
-Therefore, such $\chi^{SL_2(k)}_v$ is trivial.
-This shows that for each $\mu\in k$, $\psi(\sigma_\mu)$ is a distinct 1-cohomology class, where we define
+To this end, let $\mathbf{v} = \left(\begin{matrix}0\\v\\0\end{matrix}\right)$. Since
+	$\left(\begin{matrix}a & b\\c & d\end{matrix}\right) \cdot \left(\begin{matrix}0\\v\\0\end{matrix}\right) =
+	\left(\begin{matrix}0\\v\\0\end{matrix}\right),
+\chi^{SL_2(k)}_v$ is trivial.
+This shows that for each $\mu\in k$, $\psi(\sigma_\mu)$ is a distinct 1-cohomology class, where
 \begin{align*}
 	\sigma_\mu\left(\begin{matrix}a & b\\c & d\end{matrix}\right) = \left(\begin{matrix}(cd)^{2^r}\mu\\(bc)^{2^r}\mu\\(ad)^{2^r}\mu\end{matrix}\right).
 \end{align*}
@@ -347,7 +498,7 @@ Therefore $Z(L_ \alpha)^\circ = \langle (\alpha + \beta)^\vee(x)\,|\,x \in k \ra
 \end{matrix}\right).
 \end{align*}
 
-So we see that the infinitely many conjugacy classes of 1-cocycles from $SL_2\rightarrow V$ collapse to just two classes when we consider the action of $Z(L_\alpha)^\circ$.
+So we see that the infinitely many conjugacy classes of 1-cocycles collapse to just two classes when we consider the action of $Z(L_\alpha)^\circ$.
 
 \subsection{$V = R_u(P_\beta)$}
 \label{b2:beta}
