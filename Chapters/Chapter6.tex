@@ -22,10 +22,10 @@ For each $\alpha \in \Delta$ (the simple roots)
 			\right).
 	\end{align*}
 	\item[5.] Show $\sigma$ satisfies the 1-cocycle condition.
-	\item[6.] Calculate $H^1(SL_2(k), V_\alpha)_{\sigma_r}$.
-	\item[7.] Calculate $H^1(SL_2(k), V_\alpha)_{\sigma_r}/C_L(\sigma_r)$ and use Theorem \ref{main_thm} to get information about conjugacy classes in $\mathrm{Hom}(SL_2(k), P_\alpha)$.
+	\item[6.] Calculate $H^1(SL_2(k), V_\alpha)_{\rho_r}$.
+	\item[7.] Calculate $H^1(SL_2(k), V_\alpha)_{\rho_r}/C_L(\rho_r)$ and use Theorem \ref{main_thm} to get information about conjugacy classes in $\mathrm{Hom}(SL_2(k), P_\alpha)$.
 	\end{itemize}
-We elaborate on step 4. If $c\neq 0$ then
+We elaborate on step 4. Given $\sigma\left(\begin{matrix}a & b \\ 0 & a^{-1}\end{matrix}\right)$ and $\sigma\left(\begin{matrix}0 & 1\\-1 & 0\end{matrix}\right)$, the obvious way to piece together a 1-cocycle on $SL_2(k)$ is, for $c\neq 0$
 \begin{align}\label{fullsigma}
 	\sigma\left(\begin{matrix}a & b\\c & d\end{matrix}\right)
 	&=
@@ -66,14 +66,15 @@ We elaborate on step 4. If $c\neq 0$ then
 	\right],
 \end{align}
 where we apply Corollary \ref{sigmaneg} at the last step.
-Therefore, to compute the value of the 1-cocycle on $SL_2(k)$, we need to know
-\begin{align*}
-	\sigma&\left(\begin{matrix}a & b\\0 & a^{-1}\end{matrix}\right),\qquad&\sigma&\left(\begin{matrix}0 & 1\\-1 & 0\end{matrix}\right),\\
-	&\left(\begin{matrix}1 & b\\0 & 1\end{matrix}\right)\cdot \mathbf{v},\qquad&&\left(\begin{matrix}0 & 1\\-1 & 0\end{matrix}\right)\cdot \mathbf{v},
-\end{align*}
-for arbitrary $\mathbf{v}\in V_\alpha$, as well as the group law for $V_\alpha$.
+TODO Ben's paper.
+Then to check that $\sigma$ is a well-defined 1-cocycle on $SL_2(k)$ amounts to checking that $\sigma$ satisfies the following conditions, based on Steinberg's presentation for $SL_2$ \cite{}.
+\begin{align}
+	&\sigma(x_\alpha(t_1)x_\alpha(t_2)) = \sigma(x_\alpha(t_1+t_2)) \\
+	&\sigma(h_\alpha(t_1t_2)) = \sigma(h_\alpha(t_1)h_\alpha(t_2)) \\
+	&\sigma(n_\alpha(t)x_\alpha(u)n_\alpha(t)^{-1}) = \sigma(x_{-\alpha}(-t^{-2}u)).
+\end{align}
 
-Determining the actions and the group law often involves lengthy computations using the commutator relations. For clarity, we often use column vector notation.
+We will need to determine the action of $SL_2(k)$ on $V_\alpha$ and the group law on $V_\alpha$ which often involves lengthy computations using the commutator relations. For clarity, we will use column vector notation.
 \begin{align*}
 \left(\begin{matrix}
 	v_{1}\\ v_{2}\\ \vdots\\ v_{n}
@@ -220,7 +221,7 @@ P_\beta &= R_u(P_\beta) \rtimes L_\beta \\
 \subsection{$V = R_u(P_\alpha)$}
 \label{b2:alpha}
 
-Let $V_\alpha=R_u(P_\alpha)=\langle U_\beta, U_{\alpha + \beta}, U_{2\alpha + \beta} \rangle$, and let $x\in H^1(SL_2(k), V_\alpha)_{\rho_r}$. Note that $V_\alpha$ is abelian.
+Let $V_\alpha=R_u(P_\alpha)=\langle U_\beta, U_{\alpha + \beta}, U_{2\alpha + \beta} \rangle$. Note that $V_\alpha$ is abelian.
 We will write $\mathbf{v}\in V_\alpha$ as a column vector for convenience,
 \begin{align*}
 	\left(\begin{matrix}v_1\\v_2\\v_3\end{matrix}\right) = \epsilon_\beta(v_1)\epsilon_{\alpha+\beta}(v_2)\epsilon_{2\alpha+\beta}(v_3),

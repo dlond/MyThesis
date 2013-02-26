@@ -5,19 +5,32 @@
 \label{Chapter1}
 \lhead{Chapter 1. \emph{Introduction}}
 
-A major motivation for the work carried out in this thesis is to investigate a question posed by B. K\"ulshammer to do with homomorphisms of finite groups into algebraic groups \cite{slodowy1997two}. We will call these homomorphisms \emph{representations} because of the obvious similarity with the usual kind of representations into $GL_n$. K\"ulshammer's second question is as follows:
+A major motivation for the work carried out in this thesis is to investigate a question posed by B. K\"ulshammer to do with homomorphisms of finite groups into algebraic groups \cite{slodowy1997two}. We will call these homomorphisms \emph{representations} because of the obvious similarity with the usual kind of representations into $GL_n$. K\"ulshammer's second question reads as follows.
 \begin{quote}
   Let $G$ be a linear algebraic group over an algebraically closed field of characteristic $p$. Let $\Gamma$ be a finite group and $\Gamma_p < \Gamma$ a Sylow $p$-subgroup of $\Gamma$. Fix a conjugacy class of representations $\Gamma_p\rightarrow G$. Are there, up to conjugation by $G$, only finitely many representations $\rho:\Gamma\rightarrow G$ whose restrictions to $\Gamma_p$ belong to the given class?
 \end{quote}
 
-So far only a non-reductive counterexample is known \cite[Appendix]{slodowy1997two}. We examine K\"ulshammer's second question for reductive $G$, and we also examine a slight variation on the question which we call the \emph{algebraic group} version of K\"ulshammer's question in which case we substitute a connected reductive group $H$ for the finite group $\Gamma$, and instead of a Sylow $p$-subgroup $\Gamma_p < \Gamma$ we use a maximal unipotent subgroup $U < H$:
+So far only a non-reductive counterexample is known \cite[Appendix]{slodowy1997two}. We examine K\"ulshammer's second question for reductive $G$. 
+
+
+The work in this thesis also contributes to the study of the subgroup structure of simple algebraic groups, complementing some of the work done by M. Liebeck and G. Seitz (\cite{liebeck1996reductive}, \cite{liebeck2004maximal}), and D. Stewart (\cite{stewart2010g}).
+Let $G$ be a simple algebraic group over an algebraically closed field of characteristic $p$. For large enough characteristic ($p=0$ or $p>7$ covers all restrictions) Liebeck and Seitz determine explicitly the embeddings of arbitrary connected semisimple groups in $G$, where $G$ is of exceptional type.
+On the other hand, Stewart's work concerns exceptional groups for the case $p<7$, so called \emph{low characteristic}.
+Like Stewart, we examine the subgroup structure of simple algebraic groups in low characteristic (usually $p=2$ or $p=3$) where examples are exotic less is known. 
+
+In the intersection of the above two topics of interest lies a variation of K\"ulshammer's second question which we call the \emph{algebraic} version of K\"ulshammer's second question. In this case we substitute the finite group $\Gamma$ for a connected reductive group $H$, instead of a Sylow $p$-subgroup $\Gamma_p < \Gamma$ we use a maximal unipotent subgroup $U < H$, and by the term representation we mean a homomorphism of algebraic groups.
+The precise statement of the algebraic version of K\"ulshammer's second question reads as follows.
 \begin{quote}
-  Let $G,H$ be connected reductive linear algebraic groups over an algebraically closed field of characteristic $p$ and $U < H$ a maximal unipotent subgroup of $H$. Fix a conjugacy class of algebraic group homomorphisms $U\rightarrow G$. Are there, up to conjugation by $G$, only finitely many algebraic group homomorphisms$\rho:H\rightarrow G$ whose restrictions to $U$ belong to the given class?
+  Let $G,H$ be connected reductive linear algebraic groups over an algebraically closed field of characteristic $p$ and $U < H$ a maximal unipotent subgroup of $H$. Fix a conjugacy class of representations $U\rightarrow G$. Are there, up to conjugation by $G$, only finitely many representations $\rho:H\rightarrow G$ whose restrictions to $U$ belong to the given class?
 \end{quote}
 
-We often overload the term \emph{representation} to also mean algebraic group homomorphism in this setting.
+Note that in answering the algebraic version of K\"ulshammer's second question for $H,G$ we investigate embeddings of $H$ in $G$, thus contributing to the work of Liebeck and Seitz, and Stewart.
 
-\section{K\"ulshammer's Questions and Maschke's Theorem}
+Furthermore, it may be the case that a counterexample to the algebraic version of K\"ulshammer's second question for some $H, G$ provides a counterexample to the original question for $\Gamma, G$ where $\Gamma$ is some finite subgroup of $H$. For instance, it would be encouraging if there existed a counterexample to the algebraic version of K\"ulshammer's question with $H = SL_2(k), G$, where $k$ is an algebraically closed field of prime characteristic $p$, as $SL_2(k)$ has many finite subgroups (e.g. $SL_2(\mathbb{F}_{p^r}$)) with which we can test the original question.
+
+\section{$G$-Complete Reducibility}
+
+\section{K\"ulshammer's Second Question}
 
 The algebraic group version of K\"ulshammer's question a non-trivial pursuit in its own right as K\"ulshammer's question has it's roots Maschke's Theorem of representation theory. Maschke's Theorem asserts that any representation from a finite group $\Gamma \rightarrow GL_n$ over a field of characteristic not dividing the order of $\Gamma$ is completely reducible, and that there are only finitely many conjugacy classes of (completely reducible) representations $\Gamma \rightarrow GL_n$ [ref Lang].
 
@@ -45,11 +58,13 @@ The following example shows infinitely many conjugacy classes of representations
   It is straightforward to check that if $\lambda_1 \neq \lambda_2$ then $\rho_{\lambda_1}$ is not $SL_2(k)$-conjugate to $\rho_{\lambda_2}$. Hence there are infinitely many $SL_2(k)$-conjugacy classes of representations from $\Gamma \rightarrow SL_2(k)$.
 \end{example}
 
-\section{Connection with the Subgroup Structure of Algebraic Groups}
+\section{Subgroup Structure of Algebraic Groups}
 
-Our approach to K\"ulshammer's question also means that the work in this thesis contributes to the study of the subgroup structure of simple algebraic groups, complementing some of the work done by M. Liebeck and G. Seitz (\cite{liebeck1996reductive}, \cite{liebeck2004maximal}), and D. Stewart (\cite{stewart2010g}). Let $G$ be a simple algebraic group over an algebraically closed field of characteristic $p$. For large enough characteristic ($p=0$ or $p>7$ covers all restrictions) Liebeck and Seitz determine explicitly the embeddings of arbitrary connected semisimple groups in $G$, where $G$ is of exceptional type. We examine the subgroup structure of simple algebraic groups in low characteristic (usually $p=2$ or $p=3$) where examples are exotic less is known. We use similar methods to Liebeck and Seitz, calculating a certain 1-cohomology of $H$ with coefficients in $V$, the unipotent radical of a parabolic subgroup $P < G$.
+We use similar methods to Liebeck and Seitz, calculating a certain 1-cohomology of $H$ with coefficients in $V$, the unipotent radical of a parabolic subgroup $P < G$.
 
 The main difference in our calculations is that we deal with the so-called \emph{nonabelian} 1-cohomology directly where as Liebeck, Seitz and Stewart use results from Representation Theory to study \emph{abelian layers} of the 1-cohomology and then piece the layers back together. Our calculations in Chapter \ref{Chapter5} agree with Stewart's $G_2$ calculation, and we acknowledge Stewart's $F_4$ calculation which provided us with a good example to work with in Chapter \ref{Chapter6}.
+
+\section{A Variation on K\"ulshammer's Second Question}
 
 \section{Chapter Overview}
 

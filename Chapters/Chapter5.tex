@@ -5,7 +5,7 @@
 \label{Chapter5}
 \lhead{Chapter 5. \emph{1-Cohomology Calculation: Theoretical Results}}
 
-In this Chapter we present some theoretical results for 1-cohomology calculations of the form $H^1(SL_2(k), V_\alpha)_{\rho_r}$ where $V_\alpha$ is the unipotent radical of a minimal parabolic subgroup of reductive $G$.
+In this Chapter we present some theoretical results for 1-cohomology calculations of the form $H^1(SL_2(k), V_\alpha)_{\omega_r}$ where $V_\alpha$ is the unipotent radical of a minimal parabolic subgroup of reductive $G$.
 
 Let $G$ be a reductive group over an algebraically closed field $k$ of characteristic $p>0$, and let $B$ be a Borel subgroup of $G$ containing a maximal torus $T$ of $G$. This amounts to fixing a base $\Delta$ of $\Phi$, where $\Phi$ is the root system for $G$. Then $\Phi$ yields a set of representative parabolic subgroups $P_I$, $I \subset \Delta$ as in \cite[\S 30]{humphreys1975linear}. Denote by $\Phi^+$ the positive roots of $G$.
 
@@ -22,10 +22,10 @@ V_\alpha = \prod_{\delta\in\Phi^+ -\{\alpha\}} U_\delta,
 \end{align*}
 are unambiguous.
 
-There exists a homomorphism $\rho_0$ from $ SL_2(k)$ into $L_\alpha$ such that
+There exists a homomorphism $\omega_0$ from $ SL_2(k)$ into $L_\alpha$ such that
 \begin{align*}
-\rho_0 \left(\begin{matrix} 1 &  u \\ 0 & 1 \end{matrix} \right) &= \epsilon_\alpha(u), \\
-\rho_0 \left(\begin{matrix} 1 & 0 \\ u & 1 \end{matrix} \right) &= \epsilon_{-\alpha}(u),
+\omega_0 \left(\begin{matrix} 1 &  u \\ 0 & 1 \end{matrix} \right) &= \epsilon_\alpha(u), \\
+\omega_0 \left(\begin{matrix} 1 & 0 \\ u & 1 \end{matrix} \right) &= \epsilon_{-\alpha}(u),
 \end{align*}
 where $\epsilon_\alpha : k \rightarrow U_\alpha$ is an isomorphism of algebraic groups \cite[Theorem 26.3(c)]{humphreys1975linear}. Any such isomorphism satisfies
 \begin{align*}
@@ -33,20 +33,20 @@ where $\epsilon_\alpha : k \rightarrow U_\alpha$ is an isomorphism of algebraic 
 \end{align*}
 for all $t\in T, x\in k$. 
 
-We fix an integer $r > 0$ and define $\rho_r:SL_2(k) \rightarrow L_\alpha$ to be the composition of $\rho_0$ and the Frobenius map, defined by
+We fix an integer $r > 0$ and define $\omega_r:SL_2(k) \rightarrow L_\alpha$ to be the composition of $\omega_0$ and the Frobenius map, defined by
 \begin{align*}
 F_r&:SL_2(k)\rightarrow SL_2(k) \\
 & (A_{ij}) \mapsto (A_{ij})^{p^r}.
 \end{align*}
-That is $\rho_r = \rho_0 \circ F_r$ and satisfies
+That is $\omega_r = \omega_0 \circ F_r$ and satisfies
 \begin{align*}
-\rho_r \left(\begin{matrix} 1 &  u \\ 0 & 1 \end{matrix} \right) &= \epsilon_\alpha(u^{p^r}) \\
-\rho_r \left(\begin{matrix} 1 & 0 \\ u & 1 \end{matrix} \right) &= \epsilon_{-\alpha}(u^{p^r}).
+\omega_r \left(\begin{matrix} 1 &  u \\ 0 & 1 \end{matrix} \right) &= \epsilon_\alpha(u^{p^r}) \\
+\omega_r \left(\begin{matrix} 1 & 0 \\ u & 1 \end{matrix} \right) &= \epsilon_{-\alpha}(u^{p^r}).
 \end{align*}
 
 Now we have an action of $SL_2(k)$ on $V_\alpha$ defined by
 \begin{align*}
-	y \cdot v = \rho_r(y)v\rho_r(y^{-1}),
+	y \cdot v = \omega_r(y)v\omega_r(y^{-1}),
 \end{align*}
 for $y \in SL_2(k), v \in V_\alpha$. By \cite[Theorem 26.3(c)]{humphreys1975linear}
 \begin{align}
@@ -59,8 +59,10 @@ for $y \in SL_2(k), v \in V_\alpha$. By \cite[Theorem 26.3(c)]{humphreys1975line
 \end{align}
 for all $t \in k^*, \lambda_\delta \in k$, where $n_\alpha = \epsilon_\alpha(1)\epsilon_{-\alpha}(-1)\epsilon_\alpha(1)$.
 
-We set out to find the general form of a 1-cocycle $\tau \in Z^1(SL_2(k), V_\alpha)_{\rho_r}$. Then we can apply the canonical projection $\psi:Z^1(SL_2(k), V_\alpha)_{\rho_r} \rightarrow H^1(SL_2(k), V_\alpha)_{\rho_r}$ to calculate the 1-cohomology.
-By Lemma \ref{trivial_on_t}, there exists $\sigma \in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\psi(\tau) = \psi(\sigma)$ and $\sigma\left(y\right) = 1$ for all $y\in T_2(k)$. Hence we may restrict ourselves to 1-cocycles of this form. As a starting point, we have the following Proposition.
+We set out to find the general form of a 1-cocycle $\tau \in Z^1(SL_2(k), V_\alpha)_{\omega_r}$. Then we can apply the canonical projection $\psi:Z^1(SL_2(k), V_\alpha)_{\omega_r} \rightarrow H^1(SL_2(k), V_\alpha)_{\omega_r}$ to calculate the 1-cohomology.
+By Lemma \ref{trivial_on_t}, there exists $\sigma \in Z^1(SL_2(k), V_\alpha)_{\omega_r}$ such that $\psi(\tau) = \psi(\sigma)$ and $\sigma\left(y\right) = 1$ for all $y\in T_2(k)$. Hence we may proceed with $\sigma$.
+
+As a starting point, we have the following Proposition.
 
 \begin{proposition} \label{claim1}
 \begin{align*}
@@ -285,7 +287,7 @@ Let $\delta_1, \delta_2 \in \mathcal{D}$. Since $\langle \delta_i, \alpha \rangl
 \end{proof}
 
 \begin{lemma}[Second Main Lemma]\label{lem:second}
-Let $\sigma\in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\sigma(y) = 1$ for all $y\in T_2(k)$ and suppose
+Let $\sigma\in Z^1(SL_2(k), V_\alpha)_{\omega_r}$ such that $\sigma(y) = 1$ for all $y\in T_2(k)$ and suppose
 \begin{itemize}
 	\item[(i)] $y_1 \cdot \sigma\left(y_2\right) = \sigma\left(y_2\right)$, for all $y_1,y_2 \in U_2(k)$, and
 	\item[(ii)] $\sigma\left(U_2(k)\right)$ lies in a product of commuting root groups of $V_\alpha$.
@@ -420,8 +422,8 @@ Suppose $\sigma$ satisfies the hypotheses of Lemma \ref{lem:second}. Then
 
 \section{Discussion} \label{ch5_discussion}
 
-In the next Chapter we investigate the counterexamples to Propositions \ref{ufixes} and \ref{uabelian} in the respective Remarks \ref{g2counter} and \ref{c3counter} by deriving the form of $\sigma\in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ for the appropriate simple roots $\alpha\in\Delta$. This is carried out in Sections \ref{g2:alpha} and \ref{c3:alpha}, respectively. We show that $\sigma$ still satisfies the conclusion of Lemma \ref{lem:second}. This gives some evidence for the following Conjecture.
-\begin{conjecture}\label{bigclaim} Let $G$ be a reductive group, $P_\alpha$ a minimal parabolic subgroup of $G$ with unipotent radical $V_\alpha$. Let $x \in H^1(SL_2(k), V_\alpha)_{\rho_r}$. Then there exists $\sigma \in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\psi(\sigma) = x$. Furthermore, there exist $\mu_\delta\in k$ such that for all $a\in k^*$, $b\in k$
+In the next Chapter we investigate the counterexamples to Propositions \ref{ufixes} and \ref{uabelian} in the respective Remarks \ref{g2counter} and \ref{c3counter} by deriving the form of $\sigma\in Z^1(SL_2(k), V_\alpha)_{\omega_r}$ for the appropriate simple roots $\alpha\in\Delta$. This is carried out in Sections \ref{g2:alpha} and \ref{c3:alpha}, respectively. We show that $\sigma$ still satisfies the conclusion of Lemma \ref{lem:second}. This gives some evidence for the following Conjecture.
+\begin{conjecture}\label{bigclaim} Let $G$ be a reductive group, $P_\alpha$ a minimal parabolic subgroup of $G$ with unipotent radical $V_\alpha$. Let $x \in H^1(SL_2(k), V_\alpha)_{\omega_r}$. Then there exists $\sigma \in Z^1(SL_2(k), V_\alpha)_{\omega_r}$ such that $\psi(\sigma) = x$. Furthermore, there exist $\mu_\delta\in k$ such that for all $a\in k^*$, $b\in k$
 \begin{align*}
 	\sigma\left(\begin{matrix}a & b \\0 & a^{-1}\end{matrix}\right) = \prod_{\delta\in\mathcal{D}} \epsilon_\delta\left(a^{(\langle\delta,\alpha\rangle p^r -n(\delta))}b^{n(\delta)}\mu_\delta\right),
 \end{align*}
@@ -437,8 +439,8 @@ where $n(\delta)=p^{r-2+\langle\delta,\alpha\rangle}$, and $\mathcal{D}$ is defi
 
 If the above ask Conjecture is true, it would be worthwhile to see whether it can be extended to all parabolic subgroups $P_I$, $I\subset \Delta$ of $G$. This would be useful for further 1-cohomology calculations following the method we employ in the next Chapter.
 
-Furthermore, given that $H^1(SL_2(k), V_\alpha)_{\rho_r}\rightarrow H^1(B_2(k), V_\alpha)_{\rho_r}$ is already injective by Lemma \ref{sl2_b_inj} and $\sigma\left(B_2(k)\right)$ lies in an abelian subgroup of $V_\alpha$, it may be possible to show that the restriction map
+Furthermore, given that $H^1(SL_2(k), V_\alpha)_{\omega_r}\rightarrow H^1(B_2(k), V_\alpha)_{\omega_r}$ is already injective by Lemma \ref{sl2_b_inj} and $\sigma\left(B_2(k)\right)$ lies in an abelian subgroup of $V_\alpha$, it may be possible to show that the restriction map
 \begin{align*}
-	H^1(SL_2(k), V_\alpha)_{\rho_r} \rightarrow H^1(U_2(k), V_\alpha)_{\rho_r},
+	H^1(SL_2(k), V_\alpha)_{\omega_r} \rightarrow H^1(U_2(k), V_\alpha)_{\omega_r},
 \end{align*}
 is injective (cf. Example \ref{ab_example}). Thus there is evidence that the answer algebraic version of K\"ulshammer's second question for $SL_2(k)$ and connected reductive $G$ is ``yes'' (cf. \ref{main_thm}).

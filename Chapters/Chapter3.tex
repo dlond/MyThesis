@@ -6,7 +6,7 @@
 \lhead{Chapter 3. \emph{The 1-Cohomology}}
 
 \section{Abelian 1-Cohomology}
-The abelian 1-cohomology is standard (cf. \cite{brown1976cohomology}). We present this Section as motivation for the less-known non-abelian theory to appear in the next Section.
+The abelian 1-cohomology is standard (cf. \cite{brown1976cohomology}). We present this Section as motivation for the less-known nonabelian theory to appear in the next Section.
 
 If $K$ is an algebraic group and $V$ is an algebraic variety then by an action of $K$ on $V$ we mean an action $K\times V\rightarrow V$ which is also a morphism of varieties.
 
@@ -14,9 +14,9 @@ If $\Gamma$ is a finite group then $\Gamma$ is a variety over $k$, and if $X$ is
 
 Let $K$ be an algebraic group and $V$ an abelian algebraic group with identity $0$ on which $K$ acts by group automorphisms. We denote the action by $x \cdot v$, for $x \in K, v \in V$.
 
-\begin{definition} We call a morphism $\alpha: K\rightarrow V$ a \emph{1-cocycle} if it satisfies
+\begin{definition} We call a morphism $\sigma: K\rightarrow V$ a \emph{1-cocycle} if it satisfies
 	\begin{align}
-		\alpha(xy) = \alpha(x) + x\cdot\alpha(y),
+		\sigma(xy) = \sigma(x) + x\cdot\sigma(y),
 		\label{eqn:a_z}
 	\end{align}
 	for all $x, y$ in $K$. Denote by $Z^1\left( K, V \right)$ the collection of all 1-cocycles from $K$ to $V$.
@@ -24,46 +24,46 @@ Let $K$ be an algebraic group and $V$ an abelian algebraic group with identity $
 	We call Equation \ref{eqn:a_z} the \emph{1-cocycle condition}.
 \end{definition}
 
-For any $\alpha, \beta$ in $Z^1\left(K, V\right)$,
+For any $\sigma_1, \sigma_2$ in $Z^1\left(K, V\right)$,
 \begin{align*}
-	\left(\alpha + \beta\right)(xy) &=  \alpha(xy) +  \beta(xy) \\
-	&=  \alpha(x) + x\cdot\alpha(y) +  \beta(x) + x\cdot\beta(y)\\
-	&=  \left( \alpha(x) + \beta(x) \right) + x\cdot\left(\alpha(y) + \beta(y)\right) \\
-	&=  \left(\alpha+\beta\right)(x) + x\cdot\left(\alpha + \beta\right)(y),
+	\left(\sigma_1 + \sigma_2\right)(xy) &=  \sigma_1(xy) +  \sigma_2(xy) \\
+	&=  \sigma_1(x) + x\cdot\sigma_1(y) +  \sigma_2(x) + x\cdot\sigma_2(y)\\
+	&=  \left( \sigma_1(x) + \sigma_2(x) \right) + x\cdot\left(\sigma_1(y) + \sigma_2(y)\right) \\
+	&=  \left(\sigma_1+\sigma_2\right)(x) + x\cdot\left(\sigma_1 + \sigma_2\right)(y),
 \end{align*}
-for all $x,y \in K$. Moreover, $\alpha + \beta$ is a morphism, so $Z^1(K, V)$ is closed under pointwise addition.
+for all $x,y \in K$. Moreover, $\sigma_1 + \sigma_2$ is a morphism, so $Z^1(K, V)$ is closed under pointwise addition.
 
 The trivial map from $K$ to $V$ that sends every $h \in K$ to $0 \in V$ is a 1-cocycle. 
-Define $-\alpha$ by
+Define $-\sigma$ by
 \begin{align*}
-	(-\alpha)(x) = -\alpha(x),
+	(-\sigma)(x) = -\sigma(x),
 \end{align*}
 for all $x \in K$. Then
 \begin{align*}
-	(-\alpha)(xy) &= -\alpha(xy) \\
-		&= -\left(\alpha(x) + x \cdot \alpha(y)\right) \\
-		&= -\alpha(x) + x\cdot (-\alpha(y)) \\
-		&= (-\alpha)(x) + x \cdot (-\alpha)(y),
+	(-\sigma)(xy) &= -\sigma(xy) \\
+		&= -\left(\sigma(x) + x \cdot \sigma(y)\right) \\
+		&= -\sigma(x) + x\cdot (-\sigma(y)) \\
+		&= (-\sigma)(x) + x \cdot (-\sigma)(y),
 \end{align*}
-for all $x,y \in K$. Hence $-\alpha \in Z^1(K, V)$. Furthermore, $(\alpha + (-\alpha))(x) = 0$ for all $x \in K$. Therefore each $\alpha \in Z^1(K, V)$ has a negative $-\alpha\in Z^1(K, V)$.
+for all $x,y \in K$. Hence $-\sigma \in Z^1(K, V)$. Furthermore, $(\sigma + (-\sigma))(x) = 0$ for all $x \in K$. Therefore each $\sigma \in Z^1(K, V)$ has a negative $-\sigma\in Z^1(K, V)$.
 
 Associativity of pointwise addition in $Z^1(K, V)$ holds because associativity holds in $V$. Therefore $Z^1\left(K, V\right)$ is a group. Moreover, since $V$ is abelian, $Z^1(K, V)$ is abelian.
-\begin{lemma} Let $\alpha \in Z^1(K, V)$. Then $-\alpha(x) = x \cdot \alpha(x^{-1})$ for all $x \in K$.
+\begin{lemma} Let $\sigma \in Z^1(K, V)$. Then $-\sigma(x) = x \cdot \sigma(x^{-1})$ for all $x \in K$.
 \end{lemma}
 \begin{proof}
 Let $1\in K$ be the identity. Then
 \begin{align*}
-	\alpha(1)\, =\, \alpha(1\times 1) &=  \alpha(1) + 1\cdot \alpha(1) \\
-	&=  \alpha(1) + \alpha(1) \\
-	&=  2\,\alpha(1).
+	\sigma(1)\, =\, \sigma(1\times 1) &=  \sigma(1) + 1\cdot \sigma(1) \\
+	&=  \sigma(1) + \sigma(1) \\
+	&=  2\,\sigma(1).
 \end{align*}
-This shows $\alpha(1) = 0$. Then, for all $x \in K$,
+This shows $\sigma(1) = 0$. Then, for all $x \in K$,
 \begin{align*}
-	0 = \alpha(1) = \alpha(xx^{-1}) = \alpha(x) + x \cdot \alpha(x^{-1})
+	0 = \sigma(1) = \sigma(xx^{-1}) = \sigma(x) + x \cdot \sigma(x^{-1})
 \end{align*}
 Hence
 \begin{align*}
-	-\alpha(x) = x\cdot\alpha(x^{-1}),
+	-\sigma(x) = x\cdot\sigma(x^{-1}),
 \end{align*}
 for all $x \in K$. 
 \end{proof}
@@ -108,11 +108,11 @@ We denote by $\psi$ the canonical projection from $Z^1(K, V)$ to $H^1(K, V)$.
 \begin{proof}
 	Suppose $V$ is a vector space over $F$. We define scalar multiplication on $Z^1(K, V)$ as follows.
 
-For $\lambda \in F, \alpha \in Z^1(K, V)$ define the map $\lambda\alpha$ by $(\lambda\alpha)(x) = \lambda\alpha(x)$ for all $x \in K$. Then $\lambda\alpha$ is a 1-cocycle, for
+For $\lambda \in F, \sigma \in Z^1(K, V)$ define the map $\lambda\sigma$ by $(\lambda\sigma)(x) = \lambda\sigma(x)$ for all $x \in K$. Then $\lambda\sigma$ is a 1-cocycle, for
 \begin{align*}
-	\lambda \alpha(xy) &= \lambda\left( \alpha(x) + x \cdot \alpha(y)\right) \\
-	&= \lambda\alpha(x) + \lambda(x\cdot \alpha(y)) \\
-	&= \lambda\alpha(x) + x \cdot (\lambda\alpha(y)).
+	\lambda \sigma(xy) &= \lambda\left( \sigma(x) + x \cdot \sigma(y)\right) \\
+	&= \lambda\sigma(x) + \lambda(x\cdot \sigma(y)) \\
+	&= \lambda\sigma(x) + x \cdot (\lambda\sigma(y)).
 \end{align*}
 So $Z^1(K, V)$ is a subspace of the vector space of functions from $K$ to $V$. Hence $Z^1(K, V)$ is a vector space.
 
@@ -131,16 +131,16 @@ We conclude this Section with a useful Lemma \cite[Proposition 1]{kemper2000char
   \label{lem:lin_red_h}
 \end{lemma}
 
-\section{Non-abelian 1-Cohomology}
+\section{Nonabelian 1-Cohomology}
 	
-Richardson introduces the non-abelian 1-cohomology in \cite{richardson1982orbits}. We reproduce the definitions and selected results below.
+Richardson introduces the nonabelian 1-cohomology in \cite{richardson1982orbits}. We reproduce the definitions and selected results below.
 
 We no longer require that $V$ is abelian, henceforth $V$ is an algebraic group on which $K$ acts by group automorphisms. Accordingly, we denote the identity of $V$ by $1$. Much of the preceding Section is a direct analogue; for the most part, formulas are just rewritten in multiplicative notation.
-One main difference will see is that 1-coboundaries are less useful in the non-abelian setting, especially when defining the 1-cohomology.
+One main difference will see is that 1-coboundaries are less useful in the nonabelian setting, especially when defining the 1-cohomology.
 
-\begin{definition} We call a morphism $\alpha:K\rightarrow V$ a \emph{1-cocycle} if it satisfies
+\begin{definition} We call a morphism $\sigma:K\rightarrow V$ a \emph{1-cocycle} if it satisfies
 \begin{align}
-  \alpha(xy) = \alpha(x) (x\cdot\alpha(y)),
+  \sigma(xy) = \sigma(x) (x\cdot\sigma(y)),
   \label{eqn:na_z}
 \end{align}
 for all $x, y \in K$. Denote by $Z^1\left( K, V \right)$ the collection of all 1-cocycles from $K$ to $V$.
@@ -168,34 +168,34 @@ For any $v \in V$ and any $x, y \in K$,
 \end{align*}
 so $B^1(K, V) \subset Z^1(K, V)$.
 
-In the abelian case we use the fact that we can take the quotient $Z^1(K, V)/B^1(K, V)$, as $B^1(K, V)$ is an abelian subgroup of $Z^1(K, V)$, but in the non-abelian they are just sets. Moreover, although we did not explicitly mention it, in the abelian case the following holds
+In the abelian case we use the fact that we can take the quotient $Z^1(K, V)/B^1(K, V)$, as $B^1(K, V)$ is an abelian subgroup of $Z^1(K, V)$, but in the nonabelian they are just sets. Moreover, although we did not explicitly mention it, in the abelian case the following holds
 \begin{align*}
-	\psi(\alpha) = \psi(\beta) \Leftrightarrow \exists v \in V, \alpha = \beta + \chi^K_v.
+	\psi(\sigma_1) = \psi(\sigma_2) \Leftrightarrow \exists v \in V, \sigma_1 = \sigma_2 + \chi^K_v.
 \end{align*}
-In the non-abelian case, we have the following.
+In the nonabelian case, we have the following.
 
 \begin{lemma} Define the relation $\sim$ on $Z^1(K, V)$ by
 	\begin{align}
-		\alpha \sim \beta \Leftrightarrow \exists v \in V,\forall x \in K, \alpha = v\beta(x)(x \cdot v^{-1}).
+		\sigma_1 \sim \sigma_2 \Leftrightarrow \exists v \in V,\forall x \in K, \sigma_1 = v\sigma_2(x)(x \cdot v^{-1}).
 		\label{eqn:h_equiv}
 	\end{align}
 Then $\sim$ is an equivalence relation.
 \end{lemma}
 \begin{proof}
-The relation is symmetric, since $\alpha(x) = 1\alpha(x)(1 \cdot x^{-1})$ for all $\alpha\in Z^1(K, V)$ and all $x \in K$. It is reflexive since
+The relation is symmetric, since $\sigma(x) = 1\sigma(x)(1 \cdot x^{-1})$ for all $\sigma\in Z^1(K, V)$ and all $x \in K$. It is reflexive since
 \begin{align*}
-	\alpha(x) = v \beta(x)(x \cdot v^{-1}) \Rightarrow \beta(x) = v^{-1}\alpha(x)(x\cdot v).
+	\sigma_1(x) = v \sigma_2(x)(x \cdot v^{-1}) \Rightarrow \sigma_2(x) = v^{-1}\sigma_1(x)(x\cdot v).
 \end{align*}
 We show the relation is transitive. Suppose
 \begin{align*}
-	\alpha(x) &= v\beta(x)(x\cdot v^{-1}) \\
-	\beta(x) &= w\gamma(x)(x\cdot w^{-1}).
+	\sigma_1(x) &= v\sigma_2(x)(x\cdot v^{-1}),\textrm{ and} \\
+	\sigma_2(x) &= w\sigma_3(x)(x\cdot w^{-1}).
 \end{align*}
 Then
 \begin{align*}
-	\alpha(x) &= v\left(w \gamma(x)(x\cdot w^{-1})\right)\left(x\cdot v^{-1}\right) \\
-		&= vw \gamma(x)\left(x\cdot w^{-1}v^{-1}\right) \\
-		&= (vw) \gamma(x)\left(x\cdot (vw)^{-1}\right).
+	\sigma_1(x) &= v\left(w \sigma_3(x)(x\cdot w^{-1})\right)\left(x\cdot v^{-1}\right) \\
+		&= vw \sigma_3(x)\left(x\cdot w^{-1}v^{-1}\right) \\
+		&= (vw) \sigma_3(x)\left(x\cdot (vw)^{-1}\right).
 \end{align*}
 Therefore, Equation \ref{eqn:h_equiv} defines an equivalence relation on $Z^1(K, V)$.
 \end{proof}
@@ -208,7 +208,7 @@ Denote by $H^1(K, V)$ the \emph{1-cohomology}, defined to be the set of equivale
 Following Remark \ref{identity}, we identify the trivial map in $Z^1(K, V)$ by $\chi^K_1$, and we say a 1-cohomology is trivial if $H^1(K, V) = \psi(\chi^K_1)$, or equivalently if $Z^1(K, V) = B^1(K, V)$.
 \end{remark}
 
-R. Richardson \cite[Lemma 6.2.6]{richardson1982orbits} provides a result analogous to Lemma \ref{lem:lin_red_h}:
+R. Richardson \cite[Lemma 6.2.6]{richardson1982orbits} provides a result analogous to Lemma \ref{lem:lin_red_h}.
 \begin{lemma}
   Suppose $K$ is linearly reductive and $V$ is unipotent. Then $H^1(K, V)$ is trivial.
   \label{lem:nonab_lin_red}
@@ -223,34 +223,34 @@ As in the previous Section, $K, V$ are algebraic groups such that $K$ acts on $V
 \begin{lemma} \label{zeta}
 	Let $K'$ be an algebraic group and let $\zeta:K'\rightarrow K$ be a homomorphism. We have an action of $K'$ on $V$ by group automorphisms, defined by $x \cdot v = \zeta(x) \cdot v$ for all $x \in K', v \in V$.
 
-	Then for all $\alpha \in Z^1(K, V)$, $\alpha \circ \zeta \in Z^1(K', V)$.
+	Then for all $\sigma \in Z^1(K, V)$, $\sigma \circ \zeta \in Z^1(K', V)$.
 \end{lemma}
 \begin{proof}
-	Let $\alpha \in Z^1(K, V)$. Evidently $\alpha \circ \zeta$ is a morphism from $K'$ to $V$. Let $x, y \in K'$, then
+	Let $\sigma \in Z^1(K, V)$. Evidently $\sigma \circ \zeta$ is a morphism from $K'$ to $V$. Let $x, y \in K'$, then
 	\begin{align*}
-		(\alpha \circ \zeta)(xy) &= \alpha\left(\zeta(xy)\right) \\
-			&= \alpha\left(\zeta(x)\zeta(y)\right) \\
-			&= \alpha(\zeta(x))\left(\zeta(x) \cdot \alpha(\zeta(y))\right) \\
-			&= \alpha(\zeta(x))\left(x \cdot \alpha(\zeta(y))\right) \\
-			&= (\alpha\circ\zeta)(x)\left(x \cdot (\alpha\circ\zeta)(y)\right).
+		(\sigma \circ \zeta)(xy) &= \sigma\left(\zeta(xy)\right) \\
+			&= \sigma\left(\zeta(x)\zeta(y)\right) \\
+			&= \sigma(\zeta(x))\left(\zeta(x) \cdot \sigma(\zeta(y))\right) \\
+			&= \sigma(\zeta(x))\left(x \cdot \sigma(\zeta(y))\right) \\
+			&= (\sigma\circ\zeta)(x)\left(x \cdot (\sigma\circ\zeta)(y)\right).
 	\end{align*}
-	Therefore, since $\alpha \circ \zeta$ is a morphism and satisfies the 1-cocycle condition, $\alpha \circ \zeta \in Z^1(K', V)$.
+	Therefore, since $\sigma \circ \zeta$ is a morphism and satisfies the 1-cocycle condition, $\sigma \circ \zeta \in Z^1(K', V)$.
 \end{proof}
 
 \begin{lemma} \label{xi}
 	Let $V'$ be an algebraic group on which $K$ acts by group automorphisms.
-	Let $\xi: V \rightarrow V'$ be a $K$-equivariant homomorphism, that is, $x \cdot \xi(v) = \xi(x \cdot v)$ for all $x \in K, v \in V$. Then for all $\alpha \in Z^1(K, V)$, $\xi \circ \alpha \in Z^1(K, V')$. 
+	Let $\xi: V \rightarrow V'$ be a $K$-equivariant homomorphism, that is, $x \cdot \xi(v) = \xi(x \cdot v)$ for all $x \in K, v \in V$. Then for all $\sigma \in Z^1(K, V)$, $\xi \circ \sigma \in Z^1(K, V')$. 
 \end{lemma}
 \begin{proof}
-	Let $\alpha \in Z^1(K, V)$. Evidently $\xi \circ \alpha$ is a morphism from $K$ to $V'$. Let $x, y \in K$, then
+	Let $\sigma \in Z^1(K, V)$. Evidently $\xi \circ \sigma$ is a morphism from $K$ to $V'$. Let $x, y \in K$, then
 	\begin{align*}
-		(\xi \circ \alpha)(xy) &= \xi\left(\alpha(xy)\right) \\
-			&= \xi\left(\alpha(x)(x \cdot \alpha(y))\right) \\
-			&= \xi(\alpha(x))\xi(x \cdot \alpha(y)) \\
-			&= \xi(\alpha(x))\left(x \cdot \xi(\alpha(y))\right) \\
-			&= (\xi \circ \alpha)(x)\left(x \cdot (\xi \circ \alpha)(y)\right).
+		(\xi \circ \sigma)(xy) &= \xi\left(\sigma(xy)\right) \\
+			&= \xi\left(\sigma(x)(x \cdot \sigma(y))\right) \\
+			&= \xi(\sigma(x))\xi(x \cdot \sigma(y)) \\
+			&= \xi(\sigma(x))\left(x \cdot \xi(\sigma(y))\right) \\
+			&= (\xi \circ \sigma)(x)\left(x \cdot (\xi \circ \sigma)(y)\right).
 	\end{align*}
-	Therefore, since $\xi \circ \alpha$ is a morphism and satisfies the 1-cocycle condition, $\xi \circ \alpha \in Z^1(K, V')$.
+	Therefore, since $\xi \circ \sigma$ is a morphism and satisfies the 1-cocycle condition, $\xi \circ \sigma \in Z^1(K, V')$.
 \end{proof}
 
 \begin{lemma}[Map of 1-Cohomologies] \label{h1maps} Let $K', V'$ be algebraic groups such that $K'$ acts on $V'$ by group automorphisms.
@@ -259,7 +259,7 @@ As in the previous Section, $K, V$ are algebraic groups such that $K$ acts on $V
 
 	Then the function $Z^1(\zeta, \xi)$ defined by
 	\begin{align*}
-		Z^1(\zeta, \xi)(\alpha) = \xi \circ \alpha \circ \zeta,
+		Z^1(\zeta, \xi)(\sigma) = \xi \circ \sigma \circ \zeta,
 	\end{align*}
 	maps $Z^1(K, V)$ to $Z^1(K', V')$.
 
@@ -269,9 +269,9 @@ As in the previous Section, $K, V$ are algebraic groups such that $K$ acts on $V
 	\end{align*}
 	defined by
 	\begin{align*}
-		H^1(\zeta, \xi)(\psi(\alpha)) = \left(\psi' \circ Z^1(\zeta, \xi)\right)(\alpha),
+		H^1(\zeta, \xi)(\psi(\sigma)) = \left(\psi' \circ Z^1(\zeta, \xi)\right)(\sigma),
 	\end{align*}
-	for all $\alpha \in Z^1(K, V)$, where $\psi'$ is the canonical projection from $Z^1(K', V')$ to $H^1(K', V')$.
+	for all $\sigma \in Z^1(K, V)$, where $\psi'$ is the canonical projection from $Z^1(K', V')$ to $H^1(K', V')$.
 	Moreover, the following diagram commutes:
 	\begin{align*}
 		\xymatrix{
@@ -281,29 +281,29 @@ As in the previous Section, $K, V$ are algebraic groups such that $K$ acts on $V
 	\end{align*}
 \end{lemma}
 \begin{proof}
-	Let $\alpha \in Z^1(K, V)$. By Lemma \ref{zeta}, $\alpha \circ \zeta \in Z^1(K', V)$, where the action of $K'$ on $V$ is given by
+	Let $\sigma \in Z^1(K, V)$. By Lemma \ref{zeta}, $\sigma \circ \zeta \in Z^1(K', V)$, where the action of $K'$ on $V$ is given by
 	\begin{align*}
 		x\cdot v = \zeta(x)\cdot v,
 	\end{align*}
 	for $x\in K', v\in V$.
 	
-	By Lemma \ref{xi}, $\xi \circ \left(\alpha \circ \zeta\right) = \xi \circ \alpha \circ \zeta \in Z^1(K', V')$. Therefore $Z^1(\zeta, \xi)$ maps $Z^1(K, V)$ to $Z^1(K', V')$.
+	By Lemma \ref{xi}, $\xi \circ \left(\sigma \circ \zeta\right) = \xi \circ \sigma \circ \zeta \in Z^1(K', V')$. Therefore $Z^1(\zeta, \xi)$ maps $Z^1(K, V)$ to $Z^1(K', V')$.
 
-	It remains to show $H^1(\zeta, \xi)$ is well-defined. Let $\alpha,\beta \in Z^1(K, V)$ such that $\psi(\alpha) = \psi(\beta)$. Then there exists $v \in V$ such that
+	It remains to show $H^1(\zeta, \xi)$ is well-defined. Let $\sigma_1,\sigma_2 \in Z^1(K, V)$ such that $\psi(\sigma_1) = \psi(\sigma_2)$. Then there exists $v \in V$ such that
 	\begin{align*}
-		\beta(x) = v\alpha(x)(x \cdot v^{-1}),
+		\sigma_2(x) = v\sigma_1(x)(x \cdot v^{-1}),
 	\end{align*}
 	for all $x \in K$.
 
 	Then, for all $x \in K'$
 	\begin{align*}
-		\left(Z^1(\zeta, \xi)(\beta)\right)(x) &= \xi\left(\beta(\zeta(x))\right) \\
-			&= \xi \left( v \alpha(\zeta(x))\left(\zeta(x) \cdot v^{-1}\right) \right) \\
-			&= \xi(v) \xi(\alpha(\zeta(x))) \xi\left( \zeta(x) \cdot v^{-1}\right) \\
-			&= \xi(v) \xi(\alpha(\zeta(x)))\left(x \cdot \xi(v^{-1})\right) \\
-			&= \xi(v) \left(\left(Z^1(\zeta, \xi)(\alpha)\right)(x)\right) \left(x \cdot \xi(v^{-1})\right).
+		\left(Z^1(\zeta, \xi)(\sigma_2)\right)(x) &= \xi\left(\sigma_2(\zeta(x))\right) \\
+			&= \xi \left( v \sigma_1(\zeta(x))\left(\zeta(x) \cdot v^{-1}\right) \right) \\
+			&= \xi(v) \xi(\sigma_1(\zeta(x))) \xi\left( \zeta(x) \cdot v^{-1}\right) \\
+			&= \xi(v) \xi(\sigma_1(\zeta(x)))\left(x \cdot \xi(v^{-1})\right) \\
+			&= \xi(v) \left(\left(Z^1(\zeta, \xi)(\sigma_1)\right)(x)\right) \left(x \cdot \xi(v^{-1})\right).
 	\end{align*}
-	This shows that $\psi'\left(Z^1(\zeta, \xi)(\alpha)\right) = \psi'\left(Z^1(\zeta, \xi)(\beta)\right)$, hence $H^1(\zeta, \xi)$ is well-defined. It is clear that the diagram commutes.
+	This shows that $\psi'\left(Z^1(\zeta, \xi)(\sigma_1)\right) = \psi'\left(Z^1(\zeta, \xi)(\sigma_2)\right)$, hence $H^1(\zeta, \xi)$ is well-defined. It is clear that the diagram commutes.
 \end{proof} 
 \begin{remark} \label{maps_functorial}
  The maps $Z^1(\zeta, \xi), H^1(\zeta, \xi)$ are \emph{functorial}. Suppose that
@@ -339,12 +339,12 @@ This issue arises in Chapter \ref{Chapter4}, where we will adopt a modified nota
 Moreover, if $V, V'$ are vector spaces and the actions are linear, then $Z^1(K, V)$ is a linear map.
 \end{lemma}
 \begin{proof}
-	We prove the case where $V, V'$ are abelian. Let $\alpha, \beta \in Z^1(\zeta, \xi)$. Then
+	We prove the case where $V, V'$ are abelian. Let $\sigma_1, \sigma_2 \in Z^1(\zeta, \xi)$. Then
 \begin{align*}
-	\left(Z^1(\alpha + \beta)\right)(x) &= \xi\left((\alpha + \beta)(\zeta(x))\right) \\
-		&= \xi\left(\alpha(\zeta(x)) + \beta(\zeta(x))\right) \\
-		&= \xi\left(\alpha(\zeta(x))\right) + \xi\left(\beta(\zeta(x))\right) \\
-		&= Z^1(\zeta, \xi)(\alpha) + Z^1(\zeta, \xi)(\beta).
+	\left(Z^1(\sigma_1 + \sigma_2)\right)(x) &= \xi\left((\sigma_1 + \sigma_2)(\zeta(x))\right) \\
+		&= \xi\left(\sigma_1(\zeta(x)) + \sigma_2(\zeta(x))\right) \\
+		&= \xi\left(\sigma_1(\zeta(x))\right) + \xi\left(\sigma_2(\zeta(x))\right) \\
+		&= Z^1(\zeta, \xi)(\sigma_1) + Z^1(\zeta, \xi)(\sigma_2).
 \end{align*}
 Clearly $Z^1(\zeta, \xi)\left(\chi^K_v\right) = \chi^{K'}_{\xi(v)}$ for any $v\in V$, so $Z^1(\zeta, \xi)$ maps $B^1(K, V)$ into $B^1(K', V')$.
 
@@ -354,11 +354,11 @@ The case where $V, V'$ are vector spaces is left as an exercise.
 \begin{example} \label{h1subgp}
 	Let $K' < K$, let $\zeta$ be the inclusion of $K'$ in $K$, and let $\xi$ be the identity map on $V$. Then by Lemma \ref{h1maps}, the map $Z^1(\zeta, \xi)$ defined by
 \begin{align*}
-	Z^1(\zeta, \xi)(\alpha) = \xi \circ \alpha \circ \zeta = \alpha \circ \zeta,
+	Z^1(\zeta, \xi)(\sigma) = \xi \circ \sigma \circ \zeta = \sigma \circ \zeta,
 \end{align*}
 maps $Z^1(K, V)$ into $Z^1(K', V)$, and the map
 \begin{align*}
-	H^1(\zeta, \xi)(\psi(\alpha)) = \psi' \circ Z^1(\zeta, \xi),
+	H^1(\zeta, \xi)(\psi(\sigma)) = \psi' \circ Z^1(\zeta, \xi),
 \end{align*}
 is a well-defined map of 1-cohomologies from $H^1(K, V)$ to $H^1(K', V)$. 
 \end{example}
@@ -369,40 +369,41 @@ The situation in Example \ref{h1subgp} will be common, so we introduce further n
 	Z^1(\zeta) = Z^1(\zeta, \xi), \\
 	H^1(\zeta) = H^1(\zeta, \xi).
 \end{align*}
+We call $H^1(\zeta)$ the \emph{restriction of 1-cohomologies}.
 \end{definition}
 
-\begin{definition} Denote by $\mathrm{Ker}\left(Z^1(\zeta, \xi)\right)$ the collection of all $\alpha\in Z^1(K, V)$ such that $Z^1(\zeta, \xi)(\alpha) = \chi^{K'}_1 \in B^1(K', V')$. Similarly, denote by $\mathrm{Ker}\left(H^1(\zeta, \xi)\right)$ the collection of all $x \in H^1(K, V)$ such that $H^1(\zeta, \xi)(x) = \psi'\left(\chi^{K'}_1\right)\in H^1(K', V')$.
+\begin{definition} Denote by $\mathrm{Ker}\left(Z^1(\zeta, \xi)\right)$ the collection of all $\sigma\in Z^1(K, V)$ such that $Z^1(\zeta, \xi)(\sigma) = \chi^{K'}_1 \in B^1(K', V')$. Similarly, denote by $\mathrm{Ker}\left(H^1(\zeta, \xi)\right)$ the collection of all $x \in H^1(K, V)$ such that $H^1(\zeta, \xi)(x) = \psi'\left(\chi^{K'}_1\right)\in H^1(K', V')$.
 \end{definition}
 
 The following Lemma is useful when showing that $H^1(\zeta, \xi)$ is injective (cf. Lemma \ref{brown}, Lemma \ref{sl2_b_inj}).
 
 \begin{lemma}\label{kerh1} Let $K, K', V, V', \zeta, \xi$ satisfy the requirements of Lemma \ref{h1maps} and suppose $\xi$ is surjective. 
-Let $x\in \mathrm{Ker}\left(H^1(\zeta, \xi)\right)$. Then there exists $\beta \in Z^1(K, V)$ such that $x = \psi(\beta)$ and
+Let $x\in \mathrm{Ker}\left(H^1(\zeta, \xi)\right)$. Then there exists $\sigma \in Z^1(K, V)$ such that $x = \psi(\sigma)$ and
 \begin{align*}
-	Z^1(\zeta, \xi)(\beta) = \chi^{K'}_1.
+	Z^1(\zeta, \xi)(\sigma) = \chi^{K'}_1.
 \end{align*}
 \end{lemma}
 \begin{proof}
-	Let $\alpha \in Z^1(K, V)$ such that $\psi(\alpha) \in \mathrm{Ker}\left(H^1(\zeta, \xi)\right)$. Hence $Z^1(\zeta, \xi)(\alpha)$ is a 1-coboundary, so there exists $v \in V'$ such that
+	Let $\tau \in Z^1(K, V)$ such that $\psi(\tau) \in \mathrm{Ker}\left(H^1(\zeta, \xi)\right)$. Hence $Z^1(\zeta, \xi)(\tau)$ is a 1-coboundary, so there exists $v \in V'$ such that
 \begin{align*}
-	Z^1(\zeta, \xi)(\alpha) = \chi^{K'}_v.
+	Z^1(\zeta, \xi)(\tau) = \chi^{K'}_v.
 \end{align*}
 Since $\xi$ is surjective there exists $w \in V$ such that $\xi(w) = v$.
-Let $\beta \in Z^1(K, V)$ be defined by
+Let $\sigma \in Z^1(K, V)$ be defined by
 \begin{align*}
-	\beta(x) = w^{-1}\alpha(x)(x \cdot w),
+	\sigma(x) = w^{-1}\tau(x)(x \cdot w),
 \end{align*}
-for all $x \in K$. Then $\psi(\beta) = \psi(\alpha)$, and for all $x \in K'$
+for all $x \in K$. Then $\psi(\tau) = \psi(\sigma)$, and for all $x \in K'$
 \begin{align*}
-	\left(Z^1(\zeta, \xi)(\beta)\right)(x) &= \xi\left(\beta(\zeta(x))\right) \\
-		&= \xi\left(w^{-1}\alpha(\zeta(x))(\zeta(x)\cdot w )\right) \\
-		&= \xi\left(w^{-1}\right)\xi\left(\alpha(\zeta(x))\right)\xi\left(\zeta(x)\cdot w )\right) \\
-		&= v^{-1} \left(Z^1(\zeta, \xi)(\alpha)\right)(x) (\zeta(x) \cdot v ) \\
+	\left(Z^1(\zeta, \xi)(\sigma)\right)(x) &= \xi\left(\sigma(\zeta(x))\right) \\
+		&= \xi\left(w^{-1}\sigma(\zeta(x))(\zeta(x)\cdot w )\right) \\
+		&= \xi\left(w^{-1}\right)\xi\left(\sigma(\zeta(x))\right)\xi\left(\zeta(x)\cdot w )\right) \\
+		&= v^{-1} \left(Z^1(\zeta, \xi)(\sigma)\right)(x) (\zeta(x) \cdot v ) \\
 		&= v^{-1} v(\zeta(x) \cdot v^{-1}) (\zeta(x) \cdot v ) \\
 		&= (v^{-1} v) \left((\zeta(x) \cdot v)^{-1} (\zeta(x) \cdot v )\right) \\
 		&= 1.
 \end{align*}
-	Hence $Z^1(\zeta, \xi)(\beta) = \chi^{K'}_1$.
+	Hence $Z^1(\zeta, \xi)(\sigma) = \chi^{K'}_1$.
 \end{proof}
 
 The next Lemma is standard. It is a consequence of \cite[III.9.5(ii)]{brown1976cohomology}, the proof of which is left to the reader, so we give our own proof here. The Lemma deals with the abelian 1-cohomology of a finite group, so we alter our notation appropriately.
@@ -415,37 +416,37 @@ H^1(\zeta):H^1(\Gamma, V)\rightarrow H^1(\Gamma_p, V)
 is injective.
 \end{lemma}
 \begin{proof}
-	Let $x\in \mathrm{Ker}\left(H^1(\zeta)\right)$. By Lemma \ref{kerh1} there exists $\beta \in Z^1(\Gamma, V)$ such that $x = \psi(\beta)$ and $\beta(\gamma) = 0$ for all $\gamma \in \Gamma_p$.
+	Let $x\in \mathrm{Ker}\left(H^1(\zeta)\right)$. By Lemma \ref{kerh1} there exists $\sigma \in Z^1(\Gamma, V)$ such that $x = \psi(\sigma)$ and $\sigma(\gamma) = 0$ for all $\gamma \in \Gamma_p$.
 	
 	Choose a set of representatives $\{\gamma_1, \ldots, \gamma_l\} \subset \Gamma$ for the left coset space of $\Gamma_p$ in $\Gamma$.
 	For any $\gamma \in \Gamma$ and $\gamma' \in \Gamma_p$,
 \begin{align*}
-	\beta(\gamma \gamma') = \beta(\gamma) + \gamma \cdot \beta(\gamma') = \beta(\gamma) +\gamma \cdot 0 = \beta(\gamma).
+	\sigma(\gamma \gamma') = \sigma(\gamma) + \gamma \cdot \sigma(\gamma') = \sigma(\gamma) +\gamma \cdot 0 = \sigma(\gamma).
 \end{align*} 
-Hence $\beta$ is constant on the left $\Gamma_p$-cosets.
+Hence $\sigma$ is constant on the left $\Gamma_p$-cosets.
 
 We have an action of $\Gamma$ on the left $\Gamma_p$-coset space, defined by $\gamma \cdot (\widetilde{\gamma}\Gamma_p) = (\gamma\widetilde{\gamma})\Gamma_p$. It is clear that this action is independent of the choice of representative $\widetilde{\gamma}$ of the coset $\widetilde{\gamma}\Gamma_p$, so the action is well-defined. Hence for a fixed $\gamma \in \Gamma$, left multiplication by $\gamma$ permutes the left $\Gamma_p$-cosets $\{\gamma_1\Gamma_p, \gamma_2\Gamma_p, \ldots, \gamma_l\Gamma_p\}$. It follow that the ordered set $\{\gamma\gamma_1, \gamma\gamma_2, \ldots, \gamma\gamma_l\}$ meets each left $\Gamma_p$-coset exactly once. Therefore
 \begin{align}\label{betaconst}
-	\sum_{i=1}^l \beta(\gamma\gamma_i) = \sum_{i=1}^l \beta(\gamma_i),
+	\sum_{i=1}^l \sigma(\gamma\gamma_i) = \sum_{i=1}^l \sigma(\gamma_i),
 \end{align}
 although the summands may be in a different order.
 
-Let $w = \sum_{i=1}^l \beta(\gamma_i)$ and consider the 1-coboundary $\chi^\Gamma_w \in B^1(\Gamma, V)$.
+Let $w = \sum_{i=1}^l \sigma(\gamma_i)$ and consider the 1-coboundary $\chi^\Gamma_w \in B^1(\Gamma, V)$.
 \begin{align*}
 	\chi_{w}^\Gamma(\gamma) &=  w - \gamma\cdot w \\
-	&=  \sum_{i = 1}^l\beta(\gamma_i) - \gamma\cdot \sum_{i = 1}^l\beta(\gamma_i) \\
-	&=  \sum_{i = 1}^l\beta(\gamma_i) - \sum_{i = 1}^l\gamma \cdot \beta(\gamma_i) \\
-	&=  \sum_{i = 1}^l\beta(\gamma_i) - \sum_{i = 1}^l\left(\beta(\gamma\gamma_i) - \beta(\gamma)\right) \quad(\textrm{Equation }\ref{eqn:a_z})\\
-	&=  \sum_{i = 1}^l\beta(\gamma_i) - \sum_{i = 1}^l \beta(\gamma\gamma_i) +\sum_{i = 1}^l \beta(\gamma) \\
-	&=  \sum_{i = 1}^l\beta(\gamma_i) - \sum_{i = 1}^l \beta(\gamma_i) +\sum_{i = 1}^l \beta(\gamma) \quad(\textrm{Equation }\ref{betaconst})\\
-	&=  \sum_{i = 1}^l \beta(\gamma) \\
-	&= l\beta(\gamma),
+	&=  \sum_{i = 1}^l\sigma(\gamma_i) - \gamma\cdot \sum_{i = 1}^l\sigma(\gamma_i) \\
+	&=  \sum_{i = 1}^l\sigma(\gamma_i) - \sum_{i = 1}^l\gamma \cdot \sigma(\gamma_i) \\
+	&=  \sum_{i = 1}^l\sigma(\gamma_i) - \sum_{i = 1}^l\left(\sigma(\gamma\gamma_i) - \sigma(\gamma)\right) \quad(\textrm{Equation }\ref{eqn:a_z})\\
+	&=  \sum_{i = 1}^l\sigma(\gamma_i) - \sum_{i = 1}^l \sigma(\gamma\gamma_i) +\sum_{i = 1}^l \sigma(\gamma) \\
+	&=  \sum_{i = 1}^l\sigma(\gamma_i) - \sum_{i = 1}^l \sigma(\gamma_i) +\sum_{i = 1}^l \sigma(\gamma) \quad(\textrm{Equation }\ref{betaconst})\\
+	&=  \sum_{i = 1}^l \sigma(\gamma) \\
+	&= l\sigma(\gamma),
 \end{align*}
 for all $\gamma \in \Gamma$.
 
 Since $\mathrm{gcd}(l, p) = \mathrm{gcd}\left([\Gamma_p:\Gamma], p\right) = 1$, the positive integer $l$ is not zero in $k$. Therefore, by Lemma \ref{vspace}
 \begin{align*}
-	\beta = \chi^\Gamma_{l^{-1}w} \in B^1(\Gamma, V),
+	\sigma = \chi^\Gamma_{l^{-1}w} \in B^1(\Gamma, V),
 \end{align*}
 which proves $\mathrm{Ker}\left(H^1(\zeta)\right)$ is trivial.
 \end{proof}
@@ -476,15 +477,15 @@ By Lemma \ref{h1maps} (Remark \ref{maps_functorial}) we get the following commut
 	}
 \end{align}
 
-It is elementary to show that $U(\mathbb{F}_{p^r})$ is a Sylow $p$-subgroup of $SL_2(\mathbb{F}_{p^r})$ (Appendix \ref{u_sylow}, or \cite[TODO]{carter1989simple}), so by Lemma \ref{brown}, $H^1(\zeta_r)$ is injective for all $r \in \mathbb{N}$.
+It is elementary to show that $U(\mathbb{F}_{p^r})$ is a Sylow $p$-subgroup of $SL_2(\mathbb{F}_{p^r})$ (Appendix \ref{u_sylow}), so by Lemma \ref{brown}, $H^1(\zeta_r)$ is injective for all $r \in \mathbb{N}$.
 
-Let $\beta\in Z^1(SL_2(k), V)$ such that $\beta \notin B^1(SL_2(k), V)$, that is,
+Let $\sigma\in Z^1(SL_2(k), V)$ such that $\sigma \notin B^1(SL_2(k), V)$, that is,
 \begin{align}\label{betanob1}
-	\beta \neq \chi^{SL_2(k)}_v,
+	\sigma \neq \chi^{SL_2(k)}_v,
 \end{align}
 for any $v \in V$. For each $x\in SL_2(\mathbb{F}_{p^r})$ define the morphism $f_x:V\rightarrow V$ by
 	\begin{align*}
-		f_x(v) = \beta(x) - \chi^{SL_2(k)}_v(x).
+		f_x(v) = \sigma(x) - \chi^{SL_2(k)}_v(x).
 	\end{align*}
 Since $\mathbb{F}_{p^{r!}} \subset \mathbb{F}_{p^{(r+1)!}}$ we have $SL_2(\mathbb{F}_{p^{r!}}) \subset SL_2(\mathbb{F}_{p^{(r+1)!}})$.
 Consider the sequence $\left\{C_{r}\right\}_{r \in \mathbb{N}}$ defined by
@@ -500,48 +501,48 @@ Consider the sequence $\left\{C_{r}\right\}_{r \in \mathbb{N}}$ defined by
 Then the Noetherian property for $V$ requires that the subsequence $\left\{C_{r!}\right\}_{r \in \mathbb{N}}$ becomes constant, and since $\cap_{r\in\mathbb{N}}C_{r!} = \emptyset$, the subsequence $\left\{C_{r!}\right\}_{r \in \mathbb{N}}$ is eventually empty.
 That is, there exists $s\in\mathbb{N}$ such that
 	\begin{align*}
-		Z^1(\iota_s)(\beta) \neq \chi_v^{SL_2(\mathbb{F}_{p^{s}})},
+		Z^1(\iota_s)(\sigma) \neq \chi_v^{SL_2(\mathbb{F}_{p^{s}})},
 	\end{align*}
-	for any $v \in V$. We have shown that if $\beta \in Z^1(SL_2(k), V)$ such that $Z^1(\iota_{r!})(\beta) \in B^1(SL_2(\mathbb{F}_{p^{r!}}), V)$ for all $r \in \mathbb{N}$, then $\beta \in B^1(SL_2(k), V)$.
+	for any $v \in V$. We have shown that if $\sigma \in Z^1(SL_2(k), V)$ such that $Z^1(\iota_{r!})(\sigma) \in B^1(SL_2(\mathbb{F}_{p^{r!}}), V)$ for all $r \in \mathbb{N}$, then $\sigma \in B^1(SL_2(k), V)$.
 
-So, let $\alpha \in Z^1(SL_2(k), V)$ such that $\psi(\alpha) \in \mathrm{Ker}\left(H^1(\zeta)\right)$.
+So, let $\sigma \in Z^1(SL_2(k), V)$ such that $\psi(\sigma) \in \mathrm{Ker}\left(H^1(\zeta)\right)$.
 Then, consulting the commutative diagram in Equation \ref{eqn:cd},
 \begin{align*}
-	&\psi(\alpha) \in \mathrm{Ker}\left(H^1(\iota'_r) \circ H^1(\zeta)\right), \forall r \in \mathbb{N} \\
-	\Rightarrow &\,\psi(\alpha) \in \mathrm{Ker}\left(H^1(\zeta_r) \circ H^1(\iota_r)\right), \forall r \in \mathbb{N}  \\
-	\Rightarrow &\,H^1(\iota_r)(\psi(\alpha)) \in \mathrm{Ker}\left(H^1(\zeta_r)\right), \forall r \in \mathbb{N}  \\
-	\Rightarrow &\,H^1(\iota_r)(\psi(\alpha))\textrm{ is trivial }, \forall r \in \mathbb{N} \\% \quad(\textrm{since }H^1(\zeta_r)\textrm{ is injective}) \\
-	\Rightarrow &\,Z^1(\iota_r)(\alpha) \in B^1(SL_2(\mathbb{F}_{p^r}), V), \forall r \in \mathbb{N}  \\
-	\Rightarrow &\,\alpha \in B^1(SL_2(k), V) \\ %\quad(\textrm{by (ii)}).
-	\Rightarrow &\,\psi(\alpha) \in H^1(SL_2(k), V) \textrm{ is trivial}.
+	&\psi(\sigma) \in \mathrm{Ker}\left(H^1(\iota'_r) \circ H^1(\zeta)\right), \forall r \in \mathbb{N} \\
+	\Rightarrow &\,\psi(\sigma) \in \mathrm{Ker}\left(H^1(\zeta_r) \circ H^1(\iota_r)\right), \forall r \in \mathbb{N}  \\
+	\Rightarrow &\,H^1(\iota_r)(\psi(\sigma)) \in \mathrm{Ker}\left(H^1(\zeta_r)\right), \forall r \in \mathbb{N}  \\
+	\Rightarrow &\,H^1(\iota_r)(\psi(\sigma))\textrm{ is trivial }, \forall r \in \mathbb{N} \\% \quad(\textrm{since }H^1(\zeta_r)\textrm{ is injective}) \\
+	\Rightarrow &\,Z^1(\iota_r)(\sigma) \in B^1(SL_2(\mathbb{F}_{p^r}), V), \forall r \in \mathbb{N}  \\
+	\Rightarrow &\,\sigma \in B^1(SL_2(k), V) \\ %\quad(\textrm{by (ii)}).
+	\Rightarrow &\,\psi(\sigma) \in H^1(SL_2(k), V) \textrm{ is trivial}.
 \end{align*}
 This shows $H^1(\zeta)$ is injective.
 \end{proof}
 
 \begin{remark}
-It may be true that the above Example holds for unipotent $V$. In the Lemma below we show that the restriction map $H^1(SL_2(k), V) \rightarrow  H^1(B, V)$ is injective, where $B$ is a Borel subgroup of $SL_2(k)$. Then in Lemma \ref{lem:first}, and Examples \ref{g2:alpha} and \ref{c3:alpha}, we show that for certain $G$, if $x\in H^1(SL_2(k), V)$ then there exists $\beta\in Z^1(SL_2(k), V)$ such that $\beta\left(B\right)$ lies in an abelian subgroup of $V$. The hope is that it is enough that the \emph{image} in $V$ is abelian to be able to show $H^1(B, V)\rightarrow H^1(U_2(k), V)$ is injective.
+It may be true that the above Example holds for unipotent $V$. In the Lemma below we show that the restriction map $H^1(SL_2(k), V) \rightarrow  H^1(B, V)$ is injective, where $B$ is a Borel subgroup of $SL_2(k)$. Then in Lemma \ref{lem:first}, and Examples \ref{g2:alpha} and \ref{c3:alpha}, we show that for certain $G$, if $x\in H^1(SL_2(k), V)$ then there exists $\sigma\in Z^1(SL_2(k), V)$ such that $\sigma\left(B\right)$ lies in an abelian subgroup of $V$. The hope is that it is enough that the \emph{image} in $V$ is abelian to be able to show $H^1(B, V)\rightarrow H^1(U_2(k), V)$ is injective.
 \end{remark}
 
 \begin{lemma} Let $V$ be an algebraic group, and suppose $SL_2(k)$ acts on $V$ by group automorphisms. Let $B$ be a Borel subgroup of $SL_2(k)$ and let $\zeta: B \rightarrow SL_2(k)$ be the inclusion map. Then $H^1(\zeta): H^1(SL_2(k), V)\rightarrow H^1(B, V)$ is injective.
   \label{sl2_b_inj}
 \end{lemma}
 \begin{proof}
-Let $x \in \mathrm{Ker}\left(H^1(\zeta)\right)$. Then by Lemma \ref{kerh1} there exists $\beta \in Z^1(SL_2(k), V)$ such that $x = \psi(\beta)$ and $\beta(b) = 1$ for all $b \in B$.
+Let $x \in \mathrm{Ker}\left(H^1(\zeta)\right)$. Then by Lemma \ref{kerh1} there exists $\sigma \in Z^1(SL_2(k), V)$ such that $x = \psi(\sigma)$ and $\sigma(b) = 1$ for all $b \in B$.
 
-Let $y\in SL_2(k), b \in B$. Since $\beta(yb) = \beta(y)(y\cdot \beta(b)) = \beta(y)$, there exists a unique morphism $\widetilde{\beta}$ such that the following diagram commutes,
+Let $y\in SL_2(k), b \in B$. Since $\sigma(yb) = \sigma(y)(y\cdot \sigma(b)) = \sigma(y)$, there exists a unique morphism $\widetilde{\sigma}$ such that the following diagram commutes,
 \begin{align*}
 	\xymatrix{
-	SL_2(k) \ar[r]^{\beta} \ar[d]_{\pi} & V\\
-	SL_2/B \ar[ru]_{\widehat{\beta}}
+	SL_2(k) \ar[r]^{\sigma} \ar[d]_{\pi} & V\\
+	SL_2/B \ar[ru]_{\widehat{\sigma}}
 	},
 \end{align*}
-where $\pi$ is the canonical projection $\pi:SL_2 \rightarrow SL_2/B$ (\cite[TODO]{humphreys1975linear}). Hence $\widehat{\beta}(xB) = \beta(x)$ for all $x \in SL_2(k)$.
+where $\pi$ is the canonical projection $\pi:SL_2 \rightarrow SL_2/B$ (\cite[TODO]{humphreys1975linear}). Hence $\widehat{\sigma}(xB) = \sigma(x)$ for all $x \in SL_2(k)$.
 
-Since $SL_2(k)/B$ is an irreducible projective variety \cite[Theorem 21.3]{humphreys1975linear}, $\widehat{\beta}$ must be constant. Therefore, since $\beta(x) = 1$ for all $x \in B$, $\beta(x) = \widehat{\beta}(xB) = 1$ for all $x \in SL_2(k)$. Hence $\beta = \chi^{SL_2(k)}_1 \in B^1(SL_2(k), V)$ and so $\mathrm{Ker}\left(H^1(\zeta)\right)$ is trivial.
+Since $SL_2(k)/B$ is an irreducible projective variety \cite[Theorem 21.3]{humphreys1975linear}, $\widehat{\sigma}$ must be constant. Therefore, since $\sigma(x) = 1$ for all $x \in B$, $\sigma(x) = \widehat{\sigma}(xB) = 1$ for all $x \in SL_2(k)$. Hence $\sigma = \chi^{SL_2(k)}_1 \in B^1(SL_2(k), V)$ and so $\mathrm{Ker}\left(H^1(\zeta)\right)$ is trivial.
 \end{proof} 
 
-\begin{lemma}\label{trivial_on_t} Suppose $V$ is unipotent and let $x \in H^1(SL_2(k), V)$. Then there exists $\beta \in Z^1(SL_2(k), V)$ such that $x = \psi(\beta)$ and $\beta\left(D_2(k)\right) = 1$.
+\begin{lemma}\label{trivial_on_t} Suppose $V$ is unipotent and let $x \in H^1(SL_2(k), V)$. Then there exists $\sigma \in Z^1(SL_2(k), V)$ such that $x = \psi(\sigma)$ and $\sigma\left(T_2(k)\right) = 1$.
 \end{lemma}
 \begin{proof}
-	Let $\zeta:D_2(k) \rightarrow SL_2(k)$ be the inclusion map. Since $D_2(k)$ is linearly reductive, $H^1(D_2(k), V)$ is trivial (Lemma \ref{lem:nonab_lin_red}), so $\mathrm{Ker}\left(H^1(\zeta)\right) = H^1(SL_2(k), V)$. Now apply Lemma \ref{kerh1}.
+	Let $\zeta:T_2(k) \rightarrow SL_2(k)$ be the inclusion map. Since $T_2(k)$ is linearly reductive, $H^1(T_2(k), V)$ is trivial (Lemma \ref{lem:nonab_lin_red}), so $\mathrm{Ker}\left(H^1(\zeta)\right) = H^1(SL_2(k), V)$. Now apply Lemma \ref{kerh1}.
 \end{proof}

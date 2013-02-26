@@ -37,13 +37,13 @@ The following general result allows us to replace $G$-conjugacy with $P$-conjuga
   \label{lem:GPconj}
 \end{lemma}
 \begin{proof}
-	Let $\rho, \tau \in R$ such that $\rho$ and $\tau$ lie in the same $G$-conjugacy class of $R$. Then there exists $g\in G$ such that
+	Let $\rho_1, \rho_2 \in R$ such that $\rho_1$ and $\rho_2$ lie in the same $G$-conjugacy class of $R$. Then there exists $g\in G$ such that
 	\begin{align*}
-		g \rho(x) g^{-1} = \tau(x),
+		g \rho_1(x) g^{-1} = \rho_2(x),
 	\end{align*}
 for all $x \in K$.
 	
-	Let $Q = gPg^{-1}$, hence $\tau(K) \subset P \cap Q$.
+	Let $Q = gPg^{-1}$, hence $\rho_2(K) \subset P \cap Q$.
 	Let $T$ be a maximal torus of $G$ contained in $P\cap Q$. Since $T$ and $gTg^{-1}$ are maximal tori of $Q$ they must be $Q$-conjugate, so there exists $q\in Q$ such that
 	\begin{align*}
 		qTq^{-1} = gTg^{-1}.
@@ -61,13 +61,13 @@ for all $x \in K$.
 	\end{align*}
 	Let $q' = r^{-1}t^{-1}$ so $q' \in P$. Then
 	\begin{align*}
-		\rho(x) &= g^{-1} \tau(x) g\\
-		&= (q'n^{-1}) \tau(x) nq'^{-1},
+		\rho_1(x) &= g^{-1} \rho_2(x) g\\
+		&= (q'n^{-1}) \rho_2(x) nq'^{-1},
 	\end{align*}
-	for all $x \in K$. Hence $\rho\in P\cdot(n^{-1}\cdot \tau)$.
+	for all $x \in K$. Hence $\rho_1\in P\cdot(n^{-1}\cdot \rho_2)$.
 	This shows 
 	%\begin{align*}
-	%	R \cap \left(G\cdot \tau \right) \subset \bigcup_{n \in N} P \cdot(n^{-1} \cdot \tau).
+	%	R \cap \left(G\cdot \rho_2 \right) \subset \bigcup_{n \in N} P \cdot(n^{-1} \cdot \rho_2).
 	%\end{align*}
 	%
 	%That is,
@@ -78,8 +78,8 @@ for all $x \in K$.
 
 
 \section{The Application of the 1-Cohomology}
-Let $\sigma \in \mathrm{Hom}(K, L)$. Then via the action of $L$ on $V$ given in Equation \ref{laction}, we have an action of $K$ on $V$ given by
-\begin{align} \label{haction} x \cdot v = \sigma(x) \cdot v, \end{align}
+Let $\omega \in \mathrm{Hom}(K, L)$. Then via the action of $L$ on $V$ given in Equation \ref{laction}, we have an action of $K$ on $V$ given by
+\begin{align} \label{haction} x \cdot v = \omega(x) \cdot v, \end{align}
 for $x \in K, v \in V$.
 
 \begin{definition} Let $\rho \in \mathrm{Hom}(K, P)$. We associate with $\rho$ the map $\rho^L \in \mathrm{Hom}(K, L)$ defined by
@@ -88,176 +88,176 @@ $\rho^L = \pi^L \circ \rho.$
 %\end{align*}
 \end{definition}
 
-Let $\rho \in \mathrm{Hom}(K, P)$ and define the map $\alpha_\rho: K \rightarrow V$ by
+Let $\rho \in \mathrm{Hom}(K, P)$ and define the map $\sigma_\rho: K \rightarrow V$ by
 \begin{align}\label{rho:alpha}
-\alpha_\rho(x) = \rho(x)\rho^L(x^{-1}).
+\sigma_\rho(x) = \rho(x)\rho^L(x^{-1}).
 \end{align}
-We have an action of $K$ on $V$ via $\rho^L$ using Equation \ref{haction}, and we will show that with this action the map $\alpha_\rho$ is a 1-cocycle from $K$ to $V$. To this end, let $x, y \in K$.
+We have an action of $K$ on $V$ via $\rho^L$ using Equation \ref{haction}, and we will show that with this action the map $\sigma_\rho$ is a 1-cocycle from $K$ to $V$. To this end, let $x, y \in K$.
 Then,
-\begin{align*} \alpha_\rho(xy) &= \alpha_\rho(xy) \rho^L(xy) \left(\rho^L(xy)\right)^{-1} \\
+\begin{align*} \sigma_\rho(xy) &= \sigma_\rho(xy) \rho^L(xy) \left(\rho^L(xy)\right)^{-1} \\
 	&= \rho(xy) \left(\rho^L(xy)\right)^{-1} \\
 	&= \rho(x) \rho(y) \left(\rho^L(xy)\right)^{-1} \\
-	&= \alpha_\rho(x) \rho^L(x) \alpha_\rho(y) \rho^L(y) \left(\rho^L(xy)\right)^{-1} \\
-	&= \alpha_\rho(x) \rho^L(x) \alpha_\rho(y) \rho^L(x^{-1}) \rho^L(x) \rho^L(y) \left(\rho^L(xy)\right)^{-1} \\
-	&= \alpha_\rho(x) \left(x \cdot \alpha_\rho(y)\right). 
+	&= \sigma_\rho(x) \rho^L(x) \sigma_\rho(y) \rho^L(y) \left(\rho^L(xy)\right)^{-1} \\
+	&= \sigma_\rho(x) \rho^L(x) \sigma_\rho(y) \rho^L(x^{-1}) \rho^L(x) \rho^L(y) \left(\rho^L(xy)\right)^{-1} \\
+	&= \sigma_\rho(x) \left(x \cdot \sigma_\rho(y)\right). 
 \end{align*}
 
-Therefore $\alpha_\rho$ satisfies the 1-cocycle condition in Equation \ref{eqn:na_z}.
+Therefore $\sigma_\rho$ satisfies the 1-cocycle condition in Equation \ref{eqn:na_z}.
 
-\begin{definition}\label{h1sigma} Let $\sigma \in \mathrm{Hom}(K, L)$. We denote by
-\begin{align*} Z^1(K, V)_\sigma \end{align*}
-the set of 1-cocycles from $K$ to $V$ where $K$ acts on $V$ via $\sigma$.
+\begin{definition}\label{h1sigma} Let $\omega \in \mathrm{Hom}(K, L)$. We denote by
+\begin{align*} Z^1(K, V)_\omega \end{align*}
+the set of 1-cocycles from $K$ to $V$ where $K$ acts on $V$ via $\omega$.
 Likewise, denote by
-\begin{align*} H^1(K, V)_\sigma \end{align*}
-the 1-cohomology obtained from $Z^1(K, V)_\sigma$ under the equivalence relation in Equation \ref{eqn:h_equiv}. Denote by $\psi$ the canonical projection
-\begin{align*} \psi : Z^1(K, V)_\sigma \rightarrow H^1(K, V)_\sigma. \end{align*}
+\begin{align*} H^1(K, V)_\omega \end{align*}
+the 1-cohomology obtained from $Z^1(K, V)_\omega$ under the equivalence relation in Equation \ref{eqn:h_equiv}. Denote by $\psi$ the canonical projection
+\begin{align*} \psi : Z^1(K, V)_\omega \rightarrow H^1(K, V)_\omega. \end{align*}
 \end{definition} 
 
-\begin{definition} Let $\sigma \in \mathrm{Hom}(K, L)$ and define
-\begin{align*} \mathrm{Hom}(K, P)_\sigma = \{ \rho \in \mathrm{Hom}(K, P) \,|\, \rho^L = \sigma\}. \end{align*}
+\begin{definition} Let $\omega \in \mathrm{Hom}(K, L)$ and define
+\begin{align*} \mathrm{Hom}(K, P)_\omega = \{ \rho \in \mathrm{Hom}(K, P) \,|\, \rho^L = \omega\}. \end{align*}
 More generally, if $R \subset \mathrm{Hom}(K, P)$ define
-\begin{align*} R_\sigma = \{ \rho \in R \,|\, \rho^L = \sigma \}. \end{align*}
+\begin{align*} R_\omega = \{ \rho \in R \,|\, \rho^L = \omega \}. \end{align*}
 \end{definition}
 
-By construction, each $\rho \in \mathrm{Hom}(K, P)_\sigma$ yields a 1-cocycle $\alpha_\rho \in Z^1(K, V)_\sigma$ using Equation \ref{rho:alpha}.
-Conversely given a 1-cocycle $\alpha \in Z^1(K, V)_\sigma$ we can construct a map $\rho: K \rightarrow P$ defined by
+By construction, each $\rho \in \mathrm{Hom}(K, P)_\omega$ yields a 1-cocycle $\sigma_\rho \in Z^1(K, V)_\omega$ using Equation \ref{rho:alpha}.
+Conversely given a 1-cocycle $\sigma \in Z^1(K, V)_\omega$ we can construct a map $\rho: K \rightarrow P$ defined by
 \begin{align}\label{alpha:rho}
-\rho(x) = \alpha(x)\sigma(x),
+\rho(x) = \sigma(x)\omega(x),
 \end{align}
 for all $x \in K$. This construction is a homomorphism from $K$ to $P$. For take $x, y \in K$, then
 \begin{align*}
-  \rho(x y) &= \alpha(x y) \sigma(x y) \\
-  &= \alpha(x)(x \cdot \alpha(y)) \sigma(x) \sigma(y) \\
-  &= \alpha(x) \sigma(x) \alpha(y) \sigma(x)^{-1} \sigma(x) \sigma(y) \\
-  &= \alpha(x) \sigma(x) \alpha(y) \sigma(y) \\
+  \rho(x y) &= \sigma(x y) \omega(x y) \\
+  &= \sigma(x)(x \cdot \sigma(y)) \omega(x) \omega(y) \\
+  &= \sigma(x) \omega(x) \sigma(y) \omega(x)^{-1} \omega(x) \omega(y) \\
+  &= \sigma(x) \omega(x) \sigma(y) \omega(y) \\
   &= \rho(x) \rho(y).
 \end{align*}
 
-We point out that the constructions in Equations \ref{rho:alpha} and \ref{alpha:rho} are inverses of each other, and formalize the preceding in the following Lemma.
+We point out that the constructions in Equations \ref{rho:alpha} and \ref{alpha:rho} are inverses of each other, and formalize the preceding discussion in the following Lemma.
 
 \begin{lemma}
-  Let $\sigma \in \mathrm{Hom}(K, L)$. The map
-\begin{align*} z: \mathrm{Hom}(K, P)_{\sigma} \rightarrow Z^1(K, V)_\sigma, \end{align*}
+  Let $\omega \in \mathrm{Hom}(K, L)$. The map
+\begin{align*} z: \mathrm{Hom}(K, P)_{\omega} \rightarrow Z^1(K, V)_\omega, \end{align*}
 defined by
-\begin{align*} z(\rho)(x) = \rho(x)\sigma(x^{-1}), \end{align*}
-for all $\rho \in \mathrm{Hom}(K, P)_\sigma$ and all $x \in K$, is a bijection.
+\begin{align*} z(\rho)(x) = \rho(x)\omega(x^{-1}), \end{align*}
+for all $\rho \in \mathrm{Hom}(K, P)_\omega$ and all $x \in K$, is a bijection.
 \label{lem:hom_z1}
 \end{lemma}
 \begin{proof}
 We have previously shown that $z$ is onto and has inverse defined by
-\begin{align*} z^{-1}(\alpha)(x) = \alpha(x)\sigma(x), \end{align*}
-for all $\alpha \in Z^1(K, V)_\sigma$ and all $x \in K$, so there is nothing to prove.
+\begin{align*} z^{-1}(\sigma)(x) = \sigma(x)\omega(x), \end{align*}
+for all $\sigma \in Z^1(K, V)_\omega$ and all $x \in K$, so there is nothing to prove.
 \end{proof}
 
-%Henceforth we do no harm to use the otherwise suggestive notation ``$\alpha_\rho \in Z^1(K, V)_\sigma$'', meaning an element of $Z^1(K, V)_\sigma$ with corresponding element $\rho \in \mathrm{Hom}(K, P)_\sigma$ given by $\rho = z^{-1}(\alpha_\rho)$.
+%Henceforth we do no harm to use the otherwise suggestive notation ``$\sigma_\rho \in Z^1(K, V)_\omega$'', meaning an element of $Z^1(K, V)_\omega$ with corresponding element $\rho \in \mathrm{Hom}(K, P)_\omega$ given by $\rho = z^{-1}(\sigma_\rho)$.
 
-Since $\mathrm{Hom}(K, P)_\sigma$ is stable under conjugation by elements of $V$ we can consider $V$-conjugacy classes of $\mathrm{Hom}(K, P)_\sigma$.
-\begin{definition} Denote by $\mathrm{Hom}(K, P)_\sigma / V$ the collection of $V$-conjugacy classes of $\mathrm{Hom}(K, P)_\sigma$, and denote by $\phi$ the canonical projection,
-\begin{align*} \phi : \mathrm{Hom}(K, P)_\sigma \rightarrow \mathrm{Hom}(K, P)_\sigma / V. \end{align*}
+Since $\mathrm{Hom}(K, P)_\omega$ is stable under conjugation by elements of $V$ we can consider $V$-conjugacy classes of $\mathrm{Hom}(K, P)_\omega$.
+\begin{definition} Denote by $\mathrm{Hom}(K, P)_\omega / V$ the collection of $V$-conjugacy classes of $\mathrm{Hom}(K, P)_\omega$, and denote by $\phi$ the canonical projection,
+\begin{align*} \phi : \mathrm{Hom}(K, P)_\omega \rightarrow \mathrm{Hom}(K, P)_\omega / V. \end{align*}
 \end{definition}
 
-In fact, we show that $z$ descends to give a bijection from $\mathrm{Hom}(K, P)_\sigma / V$ to $H^1(K, V)_\sigma$.
+In fact, we show that $z$ descends to give a bijection from $\mathrm{Hom}(K, P)_\omega / V$ to $H^1(K, V)_\omega$.
 
 \begin{lemma} \label{maph}
-For $\rho \in \mathrm{Hom}(K, P)_\sigma$, define
+For $\rho \in \mathrm{Hom}(K, P)_\omega$, define
 \begin{align*}
 h(\phi( \rho)) = \psi(z(\rho)).
 \end{align*}
-Then $h$ is a well-defined bijection from $\mathrm{Hom}(K, P)_\sigma / V$ to $H^1(K, P)_\sigma$. Moreover, the following diagram commutes:
+Then $h$ is a well-defined bijection from $\mathrm{Hom}(K, P)_\omega / V$ to $H^1(K, P)_\omega$. Moreover, the following diagram commutes:
   \begin{align*}
     \xymatrix{
-    \mathrm{Hom}(K, P)_{\sigma} \ar[r]^z \ar[d]_\phi & Z^{1}(K, V)_\sigma \ar[d]^\psi \\
-    \mathrm{Hom}(K, P)_{\sigma}/V \ar[r]^h & H^{1}(K, V)_\sigma.
+    \mathrm{Hom}(K, P)_{\omega} \ar[r]^z \ar[d]_\phi & Z^{1}(K, V)_\omega \ar[d]^\psi \\
+    \mathrm{Hom}(K, P)_{\omega}/V \ar[r]^h & H^{1}(K, V)_\omega.
     }
   \end{align*}
   \label{lem:v_h1}
 \end{lemma}
 \begin{proof}  
-Let $\rho, \tau \in \mathrm{Hom}(K, P)_\sigma$ such that $\phi(\rho) = \phi(\tau)$. Then there exists $v \in V$ such that
-\begin{align*} \tau(x) =  v\rho(x)v^{-1}, \end{align*}
+Let $\rho_1, \rho_2 \in \mathrm{Hom}(K, P)_\omega$ such that $\phi(\rho_1) = \phi(\rho_2)$. Then there exists $v \in V$ such that
+\begin{align*} \rho_2(x) =  v\rho_1(x)v^{-1}, \end{align*}
 for all $x \in K$. Furthermore, for all $x \in K$
 \begin{align*}
-z(\tau)(x) % &= \alpha_\tau(x) \\
-&= \tau(x)\sigma(x^{-1}) \\
-&= v \rho(x) v^{-1} \sigma(x^{-1}) \\
-&= v \rho(x) \sigma(x^{-1})\sigma(x) v^{-1} \sigma(x^{-1}) \\
-&= v \rho(x) \sigma(x^{-1}) \left(x \cdot v^{-1}\right) \\
-%&= v \alpha_\rho(x) \left(x \cdot v^{-1}\right) \\
-&= v \left(z(\rho)(x)\right) \left(x \cdot v^{-1}\right).
+z(\rho_2)(x) % &= \sigma_\rho_2(x) \\
+&= \rho_2(x)\omega(x^{-1}) \\
+&= v \rho_1(x) v^{-1} \omega(x^{-1}) \\
+&= v \rho_1(x) \omega(x^{-1})\omega(x) v^{-1} \omega(x^{-1}) \\
+&= v \rho_1(x) \omega(x^{-1}) \left(x \cdot v^{-1}\right) \\
+%&= v \sigma_\rho_1(x) \left(x \cdot v^{-1}\right) \\
+&= v \left(z(\rho_1)(x)\right) \left(x \cdot v^{-1}\right).
 \end{align*}
-This shows that $z(\rho)$ and $z(\tau)$ satisfy the equivalence relation in Equation \ref{eqn:h_equiv}. Therefore $\psi\left(z(\rho)\right) = \psi\left(z(\tau)\right)$ and so $h$ is well-defined.
+This shows that $z(\rho_1)$ and $z(\rho_2)$ satisfy the equivalence relation in Equation \ref{eqn:h_equiv}. Therefore $\psi\left(z(\rho_1)\right) = \psi\left(z(\rho_2)\right)$ and so $h$ is well-defined.
 
 Since $z$ and $\psi$ are onto, $h$ is onto. We show $h$ is one-to-one.
 
-Let $\rho, \tau\in \mathrm{Hom}(K, P)_\sigma$ such that $h(\phi(\rho)) = h(\phi(\tau))$. Then $\psi(z(\rho)) = \psi(z(\tau))$.
-Let $\alpha = z(\rho), \beta = z(\tau) \in Z^1(K, V)_\sigma$. Then there exists $v \in V$ such that
-\begin{align*} \beta(x) = v \alpha(x) \left(x \cdot v^{-1}\right), \end{align*}
+Let $\rho_1, \rho_2\in \mathrm{Hom}(K, P)_\omega$ such that $h(\phi(\rho_1)) = h(\phi(\rho_2))$. Then $\psi(z(\rho_1)) = \psi(z(\rho_2))$.
+Let $\sigma_1 = z(\rho_1), \sigma_2 = z(\rho_2) \in Z^1(K, V)_\omega$. Then there exists $v \in V$ such that
+\begin{align*} \sigma_2(x) = v \sigma_1(x) \left(x \cdot v^{-1}\right), \end{align*}
 for all $x \in K$. Then
 \begin{align*}
-\tau(x) 
-&= \beta(x)\sigma(x) \\
-&= v \alpha(x) \left(x \cdot v^{-1}\right) \sigma(x) \\
-&= v \alpha(x) \sigma(x) v^{-1} \sigma(x^{-1}) \sigma(x) \\
-&= v \alpha(x) \sigma(x) v^{-1} \\
-&= v \rho(x) v^{-1} \\
-&= (v \cdot \rho)(x),
+\rho_2(x) 
+&= \sigma_2(x)\omega(x) \\
+&= v \sigma_1(x) \left(x \cdot v^{-1}\right) \omega(x) \\
+&= v \sigma_1(x) \omega(x) v^{-1} \omega(x^{-1}) \omega(x) \\
+&= v \sigma_1(x) \omega(x) v^{-1} \\
+&= v \rho_1(x) v^{-1} \\
+&= (v \cdot \rho_1)(x),
 \end{align*}
-for all $x \in K$. Hence $\tau = v\cdot \rho$ and therefore $\phi\left(\rho\right) = \phi\left(\tau\right)$. This shows $h$ is one-to-one.
+for all $x \in K$. Hence $\rho_2 = v\cdot \rho_1$ and therefore $\phi\left(\rho_1\right) = \phi\left(\rho_2\right)$. This shows $h$ is one-to-one.
 \end{proof}
 
-Let $q \in P$, and let $v \in V, l \in L$ such that $q = vl$. We can conjugate $\rho \in \mathrm{Hom}(K, P)_\sigma$ by $q$ to yield an element of $\mathrm{Hom}(K, P)_{l \cdot \sigma}$. For
+Let $q \in P$, and let $v \in V, l \in L$ such that $q = vl$. We can conjugate $\rho \in \mathrm{Hom}(K, P)_\omega$ by $q$ to yield an element of $\mathrm{Hom}(K, P)_{l \cdot \omega}$. For
 \begin{align*}% \left(p \cdot \rho(x)\right)^L
 \pi^L\left(q \rho(x) q^{-1}\right)% \\
 &= \pi^L\left(q\right) \pi^L\left(\rho(x)\right) \pi^L\left(q^{-1}\right) \\
-&= l \sigma(x) l^{-1},
+&= l \omega(x) l^{-1},
 \end{align*}
-for all $x \in K$, so $q \cdot \rho \in \mathrm{Hom}(K, P)_{l\cdot \sigma}$.
+for all $x \in K$, so $q \cdot \rho \in \mathrm{Hom}(K, P)_{l\cdot \omega}$.
 
-Recall from Definition \ref{h1sigma} that $Z^1(K, V)_{l \cdot \sigma}$ is the collection of 1-cocycles from $K$ to $V$ where $K$ acts on $V$ via $l \cdot \sigma$. The formula for the action is then given by
+Recall from Definition \ref{h1sigma} that $Z^1(K, V)_{l \cdot \omega}$ is the collection of 1-cocycles from $K$ to $V$ where $K$ acts on $V$ via $l \cdot \omega$. The formula for the action is then given by
 \begin{align*}
-	x.v = l \sigma(x) l^{-1} v l \sigma(x^{-1}) l^{-1},
+	x.v = l \omega(x) l^{-1} v l \omega(x^{-1}) l^{-1},
 \end{align*}
-for all $x \in K, v \in V$. Evidently $Z^1(K, V)_{l \cdot \sigma} = z\left(\mathrm{Hom}(K, P)_{l \cdot \sigma}\right)$. 
-We show that we can apply Lemma \ref{h1maps} to get a map of 1-cohomomologies $H^1(K, V)_\sigma$ to $H^1(K, V)_{l \cdot \sigma}$. To this end, let $K' = K$, $V' = V$ and let $\zeta = \mathrm{id}:K \rightarrow K$.
+for all $x \in K, v \in V$. Evidently $Z^1(K, V)_{l \cdot \omega} = z\left(\mathrm{Hom}(K, P)_{l \cdot \omega}\right)$. 
+We show that we can apply Lemma \ref{h1maps} to get a map of 1-cohomomologies $H^1(K, V)_\omega$ to $H^1(K, V)_{l \cdot \omega}$. To this end, let $K' = K$, $V' = V$ and let $\zeta = \mathrm{id}:K \rightarrow K$.
 
 Let $\xi = \xi_l: V \rightarrow V'$ be defined by	$\xi_l(v) = lvl^{-1}$ for all $v \in V$. Now we show that $\xi_l$ satisfies condition (d) of the Lemma. Let $x \in K, v \in V$. Then
 	\begin{align*}
 		x . \xi_l(v) &= x . \left(lvl^{-1}\right) \\
-		&= l\sigma(x)l^{-1} \left(lvl^{-1}\right) l\sigma(x^{-1})l^{-1} \\
-		&= l\sigma(x)v\sigma(x^{-1})l^{-1} \\
+		&= l\omega(x)l^{-1} \left(lvl^{-1}\right) l\omega(x^{-1})l^{-1} \\
+		&= l\omega(x)v\omega(x^{-1})l^{-1} \\
 		&= l\left(x \cdot v \right)l^{-1} \\
 		&= \xi_l \left(x \cdot v \right).
 	\end{align*}
-	Therefore, by Lemma \ref{h1maps} the map $Z^1(\zeta, \xi_l):Z^1(K, V)_\sigma \rightarrow Z^1(K, V)_{l \cdot \sigma}$ defined by 
+	Therefore, by Lemma \ref{h1maps} the map $Z^1(\zeta, \xi_l):Z^1(K, V)_\omega \rightarrow Z^1(K, V)_{l \cdot \omega}$ defined by 
 	\begin{align*}
-		Z^1(\zeta, \xi_l)(\alpha) = \xi_l \circ \alpha,
+		Z^1(\zeta, \xi_l)(\sigma) = \xi_l \circ \sigma,
 	\end{align*}
-	for all $\alpha \in Z^1(K, V)_\sigma$,
+	for all $\sigma \in Z^1(K, V)_\omega$,
 	descends to give a well-defined map of 1-cohomologies
 	\begin{align*}
-		H^1(\zeta, \xi_l):H^1(K, V)_\sigma \rightarrow H^1(K, V)_{l \cdot \sigma},
+		H^1(\zeta, \xi_l):H^1(K, V)_\omega \rightarrow H^1(K, V)_{l \cdot \omega},
 	\end{align*}
 	defined by
 	\begin{align*}
-		H^1(\zeta, \xi_l)\left(\psi(\alpha)\right) = \psi'\left(Z^1(\zeta, \xi_l)(\alpha)\right),
+		H^1(\zeta, \xi_l)\left(\psi(\sigma)\right) = \psi'\left(Z^1(\zeta, \xi_l)(\sigma)\right),
 	\end{align*}
-	for all $\alpha \in Z^1(K, V)_\sigma$,
-	where $\psi'$ is the canonical projection from $Z^1(K, V)_{l \cdot \sigma}$ to $H^1(K, V)_{l \cdot \sigma}$.
+	for all $\sigma \in Z^1(K, V)_\omega$,
+	where $\psi'$ is the canonical projection from $Z^1(K, V)_{l \cdot \omega}$ to $H^1(K, V)_{l \cdot \omega}$.
 
-	Evidently, if $l \in C_L\left(\sigma(K)\right)$ and $v\in V$ then $\mathrm{Hom}(K, P)_\sigma$ is stable under conjugation by $vl$ and $H^1(\zeta, \xi_l)$ maps $H^1(K, V)_{\sigma}$ into itself.
+	Evidently, if $l \in C_L\left(\omega(K)\right)$ and $v\in V$ then $\mathrm{Hom}(K, P)_\omega$ is stable under conjugation by $vl$ and $H^1(\zeta, \xi_l)$ maps $H^1(K, V)_{\omega}$ into itself.
 
-	\begin{lemma}\label{lem:vcl} We have an action of $C_L(\sigma(K))$ on $\mathrm{Hom}(K, V)_\sigma / V$ defined by
+	\begin{lemma}\label{lem:vcl} We have an action of $C_L(\omega(K))$ on $\mathrm{Hom}(K, V)_\omega / V$ defined by
 		\begin{align} \label{vcl.hom}
 			c \cdot \phi(\rho) = \phi\left(\xi_c \circ \rho \right),
 		\end{align}
-		for $c \in C_L(\sigma(K)), \rho \in \mathrm{Hom}(K, V)_\sigma$.
+		for $c \in C_L(\omega(K)), \rho \in \mathrm{Hom}(K, V)_\omega$.
 		
-		Similarly, we have an action of $C_L(\sigma(K))$ on $H^1(K, V)_\sigma$ defined by
+		Similarly, we have an action of $C_L(\omega(K))$ on $H^1(K, V)_\omega$ defined by
 		\begin{align} \label{cl.h1}
-			c \cdot \psi(\alpha)
-			&= H^1(\zeta, \xi_c)\left(\psi(\alpha)\right), 
+			c \cdot \psi(\sigma)
+			&= H^1(\zeta, \xi_c)\left(\psi(\sigma)\right), 
 		\end{align}
-		for $c \in C_L(\sigma(K)), \alpha \in Z^1(K, V)_\sigma$.
+		for $c \in C_L(\omega(K)), \sigma \in Z^1(K, V)_\omega$.
 
 	Moreover,
 	\begin{align}\label{eqn:caction}
@@ -268,120 +268,120 @@ Let $\xi = \xi_l: V \rightarrow V'$ be defined by	$\xi_l(v) = lvl^{-1}$ for all 
  Note that $\xi_l \circ \rho = l \cdot \rho$, where the action on the right is the usual conjugation action of $G$ on $\mathrm{Hom}(K, G)$.
 \end{remark}
 \begin{proof}
-	First we show Equation \ref{vcl.hom} defines a well-defined map. Let $\rho, \tau \in \mathrm{Hom}(K, V)_\sigma$ such that $\phi(\rho) = \phi(\tau)$. Then there exists $v \in V$ such that
-	\begin{align*} \tau(x) = v\rho(x)v^{-1}, \end{align*}
-		for all $x \in K$. Now let $c \in C_L(\sigma(K))$. Since $L$ normalizes $V$ there exists $w \in V$ such that $cv = wc$. Then
+	First we show Equation \ref{vcl.hom} defines a well-defined map. Let $\rho_1, \rho_2 \in \mathrm{Hom}(K, V)_\omega$ such that $\phi(\rho_1) = \phi(\rho_2)$. Then there exists $v \in V$ such that
+	\begin{align*} \rho_2(x) = v\rho_1(x)v^{-1}, \end{align*}
+		for all $x \in K$. Now let $c \in C_L(\omega(K))$. Since $L$ normalizes $V$ there exists $w \in V$ such that $cv = wc$. Then
 		\begin{align*}
-			c \tau(x)c^{-1}
-			&= cv \rho(x) v^{-1}c^{-1} \\
-			&= wc \rho(x) c^{-1}w^{-1},
+			c \rho_2(x)c^{-1}
+			&= cv \rho_1(x) v^{-1}c^{-1} \\
+			&= wc \rho_1(x) c^{-1}w^{-1},
 		\end{align*}
-		for all $x \in K$. Therefore $c\cdot\tau = w\cdot(c\cdot\rho)$, that is $\xi_c \circ\tau = w\cdot(\xi_c\circ\rho)$. Hence $\phi(\xi_c \circ \tau) = \phi(\xi_c \circ \rho)$ which shows the map defined by Equation \ref{vcl.hom} is well-defined. Since $\xi_{c_1c_2} = \xi_{c_1} \circ \xi_{c_2}$, it is clear that the group action axioms are satisfied, so Equation \ref{vcl.hom} defines an action of $C_L(\sigma(K))$ on $\mathrm{Hom}(K, P)_\sigma/V$.
+		for all $x \in K$. Therefore $c\cdot\rho_2 = w\cdot(c\cdot\rho_1)$, that is $\xi_c \circ\rho_2 = w\cdot(\xi_c\circ\rho_1)$. Hence $\phi(\xi_c \circ \rho_2) = \phi(\xi_c \circ \rho_1)$ which shows the map defined by Equation \ref{vcl.hom} is well-defined. Since $\xi_{c_1c_2} = \xi_{c_1} \circ \xi_{c_2}$, it is clear that the group action axioms are satisfied, so Equation \ref{vcl.hom} defines an action of $C_L(\omega(K))$ on $\mathrm{Hom}(K, P)_\omega/V$.
 
-		Equation \ref{cl.h1} is well-defined thanks to Lemma \ref{h1maps}. If $e$ is the identity element of $C_L(\sigma(K))$ then the map $H^1(\zeta, \xi_e) = \mathrm{id}:H^1(K, V)_\sigma \rightarrow H^1(K, V)_\sigma$. Finally, let $c_1, c_2 \in C_L(\sigma(K))$. Then
+		Equation \ref{cl.h1} is well-defined thanks to Lemma \ref{h1maps}. If $e$ is the identity element of $C_L(\omega(K))$ then the map $H^1(\zeta, \xi_e) = \mathrm{id}:H^1(K, V)_\omega \rightarrow H^1(K, V)_\omega$. Finally, let $c_1, c_2 \in C_L(\omega(K))$. Then
 		\begin{align}
-			H^1(\zeta, \xi_{c_1})\left(H^1(\zeta, \xi_{c_2})(\psi(\alpha))\right)
-			&= H^1(\zeta, \xi_{c_1})\left(\psi(Z^1(\zeta, \xi_{c_2})(\alpha))\right)\nonumber \\
-			&= H^1(\zeta, \xi_{c_1})\left(\psi(c_2 \cdot \alpha)\right)\nonumber \\
-			&= \psi\left( Z^1(\zeta, \xi_{c_1})(c_2 \cdot \alpha)\right)\nonumber \\
-			&= \psi\left( c_1 \cdot (c_2 \cdot \alpha)\right)\nonumber \\
-			&= \psi\left( c_1c_2 \cdot \alpha\right)\nonumber \\
-			&= \psi\left( Z^1(\zeta, \xi_{c_1c_2})(\alpha)\right)\nonumber \\
-			&= H^1(\zeta, \xi_{c_1c_2})\left(\psi(\alpha)\right).\label{eqn:functorial}
+			H^1(\zeta, \xi_{c_1})\left(H^1(\zeta, \xi_{c_2})(\psi(\sigma))\right)
+			&= H^1(\zeta, \xi_{c_1})\left(\psi(Z^1(\zeta, \xi_{c_2})(\sigma))\right)\nonumber \\
+			&= H^1(\zeta, \xi_{c_1})\left(\psi(c_2 \cdot \sigma)\right)\nonumber \\
+			&= \psi\left( Z^1(\zeta, \xi_{c_1})(c_2 \cdot \sigma)\right)\nonumber \\
+			&= \psi\left( c_1 \cdot (c_2 \cdot \sigma)\right)\nonumber \\
+			&= \psi\left( c_1c_2 \cdot \sigma\right)\nonumber \\
+			&= \psi\left( Z^1(\zeta, \xi_{c_1c_2})(\sigma)\right)\nonumber \\
+			&= H^1(\zeta, \xi_{c_1c_2})\left(\psi(\sigma)\right).\label{eqn:functorial}
 		\end{align}
-		This shows that Equation \ref{cl.h1} defines an action of $C_L(\sigma(K))$ on $H^1(K, V)_\sigma$.
+		This shows that Equation \ref{cl.h1} defines an action of $C_L(\omega(K))$ on $H^1(K, V)_\omega$.
 
-		To prove Equation \ref{eqn:caction} first notice that $\left(\xi_c \circ \rho\right)^L = \rho^L$, hence
+		To prove Equation \ref{eqn:caction} first notice that $\left(\xi_c \circ \rho_1\right)^L = \rho_1^L$, hence
 		\begin{align*}
-			(z(\xi_c \circ \rho))(x) &= c\rho(x)c^{-1}\rho^L(x^{-1}) \\
-				&= c\rho(x)\rho^L(x^{-1})c^{-1} \\
-				&= \left(\xi_c ( z(\rho)(x))\right) \\
-				&= (\xi_c \circ z(\rho))(x),
+			(z(\xi_c \circ \rho_1))(x) &= c\rho_1(x)c^{-1}\rho_1^L(x^{-1}) \\
+				&= c\rho_1(x)\rho_1^L(x^{-1})c^{-1} \\
+				&= \left(\xi_c ( z(\rho_1)(x))\right) \\
+				&= (\xi_c \circ z(\rho_1))(x),
 		\end{align*}
-		for all $x \in K$. Therefore $z\left(\xi_c \circ \rho\right) = \xi_c\circ z(\rho)$, and so
+		for all $x \in K$. Therefore $z\left(\xi_c \circ \rho_1\right) = \xi_c\circ z(\rho_1)$, and so
 		\begin{align*}
-			h(c \cdot \phi(\rho)) &= h(\phi(\xi_c \circ \rho)) \\
-			&= \psi(z(\xi_c\circ\rho)) \\
-			&= \psi(\xi_c\circ z(\rho)) \\
-			&= \psi\left(Z^1(\zeta, \xi_c)(z(\rho))\right) \\
-			&= H^1(\zeta, \xi_c)(\psi(z(\rho))) \\
-			&= c \cdot \psi(z(\rho)) \\
-			&= c \cdot h(\phi(\rho)).
+			h(c \cdot \phi(\rho_1)) &= h(\phi(\xi_c \circ \rho_1)) \\
+			&= \psi(z(\xi_c\circ\rho_1)) \\
+			&= \psi(\xi_c\circ z(\rho_1)) \\
+			&= \psi\left(Z^1(\zeta, \xi_c)(z(\rho_1))\right) \\
+			&= H^1(\zeta, \xi_c)(\psi(z(\rho_1))) \\
+			&= c \cdot \psi(z(\rho_1)) \\
+			&= c \cdot h(\phi(\rho_1)).
 		\end{align*}
 \end{proof}
 	\begin{definition}
-		Denote by $\mathrm{Hom}(K, P)_\sigma/VC_L(\sigma)$ the collection of $C_L(\sigma(K))$-conjugacy classes of $\mathrm{Hom}(K, P)_\sigma/V$, equivalently the collection of $VC_L(\sigma(K))$-conjugacy classes of $\mathrm{Hom}(K, P)_\sigma$, and denote by $\widetilde{\phi}$ the canonical projection,
+		Denote by $\mathrm{Hom}(K, P)_\omega/VC_L(\omega)$ the collection of $C_L(\omega(K))$-conjugacy classes of $\mathrm{Hom}(K, P)_\omega/V$, equivalently the collection of $VC_L(\omega(K))$-conjugacy classes of $\mathrm{Hom}(K, P)_\omega$, and denote by $\widetilde{\phi}$ the canonical projection,
 		\begin{align*}
-			\widetilde{\phi}: \mathrm{Hom}(K, P)_\sigma/V \rightarrow \mathrm{Hom}(K, P)_\sigma/VC_L(\sigma).
+			\widetilde{\phi}: \mathrm{Hom}(K, P)_\omega/V \rightarrow \mathrm{Hom}(K, P)_\omega/VC_L(\omega).
 		\end{align*}
-		Similarly, denote by $H^1(K, V)_\sigma/C_L(\sigma)$ the set of orbits of $H^1(K, V)_\sigma$ under the action defined in Equation \ref{cl.h1}, and denote by $\widetilde{\psi}$ the canonical projection
+		Similarly, denote by $H^1(K, V)_\omega/C_L(\omega)$ the set of orbits of $H^1(K, V)_\omega$ under the action defined in Equation \ref{cl.h1}, and denote by $\widetilde{\psi}$ the canonical projection
 		\begin{align*}
-			\widetilde{\psi}:H^1(K, V)_\sigma \rightarrow H^1(K, V)_\sigma/C_L(\sigma).
+			\widetilde{\psi}:H^1(K, V)_\omega \rightarrow H^1(K, V)_\omega/C_L(\omega).
 		\end{align*}
-	Define $\Phi:\mathrm{Hom}(K, P)_\sigma \rightarrow \mathrm{Hom}(K, P)_\sigma/VC_L(\sigma)$ by
+	For ease of notation, define $\Phi:\mathrm{Hom}(K, P)_\omega \rightarrow \mathrm{Hom}(K, P)_\omega/VC_L(\omega)$ by
 	\begin{align*}
 		\Phi = \widetilde{\phi} \circ \phi,
 	\end{align*}
-	and define $\Psi:Z^1(K, V)_\sigma \rightarrow H^1(K, V)_\sigma/C_L(\sigma)$ by
+	and define $\Psi:Z^1(K, V)_\omega \rightarrow H^1(K, V)_\omega/C_L(\omega)$ by
 	\begin{align*}
 		\Psi = \widetilde{\psi} \circ \psi.
 	\end{align*}
 	\end{definition}
 
-	We have the following Lemma, which shows that the map $h$ descends to give a bijection from $\mathrm{Hom}(K, P)_\sigma /VC_L(\sigma)$ to $H^1(K, V)_{\sigma}/C_L(\sigma)$.
+	We have the following Lemma, which shows that the map $h$ descends to give a bijection from $\mathrm{Hom}(K, P)_\omega /VC_L(\omega)$ to $H^1(K, V)_{\omega}/C_L(\omega)$.
 
 \begin{lemma}
-	For $\rho \in \mathrm{Hom}(K, P)_\sigma$, define
+	For $\rho \in \mathrm{Hom}(K, P)_\omega$, define
 	\begin{align*}
 		\widetilde{h}(\Phi(\rho)) = \widetilde{\psi}(h(\phi(\rho))).
 	\end{align*}
 	Then $\widetilde{h}$ is a well-defined bijection from
 	\begin{align*}
-		\mathrm{Hom}(K, P)_\sigma / VC_L(\sigma) \rightarrow H^1(K, V)_\sigma/C_L(\sigma).
+		\mathrm{Hom}(K, P)_\omega / VC_L(\omega) \rightarrow H^1(K, V)_\omega/C_L(\omega).
 	\end{align*}
 	Moreover, the following diagram commutes:
   \begin{align*}
     \xymatrix{
-		\mathrm{Hom}(K, P)_{\sigma}/V \ar[r]^h \ar[d]_{\widetilde{\phi}} & H^{1}(K, V)_\sigma \ar[d]^{\widetilde{\psi}} \\
-		\mathrm{Hom}(K, P)_{\sigma}/VC_L(\sigma) \ar[r]^{\widetilde{h}} & H^{1}(K, V)_\sigma/C_L(\sigma).
+		\mathrm{Hom}(K, P)_{\omega}/V \ar[r]^h \ar[d]_{\widetilde{\phi}} & H^{1}(K, V)_\omega \ar[d]^{\widetilde{\psi}} \\
+		\mathrm{Hom}(K, P)_{\omega}/VC_L(\omega) \ar[r]^{\widetilde{h}} & H^{1}(K, V)_\omega/C_L(\omega).
     }
   \end{align*}
 \end{lemma}
 \begin{proof}
-Let $\rho, \tau \in \mathrm{Hom}(K, V)_\sigma$ such that $\Phi(\rho) = \Phi(\tau)$. Then there exists $c \in C_L(\sigma)$ such that $\phi(\tau) = c\cdot\phi(\rho)$, and we have
+Let $\rho_1, \rho_2 \in \mathrm{Hom}(K, V)_\omega$ such that $\Phi(\rho_1) = \Phi(\rho_2)$. Then there exists $c \in C_L(\omega)$ such that $\phi(\rho_2) = c\cdot\phi(\rho_1)$, and we have
 \begin{align*}
-	h(\phi(\tau)) &= h(c \cdot\phi(\rho)) \\
-	&= c \cdot h(\phi(\rho))\quad(\textrm{Lemma }\ref{lem:vcl}). 
+	h(\phi(\rho_2)) &= h(c \cdot\phi(\rho_1)) \\
+	&= c \cdot h(\phi(\rho_1))\quad(\textrm{Lemma }\ref{lem:vcl}). 
 \end{align*}
-Hence $\widetilde{\psi}(h(\phi(\rho))) = \widetilde{\psi}(h(\phi(\tau)))$ and so $\widetilde{h}$ is well-defined.
+Hence $\widetilde{\psi}(h(\phi(\rho_1))) = \widetilde{\psi}(h(\phi(\rho_2)))$ and so $\widetilde{h}$ is well-defined.
 
-Now let $\rho, \tau\in \mathrm{Hom}(K, P)_\sigma$ such that $\widetilde{h}\left(\Phi(\rho)\right) = \widetilde{h}\left(\Phi(\tau)\right)$. Then $\widetilde{\psi}(h(\phi(\rho))) = \widetilde{\psi}(h(\phi(\tau)))$, so there exists $c\in C_L(\sigma)$ such that $h(\phi(\tau)) = c\cdot h(\phi(\rho)) = h(c\cdot\phi(\rho))$. Since $h$ is bijective, this means $\phi(\tau) = c\cdot\phi(\rho)$. Therefore $\Phi(\rho) = \Phi(\tau)$ and so $\widetilde{h}$ is injective. Since $h$ and $\widetilde{\psi}$ are surjective, $\widetilde{h}$ is surjective. Therefore $\widetilde{h}$ is bijective.
+Now let $\rho_1, \rho_2\in \mathrm{Hom}(K, P)_\omega$ such that $\widetilde{h}\left(\Phi(\rho_1)\right) = \widetilde{h}\left(\Phi(\rho_2)\right)$. Then $\widetilde{\psi}(h(\phi(\rho_1))) = \widetilde{\psi}(h(\phi(\rho_2)))$, so there exists $c\in C_L(\omega)$ such that $h(\phi(\rho_2)) = c\cdot h(\phi(\rho_1)) = h(c\cdot\phi(\rho_1))$. Since $h$ is bijective, this means $\phi(\rho_2) = c\cdot\phi(\rho_1)$. Therefore $\Phi(\rho_1) = \Phi(\rho_2)$ and so $\widetilde{h}$ is injective. Since $h$ and $\widetilde{\psi}$ are surjective, $\widetilde{h}$ is surjective. Therefore $\widetilde{h}$ is bijective.
 \end{proof}
 
-\begin{lemma} Let $K' < K'$, let $\zeta$ the inclusion of $K'$ in $K$, and let $\xi$ be the identity map on $V$. Then the map $H^1(\zeta):H^1(K, V)_\sigma \rightarrow H^1(K', V)_{\sigma\circ\zeta}$ descends to give a well-defined map
+\begin{lemma} Let $K' < K'$, let $\zeta$ the inclusion of $K'$ in $K$, and let $\xi$ be the identity map on $V$. Then the map $H^1(\zeta):H^1(K, V)_\omega \rightarrow H^1(K', V)_{\omega\circ\zeta}$ descends to give a well-defined map
 	\begin{align*}
-		\widetilde{H^1}(\zeta): H^1(K, V)_\sigma/C_L(\sigma) \rightarrow H^1(K', V)_{\sigma\circ\zeta}/C_L(\sigma\circ \zeta),
+		\widetilde{H^1}(\zeta): H^1(K, V)_\omega/C_L(\omega) \rightarrow H^1(K', V)_{\omega\circ\zeta}/C_L(\omega\circ \zeta),
 	\end{align*}
 defined by
 	\begin{align*}
-		\widetilde{H^1}(\zeta)(\Psi(\alpha)) = \widetilde{\psi'}\left(H^1(\zeta)(\psi(\alpha))\right),
+		\widetilde{H^1}(\zeta)(\Psi(\sigma)) = \widetilde{\psi'}\left(H^1(\zeta)(\psi(\sigma))\right),
 	\end{align*}
-for all $\alpha\in Z^1(K, V)_\sigma$.
+for all $\sigma\in Z^1(K, V)_\omega$.
 Moreover, the following diagram commutes:
   \begin{align*}
     \xymatrix@C=60pt{
-		H^1(K, V)_\sigma \ar[r]^{H^1(\zeta)} \ar[d]_{\widetilde{\psi}} & H^1(K', V)_{\sigma\circ\zeta} \ar[d]^{\widetilde{\psi'}} \\
-		H^1(K, V)_\sigma/C_L(\sigma) \ar[r]^{\widetilde{H^1}(\zeta)} & {H^1(K', V)_{\sigma\circ\zeta}/C_L(\sigma\circ\zeta)}.
+		H^1(K, V)_\omega \ar[r]^{H^1(\zeta)} \ar[d]_{\widetilde{\psi}} & H^1(K', V)_{\omega\circ\zeta} \ar[d]^{\widetilde{\psi'}} \\
+		H^1(K, V)_\omega/C_L(\omega) \ar[r]^{\widetilde{H^1}(\zeta)} & {H^1(K', V)_{\omega\circ\zeta}/C_L(\omega\circ\zeta)}.
     }
   \end{align*}
 \end{lemma}
 \begin{proof}
-Since $C_L(\sigma) < C_L(\sigma\circ\zeta)$, $C_L(\sigma)$ acts on $H^1(K', V)_{\sigma\circ\zeta}$. 
-	Let $\alpha, \beta \in Z^1(K, V)_\sigma$ such that $\Psi(\alpha) = \Psi(\beta)$. Then there exists $c \in C_L(\sigma)$ such that $\psi(\beta) = c \cdot \psi(\alpha)$. Since $H^1(K, V)_\sigma \subset H^1(K', V)_\sigma$ and $C_L(\sigma) < C_L(\sigma\circ\zeta)$, we have
+Since $C_L(\omega) < C_L(\omega\circ\zeta)$, $C_L(\omega)$ acts on $H^1(K', V)_{\omega\circ\zeta}$. 
+	Let $\sigma_1, \sigma_2 \in Z^1(K, V)_\omega$ such that $\Psi(\sigma_1) = \Psi(\sigma_2)$. Then there exists $c \in C_L(\omega)$ such that $\psi(\sigma_2) = c \cdot \psi(\sigma_1)$. Since $H^1(K, V)_\omega \subset H^1(K', V)_\omega$ and $C_L(\omega) < C_L(\omega\circ\zeta)$, we have
 	\begin{align*}
-		H^1(\zeta, \xi)\left(\psi(\beta)\right) = c \cdot H^1(\zeta, \xi)\left(\psi(\beta)\right),
+		H^1(\zeta, \xi)\left(\psi(\sigma_2)\right) = c \cdot H^1(\zeta, \xi)\left(\psi(\sigma_2)\right),
 	\end{align*}
-	and so $\Psi'(\alpha) = \Psi'(\beta)$. Therefore $\widetilde{H^1}(\zeta, \xi)$ is well-defined.
+	and so $\Psi'(\sigma_1) = \Psi'(\sigma_2)$. Therefore $\widetilde{H^1}(\zeta, \xi)$ is well-defined.
 \end{proof}
 
 \begin{definition} We define
@@ -408,32 +408,32 @@ Since $C_L(\sigma) < C_L(\sigma\circ\zeta)$, $C_L(\sigma)$ acts on $H^1(K', V)_{
 	then $(q \cdot \rho)^L = l \cdot \rho^L \in R^L$. This shows $R^L \subset L \cdot R^L$. Conversely, let $l \in L$. Then $l \cdot \rho \in R$, so $(l \cdot \rho)^L = l\cdot \rho^L \in R^L$. Therefore $L\cdot R^L \subset R^L$ and so $R^L = L \cdot R^L$.
 \end{proof}
 
-\begin{lemma} \label{rsigma:vcl} Let $R \subset \mathrm{Hom}(K, P)$ and suppose that $R = P \cdot R$. Then for all $\sigma \in \mathrm{Hom}(K, L)$, all $\rho\in R_\sigma$
+\begin{lemma} \label{rsigma:vcl} Let $R \subset \mathrm{Hom}(K, P)$ and suppose that $R = P \cdot R$. Then for all $\omega \in \mathrm{Hom}(K, L)$, all $\rho\in R_\omega$
 	\begin{align*}
-		R_\sigma \cap P \cdot \rho = \left(VC_L(\sigma)\right) \cdot \rho.
+		R_\omega \cap P \cdot \rho = \left(VC_L(\omega)\right) \cdot \rho.
 	\end{align*}
 \end{lemma}
 \begin{proof}
-	Let $\sigma \in \mathrm{Hom}(K, L)$ and choose $\rho \in R_\sigma$. Suppose there exists $q \in P$ such that $q \cdot \rho \in R_\sigma$, and let $v \in V, l \in L$ such that $q = vl$. Then
+	Let $\omega \in \mathrm{Hom}(K, L)$ and choose $\rho \in R_\omega$. Suppose there exists $q \in P$ such that $q \cdot \rho \in R_\omega$, and let $v \in V, l \in L$ such that $q = vl$. Then
 	\begin{align*}
-		q \cdot \rho \in R_\sigma &\Leftrightarrow (vl) \cdot \rho \in R_\sigma \\
-		&\Leftrightarrow \left( (vl) \cdot \rho\right)^L = \sigma \\
-		&\Leftrightarrow l\cdot \rho^L = \sigma \\
-		&\Leftrightarrow l \in C_L(\sigma).
+		q \cdot \rho \in R_\omega &\Leftrightarrow (vl) \cdot \rho \in R_\omega \\
+		&\Leftrightarrow \left( (vl) \cdot \rho\right)^L = \omega \\
+		&\Leftrightarrow l\cdot \rho^L = \omega \\
+		&\Leftrightarrow l \in C_L(\omega).
 	\end{align*}
-	This shows that $R_\sigma \cap P \cdot \rho \subset \left(VC_L(\sigma)\right) \cdot \rho$. The reverse inclusion follows since $R = P \cdot R$ and $R_\sigma$ is stable under conjugation by $V$ and $C_L(\sigma)$.
+	This shows that $R_\omega \cap P \cdot \rho \subset \left(VC_L(\omega)\right) \cdot \rho$. The reverse inclusion follows since $R = P \cdot R$ and $R_\omega$ is stable under conjugation by $V$ and $C_L(\omega)$.
 \end{proof}
 
 \begin{theorem}\label{r:finite_p} Let $R \subset \mathrm{Hom}(K, P)$ and suppose $P \cdot R = R$. Then $R$ is a finite union of $P$-conjugacy classes if and only if
 	\begin{itemize}
 		\item[(i)] $R^L$ is a finite union of $L$-conjugacy classes, and
-		\item[(ii)] for each $\sigma \in \mathrm{Hom}(K, L)$, $(\widetilde{h} \circ \Phi)(R_\sigma)$ is finite in $H^1(K, V)_\sigma/C_L(\sigma)$.
+		\item[(ii)] for each $\omega \in \mathrm{Hom}(K, L)$, $(\widetilde{h} \circ \Phi)(R_\omega)$ is finite in $H^1(K, V)_\omega/C_L(\omega)$.
 	\end{itemize}
 \end{theorem}
-\begin{remark} By Lemma \ref{} $R^L$ is a finite union of $L$-conjugacy classes. Furthermore, conditions (i) and (ii) are equivalent to 
+\begin{remark} By Lemma \ref{pr:lrl}, $R^L$ is a finite union of $L$-conjugacy classes. Furthermore, conditions (i) and (ii) are equivalent to 
 	\begin{itemize}
-		\item[(i$'$)] $R_\sigma = \emptyset$ for all but finitely many $L$-conjugacy classes of $\sigma \in \mathrm{Hom}(K, L)$, and
-		\item[(ii$'$)] for each $\sigma \in \mathrm{Hom}(\Gamma, L)$, $R_\sigma$ is a finite union of $VC_L(\sigma)$-conjugacy classes,
+		\item[(i$'$)] $R_\omega = \emptyset$ for all but finitely many $L$-conjugacy classes of $\omega \in \mathrm{Hom}(K, L)$, and
+		\item[(ii$'$)] for each $\omega \in \mathrm{Hom}(\Gamma, L)$, $R_\omega$ is a finite union of $VC_L(\omega)$-conjugacy classes,
 	\end{itemize}
 	respectively. We obtain (ii) $\Leftrightarrow$ (ii$'$) by appealing to the bijection $\widetilde{h}$, while (i) $\Leftrightarrow$ (i$'$) is self-evident.
 \end{remark}
@@ -441,30 +441,30 @@ Since $C_L(\sigma) < C_L(\sigma\circ\zeta)$, $C_L(\sigma)$ acts on $H^1(K', V)_{
 Suppose $R$ is a finite union of $P$-conjugacy classes, so there exists a finite set $\mathcal{P} \subset \mathrm{Hom}(\Gamma, P)$ such that
 \begin{align*} R = \bigcup_{\rho \in \mathcal{P}} P \cdot \rho \end{align*}
 Lemma \ref{pr:lrl} shows that (i) holds. We have
-\begin{align*} R_\sigma &= R_\sigma \cap R \\
-&= R_\sigma \cap \big( \bigcup_{\rho \in \mathcal{P}} P \cdot \rho \,\,\big) \\
-&= \bigcup_{\rho \in \mathcal{P}} \left( R_\sigma \cap P \cdot \rho \right).
+\begin{align*} R_\omega &= R_\omega \cap R \\
+&= R_\omega \cap \big( \bigcup_{\rho \in \mathcal{P}} P \cdot \rho \,\,\big) \\
+&= \bigcup_{\rho \in \mathcal{P}} \left( R_\omega \cap P \cdot \rho \right).
 \end{align*}
 Then by Lemma \ref{rsigma:vcl}
-\begin{align*} R_\sigma = \bigcup_{\rho \in \mathcal{P}} (VC_L(\sigma)) \cdot \rho. \end{align*}
-Hence (ii$'$), and therefore (ii), holds. This proves the forward direction.
+\begin{align*} R_\omega = \bigcup_{\rho \in \mathcal{P}} (VC_L(\omega)) \cdot \rho. \end{align*}
+Hence (ii$'$), and therefore (ii), holds. This proves the forward direction of the Theorem.
 
 
-Conversely, suppose (i) and (ii) hold and let $\sigma \in \mathrm{Hom}(K, L)$. By (ii$'$) there exists a finite set $\mathcal{Q} \subset \mathrm{Hom}(\Gamma, P)$ such that
+Conversely, suppose (i) and (ii) hold and let $\omega \in \mathrm{Hom}(K, L)$. By (ii$'$) there exists a finite set $\mathcal{Q} \subset \mathrm{Hom}(\Gamma, P)$ such that
 \begin{align*}
-	R_\sigma &= \bigcup_{\rho \in \mathcal{Q}} (VC_L(\sigma)) \cdot \rho.
+	R_\omega &= \bigcup_{\rho \in \mathcal{Q}} (VC_L(\omega)) \cdot \rho.
 \end{align*}
 Applying Lemma \ref{rsigma:vcl}, we get
 \begin{align*}
-	R_\sigma &= \bigcup_{\rho \in \mathcal{Q}} \left( R_\sigma \cap P \cdot \rho \right) \\
-	&= R_\sigma \cap \big( \bigcup_{\rho \in \mathcal{Q}} P \cdot \rho \,\,\big).
+	R_\omega &= \bigcup_{\rho \in \mathcal{Q}} \left( R_\omega \cap P \cdot \rho \right) \\
+	&= R_\omega \cap \big( \bigcup_{\rho \in \mathcal{Q}} P \cdot \rho \,\,\big).
 \end{align*}
-Hence $R_\sigma$ is contained in a finite union of $P$-conjugacy classes.
+Hence $R_\omega$ is contained in a finite union of $P$-conjugacy classes.
 Define
 \begin{align*}
-L \cdot R_\sigma = \{L \cdot \rho \,|\, \rho \in R_\sigma\},
+L \cdot R_\omega = \{L \cdot \rho \,|\, \rho \in R_\omega\},
 \end{align*}
-so $L \cdot R_\sigma$ is contained in a finite union of $P$-conjugacy classes.
+so $L \cdot R_\omega$ is contained in a finite union of $P$-conjugacy classes.
 
 Now let $\rho \in R$. By (i) there exists a finite set $\mathcal{S} \subset \mathrm{Hom}(\Gamma, L)$ such that
 \begin{align*}
@@ -476,9 +476,9 @@ Then there exists $l \in L$, $\tau \in \mathcal{S}$ such that $\rho^L = l \cdot 
 
 \begin{definition} \label{main_cd} Let $K' < K$ and let $\zeta$ be the inclusion of $K'$ in $K$. Define the maps
 	\begin{align*}
-		\mathcal{Z}(\zeta):&\mathrm{Hom}(K, P)_\sigma \rightarrow \mathrm{Hom}(K', P)_{\sigma\circ\zeta}, \\
-		\mathcal{H}(\zeta):&\mathrm{Hom}(K, P)_\sigma/V \rightarrow \mathrm{Hom}(K', P)_{\sigma\circ\zeta}/V, \\
-		\widetilde{\mathcal{H}}(\zeta):&\mathrm{Hom}(K, P)_\sigma/VC_L(\sigma) \rightarrow \mathrm{Hom}(K', P)_{\sigma\circ\zeta}/VC_L(\sigma\circ\zeta),
+		\mathcal{Z}(\zeta):&\mathrm{Hom}(K, P)_\omega \rightarrow \mathrm{Hom}(K', P)_{\omega\circ\zeta}, \\
+		\mathcal{H}(\zeta):&\mathrm{Hom}(K, P)_\omega/V \rightarrow \mathrm{Hom}(K', P)_{\omega\circ\zeta}/V, \\
+		\widetilde{\mathcal{H}}(\zeta):&\mathrm{Hom}(K, P)_\omega/VC_L(\omega) \rightarrow \mathrm{Hom}(K', P)_{\omega\circ\zeta}/VC_L(\omega\circ\zeta),
 	\end{align*}
 	by
 	\begin{align*}
@@ -497,12 +497,12 @@ The situation thus far is summarised by the following commutative diagram.
 	\setlength{\belowdisplayshortskip}{3pt}
 	\begin{align*}
 		\xymatrix@R=40pt{
-			\mathrm{Hom}(K, P)_\sigma \ar[r]^{z} \ar[d]^{\phi} \ar[dddr]^{\mathcal{Z}(\zeta)} & Z^1(K, V)_\sigma \ar[d]_{\psi} \ar[dddr]^{Z^1(\zeta, \xi)} & \\
-			\mathrm{Hom}(K, P)_\sigma/V \ar[r]^{h} \ar[d]^{\widetilde{\phi}} \ar[dddr]^{\mathcal{H}(\zeta)} & H^1(K, P)_\sigma \ar[d]_{\widetilde{\psi}} \ar[dddr]^{H^1(\zeta, \xi)} & \\
-			\mathrm{Hom}(K, P)_\sigma/VC_L(\sigma) \ar[r]^{\widetilde{h}} \ar[dddr]^{\widetilde{\mathcal{H}}(\zeta)} & H^1(K, P)_\sigma/C_L(\sigma) \ar[dddr]^{\widetilde{H^1}(\zeta, \xi)} & \\
-			& \mathrm{Hom}(K', P)_{\sigma\circ\zeta} \ar[r]^{z'} \ar[d]^{\phi'} & Z^1(K', V)_\sigma \ar[d]_{\psi'} \\
-			& \mathrm{Hom}(K', P)_{\sigma\circ\zeta}/V \ar[r]^{h'} \ar[d]^{\widetilde{\phi'}} & H^1(K', V)_{\sigma\circ\zeta} \ar[d]_{\widetilde{\psi'}} \\
-			& \mathrm{Hom}(K', P)_{\sigma\circ\zeta}/VC_L(\sigma\circ\zeta) \ar[r]^{\widetilde{h'}} & H^1(K', V)_{\sigma\circ\zeta}/C_L(\sigma\circ\zeta) \\
+			\mathrm{Hom}(K, P)_\omega \ar[r]^{z} \ar[d]^{\phi} \ar[dddr]^{\mathcal{Z}(\zeta)} & Z^1(K, V)_\omega \ar[d]_{\psi} \ar[dddr]^{Z^1(\zeta, \xi)} & \\
+			\mathrm{Hom}(K, P)_\omega/V \ar[r]^{h} \ar[d]^{\widetilde{\phi}} \ar[dddr]^{\mathcal{H}(\zeta)} & H^1(K, P)_\omega \ar[d]_{\widetilde{\psi}} \ar[dddr]^{H^1(\zeta, \xi)} & \\
+			\mathrm{Hom}(K, P)_\omega/VC_L(\omega) \ar[r]^{\widetilde{h}} \ar[dddr]^{\widetilde{\mathcal{H}}(\zeta)} & H^1(K, P)_\omega/C_L(\omega) \ar[dddr]^{\widetilde{H^1}(\zeta, \xi)} & \\
+			& \mathrm{Hom}(K', P)_{\omega\circ\zeta} \ar[r]^{z'} \ar[d]^{\phi'} & Z^1(K', V)_\omega \ar[d]_{\psi'} \\
+			& \mathrm{Hom}(K', P)_{\omega\circ\zeta}/V \ar[r]^{h'} \ar[d]^{\widetilde{\phi'}} & H^1(K', V)_{\omega\circ\zeta} \ar[d]_{\widetilde{\psi'}} \\
+			& \mathrm{Hom}(K', P)_{\omega\circ\zeta}/VC_L(\omega\circ\zeta) \ar[r]^{\widetilde{h'}} & H^1(K', V)_{\omega\circ\zeta}/C_L(\omega\circ\zeta) \\
 		}
 	\end{align*}
 	}%
@@ -513,9 +513,9 @@ We are now ready to state the main Theorem of this Chapter.
 \begin{theorem}\label{main_thm} Let $K'<K$, let $\zeta$ be the inclusion of $K'$ in $K$, and let $\xi$ be the identity map on $V$. Let $R \subset \mathrm{Hom}(K, P)$ such that $R = P \cdot R$, and let $S = \mathcal{Z}(\zeta)(R)$. Suppose
 	\begin{itemize}
 		\item[(i)] $R^L$ is a finite union of $L$-conjugacy classes,
-		\item[(ii)] for all $\sigma \in \mathrm{Hom}(K, L)$ such that $R_\sigma \neq \emptyset$, the map
+		\item[(ii)] for all $\omega \in \mathrm{Hom}(K, L)$ such that $R_\omega \neq \emptyset$, the map
 			\begin{align*}
-				\widetilde{H^1}(\zeta, \xi):H^1(K, V)_\sigma/C_L(\sigma) \rightarrow H^1(K', V)_{\sigma\circ\zeta}/C_L(\sigma\circ\zeta),
+				\widetilde{H^1}(\zeta, \xi):H^1(K, V)_\omega/C_L(\omega) \rightarrow H^1(K', V)_{\omega\circ\zeta}/C_L(\omega\circ\zeta),
 			\end{align*}
 			has finite fibres, and
 		\item[(iii)] $S$ is a finite union of $P$-conjugacy classes.
@@ -529,28 +529,28 @@ We are now ready to state the main Theorem of this Chapter.
 Since $P \cdot R = R$, it follows that $P\cdot S = S$. By definition $S \subset \mathrm{Hom}(K', V)$ and by (iii) $S$ is a finite union of $P$-conjugacy classes. Therefore by Theorem \ref{r:finite_p}
 \begin{itemize}
 	\item[(iv)] $S^L$ is a finite union of $L$-conjugacy classes, and
-	\item[(v)] for each $\sigma \in \mathrm{Hom}(K', L)$, $(\widetilde{h'} \circ \Phi')\left(S_\sigma\right)$ is finite in $H^1(K', V)_{\sigma\circ\zeta}/C_L(\sigma\circ\zeta)$.
+	\item[(v)] for each $\omega \in \mathrm{Hom}(K', L)$, $(\widetilde{h'} \circ \Phi')\left(S_\omega\right)$ is finite in $H^1(K', V)_{\omega\circ\zeta}/C_L(\omega\circ\zeta)$.
 \end{itemize}
 
-Let $\sigma \in \mathrm{Hom}(K, L)$. Clearly $(\widetilde{h} \circ \Phi)\left(R_\sigma\right)$ is finite if $R_\sigma = \emptyset$, so suppose $R_\sigma \neq \emptyset$. 
+Let $\omega \in \mathrm{Hom}(K, L)$. Clearly $(\widetilde{h} \circ \Phi)\left(R_\omega\right)$ is finite if $R_\omega = \emptyset$, so suppose $R_\omega \neq \emptyset$. 
 
-We have $\mathcal{Z}(\zeta)(R_\sigma) \subset S_{\sigma\circ\zeta}$, and by the commutative diagram in Definition \ref{main_cd},
+We have $\mathcal{Z}(\zeta)(R_\omega) \subset S_{\omega\circ\zeta}$, and by the commutative diagram in Definition \ref{main_cd},
 \begin{align*}
 	\widetilde{h'} \circ \Phi' \circ \mathcal{Z}(\zeta) = \widetilde{H^1}(\zeta) \circ \widetilde{h} \circ \Phi.
 \end{align*}
 Therefore
 \begin{align*}
-	\left(\widetilde{H^1}(\zeta) \circ \widetilde{h} \circ \Phi\right)(R_\sigma) &= \left(\widetilde{h'} \circ \Phi' \circ \mathcal{Z}(\zeta)\right)(R_\sigma) \\
-		&= (\widetilde{h'} \circ \Phi')\left(\mathcal{Z}(\zeta)(R_\sigma)\right) \\
-		&\subset (\widetilde{h'} \circ \Phi')(S_{\sigma\circ\zeta}).
+	\left(\widetilde{H^1}(\zeta) \circ \widetilde{h} \circ \Phi\right)(R_\omega) &= \left(\widetilde{h'} \circ \Phi' \circ \mathcal{Z}(\zeta)\right)(R_\omega) \\
+		&= (\widetilde{h'} \circ \Phi')\left(\mathcal{Z}(\zeta)(R_\omega)\right) \\
+		&\subset (\widetilde{h'} \circ \Phi')(S_{\omega\circ\zeta}).
 \end{align*}
-Then $\left(\widetilde{h'} \circ \Phi'\right)(S_{\sigma\circ\zeta})$ is finite by (v), and
+Then $\left(\widetilde{h'} \circ \Phi'\right)(S_{\omega\circ\zeta})$ is finite by (v), and
 \begin{align*}
-	(\widetilde{h} \circ \Phi)(R_\sigma) \subset \widetilde{H^1}(\zeta)^{-1} \left(\left(\widetilde{H^1}(\zeta) \circ \widetilde{h} \circ \Phi\right)(R_\sigma)\right),
+	(\widetilde{h} \circ \Phi)(R_\omega) \subset \widetilde{H^1}(\zeta)^{-1} \left(\left(\widetilde{H^1}(\zeta) \circ \widetilde{h} \circ \Phi\right)(R_\omega)\right),
 \end{align*}
 is finite by (ii).
 
-Therefore $(\widetilde{h} \circ \Phi)(R_\sigma)$ is finite in any case. Together with (i) we may apply Theorem \ref{r:finite_p}, so $R$ is a finite union of $P$-conjugacy classes.
+Therefore $(\widetilde{h} \circ \Phi)(R_\omega)$ is finite in any case. Together with (i) we may apply Theorem \ref{r:finite_p}, so $R$ is a finite union of $P$-conjugacy classes.
 \end{proof}
 
 \section{A Non-Reductive Counterexample}
@@ -561,11 +561,11 @@ In \cite[Appendix]{slodowy1997two}, Cram shows a counterexample to K\"ulshammer'
 	\left(\begin{matrix} v_1 \\ v_2 \\ v_3 \end{matrix}\right) &=
 	\left(\begin{matrix} u_1 + v_1 \\ u_2 + v_2 \\ u_3 + v_3 + u_1v_1 + u_2v_2 + u_1v_2 \end{matrix}\right).
 \end{align*}
-Let $F = \langle \sigma, \tau | \sigma^3 = \tau^2 = 1, \tau\sigma\tau = \sigma^2 \rangle = S_3$ and $F_2 = \langle \tau \rangle$, a Sylow 2-subgroup of $F$. We have an action of $F$ on $Q$ given by
+Let $F = \langle \omega, \tau | \omega^3 = \tau^2 = 1, \tau\omega\tau = \omega^2 \rangle = S_3$ and $F_2 = \langle \tau \rangle$, a Sylow 2-subgroup of $F$. We have an action of $F$ on $Q$ given by
 \begin{align*}
 	\tau \cdot \left(\begin{matrix} u_1 \\ u_2 \\ u_3 \end{matrix} \right) &=
 	\left(\begin{matrix} u_2 \\ u_1 \\ u_3 + u_1^2 + u_2^2 + u_1u_2 \end{matrix} \right) \\
-	\sigma \cdot \left(\begin{matrix} u_1 \\ u_2 \\ u_3 \end{matrix} \right) &=
+	\omega \cdot \left(\begin{matrix} u_1 \\ u_2 \\ u_3 \end{matrix} \right) &=
 	\left(\begin{matrix} u_2 \\ u_1 + u_2 \\ u_3 \end{matrix} \right).
 \end{align*}
 Let $G = Q \rtimes F$ and fix the representation $\rho:F_2 \rightarrow G$ defined by the natural inclusion $F_2 \rightarrow F \rightarrow G$. Then there are infinitely many distinct $G$-conjugate classes of extensions of $\rho$ to representations of $F$ in $G$.
@@ -573,13 +573,13 @@ Let $G = Q \rtimes F$ and fix the representation $\rho:F_2 \rightarrow G$ define
 \end{example}
 Motivated by Theorem \ref{main_thm}, we examine the counterexample via the 1-cohomology. Note however that the results in this Chapter are stated for reductive $G$, so they cannot be applied directly.
 
-Choose a 1-cocycle $\alpha \in Z^1(F, Q)$ such that $\alpha|_{\langle \sigma \rangle} = 1$. Let
+Choose a 1-cocycle $\sigma \in Z^1(F, Q)$ such that $\sigma|_{\langle \omega \rangle} = 1$. Let
 \begin{align*}
-	\alpha(\tau) = \left(\begin{matrix} u_1 \\ u_2 \\ u_3 \end{matrix} \right),
+	\sigma(\tau) = \left(\begin{matrix} u_1 \\ u_2 \\ u_3 \end{matrix} \right),
 \end{align*}
 for some $u_1, u_2, u_3 \in k$. Since $\tau$ is an involution we have
 \begin{align*}
-	1 = \alpha(\tau^2) &= \alpha(\tau) \times \tau\cdot\alpha(\tau)\\
+	1 = \sigma(\tau^2) &= \sigma(\tau) \times \tau\cdot\sigma(\tau)\\
 	&= \left(\begin{matrix} u_1 \\ u_2 \\ u_3\end{matrix} \right) \times 
 	\left(\begin{matrix} u_2 \\ u_1 \\ u_3 + u_1^2 + u_2^2 + u_1u_2\end{matrix} \right) \\
 	&= \left(\begin{matrix} u_1 + u_2 \\ u_1 + u_2 \\ 2u_3 + 2u_1^2 + u_2^2 + 3u_1u_2\end{matrix} \right)\\
@@ -587,16 +587,16 @@ for some $u_1, u_2, u_3 \in k$. Since $\tau$ is an involution we have
 \end{align*}
 This shows $u_1 = u_2$, so
 \begin{align*}
-	\alpha(\tau) = \left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right).
+	\sigma(\tau) = \left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right).
 \end{align*}
-Furthermore, as $\tau\sigma\tau = \sigma^2$ we obtain
+Furthermore, as $\tau\omega\tau = \omega^2$ we obtain
 \begin{align*}
-	1 = \alpha(\sigma^2) &= \alpha(\tau\sigma\tau) \\
-	&= \alpha(\tau) \times \tau\cdot\alpha(\sigma\tau)\\
-	&= \alpha(\tau) \times \tau\cdot\alpha(\sigma) \times \tau\sigma\cdot\alpha(\tau) \\
-	&= \alpha(\tau) \times \tau\sigma\cdot\alpha(\tau) \\
+	1 = \sigma(\omega^2) &= \sigma(\tau\omega\tau) \\
+	&= \sigma(\tau) \times \tau\cdot\sigma(\omega\tau)\\
+	&= \sigma(\tau) \times \tau\cdot\sigma(\omega) \times \tau\omega\cdot\sigma(\tau) \\
+	&= \sigma(\tau) \times \tau\omega\cdot\sigma(\tau) \\
 	&= \left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right) \times
-	\tau\sigma\cdot\left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right)\\
+	\tau\omega\cdot\left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right)\\
 	&= \left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right) \times
 	\tau\cdot\left(\begin{matrix} u_1 \\ 0 \\ u_3\end{matrix} \right)\\
 	&= \left(\begin{matrix} u_1 \\ u_1 \\ u_3\end{matrix} \right) \times
@@ -604,17 +604,17 @@ Furthermore, as $\tau\sigma\tau = \sigma^2$ we obtain
 	&= \left(\begin{matrix} u_1 \\ 0 \\ 2u_3 + 3u_1^2\end{matrix} \right)\\
 	&= \left(\begin{matrix} u_1 \\ 0 \\ u_1^2\end{matrix} \right).
 \end{align*}
-Therefore $u_1 = 0$. Hence a typical 1-cocycle that is trivial on $\langle \sigma \rangle$ satisfies
+Therefore $u_1 = 0$. Hence a typical 1-cocycle that is trivial on $\langle \omega \rangle$ satisfies
 \begin{align*}
-	\alpha_u(\tau) = \left(\begin{matrix} 0 \\ 0 \\ u \end{matrix} \right),\qquad (u\in k).
+	\sigma_u(\tau) = \left(\begin{matrix} 0 \\ 0 \\ u \end{matrix} \right),\qquad (u\in k).
 \end{align*}
 This is a necessary condition. To show it is sufficient one can apply \cite[Proposition 2]{martin2004nonab} which involves looking at the presentation of $F$.
-Now we calculate the class $[\alpha_u] \in H^1(F, Q)$. Suppose $[\alpha_v] = [\alpha_u]$. Then
-there is a $q\in Q$ fixed under the action of $\sigma$, that is of the form
+Now we calculate the class $[\sigma_u] \in H^1(F, Q)$. Suppose $[\sigma_v] = [\sigma_u]$. Then
+there is a $q\in Q$ fixed under the action of $\omega$, that is of the form
 \begin{align*}
 	q = \left(\begin{matrix} 0 \\ 0 \\ \lambda\end{matrix}\right),
 \end{align*}
-such that $\alpha_v(\gamma) = q\times\alpha_u(\gamma)\times\gamma\cdot q^{-1}$. In particular, for $\gamma = \tau$
+such that $\sigma_v(\gamma) = q\times\sigma_u(\gamma)\times\gamma\cdot q^{-1}$. In particular, for $\gamma = \tau$
 \begin{align*}
 	\left(\begin{matrix} 0 \\ 0 \\ v\end{matrix}\right) &=
 	\left(\begin{matrix} 0 \\ 0 \\ \lambda\end{matrix}\right) \times
@@ -634,14 +634,14 @@ Hence only if $u=v$ are two 1-cocycles of the particular form in the same class,
 
 In view of Theorem \ref{thm:k2_h1} one could show that the map from $H^1(F, Q)$ to $H^1(F_p, Q)$ is not injective. Furthermore, it is natural to ask whether Example \ref{eg:non_red} leads to a reductive counterexample to K\"ulshammer's second question, although we can quickly verify that the answer is ``not immediately''. For suppose there was a reductive group with unipotent radical \emph{containing} the multiplication law:
 \begin{align*}
-	&\ldots \epsilon_\alpha(u_\alpha) \ldots \epsilon_\beta(u_\beta) \ldots \epsilon_\gamma(u_\gamma) \times
-	\ldots \epsilon_\alpha(v_\alpha) \ldots \epsilon_\beta(v_\beta) \ldots \epsilon_\gamma(v_\gamma)\\
+	&\ldots \epsilon_\sigma(u_\sigma) \ldots \epsilon_\beta(u_\beta) \ldots \epsilon_\gamma(u_\gamma) \times
+	\ldots \epsilon_\sigma(v_\sigma) \ldots \epsilon_\beta(v_\beta) \ldots \epsilon_\gamma(v_\gamma)\\
 	&=
-	\ldots \epsilon_\alpha(u_\alpha + v_\alpha) \ldots \epsilon_\beta(u_\beta + v_\beta) \ldots \epsilon_\gamma(u_\gamma + v_\gamma + u_\alpha v_\alpha + u_\beta v_\beta + u_\alpha v_\beta).
+	\ldots \epsilon_\sigma(u_\sigma + v_\sigma) \ldots \epsilon_\beta(u_\beta + v_\beta) \ldots \epsilon_\gamma(u_\gamma + v_\gamma + u_\sigma v_\sigma + u_\beta v_\beta + u_\sigma v_\beta).
 \end{align*}
-Then setting $u_\delta = v_\delta = 0$ whenever $\delta \neq \alpha$ gives
+Then setting $u_\delta = v_\delta = 0$ whenever $\delta \neq \sigma$ gives
 \begin{align*}
-	\epsilon_\alpha(u_\alpha) \times \epsilon_\alpha(v_\alpha) &= \epsilon_\alpha(u_\alpha + v_\alpha) \epsilon_\gamma(u_\alpha v_\alpha),
+	\epsilon_\sigma(u_\sigma) \times \epsilon_\sigma(v_\sigma) &= \epsilon_\sigma(u_\sigma + v_\sigma) \epsilon_\gamma(u_\sigma v_\sigma),
 \end{align*}
 which is absurd.
 
