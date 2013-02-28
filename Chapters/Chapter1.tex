@@ -5,85 +5,88 @@
 \label{Chapter1}
 \lhead{Chapter 1. \emph{Introduction}}
 
-A major motivation for the work carried out in this thesis is to investigate a question posed by B. K\"ulshammer to do with homomorphisms of finite groups into algebraic groups \cite{slodowy1997two}. We will call these homomorphisms \emph{representations} because of the obvious similarity with the usual kind of representations into $GL_n$. K\"ulshammer's second question reads as follows.
+A major motivation for the work carried out in this thesis is to investigate a question posed by B. K\"ulshammer to do with homomorphisms of finite groups into algebraic groups \cite{slodowy1997two}. One may call these homomorphisms \emph{representations} because of the obvious similarity with the usual kind of representations into $GL_n$. K\"ulshammer's second question reads as follows.
 \begin{quote}
-  Let $G$ be a linear algebraic group over an algebraically closed field of characteristic $p$. Let $\Gamma$ be a finite group and $\Gamma_p < \Gamma$ a Sylow $p$-subgroup of $\Gamma$. Fix a conjugacy class of representations $\Gamma_p\rightarrow G$. Are there, up to conjugation by $G$, only finitely many representations $\rho:\Gamma\rightarrow G$ whose restrictions to $\Gamma_p$ belong to the given class?
+  Let $G$ be a linear algebraic group over an algebraically closed field of characteristic $p$. Let $\Gamma$ be a finite group and $\Gamma_p < \Gamma$ a Sylow $p$-subgroup of $\Gamma$. Fix a conjugacy class of representations of $\Gamma_p$ in $G$. Are there, up to conjugation by $G$, only finitely many representations $\rho:\Gamma\rightarrow G$ whose restrictions to $\Gamma_p$ belong to the given class?
 \end{quote}
 
 So far only a non-reductive counterexample is known \cite[Appendix]{slodowy1997two}. We examine K\"ulshammer's second question for reductive $G$. 
 
 
-The work in this thesis also contributes to the study of the subgroup structure of simple algebraic groups, complementing some of the work done by M. Liebeck and G. Seitz (\cite{liebeck1996reductive}, \cite{liebeck2004maximal}), and D. Stewart (\cite{stewart2010g}).
-Let $G$ be a simple algebraic group over an algebraically closed field of characteristic $p$. For large enough characteristic ($p=0$ or $p>7$ covers all restrictions) Liebeck and Seitz determine explicitly the embeddings of arbitrary connected semisimple groups in $G$, where $G$ is of exceptional type.
+The work in this thesis also extends the study of the subgroup structure of simple algebraic groups, complementing some of the work done by M. Liebeck and G. Seitz (\cite{liebeck1996reductive}, \cite{liebeck2004maximal}), and D. Stewart (\cite{stewart2010g}).
+Let $G$ be a simple algebraic group over an algebraically closed field of characteristic $p$. For large enough characteristic ($p=0$ or $p>7$ covers all restrictions) Liebeck and Seitz determine explicitly the embeddings of arbitrary connected semisimple subgroups of $G$, where $G$ is of exceptional type.
 On the other hand, Stewart's work concerns exceptional groups for the case $p<7$, so called \emph{low characteristic}.
 Like Stewart, we examine the subgroup structure of simple algebraic groups in low characteristic (usually $p=2$ or $p=3$) where examples are exotic less is known. 
 
 In the intersection of the above two topics of interest lies a variation of K\"ulshammer's second question which we call the \emph{algebraic} version of K\"ulshammer's second question. In this case we substitute the finite group $\Gamma$ for a connected reductive group $H$, instead of a Sylow $p$-subgroup $\Gamma_p < \Gamma$ we use a maximal unipotent subgroup $U < H$, and by the term representation we mean a homomorphism of algebraic groups.
 The precise statement of the algebraic version of K\"ulshammer's second question reads as follows.
 \begin{quote}
-  Let $G,H$ be connected reductive linear algebraic groups over an algebraically closed field of characteristic $p$ and $U < H$ a maximal unipotent subgroup of $H$. Fix a conjugacy class of representations $U\rightarrow G$. Are there, up to conjugation by $G$, only finitely many representations $\rho:H\rightarrow G$ whose restrictions to $U$ belong to the given class?
+  Let $G,H$ be connected reductive linear algebraic groups over an algebraically closed field of characteristic $p$ and $U < H$ a maximal unipotent subgroup of $H$. Fix a conjugacy class of representations of $U$ in $G$. Are there, up to conjugation by $G$, only finitely many representations $\rho:H\rightarrow G$ whose restrictions to $U$ belong to the given class?
 \end{quote}
 
 Note that in answering the algebraic version of K\"ulshammer's second question for $H,G$ we investigate embeddings of $H$ in $G$, thus contributing to the work of Liebeck and Seitz, and Stewart.
 
-Furthermore, it may be the case that a counterexample to the algebraic version of K\"ulshammer's second question for some $H, G$ provides a counterexample to the original question for $\Gamma, G$ where $\Gamma$ is some finite subgroup of $H$. For instance, it would be encouraging if there existed a counterexample to the algebraic version of K\"ulshammer's question with $H = SL_2(k), G$, where $k$ is an algebraically closed field of prime characteristic $p$, as $SL_2(k)$ has many finite subgroups (e.g. $SL_2(\mathbb{F}_{p^r}$)) with which we can test the original question.
+Furthermore, it may be the case that a counterexample to the algebraic version of K\"ulshammer's second question for some $H, G$ provides a counterexample to the original question for $\Gamma, G$ where $\Gamma$ is some finite subgroup of $H$. For instance, it would be encouraging if there existed a counterexample to the algebraic version of K\"ulshammer's question with $H = SL_2(k), G$, as $SL_2(k)$ has many finite subgroups (e.g. $SL_2(\mathbb{F}_{p^r}$)) with which we can test K\"ulshammer's original question.
 
 \section{$G$-Complete Reducibility}
 
+The notion of $G$-complete reducibility is due to Serre \cite{serre1998ml} and extends the notion of completely reducible representations in $GL_n$ to representations in reductive $G$.
+
+A subgroup of $G$ is said to be $G$-completely reducible if, whenever that subgroup is contained in a parabolic subgroup of $G$ then it is contained in a Levi subgroup of that parabolic. 
+A subgroup of $G$ is said to be $G$-irreducible if that subgroup is contained in no proper parabolic subgroup of $G$.
+
+We say that a representation $\rho:H\rightarrow G$ is $G$-completely reducible (respectively, $G$-irreducible) if its image $\rho(H)$ in $G$ is $G$-completely reducible (respectively $G$-irreducible).
+
 \section{K\"ulshammer's Second Question}
 
-The algebraic group version of K\"ulshammer's question a non-trivial pursuit in its own right as K\"ulshammer's question has it's roots Maschke's Theorem of representation theory. Maschke's Theorem asserts that any representation from a finite group $\Gamma \rightarrow GL_n$ over a field of characteristic not dividing the order of $\Gamma$ is completely reducible, and that there are only finitely many conjugacy classes of (completely reducible) representations $\Gamma \rightarrow GL_n$ [ref Lang].
+K\"ulshammer's questions have their roots Maschke's Theorem, which asserts that any representation from a finite group $\Gamma$ in $GL_n$ over a field of characteristic not dividing the order of $\Gamma$ is completely reducible.
 
-Let $\Gamma$ be a finite group and let $G$ be a linear algebraic group over an algebraically closed field of characteristic $p$. K\"ulshammer's first question reads:
+K\"ulshammer's second question is a refinement of his first question, which reads as follows.
 \begin{quote}
-  Suppose $p$ does not divide the order of $\Gamma$. Are there only finitely many conjugacy classes of representations $\Gamma\rightarrow G$?
+  Suppose $p$ does not divide the order of $\Gamma$. Are there only finitely many conjugacy classes of representations of $\Gamma$ in $G$?
 \end{quote}
-The answer is positive and is essentially contained in a paper of A. Weil \cite{weil1964remarks}. K\"ulshammer's second question is a refinement of the first:
-\begin{quote}
-  Let $\Gamma_p < \Gamma$ be a Sylow p-subgroup and fix a conjugacy class of representations $\Gamma_p\rightarrow G$. Are there only finitely many conjugacy classes of representations $\Gamma\rightarrow G$ whose restrictions to $\Gamma_p$ belong to the fixed class?
-\end{quote}
-Note that the condition that $p$ does not divide $|\Gamma|$ is dropped from the hypothesis. If $p$ does not divide the order of $\Gamma$ then the answer is ``yes'', since $\Gamma_p$ is trivial and so all representations are equal when restricted to $\Gamma_p$.
+The answer is positive and the proof is essentially contained in a paper of A. Weil \cite{weil1964remarks}.
 
-If $\Gamma$ is a $p$-group then the answer is ``yes'', as $\Gamma_p = \Gamma$ so restricting to $\Gamma_p$ does nothing and therefore only representations that come from the fixed class will hit the class.
-
-If $G=GL_n$ and $p$ does not divide $|\Gamma|$ the answer is also ``yes'', since by Maschke's Theorem there can only be finitely many conjugacy classes of representations $\Gamma\rightarrow GL_n$ anyway, regardless of whether or not their restrictions to $\Gamma_p$ hit the fixed class. If $p$ does divide $|\Gamma|$ the answer has again shown to be positive \cite[Theorem]{slodowy1997two}.
-
-The following example shows infinitely many conjugacy classes of representations of a finite group into $SL_2(k)$.
+In the following Example we see infinitely many conjugacy classes of representations of a finite group in $SL_2(k)$.
 \begin{example}
   Let $\Gamma = C_p \times C_p = \langle a, b \,|\, ab = ba, a^p = b^p = 1 \rangle$ and consider representations $\rho: \Gamma \rightarrow SL_2(k)$. In particular, for each $\lambda \in k$ define $\rho_\lambda: \Gamma \rightarrow SL_2(k)$ by
   \begin{align*}
-    \rho_\lambda(a) = \left( \begin{matrix} 1 & 1 \\ 0 & 1 \end{matrix} \right) \\
-    \rho_\lambda(b) = \left( \begin{matrix} 1 & \lambda \\ 0 & 1 \end{matrix} \right).
+    \rho_\lambda(a) &= \left( \begin{matrix} 1 & 1 \\ 0 & 1 \end{matrix} \right),\\
+    \rho_\lambda(b) &= \left( \begin{matrix} 1 & \lambda \\ 0 & 1 \end{matrix} \right).
   \end{align*}
-  It is straightforward to check that if $\lambda_1 \neq \lambda_2$ then $\rho_{\lambda_1}$ is not $SL_2(k)$-conjugate to $\rho_{\lambda_2}$. Hence there are infinitely many $SL_2(k)$-conjugacy classes of representations from $\Gamma \rightarrow SL_2(k)$.
+  If $\lambda_1 \neq \lambda_2$ then $\rho_{\lambda_1}$ is not $SL_2(k)$-conjugate to $\rho_{\lambda_2}$. Hence there are infinitely many $SL_2(k)$-conjugacy classes of representations of $\Gamma$ in $SL_2(k)$.
 \end{example}
+
+Note that in K\"ulshammer's second question the condition that $p$ does not divide the order of $\Gamma$ is dropped from the hypothesis.
+
+For $G=GL_n$, if $p$ divides the order of $\Gamma$ then answer is `yes' \cite[pg. 335]{slodowy1997two}.
+If $p$ does not divide the order of $\Gamma$ then $\Gamma_p$ is trivial, and so the question becomes ``are there only finitely many representations of $\Gamma$ up to conjugation by $G$?''.
+Then by Maschke's Theorem the question becomes ``are there only finitely many completely reducible representations of $\Gamma$ up to conjugation by $G$?'', to which the answer is `yes' (a standard result in Representation Theory).
+
+More generally, for reductive $G$ there are only finitely many $G$-completely reducible representations of $\Gamma$ in $G$ (Theorem \ref{thm:finiteGCR}). Therefore, in order to find a counterexample for K\"ulshammer's second question for reductive $G$ we need infinitely many non-$G$-completely reducible representations of $\Gamma$. This leads us to study representations into proper parabolics of $G$.
+
+Furthermore, if $p$ does not divide the order of $\Gamma$ then $\Gamma$ is linearly reductive, and consequently every representation of $\Gamma$ is $G$-completely reducible.
 
 \section{Subgroup Structure of Algebraic Groups}
 
-We use similar methods to Liebeck and Seitz, calculating a certain 1-cohomology of $H$ with coefficients in $V$, the unipotent radical of a parabolic subgroup $P < G$.
+We use similar methods to Liebeck and Seitz, calculating a certain 1-cohomology of $H$ with coefficients in $V$, where $V$ is the unipotent radical of a parabolic subgroup of $G$.
 
-The main difference in our calculations is that we deal with the so-called \emph{nonabelian} 1-cohomology directly where as Liebeck, Seitz and Stewart use results from Representation Theory to study \emph{abelian layers} of the 1-cohomology and then piece the layers back together. Our calculations in Chapter \ref{Chapter5} agree with Stewart's $G_2$ calculation, and we acknowledge Stewart's $F_4$ calculation which provided us with a good example to work with in Chapter \ref{Chapter6}.
+The main difference in our calculations is that we deal with the so-called \emph{nonabelian} 1-cohomology directly where as Liebeck, Seitz and Stewart use results from Representation Theory to study \emph{abelian layers} of the 1-cohomology and then piece the layers back together. Our calculations in Section \ref{g2} of Chapter \ref{Chapter6} agree with Stewart's $G_2$ calculation, and we acknowledge Stewart's $F_4$ calculation which lead us to find infinitely many conjugacy classes of $SL_2$ in $B_4$ (Section \ref{b4}).
 
-\section{A Variation on K\"ulshammer's Second Question}
+\section{Results and Chapter Overview}
 
-\section{Chapter Overview}
+One of our main results is Theorem \ref{main_thm}. With this we are able to relate K\"ulshammer's second question, and the algebraic version, to a certain 1-cohomology calculation in which $K$ ($=$ finite $\Gamma$ or algebraic $H$) acts on the unipotent radical $V$ of a parabolic subgroup $P$ of $G$ via a fixed representation $K \rightarrow L$ into a Levi subgroup $L$ of $P$.
 
-One of our main results is Theorem \ref{thm:k2_h1}. With this we are able to relate K\"ulshammer's question to a certain 1-cohomology calculation in which $\Gamma$ acts on the unipotent radical $V$ of a parabolic subgroup $P < G$ via a certain representation $\Gamma \rightarrow L$ into a Levi subgroup $L < P$. We show that we can reduce K\"ulshammer's question to another question: is the restriction map of 1-cohomologies
-\begin{align}
-  H^1(\Gamma, V) \rightarrow H^1(\Gamma_p, V)
-\end{align}
-injective for all parabolic subgroups $P<G$?
+We also have a surprising result in Lemma \ref{lem:second}, where we show that under certain conditions that the 1-cohomology of $SL_2(k), V$ has representative 1-cocycles $\sigma$ such that $\sigma(B_2(k)$ lies in a product of commuting root groups of $V$. TODO so
 
-This approach might help settle K\"ulshammer's original question.
+In Chapter \ref{Chapter2} we produce some basic facts to do with Linear Algebraic Groups and Root Systems which could be found in texts such as Humphreys \cite{humphreys1975linear} and will be well-known to readers with a background in this area. This is an attempt to standardize notation and provide some background for the results to come.
 
-In Chapter \ref{Chapter2} we produce some basic facts to do with Linear Algebraic Groups which could be found in texts such as Humphreys \cite{humphreys1975linear} and will be well-known to readers with a background in this area. This is an attempt to standardize notation and provide some background for the results to come.
+In Chapter \ref{Chapter3} we introduce the 1-cohomology, first the well-known abelian case and second the lesser-known nonabelian case. In Example \ref{eg:sl2ab} we show that the restriction map of 1-cohomologies $H^1(SL_2(k), V) \rightarrow H^1(U_2(k), V)$ is injective for $U_2(k)$ the upper unitriangular matrices of $SL_2(k)$ and $V$ a vector space. In Lemma \ref{sl2_b_inj} show that $H^1(SL_2(k), V) \rightarrow H^1(B, V)$ is injective for $B$ a Borel subgroup of $SL_2$ and $V$ an algebraic group, not necessarily abelian, on which $SL_2$ acts. TODO
 
-In Chapter \ref{Chapter3} we introduce the 1-cohomology, first the well-known abelian case and second the lesser-known nonabelian case. In Example \ref{eg:sl2ab} we show that the restriction map of 1-cohomologies $H^1(SL_2(k), V) \rightarrow H^1(U(k), V)$ is injective for $V$ a vector space, which is the kind of result we can apply Theorem \ref{thm:k2_h1} to, in answering K\"ulshammer's second question. We also show that $H^1(SL_2(k), V) \rightarrow H^1(B, V)$ is injective for $B$ a Borel subgroup of $SL_2$ and $V$ an algebraic group, not necessarily abelian, on which $SL_2$ acts. The final step in applying an argument similar to Theorem \ref{thm:k2_h1} in an algebraic setting is that $H^1(B, V) \rightarrow H^1(U, V)$ is injective, where $U$ is the unipotent radical of $B$. We were unable to prove this but have evidence for it in our calculations in Chapter \ref{Chapter6}.
+Chapter \ref{Chapter4} deals with the 1-cohomology in our specific setting of studying K\"ulshammer's second question and studying the subgroup structure of reductive $G$. We apply the theory and results of the previous Chapter and culminate in Theorem \ref{main_thm}.
 
-Chapter \ref{Chapter4} introduces the approach of finding reductive subgroups in reductive $G$ via the 1-cohomology and finishes with Theorem \ref{thm:k2_h1} which relates K\"ulshammer's second question to a question of restriction maps of 1-cohomologies as above.
+In Chapter \ref{Chapter5} we provide some theoretical results for the 1-cohomology calculation for $SL_2, V$ where $V$ is the unipotent radical of a rank 1 parabolic of $G$. We have evidence that 1-cocycle in $Z^1(SL_2(k), V)$ under certain conditions has image lying in an abelian subgroup of $V$. The results also simplify the concrete 1-cohomolgy calculations in the next Chapter.
 
-In Chapter \ref{Chapter5} we collect together the results of various 1-cohomology calculations for $SL_2$ in $G$, $G$ of rank 2. They allude to a perhaps startling conjecture: although the types of 1-cohomology calculations $H^1(SL_2, V)$ involve a nonabelian $V$, there is evidence that a 1-cocycle in $Z^1(SL_2(k), V)$ that is zero on a maximal torus $T$ has image lying in an abelian subgroup of $V$. For instance, in Corollary \ref{cor:im_ab} we show this is the case for rank 1 parabolic subgroups of $G$ not containing $G_2$ or $C_3$. Furthermore Examples \ref{eg:g2}, \ref{eg:c3} verify the conjecture for $G = G_2, C_3$ respectively.
+In Chapter \ref{Chapter6} we calculate the 1-cohomology for $SL_2(k), G$ for $G$ of type $B_2$ and type $G_2$. We also show that there are infinitely many non-$G$-completely reducible representations of $SL_2(k)$ in $G$ for $G$ of type $B_4$, which is a necessary condition for a counterexample to the algebraic version of K\"ulshammer's second question.
 
-In Chapter \ref{Chapter6} we provide two examples which demonstrate the theoretical results captured in Chapter \ref{Chapter5}.
-
-The future directions are summarised in the final Chapter.
+The future directions are summarised in the final Chapter. TODO

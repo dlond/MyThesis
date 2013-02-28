@@ -1,4 +1,4 @@
-\begin{thebibliography}{14}
+\begin{thebibliography}{13}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -11,12 +11,6 @@ P.~Slodowy.
   finite groups}.
 \newblock \emph{Algebraic groups and Lie groups: a volume of papers in honour
   of the late RW Richardson}, page 331, 1997.
-
-\bibitem[Weil(1964)]{weil1964remarks}
-A.~Weil.
-\newblock {Remarks on the cohomology of groups}.
-\newblock \emph{Annals of Mathematics}, 80\penalty0 (1):\penalty0 149--157,
-  1964.
 
 \bibitem[Liebeck and Seitz(1996)]{liebeck1996reductive}
 M.W. Liebeck and G.M. Seitz.
@@ -36,10 +30,26 @@ D.I. Stewart.
 \newblock G-complete reducibility and the exceptional algebraic groups.
 \newblock \emph{Arxiv preprint arXiv:1011.4835}, 2010.
 
+\bibitem[Serre(1998)]{serre1998ml}
+J.-P. Serre.
+\newblock Moursund lectures.
+\newblock \emph{University of Oregon Mathematics Department}, 1998.
+
+\bibitem[Weil(1964)]{weil1964remarks}
+A.~Weil.
+\newblock {Remarks on the cohomology of groups}.
+\newblock \emph{Annals of Mathematics}, 80\penalty0 (1):\penalty0 149--157,
+  1964.
+
 \bibitem[Humphreys(1975)]{humphreys1975linear}
 J.E. Humphreys.
 \newblock \emph{{Linear algebraic groups}}.
 \newblock Springer, 1975.
+
+\bibitem[Brown(1976)]{brown1976cohomology}
+K.~Brown.
+\newblock {Cohomology of groups}.
+\newblock \emph{Algebraic K-Theory}, pages 249--259, 1976.
 
 \bibitem[Kemper(2000)]{kemper2000characterization}
 G.~Kemper.
@@ -47,32 +57,16 @@ G.~Kemper.
   invariants}.
 \newblock \emph{Transformation groups}, 5\penalty0 (1):\penalty0 85--92, 2000.
 
-\bibitem[Brown(1976)]{brown1976cohomology}
-K.~Brown.
-\newblock {Cohomology of groups}.
-\newblock \emph{Algebraic K-Theory}, pages 249--259, 1976.
-
 \bibitem[Richardson(1982)]{richardson1982orbits}
 RW~Richardson.
 \newblock {On orbits of algebraic groups and Lie groups}.
 \newblock \emph{Bulletin of the Australian Mathematical Society}, 25\penalty0
   (01):\penalty0 1--28, 1982.
 
-\bibitem[Borel(1991)]{borel1991linear}
-A.~Borel.
-\newblock \emph{{Linear algebraic groups}}.
-\newblock Springer, 1991.
-
 \bibitem[Martin(2003)]{martin2003reductive}
 B.~Martin.
 \newblock {Reductive subgroups of reductive groups in nonzero characteristic}.
 \newblock \emph{Journal of Algebra}, 262\penalty0 (2):\penalty0 265--286, 2003.
-
-\bibitem[Bate et~al.(2005)Bate, Martin, and Roehrle]{bate2005geometric}
-M.~Bate, B.~Martin, and G.~Roehrle.
-\newblock {A geometric approach to complete reducibility}.
-\newblock \emph{Inventiones Mathematicae}, 161\penalty0 (1):\penalty0 177--218,
-  2005.
 
 \bibitem[Martin(2004)]{martin2004nonab}
 B.~Martin.
