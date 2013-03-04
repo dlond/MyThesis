@@ -38,7 +38,7 @@
             {Daniel Lond}
             }
 \addresses  {\groupname\\\deptname\\\univname}  % Do not change this here, instead these must be set in the "Thesis.cls" file, please look through it instead
-\date       {January 2013}
+\date       {March 2013}
 \subject    {}
 \keywords   {}
 
@@ -56,35 +56,35 @@
 
 %% ----------------------------------------------------------------
 % Declaration Page required for the Thesis, your institution may give you a different text to place here
-\Declaration{
-
-\addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
-
-I, DANIEL LOND, declare that this thesis titled, `ON REDUCTIVE SUBGROUPS OF ALGEBRAIC GROUPS AND A QUESTION OF K\"ULSHAMMER' and the work presented in it are my own. I confirm that:
-
-\begin{itemize} 
-\item[\tiny{$\blacksquare$}] This work was done wholly or mainly while in candidature for a research degree at this University.
- 
-\item[\tiny{$\blacksquare$}] Where any part of this thesis has previously been submitted for a degree or any other qualification at this University or any other institution, this has been clearly stated.
- 
-\item[\tiny{$\blacksquare$}] Where I have consulted the published work of others, this is always clearly attributed.
- 
-\item[\tiny{$\blacksquare$}] Where I have quoted from the work of others, the source is always given. With the exception of such quotations, this thesis is entirely my own work.
- 
-\item[\tiny{$\blacksquare$}] I have acknowledged all main sources of help.
- 
-\item[\tiny{$\blacksquare$}] Where the thesis is based on work done by myself jointly with others, I have made clear exactly what was done by others and what I have contributed myself.
-\\
-\end{itemize}
- 
- 
-Signed:\\
-\rule[1em]{25em}{0.5pt}  % This prints a line for the signature
- 
-Date:\\
-\rule[1em]{25em}{0.5pt}  % This prints a line to write the date
-}
-\clearpage  % Declaration ended, now start a new page
+%\Declaration{
+%
+%\addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
+%
+%I, DANIEL LOND, declare that this thesis titled, `ON REDUCTIVE SUBGROUPS OF ALGEBRAIC GROUPS AND A QUESTION OF K\"ULSHAMMER' and the work presented in it are my own. I confirm that:
+%
+%\begin{itemize} 
+%\item[\tiny{$\blacksquare$}] This work was done wholly or mainly while in candidature for a research degree at this University.
+% 
+%\item[\tiny{$\blacksquare$}] Where any part of this thesis has previously been submitted for a degree or any other qualification at this University or any other institution, this has been clearly stated.
+% 
+%\item[\tiny{$\blacksquare$}] Where I have consulted the published work of others, this is always clearly attributed.
+% 
+%\item[\tiny{$\blacksquare$}] Where I have quoted from the work of others, the source is always given. With the exception of such quotations, this thesis is entirely my own work.
+% 
+%\item[\tiny{$\blacksquare$}] I have acknowledged all main sources of help.
+% 
+%\item[\tiny{$\blacksquare$}] Where the thesis is based on work done by myself jointly with others, I have made clear exactly what was done by others and what I have contributed myself.
+%\\
+%\end{itemize}
+% 
+% 
+%Signed:\\
+%\rule[1em]{25em}{0.5pt}  % This prints a line for the signature
+% 
+%Date:\\
+%\rule[1em]{25em}{0.5pt}  % This prints a line to write the date
+%}
+%\clearpage  % Declaration ended, now start a new page
 
 %% ----------------------------------------------------------------
 % The "Funny Quote Page"
@@ -107,9 +107,23 @@ Date:\\
 \abstract{
 \addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
 
-This thesis concerns embeddings of reductive groups $H$ in a reductive group $G$ complementing the work of M. Liebeck and G. Seitz who have determined explicitly the embeddings of arbitrary connected simple groups in $G$ where $G$ is of exceptional type with certain restrictions on the characteristic of the underlying field $k$. We work with low-characteristic (usually $p = 2$ or $p = 3$) where examples are exotic and less is know.
+This Thesis is motivated by two problems, each concerning representations (homomorphisms) of groups into a connected reductive algebraic group $G$ over an algebraically closed field $k$. The first problem is due to B. K\"ulshammer and is to do with representations of finite groups in $G$:
+\begin{quote}
+	Let $\Gamma$ be a finite group and suppose $k$ has characteristic $p$. Let $\Gamma_p$ be a Sylow $p$-subgroup of $\Gamma$ and let $\rho:\Gamma_p\rightarrow G$ be a representation. Are there only finitely many conjugacy classes of representations $\rho':\Gamma\rightarrow G$ whose restriction to $\Gamma_p$ is conjugate to $\rho$?
+\end{quote}
+The second problem follows the work of M. Liebeck and G. Seitz: describe the representations of connected reductive algebraic $H$ in $G$.
+	
+These two problems have been settled as long as the characteristic $p$ is large enough but not much is known in the case where the characteristic $p$ is a so called \emph{bad} prime for $G$, which will be the setting for our work.
 
-We also investigate a question of B. K\"ulshammer which asks whether there can be only finitely many conjugacy classes of representations $\Gamma \rightarrow G$ from a finite group $\Gamma$ which when restricted to a Sylow $p$-subgroup $\Gamma_p$ hit some fixed class of representations $\Gamma_p \rightarrow G$. A counterexample exists for a particular non-reductive $G$ and we concentrate on the reductive case. We provide a necessary condition for a positive answer to K\"ulshammer's question.  
+At the intersection of these two problems lies another problem which we call the algebraic version of K\"ulshammer's question where we no longer suppose $\Gamma$ is finite. This new variation of K\"ulshammer's question is interesting in its own right, and a counterexample may provide insight into K\"ulshammer's original question.
+
+Our approach is to convert these problems into problems in the nonabelian 1-cohomology. Let $K$ be a reductive algebraic group, $P$ a parabolic subgroup of $G$ with Levi subgroup $L<P$, $V$ the unipotent radical of $P$. Let $\rho_0:K\rightarrow L$ be a representation. Then the representations $\rho:K\rightarrow P$ that equal $\rho_0$ under the canonical projection $P\rightarrow L$ are in bijective correspondence with the elements of the 1-cohomology $H^1(K, V)$ where $K$ acts on $V$ by $x\cdot v = \rho_0(x)v\rho_0(x)^{-1}$.
+
+We state and prove the conditions under which a collection of representations from $K$ to $P$ is a finite union of conjugacy classes in terms of the 1-cohomology in Theorem \ref{main_thm}.
+
+Unlike other approaches, we work directly with the nonabelian 1-cohomology. Even so, we find that the 1-cocycles in $Z^1(K, V)$ often take values in an abelian subgroup of $V$ (Lemmas \ref{lem:first} and \ref{lem:second}). This is interesting, for the question ``is the restriction map of 1-cohomologies $H^1(H, V) \rightarrow H^1(U, V)$ induced by the inclusion of $U$ in $K$ injective?'' is closely linked to the question of K\"ulshammer, and has positive answer if $V$ is abelian and $H=SL_2(k)$ (Example \ref{eg:sl2ab}).
+
+We show that for $G=B_4$ there is a family of pairwise non-conjugate embeddings of $SL_2$ in $G$, a direction provided by Stewart who proved the result for $G=F_4$. This is important as an example like this is first needed if one hopes to find a counterexample to the algebraic version of K\"ulshammer's question.
 
 }
 
@@ -124,9 +138,11 @@ We also investigate a question of B. K\"ulshammer which asks whether there can b
 
 I would like to thank the expert guidance, support and patience of my supervisory team, Ben Martin and G\"unter Steinke.
 
-As a part-time student with full-time work commitments, I also owe a lot to my collegues and supervisors at Weta Digital who have been very generous in affording time off for me make frequent trips from Wellington to Christchurch to meet with my supervisors.
+As a part-time student with full-time work commitments, I also owe a lot to my colleagues and supervisors at Weta Digital who have been very generous in affording time off for me make frequent trips from Wellington to Christchurch to meet with my supervisors.
 
 Lastly I would like to thank my friends and family for their support. It is evidence that we have something truly special for you to still be at my side at the end: Lucy Lake-Ryan, my parents Andrea Spain, Doug Spain, Gary Lond and all the Maths and Stats postgrads that have come and gone over my time at the University of Canterbury.
+
+This research could not have been possible without the support of the Marsden grants UOC0501, UOC1009 and UOA1021.
 }
 \clearpage  % End of the Acknowledgements
 %% ----------------------------------------------------------------
@@ -159,7 +175,7 @@ Lastly I would like to thank my friends and family for their support. It is evid
 \dedicatory{
 \addtocontents{toc}{\vspace{2em}}  % Add a gap in the Contents, for aesthetics
 
-To the people of Christchurch affected by the earthquakes of 2010-2011, during which the a lot of this work was written.
+To the people of Christchurch affected by the earthquakes of 2010-2011, during which a lot of this work was written.
 }
 
 %% ----------------------------------------------------------------

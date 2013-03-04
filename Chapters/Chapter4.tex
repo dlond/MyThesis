@@ -8,8 +8,6 @@
 Let $K$ be a linear algebraic group, $H$ a connected reductive algebraic group, and $\Gamma$ a finite group.
 As pointed out in the Introduction, K\"ulshammer's second question has positive answer for $\Gamma, G$ so long as $p$ is good for $G$. We wish to determine whether there exists a counterexample to K\"ulshammer's second question for some connected reductive $G$.
 
-TODO: How?
-
 Generally speaking, we will be concerned with homomorphisms from $K$ to $G$. Where possible, we will work in this general setting and state things in terms of $K$. When we must specifically work with finite $K$ or connected reductive $K$, we will replace $K$ with $\Gamma$ or $H$, respectively.
 \begin{definition} Let $X,Y$ be (algebraic) groups. Then we denote by $\mathrm{Hom}(X, Y)$ the set of (algebraic) group homomorphisms from $X$ to $Y$.
 \end{definition}
@@ -21,7 +19,7 @@ A consequence of the following Theorem  is that if there is a counterexample to 
 \begin{theorem} \label{thm:finiteGCR} There are only finitely many $G$-conjugacy classes of $G$-completely reducible homomorphisms from $\Gamma$ to $G$.
 \end{theorem}
 \begin{proof}
-\cite[Theorem 1.2]{martin2003reductive}
+Let $\rho\in \mathrm{Hom}(\Gamma, G)$. Then $G\cdot \rho$ is closed if and only if $\overline{\rho(\Gamma)}$ is strongly reductive (\cite[Proposition 2.16]{bate2005geometric}) if and only if $\overline{\rho(\Gamma)}$ is $G$-completely reducible (\cite[Theorem 3.1]{bate2005geometric}). By \cite[Theorem 1.2]{martin2003reductive} there are only finitely many closed conjugacy classes of homomorphisms from $\Gamma$ to $G$.
 \end{proof}
 
 Let $G$ be a connected reductive algebraic group over an algebraically closed field $k$ with $\mathrm{char}(k) = p$. Let $P$ be a parabolic subgroup of $G$, with Levi subgroup $L$ and unipotent radical $V$. We have $P = V \rtimes L$, and we denote by $\pi^L$ the canonical projection
@@ -218,7 +216,7 @@ Recall from Definition \ref{h1sigma} that $Z^1(K, V)_{l \cdot \omega}$ is the co
 	x.v = l \omega(x) l^{-1} v l \omega(x^{-1}) l^{-1},
 \end{align*}
 for all $x \in K, v \in V$. Evidently $Z^1(K, V)_{l \cdot \omega} = z\left(\mathrm{Hom}(K, P)_{l \cdot \omega}\right)$. 
-We show that we can apply Lemma \ref{h1maps} to get a map of 1-cohomomologies $H^1(K, V)_\omega$ to $H^1(K, V)_{l \cdot \omega}$. To this end, let $K' = K$, $V' = V$ and let $\zeta = \mathrm{id}:K \rightarrow K$.
+We show that we can apply Lemma \ref{h1maps} to get a map of 1-cohomologies $H^1(K, V)_\omega$ to $H^1(K, V)_{l \cdot \omega}$. To this end, let $K' = K$, $V' = V$ and let $\zeta = \mathrm{id}:K \rightarrow K$.
 
 Let $\xi = \xi_l: V \rightarrow V'$ be defined by	$\xi_l(v) = lvl^{-1}$ for all $v \in V$. Now we show that $\xi_l$ satisfies condition (d) of the Lemma. Let $x \in K, v \in V$. Then
 	\begin{align*}
@@ -488,7 +486,7 @@ Then there exists $l \in L$, $\tau \in \mathcal{S}$ such that $\rho^L = l \cdot 
 	\end{align*}
 It is clear that the maps $\mathcal{H}(\zeta), \widetilde{\mathcal{H}}(\zeta)$ are well-defined.
 
-The situation thus far is summarised by the following commutative diagram.
+The situation thus far is summarized by the following commutative diagram.
 \par\nobreak
 	{\small
 	\setlength{\abovedisplayskip}{6pt}
@@ -608,8 +606,8 @@ Therefore $u_1 = 0$. Hence a typical 1-cocycle that is trivial on $\langle \omeg
 \begin{align*}
 	\sigma_u(\tau) = \left(\begin{matrix} 0 \\ 0 \\ u \end{matrix} \right),\qquad (u\in k).
 \end{align*}
-This is a necessary condition. To show it is sufficient one can apply \cite[Proposition 2]{martin2004nonab} which involves looking at the presentation of $F$.
-Now we calculate the class $[\sigma_u] \in H^1(F, Q)$. Suppose $[\sigma_v] = [\sigma_u]$. Then
+
+Now we calculate the class $\psi(\sigma_u) \in H^1(F, Q)$. Suppose $\sigma_v,\sigma_u$ lie in the same equivalence class. Then
 there is a $q\in Q$ fixed under the action of $\omega$, that is of the form
 \begin{align*}
 	q = \left(\begin{matrix} 0 \\ 0 \\ \lambda\end{matrix}\right),
@@ -632,7 +630,7 @@ such that $\sigma_v(\gamma) = q\times\sigma_u(\gamma)\times\gamma\cdot q^{-1}$. 
 \end{align*}
 Hence only if $u=v$ are two 1-cocycles of the particular form in the same class, and therefore $H^1(F, Q)$ is infinite.
 
-In view of Theorem \ref{thm:k2_h1} one could show that the map from $H^1(F, Q)$ to $H^1(F_p, Q)$ is not injective. Furthermore, it is natural to ask whether Example \ref{eg:non_red} leads to a reductive counterexample to K\"ulshammer's second question, although we can quickly verify that the answer is ``not immediately''. For suppose there was a reductive group with unipotent radical \emph{containing} the multiplication law:
+It is natural to ask whether Example \ref{eg:non_red} leads to a reductive counterexample to K\"ulshammer's second question, although we can quickly verify that the answer is ``not immediately''. For suppose there was a reductive group with unipotent radical \emph{containing} the multiplication law:
 \begin{align*}
 	&\ldots \epsilon_\sigma(u_\sigma) \ldots \epsilon_\beta(u_\beta) \ldots \epsilon_\gamma(u_\gamma) \times
 	\ldots \epsilon_\sigma(v_\sigma) \ldots \epsilon_\beta(v_\beta) \ldots \epsilon_\gamma(v_\gamma)\\

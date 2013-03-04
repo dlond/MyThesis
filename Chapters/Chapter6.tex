@@ -8,7 +8,7 @@ In this Chapter we calculate some examples of 1-cohomology.
 
 We calculate the 1-cohomology of $B_2$, aided by the results in the previous Chapter. We also investigate the counterexamples to Propositions \ref{ufixes} and \ref{uabelian} as pointed out in the respective Remarks \ref{g2counter} and \ref{c3counter} of the previous Chapter.
 
-In our last example calculation we use the 1-cohomology to find a family of maps from $SL_2(k)$ to $B_4$ which gives infinitely many conjugacy classes. TODO result \ldots
+In our last example calculation we use the 1-cohomology to find a family of maps from $SL_2(k)$ to $B_4$ which gives infinitely many conjugacy classes. We would like to say whether or not this leads to a counterexample to K\"ulshammer's second question however the calculation is not developed enough for us to apply Theorem \ref{main_thm}.
 
 \section{General Method}
 The general method we use of calculating the 1-cohomology is outlined below.
@@ -72,13 +72,21 @@ We elaborate on step 4. Given $\sigma\left(\begin{matrix}a & b \\ 0 & a^{-1}\end
 \end{align}
 where we apply Corollary \ref{sigmaneg} at the last step.
 
-TODO Ben's paper.
-Then to check that $\sigma$ is a well-defined 1-cocycle on $SL_2(k)$ amounts to checking that $\sigma$ satisfies the following conditions, based on Steinberg's presentation for $SL_2$ \cite{}.
+This gives a candidate for a 1-cocycle on $SL_2(k)$. In \cite[Proposition 2]{martin2004nonab} Martin establishes a criterion for a function to belong to the set of 1-cocycles in terms of group presentations. We can use this criterion to prove that our candidate $\sigma$ is a well-defined 1-cocycle on $SL_2(k)$ based on Steinberg's presentation for $SL_2$ \cite[\S 12.1]{carter1989simple}. This amounts to verifying the following equations hold.
 \begin{align}
-	&\sigma(x_\alpha(t_1))\left[x_\alpha(t_1)\cdot \sigma(x_\alpha(t_2)))\right] = \sigma(x_\alpha(t_1+t_2)) \\
-	&\sigma(h_\alpha(t_1))\left[h_\alpha(t_1) \cdot \sigma(h_\alpha(t_2)))\right] = \sigma(h_\alpha(t_1t_2)) \\
-	&\sigma(n_\alpha(t))\left[n_\alpha(t) \cdot \sigma(x_\alpha(u)) \left[x_\alpha(u) \cdot \sigma(n_\alpha(t)^{-1})\right]\right] = \sigma(x_{-\alpha}(-t^{-2}u)).
+	&\sigma(x_r(t_1))\left[x_r(t_1)\cdot \sigma(x_r(t_2)))\right] = \sigma(x_r(t_1+t_2)), \label{pita1}\\
+	&\sigma(h_r(t_1))\left[h_r(t_1) \cdot \sigma(h_r(t_2)))\right] = \sigma(h_r(t_1t_2)), \label{pita2}\\
+	&\sigma(n_r(t))\left[n_r(t) \cdot \sigma(x_r(u)) \left[x_r(u) \cdot \sigma(n_r(t)^{-1})\right]\right] = \sigma(x_{-r}(-t^{-2}u)), \label{pita3}
 \end{align}
+for $r \in \{\pm \alpha\}$, where
+\begin{align*}
+	x_\alpha(t) &= \left(\begin{matrix}1 & t\\0 & 1\end{matrix}\right), \\
+	x_{-\alpha}(t) &= \left(\begin{matrix}1 & 0\\t & 1\end{matrix}\right), \\
+	n_r(t)&=x_r(t)x_{-r}(-t^{-1})x_r(t),\textrm{ and} \\
+	h_r(t)&=n_r(t)n_r(-1).
+\end{align*}
+
+The checks are routine and lengthy, so we omit the details in our examples that follow. Note that not all of the equations need to be checked, for example Equation \ref{pita1} is automatic for $r=\alpha$, since $\sigma$ is already a well-defined 1-cocycle on $B_2(k)$ at this stage.
 
 We will need to determine the action of $SL_2(k)$ on $V_\alpha$ and the group law on $V_\alpha$ which often involves lengthy computations using the commutator relations. For clarity, we will use column vector notation.
 \begin{align*}
@@ -466,9 +474,9 @@ and substituting $a = d = 0, b = c = 1$ gives
 \end{align*}
 so we take Equation \ref{eqn:b2a} to be the general form of a 1-cocycle $\sigma:SL_2(k)\rightarrow V_\alpha$ such that $\sigma(y) = 1$ for all $y\in T_2(k)$.
 
-We now show that $\sigma$ as defined in Equation \ref{eqn:b2a} satisfies the 1-cocycle condition. TODO Steinberg or otherwise.
+We can show that $\sigma$ as defined in Equation \ref{eqn:b2a} is a well-defined 1-cocycle by verifying that Equations \ref{pita1}--\ref{pita3} hold for $r=\alpha, -\alpha$ but we leave the details to the reader.
 
-We calculate the 1-cohomology by finding $\tau\in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\tau = \sigma + \chi^{SL_2(k)}_\mathbf{v}$, for some $\mathbf{v}\in V_\alpha$. We may assume $\tau(y) = 1$ for all $y \in T_2(k)$, hence $\mathbf{v}$ is fixed by the action of $T_2(k)$. 
+We can now calculate the 1-cohomology by finding $\tau\in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\tau = \sigma + \chi^{SL_2(k)}_\mathbf{v}$, for some $\mathbf{v}\in V_\alpha$. We may assume $\tau(y) = 1$ for all $y \in T_2(k)$, hence $\mathbf{v}$ is fixed by the action of $T_2(k)$. 
 
 To this end, let $\mathbf{v} = \left(\begin{matrix}0\\v\\0\end{matrix}\right)$. Since
 	$\left(\begin{matrix}a & b\\c & d\end{matrix}\right) \cdot \left(\begin{matrix}0\\v\\0\end{matrix}\right) =
@@ -582,7 +590,6 @@ By Equation \ref{prop:A:eqn2} there exists $\lambda_3 \in k$ such that
 \begin{align*}
 \sigma\left(\begin{matrix}0 & 1\\1 & 0\end{matrix}\right) = \left(\begin{matrix}0\\0\\ \lambda_3\end{matrix}\right),
 \end{align*}
-
 and by Equation \ref{prop:A:eqn1}
 \begin{align*}
 \sigma\left(
@@ -709,7 +716,7 @@ and substituting $a = d = 0, b = c=1$ gives
 \begin{align*}
 \sigma\left(\begin{matrix}0 & 1 \\ 1 & 0\end{matrix}\right) = \left(\begin{matrix}0  \\ 0\\ \mu^2\end{matrix}\right),
 \end{align*}
-so we take Equation \ref{eqn:b2b} to be the general form of a 1-cocycle $\sigma:SL_2(k)\rightarrow V_\beta$ such that $\sigma(y) = 1$ for all  $y\in T_2(k)$. We now show that Equation \ref{eqn:b2b} is a well-defined. TODO
+so we take Equation \ref{eqn:b2b} to be the general form of a 1-cocycle $\sigma:SL_2(k)\rightarrow V_\beta$ such that $\sigma(y) = 1$ for all  $y\in T_2(k)$. We can now show that Equation \ref{eqn:b2b} is a well-defined by verifying Equations \ref{pita1}--\ref{pita3}, but as in the previous calculation we omit the details.
 
 We calculate the 1-cohomology by calculating $\tau = \sigma + \chi^{SL_2(k)}_\mathbf{v}$ such that $\mathbf{v} \in V_\beta$ is fixed under the action of $T_2(k)$. To this end let $\mathbf{v} = \left(\begin{matrix}0 \\ 0 \\ v_3\end{matrix}\right)$.
 \begin{align*}
@@ -727,9 +734,9 @@ We calculate the 1-cohomology by calculating $\tau = \sigma + \chi^{SL_2(k)}_\ma
 \left(\begin{matrix} 0 \\ 0 \\ v_3 \end{matrix}\right) \\
 &= \left(\begin{matrix}  \mu(cd)^{2^{r-1}}  \\ \mu\left(ab \right)^{2^{r-1}} \\ \mu^2\left( bc \right)^{2^r} \end{matrix}\right).
 \end{align*}
-Therefore, for each $\mu$ in $k$ we get a distinct equivalence class of 1-cocycles $[\sigma_\mu]$ from $SL_2 \rightarrow V$, where
+Therefore, for each $\mu$ in $k$ we get a distinct element of the 1-cohomology $\psi(\sigma_\mu)$, where
 \begin{align*}
-\sigma_\mu\left(\left(\begin{matrix} a & b \\ c & d \end{matrix}\right)\right) &=
+\sigma_\mu\left(\begin{matrix} a & b \\ c & d \end{matrix}\right) &=
 \left(\begin{matrix}  \mu(cd)^{2^{r-1}}  \\ \mu\left(ab \right)^{2^{r-1}} \\ \mu^2\left( bc \right)^{2^r} \end{matrix}\right).
 \end{align*}
 
@@ -740,11 +747,7 @@ But as before if we consider the action of $Z(L_\beta)$ on our 1-cocycles
 &=
 \left(\begin{matrix}  (s\mu)(cd)^{2^{r-1}}  \\ (s\mu)\left(ab \right)^{2^{r-1}} \\ (s\mu)^2\left( bc \right)^{2^r} \end{matrix}\right).
 \end{align*}
-our infinitely many $V$-conjugacy classes collapse to just two $P_\beta$-conjugacy classes:
-\begin{align*}
-\left[\sigma_0\right] &= \left\{ \sigma_0 \right\}, \\
-\left[\sigma_1\right] &= \left\{ \sigma_\mu \, | \, \mu \in k^* \right\}.
-\end{align*}
+our infinitely equivalence classes collapse to just two classes, $\psi(\sigma_0), \psi(\sigma_1)$.
 
 	\section{$G = G_2$}
 	\label{g2}
@@ -854,7 +857,7 @@ our infinitely many $V$-conjugacy classes collapse to just two $P_\beta$-conjuga
 							&= x_4(\lambda)+x_4(\lambda)-3\lambda^{2^r}x_3(\lambda)\quad(\textrm{Equation \ref{eqn:g2x42}}) \\
 							&= 3\lambda^{2^r}x_3(\lambda),
 		\end{align*}
-		which implies that $x_3$ is constant, hence zero, as $\sigma\left(\begin{matrix}* & 0\\0 & *\end{matrix}\right) = 1$.
+		which implies that $x_3$ is constant, hence zero, as $\sigma(T_2(k)) = 1$.
 
 		Therefore $x_3 = 0$ in any case, and so by Equation \ref{eqn:g2x42}, $x_4$ is an additive polynomial. Then it is of the form
 		\begin{align*}
@@ -872,7 +875,9 @@ our infinitely many $V$-conjugacy classes collapse to just two $P_\beta$-conjuga
 		\sigma\left(\begin{matrix}* & *\\0 & *\end{matrix}\right) &= \sigma\left(\begin{matrix}1 & *\\0 & 1\end{matrix}\right) \quad(\textrm{Proposition \ref{imb:imu}}) \\
 			&= 1.
 			\end{align*}
-			Therefore $H^1(SL_2(k), V_\alpha)_{\rho_r}$ is trivial by Lemma \ref{sl2_b_inj}. Note also that Lemma \ref{lem:second} is trivially satisfied.
+			Therefore $H^1(SL_2(k), V_\alpha)_{\rho_r}$ is trivial by Lemma \ref{sl2_b_inj}.
+
+The purpose of this calculation was to show that although the hypotheses of Lemma \ref{lem:first} fail (Remark \ref{g2counter}) we still (trivially) obtain the same result as the conclusion of Lemma \ref{lem:second}; that is, the equation for $\sigma(B_2(k)$.
 
 			%\subsection{$V = R_u(P_\beta)$}
 			%\label{g2:beta}
@@ -1019,7 +1024,7 @@ Consider Equation \ref{c3x8}. If $x_3$ or $x_4$ is nonzero then $p=2$, so $2x_3(
 \begin{align*}
 	x_8(\lambda_1 + \lambda_2) = x_8(\lambda_1) + x_8(\lambda_2).
 \end{align*}
-Moreover, in either case $\sigma\left(\begin{matrix}1 & *\\0 & 1\end{matrix}\right)$ lies in an abelian subgroup of $V_\alpha$. Hence Lemma \ref{lem:second} applies. The two cases are
+Moreover, in either case $\sigma\left(U_2(k)\right)$ lies in an abelian subgroup of $V_\alpha$. Hence Lemma \ref{lem:second} applies. The two cases are
 \begin{align*}
 p=2: \qquad&x_3(\lambda) = \mu \lambda^{2^{r-1}} \\
 	&x_5(\lambda) = \nu \lambda^{2^{r-1}} \\
@@ -1028,7 +1033,7 @@ p>2: \qquad&x_3=x_5=0 \\
 	&x_8(\lambda) = \omega \lambda^{p^r}.
 \end{align*}
 
-The point of this Example calculation was to show that we could eventually apply Lemma \ref{lem:second} even though Proposition \ref{uabelian} does not apply, so we could not use Lemma \ref{lem:first}. This provides some evidence for Conjucture \ref{bigclaim}.
+The point of this example calculation was to show that we could eventually apply Lemma \ref{lem:second} even though Proposition \ref{uabelian} does not apply, so we could not use Lemma \ref{lem:first}. This provides some evidence for Conjecture \ref{bigclaim}.
 
 %\subsection{$V = R_u(P_\beta)$}
 %\label{c3:beta}
@@ -1042,10 +1047,10 @@ The point of this Example calculation was to show that we could eventually apply
 \label{b4}
 
 Let $G = B_4$. Let $\mathrm{char}(k)=2$ and set $V:=\langle U_\phi\, |\, \phi \in \Phi^+, \phi \neq \gamma + \delta,\phi \neq \gamma+2\delta\} \rangle$. We will write
-$
-\mathbf{v} = \epsilon_\alpha(v_1) \epsilon_\beta(v_2) \epsilon_{\alpha+\beta}(v_3) \epsilon_{\beta+\gamma}(v_4) \epsilon_{\alpha+\beta+\gamma}(v_5) \epsilon_{\beta+\gamma+\delta}(v_6) \epsilon_{\alpha+\beta+\gamma+\delta}(v_7) \epsilon_{\beta+\gamma+2\delta}(v_8) \epsilon_{\alpha+\beta+\gamma+2\delta}(v_9) \\
-\epsilon_{\beta+2\gamma+2\delta}(v_{10}) \epsilon_{\alpha+\beta+2\gamma+2\delta}(v_{11}) \epsilon_{\alpha+2\beta+2\gamma+2\delta}(v_{12}) \in V
-$
+\begin{align*}
+\mathbf{v} &= \epsilon_\alpha(v_1) \epsilon_\beta(v_2) \epsilon_{\alpha+\beta}(v_3) \epsilon_{\beta+\gamma}(v_4) \epsilon_{\alpha+\beta+\gamma}(v_5) \epsilon_{\beta+\gamma+\delta}(v_6) \epsilon_{\alpha+\beta+\gamma+\delta}(v_7) \epsilon_{\beta+\gamma+2\delta}(v_8)\\ 
+&\quad\epsilon_{\alpha+\beta+\gamma+2\delta}(v_9)\epsilon_{\beta+2\gamma+2\delta}(v_{10}) \epsilon_{\alpha+\beta+2\gamma+2\delta}(v_{11}) \epsilon_{\alpha+2\beta+2\gamma+2\delta}(v_{12}) \in V
+\end{align*}
 as a column vector:
 \begin{align*}
 \mathbf{v} = \left( \begin{matrix}
@@ -1065,7 +1070,7 @@ as a column vector:
 \end{align*}
 The Group Law on $V$ is
 \begin{align*}
-	     \mathbf{u}*
+	     \mathbf{u}
 	     \mathbf{v}&=
 	     \mathbf{u} + \mathbf{v} +
 	     \left( \begin{matrix}
@@ -1199,13 +1204,13 @@ p_9(u) &= \sum_{j=0}^N x_j u^{2^j} \\
 p_{10}(u) &= \sum_{j=0}^N y_j u^{2^j} \\
 p_{11}(u) &= \sum_{j=0}^N z_j u^{2^j}, 
 \end{align*}
-If $\sigma$ is not the trivial 1-cocycle then one of the polynomials above is not the zero polynomial. Suppose for instance that $p_8$ is not the zero polynomial, so that $w_l\neq 0$ for some index $l\geq 0$. By (\ref{tAct})
+If $\sigma$ is not the trivial 1-cocycle then one of the polynomials above is not the zero polynomial. Suppose for instance that $p_8$ is not the zero polynomial, so that $w_l\neq 0$ for some index $l\geq 0$. Then by Equation \ref{tAct}
 \begin{align*}
 \sum_{j=0}^N w_j (t^2u)^{2^j} &= t^{2^{r+1}}\sum_{j=0}^N w_j u^{2^j} \\
 \Rightarrow\quad w_l (t^2u)^{2^l} &= t^{2^{r+1}} w_l u^{2^l} \\
 \Rightarrow\quad l &= r.
 \end{align*}
-The same kind of calculation for the other polynomials shows that
+Similarly, for the polynomials $p_9,p_{10},,p_{11}$, we get that
 \begin{align*}
 p_8(u) = wu^{2^{r}}, \quad p_9(u) = xu^{2^{r}}, \\
 p_{10}(u) = yu^{2^{s}}, \quad p_{11}(u) = zu^{2^{s}},
@@ -1215,9 +1220,9 @@ for some $w,x,y,z$ in $k$.
 So, we have
 \begin{align*}
 \sigma\left(\begin{matrix} a & b \\ 0 & a^{-1} \end{matrix}\right) &=
-\sigma\left(\begin{matrix} a & 0 \\ 0 & a^{-1} \end{matrix}\right) * 
+\sigma\left(\begin{matrix} a & 0 \\ 0 & a^{-1} \end{matrix}\right)\left[
 \left(\begin{matrix} a & 0 \\ 0 & a^{-1} \end{matrix}\right)\cdot
-\sigma\left(\begin{matrix} 1 & a^{-1}b \\ 0 & 1 \end{matrix}\right) \\
+\sigma\left(\begin{matrix} 1 & a^{-1}b \\ 0 & 1 \end{matrix}\right) \right]\\
 &=
 \left( \begin{matrix}
 0 \\
@@ -1266,26 +1271,26 @@ From this we deduce that
 &=
 \sigma
 \left(\begin{matrix} 1 & 1 \\ 0 & 1 \end{matrix}\right)
-*
+\left[
 \left(\begin{matrix} 1 & 1 \\ 0 & 1 \end{matrix}\right)
 \cdot
 \sigma\left(
 \left(\begin{matrix} 1 & 0 \\ 1 & 1 \end{matrix}\right)
 \left(\begin{matrix} 1 & 1 \\ 0 & 1 \end{matrix}\right)
-\right) \\
+\right)\right] \\
 &=
 \sigma
 \left(\begin{matrix} 1 & 1 \\ 0 & 1 \end{matrix}\right)
-*
+\left[
 \left(\begin{matrix} 1 & 1 \\ 0 & 1 \end{matrix}\right)
 \cdot
 \left(
 \sigma\left(\begin{matrix} 1 & 0 \\ 1 & 1 \end{matrix}\right)
-*
+\left[
 \left(\begin{matrix} 1 & 0 \\ 1 & 1 \end{matrix}\right)
 \cdot
 \sigma\left(\begin{matrix} 1 & 1 \\ 0 & 1 \end{matrix}\right)
-\right) \\
+\right]\right)\right] \\
 &=
 \left(\begin{matrix}
 0 \\
@@ -1338,9 +1343,9 @@ $\sigma\left(\begin{matrix} a & b \\ c & d \end{matrix}\right)$.
 If $c=0$ then we already have
 \begin{align*}
 \sigma\left(\begin{matrix} a & b \\ 0 & a^{-1} \end{matrix}\right) &=
-\sigma\left(\begin{matrix} a & 0 \\ 0 & a^{-1} \end{matrix}\right) * 
+\sigma\left(\begin{matrix} a & 0 \\ 0 & a^{-1} \end{matrix}\right) \left[
 \left(\begin{matrix} a & 0 \\ 0 & a^{-1} \end{matrix}\right)\cdot
-\sigma\left(\begin{matrix} 1 & a^{-1}b \\ 0 & 1 \end{matrix}\right) \\
+\sigma\left(\begin{matrix} 1 & a^{-1}b \\ 0 & 1 \end{matrix}\right) \right]\\
 &=
 \left( \begin{matrix}
 0 \\
@@ -1373,20 +1378,20 @@ and so
 \left(\begin{matrix} c & d \\ 0 & c^{-1} \end{matrix}\right)
 \right) \\
 &=
-\sigma \left(\begin{matrix} 1 & ac^{-1} \\ 0 & 1 \end{matrix}\right) *
+\sigma \left(\begin{matrix} 1 & ac^{-1} \\ 0 & 1 \end{matrix}\right) \left[
 \left(\begin{matrix} 1 & ac^{-1} \\ 0 & 1 \end{matrix}\right) \cdot
 \sigma \left( 
 \left(\begin{matrix} 0 & 1 \\ 1 & 0 \end{matrix}\right)
 \left(\begin{matrix} c & d \\ 0 & c^{-1} \end{matrix}\right)
-\right) \\
+\right) \right]\\
 &=
-\sigma \left(\begin{matrix} 1 & ac^{-1} \\ 0 & 1 \end{matrix}\right) *
+\sigma \left(\begin{matrix} 1 & ac^{-1} \\ 0 & 1 \end{matrix}\right) \left[
 \left(\begin{matrix} 1 & ac^{-1} \\ 0 & 1 \end{matrix}\right) \cdot
 \left( 
-\sigma \left(\begin{matrix} 0 & 1 \\ 1 & 0 \end{matrix}\right) *
+\sigma \left(\begin{matrix} 0 & 1 \\ 1 & 0 \end{matrix}\right)\left[
 \left(\begin{matrix} 0 & 1 \\ 1 & 0 \end{matrix}\right) \cdot
 \sigma\left(\begin{matrix} c & d \\ 0 & c^{-1} \end{matrix}\right)
-\right) \\
+\right]\right) \right]\\
 &=
 \left(\begin{matrix}
 0 \\
@@ -1437,21 +1442,17 @@ wx(bc)^{2^{r+1}} + yz(bc)^{2^{s+1}}
 \end{matrix}\right).
 \end{align*}
 
-Again, it can be shown that this is a sufficient condition for a 1-cocycle by applying \cite[Proposition 2]{martin2004nonab}.
+This is our candidate for a general 1-cocycle on $SL_2(k)$. It turns out that $\sigma$ is a well-defined 1-cocycle on $SL_2(k)$ by verifying Equations \ref{pita1}--\ref{pita3} but we omit the details here.
 
-Next we shall describe $H^1(SL_2, V)$. Recall that a 1-cocycle $\tau'$ is in the same 1-cohomology class as $\sigma$ if there is a $\mathbf{v}$ in $V$ such that
-\begin{align*}
-\tau'(g) &= \mathbf{v}*\sigma(g)*g.\mathbf{v}^{-1}
-\end{align*}
-for all $g$ in $SL_2$. Furthermore, $\tau'$ is conjugate to some 1-cocycle $\tau$, where $\tau$ has the added property that
-\begin{align*}
-\tau\left(\begin{matrix}t & 0 \\ 0 & t^{-1}\end{matrix}\right) &= \left(\begin{matrix} 0 \\ \vdots \\ 0\end{matrix}\right).
-\end{align*}
-Thus $\sigma$ is conjugate to $\tau$ by some $\mathbf{v}$ in $V$ that is fixed under the action of $\left(\begin{matrix}t & 0 \\ 0 & t^{-1}\end{matrix}\right)$:
+Given the general form of a 1-cocycle we can now calculate the 1-cohomology. 
+We let $\tau \in \psi(\sigma)$, assuming that $\tau(T_2(k)) = 1$.
+Then there exists $\mathbf{v}$ in $V$ that is fixed under the action of $\left(\begin{matrix}t & 0 \\ 0 & t^{-1}\end{matrix}\right)$, such that $\tau(x) = \mathbf{v}\sigma(x)(x\cdot\mathbf{v}^{-1})$, for all $x\in SL_2(k)$.
+
+We have
 \begin{align*}
 \tau\left(\begin{matrix} a & b \\ c & d \end{matrix}\right) &=
-\mathbf{v}*\sigma\left(\begin{matrix} a & b \\ c & d \end{matrix}\right) *
-\left(\begin{matrix} a & b \\ c & d \end{matrix}\right) \cdot \mathbf{v}^{-1}\\
+\mathbf{v}\sigma\left(\begin{matrix} a & b \\ c & d \end{matrix}\right) \left[
+\left(\begin{matrix} a & b \\ c & d \end{matrix}\right) \cdot \mathbf{v}^{-1}\right]\\
 &=
 \left(\begin{matrix} 
 v_1  \\
@@ -1467,7 +1468,7 @@ v_7 \\
 0 \\
 v_{12}
 \end{matrix}\right)
-*\sigma\left(\begin{matrix} a & b \\ c & d \end{matrix}\right) *
+\sigma\left(\begin{matrix} a & b \\ c & d \end{matrix}\right) \left[
 \left(\begin{matrix} a & b \\ c & d \end{matrix}\right) \cdot 
 \left(\begin{matrix} 
 v_1  \\
@@ -1482,7 +1483,7 @@ v_7 + v_1v_6 \\
 0 \\
 0 \\
 v_{12} + v_1v_6^2
-\end{matrix}\right)\\
+\end{matrix}\right)\right]\\
 &=
 \left(\begin{matrix}
 0 \\
@@ -1497,8 +1498,9 @@ w(ab)^{2^r} \\
 y(ab)^{2^s} \\
 (z+yv_1)(ab)^{2^r} \\
 w(x+wv_1)(bc)^{2^{r+1}} + y(z+yv_1)(bc)^{2^{s+1}}
-\end{matrix}\right)
+\end{matrix}\right).
 \end{align*}
+
 We can denote this relationship by
 \begin{align*}
 (w,x,y,z) &\sim (w, x+\lambda w, y, z + \lambda y),
@@ -1522,30 +1524,27 @@ wx(bc)^{2^{r+1}} + yz(bc)^{2^{s+1}}
 \end{matrix}\right).
 \end{align*}
 
-We find infinitely many conjugacy classes, for instance for each $x, z$ in $k$ the family of classes of the form
-\begin{align*}
-[(0,x,0,z)] = \left\{(0,x,0,z)\right\}.
-\end{align*}
+That is, $\psi((w,x,y,z)) = \psi((w',x', y', z'))$ if and only if $w'=w, x'=x+\lambda w, y'=y, z'=z+\lambda y$, for some $\lambda\in k$.
 
-Now we consider $P$-conjugacy. An element $\mathbf{s} = \alpha^\vee(s)(\beta + \gamma + \delta)^\vee(t)\in Z(L)$ acts on the 1-cocycle $\sigma$ by
+We find infinitely many equivalence classes of 1-cocycles. For instance, for each $x, z\in k$, $\psi((0,x,0,z))$ is a distinct element of the 1-cohomology.
+
+Now we consider the action of $Z(L_{\{\gamma,\delta\}})^\circ$ on the 1-cohomology. An element $\mathbf{s} = \alpha^\vee(t)(\beta + \gamma + \delta)^\vee(u)\in Z(L_{\{\gamma,\delta\}})^\circ$ acts on the 1-cocycle $\sigma$ by
 \begin{align*}
 (\mathbf{s}\cdot\sigma)\left(\begin{matrix} a & b \\ c & d\end{matrix}\right)
 &=
 \left(\begin{matrix}
 0 \\
-s^{-1}t^{2}y(cd)^{2^s} \\
-sz(cd)^{2^s} \\
-s^{-1}t^{2}w(cd)^{2^r} \\
-sx(cd)^{2^r} \\
-s^{-1}t^{2}(w(bc)^{2^r} + y(bc)^{2^s}) \\
-sx(bc)^{2^r} + z(bc)^{2^s} \\
-s^{-1}t^{2}w(ab)^{2^r} \\
-sx(ab)^{2^r}  \\
-s^{-1}t^{2}y(ab)^{2^s} \\
-sz(ab)^{2^r} \\
-t^2(wx(bc)^{2^{r+1}} + yz(bc)^{2^{s+1}})
-\end{matrix}\right)
+t^{-1}u^{2}y(cd)^{2^s} \\
+tz(cd)^{2^s} \\
+t^{-1}u^{2}w(cd)^{2^r} \\
+tx(cd)^{2^r} \\
+t^{-1}u^{2}(w(bc)^{2^r} + y(bc)^{2^s}) \\
+t(x(bc)^{2^r} + z(bc)^{2^s}) \\
+t^{-1}u^{2}w(ab)^{2^r} \\
+tx(ab)^{2^r}  \\
+t^{-1}u^{2}y(ab)^{2^s} \\
+tz(ab)^{2^r} \\
+u^2(wx(bc)^{2^{r+1}} + yz(bc)^{2^{s+1}})
+\end{matrix}\right).
 \end{align*}
-
-It remains to show that there are infinitely many $P$-conjugacy classes by applying Lemma \ref{lem:p_h1}.
 

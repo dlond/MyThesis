@@ -176,7 +176,7 @@ In the nonabelian case, we have the following.
 
 \begin{lemma} Define the relation $\sim$ on $Z^1(K, V)$ by
 	\begin{align}
-		\sigma_1 \sim \sigma_2 \Leftrightarrow \exists v \in V,\forall x \in K, \sigma_1 = v\sigma_2(x)(x \cdot v^{-1}).
+		\sigma_1 \sim \sigma_2 \Leftrightarrow \exists v \in V,\forall x \in K, \sigma_1(x) = v\sigma_2(x)(x \cdot v^{-1}).
 		\label{eqn:h_equiv}
 	\end{align}
 Then $\sim$ is an equivalence relation.
@@ -216,7 +216,7 @@ R. Richardson \cite[Lemma 6.2.6]{richardson1982orbits} provides a result analogo
 
 \section{Maps Between 1-Cohomologies}
 
-We use multiplicative notation for the next few definition-like results (Lemma \ref{zeta}--Lemma \ref{h1maps}) but they also hold in the abelian setting as this is just a special case of the nonabelian case. We discuss a consequence of the main Lemma in the abelian setting in Corollary \ref{zlinear}, and both Lemma \ref{brown} and Example \ref{ab_example} require that $V$ is a vector space. In such cases we revert to additive notation to emphasise the fact that $V$ is abelian.
+We use multiplicative notation for the next few definition-like results (Lemma \ref{zeta}--Lemma \ref{h1maps}) but they also hold in the abelian setting as this is just a special case of the nonabelian case. We discuss a consequence of the main Lemma in the abelian setting in Corollary \ref{zlinear}, and both Lemma \ref{brown} and Example \ref{ab_example} require that $V$ is a vector space. In such cases we revert to additive notation to emphasize the fact that $V$ is abelian.
 
 As in the previous Section, $K, V$ are algebraic groups such that $K$ acts on $V$ by group automorphisms. We denote the action of $K$ on $V$ by $x \cdot v$, for $x \in K, v \in V$.
 
@@ -536,7 +536,7 @@ Let $y\in SL_2(k), b \in B$. Since $\sigma(yb) = \sigma(y)(y\cdot \sigma(b)) = \
 	SL_2/B \ar[ru]_{\widehat{\sigma}}
 	},
 \end{align*}
-where $\pi$ is the canonical projection $\pi:SL_2 \rightarrow SL_2/B$ (\cite[TODO]{humphreys1975linear}). Hence $\widehat{\sigma}(xB) = \sigma(x)$ for all $x \in SL_2(k)$.
+where $\pi$ is the canonical projection $\pi:SL_2 \rightarrow SL_2/B$ (\cite[\S 23.3]{humphreys1975linear}). Hence $\widehat{\sigma}(xB) = \sigma(x)$ for all $x \in SL_2(k)$.
 
 Since $SL_2(k)/B$ is an irreducible projective variety \cite[Theorem 21.3]{humphreys1975linear}, $\widehat{\sigma}$ must be constant. Therefore, since $\sigma(x) = 1$ for all $x \in B$, $\sigma(x) = \widehat{\sigma}(xB) = 1$ for all $x \in SL_2(k)$. Hence $\sigma = \chi^{SL_2(k)}_1 \in B^1(SL_2(k), V)$ and so $\mathrm{Ker}\left(H^1(\zeta)\right)$ is trivial.
 \end{proof} 

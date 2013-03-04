@@ -5,157 +5,46 @@
 \label{Chapter2}
 \lhead{Chapter 2. \emph{Mathematical Preliminaries}}
 
-Let $k$ be an algebraically closed field. An affine variety over $k$ is a subset of $k^n$ defined by the vanishing of some polynomial equations. We have such notions as a subvariety of an affine variety, a natural product of affine varieties and maps between affine varieties.
+We will assume the reader has an understanding of basic algebraic geometry and algebraic group theory which could be obtained by consulting Springer \cite{springer2008linear} or Humphreys \cite{humphreys1975linear}. In this Chapter we will recall some relevant parts of the theory of algebraic groups and establish some notation.
 
-A morphism $\phi:V \rightarrow W$ of affine varieties is a map such that the coordinates of $\phi(v) \in W$ are given by polynomial functions in $v \in V$.
+Throughout this Thesis, $k$ will denote an algebraically closed field of characteristic $p>0$, and all varieties and algebraic groups will be defined over $k$.
 
-An affine algebraic group $G$ is a set $G$ which is an affine algebraic variety and a group such that
+Many of our example calculations will involve the special linear group of $2\times 2$ matrices, $SL_2(k)$, and the following subgroups.
 \begin{align*}
-	\mu&:  G \times G \rightarrow G\\
-	& (x,y) \mapsto x.y,
+	&B_2(k): \textrm{ the subgroup of upper triangular matrices, a Borel subgroup of }SL_2(k),\\
+	&B^-_2(k): \textrm{ the subgroup of lower triangular matrices, the Borel subgroup opposite }B_2(k),\\
+	&U_2(k): \textrm{ the subgroup of upper unitriangular matrices},\\
+	&U^-_2(k): \textrm{ the subgroup of lower unitriangular matrices},\\
+	&T_2(k): \textrm{ the subgroup of diagonal matrices, a maximal torus of }SL_2(k).
 \end{align*}
-and
+
+Let $T$ be a maximal torus of a connected reductive linear algebraic group $G$. We write $\mathfrak{t}$ for the Lie algebra of $T$. We denote by $X(T)$ the character group of $T$, defined as the collection of all algebraic group homomorphisms from $T$ to $k^*$ with the addition law
 \begin{align*}
-	\iota&:  G \rightarrow G \\
-	& x \mapsto x^{-1}
+	(x_1 + x_2)(t) = x_1(t)x_2(t),
 \end{align*}
-are morphisms of affine varieties.
+for all $x_1, x_2\in X(T), t\in T$.
 
-\begin{example}
-	The special linear group of $n\times n$ matrices with entries in $k$
-	\begin{align}
-		SL_n(k) = \{(a_{ij}) \in k^{n^2} |\, det(a_{ij}) - 1 = 0\}
-	\end{align}
-	is an affine variety. Furthermore, the general linear group of $n\times n$ matrices with entries in $k$
-	\begin{align}
-		GL_n(k) = \{(a_{ij}) \in k^{n^2} |\, det(a_{ij}) \neq 0\}
-	\end{align}
-	is an affine variety, seen more clearly by the inclusion in the affine variety
-	\begin{align}
-		GL_n(k)\subset \{(b, (a_{ij})) \in k^{n^2 + 1} |\, b.det(a_{ij}) - 1 = 0\}.
-	\end{align}
-	Of course both examples can be shown to be affine algebraic groups by checking the multiplication and inverse laws.
-\end{example}
+The cocharacter group, $Y(T)$, is the collection of all algebraic group homomorphisms from $k^*$ to $T$ with the addition law
+\begin{align*}
+	(y_1 + y_2)(\lambda) = y_1(\lambda)y_2(\lambda),
+\end{align*}
+for all $y_1, y_2\in Y(T), \lambda \in k^*$.
 
-A homomorphism $\phi: G\rightarrow H$ of affine algebraic groups is a morphism of affine varieties and a homomorphism of abstract groups. An isomorphism $\phi: G\rightarrow H$ of affine algebraic groups is a bijective homomorphism of affine algebraic groups such that $\phi^{-1}:H\rightarrow G$ is also a homomorphism of affine algebraic groups.
-
-\begin{example}
-	Let $p$ be the characteristic of $k$. The map $k\rightarrow k$ which sends $x\mapsto x^p$ is bijective, a morphism, but not an isomorphism since the inverse map $x\mapsto x^{1/p}$ is not a morphism of affine varieties (it is not a polynomial).
-	
-	Now let $G = GL_n(k)$. The map $F:G\rightarrow G$ which sends $(a_{ij})\mapsto (a_{ij}^q)$, $q = p^z$, $z \in \mathbb{Z}^+$ is a homomorphism of affine algebraic groups, called the Frobenius morphism. It is not an isomorphism.
-\end{example}
-
-The subvarieties of an affine variety $V$ form the closed sets of a topology, known as the Zariski topology.
-
-A closed subgroup of an affine algebraic group is itself an affine algebraic group. A closed subgroup of $GL_n(k)$ is called a linear algebraic group. In fact every affine algebraic group is a linear algebraic group.
-
-\begin{example}
-	Three important subgroups of the linear algebraic group $G = GL_n(k)$
-	\begin{align*}
-		T = T_n(k) &=  \{ (a_{ij}) \in GL_n(k) |\, a_{ij} = 0 \textrm{ if } i \neq j\}\\
-		&  \textrm{diagonal matrices in } GL_n(k)
-	\end{align*}
-	\begin{align*}
-		U = U_n(k) &=  \{ (a_{ij}) \in GL_n(k) |\, a_{ii} = 1, a_{ij} = 0 \textrm{ if } i < j\}\\
-		&  \textrm{upper unitriangular matrices in } GL_n(k)
-	\end{align*}
-	\begin{align*}
-		B = B_n(k) &=  \{ (a_{ij}) \in GL_n(k) |\, a_{ij} = 0 \textrm{ if } i < j\}\\
-		&  \textrm{upper triangular matrices in } GL_n(k)
-	\end{align*}
-	$T$ is an example of a torus of $G$, $U$ is an example of a unipotent subgroup of $G$, and $B$ is an example of a Borel subgroup of $G$.
-\end{example}
-
-Let $G$ be a linear algebraic group. The irreducible components of $G$ are disjoint. If $G^\circ$ is the irreducible component containing the identity element of $G$ then $G^\circ$ is a (closed) normal subgroup of $G$ of finite index. The irreducible components of $G$ are the cosets of $G^\circ$ in $G$. $G^\circ$ is the smallest closed subgroup of $G$ of finite index (every closed subgroup of finite index is open).
-
-$G^\circ$ is called the identity component of $G$. If $G = G^\circ$ we say $G$ is connected.
-
-Every element $g\in G$ can be uniquely written
-\begin{align}
-	g = g_s.g_u = g_u.g_s,
-\end{align}
-where $g_s$ is semisimple (diagonalisable) and $g_u$ is unipotent. This is known as the Jordan decomposition.
-
-$G$ has a unique maximal closed normal solvable subgroup $R(G)$, called the radical of $G$. The set of unipotent elements of $R(G)$ is a maximal closed connected unipotent normal subgroup $R_u(G)$, called the unipotent radical of $G$.
-
-If $R_u(G) = {1}$ we say $G$ is reductive. If $R(G) = {1}$ we say $G$ is semisimple. If $G$ is connected and has no proper closed connected normal subgroups then $G$ is simple.
-
-\begin{example}
-	$GL_n(k)$ is reductive. $SL_n(k)$ is semisimple (hence reductive). $SL_n(k)$ is simple as an algebraic group but not as an abstract group, since it has a non-trivial center.
-\end{example}
-
-If $G$ is nonabelian and simple then its centre $Z(G)$ is finite.
-
-If $G$ is a reductive linear algebraic group then
-\begin{align}
-	G = Z(G)^\circ.(G,G),
-\end{align}
-where
-\begin{align}
-	(G,G) = \langle [g, h] = ghg^{-1}h^{-1}|\,g,h\in G\rangle,
-\end{align}
-the commutator subgroup. $Z(G)$ is a torus of $G$ and $(G, G)$ is again reductive.
-
-Every abelian simple algebraic group has dimension 1 and is isomorphic to either
-\begin{align}
-	G_m(k) = k^* = \textrm{multiplicative group of }k
-\end{align}
-or
-\begin{align}
-	G_a(k) = k = \textrm{additive group of }k.
-\end{align}
-
-A torus is isomorphic to $k^*\times k^*\cdots k^*$. Any two maximal tori in $G$ are conjugate in $G$. 
-
-If $G$ is connected with maximal torus $T<G$ then the centralizer of $T$ in $G$, $C_G(T)$, is equal to the identity component of the normalizer of $T$ in $G$, $N_G(T)^\circ$, and hence $N_G(T)/C_G(T)$ is finite. We call $W = N_G(T)/C_G(T)$ the Weyl group of $G$. Furthermore, if $G$ is also reductive then $T=C_G(T)$ and $W = N_G(T)/T$ is a finite Coxeter group, that is, of the form:
-\begin{align}
-  W = \langle s_1, \ldots, s_l |\, s_i^2 = 1, (s_is_j)^{m_{ij}} = 1\rangle,
-\end{align}
-for some $m_{ij}$.
-
-A Borel subgroup of $G$ is a maximal closed connected solvable subgroup of $G$, any two Borel subgroups of $G$ are conjugate in $G$. If $T < G$ is a torus of $G$ then there exists a Borel subgroup $B$ of $G$ containing $T$. Furthermore, we can write $B = T\cdot R_u(B)$.
-
-Let $G$ be a reductive connected linear algebraic group with torus $T < G$. Let $N = N_G(T)$. Then we can write $G$ as
-\begin{align}
-	G = BNB = \cup_{n\in N}BnB.
-\end{align}
-$BnB = Bn'B$ if and only if $\pi(n)=\pi(n')$ where $\pi:N\rightarrow N/T = W$ so we have the correspondence $B\backslash G/B \leftrightarrow W$ where $BnB \mapsto \pi(n)$.
-
-Suppose $W = \langle s_1, \ldots, s_l\rangle$ and let $J \subset \{1, \ldots, l\}$. We define $W_J = \langle s_j |\, j\in J\rangle < W$ and $N_J = \pi^{-1}(W_J)$. The subgroup of $G$ defined by
-\begin{align}
-	P_J = BN_JB
-\end{align}
-contains $B$, and in fact every subgroup of $G$ containing $B$ is of this form. We call $P<G$ a parabolic subgroup of $G$ if $B<P$ for some Borel subgroup $B<G$. Equivalently, $P$ is a parabolic subgroup of $G$ if given a maximal torus $T<G$, $P$ is conjugate to some $P_J$. 
-
-A parabolic subgroup $P<G$ is connected, self-normalizing, and can be decomposed into a semi-direct product of its unipotent radical and a Levi subgroup $L<P$:
-\begin{align}
-	P = L\cdot R_u(P),
-\end{align}
-with $L\cap R_u(P) = 1$. Any two Levi subgroups of $P$ are conjugate by an element of $R_u(P)$ and will be reductive if $G$ is reductive.
-
-Let $T$ be a maximal torus of a connected reductive linear algebraic group $G$. We define the character group of $T$ is to be 
-\begin{align}
-	X = \textrm{Hom}(T, k^*),
-\end{align}
-with the addition law
-\begin{align}
-	(x_1 + x_2)(t) = x_1(t)x_2(t),\qquad x_1, x_2\in X, t\in T.
-\end{align}
-The cocharacter group is defined
-\begin{align}
-	Y = \textrm{Hom}(k^*, T),
-\end{align}
-with the addition law
-\begin{align}
-	(y_1 + y_2)(\lambda) = y_1(\lambda)y_2(\lambda),\qquad y_1, y_2\in Y, \lambda \in k^*.
-\end{align}
-
-If we compose $x\in X$ with $y\in Y$ we get a morphism
-\begin{align}
-	k^*\rightarrow T \rightarrow k^*,
-\end{align}
-that is, of the form $\lambda\mapsto \lambda^n$ for some $n\in \mathbb{Z}$. Hence there exists a pairing $\langle,\rangle:X\times Y\rightarrow \mathbb{Z}$ defined
-\begin{align}
+If we compose $x\in X(T)$ with $y\in Y(T)$ we get a morphism from $k^*$ to $k^*$; that is, a morphism of the form $\lambda\mapsto \lambda^n$ for some $n\in \mathbb{Z}$. Hence there exists a pairing $\langle,\rangle:X(T)\times Y(T)\rightarrow \mathbb{Z}$ defined
+\begin{align*}
 	(x, y) \mapsto \langle x, y\rangle = n,
-\end{align}
+\end{align*}
 where $x(y(\lambda)) = \lambda^n$. 
+
+Let $\Phi$ denote the set of roots of $G$. The positive roots will be denoted by $\Phi^+$ and the negative roots will be denoted by $\Phi^-$, the base denoted by $\Delta$. Borel subgroups of $G$ containing the maximal torus $T$ are in bijective correspondence with bases for $\Phi$: choosing a Borel of $G$ containing $T$ amounts to choosing a set of simple roots for $\Phi$.
+
+We say that the characteristic $p$ is good for $G$ if $p$ does not divide any of the coefficients of any $\beta\in\Phi$ when $\beta$ is written as a linear combination of simple roots.
+
+We interpret the roots of $G$ as living in the real vector space $X(T)\otimes \mathbb{R}$ (see the rank 2 root system diagrams in Appendix \ref{rank2diagrams}).
+
+We define the root group $U_\alpha$ to be the unique connected $T$-stable subgroup of $G$ having Lie algebra $\mathfrak{g}_\alpha$, where the Lie algebra $\mathfrak{g}$ of $G$ has the decomposition $\mathfrak{g} = \mathfrak{t} \oplus \coprod_{\alpha\in\Phi} \mathfrak{g}_\alpha$. There exists an isomorphism $\epsilon_\alpha: k \rightarrow U_\alpha$ such that for all $t\in T$, $x\in k$, $t\epsilon_\alpha(x)t^{-1} = \epsilon_\alpha(\alpha(t)x)$.
+
+The group generated by $\langle U_\alpha, U_{-\alpha}\rangle$ is isomorphic to $SL_2$ or $PGL_2$. If $U$ is a connected, $T$-stable unipotent subgroup of $G$ then $U=\prod_\alpha U_\alpha$, where the product is taken in any fixed order.
+
+Define $s_\alpha(\beta)= \beta -\langle \beta,\alpha\rangle\alpha$. The Weyl Group $W$ is generated by $\{s_\alpha\,|\,\alpha\in \Delta\}$. If $\alpha,\beta$ are linearly independent, then there exist $\gamma,\delta\in \Delta$ and $w\in W$ such that $w(\alpha) = \gamma$, while $w(\beta)$ is a $\mathbb{Z}^+$-linear combination of $\gamma, \delta$.
+
