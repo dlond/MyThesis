@@ -96,8 +96,10 @@ Short roots are identified by filled circles.
 \draw[thick, xshift=\x cm] (\x cm, 0) circle (3 mm);
 \foreach \x in {2,...,3}
 \draw[thick, xshift=\x cm, fill=black] (\x cm, 0) circle (3 mm);
-\foreach \y in {0,...,2}
-\draw[thick, xshift=\y cm] (\y cm, 0) ++(.3 cm, 0) -- +(14 mm, 0);
+\draw[thick] (0.3 cm, 0) -- +(1.4 cm, 0);
+\draw[thick] (2.3 cm, 0.1) -- +(1.4 cm, 0);
+\draw[thick] (2.3 cm, -0.1) -- +(1.4 cm, 0);
+\draw[thick] (4.3 cm, 0) -- +(1.4 cm, 0);
 \end{tikzpicture}
 
 \begin{tikzpicture}[scale=.4]
