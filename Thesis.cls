@@ -235,7 +235,7 @@
 {
   \btypeout{Abstract Page}
   \thispagestyle{empty}
-  \null\vfil
+  %\null\vfil
   \begin{center}
     \setlength{\parskip}{0pt}
     {\normalsize \UNIVNAME \par}
