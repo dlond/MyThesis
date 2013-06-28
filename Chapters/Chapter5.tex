@@ -392,11 +392,11 @@ This completes the proof.
 \end{itemize}
 Then for all $\delta \in \mathcal{D}^-$, there exist $\nu_\delta \in k$ such that for all $a \in k^*$ and all $c \in k$
 \begin{align*}
-	\sigma\left(\begin{matrix}a & 0\\c & a^{-1}\end{matrix}\right) = \prod_{\delta\in\mathcal{D}^-}\epsilon_\delta\left(a^{(\langle\delta,\alpha\rangle p^r - n(\delta))}b^{n(\delta)}\nu_\delta\right),
+	\sigma\left(\begin{matrix}a & 0\\c & a^{-1}\end{matrix}\right) = \prod_{\delta\in\mathcal{D}^-}\epsilon_\delta\left(a^{(\langle\delta,\alpha\rangle p^r + n(\delta))}c^{n(\delta)}\nu_\delta\right),
 \end{align*}
-where $n(\delta) = p^{r-2+\langle\delta,\alpha\rangle}$, and $\mathcal{D}^-$ is defined by
+where $n(\delta) = p^{r-2-\langle\delta,\alpha\rangle}$, and $\mathcal{D}^-$ is defined by
 \begin{align*}
-\mathcal{D}^-\left\{\begin{array}{ll}
+\mathcal{D}^- = \left\{\begin{array}{ll}
 	\{\delta \in \Phi^+-\{\alpha\} \,|\, \langle\delta,\alpha\rangle = -1\textrm{ or }-2\},&\textrm{if }p = 2, \\ \\
 	\{\delta \in \Phi^+-\{\alpha\} \,|\, \langle\delta,\alpha\rangle = -2\},&\textrm{otherwise}.
 \end{array}\right.
