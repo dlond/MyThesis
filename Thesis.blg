@@ -1,48 +1,46 @@
-This is BibTeX, Version 0.99d (TeX Live 2013)
+This is BibTeX, Version 0.99d (TeX Live 2012)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Thesis.aux
 The style file: unsrtnat.bst
 Database file #1: Bibliography.bib
-Warning--empty journal in brown1982cohomology
-You've used 16 entries,
+You've used 17 entries,
             2481 wiz_defined-function locations,
-            650 strings with 6385 characters,
-and the built_in function-call counts, 4957 in all, are:
-= -- 440
-> -- 142
-< -- 16
-+ -- 72
-- -- 40
-* -- 289
-:= -- 791
-add.period$ -- 52
-call.type$ -- 16
-change.case$ -- 27
+            655 strings with 6462 characters,
+and the built_in function-call counts, 5315 in all, are:
+= -- 473
+> -- 149
+< -- 18
++ -- 77
+- -- 42
+* -- 317
+:= -- 844
+add.period$ -- 55
+call.type$ -- 17
+change.case$ -- 28
 chr.to.int$ -- 16
 cite$ -- 17
-duplicate$ -- 307
-empty$ -- 520
-format.name$ -- 60
-if$ -- 1064
-int.to.chr$ -- 1
-int.to.str$ -- 17
-missing$ -- 21
-newline$ -- 91
-num.names$ -- 48
-pop$ -- 143
+duplicate$ -- 327
+empty$ -- 559
+format.name$ -- 63
+if$ -- 1141
+int.to.chr$ -- 2
+int.to.str$ -- 18
+missing$ -- 23
+newline$ -- 96
+num.names$ -- 51
+pop$ -- 152
 preamble$ -- 1
-purify$ -- 16
+purify$ -- 17
 quote$ -- 0
-skip$ -- 182
+skip$ -- 189
 stack$ -- 0
-substring$ -- 173
-swap$ -- 38
-text.length$ -- 1
+substring$ -- 200
+swap$ -- 44
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 97
-warning$ -- 1
-while$ -- 45
+type$ -- 101
+warning$ -- 0
+while$ -- 49
 width$ -- 0
-write$ -- 213
-(There was 1 warning)
+write$ -- 227

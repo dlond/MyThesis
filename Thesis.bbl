@@ -1,4 +1,4 @@
-\begin{thebibliography}{16}
+\begin{thebibliography}{17}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -11,6 +11,11 @@ P.~Slodowy.
   finite groups}.
 \newblock \emph{Algebraic groups and Lie groups: a volume of papers in honour
   of the late RW Richardson}, page 331, 1997.
+
+\bibitem[K\"ulshammer(1995)]{kulshammer1995donovan}
+B.~K\"ulshammer.
+\newblock Donovan's conjecture, crossed products and algebraic group actions.
+\newblock \emph{Israel J. Math.}, 92\penalty0 (1--3):\penalty0 295--306, 1995.
 
 \bibitem[Liebeck and Seitz(1996)]{liebeck1996reductive}
 M.W. Liebeck and G.M. Seitz.
@@ -25,10 +30,15 @@ M.W. Liebeck and G.M. Seitz.
 \newblock American Mathematical Society, 2004.
 \newblock ISBN 0821834827.
 
-\bibitem[Stewart(2010)]{stewart2010g}
+\bibitem[Stewart(2010{\natexlab{a}})]{stewart2010g}
 D.I. Stewart.
-\newblock G-complete reducibility and the exceptional algebraic groups.
-\newblock \emph{Arxiv preprint arXiv:1011.4835}, 2010.
+\newblock {$G$-complete reducibility and the exceptional algebraic groups}.
+\newblock \emph{Arxiv preprint arXiv:1011.4835}, 2010{\natexlab{a}}.
+
+\bibitem[Stewart(2010{\natexlab{b}})]{stewart2010red}
+D.I. Stewart.
+\newblock {The reductive subgroups of $G_2$}.
+\newblock \emph{J. Group Theory}, 13:\penalty0 117--130, 2010{\natexlab{b}}.
 
 \bibitem[Serre(1998)]{serre1998ml}
 J.-P. Serre.
@@ -47,11 +57,6 @@ A.~Weil.
 \newblock \emph{Annals of Mathematics}, 80\penalty0 (1):\penalty0 149--157,
   1964.
 
-\bibitem[K\"ulshammer(1995)]{kulshammer1995donovan}
-B.~K\"ulshammer.
-\newblock Donovan's conjecture, crossed products and algebraic group actions.
-\newblock \emph{Israel J. Math.}, 92\penalty0 (1--3):\penalty0 295--306, 1995.
-
 \bibitem[Humphreys(1975)]{humphreys1975linear}
 J.E. Humphreys.
 \newblock \emph{{Linear algebraic groups}}.
@@ -65,8 +70,8 @@ T.A. Springer.
 
 \bibitem[Brown(1982)]{brown1982cohomology}
 K.~Brown.
-\newblock {Cohomology of groups}.
-\newblock 87, 1982.
+\newblock \emph{{Cohomology of groups}}, volume~87.
+\newblock Springer, 1982.
 
 \bibitem[Kemper(2000)]{kemper2000characterization}
 G.~Kemper.
