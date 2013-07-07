@@ -103,12 +103,14 @@ We denote by $\psi$ the canonical projection from $Z^1(K, V)$ to $H^1(K, V)$.
 	We defined the identity of $Z^1(K, V)$ to be the trivial map which sends all $x \in K$ to $0 \in V$. This map is precisely the 1-coboundary $\chi^K_0$. Appropriately, we say a 1-cohomology is \emph{trivial} if $Z^1(K, V) = B^1(K, V)$.
 \end{remark}
 
-\begin{lemma} \label{vspace} If $V$ is a vector space and $K$ acts linearly on $V$ then $Z^1(K, V)$ is a vector space and $B^1(K, V)\subset Z^1(K, V)$ is a vector subspace.
-\end{lemma}
-\begin{proof}
-	Suppose $V$ is a vector space over $F$. We define scalar multiplication on $Z^1(K, V)$ as follows.
+\begin{definition} Suppose $V$ is a vector space over $F$. We define scalar multiplication on $Z^1(K, V)$ as follows. 
+For $\lambda \in F, \sigma \in Z^1(K, V)$ define the map $\lambda\sigma$ by $(\lambda\sigma)(x) = \lambda\sigma(x)$ for all $x \in K$.
+\end{definition}
 
-For $\lambda \in F, \sigma \in Z^1(K, V)$ define the map $\lambda\sigma$ by $(\lambda\sigma)(x) = \lambda\sigma(x)$ for all $x \in K$. Then $\lambda\sigma$ is a 1-cocycle, for
+\begin{lemma} \label{vspace} If $V$ is a vector space over $F$ and $K$ acts linearly on $V$ then $Z^1(K, V)$ is a vector space and $B^1(K, V)\subset Z^1(K, V)$ is a vector subspace.
+\end{lemma}
+\begin{proof} 
+	Let $\lambda \in F, \sigma \in Z^1(K, V)$. Then $\lambda\sigma$ is a 1-cocycle, for
 \begin{align*}
 	\lambda \sigma(xy) &= \lambda\left( \sigma(x) + x \cdot \sigma(y)\right) \\
 	&= \lambda\sigma(x) + \lambda(x\cdot \sigma(y)) \\
@@ -116,7 +118,8 @@ For $\lambda \in F, \sigma \in Z^1(K, V)$ define the map $\lambda\sigma$ by $(\l
 \end{align*}
 So $Z^1(K, V)$ is a subspace of the vector space of functions from $K$ to $V$. Hence $Z^1(K, V)$ is a vector space.
 
-Now let $\chi^K_v \in B^1(K, V)$. Then for all $x \in K$
+
+Let $\chi^K_v \in B^1(K, V)$. Then for all $x \in K$
 \begin{align*}
 	\lambda\chi^K_v(x) &= \lambda\left(v - x \cdot v\right) \\
 		&= \lambda v - \lambda(x \cdot v) \\
