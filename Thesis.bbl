@@ -1,4 +1,4 @@
-\begin{thebibliography}{17}
+\begin{thebibliography}{18}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -84,6 +84,12 @@ RW~Richardson.
 \newblock {On orbits of algebraic groups and Lie groups}.
 \newblock \emph{Bulletin of the Australian Mathematical Society}, 25\penalty0
   (01):\penalty0 1--28, 1982.
+
+\bibitem[Martin(2000)]{martin2000restrictions}
+Benjamin~MS Martin.
+\newblock Restrictions of representations of a surface group to a pair of free
+  subgroups.
+\newblock \emph{Journal of Algebra}, 225\penalty0 (1):\penalty0 231--249, 2000.
 
 \bibitem[Martin(2003)]{martin2003reductive}
 B.~Martin.
