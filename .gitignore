@@ -12,3 +12,6 @@ Thesis.toc
 Thesis.aux
 
 .DS_Store
+
+*.swp
+
