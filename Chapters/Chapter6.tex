@@ -18,19 +18,19 @@ For each $\alpha \in \Delta$ (the simple roots)
 	\item[1.] Fix $x\in H^1(SL_2(k), V_\alpha)_{\omega_r}$. Then there exists $\sigma\in Z^1(SL_2(k), V_\alpha)_{\omega_r}$ such that $\psi(\sigma) = x$ and $\sigma\left(y\right) = 1 \in V_\alpha$ for all $y\in T_2(k)$ (Lemma \ref{trivial_on_t}).
 	\item[2.] Use Lemma \ref{lem:second} to determine $\sigma\left(\begin{matrix}a & b\\0 & a^{-1}\end{matrix}\right)$. 
 	\item[3.] If $\sigma\left(y\right) = 1$ for all $y\in B_2(k)$ then $H^1(SL_2(k), V_\alpha)_{\omega_r}$ is trivial by Lemma \ref{sl2_b_inj}.
-	\item[4.] Otherwise, determine $\sigma\left(\begin{matrix}a & b\\c & d\end{matrix}\right)$ for $c \neq 0$ by
+	\item[4.] Otherwise, get a formula for $\sigma\left(\begin{matrix}a & b\\c & d\end{matrix}\right)$ for $c \neq 0$ by
 	\begin{align*}
 	\sigma\left(\begin{matrix}a & b\\c & d\end{matrix}\right) &= \sigma\left(
 			\left(\begin{matrix}1 & ac^{-1}\\0 & 1\end{matrix}\right)
 			\left(\begin{matrix}0 & 1\\-1 & 0\end{matrix}\right)
 			\left(\begin{matrix}-c & -d\\0 & -c^{-1}\end{matrix}\right)
-			\right),
+			\right).
 	\end{align*}
-	and show that $\sigma$ is a well-defined 1-cocycle on $SL_2(k)$.
-	\item[5.] Calculate $H^1(SL_2(k), V_\alpha)_{\omega_r}$.
-	\item[6.] Calculate $H^1(SL_2(k), V_\alpha)_{\omega_r}/C_L(\omega_r)$ and use Theorem \ref{main_thm} to get information about conjugacy classes in $\mathrm{Hom}(SL_2(k), P_\alpha)$.
+	\item[5.] Show that the formula for $\sigma$ in step 4 gives a well-defined 1-cocycle on $SL_2(k)$.
+	\item[6.] Calculate $H^1(SL_2(k), V_\alpha)_{\omega_r}$.
+	\item[7.] Calculate $H^1(SL_2(k), V_\alpha)_{\omega_r}/C_L(\omega_r)$ and use Theorem \ref{main_thm} to get information about conjugacy classes in $\mathrm{Hom}(SL_2(k), P_\alpha)$.
 	\end{itemize}
-We elaborate on step 4. Given $\sigma\left(\begin{matrix}a & b \\ 0 & a^{-1}\end{matrix}\right)$ and $\sigma\left(\begin{matrix}0 & 1\\-1 & 0\end{matrix}\right)$, the obvious way to piece together a 1-cocycle on $SL_2(k)$ is, for $c\neq 0$
+We elaborate on steps 4 and 5. Given $\sigma\left(\begin{matrix}a & b \\ 0 & a^{-1}\end{matrix}\right)$ and $\sigma\left(\begin{matrix}0 & 1\\-1 & 0\end{matrix}\right)$, the obvious way to piece together a 1-cocycle on $SL_2(k)$ is, for $c\neq 0$
 \begin{align}\label{fullsigma}
 	\sigma\left(\begin{matrix}a & b\\c & d\end{matrix}\right)
 	&=
