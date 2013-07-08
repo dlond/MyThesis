@@ -15,9 +15,9 @@ The general method we use of calculating the 1-cohomology is outlined below.
 
 For each $\alpha \in \Delta$ (the simple roots)
 	\begin{itemize}
-	\item[1.] Fix $x\in H^1(SL_2(k), V_\alpha)_{\rho_r}$. Then there exists $\sigma\in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\psi(\sigma) = x$ and $\sigma\left(y\right) = 1 \in V_\alpha$ for all $y\in T_2(k)$ (Lemma \ref{trivial_on_t}).
+	\item[1.] Fix $x\in H^1(SL_2(k), V_\alpha)_{\omega_r}$. Then there exists $\sigma\in Z^1(SL_2(k), V_\alpha)_{\omega_r}$ such that $\psi(\sigma) = x$ and $\sigma\left(y\right) = 1 \in V_\alpha$ for all $y\in T_2(k)$ (Lemma \ref{trivial_on_t}).
 	\item[2.] Use Lemma \ref{lem:second} to determine $\sigma\left(\begin{matrix}a & b\\0 & a^{-1}\end{matrix}\right)$. 
-	\item[3.] If $\sigma\left(y\right) = 1$ for all $y\in B_2(k)$ then $H^1(SL_2(k), V_\alpha)_{\rho_r}$ is trivial by Lemma \ref{sl2_b_inj}.
+	\item[3.] If $\sigma\left(y\right) = 1$ for all $y\in B_2(k)$ then $H^1(SL_2(k), V_\alpha)_{\omega_r}$ is trivial by Lemma \ref{sl2_b_inj}.
 	\item[4.] Otherwise, determine $\sigma\left(\begin{matrix}a & b\\c & d\end{matrix}\right)$ for $c \neq 0$ by
 	\begin{align*}
 	\sigma\left(\begin{matrix}a & b\\c & d\end{matrix}\right) &= \sigma\left(
@@ -27,8 +27,8 @@ For each $\alpha \in \Delta$ (the simple roots)
 			\right),
 	\end{align*}
 	and show that $\sigma$ is a well-defined 1-cocycle on $SL_2(k)$.
-	\item[5.] Calculate $H^1(SL_2(k), V_\alpha)_{\rho_r}$.
-	\item[6.] Calculate $H^1(SL_2(k), V_\alpha)_{\rho_r}/C_L(\rho_r)$ and use Theorem \ref{main_thm} to get information about conjugacy classes in $\mathrm{Hom}(SL_2(k), P_\alpha)$.
+	\item[5.] Calculate $H^1(SL_2(k), V_\alpha)_{\omega_r}$.
+	\item[6.] Calculate $H^1(SL_2(k), V_\alpha)_{\omega_r}/C_L(\omega_r)$ and use Theorem \ref{main_thm} to get information about conjugacy classes in $\mathrm{Hom}(SL_2(k), P_\alpha)$.
 	\end{itemize}
 We elaborate on step 4. Given $\sigma\left(\begin{matrix}a & b \\ 0 & a^{-1}\end{matrix}\right)$ and $\sigma\left(\begin{matrix}0 & 1\\-1 & 0\end{matrix}\right)$, the obvious way to piece together a 1-cocycle on $SL_2(k)$ is, for $c\neq 0$
 \begin{align}\label{fullsigma}
@@ -243,7 +243,7 @@ and we compute the following.
 \begin{align*}
 \left(\begin{matrix} 1 & u \\ 0 & 1\end{matrix}\right) \cdot \mathbf{v} 
 &= 
-\rho_r\left(\begin{matrix} 1 & u \\ 0 & 1\end{matrix}\right) \mathbf{v}\left( \rho_r\left(\begin{matrix} 1 & u \\ 0 & 1\end{matrix}\right)\right)^{-1} \\
+\omega_r\left(\begin{matrix} 1 & u \\ 0 & 1\end{matrix}\right) \mathbf{v}\left( \omega_r\left(\begin{matrix} 1 & u \\ 0 & 1\end{matrix}\right)\right)^{-1} \\
 &=
 \epsilon_ \alpha (u^{p^r}) \epsilon_ \beta (v_1)\epsilon_{\alpha+\beta}(v_2) \epsilon_{2\alpha+\beta}(v_3) \epsilon_ \alpha (-u^{p^r}) \\
 &=
@@ -259,7 +259,7 @@ and we compute the following.
 \begin{align*}
 \left(\begin{matrix} t & 0 \\ 0 & t^{-1}\end{matrix}\right) \cdot \mathbf{v}
 &=
-\rho_r\left(\begin{matrix}t & 0 \\ 0 & t^{-1}\end{matrix}\right) \mathbf{v} \left(\rho_r\left(\begin{matrix}t & 0 \\ 0 & t^{-1}\end{matrix}\right)\right)^{-1} \\
+\omega_r\left(\begin{matrix}t & 0 \\ 0 & t^{-1}\end{matrix}\right) \mathbf{v} \left(\omega_r\left(\begin{matrix}t & 0 \\ 0 & t^{-1}\end{matrix}\right)\right)^{-1} \\
 &=
 \alpha^\vee(t^{p^r})\epsilon_\beta(v_1)\epsilon_{\alpha+\beta}(v_2)\epsilon_{2\alpha+\beta}(v_3)\left(\alpha^\vee(t^{p^r})\right)^{-1} \\
 &=
@@ -270,7 +270,7 @@ and we compute the following.
 \left(\begin{matrix} t^{-2p^r}v_1 \\ v_2 \\ t^{2p^r}v_3 \end{matrix}\right) \\
 \left(\begin{matrix} 0 & 1 \\ -1 & 0 \end{matrix}\right) \cdot \mathbf{v} 
 &=
-\rho_r\left(\begin{matrix} 0 & 1 \\ -1 & 0\end{matrix}\right) \mathbf{v}\left( \rho_r\left(\begin{matrix} 0 & 1 \\ -1 & 0\end{matrix}\right)\right)^{-1} \\
+\omega_r\left(\begin{matrix} 0 & 1 \\ -1 & 0\end{matrix}\right) \mathbf{v}\left( \omega_r\left(\begin{matrix} 0 & 1 \\ -1 & 0\end{matrix}\right)\right)^{-1} \\
 &= 
 n_ \alpha  \epsilon_ \beta (v_1)\epsilon_{\alpha+\beta}(v_2) \epsilon_{2\alpha+\beta}(v_3) n_ \alpha^{-1}\\
 &= 
@@ -291,13 +291,13 @@ This is enough to determine the action of $SL_2(k)$ on $V_\alpha$. We leave the 
 \end{matrix}\right)
 \end{align*}
 
-Let $x\in H^1(SL_2(k), V_\alpha)_{\rho_r}$. By Proposition \ref{trivial_on_t} there exists $\sigma\in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\sigma(y) = 1$ for all $y\in T_2(k)$ and $\psi(\sigma) = x$. By Lemma \ref{lem:first}, we can apply Lemma \ref{lem:second}, which gives
+Let $x\in H^1(SL_2(k), V_\alpha)_{\omega_r}$. By Proposition \ref{trivial_on_t} there exists $\sigma\in Z^1(SL_2(k), V_\alpha)_{\omega_r}$ such that $\sigma(y) = 1$ for all $y\in T_2(k)$ and $\psi(\sigma) = x$. By Lemma \ref{lem:first}, we can apply Lemma \ref{lem:second}, which gives
 \begin{align*}
 	\sigma\left(\begin{matrix}a & b\\0 & a^{-1}\end{matrix}\right) &= \epsilon_{2\alpha+\beta}\left(\mu_3(ab)^{p^r}\right),
 \end{align*}
 for all $a\in k^*, b\in k$, for some fixed $\mu_3\in k$.
 
-Suppose $p\neq 2$, and let $\mathbf{w} = \left(\begin{matrix}0\\2^{-1}\mu_3\\0\end{matrix}\right)\in V_\alpha$. Now consider $\chi^{SL_2(k)}_\mathbf{w} \in B^1(SL_2(k), V_\alpha)_{\rho_r}$.
+Suppose $p\neq 2$, and let $\mathbf{w} = \left(\begin{matrix}0\\2^{-1}\mu_3\\0\end{matrix}\right)\in V_\alpha$. Now consider $\chi^{SL_2(k)}_\mathbf{w} \in B^1(SL_2(k), V_\alpha)_{\omega_r}$.
 
 \begin{align*}
 	\chi^{SL_2(k)}_\mathbf{w}\left(\begin{matrix}a & b\\0 & a^{-1}\end{matrix}\right) &= \mathbf{w} - \left(\begin{matrix}a & b\\0 & a^{-1}\end{matrix}\right) \cdot \mathbf{w} \\
@@ -327,8 +327,8 @@ Suppose $p\neq 2$, and let $\mathbf{w} = \left(\begin{matrix}0\\2^{-1}\mu_3\\0\e
 	&=\left(\begin{matrix}0\\0\\(ab)^{p^r}\mu_3\end{matrix}\right) \\
 	&= \sigma\left(\begin{matrix}a & b\\0 & a^{-1}\end{matrix}\right).
 \end{align*}
-This shows that if $p\neq 2$ then $H^1(B_2(k), V_\alpha)_{\rho_r}$ is trivial, and hence $H^1(SL_2(k), V_\alpha)_{\rho_r}$ is trivial by Lemma \ref{sl2_b_inj}.
-Therefore, by Theorem \ref{r:finite_p} there are only finitely many $P$-conjugacy classes of representations from $K$ to $P$ for each choice of $\rho$.
+This shows that if $p\neq 2$ then $H^1(B_2(k), V_\alpha)_{\omega_r}$ is trivial, and hence $H^1(SL_2(k), V_\alpha)_{\omega_r}$ is trivial by Lemma \ref{sl2_b_inj}.
+Therefore, by Theorem \ref{r:finite_p} there are only finitely many $P$-conjugacy classes of representations from $K$ to $P$ for each choice of $\omega$.
 
 We proceed with $p=2$.
 By Lemma \ref{lem:second} and Remark \ref{rem:second} there exist constants $\mu_1,\mu_3\in k$ such that
@@ -477,7 +477,7 @@ so we take Equation \ref{eqn:b2a} to be the general form of a 1-cocycle $\sigma:
 
 We can show that $\sigma$ as defined in Equation \ref{eqn:b2a} is a well-defined 1-cocycle by verifying that Equations \ref{pita1}--\ref{pita3} hold for $r=\alpha, -\alpha$ but we leave the details to the reader.
 
-We can now calculate the 1-cohomology by finding $\tau\in Z^1(SL_2(k), V_\alpha)_{\rho_r}$ such that $\tau = \sigma + \chi^{SL_2(k)}_\mathbf{v}$, for some $\mathbf{v}\in V_\alpha$. We may assume $\tau(y) = 1$ for all $y \in T_2(k)$, hence $\mathbf{v}$ is fixed by the action of $T_2(k)$. 
+We can now calculate the 1-cohomology by finding $\tau\in Z^1(SL_2(k), V_\alpha)_{\omega_r}$ such that $\tau = \sigma + \chi^{SL_2(k)}_\mathbf{v}$, for some $\mathbf{v}\in V_\alpha$. We may assume $\tau(y) = 1$ for all $y \in T_2(k)$, hence $\mathbf{v}$ is fixed by the action of $T_2(k)$. 
 
 To this end, let $\mathbf{v} = \left(\begin{matrix}0\\v\\0\end{matrix}\right)$. Since
 	$\left(\begin{matrix}a & b\\c & d\end{matrix}\right) \cdot \left(\begin{matrix}0\\v\\0\end{matrix}\right) =
@@ -506,7 +506,7 @@ Therefore $Z(L_ \alpha)^\circ = \langle (\alpha + \beta)^\vee(x)\,|\,x \in k \ra
 \end{matrix}\right).
 \end{align*}
 
-So we see that the infinitely many equivalence classes of 1-cocycles collapse to just two classes when we consider the action of $Z(L_\alpha)^\circ$, represented by the 1-cocycles $\sigma_0$ and $\sigma_1$. Hence by Theorem \ref{r:finite_p} there are only finitely many $P$-conjugacy classes of representations from $K$ to $P$ for each choice of $\rho$.
+So we see that the infinitely many equivalence classes of 1-cocycles collapse to just two classes when we consider the action of $Z(L_\alpha)^\circ$, represented by the 1-cocycles $\sigma_0$ and $\sigma_1$. Hence by Theorem \ref{r:finite_p} there are only finitely many $P$-conjugacy classes of representations from $K$ to $P$ for each choice of $\omega$.
 
 \subsection{$V = R_u(P_\beta)$}
 \label{b2:beta}
@@ -538,7 +538,7 @@ v_3 + w_3 + 2v_2w_1
 
 We compute the following.
 \begin{align*}
-\left(\begin{matrix} 1 & u \\ 0 & 1\end{matrix}\right) \cdot \mathbf{v} &= \rho_r\left(\begin{matrix} 1 & u \\ 0 & 1\end{matrix}\right) \mathbf{v}\left( \rho_r\left(\begin{matrix} 1 & u \\ 0 & 1\end{matrix}\right)\right)^{-1} \\
+\left(\begin{matrix} 1 & u \\ 0 & 1\end{matrix}\right) \cdot \mathbf{v} &= \omega_r\left(\begin{matrix} 1 & u \\ 0 & 1\end{matrix}\right) \mathbf{v}\left( \omega_r\left(\begin{matrix} 1 & u \\ 0 & 1\end{matrix}\right)\right)^{-1} \\
 &=\epsilon_\beta (u^{p^r}) \epsilon_\alpha (v_1)\epsilon_{\alpha+\beta}(v_2) \epsilon_{2\alpha+\beta}(v_3) \epsilon_\beta (-u^{p^r}) \\
 &=\epsilon_\alpha (v_1) \epsilon_\beta (u^{p^r}) \epsilon_{\alpha+\beta}(u^{p^r}v_1) \epsilon_{2\alpha+\beta}(u^{p^r}v_1^2) \epsilon_{\alpha+\beta}(v_2) \epsilon_{2\alpha+\beta}(v_3) \epsilon_\beta (-u^{p^r})  \\
 &=\epsilon_\alpha (v_1) \epsilon_\beta (u^{p^r}) \epsilon_{\alpha+\beta}(v_2 + u^{p^r}v_1) \epsilon_{2\alpha+\beta}(v_3 + u^{p^r}v_1^2)  \epsilon_\beta (-u^{p^r})  \\
@@ -546,7 +546,7 @@ We compute the following.
 &=\epsilon_\alpha (v_1)  \epsilon_{\alpha+\beta}(v_2 + u^{p^r}v_1) \epsilon_{2\alpha+\beta}(v_3 + u^{p^r}v_1^2) \\
 &= \left(\begin{matrix} v_1 \\ v_2 + u^{p^r}v_1\\ v_3 + u^{p^r}v_1^2 \end{matrix}\right)\\
 \left(\begin{matrix} t & 0 \\ 0 & t^{-1}\end{matrix}\right) \cdot \mathbf{v} &=
-\rho_r\left(\begin{matrix} t & 0 \\ 0 & t^{-1}\end{matrix}\right) \mathbf{v}\left( \rho_r\left(\begin{matrix} t & 0 \\ 0 & t^{-1}\end{matrix}\right)\right)^{-1} \\
+\omega_r\left(\begin{matrix} t & 0 \\ 0 & t^{-1}\end{matrix}\right) \mathbf{v}\left( \omega_r\left(\begin{matrix} t & 0 \\ 0 & t^{-1}\end{matrix}\right)\right)^{-1} \\
 &= \beta^\vee(t^{p^r}) \epsilon_\alpha (v_1)
 \epsilon_{\alpha+\beta}(v_2)
 \epsilon_{2\alpha+\beta}(v_3) (\beta^\vee(t^{p^r}))^{-1} \\
@@ -558,7 +558,7 @@ We compute the following.
 \epsilon_{2\alpha+\beta} \left((t^{p^r})^{\langle 2\alpha+\beta, \beta \rangle}v_3 \right)\\
 &= \left(\begin{matrix} t^{-p^r}v_1 \\ t^{p^r}v_2\\ v_3 \end{matrix}\right) \\
 \left(\begin{matrix} 0 & 1 \\ -1 & 0 \end{matrix}\right) \cdot \mathbf{v} &=
-\rho_r\left(\begin{matrix} 0 & 1 \\ -1 & 0\end{matrix}\right) \mathbf{v}\left( \rho_r\left(\begin{matrix} 0 & 1 \\ -1 & 0\end{matrix}\right)\right)^{-1} \\
+\omega_r\left(\begin{matrix} 0 & 1 \\ -1 & 0\end{matrix}\right) \mathbf{v}\left( \omega_r\left(\begin{matrix} 0 & 1 \\ -1 & 0\end{matrix}\right)\right)^{-1} \\
 &= n_\beta  \epsilon_\alpha (v_1)\epsilon_{\alpha+\beta}(v_2) \epsilon_{2\alpha+\beta}(v_3) n_\beta^{-1}\\
 &= n_\beta  \epsilon_\alpha (v_1) n_\beta^{-1}n_\beta \epsilon_{\alpha+\beta}(v_2) n_\beta^{-1} n_\beta \epsilon_{2\alpha+\beta}(v_3) n_\beta^{-1}\\
 &= \epsilon_{\alpha+\beta} (v_1) \epsilon_{\alpha}(-v_2)  \epsilon_{2\alpha+\beta}(v_3) \\
@@ -578,12 +578,12 @@ v_3 + (ac)^{p^r}v_2^2 + (bd)^{p^r}v_1^2 + 2(bc)^{p^r}v_1v_2
 \end{matrix}\right).
 \end{align*}
 
-Let $x\in H^1(SL_2(k), V_\beta)_{\rho_r}$. Then by Proposition \ref{trivial_on_t} there exists $\sigma \in Z^1(SL_2(k), V_\beta)_{\rho_r}$ such that $\sigma(y) = 1$ for all  $y\in T_2(k)$ and $\phi(\sigma) = x$. By Lemma \ref{lem:first} we can apply Lemma \ref{lem:second} to yield
+Let $x\in H^1(SL_2(k), V_\beta)_{\omega_r}$. Then by Proposition \ref{trivial_on_t} there exists $\sigma \in Z^1(SL_2(k), V_\beta)_{\omega_r}$ such that $\sigma(y) = 1$ for all  $y\in T_2(k)$ and $\phi(\sigma) = x$. By Lemma \ref{lem:first} we can apply Lemma \ref{lem:second} to yield
 \begin{align*}
 \sigma\left(\begin{matrix}a & b\\0 & a^{-1}\end{matrix}\right) &= \epsilon_{\alpha+\beta}(\mu_2(ab)^{2^{r-1}}),\\
 \sigma\left(\begin{matrix}d^{-1} & 0\\c & d\end{matrix}\right) &= \epsilon_{\alpha}(\mu_1(cd)^{2^{r-1}}) \quad\textrm{(Remark \ref{rem:second})},
 \end{align*}
-for some $\mu_1,\mu_2 \in k$ if $p = 2$, and $\sigma(B_2(k)) = 1$ if $p>2$. Hence by Lemma \ref{sl2_b_inj} $H^1(SL_2(k), V_\beta)_{\rho_r}$ is trivial if $p > 2$.
+for some $\mu_1,\mu_2 \in k$ if $p = 2$, and $\sigma(B_2(k)) = 1$ if $p>2$. Hence by Lemma \ref{sl2_b_inj} $H^1(SL_2(k), V_\beta)_{\omega_r}$ is trivial if $p > 2$.
 Note that for $\sigma$ to be a morphism we need $r>0$.
 
 Proceeding with $p=2$ we see that $V_\beta$ is abelian so we revert to additive notation.
@@ -749,7 +749,7 @@ But as before if we consider the action of $Z(L_\beta)$ on our 1-cocycles
 &=
 \left(\begin{matrix}  (s\mu)(cd)^{2^{r-1}}  \\ (s\mu)\left(ab \right)^{2^{r-1}} \\ (s\mu)^2\left( bc \right)^{2^r} \end{matrix}\right).
 \end{align*}
-our infinitely equivalence classes collapse to just two classes, $\psi(\sigma_0), \psi(\sigma_1)$. Therefore, by Theorem \ref{r:finite_p} there are only finitely many $P$-conjugacy classes of representations from $K$ to $P$ for each choice of $\rho$.
+our infinitely equivalence classes collapse to just two classes, $\psi(\sigma_0), \psi(\sigma_1)$. Therefore, by Theorem \ref{r:finite_p} there are only finitely many $P$-conjugacy classes of representations from $K$ to $P$ for each choice of $\omega$.
 
 	\section{$G = G_2$}
 	\label{g2}
@@ -798,7 +798,7 @@ our infinitely equivalence classes collapse to just two classes, $\psi(\sigma_0)
 			u_5 + v_5 + 3u_3v_2 - u_4v_1\\
 			\end{matrix}\right).
 	\end{align*}
-	Let $\sigma$ be in $Z^1(SL_2, V_\alpha)_{\rho_r}$ such that $\sigma\left(\begin{matrix}t & 0\\0 & t^{-1}\end{matrix}\right) = 1$.
+	Let $\sigma$ be in $Z^1(SL_2, V_\alpha)_{\omega_r}$ such that $\sigma\left(\begin{matrix}t & 0\\0 & t^{-1}\end{matrix}\right) = 1$.
 	By Proposition \ref{claim1}
 	\begin{align*}
 	\sigma\left(\begin{matrix} 1 & u \\ 0 & 1 \end{matrix}\right) =
@@ -877,7 +877,7 @@ our infinitely equivalence classes collapse to just two classes, $\psi(\sigma_0)
 		\sigma\left(\begin{matrix}* & *\\0 & *\end{matrix}\right) &= \sigma\left(\begin{matrix}1 & *\\0 & 1\end{matrix}\right) \quad(\textrm{Proposition \ref{imb:imu}}) \\
 			&= 1.
 			\end{align*}
-			Therefore $H^1(SL_2(k), V_\alpha)_{\rho_r}$ is trivial by Lemma \ref{sl2_b_inj}.
+			Therefore $H^1(SL_2(k), V_\alpha)_{\omega_r}$ is trivial by Lemma \ref{sl2_b_inj}.
 
 The purpose of this calculation was to show that although the hypotheses of Lemma \ref{lem:first} fail (Remark \ref{g2counter}) we still (trivially) obtain the same result as the conclusion of Lemma \ref{lem:second}; that is, the equation for $\sigma(B_2(k))$.
 
@@ -1092,17 +1092,17 @@ The Group Law on $V$ is
 	         	\end{matrix}\right).
 \end{align*}
 
-For integers $r,s\geq 0$ we have a homomorphism $\rho_{r,s}:SL_2\rightarrow \widetilde{A}_1\widetilde{A}_1 < L_{\{\gamma,\delta\}}$ defined by
+For integers $r,s\geq 0$ we have a homomorphism $\omega_{r,s}:SL_2\rightarrow \widetilde{A}_1\widetilde{A}_1 < L_{\{\gamma,\delta\}}$ defined by
 \begin{align*}
-\rho_{r,s}   \left(\begin{matrix} % or pmatrix or bmatrix or Bmatrix or ...
+\omega_{r,s}   \left(\begin{matrix} % or pmatrix or bmatrix or Bmatrix or ...
       1 & u \\
       0 & 1 \\
    \end{matrix}\right) &= \epsilon_\delta(u^{2^r})\cdot\epsilon_{\gamma+\delta}(u^{2^s}) \\
-\rho_{r,s}   \left(\begin{matrix} % or pmatrix or bmatrix or Bmatrix or ...
+\omega_{r,s}   \left(\begin{matrix} % or pmatrix or bmatrix or Bmatrix or ...
       t & 0 \\
       0 & t^{-1} \\
    \end{matrix}\right) &= \delta^\vee(t^{2^r})\cdot(\gamma+\delta)^\vee(t^{2^s}) \\
-\rho_{r,s}   \left(\begin{matrix} % or pmatrix or bmatrix or Bmatrix or ...
+\omega_{r,s}   \left(\begin{matrix} % or pmatrix or bmatrix or Bmatrix or ...
       0 & 1 \\
       1 & 0 \\
    \end{matrix}\right) &= n_\delta\cdot n_{\gamma+\delta} 
@@ -1551,4 +1551,4 @@ u^2(wx(bc)^{2^{r+1}} + yz(bc)^{2^{s+1}})
 \end{matrix}\right).
 \end{align*}
 
-In this case we can find a 1-parameter family of 1-cocycles, for example $(0, 1, 0, z), z\in k$, whose projections to $H^1(SL_2(k), V)_{\rho_{r,s}}/Z(L_{\gamma, \delta})^\circ$ are distinct equivalence classes. This shows that if $k$ is infinite then there exist infinitely many $P$-conjugacy classes of representations from $K$ to $P$ for the particular choice of $\rho_{r,s}$.
+In this case we can find a 1-parameter family of 1-cocycles, for example $(0, 1, 0, z), z\in k$, whose projections to $H^1(SL_2(k), V)_{\omega_{r,s}}/Z(L_{\gamma, \delta})^\circ$ are distinct equivalence classes. This shows that if $k$ is infinite then there exist infinitely many $P$-conjugacy classes of representations from $K$ to $P$ for the particular choice of $\omega_{r,s}$.
