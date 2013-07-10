@@ -336,10 +336,7 @@ By Lemma \ref{lem:second} and Remark \ref{rem:second} there exist constants $\mu
 	\sigma
 			\left(\begin{matrix}a & b \\ 0 & a^{-1}\end{matrix}\right)
 	&=
-	\left(\begin{matrix}0 \\ 0 \\ \mu_3(ab)^{2^r}\end{matrix}\right),
-	\end{align*}
-and 
-\begin{align*}
+	\left(\begin{matrix}0 \\ 0 \\ \mu_3(ab)^{2^r}\end{matrix}\right),\\
 	\sigma\left(\begin{matrix}d^{-1} & 0 \\ c & d\end{matrix}\right)
 	&=
 	\left(\begin{matrix}\mu_1(cd)^{2^r}\\0\\0\end{matrix}\right).
@@ -392,6 +389,7 @@ and by Equation \ref{prop:A:eqn1}
 &=
 		\left(\begin{matrix} \mu_1 + \mu_3 \\ \mu_1 \\ \mu_1 + \mu_3\end{matrix}\right).
 \end{align*}
+
 Therefore $\lambda_2 = \mu_1 = \mu_3$. Writing $\mu = \mu_1 (= \mu_3)$, we have
 \begin{align*}
 \sigma\left(\begin{matrix}a & b\\0 & a^{-1}\end{matrix}\right) = \left(\begin{matrix}0 \\ 0 \\ (ab)^{2^r}\mu\end{matrix}\right),\quad
@@ -1049,7 +1047,7 @@ The point of this example calculation was to show that we could eventually apply
 \section{$G = B_4$}
 \label{b4}
 
-	Let $G = B_4$ and let $\mathrm{char}(k)=2$. We label the positive simple roots $\Delta = \{\alpha, \beta, \gamma, \delta\}$, where $\gamma$ is the long root connected to the short root $\delta$. Let $P_{\gamma, \delta}$ be the rank 2 parabolic subgroup of $G$ determined by the simple roots $\{\gamma, \delta\}$. Note that this is the only example in which we consider representations into a rank 2 parabolic. Let $V=R_u(P_{\gamma, \delta}) = \langle U_\phi\, |\, \phi \in \Phi^+, \phi \neq \gamma, \delta, \gamma + \delta, \gamma+2\delta\} \rangle$. We will write
+	Let $G = B_4$ and let $\mathrm{char}(k)=2$. We label the positive simple roots $\Delta = \{\alpha, \beta, \gamma, \delta\}$, where $\gamma$ is the long root connected to the short root $\delta$, $\beta$ is connected to $\gamma$, and $\alpha$ is connected to $\beta$. Let $P_{\gamma, \delta}$ be the rank 2 parabolic subgroup of $G$ determined by the simple roots $\{\gamma, \delta\}$. Note that this is the only example in which we consider representations into a rank 2 parabolic. Let $V=R_u(P_{\gamma, \delta}) = \langle U_\phi\, |\, \phi \in \Phi^+, \phi \neq \gamma, \delta, \gamma + \delta, \gamma+2\delta\} \rangle$. We will write
 \begin{align*}
 \mathbf{v} &= \epsilon_\alpha(v_1) \epsilon_\beta(v_2) \epsilon_{\alpha+\beta}(v_3) \epsilon_{\beta+\gamma}(v_4) \epsilon_{\alpha+\beta+\gamma}(v_5) \epsilon_{\beta+\gamma+\delta}(v_6) \epsilon_{\alpha+\beta+\gamma+\delta}(v_7) \epsilon_{\beta+\gamma+2\delta}(v_8)\\ 
 &\quad\epsilon_{\alpha+\beta+\gamma+2\delta}(v_9)\epsilon_{\beta+2\gamma+2\delta}(v_{10}) \epsilon_{\alpha+\beta+2\gamma+2\delta}(v_{11}) \epsilon_{\alpha+2\beta+2\gamma+2\delta}(v_{12}) \in V
@@ -1551,4 +1549,6 @@ u^2(wx(bc)^{2^{r+1}} + yz(bc)^{2^{s+1}})
 \end{matrix}\right).
 \end{align*}
 
-In this case we can find a 1-parameter family of 1-cocycles, for example $(0, 1, 0, z), z\in k$, whose projections to $H^1(SL_2(k), V)_{\omega_{r,s}}/Z(L_{\gamma, \delta})^\circ$ are distinct equivalence classes. This shows that if $k$ is infinite then there exist infinitely many $P$-conjugacy classes of representations from $K$ to $P$ for the particular choice of $\omega_{r,s}$.
+In this case we can find a 1-parameter family of 1-cocycles, for example $(0, 1, 0, z), z\in k$, whose projections to $H^1(SL_2(k), V)_{\omega_{r,s}}/Z(L_{\gamma, \delta})^\circ$ are distinct equivalence classes. This shows that by Theorem \ref{r:finite_p} there exist infinitely many $P$-conjugacy classes of representations from $K$ to $P$ for the particular choice of $\omega_{r,s}$.
+
+Hence by Lemma \ref{lem:GPconj} we have infinitely many $G$-conjugacy classes of representations from $K$ to $G$.
